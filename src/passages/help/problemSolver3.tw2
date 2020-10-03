@@ -1,0 +1,59 @@
+::Problem solver 3 <678,318>
+Good job! <strong>In the next paragraph you will be able to check your settings and see if everything is okay. Just to make sure :3</strong>
+
+<<button "Oh, okay!" "Problem solver 4">><</button>>
+<<nobr>>
+
+<!-- ------ SETTINGS TO PREVIOUS VALUES ------ -->
+
+<<script>>
+if (variables().problemSolverisSiblingInteractionAllowed) {
+settings.isSiblingInteractionAllowed = true;
+} else {
+settings.isSiblingInteractionAllowed = false;
+};
+
+if (variables().problemSolverisBestialityAllowed) {
+settings.isBestialityAllowed = true;
+} else {
+settings.isBestialityAllowed = false;
+};
+
+if (variables().problemSolverisSiblingAllowed) {
+settings.isSiblingAllowed = true;
+} else {
+settings.isSiblingAllowed = false;
+};
+
+if (variables().problemSolverisBarsPreferred) {
+settings.isBarsPreferred = true;
+} else {
+settings.isBarsPreferred = false;
+};
+
+if (variables().problemSolverlessPrices) {
+settings.lessPrices = true;
+} else {
+settings.lessPrices = false;
+};
+
+if (variables().problemSolvermenstruation) {
+settings.menstruation = true;
+} else {
+settings.menstruation = false;
+};
+
+if (variables().problemSolverpregnancy) {
+settings.pregnancy = true;
+} else {
+settings.pregnancy = false;
+};
+
+if (variables().problemSolvernonConsent) {
+settings.nonConsent = true;
+} else {
+settings.nonConsent = false;
+};
+<</script>>
+
+<</nobr>>

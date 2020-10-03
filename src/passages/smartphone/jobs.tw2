@@ -1,0 +1,79 @@
+::Copyrighting [system] <4725,1725>
+<<if $mainChar.energy < 20>>You are too tired to work.
+[[Go back->JobHunters.net]]<<else>>&emsp;You worked hard and wrote many advertising and promotional material. Once it was done, you submitted the work and got paid...
+<<nobr>>
+  <<if $mainChar.skills.job.copyright <= 4>>
+	  <<set $mainChar.timesWorkedOn.copyright += 1>>
+	  <<if $mainChar.timesWorkedOn.copyright == 4 || $mainChar.timesWorkedOn.copyright == 7 || $mainChar.timesWorkedOn.copyright == 11>>
+		  <<set $mainChar.skills.job.copyright += 1>>
+		  You got a promotion! Now your salary is <<= $mainChar.skills.job.copyright * 10>>$
+	  <</if>>
+  <</if>>
+<</nobr>>
+<p class="add">+<<= $mainChar.skills.job.copyright * 10>>$</p> <p class="minus">-20 Energy</p><<set $hour += 6>><<set $mainChar.energy -= 20>><<set $mainChar.money += $mainChar.skills.job.copyright * 10>>
+
+[[Go back->JobHunters.net]]<<endif>>
+
+::Testing new games [system] <4850,1725>
+<<if $mainChar.energy < 30>>You are too tired to work.
+[[Go back->JobHunters.net]]<<else>>&emsp;You worked hard, testing some new and exciting upcoming games. Some were more indie and a little shit but nonetheless pretty good! You enjoyed your work and the best part? You got paid!
+<<nobr>>
+  <<if $mainChar.skills.job.testing <= 4>>
+	  <<set $mainChar.timesWorkedOn.testingGames += 1>>
+	  <<if $mainChar.timesWorkedOn.testingGames == 4 || $mainChar.timesWorkedOn.testingGames == 7 || $mainChar.timesWorkedOn.testingGames == 11>>
+		  <<set $mainChar.skills.job.testing += 1>>
+		  You got a promotion! Now your salary is <<= $mainChar.skills.job.testing * 18>>$
+	  <</if>>
+  <</if>>
+<</nobr>>
+<p class="add">+<<= $mainChar.skills.job.testing * 18>>$</p> <p class="minus">-30 Energy</p><<set $hour += 5>><<set $mainChar.energy -= 30>><<set $mainChar.money += $mainChar.skills.job.testing * 18>>
+
+[[Go back->JobHunters.net]]<<endif>>
+
+::Writing opinions [system] <4975,1725>
+<<if $mainChar.energy < 30>>You are too tired to work.
+[[Go back->JobHunters.net]]<<else>>&emsp;You worked hard and wrote some good opinions about products and goods you've not seen before. Once it was done, you submitted your work and waited for the money to transfer...
+<<nobr>>
+  <<if $mainChar.skills.job.writingOpinions <= 4>>
+	  <<set $mainChar.timesWorkedOn.writingOpinions += 1>>
+	  <<if $mainChar.timesWorkedOn.writingOpinions == 4 || $mainChar.timesWorkedOn.writingOpinions == 7 || $mainChar.timesWorkedOn.writingOpinions == 11>>
+		  <<set $mainChar.skills.job.writingOpinions += 1>>
+		  You got a promotion! Now your salary is <<= $mainChar.skills.job.writingOpinions * 20>>$
+	  <</if>>
+  <</if>>
+<</nobr>>
+<p class="add">+<<= $mainChar.skills.job.writingOpinions * 20>>$</p> <p class="minus">-30 Energy</p><<set $hour += 8>><<set $mainChar.energy -= 30>><<set $mainChar.money += $mainChar.skills.job.writingOpinions * 20>>
+
+[[Go back->JobHunters.net]]<<endif>>
+
+::Make design [system] <5100,1725>
+<<if $mainChar.energy < 60>>You are too tired to work.
+[[Go back->JobHunters.net]]<<else>>&emsp;You worked hard and made some pretty designs for a website. Good job! Once you'd uploaded your work, you waited for the money to come in...
+<<nobr>>
+  <<if $mainChar.skills.job.makeDesign <= 4>>
+	  <<set $mainChar.timesWorkedOn.makeDesign += 1>>
+	  <<if $mainChar.timesWorkedOn.makeDesign == 4 || $mainChar.timesWorkedOn.makeDesign == 7 || $mainChar.timesWorkedOn.makeDesign == 11>>
+		  <<set $mainChar.skills.job.makeDesign += 1>>
+		  You got a promotion! Now your salary <<= $mainChar.skills.job.makeDesign * 60>>$
+	  <</if>>
+  <</if>>
+<</nobr>>
+<p class="add">+<<= $mainChar.skills.job.makeDesign * 60>>$</p> <p class="minus">-60 Energy</p><<set $hour += 8>><<set $mainChar.energy -= 60>><<set $mainChar.money += $mainChar.skills.job.makeDesign * 60>>
+
+[[Go back->JobHunters.net]]<<endif>>
+
+::Writing documentation [system] <5225,1725>
+<<if $mainChar.energy < 20>>You are too tired to work.
+[[Go back->JobHunters.net]]<<else>>&emsp;You worked hard and wrote a decent documentation for some e-commerce project or other. Once it was complete, you sent it over and awaited your pay...
+<<nobr>>
+  <<if $mainChar.skills.job.writingDocs <= 4>>
+	  <<set $mainChar.timesWorkedOn.writingDocs += 1>>
+	  <<if $mainChar.timesWorkedOn.writingDocs == 4 || $mainChar.timesWorkedOn.writingDocs == 7 || $mainChar.timesWorkedOn.writingDocs == 11>>
+		  <<set $mainChar.skills.job.writingDocs += 1>>
+		  You got a promotion! Now your salary <<= $mainChar.skills.job.writingDocs * 20>>$
+	  <</if>>
+  <</if>>
+<</nobr>>
+<p class="add">+<<= $mainChar.skills.job.writingDocs * 20>>$</p> <p class="minus">-20 Energy</p><<set $hour += 5>><<set $mainChar.energy -= 20>><<set $mainChar.money += $mainChar.skills.job.writingDocs * 20>>
+
+[[Go back->JobHunters.net]]<<endif>>

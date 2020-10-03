@@ -1,0 +1,54 @@
+::StoryMenu# <100,0>
+<<if passage() == "Beginning">>
+	<<link "Changelog">>
+		<<set $enteredFromBeginning = true>>
+		<<set $pastPassage to passage()>>
+		<<set $wasMenuItemEntered = true>>
+		<<goto "CHANGELOG">>
+	<</link>>
+<<endif>>
+<<if $enteredFromBeginning == true>>
+	<<if $wasMenuItemEntered == true>>
+		<<link "Back">>
+			<<set $enteredFromBeginning = false>>
+			<<set $wasMenuItemEntered = false>>
+			<<if $pastPassage == "Beginning">>
+				<<goto "Beginning">>
+			<<else>>
+				<<goto $pastPassage>>
+			<<endif>>
+		<</link>>
+	<<endif>>
+<<endif>>
+<<if hasVisited("Bedroom")>>
+		<<if $wasMenuItemEntered == true>>
+			<<link "Back">>
+				<<set $wasMenuItemEntered = false>>
+				<<goto $pastPassage>>
+			<</link>>
+		<<else>>
+			<<link "Character info">>
+				<<set $pastPassage to passage()>>
+				<<set $wasMenuItemEntered = true>>
+				<<goto "Expended character info">>
+			<</link>>
+			<<link "Smartphone">>
+				<<set $pastPassage to passage()>>
+				<<set $wasMenuItemEntered = true>>
+				<<goto "Smartphone">>
+			<</link>>
+			<<link "Stats">>
+				<<set $pastPassage to passage()>>
+				<<set $wasMenuItemEntered = true>>
+				<<goto "Stats">>
+			<</link>>
+			<<link "Help">>
+				<<set $pastPassage to passage()>>
+				<<set $wasMenuItemEntered = true>>
+				<<goto "Help">>
+			<</link>>
+			<<link '<p style="display: inline; color: salmon">Escape Hatch</p>'>>
+				<<goto "Bedroom">>
+			<</link>>
+		<</if>>
+<<endif>>

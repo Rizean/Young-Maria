@@ -1,0 +1,25 @@
+::Problem solver 2 <676,215>
+Hmm, I think I got something, can you help me and tap this button, please?
+
+<<button "Tap!" "Problem solver 3">><</button>>
+<<nobr>>
+
+<!-- ------ SETTINGS TO TRUE ------ -->
+
+<<set settings.isSiblingInteractionAllowed = true>>
+
+<<set settings.isBestialityAllowed = true>>
+
+<<set settings.isSiblingAllowed = true>>
+
+<<set settings.isBarsPreferred = true>>
+
+<<set settings.lessPrices = true>>
+
+<<set settings.menstruation = true>>
+
+<<set settings.pregnancy = true>>
+
+<<set settings.nonConsent = true>>
+
+<</nobr>>

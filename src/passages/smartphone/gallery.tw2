@@ -1,0 +1,156 @@
+::Gallery [system] <4500,2325>
+&emsp;If you've taken pictures, you can find them here for... personal use... ;) <br />
+[[Go back->Smartphone]]
+
+<<nobr>>
+  <<if $isSelfieTaken == true>>
+	  [[A plain selfie]] <br />
+  <<endif>>
+  <<if $isTongueOutPhotoTaken == true>>
+	  [[A photo of tongue out]] <br />
+  <</if>>
+  <<if $isButtPhotoTaken == true>>
+	  [[A butt photo]] <br />
+  <<endif>>
+  <<if $isBananaPhotoTaken == true>>
+	  [[A photo with banana]] <br />
+  <<endif>>
+  <<if $isBreastPhotoTaken == true>>
+	  [[A breast photo]] <br />
+  <<endif>>
+  <<if $isButtInPantiesPhotoTaken == true>>
+	  [[A photo of your butt in panties]] <br />
+  <</if>>
+  <<if $isUnderwearPhotoTaken == true>>
+	  [[An underwear photo]] <br />
+  <<endif>>
+  <<if $isBottomlessPhotoTaken == true>>
+	  [[A bottomless photo]] <br />
+  <</if>>
+  <<if $isNudePhotoTaken == true>>
+	  [[A nude photo]] <br />
+  <<endif>>
+  <<if $isNakedButtPhotoTaken == true>>
+	  [[A photo of your naked butt]] <br />
+  <</if>>
+  <<if $isOnOffPhotoTaken == true>>
+	  [[An on/off photo]] <br />
+  <</if>>
+  <<if $isPussyPhotoTaken == true>>
+	  [[A photo of your pussy]] <br />
+  <</if>>
+  <<if $isDrippingPhotoTaken == true>>
+	  [[A dripping photo]] <br />
+  <</if>>
+  <<if $isButtPlugPhotoTaken == true>>
+	  [[A photo with butt plug]] <br />
+  <</if>>
+  <<if $isTailButtPlugPhotoTaken == true>>
+	  [[A photo with tail butt plug]] <br />
+  <</if>>
+  <<if $isMasturbatingPhotoTaken == true>>
+	  [[A photo of masturbating you]] <br />
+  <<endif>>
+  <<if $isDildoPhotoTaken == true>>
+	  [[A photo of you, masturbating with dildo]] <br />
+  <<endif>>
+  <<if $isCucumberPhotoTaken == true>>
+	  [[A photo of you, masturbating with cucumber]] <br />
+  <<endif>>
+  <<if $isJackSuckVideoTaken == true>>
+	  [[A video of you, sucking Jack off]]
+  <<endif>>
+ <</nobr>>
+
+[[Go back->Smartphone]]
+
+
+::A plain selfie [system] <4725,2275>
+[[Back->Gallery]]
+
+<<showPhoto 1 9 plain>><</showPhoto>>
+
+::A butt photo [system] <5100,2275>
+[[Back->Gallery]]
+
+<<showSelfie 1 6 plain>><</showSelfie>>
+
+::A breast photo [system] <5725,2275>
+[[Back->Gallery]]
+
+<<showSelfie 1 26 breasts>><</showSelfie>>
+
+::An underwear photo [system] <5225,2400>
+[[Back->Gallery]]
+
+<<showSelfie 1 12 underwear>><</showSelfie>>
+
+::A nude photo [system] <4725,2400>
+[[Back->Gallery]]
+
+<<showSelfie 1 30 nude>><</showSelfie>>
+
+::A photo of masturbating you [system] <5600,2400>
+[[Back->Gallery]]
+
+<<showSelfie 1 9 masturbation>><</showSelfie>>
+
+::A photo of you, masturbating with dildo [system] <5725,2400>
+[[Back->Gallery]]
+
+<<showSelfie 1 4 dildo>><</showSelfie>>
+
+::A photo with banana [system] <5225,2275>
+[[Back->Gallery]]
+
+<<showSelfie 1 5 banana>><</showSelfie>>
+
+::A photo of you, masturbating with cucumber [system] <5850,2400>
+[[Back->Gallery]]
+
+<<showSelfie 0 2 cucumber>><</showSelfie>>
+
+::A photo of tongue out [system] <4850,2275>
+[[Back->Gallery]]
+
+<<showSelfie 0 2 tongueout>><</showSelfie>>
+
+::A photo of your butt in panties [system] <5350,2275>
+[[Back|Gallery]]
+
+<<showSelfie 0 8 buttpanties>><</showSelfie>>
+
+::A bottomless photo [system] <5475,2275>
+[[Back|Gallery]]
+
+<<showSelfie 0 5 bottomless>><</showSelfie>>
+
+::A photo of your naked butt [system] <5600,2275>
+[[Back|Gallery]]
+
+<<showSelfie 0 13 naked_butt>><</showSelfie>>
+
+::An on/off photo [system] <4850,2400>
+[[Back->Gallery]]
+
+<<showSelfie 0 25 onoff>><</showSelfie>>
+
+::A photo of your pussy [system] <4975,2400>
+[[Back->Gallery]]
+
+<<showSelfie 0 25 pussy>><</showSelfie>>
+
+::A dripping photo [system] <5100,2400>
+[[Back|Gallery]]
+
+<<showSelfie 0 7 wet>><</showSelfie>>
+
+::A photo with butt plug [system] <5350,2400>
+[[Back->Gallery]]
+
+<<showSelfie 0 9 butt_plug>><</showSelfie>>
+
+::A photo with tail butt plug [system] <5475,2400>
+[[Back->Gallery]]
+
+<<showSelfie 0 10 tail_plug>><</showSelfie>>

@@ -1,0 +1,63 @@
+::living room [nobr] <1528,901>
+@@.image-wrapper-w70p; <img src="pics/livingRoom.jpg"> @@
+You are in the [[living room->living room description]] <br />
+You could go sit in the [[Bay Window]] <br />
+<<include "Farm Into">>
+<<include "Drunk part">>
+
+<<if $mainChar.age == 18 and $hour > 8 and $mainChar.hasBeenAtSchool == false and $day != 6 and $day != 7>>
+    <<include "Miss school part">>
+<<else>>
+    <<include "Living room schedule">>
+    [[Parents' bedroom][$minute += 1]] <br />
+    <<if def $sibling && $sibling.gender === $GENDER_MALE>>
+		<<if $hour >= 20 or $hour <= 4>>
+			<<set $brotherMasturbating to either(true,false,false,false,false)>>
+		<<endif>>
+		<<if $brotherMasturbating == true>>
+			[[Brother's room->Brother masturbating][$minute += 1]] <br />
+		<<else>>
+        	[[Brother's room->Brother room][$minute += 1]] <br />
+		<<endif>>
+    <<elseif def $sibling && $sibling.gender === $GENDER_FEMALE>>
+        [[Sister's room->Sister room][$minute += 1]] <br />
+    <</if>>
+    [[Kitchen][$minute += 1]] <br />
+    [[Bathroom][$minute += 1]] <br />
+    [[Bedroom][$minute += 1]] <br />
+    <br />
+    <<if $mainChar.look.clothes.body.name !== ''>>
+        [[Go out][$minute += 10]] <br />
+    <<elseif $mainChar.corruption > 70>>
+        You would be crazy to go out like this!<br />
+        [[Go out][$minute += 10]] <br />
+    <<else>>
+        You can't go outside dressed like this. <br />
+    <<endif>>
+    <br />
+    <<if $mainChar.age == 18 and $day < 6 and $hour == 8>>
+        <<if $mainChar.look.clothes.body.name == "School uniform">>
+            [[Go to school]] <br />
+        <<else>>
+            You must wear your uniform for school. <br />
+            <<link "Get dressed in school uniform and go to school" "Go to school">>
+                <<set $mainChar.look.clothes.body.name = $wardrobe.clothes.body['School uniform'].name >>
+                <<set $mainChar.look.clothes.body.image = $wardrobe.clothes.body['School uniform'].image >>
+            <</link>>
+            <br />
+        <<endif>>
+    <<endif>>
+<<if $isJobHad == true and $day < 6 and $hour < 9>>
+        <strong>You must go to work before 9AM.</strong> <br />
+    <<endif>>
+
+    <<if $isJobHad == true and $day < 6 and $hour == 8>>
+        <<if $mainChar.look.clothes.body.name == "Office suit">>
+            [[Go to work]] <br />
+        <<else>>
+            You must wear your office suit for work. <br />
+        <<endif>>
+    <<endif>>
+
+    <<include "LivingRoomNudity part">>
+<<endif>>

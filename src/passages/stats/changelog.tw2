@@ -1,0 +1,141 @@
+::CHANGELOG [system] <955,245>
+<<linkreplace "<strong>UPD 8.0.0</strong>">>
+<hr>
+<strong><u>UPD 8.0.0</u></strong>
+<strong>Changes:</strong>
+- Fixed image displaying in the Drunk Beach scene
+- Removed bestiality. Contact me for more info, if you want to know why and what for
+- Added Rhino to the Hall of Glory
+- Improved and fixed some things in Changelog and links
+- Added a new dream scene by Rachael, a femdom one
+- Rachael made some text improvements
+- Added kisekae (paper) doll (fixed and added a LOT of stuff)
+
+<hr>
+<</linkreplace>>
+
+<<linkreplace "<strong>UPD 7.7.0</strong>">>
+<hr>
+<strong><u>UPD 7.7.0</u></strong>
+<strong>Changes:</strong>
+- Now, you can take a nap for 1-5 hours. You can pick hours and minutes. And you will gain a small amount of Energy for a short rest and vise versa
+- Fixed data! Now it works. You can see the current date in Stats
+- Added a new Beach scene. Drink enough (>90 Intoxication) alcohol and go out from the Beach Bar to see it with a 30% chance
+- Added some new notes to the Help menu
+- Added a new section to the Laptop - Non-consensual. You can watch it only if this content is enabled in Settings
+- A lot of new fixes and text improvements by Rachael. My God, I spent all night working on them. She did an excellent job with vivid dreams, by the way
+- Rewrite the Everyday Widgets passage. It should help to count days without errors
+- Created the base of the Kisekae system (paper doll)
+- Added a new dream - School bondage torture. The 9th dream it has three gifs, and the non-con settings don't affect it
+- Fixed a few dreams to make stylesheets work properly (eliminated overlaps)
+- One variable name was fixed, and two types were removed by myself. Can't compare with Rachael, but I do my best :3
+- Changed Stay Home bonus name, added ": second wave". Pls don't ask, I just wanted to do this...
+
+<hr>
+<</linkreplace>>
+
+<<linkreplace "<strong>UPD 7.6.0</strong>">>
+<hr>
+<strong><u>UPD 7.6.0</u></strong>
+<strong>Changes:</strong>
+- I changed the amount of points of Corruption required to see dreams. From 30 back to 90, like it was earlier
+- Updated Main Pics Folder. Don't forget to download it!
+- Added two invisible checking images to the very first paragraph. If you play the offline version and you have no problems with pics, you will see nothing new. But when something is wrong, you will be notified about it. One pic checks Main Pics Folder and the other - the last offline version pics
+- Added a new scene with a sibling. When you enter his room between 20 and 4 hours, there is a 20% chance to catch him fapping. Your Corruption must be 40+ points and his - 50+ points to be able to help him
+- Added information about this to the Help menu
+- Updated Hall of Glory. I'm a bit tired od adding every supporter since there are hundreds of them now. I decided to add a new tier, and now the Hall is a place for Special Thanks and names of Investors
+- Added two vivid dreams from Rachael: "Sewer Slime Monster" and "Public Sex."
+- Beautified Vivid Dreams just a bit, nothing serious
+- Fixed a few typos and grammar mistakes
+- Added a new section about dreams to Help menu
+
+<hr>
+<</linkreplace>>
+
+<<linkreplace "<strong>UPD 7.5.0</strong>">>
+<hr>
+<strong><u>UPD 7.5.0</u></strong>
+<strong>Changes:</strong>
+- I updated SugarCube version (from 2.31.1 to 2.33.2). I hope the Settings error will disappear. As I proved in my Discord server, it's the SugarCube issue
+- And if this won't help, I replaced some parts of code in the widget so it should work better now. I'm talking about the Settings Check widget
+- Beautified vivid dreams text a bit
+- Reduced a chance to meat Temple and Cave (from 25% to 15%)
+- You asked too many times, and I finally added this. Now your granddad can catch you doing funny things. Every scene, every scene has a unique addition (7 in total). Granddad has it's own schedule, and the chance of being seen depends on what he is doing: sleeping(0%), eating(6%), working(10%)
+- Rachael significantly improved vivid dreams (both Temple and Cave scenes) and worked on other scenes
+
+<hr>
+<</linkreplace>>
+
+<<linkreplace "<strong>UPD 7.4.0</strong>">>
+<hr>
+<strong><u>UPD 7.4.0</u></strong>
+<strong>Changes:</strong>
+- Deleted all supporters from the Hall of Glory. Haven't updated it in a while and you couldn't reach it playing, but people asked me to do this
+- Added two vivid dreams: wild cats' temple and wolves' cave. Remember, you need 90+ Corruption to see dreams. As I said earlier, I'm trying to expand the "borders" of this game by adding a bit of different content. Planning on adding pics and choices, more actions and events in the future along with new places and dreams
+- Rachael fixed and improved some text "here and there"
+
+<hr>
+<</linkreplace>>
+
+<<linkreplace "<strong>UPD 7.3.0</strong>">>
+<hr>
+<strong><u>UPD 7.3.0</u></strong>
+<strong>Changes:</strong>
+- Fixed the little bag in Smartphone. After whoring, you still had that "Back" button like if you were using Smartphone
+- Rachael improved some text pieces, like always. Mainly, the Library scenes in this update
+- Also, Rachael added some code to improve the text-indent
+- Fixed the messages you get after webcamming. Two variables weren't defined
+- Now every interaction on the kitchen requires 10 points of Energy
+- Looked through sibling's schedule, changed a couple of things. But didn't find anything serious
+- Added Brother's schedule to his Help menu section
+- Fixed some appearance pics
+- StoryInit paragraph got some minor changes
+- Changed the Settings Check Widget a bit. As I figured out, it doesn't work well. Well, I knew it would take some time...
+
+<hr>
+<</linkreplace>>
+
+<<linkreplace "<strong>UPD 7.2.0</strong>">>
+<hr>
+<strong><u>UPD 7.2.0</u></strong>
+<strong>Changes:</strong>
+- Now when you tease your sibling while cleaning his room, he can get excited and ask for blowjob or vaginal. It's random, he must have 50 points of Corruption, and there is a 30% chance
+- Looked through some NSFW scenes and improved a few general details there (code, mostly)
+- Added Web Cam to Laptop. Yes, it's not useless anymore! Give a show once a day and receive bonuses based on your Beauty, Corruption points, popularity (based on how many times you gave web cam show). A little tip: there are more viewers on weekends. Oh, you can also change your nickname there
+- You can receive messages from your fans! They can give you some extra money or ask to do something lewd. And still, give you some extra money:3 There is a 30% chance to receive a message every day (from 4:00 to 15:00)
+- Updated the Help menu, added Web Cam section
+- Added some text improvements by Rachael
+<hr>
+<</linkreplace>>
+
+<<linkreplace "<strong>UPD 7.1.0</strong>">>
+<hr>
+<strong><u>UPD 7.1.0</u></strong>
+<strong>Changes:</strong>
+- Fixed breasts size random selection in Edit Appearance
+- Added a non-consent scene with dad. From 11:00 till 18:00 on Sundays you can be taken by him. No Corruption or Relationship check, but there is only a 5% chance
+- Reviewed and did some changes in the Beach code
+- Now if both Relationship with Dad and your Corruption above 40 points, you'll get spanking after missing your classes
+- Added the 8th dream. Well, not totally a dream, you know ;)
+- Fixed some code, variables, dots.. Like always
+<hr>
+<</linkreplace>>
+
+<<linkreplace "<strong>UPD 7.0.0</strong>">>
+<hr>
+<strong><u>UPD 7.0.0</u></strong>
+<strong>Changes:</strong>
+- Added one extremely important widget - Settings Check widget. It prevents the system from the most annoying bugs like sibling variables reset or missing Ralf links in the Barn. The second part of this widget will notify you with the pop-up window that Problem Solver just fixed the setting error.
+This widget is very important and still in progress yet, so help me with your feedback, please. I really need it :)
+- Added a new non-consent scene. When you explore the city, there are equal chances to met a robber and a rapist. There is no Corruption check, by the way
+- Fixed three last cheat codes for $24 tier supporters. Sorry for this
+- Deleted "Lubricant", "Anal lubricant", "Vibrator", "Egg vibrator" from Lexena Market due to their uselessness
+- As always, some writing improvements from Rachael. Thank you
+- Do you remember <<link "Rhino">><<if $farm == false>><<set $farm = true>><<elseif $farm == true>><<set $farm = false>><<endif>><<goto "CHANGELOG">><</link>>? He does<<if $farm == false>>n't<<endif>> remember you<<if $farm == true>>:)<<endif>>
+<hr>
+<</linkreplace>>
+
+
+
+
+Full lists of improvements on my <a class="patreon" href="https://Patreon.com/MariaModd" target="_blank"><p style="color:white ; background-color: #f96753; border-radius: 15px; font-weight: bold"><p style="color:#f96753">.</p> Patreon <p style="color:#f96753">.</p></p></a>

@@ -1,0 +1,23 @@
+::StoryAuthor# [nobr] <0,300>
+<div style="font-size: 8pt"><i>By MariaMod<br />
+with help of Middlewared, Rachael<br /></i></div>
+
+<<if $mainChar.appearance.isCombed>>
+	<<if lastVisited("Comb yourself") >= 20>>
+		<<set $mainChar.appearance.isCombed = false>>
+	<<endif>>
+<<endif>>
+
+<<if ! tags().includes('system')>>
+  <<if $mainChar.cleanliness >= 0>>
+	  <<set $mainChar.cleanliness -= 1>>
+  <<endif>>
+<<endif>>
+
+<<if $day == 6 || $day == 7>>
+	<<set $weekendDay = true>>
+	<<set $weekday = false>>
+<<else>>
+	<<set $weekday = true>>
+	<<set $weekendDay = false>>
+<<endif>>

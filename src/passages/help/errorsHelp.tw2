@@ -1,0 +1,11 @@
+::Errors help <800,175>
+[[Loading saves from previous versions]]
+
+[[Back->Help]]
+
+::StoryIncludes
+src/passages/help/loadingHelp.tw2
+src/passages/help/problemSolver1.tw2
+src/passages/help/problemSolver2.tw2
+src/passages/help/problemSolver3.tw2
+src/passages/help/problemSolver4.tw2

@@ -1,0 +1,80 @@
+::Read online [system] <4500,2625>
+&emsp;You open your book app. This is where you read any books you have or buy more if you've run out! Now, what would you like to read?
+
+<<nobr>>
+  <<if $isDaddysGirlOwned == true>>
+	  <<if $isDaddysGirlRead != true>>
+		  * [[Daddy's Girl]]
+	  <<elseif $isDaddysGirlRead == true>>
+		  Daddy's Girl - You have already read this
+	  <<endif>>
+  <<endif>>
+<</nobr>>
+<<nobr>>
+  <<if $isForbiddenOwned == true>>
+	  <<if $isForbiddenRead != true>>
+		  * [[Forbidden]]
+	  <<elseif $isForbiddenRead == true>>
+		  Forbidden - You have already read this
+	  <<endif>>
+  <<endif>>
+<</nobr>>
+<<nobr>>
+	<<if $isUnderOwned == true>>
+	  <<if $isUnderRead != true>>
+		  * [[Under Mr. Nolan's Bed]]
+	  <<elseif $isUnderRead == true>>
+		  Under Mr. Nolan's Bed - You have already read this
+	  <<endif>>
+	<<endif>>
+<</nobr>>
+<<nobr>>
+  <<if $isRideMeDirtyOwned == true>>
+	  <<if $isRideMeDirtyRead != true>>
+		  * [[Ride Me Dirty]]
+	  <<elseif $isRideMeDirtyRead == true>>
+		  Ride Me Dirty - You have already read this
+	  <<endif>>
+  <<endif>>
+<</nobr>>
+<<nobr>>
+  <<if $isSevenNightsOfSinOwned == true>>
+	  <<if $isSevenNightsOfSinRead != true>>
+		  * [[Seven Nights of Sin]]
+	  <<elseif $isSevenNightsOfSinRead == true>>
+		  Seven Nights of Sin - You have already read this
+	  <<endif>>
+  <<endif>>
+<</nobr>>
+<<nobr>>
+  <<if $isDaddyMeOwned == true>>
+	  <<if $isDaddyMeRead != true>>
+		  * [[Daddy Me]]
+	  <<elseif $isDaddyMeRead == true>>
+		  Daddy Me - You have already read this
+	  <<endif>>
+  <<endif>>
+<</nobr>>
+<<nobr>>
+  <<if $isRightNextDoorOwned == true>>
+	  <<if $isRightNextDoorRead != true>>
+		  * [[Right Next Door]]
+	  <<elseif $isRightNextDoorRead == true>>
+		  Right Next Door - You have already read this
+	  <<endif>>
+  <<endif>>
+<</nobr>>
+<<nobr>>
+  <<if $isHerRivalsTouchOwned == true>>
+	  <<if $isHerRivalsTouchRead != true>>
+		  * [[Her Rival's Touch]]
+	  <<elseif $isHerRivalsTouchRead == true>>
+		  Her Rival's Touch - You have already read this
+	  <<endif>>
+  <<endif>>
+<</nobr>>
+<hr>
+
+[[Buy new books]]
+
+[[Go back->Smartphone]]

@@ -1,0 +1,10 @@
+::GF for a night <4500,1425>
+&emsp;You see an advertisement for 'Girlfriend for a Night'. You click on it and it takes you to a simple website that presents an opportunity for you to sell your body to a random guy for the night. Like whoring, but nicer.
+&emsp;You can either go to his place or you can share your home for the night (Whilst your parents are sleeping, of course).
+
+<<if $mainChar.look.clothes == "Topless" or $mainChar.look.clothes == "Naked">>
+You can`t go out in these clothes!<<else>>
+<<if $mainChar.energy < 50>>You are too tired to go anywhere<<else>>[[This boy looks really nice...]]<<endif>>
+<<if $mainChar.energy < 70>>You are too tired to bring anyone home!<<else>><<if $hour > 23 && $hour < 10>>It's too late to invite someone!<<else>>[[And you are ready to invite him after a quick date]]<<endif>><<endif>><<endif>>
+
+[[Back->JobHunters.net]]

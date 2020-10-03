@@ -1,0 +1,73 @@
+::Problem solver 1 <675,111>
+Hello, I'm your problem solver! Press the button below and let me try to fix something :)
+
+<<button "Sure!" "Problem solver 2">><</button>>
+<<nobr>>
+
+<<if settings.isSiblingInteractionAllowed == true>>
+	<<set $problemSolverisSiblingInteractionAllowed = true>>
+<<else>>
+	<<set $problemSolverisSiblingInteractionAllowed = false>>
+<<endif>>
+
+<<if settings.isBestialityAllowed == true>>
+	<<set $problemSolverisBestialityAllowed = true>>
+<<else>>
+	<<set $problemSolverisBestialityAllowed = false>>
+<<endif>>
+
+<<if settings.isSiblingAllowed == true>>
+	<<set $problemSolverisSiblingAllowed = true>>
+<<else>>
+	<<set $problemSolverisSiblingAllowed = false>>
+<<endif>>
+
+<<if settings.isBarsPreferred == true>>
+	<<set $problemSolverisBarsPreferred = true>>
+<<else>>
+	<<set $problemSolverisBarsPreferred = false>>
+<<endif>>
+
+<<if settings.lessPrices == true>>
+	<<set $problemSolverlessPrices = true>>
+<<else>>
+	<<set $problemSolverlessPrices = false>>
+<<endif>>
+
+<<if settings.menstruation == true>>
+	<<set $problemSolvermenstruation = true>>
+<<else>>
+	<<set $problemSolvermenstruation = false>>
+<<endif>>
+
+<<if settings.pregnancy == true>>
+	<<set $problemSolverpregnancy = true>>
+<<else>>
+	<<set $problemSolverpregnancy = false>>
+<<endif>>
+
+<<if settings.nonConsent == true>>
+	<<set $problemSolvernonConsent = true>>
+<<else>>
+	<<set $problemSolvernonConsent = false>>
+<<endif>>
+
+<!-- ------ SETTINGS TO FALSE ------ -->
+
+<<set settings.isSiblingInteractionAllowed = false>>
+
+<<set settings.isBestialityAllowed = false>>
+
+<<set settings.isSiblingAllowed = false>>
+
+<<set settings.isBarsPreferred = false>>
+
+<<set settings.lessPrices = false>>
+
+<<set settings.menstruation = false>>
+
+<<set settings.pregnancy = false>>
+
+<<set settings.nonConsent = false>>
+
+<</nobr>>

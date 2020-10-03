@@ -1,0 +1,12 @@
+This is the main pictures folder for Young Maria
+
+After you download the current Offline version of this game, merge the "pics" folder you found in this .zip file with the "pics" folder you can find in the Main Pics Folder (download from the link below).
+The .html game file must be in the same folder with "pics" folder. 
+Don't rename "pics" folders.
+
+With love, MariaMod
+
+
+
+P.S.: You can download the Main Pics Folder (always the last version) from here
+https://MariaMod.site/download/YM-MainPicsFolder.zip

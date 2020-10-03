@@ -1,0 +1,19 @@
+::Story help (spoilers alert) [system] <800,275>
+[[Brother->Step brother help]]
+[[Jack->Jack help]]
+[[High Tai->High Tai help]]
+[[School->School help]]
+[[Jerry->Jerry help]]<<if $farm == true>>
+[[Farm->Farm help]]<<endif>>
+[[Web cam->Web cam help]]
+[[Dreams->Dreams help]]
+
+[[Back->Help]]
+
+::StoryIncludes
+src/passages/help/farmHelp.tw2
+src/passages/help/highTaiHelp.tw2
+src/passages/help/jackHelp.tw2
+src/passages/help/jerryHelp.tw2
+src/passages/help/schoolHelp.tw2
+src/passages/help/brotherHelp.tw2

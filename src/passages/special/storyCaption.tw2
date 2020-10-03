@@ -1,0 +1,245 @@
+::StoryCaption [nobr] <0,400>
+<<if $mainChar.brothelSafe < 0>>
+	<<set $mainChar.brothelSafe = 0>>
+<<endif>>
+<<dayChangeWidget>>
+<<if $day == 1>>
+	<<set $dayOfWeek = "Monday">>
+<<elseif $day == 2>>
+	<<set $dayOfWeek = "Tuesday">>
+<<elseif $day == 3>>
+	<<set $dayOfWeek = "Wednesday">>
+<<elseif $day == 4>>
+	<<set $dayOfWeek = "Thursday">>
+<<elseif $day == 5>>
+	<<set $dayOfWeek = "Friday">>
+<<elseif $day == 6>>
+	<<set $dayOfWeek = "Saturday">>
+<<elseif $day == 7>>
+	<<set $dayOfWeek = "Sunday">>
+<<endif>>
+<u>$dayOfWeek</u> <br />
+<<timeWidget>> <br />
+<div align="center">
+	<table border="0">
+		<tr>
+			<td class="timer">
+				<p style="color:#F5F4F4; font-size: 3px">.</p>$showHour:$showMinute
+			</td>
+		</tr>
+	</table>
+</div>
+<br />
+<<if $mainChar.money < 0>>
+	<<set $mainChar.money = 0>>
+<<endif>>
+<p style="color: gold; font-size: 20px"><strong>¤ $mainChar.money</strong></p>
+<br />
+<<if $mainChar.energy < 0>>
+	<<set $mainChar.energy = 0>>
+<<elseif $mainChar.energy > 100>>
+	<<set $mainChar.energy = $mainChar.maxEnergy>>
+<<endif>>
+Energy:
+<<if settings.isBarsPreferred == true>>
+	<<energyBar>>
+<<else>>
+	$mainChar.energy/$mainChar.maxEnergy
+<<endif>>
+<br />
+<<if $mainChar.intoxication < 0>>
+	<<set $mainChar.intoxication = 0>>
+<<elseif $mainChar.intoxication > 100>>
+	<<set $mainChar.intoxication = 100>>
+<<endif>>
+
+<<if $mainChar.intoxication > 0>>
+	<<intoxicationWidget>>Intoxication:
+	<<if settings.isBarsPreferred == true>>
+		<<intoxicationBar>>
+	<<else>>
+		$mainChar.intoxication/100
+	<<endif>>
+<<endif>>
+<br />
+<<if hasVisited("Bedroom") >>
+  <<if $mainChar.age == 18 and $day < 6 and $hour < 9>>
+	  <strong>School starts at 9AM!</strong>  <br />
+  <<endif>>
+
+  <<if $isJobHad == true and $day < 6 and $hour < 9 >>
+	  <strong>You must go to work before 9AM!</strong>  <br />
+  <<endif>>
+<</if>>
+<br />
+<<if $mainChar.look.clothes == "Topless">>
+	<<set $mainChar.look.isWearingBra = false>>
+<<endif>>
+
+<<if $mainChar.look.clothes == "Naked">>
+	<<set $mainChar.look.isWearingBra = false>>
+	<<set $mainChar.look.isWearingPanties = false>>
+<<endif>>
+
+<<if $hour > 6 && $hour < 24>>
+	<<set $timeOfDay = "Day">>
+<<else>>
+	<<set $timeOfDay = "Night">>
+<<set $mainChar.hasBeenAtSchool = false>>
+	<<set $hasBeenAtWork = false>>
+<<endif>>
+
+<<if $stashNeatness < 0>>
+	<<set $stashNeatness = 0>>
+<<elseif $stashNeatness > 100>>
+	<<set $stashNeatness = 100>>
+<<endif>>
+
+<<if $mainChar.beauty < 0>>
+	<<set $mainChar.beauty = 0>>
+<<elseif $mainChar.beauty > 100>>
+	<<set $mainChar.beauty = 100>>
+<<endif>>
+
+<<if $mainChar.corruption < 0>>
+	<<set $mainChar.corruption = 0>>
+<<elseif $mainChar.corruption > 100>>
+	<<set $mainChar.corruption = 100>>
+<<endif>>
+
+<<if def $sibling>>
+	<<if $sibling.corruption < 0>>
+		<<set $sibling.corruption = 0>>
+	<<elseif $sibling.corruption > 100>>
+		<<set $sibling.corruption = 100>>
+	<<endif>>
+<<endif>>
+
+<<if $mainChar.relationships.sibling < 0>>
+	<<set $mainChar.relationships.sibling = 0>>
+<<elseif $mainChar.relationships.sibling > 100>>
+	<<set $mainChar.relationships.sibling = 100>>
+<<endif>>
+
+<<if $mainChar.sexStats.vaginalCapacity < 0>>
+	<<set $mainChar.sexStats.vaginalCapacity = 0>>
+<<elseif $mainChar.sexStats.vaginalCapacity > 10>>
+	<<set $mainChar.sexStats.vaginalCapacity = 10>>
+<<endif>>
+
+<<if $mainChar.sexStats.analCapacity < 0>>
+	<<set $mainChar.sexStats.analCapacity = 0>>
+<<elseif $mainChar.sexStats.analCapacity > 10>>
+	<<set $mainChar.sexStats.analCapacity = 10>>
+<<endif>>
+
+<<if $dateDay != 7 and $dateMonth != "June" and $wasBirthdayCelebrated == true>>
+	<<set $wasBirthdayCelebrated = false>>
+<<endif>>
+
+<<set _messageChance1 to either(random(1,100))>>
+<<set _messageChance2 to either(random(1,100))>>
+<<if $mainChar.laptop.socials.commentPoints >= _messageChance1 and $mainChar.laptop.socials.commentPoints >= _messageChance2>>
+	<<set $newMessage += 1>>
+<<endif>>
+
+<<if hasVisited("Bedroom") >>
+  <<if $mainChar.cleanliness >= 60>>
+	  @@color: lime; Your body is clean and fresh. @@
+  <<elseif $mainChar.cleanliness >= 30 && $mainChar.cleanliness < 60>>
+	  @@color: yellow; You feel like you should take a shower soon. @@
+  <<elseif $mainChar.cleanliness < 30>>
+	  @@color: red; Your body is dirty! The smell is overpowering. Take a shower! @@
+  <<endif>>
+  <<if settings.menstruation == true and $mainChar.menstruation.day >= 15 and $mainChar.menstruation.isProtected != true>>
+  	<br />
+	@@color: red; Go to the bathroom and apply a tampon! @@
+  <<endif>>
+<<endif>>
+<<set $backButton = passage()>>
+
+<<SettingsCheckWidget>>
+<<WebMessages>>
+
+<<dollClothesWidget>>
+<<include "Paper Doll">>
+
+<<script>>
+	if (Save.ok() && Save.slots.ok() && turns() % 11 == 0) {
+		console.log(Save.get());
+		console.log("Available slots: " + Save.slots.length);
+		console.log("Filled slots: " + Save.slots.count());
+		console.log("Get the first slot: " + Save.slots.get(0));
+		console.log("If the first log filled? " + Save.slots.has(0));
+		console.log("Do we have any filled slots? " + Save.slots.isEmpty());
+
+		Save.slots.save(0, "AUTOSAVE", {"ki": "velu"});
+		console.log(Save.get());
+		console.log("Available slots: " + Save.slots.length);
+		console.log("Filled slots: " + Save.slots.count());
+		console.log("Get the first slot: " + Save.slots.get(0));
+		console.log("If the first log filled? " + Save.slots.has(0));
+		console.log("Do we have any filled slots? " + Save.slots.isEmpty());
+}
+<</script>>
+
+
+<<if passage() == "take a look at your new house">>
+
+	<<if def $corruptionTemp>>
+		<<run State.setVar("$mainChar.corruption", parseInt(variables().corruptionTemp)); >>
+        <<unset $corruptionTemp>>
+    <<else>>
+        <<set $mainChar.corruption = 0 >>
+    <</if>>
+    <<include "Set default character state">>
+    <<include "Sibling Character">>
+    <<run $inventory.add('grocery', {
+        name: 'Shampoo',
+        image: 'pics/personal_items/shampoo.jpg',
+        description: 'Keeps your body and hair clean',
+        count: 20,
+        price: 150,
+        use: 'many',
+    });>>
+	<<run $inventory.add('grocery', {
+		name: 'Razors',
+		image: 'pics/personal_items/razors.jpg',
+		description: 'Cuts your bush',
+		count: 20,
+		price: 200,
+		use: 'many',
+	});>>
+	<<run $inventory.add('pharmacy', {
+		name: 'Tampons',
+		image: 'pics/personal_items/tampons.jpg',
+		description: 'Take on unexpected moments',
+		count: 18,
+		price: 250,
+		use: 'many',
+	});>>
+	<<run $inventory.add('pharmacy', {
+			name: 'Pregnancy test',
+			image: 'pics/personal_items/pregnancy_test.jpg',
+			description: 'The game started...',
+			count: 0,
+			price: 100,
+			use: 'many',
+	});>>
+	<<run $inventory.add('pharmacy', {
+			name: 'Birth control pills',
+			image: 'pics/personal_items/birth_control_pills.jpg',
+			description: "Who doesn't want a lot of hassle and sleepless nights?",
+			count: 0,
+			price: 150,
+			use: 'many',
+	});>>
+	<<run $inventory.add('pharmacy', {
+			name: 'Vitamins',
+			image: 'pics/personal_items/vitamins.jpg',
+			description: 'Drink once a day for good health and energy!',
+			count: 0,
+			price: 200,
+			use: 'many',
+	});>>
+<<endif>>

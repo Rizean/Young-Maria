@@ -1,0 +1,11 @@
+::Sex stats [nobr] <1075,225>
+Masturbated: $mainChar.sexStats.masturbated <br />
+Handjobs given: $mainChar.sexStats.handjob <br />
+Blowjobs given: $mainChar.sexStats.bj <br />
+Had vaginal sex: $mainChar.sexStats.vaginal <br />
+Had anal sex: $mainChar.sexStats.anal <br />
+Had gangbangs: $mainChar.sexStats.ganged <br />
+Titsjob given: $mainChar.sexStats.tits <br />
+
+<br />
+<<back "Back">>

@@ -1,0 +1,111 @@
+::This boy looks really nice... [nobr] <4700,1425>
+<<set $wasMenuItemEntered = false>><<set _name to either("Joshua","Rocky","Baldo","Rick","Frencis","Bob","Rich","Tom","Tim","John","Lugo","Dilan","Jim","Seed","Neel","Jay","Harry","Ron","Todd")>>
+&emsp;You set everything up for the evening and get yourself ready. After you've prepared yourself, you head over to his. Your legs tremble but part of is it excitement. The thought of doing it with a total stranger is... hot! <br />
+&emsp;The guy opens the door. "Hi! I'm _name. You're even prettier in person!" <br /> <br />
+~Two Hours Later~ <br /> <br />
+<<set _image to random(1, 15)>>
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex1.gif">
+    </div>
+    <<HaveASexWidget "bj" "internet stranger">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex2.gif">
+    </div>
+    <<HaveASexWidget "bj" "internet stranger">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex3.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "internet stranger">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex4.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "internet stranger">>
+<<elseif _image == 5>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex5.gif">
+    </div>
+    <<HaveASexWidget "bj" "internet stranger">>
+<<elseif _image == 6>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex6.gif">
+    </div>
+    <<HaveASexWidget "anal" "internet stranger">>
+<<elseif _image == 7>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex7.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "internet stranger">>
+<<elseif _image == 8>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex8.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "internet stranger">>
+<<elseif _image == 9>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex9.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "internet stranger">>
+<<elseif _image == 10>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex10.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "internet stranger">>
+<<elseif _image == 11>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex11.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "internet stranger">>
+<<elseif _image == 12>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex12.gif">
+    </div>
+    <<HaveASexWidget "handjob" "internet stranger">>
+<<elseif _image == 13>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex13.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "internet stranger">>
+<<elseif _image == 14>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex14.gif">
+    </div>
+    <<HaveASexWidget "anal" "internet stranger">>
+<<elseif _image == 15>>
+    <div class="default-image-wrapper">
+        <img src="pics/strangerSex15.gif">
+    </div>
+    <<HaveASexWidget "bj" "internet stranger">>
+<<endif>>
+
+You are a little slut... <br />
+<br />
+<p class="add">+$30</p> <br />
+<p class="add">+1 Corruption</p> <br />
+<p class="minus">-40 Energy</p> <br />
+
+<<set $hour += 4>>
+<<set $mainChar.money += 30>>
+<<set $mainChar.energy -= 40>>
+<<set $mainChar.corruption += 1>>
+
+<<if $mainChar.beauty >= 20>>
+    <<if $mainChar.beauty >= 20 && $mainChar.beauty < 40>>
+        <<set _tip to random(1, 5)>>
+    <<elseif $mainChar.beauty >= 40 && $mainChar.beauty < 60>>
+        <<set _tip to random(6, 10)>>
+    <<elseif $mainChar.beauty >= 60 && $mainChar.beauty < 80>>
+        <<set _tip to random(11, 15)>>
+    <<elseif $mainChar.beauty >= 80>>
+        <<set _tip to random(16, 20)>>
+    <<endif>>
+    <br />
+    &emsp;Also, this guy gives you a tip of (<p class="add">+ _tip bucks</p>) because of your beauty! <br />
+
+    <<set $mainChar.money += _tip>>
+<<endif>>
+<br />
+[[Go home->living room]]

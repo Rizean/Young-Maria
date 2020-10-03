@@ -1,0 +1,370 @@
+::StoryCSS [stylesheet]
+/* notify.min.css, by chapel; for use with notify.js; v1.0.0
+#notify{position:fixed;display:block;width:16em;right:-20em;top:2em;padding:.5em;background-color:#fff;color:#000;-webkit-transition:right .3s;-moz-transition:right .3s;-o-transition:right .3s;transition:right .3s}#notify.open{right:0} */
+
+@font-face {
+    font-family: "Timer";
+    src: url("https://MariaMod.site/fonts/Timer.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+.add {
+    color: green;
+    font-size: 13pt;
+    font-weight: bold;
+}
+.minus {
+    color: red;
+    font-size: 13pt;
+    font-weight: bold;
+}
+body {
+    font-size: 13pt;
+}
+p {
+    display: inline;
+}
+.subscribestar_button {
+    max-height: 80px;
+    max-width: 80px;
+    display: inline;
+}
+.discord_button {
+    max-height: 110px;
+    max-width: 120px;
+    display: inline;
+}
+.coffee_button {
+    max-height: 85px;
+    max-width: 95px;
+    display: inline;
+}
+.text {
+    color: blue;
+}
+.char {
+    color: pink;
+}
+.support {
+    font-size: 16pt;
+    text-align: center;
+    color: gold;
+    font-family: Florence, cursive;
+}
+.hallThanks {
+    text-align: center;
+}
+.timer{
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-weight: normal;
+    font-size: 22pt;
+    height: 43px;
+    width: 109px;
+    background-color: #F5F4F4;
+    color: #454545;
+    text-shadow: -2px 3px 1px #CDCBCB;
+    border: 4px solid #9C9C9C;
+    border-width: 4px;
+    border-color: #9C9C9C;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.gf-image-wrapper {
+    max-width: 50%;
+    border: 1px hidden;
+    border-radius: 3px;
+}
+
+.gf-image-wrapper img {
+    width: 100%;
+}
+
+
+.default-image-wrapper {
+    max-width: 50%;
+    border: 1px hidden;
+}
+
+.default-image-wrapper img {
+    width: 100%;
+}
+
+img.full-width-image  {
+    width: 100%;
+}
+
+.char-male {
+    background-color: #deeaff;
+    color: #7096ff;
+    padding: 5px;
+    border: 1px solid #8490c9;
+}
+
+.image-center {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.image-full-center {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.image-center img {
+    width: 100%;
+}
+
+.image-full-center img {
+    width: 100%;
+}
+
+.image-wrapper-w70p {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+
+.image-wrapper-w50p {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.image-wrapper-small img {
+    display: block;
+    max-width: 30%;
+    border: 1px hidden;
+}
+
+.image-wrapper-w70p img {
+    width: 70%;
+}
+
+.image-wrapper-w50p img {
+    width: 50%;
+}
+
+/* styles that overlap native  */
+#passages {
+    max-width: 54em;
+    margin: 0 auto;
+    font-size: 120%;
+}
+
+.progressBar {
+    width: 200px;
+    height: 6px;
+    background-color: #f0a3a3;
+}
+
+#setting-body-gender {
+    display: none;
+}
+
+/* Main character styles */
+.mc-text {
+    display: block;
+    color: #fe4bd0;
+    background-color: #ffd0f6;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.mc-text.thought {
+    font-style: italic;
+}
+
+.mc-arousal-up {
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 3px;
+    border: 1px solid #444;
+    color: #ff1fc5;
+}
+
+.mc-arousal-down {
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 3px;
+    border: 1px solid #444;
+    color: #b2b1ff;
+}
+
+.mc-attr-up {
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 3px;
+    border: 1px solid #444;
+    color: #59fc69;
+}
+
+.mc-attr-down {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #333;
+    border-radius: 3px;
+    border: 1px solid #444;
+    color: #fe3737;
+}
+
+/* Unknown character styles */
+.uc-text {
+    display: block;
+    color: #3f3f3f;
+    background-color: #ebebeb;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    margin-top: 5px;
+}
+.uc-text.thought {
+    font-style: italic;
+}
+
+/* Brother character styles */
+.bc-text {
+    display: block;
+    color: #eaffff;
+    background-color: #8795ff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    margin-top: 5px;
+}
+.bc-text.thought {
+    font-style: italic;
+}
+
+.narrator {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    color: #ffdefe;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.wardrobe-clothes td,
+.wardrobe-clothes th {
+    text-align: center;
+}
+
+.wardrobe-clothes tr td img {
+    max-width: 100%;
+}
+
+.male-text {
+    color: dodgerblue;
+}
+
+.female-text {
+    color: hotpink;
+}
+#DollMainBody img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 0
+}
+
+#DollButtPlug img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 1
+}
+
+#DollNeck img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 2
+}
+
+#DollHair img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 3
+}
+
+#DollChest img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 4
+}
+
+#DollBra img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 5
+}
+
+#DollPanties img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 6
+}
+
+#DollStockings img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 7
+}
+
+#DollMainClothes img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 8
+}

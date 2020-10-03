@@ -1,0 +1,45 @@
+::StoryIncludes
+src/passages/stats/sexStats.tw2
+src/passages/stats/changelog.tw2
+src/passages/stats/hallOfGlory.tw2
+
+::Stats [system] <975,25>
+Name: $mainChar.firstName
+Age: $mainChar.age <<if settings.isSiblingAllowed == true>>
+You have a step $sibling.type - $sibling.firstName<<endif>>
+
+Day: $dayCount | $dateDay of $dateMonth
+
+Money: $mainChar.money
+Energy: $mainChar.energy | Max energy: $mainChar.maxEnergy
+Beauty: $mainChar.beauty <<if $mainChar.age == 18 or $isJobHad == true>>
+Reputation at <<if $isJobHad == true>>work<<else>>school<<endif>>: $mainChar.reputation.school <<endif>>
+Corruption: $mainChar.corruption <<if $mainChar.intoxication > 0>>(drunk bonus: $oneIntoxication)<<endif>>
+
+<<if settings.isSiblingAllowed == true>>Your relationship with step $sibling.type: $mainChar.relationships.sibling
+Corruption of step $sibling.type : $sibling.corruption
+
+<<endif>>Your relationship with step mom: $mainChar.relationships.mom
+Your relationship with step dad: $mainChar.relationships.dad
+
+Step mom's corruption: $mom.corruption
+Step dad's corruption: $dad.corruption <<if $mainChar.relationships.ralfDog != 0>>
+Relationship with Ralf: $mainChar.relationships.ralfDog<<endif>>
+<<if $bankFirstVisit == false>>
+
+Bank card password: $cardPassword<<endif>>
+<<include "Attractivenes">>
+Clothes: $mainChar.look.clothes.body.name [[More...]]<<if settings.menstruation == true>>
+
+Period day: $mainChar.menstruation.day <<if $mainChar.menstruation.day >= 15 and $mainChar.menstruation.isProtected != true>>(go to bathroom and apply a tampon!)<<elseif $mainChar.menstruation.day >= 15 and $mainChar.menstruation.isProtected == true>>(protected)<<endif>><<if settings.pregnancy == true>>
+<<if $mainChar.pregnancy.isOnPills == true>>You are on pills today<<else>>You didn't take birth control pills today<<endif>> <<if $mainChar.menstruation.day >= 15 or $mainChar.pregnancy.knowsAboutPregnancy == true>>[You don't need pills today]<<endif>>
+<<endif>>
+<<endif>>
+Sex stats: [[Sex stats]]
+
+[[CHANGELOG]]
+
+[[Hall of Glory]]
+
+Give me your feedback + watch for new games and updates: <a class="patreon" href="https://Patreon.com/MariaModd" target="_blank"><p style="color:white ; background-color: #F76826; border-radius: 15px"><p style="color:#F76826">.</p> Patreon <p style="color:#F76826">.</p></p></a>
+

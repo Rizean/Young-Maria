@@ -1,0 +1,45 @@
+::StoryIncludes
+
+::Bedroom <1000,900>
+@@.image-wrapper-w70p; <img src="pics/bedroom.gif"> @@ \
+<<nobr>>
+    &emsp;Your room is beautiful with ample space and plenty of natural light emanating from the big window behind your bed. <br />
+    &emsp;Most of your furniture is made of simple birch wood but with the pale purple walls and pretty decorations, your room is full of bright colours. <br />
+    &emsp;Located in the center is a large [[double bed->Home bed]]. You didn't have one in the old place so this is a definite upgrade. <br />
+    &emsp;To the left of the bed is a small bedside table with a lamp and some of your trinkets perched on top. <br />
+    <<if $inventory.has('techItems', 'Laptop')>>
+       &emsp;Opposite the bed is your desk which has a [[laptop->Use laptop]] on. Around the laptop are some stationary items. <br />
+    <<else>>
+        &emsp;Opposite the bed is your desk littered with most of your stationary items. There is room for a laptop here. <br />
+    <</if>>
+    &emsp;To the right of your desk is a TV stand with extra shelving and drawers. In the middle rests a small silver TV. <br />
+   &emsp;Next to your bed, on the right, is your [[wardrobe->Wardrobe]]. Most of your clothes hang up nicely inside. <br />
+    &emsp;There is plenty of room in front of your wardrobe and TV stand for some exercise. <br />
+    <<if $isBackgroundChangerOwned == true>>
+        [[Change background]] <br />
+    <<endif>>
+    <<if $mainChar.corruption > 50>>
+        <<if $mainChar.energy >= 40>>
+            [[Train your throat][$minute += 20]] <br />
+        <<else>>
+            You are too tired to train right now...<br />
+        <</if>>
+    <</if>>
+    <br />
+    Go to the [[living room][$minute += 1]]  <br />
+
+    <<if $isJobHad != true and $mainChar.age > 18>>
+        <<link "Find the Job">>  <br />
+            <<set $past to passage()>>
+            <<goto "JobHunters.net">>
+        <</link>>
+    <<endif>>
+
+	<<if settings.pregnancy == true and $mainChar.pregnancy.isPregnant == true and $mainChar.pregnancy.knowsAboutPregnancy == true>>
+		<br />
+		Abort($700) - <<if $mainChar.money >= 700>><<linkreplace "Do it">><<set $mainChar.money -= 700>><<set $hour += 1>><<set $mainChar.pregnancy.isPregnant = false>><<set $mainChar.pregnancy.day = 1>><<set $mainChar.pregnancy.knowsAboutPregnancy = false>>
+		<br />
+		&emsp;You realise you don't want to be a mother so you head to the local abortion clinic. They prescribe you some very expensive pills and inform you on how to take the pills. <br />
+		&emsp;You make a note of what you have to do. But perhaps it's time to go to Lexena Market and buy some "girl pills"? :3 <</linkreplace>><<else>>Not enough money<<endif>>
+	<<endif>>
+<</nobr>>

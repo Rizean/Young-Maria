@@ -1,0 +1,9 @@
+::Problem solver 4 <680,421>
+Well, I did my best. Hope your problem is solved now!
+
+<<button "Turn off" "Help">><</button>>
+<<nobr>>
+
+<<run UI.settings()>>
+
+<</nobr>>
