@@ -13,4 +13,4 @@ This is a fork/refactor of [Young-Maria](https://github.com/MariaMod/Young-Maria
 
 ## Build/Run
 * From project root: `https://github.com/Rizean/Young-Maria`
-* Open `YoungMaria8.0.0_Offline.tw2.html` a Modern in browser
+* Open `YoungMaria8.0.0_Offline.tw2.html` in a Modern browser
