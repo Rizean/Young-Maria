@@ -9,3 +9,8 @@ This is a fork/refactor of [Young-Maria](https://github.com/MariaMod/Young-Maria
 ## Goals
 * Completely refactor Young-Maria and have it merged upstream
 * Build a framework to make it easier to build `Mature` Twine.js games. As tribute to the original author I'm planing to call it Maria.js or something like that.
+
+
+## Build/Run
+* From project root: `https://github.com/Rizean/Young-Maria`
+* Open `YoungMaria8.0.0_Offline.tw2.html` a Modern in browser
