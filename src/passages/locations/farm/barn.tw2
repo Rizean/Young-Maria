@@ -1,0 +1,144 @@
+::Go to barn <88,1445>
+<<set $minute += 5>><div class="default-image-wrapper"><img src="pics/HorseInStall.jpg"></div>
+
+<<if visited() == 1>>&emsp;You enter the barn. In the right stall you find a big, heavy, strong stallion - Jackie. He is so beautiful and looks so powerful that you can't help yourself...
+&emsp;You step closer and get on your knees. There are huge, veiny balls between his legs. Amazed, you slowly touch them. Jackie neighs suddenly and his cock head begins to grow.
+&emsp;You stand up quickly and step away. Granddad told you that Jackie is a bit... blueballed, but you didn't expect THAT fast reaction.
+
+<<endif>>&emsp;Jackie is standing in front of you, snorting aggressively
+
+<<if $mainChar.corruption < 50>>&emsp;You are so scared that would never touch his balls again...<<else>><<if $mainChar.energy >= 30>>[[Blowjob->Give Jackie a blowjob]]
+[[Sex->Give Jackie vaginal]]
+[[Anal sex->Give Jackie anal]]<<else>>You are too tired to help Jackie!<<endif>><<endif>>
+
+[[Back->Farm]]
+
+::Give Jackie a blowjob <0,1596>
+<<set $minute += 20>>&emsp;With some hesitation, you lean forward and gently rub your hand along Jackie's sheath. He neighs curiously and stomps his back foot. You stop for a minute and wait for him to calm down.When he's calm once more, you put your hand back and rub again. This time, Jackie realises what you're doing and lets out a excited whinny.
+&emsp;After a few seconds, you begin to see the black tip of a very large and thick horse cock. Now you move your hand to his shaft, stroking along his length. The more you stroke, the bigger Jackie's cock seems to get.
+&emsp;When it's all the way out and stood to attention, you take the cock in both hands and lift your head towards it. Your tongue pokes out of your mouth and traces along the tip of his cock. It quivers under your wet touch but that only makes you want more. You're in charge now.
+&emsp;You move closer, almost entirely under his belly. You move your tongue all over his tip, coating it in your saliva. But it's not enough. You want to taste him, you want to feel his big cock in your mouth. Your mouth opens of it's own accord and you push forward.
+&emsp;His tip enters you and strain to keep your mouth as wide as possible. You ignore the ache and lean in, pushing his meaty dick further into your mouth. With your hands on his cock, you start to stroke once more and soon your mouth and hands are in sync, working their way up and down his cock.
+&emsp;Minutes go by and you've picked up quite the rhythm. Your hands feverishly pumping his cock and fondling his balls whilst your mouth salivates all over the tip. Soon you feel Jackie tense and you pull him out in just enough time to watch as a fountain of thick white horse semen erupts onto your face.
+&emsp;You close your eyes and revel in the feeling of his hot cum all over your pretty little face. Your tongue sticks out, gathering some of the cum on it so that you can taste your hard work.
+
+<div class="default-image-wrapper">[img[String.format('https://MariaMod.' + 'site/p' + 'ics/ZooHorseBlowjob' + random(1,3) + '.jpg')]]</div>
+
+&emsp;What a mess...
+
+<<if $granddadSeeYou == 1>>&emsp;You hear slow steps approaching. It seems Jackie made too much noise and now your Grandfather has come to check on him. Turning bright red, you stand up and quickly remove as much cum as you can with your clothes. After a quick chat with your Grandad he finally leaves, letting you take a deep breath...
+
+<<endif>><p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>><<HaveASexWidget "bj" "Horse">>
+
+[[Clean yourself->Go to barn]]
+
+::Give Jackie vaginal <120,1595>
+<<if $mainChar.sexStats.vaginalCapacity < 5>><<set $minute += 5>>&emsp;You get an urge to try and mate with the horse. You want to feel his cock inside of you. You fondle his balls, rubbing gently along his sheath until you see the tip of his penis emerge.
+&emsp;You continue until all of his long, hard cock is fully out and erect. You lean in and brush your tongue along his shaft, trying to lubricate as much of it as you can.
+&emsp;Once it is sufficiently wet, you take off your clothes and bend over underneath him. You position his cock in line with your hold and stroke his tip along your lips. A shiver of pleasure runs along your body. You really fucking want this. Taking a deep breath, you push his cock into your hole but you're too tight and he's too big. It doesn't fit.
+&emsp;You sigh in disappointment but decide to use his cock anyway. You beging to run his thick, throbbing cock against your pussy lips. Though it's not much, the feeling of his animal veins against your clit is enough. Wave of pleasure after pleasure coarses over your body and by his loud grunts, you can tell Jackie's enjoying it too.
+&emsp;After a few minutes, both of your reach your climax. But before he unloads, you straighten his cock at your entrance. When Jackie shoots stream after stream of sticky white liquid, you cum at the feeling of his semen jetting into your pussy and coating the exterior.
+
+&emsp;What a dirty slut you are...<<elseif $mainChar.sexStats.vaginalCapacity >= 5 and $mainChar.sexStats.vaginalCapacity < 10>><<set $minute += 20>>&emsp;With the size of these balls, you can only imagine the size of Jackie's cock. And you want that size inside of you. You reach up, stroking along his sheath to entice him and coax the elusive horse dick out. Before long, his cock is fully unsheathed and stood to attention.
+&emsp;You lick your lips and plaster your tongue all over his tip and down his shaft to lubricate the big beast. Then, when it's nicely moist, you strip and bend over, positioning yourself in front of his large quivering dick.
+&emsp;At first you prod hole and run his cock along your pussy lips. You shiver with anticpation but you can't wait any longer. With a deep breath, you gently push Jackie's member towards your petit, tight hole. You ease it gently, thrusting bit by bit and soon it slips past your exterior and the tip enters you.
+&emsp;You gasp in both pain and ecstasy. His large, throbbing cock is grating against your walls. You don't think you can take much more so you decide this is enough.
+&emsp;With even just the tip inside you, you already feel full to bursting. You slowly and gently rock your body back and forth, his tip grinding inside of you. You feel dirty suddenly as your realise you have an actual horse cock inside you. A big, thick, veiny cock inside your tight, wet pussy...
+&emsp;Your legs feel like jelly and your pussy is on fire. Without even realising it, Jackie begins to cum, shooting his sticky white semen straight into your pussy. At that feeling, you cum hard. Your legs shake and you fall to the ground, causing his cock to slip out of your pussy. As you lay there, quivering from the pleasure, your bare back gets coated in his hot cum.
+
+&emsp;If only your grandad saw you now. What would he say?
+
+<div class="default-image-wrapper">[img[String.format('https://MariaMod.' + 'site/p' + 'ics/ZooHorseVaginal' + random(1,5) + '.jpg')]]</div>
+
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>><<set $mainChar.sexStats.vaginal += 1>><<elseif $mainChar.sexStats.vaginalCapacity >= 10>><<set $minute += 20>>&emsp;You hold out your hands and place one on his balls, fondling the hanging sack. The other gently rubs his sheath, trying to coax his dick to come out and play. Soon the magnificence of the large horse cock shows itself and you stare in awe.
+&emsp;Drool dribbles down your chin but you don't want to waste anytime. You quickly slather his dick in your saliva and undress before position yourself, doggy style under his belly. Hours of vaginal training has prepared you for this moment. You're ready.
+&emsp;With one hand, you guide his cock towards your entrance and with the other, you part one cheek. His cock quivers in anticipation. You both want this.
+&emsp;Slowly, but surely, you push his big dick into your tight pussy. You let out a gasp of pain at the intrusion but you find that his cock slips in quite gracefully. Unfortunately, Jackie also sense the ease of it all and takes the opporuntity to ram into you.
+&emsp;His long cock pushes deep inside of you and your eyes roll back inside your head as his thick cock grates against your vaginal walls. He even manages to penetrate your cerivx and enter your womb. &emsp;Completely taken by surprise, you only focus on keeping your balance whilst Jackie seizes this moment and takes charge. He pulls away, but not quite pulling out, before slamming back into you again. The sheer force of his thrusts throw you off balance everytime so you decide to let him do the work.
+&emsp;After a few minutes, Jackie's pace is animalistic. His huge throbbing cock pounds into you again and again. Each time, it grazes against your walls and pushes past your cervix and each time you are overwhelmed with pleasure.
+&emsp;You couldn't help yourself and you finally reached your peak. His next thrust caused you to cum, hard, and your whole body shuddered from the pleasure. Jackie, however, was not done and he continued to pound into you.
+&emsp;You could've sworn he enjoyed it more when your walls clamped down around his thick cock because, almost immediately, Jackie begins to slow. You wonder why but you soon have your answer as a fountain of hot, sticky liquid shoots into your womb. Gushes and gushes of his viscous cum fills you and some even spills out when he removes his cock from your pussy and drips onto the floor.
+&emsp;When he's out, you fall to the floor, panting hard and lay there for a few moments to catch your breath. A small pool of cum has collected underneath your pussy.
+
+<div class="default-image-wrapper">[img[String.format('https://MariaMod.' + 'site/p' + 'ics/ZooHorseVaginal' + random(1,5) + '.jpg')]]</div>
+
+&emsp;You were fucked like a breeding mare and you enjoyed it...
+
+<<if $granddadSeeYou != 1>><p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>><<set $mainChar.sexStats.vaginal += 1>><<else>>&emsp;You lay there, letting the cum leak out of your sore pussy, when the sound of footsteps fast approaching jolts you back to reality. You try to jump to your feet but after such a hard fucking, you fall back to the ground. You could do nothing but hide your face in shame. When you lift your head again, you see your Grandad's back getting smaller as he walks away. Damn...
+
+<p class="minus">-3 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption -= 3>><<set $mainChar.energy -= 30>><<set $mainChar.sexStats.vaginal += 1>><<endif>><<endif>>
+
+<<if $mainChar.sexStats.vaginalCapacity < 10>><u>Buy a big dildo via Laptop and stretch your pussy a bit</u>
+
+<<endif>>[[Clean yourself->Go to barn]]
+
+::Give Jackie anal <31,1711>
+<<if $mainChar.sexStats.analCapacity < 5>><<set $minute += 5>>&emsp;As you fondle his balls, you start to see the tip of his penis peek out from the sheath. After a few seconds, before you stands a very large, erect horse cock.
+&emsp;Seeing this magnificent member sends hundreds of dirty thoughts through your brain and you bite your lip. You don't waste any time and undress yourself before standing, bent over, in front his cock. With one hand, you take the cock and rub it along your soaking wet pussy, using your juices to lubricate his shaft. After you feel that it's fully moist, you position it in front of your ass hole and...
+&emsp;You hesitate. Jackie's cock is massive, and your ass is almost untouched. But you want it inside of you so badly. You take a deep breath and gently push his tip to your hole, trying to coax it inside. It won't fit.
+&emsp;The pain is too much and you stop pushing, sighing disappointedly. After a slight pause, you twist around and begin to jerk off Jackie. Though your handjob gets him off and he's soon spraying you with his cum, you can't help but feel unsatisfied.
+
+&emsp;Next time, you'll be ready. You just need to train your ass.<<elseif $mainChar.sexStats.analCapacity >= 5 and $mainChar.sexStats.analCapacity < 10>><<set $minute += 20>>&emsp;After a few more moments of ball fondling, Jackie's cock starts to emerge from it's sheath. You feel yourself getting wetter and wetter as his full length stands to attention in front of you. You want him, now.
+&emsp;You lean forward, aching for a taste and run your tongue over his tip. He whinnies in pleasure and stomps one foot but you ignore it, only removing your tongue when you're happy his cocks been sufficiently coated.
+&emsp;You undress quickly and bend over, positioning your tight little ass in front of his long, hard cock. Though horny as hell, you're hesitant as you guide him to your hole. The tip is big and only with more of your saliva and some gentle coaxing do you finally get it into your ass.
+&emsp;An audible gasp escapes your mouth as you wriggle in pain, trying to find the most comfortable position. There isn't one. Jackie is just too big and you can only just about push him in a couple more inches before the pain gets too much. It will have to do.
+&emsp;You slowly rock your hips back and forth, sliding up and down his shaft with difficulty. But the feeling of his hard cock grinding against your walls is pure bliss and soon you feel yourself brimming with pleasure.
+&emsp;As you cum, you instinctively clench your ass which causes Jackie to spurt his own hot white liquid into you as he too reaches his climax. You're both cumming and you both love it. Once you both finish, you painfully remove his cock from your ass and give him a hearty pat on his belly.
+
+&emsp;Sometimes, even the tip can be enough. But next time, you want more...
+
+<div class="default-image-wrapper">[img[String.format('https://MariaMod.' + 'site/p' + 'ics/ZooHorseAnal' + random(1,4) + '.jpg')]]</div>
+
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>><<HaveASexWidget "anal" "Horse">><<elseif $mainChar.sexStats.analCapacity >= 10>><<set $minute += 20>>&emsp;Enough is enough, you've teased him long enough. Now you want to be his perfect little breeding mare. You promptly strip and quickly cover his cock in your saliva, coating almost every inch of it.
+&emsp;You love the taste but you love the idea of him pounding into your ass more. You turn over, sticking your ass in the air as you take his cock and position it next to your hole. Oh, god, you want this.
+&emsp;With a firm push and some more lube, you manage to squeeze his thick tip into your ass. It's a tight fit but not entirely uncomfortable. In fact, you find that such a large member filling your ass hole is exhilarating. Unfortunately, you spent too long thinking instead of acting and Jackie gets impatient.
+&emsp;In one forceful thrust, he's shoved his large, veiny cock deep inside your ass. The wind is completely knocked out of you but you can't gain your breath before Jackie slides himself back and rams into you again. It takes all of your strength and focus to keep from being knocked off balance as he picks up speed, pounding into your tight little ass repeatedly.
+&emsp;You place both hands on the ground, trying to keep yourself aligned with him as he pounds away. His thickness completely fills your ass. <<if $granddadSeeYou !== 1>>But y<<else>>
+&emsp;Suddenly, you hear a gasp and look to the side to see your Grandad has arrived, assumedly coming to check out why Jackie was making such a racket. Shocked, you try to stand up but the big stallion doesn't want to let you go. You are his bitch, his breeding mare and he isn't finished.
+&emsp;Jackie suddenly rushes forward, making you cry as he fills you even deeper. In that moment, you close your eyes but when you open them again you see your Grandad with a sly smile on his face before he slowly walks away from you. &emsp;Y<<endif>>ou don't care. You love being used as his personal breeding mare. He loves using you too because, after many, many minutes of constant thrusting, he begins to slow.
+&emsp;As you start to get your breath and your stamina back, you feel his dick throb harder until suddenly an eruption of hot, sticky liquid shoots down your ass. The pleasure of being filled to bursting by his cock and his semen has you cumming hard. Your legs shake and you almost fall but with your ass still stuck on his thick cock, you end up hanging there completely out of breath.
+&emsp;After a few moments, you pick yourself up and remove Jackie's cock. Cum seeps out of your ass and onto the floor. You kneel down and take a few deep breaths.
+
+<div class="default-image-wrapper">[img[String.format('https://MariaMod.' + 'site/p' + 'ics/ZooHorseAnal' + random(1,4) + '.jpg')]]</div>
+
+&emsp;You just got fucked, hard. What a slut...
+
+<<if $granddadSeeYou !== 1>><p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>><<HaveASexWidget "anal" "Horse">><<else>><p class="minus">-3 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption -= 3>><<set $mainChar.energy -= 30>><<HaveASexWidget "anal" "Horse">><<endif>><<endif>>
+
+<<if $mainChar.sexStats.analCapacity < 10>><u>Buy a big dildo via Laptop and stretch your ass a bit</u>
+
+<<endif>>[[Clean yourself->Go to barn]]
+
+
+
+::Pig stall <441,1290>
+<div class="default-image-wrapper">[img[String.format("pics/pigSign.jpg")]]</div>
+
+&emsp;Satisfied, but ever curious, you decide to explore Grandpa's farm to see what else you can get your perverted hands on.
+&emsp;You come across the pigpen and look over the fence to see a burly hog roaming around in the mud. A filthy thought immediately fills your head as you approach the pigsty door. You feel yourself wettening at the prospect of what you're about to do.
+
+<<if $mainChar.energy >= 30>>[[Let's do this!->Pig sex]]<<else>>You are too tired to do this with a hog<<endif>>
+[[Back->Farm]]
+
+::Pig sex <441,1440>
+<<set $hour += 1>><div class="default-image-wrapper">[img[String.format("https://MariaMod.' + 'site/p' + 'ics/ZooPig" +  random(1,3) + ".png")]]</div>
+
+&emsp;Closing the barn door tightly behind, you get down in the mud on all fours and proudly display your needy cunt to the hog. The hog seems to become aware of your intentions and he quickly begins sniffing and licking your dripping pussy.
+&emsp;After a moment he begins to climb atop of you like he would his female counterpart. He prods at your vulva with his prehensile pig-cock and, after a few pokes, he manages to penetrate you fully.
+&emsp;His swirling his tentacle-like dick pushes deep inside your warm pussy. The sensation is like nothing else you've ever experienced... You feel a burning growing in your loins and you know you're soaking wet down there. You bite your lip and buckle down for a thorough fucking.
+
+&emsp;You've lost all sense of time and you're not sure how long you've been bent over being pounded by this hog. Soon, you feel the hog shift and he drills his corkscrew cock directly into your womb. Your body ignites with pleasure.
+&emsp;You've had great experiences before, but you've never wanted to cum this badly in your life. For a while, the only thing you're aware of is the hog thrusting in and out of your womb. Damn it feels amazing...
+
+&emsp;After some time, you experience a new sensation; hot warm cum being unloaded into your fertile womb. The difference this time? The sheer amount. The pig just keeps cumming, shooting jet after jet of sticky semen. It seems endless...
+&emsp;You can't believe how much there is! After several shots, your stomach starts to feel heavy from all the pig cum. He finishes inseminating you and with his filthy probe he uses his special second wave of thick glue-like semen to seal your womb closed. This sends you over the edge and you explode underneath him, cumming uncontrollably from this newly found pleasure.
+
+&emsp;Unaware to you at first, he has sealed your womb with his cum. The pig dismounts and you sit up, staring at your belly. Though you aren't as big as you feel, you look about six weeks pregnant. You take a while to catch your breath and finally decide to stumble your way out of the pigsty with your expanded tummy.
+
+<<if $granddadSeeYou !== 1>>&emsp;You hope your Grandpa doesn't notice...
+
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>><<set $mainChar.sexStats.vaginal += 1>><<else>>&emsp;Suddenly you turn your face to the gates and see your granddad! Your eyes wide in a moment and you open your mouth, but found nothing to say, catching the air with it, while he walks away quickly. You try to free yourself, but your lover is way too heavy and it took a lot of time..
+
+<p class="minus">-3 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption -= 3>><<set $mainChar.energy -= 30>><<set $mainChar.sexStats.vaginal += 1>><<endif>>
+
+[[Go out->Farm]]

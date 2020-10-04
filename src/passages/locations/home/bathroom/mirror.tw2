@@ -1,0 +1,12 @@
+::Mirror [nobr] <1600,1360>
+<<include "Short character info">>
+<br />
+<br />
+<<if ! $mainChar.appearance.isCombed>>
+	Your hair is messed up! [[Comb yourself][$minute += 1]] <br />
+<<endif>>
+<<if $inventory.cosmetics.hasOwnProperty('Makeup kit') && $inventory.cosmetics['Makeup kit'].count>>
+	You can [[apply makeup->Apply makeup]]. <br />
+<<endif>>
+<br />
+[[Back->Bathroom]]

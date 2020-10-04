@@ -1,0 +1,10 @@
+::StoryIncludes
+src/core/widgets/AccessoriesItemWidget.tw2
+src/core/widgets/ClothesItemInTheMarketWidget.tw2
+src/core/widgets/DateChangeWidget.tw2
+src/core/widgets/EnergyBarWidget.tw2
+src/core/widgets/EroticAccessoryItemInLexenaMarketWidget.tw2
+src/core/widgets/IntoxicationBarWidget.tw2
+src/core/widgets/SettingsCheckWidget.tw2
+src/core/widgets/sharedWidgets.tw2
+src/core/widgets/utilityWidgets.tw2

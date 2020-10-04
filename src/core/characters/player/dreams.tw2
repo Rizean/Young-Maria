@@ -1,0 +1,236 @@
+::Dreams [nobr] <1055,491>
+<<set $dreamEvent to either("home","home","home","home","home","home","home","home","home","home","temple","cave","sewer","public","femdom")>>
+
+<<if $dreamEvent == "home">>
+
+<<set _dream to random(1, 9)>><<set _dreamPic to random(1, 7)>>
+<<if _dream <= 7>>
+@@.image-wrapper-w50p;
+	[img[String.format("pics/dream" + _dreamPic + ".gif")]]
+@@
+<<endif>>
+
+<<if _dream == 1>>
+	@@.narrator;
+		&emsp;You're at a house party but you're the only girl. You and the boys are playing strip poker. <br />
+		&emsp;The situation degenerates after some terrible luck and you find yourself naked and still losing. Since you had nothing else to bet, the guys decide to take your body as a prize. They push you against the wall, molesting you, sticking a dildo down your throat and preparing you for an inevitable gangbang. <br />
+		&emsp;Luckily (or not), you wake up before it happens. Phew...
+	@@
+<<elseif _dream == 2>>
+	@@.narrator;
+		&emsp;You peer up at him; this man, this stranger face fucking you roughly. You can't complain though, he paid for this. To him you're just some cheap slut looking for some easy cash in a dirty alley. <br />
+		&emsp;You wake up to find you're drooling on your pillow. Some part of you might have wanted that dream to be real...
+	@@
+<<elseif _dream == 3>>
+	@@.narrator;
+		&emsp;Voices fill your head. <br />
+		&emsp;"Look at her, she's such a slut!" <br />
+		&emsp;"Damn, I wish I had her guts..." <br />
+		&emsp;Everyone at school is watching you suck off two of your classmates. Some even have their phones out, filming your situation. You don't know how you got here, but you don't really care. You're enjoying getting your mouth fucked. A part of you also enjoys the attention of the crowd as they watch with interest. <br />
+		&emsp;Soon you feel the two guys nearing their climax, and you ache for their cum to fill your mouth. Unfortunately, you wake up before it happens. The thought of being used liked that... Would you do it in real life?
+	@@
+<<elseif _dream == 4>>
+	@@.narrator;
+		&emsp;The warm sun beats down on your naked body and the cool fresh air nipping at your flesh causes your nipples to stand erect. What's interesting is that you are walking down the street, in the middle of the city, showing your assets to everybody without shame. You pass by the people as close to them as possible so they see every feature of you. <br />
+		&emsp;Is this a dream? Yeah, it has to be. You certainly wouldn't do it in real life...
+	@@
+<<elseif _dream == 5>>
+	@@.narrator;
+		&emsp;The beach is entirely deserted. No bodies except yours and the love of your life, naked and sweating. He's owning you, fucking you the way he wants it and grabbing every inch of your body. You're absolutely loving it!
+	@@
+<<elseif _dream == 6>>
+	@@.narrator;
+		&emsp;You lie on your back in the center of a crowd of very horny men. You are surrounded by hard cocks; some of them queuing up to fuck your pussy roughly whilst others seek to fill your mouth. Covering your naked body in a thin layer of cum. It also seeps from your mouth and pussy, serving as lubricant for the next guy that wants to use your holes. <br />
+		&emsp;When you wake up, your pussy is so wet, you wonder if it's actually dripping cum.
+	@@
+<<elseif _dream == 7>>
+	@@.narrator;
+		&emsp;You wake from a terrible nightmare and sit up in bed sweating. It takes a few moments before you are able to calm your panicked breathing...
+	@@
+<<elseif _dream == 8>>
+	@@.image-wrapper-w50p;
+		[img[String.format("pics/sleepingBJ" + random(1, 3) + ".gif")]]
+	@@
+
+	@@.narrator;
+		&emsp;You had a strange nightmare. In it, you sucked someone off. But it was a dream. Just a naughty dream, yeah...<<set $mainChar.sexStats.bj += 1>>
+	@@
+<<elseif _dream == 9>>
+
+	@@.image-wrapper-w50p;	[img[String.format("pics/sleepingSchoolBondage" + random(1, 3) + ".webp")]]
+	@@
+
+	@@.narrator;
+		&emsp;You're in school, surrounded by your classmates. They're torturing you as you lie bound and helpless. You shouldn't be dreaming about something like this but the truth is, you're really enjoying it! You don't want this dream to end. You also can't decide what you like more; the helplessness or the place where you're being fucked.
+	@@
+<</if>>
+<br />
+<br />
+<<if $sleepAt == "home">>
+	[[Sleep until morning->Sleep]]
+<<else>>
+	[[Sleep until morning->Sleep at Stash]]
+<<endif>>
+
+<<elseif $dreamEvent == "temple">>
+<div align="center" style="font-size: 40px">Temple</div> <br />
+<br />
+
+@@.narrator;
+		&emsp;A blinding light flashes before your eyes and you jump out of bed- wait... <br />
+		&emsp;You look around and realize that you are standing in the center of a gigantic building made of very old stone bricks. There are a few holes in the roof filling this place with bright light and fresh air. You look back and see a huge gate. It's open but you see nothing through it... Strange. <br />
+		&emsp;You lift your hand but as you do, you notice that you are completely naked! You shake your head and focus on your objective. You push one finger through your other hand and it passes straight through! It's all a dream; quite a realistic one at that. <br />
+		&emsp;With that in mind, you move forward and see six stone cubes a few metres from where you are all positioned to form a big circle. You look closer and notice that every cube has a unique picture etched into the rocky surface; a lion, a panther, a puma, a jaguar, a tiger and a leopard. <br />
+		&emsp;While you wander around the circle, you notice that in the center is a rune scratched onto the floor. Or maybe it's a hieroglyph? Whatever it is, it's glowing and pulsing. You step closer to observe the symbol, trying to guess what it could mean, when a hot wave of fear rushes over your body. <br />
+		&emsp;You raise you eyes and your mouth drops open in shock... Every cube now has a feline standing on it but they were anthropomorphic, like the gods in mythology books. The animal drawings were now alive and all staring curiously at you as if examining you. <br />
+		&emsp;Amused, you do the same. All the cats are naked, some with huge muscles and some just well-toned. Some of them had necklaces made of teeth and small bones. One thing they all had in common though was their size which was similar to a rhino. <br />
+		&emsp;Suddenly, the lion growls and all the animals step down from their pedestals and stalk toward you. Their eyes pierce right into yours. The primal fear tears your soul apart as they creep closer. <br />
+		&emsp;When the puma is but a foot from you, you automatically take a step back to get away from it. Your back hits another big, furry chest. But you dare not look away from the puma as he stands on his back legs and lifts a paw above you. You close your eyes and wait for the killing blow... <br />
+		&emsp;It never comes. Instead, you feel his paw on your hand. You open your eyes and watch as the puma holds it before slowly moving it to his rock-hard abs. The fur covering the muscle is very soft and silky and you start to stroke the area. Your hand vibrates as the puma purrs silently. You relax a little, exploring his huge body. As your gaze drifts downward, you notice the puma's abs are not the only thing that's hard... <br />
+		&emsp;You gasp but feel a familiar heat stiring in your loins. You lift your head to see that every one of them has an erect feline penis with barbs on it. And every one is at least 1/2 or 2/3 the length of a bowling pin and about twice as thick. <br />
+		&emsp;Curiosity and lust get the better of you so you lean down toward the puma's cock and wrap your lips around the tip. A low growl and hand on your head confirm your suspicions. You begin to suck the puma off, taking his big cock as deep as possible. <br />
+		&emsp;Suddenly, something wet touches your labia and - in a moment - rushes inside with great force, stretching your love hole painfully wide. You moan loudly but don't even try to resist as the barbed cock pushes further and further down your tunnel. <br />
+<br />
+~An hour or so later~ <br />
+<br />
+		&emsp;You made love with these beautiful and strong cats, taking everyone inside one by one and now your pussy is dripping with cum and raw from the pounding. As you stand in a low doggy style pose (face down ass up), panting hard, you wait for the last cat; the lion.<br />
+		&emsp;He fucks you really hard for almost fifteen minutes without mercy, making you cry in pain and pleasure. Sobbing and moaning, you suffer orgasm after orgasm without a break. <br />
+		&emsp;Eventually the lion empties his large balls inside you and the cats leave you on the floor. You crawl to one of the walls, though it's panfully slow as with each move your legs ache and tremble, and sit against it. You look down to see your kitty is bright red, gaped and absolutely destroyed by big barbed dicks. Thick white seed, mixed with your own lube, leaks out onto the cold stone floor. <br />
+		&emsp;When you raise your gaze again, you notice that the cats have already disappeared. They've done their business and left you to yourself. You sob and shake, like you've got a torturous fever. <br />
+		&emsp;Finally, you find the courage and strength to stand and make your way over to the gate. When you step through, you are blinded by another flash. <br />
+		&emsp;You wake to find your heart pounding away in your chest. You were the sweet dessert for feline spirits in a temple. It sounds just crazy... But now you can say you truly love cats. :)
+	@@
+
+
+<br />
+<br />
+<<if $sleepAt == "home">>
+	[[Wake up->Sleep]]
+<<else>>
+	[[Wake up->Sleep at Stash]]
+<<endif>>
+
+<<elseif $dreamEvent == "cave">>
+<div align="center" style="font-size: 40px">Cave</div> <br />
+<br />
+@@.narrator;
+	&emsp;Your nose tingles as a strong musky smell infiltrates your sinuses. You stand weakly and realise you are at the entrance of a cave. As you look behind you, thunder rumbles above and terrential rain pours from dark clouds. Better to stay where it's dry... <br />
+	&emsp;You decide to make your way through the cave. You would think that the deeper it gets, the darker the cave would become but as you keep heading fowards, you eyes adjust to the darkness. <br />
+	&emsp;Eventually you enter a big round room with a high ceiling. In the middle of the room is a shallow pool. You make your way over to it and look upon your reflection. It's you but not you... You're in a dream! And you're naked! <br />
+	&emsp;Just as you realise your situation, you hear a low rumble. You spin on the spot and see a pair of glowing yellow eyes staring at you from a tunnel in one of the walls. You could've sworn that wasn't there before. <br />
+	&emsp;The eyes move toward you and as the beast emerges into the light, you finally see the cause for the musky smell. It is a wolf, an old one judging by his greying fur. He growls and barks, prowling around you. <br />
+	&emsp;At this, you notice the cave beginning to twist and change as if it were coming to life. But it isn't. Instead, more wolves appear from gaps, holes, and other tunnels around the complicated cave. In a minute, you are surrounded by a huge pack of hungry looking canines. <br />
+	&emsp;Fear pumps through your body. You look around, trying to see if you can find an escape route or something. When your back is turned, the old wolf pounces at you. You fall to the floor, only just managing to catch yourself. However, now you are on all fours and vulnerable to attacks but just not the attacks you might suspect... <br />
+	&emsp;The old wolf mounts you quickly and you feel his hard, throbbing penis rubbing against your labia trying to find your entrance. Before you can protest, the wolf clenches his teeth around your neck like a barbed wire fence holding you in place. You are doomed to this position for the next couple hours... <br />
+	&emsp;You couldn't stop your body from reacting and soon felt his cock getting wetter as the juices leaking from your pussy coated it. Unfortunately, the wolf still prodded around painfully and you knew that if you did not help, he might go in the wrong hole. You move your hand down to help and, as a thanks, the wolf pushes his large cock deep inside you with such brute force surprising of an old beast. <br />
+	&emsp;The cave echoes your moans, his growling and the rest of the pack and it drowns out any other sounds from the outside world. After just a few minutes of fast thrusting, the alpha (you assume) pushes his knot into you causing you to shout out in both pain and pleasure. Soon you feel his really hot seed filling your womb and, once he's done, his sticky cock slipping out of your pussy which makes you gasp once more. <br />
+	&emsp;The alpha gives a deafening howl and suddenly you are surrounded by younger wolves, mounting you from both ends and humping your legs. Those that can't hump you, cheer the rest on with enthusiastic barks and nips or licks your bare skin... <br />
+	<br />
+~About an hour later~<br />
+<br />
+	&emsp;Eventually, the last puppies (the runt of the packs you assume) finish pumping you full of canine cum. The pack lays around you, resting from their busy mating session. You are quite the primal slut. <br />
+	&emsp;Once the last of the pack have left you alone, you take this moment to look down at your cunt. It is completely covered in both your cum and theirs and utterely raw from the hour of constant pounding. Your pussy is destroyed by the countless knots entering and exiting and so is your ass hole. <br />
+	&emsp;You lay on your back, breathing heavily, and place your head onto the nearest wolf. A low grumble emits from his belly as he curls his body around you. You close your eyes, snuggling into his soft fur, and think aout what just happened. <br />
+	&emsp;You were gangbanged by a pack of wolves in their cave and now you lay there as a part of the pack. Yes, this is your life now. Enjoy it while it- <br />
+	&emsp;You open your eyes to see your bedroom ceiling above you. You let out a disappointed sigh. You really enjoyed that dream and now a part of you hopes to relive it many times over...
+	@@
+
+<br />
+<br />
+<<if $sleepAt == "home">>
+	[[Wake up->Sleep]]
+<<else>>
+	[[Wake up->Sleep at Stash]]
+<<endif>>
+
+<<elseif $dreamEvent == "sewer">>
+<div align="center" style="font-size: 40px">Sewer Slime Monster</div> <br />
+<br />
+@@.narrator;
+	&emsp; You wade through the knee-deep sewage. You can’t hear much but the splashing of the dirty water as your feet push through the viscous liquid, trying to find your way in the darkness. The smell is so noxious that it fills your nose with a stinging sensation and infiltrates your mouth causing you to gag. You pinch your nose and yet you can still breath… You must be dreaming! <br />
+	&emsp; All of a sudden, you hear a large splash behind you. When you turn, you see the sewer water rippling but no sign of the cause of the noise. Maybe it was just some gunk from the ceiling? <br />
+	&emsp; You continue to watch the ripple when you notice it beginning to move toward you. You try to back away but it feels like traversing through oil. Soon, the ripples are amongst you but as they reach your knees whatever it was disappears again. Whilst you’re looking down, you notice you’re completely naked! <br />
+	&emsp; After a few seconds of anxious waiting, the water explodes drenching you in the sewage. But what came out of the explosion disgusted you even more than the dirty water… <br />
+	&emsp; The creature was larger than you first thought, reaching to the ceiling of the sewer and to either of the sides, completely blocking you from any chance of escape. But this was like no creature you’ve ever seen. The flesh of this monster was not flesh but a translucent, slimy, jelly-like substance. It had no organs but several limbs that protruded from all over its fluctuating body. <br />
+	&emsp; Before you can react, the creature descends on you. It’s cold and goose bumps appear all over your body as you’re enveloped by the slime monster. You feel the limbs gliding over your skin and prodding as it goes. When some of the limbs reach your breasts and nipples, they gently tug though the sensation feels more like the creature is sucking. The feeling sends a shiver down your spine and a quiet groan escapes your lips. <br />
+	&emsp; As if it understands you, the creature compresses against you causing more of the cold jelly to spread along your bare skin. Now completely encased in the ooze, you feel something prodding at your nether region. You peer through the monster’s flesh to see one of the limbs rubbing along your pussy lips covering them in slimy secretions. It’s such a grotesque thought and yet you can’t deny how much it’s turning you on. <br />
+	&emsp; After a few seconds, the monster’s ooze mixes with your pussy juices. The creature vibrates, it’s whole being rumbling against you that sends a wave of pleasure throughout your body. Was it purring? <br />
+	&emsp; Your thought process is interrupted when you feel a slimy limb push past your entrance and into your hole but it doesn’t stop there. It drives forward, impelling itself deep inside your narrow tunnel. When it reaches your cervix, it doesn’t even pause before it thrusts forward into your womb. You can feel the stickiness of the creature attaching to the walls and it feels incredible! <br />
+	&emsp; Once the creature enters your womb, it stops pushing and instead expands the limb. It isn’t long before your completely filled up by the creature. When you are, the monster then begins to move inside you. It both thrusts in and out and squirms around inside you, hitting all your most sensitive parts and sending spike after spike of pleasure through your body. <br />
+	&emsp; Whilst you’re being fucked by this monster, it continues to suck upon your erect nipples and you feel another sucking sensation attach itself to your clit. Such bliss soon has you exploding with euphoria as you cum and clench even tighter around the slimy creature. It, however, does not stop. If anything, your enjoyment only spurs it on and you feel the monster picking up speed. <br />
+	&emsp; The monster roughly rams into you, the limb pulsing inside you and nudging against all of your walls. As you’ve already came, your sensitivity has skyrocketed and you can feel the pleasure once again building. After a few seconds, you feel another pressure pushing against your ass hole. It isn’t long before another of the creature’s limbs charges into your ass, travelling as far inside as it can go. This one doesn’t start slow and instead picks up the same rhythm the other limb has pounding into you. <br />
+	&emsp; With two of the monster’s limbs thrusting and throbbing repeatedly within you, you cum again and fall to the floor lacking the strength to hold yourself up anymore. The creature doesn’t resist and collapses with you, still enveloping your body. Due to the monster’s body surrounding your head, you find yourself able to breath even when you sink under the sewer water. <br />
+	&emsp; Unfortunately, the creature seems to sense you still have an unused whole and decides to plug that one as well with yet another gooey limb. This one forces your lips apart and shoves itself deep down throat. But, of course since your in a dream, you can breath perfectly fine and end up enjoying the way the slimy substance coats your throat and how thick it expends. If someone could see you right now, they’d see a woman with gaping holes, a distended throat and bulging belly with something worm-like wriggling inside. <br />
+	&emsp; After a few more seconds, you cum again. Each time you climax, you find them getting bigger and stronger causing you to loose all sense of your environment and instead focus on the creature fucking you into oblivion. There’s no escape now. This is your fate; you are this creature’s fuck toy. The worst part? You like it… <br />
+	&emsp; You wake with a start, your heart pounding against your chest as if trying to burst out of it. You take a moment to collect your breath and think about your dream. It was different, for sure. Dirty too but, judging by the small wet patch on your underwear, you still thoroughly enjoyed yourself. You hope you can have the dream again… <br />
+	@@
+
+<br />
+<br />
+<<if $sleepAt == "home">>
+	[[Wake up->Sleep]]
+<<else>>
+	[[Wake up->Sleep at Stash]]
+<<endif>>
+
+<<elseif $dreamEvent == "public">>
+<div align="center" style="font-size: 40px">Public Sex</div> <br />
+<br />
+@@.narrator;
+	&emsp; Slowly, you open your eyes and take in your surroundings. You’re in a beautifully luscious park with a lot of people going about their daily routines; walking, jogging, playing, having a picnic. <br />
+	&emsp; Suddenly, a chilly breeze nips at your skin and you look down to see you’re completely naked! The cold air causes your nipples to stiffen and you hear laughter from behind you. You turn to see a middle-aged, balding man smiling wickedly at you, his eyes eagerly devouring your nude body. It would seem your nipples are not the only erect thing… <br />
+	&emsp; Staring at the tent in his trousers, you feel your nether region wetting at the thought of this stranger fucking you raw in such an open place. As if the guy had the same thought, he abruptly closes the distance between you and crashes his lips upon yours. <br />
+	&emsp; After a few seconds, the man pulls away and turns you around before pushing onto the stone bench in front of you. That wasn’t there before… Your thoughts are interrupted when the man roughly thrusts himself inside your tight pussy. The intrusion causes you to gasp, drawing the attention of some passers-by who stop to watch you. <br />
+	&emsp; You can’t believe it! This man is pounding into you with a hungry rhythm and other people are just watching! Some of the onlookers are smiling as this stranger fucks you whilst others play with themselves. A few of the men are rubbing their cocks that strain against their trousers and a few of the women are massaging their pussies under their clothing. <br />
+	&emsp; As the stranger behind you picks up the pace, his thrusting increasing in speed, your moans become louder and louder which excites the crowd even more. One of the viewers, an elderly looking man, approaches you and unexpectedly shoves his small cock inside your gaping mouth. He places both of his hands on your head and uses you like a fleshlight: moving your head up and down the length of his dick. <br />
+	&emsp; The crowd cheer and applause as the two men batter you from both ends, plunging their cocks deep, hard and fast. Before long, you feel them slow and after a few seconds, streams of viscous liquid shoots down your tunnel and throat. Though they empty their balls inside you, they don’t remove themselves just yet meaning you have to swallow as much as you can to avoid choking. Eventually, they pull away and some of their cum leaks out of your orifices. Their faces are adorned with shit-eating grins as they stare at their cum covered masterpiece. <br />
+	&emsp; You go to stand up but are pinned to the bench again when another set of hands grab your waist and impale you on yet another cock. This one is bigger and thicker than the previous and immediately plunges in, filling your narrow tunnel. More hands travel your body, groping what they can including your free-hanging breasts that sway with the movements. Another cock enters your mouth to silence you yet you can’t help but gasp when you feel two fingers force themselves past your puckered ass hole and into your anus. <br />
+	&emsp; Before long, the two new participants replicate the speed the other two were pounding into you with. This time, you don’t last as long and while you’re being stimulated by cocks, fingers, and tongues, you reach your climax and cum. Your pussy and ass clench around the dicks that continue to pump in and out which cause them to increase their ramming speed. Eventually, they tire and slow down but only so that they can thrust once more as deep as they can and then fill you with their warm, salty seed. <br />
+	&emsp; Due to the fact that you’d already been used as a cum dump by the first two men, your holes are already holding a lot of semen and so, when the next two finish inside you, a lot of their cum seeps out between the gaps that it can. As they pull out, more of the white liquid spills out of your holes. <br />
+	&emsp; For a few seconds, the crowd simply stares at you with lustful looks in their eyes. In this moment, you catch your breath and look more closely at your observers. A lot of the men have now freed their cocks, stroking it with eagerness probably whilst they await their turn with the park slut. The women were just as horny, rubbing themselves in clear view of the men. Some of the crowd that had arrived in couples were fucking amongst themselves and yet still watching your every movement as if your fucking were a go ahead for them. <br />
+	&emsp; Unfortunately, your moment of peacefulness was interrupted when more hard cocks plugged all your holes and stuffed them full of fleshy goodness. You realise that this situation isn’t going to end anytime soon especially as more people arrive to watch you getting used and abused. You also notice that the men who first fucked you are already erect… How did they become so horny again? <br />
+	&emsp; You’re once again pulled from your thoughts when you feel your body convulse and shake as you hit your peak and cum around the new cocks. As if on cue, the men also reach their climax and shoot their load into your fertile womb. If you’re pregnant now, you’ll have no clue who the father is! <br />
+	&emsp; As one of the men steps toward you and gives your face a forceful slap, you jolt awake and fight against your duvet. Eventually you free yourself and sit up, looking around the room. You aren’t in a park, you’re in your bed! Oh, thank goodness, it was all just a dream… A really fucking good one. Damn… <br />
+	@@
+
+<br />
+<br />
+<<if $sleepAt == "home">>
+	[[Wake up->Sleep]]
+<<else>>
+	[[Wake up->Sleep at Stash]]
+<<endif>>
+
+<<elseif $dreamEvent == "femdom">>
+<div align="center" style="font-size: 40px">Female Domination</div> <br />
+<br />
+@@.narrator;
+	&emsp; You smile to yourself as you watch your slave squirm against his bonds. You can’t deny that seeing him all tied up and helpless really turns you on. Especially because, as he lies on his back with his wrists and ankles spread and bound, you can see his member erect and quivering. Clearly, you aren’t the only one turned on by this little situation.<br />
+	&emsp; You step closer to the man. Your black, thigh-high, heeled boots click on the stone floor as you go. Circling the table of which the man lays upon, you gaze around the room at all the toys and perverted implements that hang upon the wall and litter the extra tables. You’ve got gathered quite the collection.<br />
+	&emsp; As you pass by one wall, you catch a glimpse of yourself in the mirror. You look sexy as hell dressed all in black leather with your tits hanging free and your beautiful vagina on show. But something looks slightly odd. You turn to face the mirror and realise that the reflection staring back at you isn’t quite true…<br />
+	&emsp; Your hair is a slightly different colour as are your eyes. Your boobs are bigger and more perky whilst your ass is more rounded and plumper. Not to mention, that when you gaze at the uncanny stranger before you, you get the uneasy feeling you’re looking at an imposter.<br />
+	&emsp; You leave the mirror but curiosity causes you to glance back at it again. The image has changed once more! Of course, this must be a dream! There’s no other explanation for the constant changing of appearance.<br />
+	&emsp; The man’s pleading whimper brings you back to reality and you walk over to stop just near his head. You look down at the man who is blindfolded and breathing heavily. He’s fairly young, not much older than you in fact, but you feel more mature with the power you have over him.<br />
+	&emsp; His continued whimpers excite you even more and it becomes too much for you. You want this stranger, right here right now. But you want him your way. Not that the man has any other choice.<br />
+	&emsp; After you trail your hands across his bare chest, you direct your attention to his cock. It’s not huge but it will be sufficient enough. You lean toward it and slowly and tauntingly lick from the base of the shaft to the tip. The man groans and mumbles that he wants you to continue so you stop. You’re in charge here and you give the orders.<br />
+	&emsp; For his disobedience, you grab a nearby whip and strike it upon his abdomen. The man yelps in pain and starts to apologise for his defiance. You whip him again. This time, he finally gets the hint and stays silent.<br />
+	&emsp; You decide to reward his ‘good’ behaviour and return to his dick. You lower your mouth around the rod and begin to teasingly bob your head up and down. Due to your excitement, it doesn’t take long before you pick up the speed and run your tongue along his length as you suck. But you don’t want to be the only one giving the pleasure.<br />
+	&emsp; You climb onto the table on top of the man and lower your wet pussy towards him. “Be a good boy and show your master how much you love her,” you say, wriggling your ass in the air just above the slave’s face. He gradually realises what you’re asking for and sticks out his tongue to which you sink your pussy lips onto it.<br />
+	&emsp; The moment his strange, wet organ slides across your moist labia you shiver and let out an involuntary moan. You stop attending to him and relax your ass onto his face. He eagerly laps up your juices wanting to please his master.<br />
+	&emsp; For a few minutes, the pleasure inside you builds and builds until finally it spills over and sends wave after wave of bliss through you. You body convulses and you quiver riding out your orgasm. As soon as it passes, you shuffle around so that your pussy is now aligned above your slave’s cock.<br />
+	&emsp; Without giving your slave a chance to understand what is happening, you drop your pussy onto his cock and slowly push down. The dick enters you, which causes you to moan loudly, and continues to shove deep inside.<br />
+	&emsp; After you’re thoroughly impaled on his cock, you begin to ride your slave. Your ass bounces on his legs as you lift and lower yourself repeatedly. Eventually you pick up speed and soon the only sounds in the room are that of you and your slave moaning, and your ass cheeks slapping against his body.<br />
+	&emsp; You watch your slaves face as it changes between many expressions of lust, pleasure, and desire. The more he moans, groans and mumbles about how good your tight pussy feels around his cock, the more you get turned on. You place your hands upon his bare chest and use it as an anchor so that you can really ram your body on his shaft.<br />
+	&emsp; When the euphoria becomes too much, you both let out one final moan and cum in sync. You feel the slave’s warm sperm filling your cervix and you relish in the feeling. Jet after jet of viscous liquid shoots inside you until it slowly comes to a halt. Once it does finally end, you lift yourself and look down to see his white cum leaking from your pussy…<br />
+	&emsp; Suddenly, you wake to find yourself incredibly hot even though you have no covers on you. You also feel a slight wetness in your panties. It seems you really enjoyed that dream. But being a dom… It was definitely a new and exciting experience and who knows? Maybe you’ll do it in real life one day too.
+	@@
+
+<br />
+<br />
+<<if $sleepAt == "home">>
+	[[Wake up->Sleep]]
+<<else>>
+	[[Wake up->Sleep at Stash]]
+<<endif>>
+
+<<endif>>

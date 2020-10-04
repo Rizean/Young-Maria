@@ -1,0 +1,44 @@
+::Settings check widget [widget nobr] <125,2663>
+<<widget "SettingsCheckWidget">>
+
+<<if hasVisited("Bedroom")>>
+	<<if def $sibling.type>>
+		<<if settings.isSiblingAllowed == true>>
+			<<set $settingsCheckisSiblingAllowed = true>>
+		<<else>>
+			<<set $settingsCheckisSiblingAllowed = false>>
+		<<endif>>
+	<<else>>
+		<<script>>
+		if (variables().settingsCheckisSiblingAllowed) {
+			settings.isSiblingAllowed = true;
+		} else {
+			settings.isSiblingAllowed = false;
+		};
+
+		alert('Problem Solver: "Oops! It seems the system has accidentally reset the sibling content settings. I restored them to value ' + settings.isSiblingAllowed + '. Check your settings and visit me in the Help menu if needed!"')
+		<</script>>
+	<<endif>>
+
+<!--
+	<<if def settings.isBestialityAllowed>>
+		<<if settings.isBestialityAllowed == true>>
+			<<set $settingsCheckisBestialityAllowed = true>>
+		<<else>>
+			<<set $settingsCheckisBestialityAllowed = false>>
+		<<endif>>
+	<<else>>
+		<<script>>
+		if (variables().settingsCheckisBestialityAllowed) {
+			settings.isBestialityAllowed = true;
+		} else {
+			settings.isBestialityAllowed = false;
+		};
+
+		alert('Problem Solver: "Oops! It seems the system has accidentally reset the bestiality content settings. I restored them to value ' + settings.isBestialityAllowed + '. Check your settings and visit me in the Help menu if needed!"')
+		<</script>>
+	<<endif>>
+	-->
+<<endif>>
+
+<</widget>>

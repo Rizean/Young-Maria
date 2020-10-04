@@ -7,7 +7,6 @@ src/passages/locations/home/livingRoom/index.tw2
 src/passages/locations/home/parentsBedroom/index.tw2
 src/passages/locations/home/sistersRoom/index.tw2
 src/passages/locations/home/goOut.tw2
-src/passages/locations/home/createCharacter.tw2
 
 ::take a look at your new house <1523,638>
 <<if $siblingAge < 18 or $siblingAge > 26>>Sibling age must be between 18 and 26!

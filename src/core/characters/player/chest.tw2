@@ -1,0 +1,4 @@
+::Character chest [system] <500,900>
+[img[String.format($mainChar.appearance.chest.image)]]
+
+<<back "Back">>

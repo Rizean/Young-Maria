@@ -1,0 +1,14 @@
+::Creation eyes [nobr] <1700,100>
+<<set _eyeSizes = ['small', 'medium', 'big', 'very big'] >>
+<<set _eyeColors = ['grey', 'blue', 'green', 'brown'] >>
+<<set _lasheSizes = ['small', 'medium', 'big'] >>
+Eyes color:
+<<listbox "$mainChar.appearance.head.eyes.color" autoselect>>
+	<<optionsfrom _eyeColors>>
+<</listbox>>
+<<set $mainChar.appearance.head.eyes.size = 'medium'>>
+<<set $mainChar.appearance.head.eyes.lashesSize = 'medium'>>
+<br />
+<br />
+
+[[Back->Edit appearance]]

@@ -1,2 +1,52 @@
 ::StoryIncludes
 src/core/characters/dad/withoutClothes.tw2
+
+::Dad Character <300,200>
+<<set $dad to new ManCharacter({
+	firstName: "Kevin",
+	lastName: "Doe",
+	age: 39,
+	corruption: 5,
+	beauty: 0,
+	energy: 100,
+	arousal: 0,
+	intellect: 10,
+	intoxication: 0,
+	stats: {
+		strength: 3,
+		agility: 3
+	},
+	schedule: {
+		weekday: {
+			bathroom: '08:00-08:30',
+			kitchenMorning: '08:30-09:00',
+			work: '09:00-17:00',
+			livingRoom: '17:00-20:00',
+			kitchen: '20:00-21:00',
+		  	bedroom: '21:00-00:00',
+		},
+		weekend: {
+			saturday: {
+			  bathroom: '08:00-08:30',
+			  kitchenMorning: '08:30-09:00',
+			  training: '09:00-11:00',
+			  wife: '11:00-15:00',
+			  familyFriends: '15:00-19:00',
+			  bar: '19:00-21:00',
+			  livingRoom: '21:00-23:00',
+			  bedroom: '23:00-00:00',
+			},
+			sunday: {
+			  bathroom: '08:00-08:30',
+			  kitchenMorning: '08:30-09:00',
+			  training: '09:00-11:00',
+			  garage: '11:00-13:00',
+			  beach: '13:00-16:00',
+			  family: '16:00-20:00',
+			  familyDinner: '20:00-21:00',
+			  livingRoom: '21:00-22:00',
+			  bedroom: '22:00-00:00',
+			}
+		}
+	}
+}); >>

@@ -1,0 +1,95 @@
+::HaveASexWidget [nobr widget] <800,0>
+<<widget "HaveASexWidget">>
+	<!-- $0 (first argument) is a type of sex, i.e. (vaginal, anal, bj, tits) -->
+	<!-- $1 (second argument) is an object of sex, i.e. (dad, mom, unknown person, sibling, Jack) -->
+	<<switch $args[0]>>
+		<<case "bj">>
+			<<set $mainChar.sexStats.bj += 1>>
+		<<case "vaginal">>
+			<<set $mainChar.sexStats.vaginal += 1>>
+			<<if settings.pregnancy == true>>
+				<<if settings.menstruation == true and $mainChar.menstruation.day >= 15>>
+				<<else>>
+					<<if $mainChar.pregnancy.isOnPills == false and $mainChar.pregnancy.isPregnant != true>>
+						<<set _chanceToGetPregnant to random(1, 100)>>
+						<<if _chanceToGetPregnant <= 5>>
+							<<set $mainChar.pregnancy.isPregnant = true>>
+							<<set $mainChar.pregnancy.day = 1>>
+							<<set $mainChar.pregnancy.knowsAboutPregnancy = false>>
+						<<endif>>
+					<<endif>>
+				<<endif>>
+			<<endif>>
+		<<case "anal">>
+			<<set $mainChar.sexStats.anal += 1>>
+		<<case "gang">>
+			<<set $mainChar.sexStats.ganged += 1>>
+			<<set $mainChar.sexStats.vaginal += 1>>
+			<<set $mainChar.sexStats.anal += 1>>
+			<<if settings.pregnancy == true>>
+				<<if settings.menstruation == true and $mainChar.menstruation.day >= 15>>
+				<<else>>
+					<<if $mainChar.pregnancy.isOnPills == false and $mainChar.pregnancy.isPregnant != true>>
+						<<set _chanceToGetPregnant to random(1, 100)>>
+						<<if _chanceToGetPregnant <= 5>>
+							<<set $mainChar.pregnancy.isPregnant = true>>
+							<<set $mainChar.pregnancy.day = 1>>
+							<<set $mainChar.pregnancy.knowsAboutPregnancy = false>>
+						<<endif>>
+					<<endif>>
+				<<endif>>
+			<<endif>>
+		<<case "handjob">>
+			<<set $mainChar.sexStats.handjob += 1>>
+		<<case "cumeat">>
+			<<set $mainChar.sexStats.cum.ate += 1>>
+		<<case "rape">>
+			<<set $mainChar.sexStats.raped += 1>>
+			<<set $mainChar.sexStats.vaginal += 1>>
+			<<if settings.pregnancy == true>>
+				<<if settings.menstruation == true and $mainChar.menstruation.day >= 15>>
+				<<else>>
+					<<if $mainChar.pregnancy.isOnPills == false and $mainChar.pregnancy.isPregnant != true>>
+						<<set _chanceToGetPregnant to random(1, 100)>>
+						<<if _chanceToGetPregnant <= 5>>
+							<<set $mainChar.pregnancy.isPregnant = true>>
+							<<set $mainChar.pregnancy.day = 1>>
+							<<set $mainChar.pregnancy.knowsAboutPregnancy = false>>
+						<<endif>>
+					<<endif>>
+				<<endif>>
+			<<endif>>
+		<<case "annilingusGive">>
+			<<set $mainChar.sexStats.annilingusGiven += 1>>
+		<<case "annilingusReceive">>
+			<<set $mainChar.sexStats.annilingusReceived += 1>>
+		<<case "threesome">>
+			<<set $mainChar.sexStats.threesome += 1>>
+			<<set $mainChar.sexStats.vaginal += 1>>
+			<<if settings.pregnancy == true>>
+				<<if settings.menstruation == true and $mainChar.menstruation.day >= 15>>
+				<<else>>
+					<<if $mainChar.pregnancy.isOnPills == false and $mainChar.pregnancy.isPregnant != true>>
+						<<set _chanceToGetPregnant to random(1, 100)>>
+						<<if _chanceToGetPregnant <= 5>>
+							<<set $mainChar.pregnancy.isPregnant = true>>
+							<<set $mainChar.pregnancy.day = 1>>
+							<<set $mainChar.pregnancy.knowsAboutPregnancy = false>>
+						<<endif>>
+					<<endif>>
+				<<endif>>
+			<<endif>>
+		<<case "masturbate">>
+			<<set $mainChar.sexStats.masturbated += 1>>
+		<<case "tits">>
+			<<set $mainChar.sexStats.tits += 1>>
+		<<case "receiveCuni">>
+			<<set $mainChar.sexStats.receiveCuni += 1>>
+		<<case "receiveMasturbation">>
+			<<set $mainChar.sexStats.receiveMasturbation += 1>>
+		<<case "giveCuni">>
+			<<set $mainChar.sexStats.givenCuni += 1>>
+		<<default>>
+			<<run alert('UNKNOWN OPTION!') >>
+	<</switch>>
+<</widget>>

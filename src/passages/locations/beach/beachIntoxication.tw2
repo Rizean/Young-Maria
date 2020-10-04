@@ -1,0 +1,33 @@
+::Beach 90intoxication <4075,2950>
+<<set $minute += 40>>&emsp;You walk away from the bar, smiling and laughing to yourself. The alcohol has hit you pretty hard. You realise this when you find yourself stumbling and trying not to fall. It's surpisingly hard to walk on the sand...
+&emsp;Suddenly, someone grabs your hand preventing you from falling. You look up to see a middle-aged man staring at you with concern. "Hey, miss? Need some help? C'mon, let's take a seat on my towel... here."
+&emsp;You try to speak but all that comes out are slurs and mumbles. So, you keep your mouth shut while you walk with the stranger to his towel. Finally, you arrive and your bum hits the warm pile. It's an exceptionally comfortable towel though.
+&emsp;The man gives you a bottle of water and helps you to drink since you're struggling to do it yourself in this intoxicated state. You like the way he treats you, and you talk with him a bit laughing and joking. It's difficult when you're drunk but you somehow managed to have a normal conversation.
+&emsp;"You okay now? You're looking better. Do you wanna go for a swim? It'll help you, and I'll be holding you if something goes wrong, baby." The stranger gives you a sweet smile.
+&emsp;Hehe, why not? You take his offered hand and stand up. The world starts to spin. Nope, you are still drunk... But, your new friend steadies you and guides you toward the sea. He laughs as you waddle awkwardly beside him.
+&emsp;The water isn't that cold and, taking a deep breath, you jump into the sea. Suddenly, a pair of strong hands grab your shoulders and lift you above the surface.
+&emsp;"Hey, you better not swim underwater right now, okay?" He pulls you close to him. Your pussy is being pressed against his massive growing bulge. A moment later, he leans down to your ear and whispers, "Why don't you shift those cute panites of yours aside, babygirl."
+&emsp;Hell yes! You're not sure if it's the alcohol or not but you want this so badly right now. And your hot kiss is the best answer.
+
+"Hey, you feel much better now. Wanna go swim? It will help you, and I'll be holding you if something goes wrong, baby."
+
+Hehe, why not? You take his hand and stand up. Nope, you are still drunk... But your new friend pulls your hand, and you go, hear his laughter.
+
+The water isn't that cold, and, taking a deep breath, you jump into the sea. Suddenly, a pair of strong hands grab your shoulders, and in a moment, you were raised by a couple of strong hands.
+
+"Hey, you better not swim underwater right now, okie?"
+
+He pulls you close, and your pussy is being pressed against his massive bulge. A moment later, he leans down to your ear and whispers.
+
+"Why don't you shift these cute panties of yours aside, babygirl."
+
+Hell yes! You want this so badly right now. And your hot kiss is the best answer.
+
+@@.image-wrapper-w70p;[img[String.format('pics/sexInTheSea' + random(1, 2) + '.webp')]]@@
+
+He helps you to go out and says Goodbye. What a nice young rapist, hehe.
+
+<p class="add">+1 Corruption</p> <<if $mainChar.energy >= 10>><p class="minus">-10 Energy</p><<set $mainChar.energy -= 10>><<endif>>
+<<set $mainChar.corruption += 1>><<HaveASexWidget "vaginal" "stranger">>
+
+[[Back to beach->Beach]]

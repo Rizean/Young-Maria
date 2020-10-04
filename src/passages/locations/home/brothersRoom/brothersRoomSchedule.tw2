@@ -220,3 +220,74 @@
 		<<set $sibling.corruption += 1>>
 	<</if>>
 <</if>>
+
+::Brother masturbating [nobr] <2541,446>
+@@.narrator; You put your hand on the door, ready to push it. Suddenly you hear a strande noise, making you freeze for a second. You slowly push the door with both hands and look in.
+@@
+<br />
+
+@@.image-wrapper-w70p;
+[img[String.format('pics/brotherMasturbating' + random(1, 2) + '.webp')]]
+@@
+
+<br />
+@@.narrator; &emsp;Your eyes widen in surprise. $sibling.firstName is watching porn, masturbating wildly. Before you can stop yourself, you giggle softly and bite your lower lip. <br />
+&emsp;Your brother stops masturbating and you quickly shut the door just in time to avoid being seen.
+@@
+<br />
+
+<<if $mainChar.corruption < 40>>
+	[You way too shy to perform this action]
+<<else>>
+	<<if $sibling.corruption < 50>>
+		[You don't think $sibling.firstName is ready yet to this]
+	<<else>>
+		<<linkreplace "Offer your help">>
+
+			@@.narrator; You take a deep breath before opening the door.
+			@@
+
+			@@.bc-text; Damn! What are you doing here?!
+			@@
+
+			@@.mc-text; Shh! Hey, relax...
+			@@
+
+			@@.narrator; &emsp;As you close the door behind, you lock it as well (Why didn't he do this earlier?). Then, you stride over to him slowly, removing all your clothes as you do so. When you reach the bed, you crawl across it so your face is inches from his.
+			@@
+
+			@@.bc-text; Damn, sis. You're so sexy.
+			@@
+
+			@@.mc-text; As are you, big boy~
+			@@
+
+			<br />
+
+			@@.image-wrapper-w70p;
+			[img[String.format('pics/brotherMasturbatingFucking' + random(1, 6) + '.webp')]]
+			@@
+
+			<br />
+
+			<p class="add">+1 Corruption</p>
+			<<if $mainChar.energy >= 10>>
+				<p class="minus">-10 Energy</p>
+				<<set $mainChar.energy -= 10>>
+			<<endif>>
+
+			<<set $sibling.corruption += 1>>
+			<<set $mainChar.relationships.sibling += 1>>
+			<<set $mainChar.corruption += 1>>
+			<<set $minute += 20>>
+			<<HaveASexWidget "vaginal" "sibling">>
+
+			<br />
+
+		<</linkreplace>>
+	<<endif>>
+<<endif>>
+
+<br />
+
+[[Go back->living room]]

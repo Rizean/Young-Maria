@@ -1,0 +1,8 @@
+::Drunk part [nobr] <1203,860>
+<<if $mainChar.intoxication >= 50 and $hour > 8 and $hour < 23>>
+	&emsp;Your parents notice that you are very drunk. Though they say nothing, the way they look at you... It's shameful. <br />
+	<p class="minus">-4 Corruption</p> <p class="minus">-4 relations with mom</p> <p class="minus">-4 relations with dad</p> <br />
+	<<set $mainChar.corruption -= 4>>
+	<<set $mainChar.relationships.mom -= 4>>
+	<<set $mainChar.relationships.dad -= 4>>
+<<endif>>

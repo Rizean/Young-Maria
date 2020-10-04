@@ -99,3 +99,20 @@ You <<radiobutton "$corruptionTemp" "0" checked>>don't notice | <<radiobutton "$
 &emsp;<strong>"SWEETHEART!!!"</strong>
 &emsp;Your step mother's voice rings out from beyond your bedroom door. She probably thinks you're still asleep and is coming to wake you up.
 &emsp;It's [[time to go->take a look at your new house]] and help your step parents with the last steps before you hit the road and move far, far away from your motherland...
+
+
+::Set default character state [nobr] <1400,600>
+<<if $mainChar.appearance.head.hair.color === ''>>
+  <<set $mainChar.appearance.head.hair.color = 'blonde' >>
+  <<set $mainChar.appearance.head.hair.length = 'shoulders' >>
+  <<set $mainChar.appearance.head.hair.style = 'straight' >>
+  <<set $mainChar.appearance.head.eyes.size = 'medium' >>
+  <<set $mainChar.appearance.head.eyes.color = 'green' >>
+  <<set $mainChar.appearance.head.eyes.lashesSize = 'medium' >>
+  <<set $mainChar.appearance.head.lips.size = 'medium' >>
+  <<if $randomBreastsSize>>
+  	<<set $mainChar.appearance.chest.size = either('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h') >>
+  <<endif>>
+  <<set $mainChar.appearance.chest.image = String.format('pics/appearance/chest/cups/' + $mainChar.appearance.chest.size + '/image.jpg')>>
+  <<set $mainChar.appearance.head.image = String.format('pics/appearance/face/' + $mainChar.appearance.head.hair.color + '/' + $mainChar.appearance.head.hair.length + '/' + $mainChar.appearance.head.hair.style + '/image.jpg')>>
+<</if>>

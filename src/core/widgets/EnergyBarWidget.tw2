@@ -1,0 +1,4 @@
+::Energy bar widget [widget] <216,2415>
+<<widget "energyBar">><<nobr>>
+<progress class="progressBar" @value="$mainChar.energy" @max="$mainChar.maxEnergy"></progress>
+<</nobr>><</widget>>

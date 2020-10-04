@@ -1,0 +1,8 @@
+::PlayBoy magazine <2800,425>
+You pull out the magazine and look at the cover.
+
+<div class="default-image-wrapper"><img src="pics/PlayBoyMagazine.jpg"></div>
+
+Nice :3
+
+[[Back->View brother's books]]

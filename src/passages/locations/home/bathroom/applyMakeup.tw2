@@ -1,0 +1,42 @@
+::Apply makeup [nobr] <1620,1580>
+<<set _makeupOptions = ['light', 'tangible', 'bright', 'none'] >>
+<<set _availableLipstickColors = $inventory.getAvailableLipstickColors() >>
+
+<<for _cosmeticItemTitle, _cosmeticItem range $inventory.cosmetics>>
+	You have <<=_cosmeticItem.name>> for <<=_cosmeticItem.count>> uses. <br />
+<</for>>
+
+<br />
+<br />
+
+Apply
+<<listbox "_makeupLevel">>
+	<<optionsfrom _makeupOptions>>
+<</listbox>>
+ makeup <br />
+
+<<if _availableLipstickColors>>
+  Apply
+  <<listbox "_lipstickColor">>
+	  <<optionsfrom _availableLipstickColors>>
+  <</listbox>> <br />
+<<endif>>
+
+<br />
+<<link "Save" "Mirror">>
+	<<set $minute += 15>>
+	<<set $mainChar.appearance.makeup = _makeupLevel>>
+	<<set $mainChar.appearance.head.lips.color = _lipstickColor>>
+
+	<<script>>
+		if (temporary().makeupLevel !== 'none') {
+			variables().inventory.cosmetics['Makeup kit'].count -= 1;
+		}
+
+		if (temporary().lipstickColor !== 'none') {
+			variables().inventory.cosmetics[temporary().lipstickColor].count -= 1;
+		}
+	<</script>>
+<</link>>
+<br />
+[[Back->Mirror]]

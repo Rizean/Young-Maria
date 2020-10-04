@@ -1,0 +1,21 @@
+::Bay Window <1345,857>
+<<set $minute += 10>>&emsp;You position yourself on the cushions, relaxing into their comfortable material. You spend a few minutes reading, enjoying the natural light illuminating your book.
+
+<<if $mainChar.look.clothes.body.name == '' and random(5) is 5>>
+&emsp;You are sat quietly, relishing in the warm sun beating down on your naked body. Immersed in your book, you almost don't notice movement, but you catch it out of the corner of your eye.
+
+@@.image-wrapper-w70p; <<set _img to either(1,2)>><<if _img == 1>><img src="pics/windowNaked1.jpg"><<else>><img src="pics/windowNaked2.jpg"><<endif>> @@
+
+&emsp;You lift your head and see your neighbour has stopped whatever he was doing and is now staring straight at you! He was obviously a little taken aback at the naked girl in the window.
+
+<<linkreplace "Wave">>&emsp;You wave to your neighbour, delighting in his stunned look. Sometimes you enjoy attracting the attention of others.<<set _response to either(true,false,false)>>
+
+<<if _response == true>>&emsp;He waves back with a shy smile but leaves rather promptly.<<else>>He waves back with a shy smile and begins to examine a flower in a pot on his windowsill.
+&emsp;You aren't sure if you imagined it, but you wonder if he is actually staring at the pot or looking at something more exciting...<<if $mainChar.corruption >= 40>>
+
+<<linkreplace "Raise the leg">>@@.image-wrapper-w70p; <img src="pics/windowPussy.jpg"> @@
+
+&emsp;You giggle playfully and "shyly" raise your leg, letting him see your <<if $mainChar.sexStats.vaginal === 0>>virgin<<elseif $mainChar.sexStats.vaginal >= 1 && $mainChar.sexStats.vaginal < 20>>tight<<elseif $mainChar.sexStats.vaginal >= 20 && $mainChar.sexStats.vaginal < 45>>slightly loose<<elseif $mainChar.sexStats.vaginal >= 45 && $mainChar.sexStats.vaginal < 70>>loose<<elseif $mainChar.sexStats.vaginal >= 70>>stretched out<<endif>> pussy.
+&emsp;The man's face turns red and he quickly runs from the window.<</linkreplace>><<endif>><<endif>><</linkreplace>>
+
+<<endif>>[[Finish reading and leave|living room]]

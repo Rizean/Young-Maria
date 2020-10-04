@@ -66,3 +66,17 @@ Day: <<listbox "$dateDay" autoselect>>
 [[Repeat this code->Cheat!]]
 [[Back to the Cheat input->Cheat]]
 [[Back to the Smartphone->Smartphone]]
+
+
+::Stay home bonus: second wave <1687,738>
+<<set $isStayHomeBonusTaken = true>><<set $mainChar.relationships.sibling += 10>><p class="add">+10 relationship with sibling</p>
+<<set $sibling.corruption += 10>><p class="add">+10 sibling corruption</p>
+<<set $mainChar.relationships.mom += 10>><p class="add">+10 relationship with mom</p>
+<<set $mom.corruption += 10>><p class="add">+10 mom corruption</p>
+<<set $mainChar.relationships.dad += 10>><p class="add">+10 relationship with dad</p>
+<<set $dad.corruption += 10>><p class="add">+10 dad corruption</p>
+
+Stay home, my friend:3
+
+[[Back to the Cheat input->Cheat]]
+[[Back to the Smartphone->Smartphone]]

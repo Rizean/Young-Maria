@@ -2,3 +2,51 @@
 src/core/characters/mom/withoutClothes.tw2
 
 
+::Mom Character <200,200>
+<<set $mom to new GirlCharacter({
+	firstName: "Kate",
+	lastName: "Doe",
+	age: 37,
+	corruption: 3,
+	energy: 100,
+	arousal: 0,
+	intellect: 2,
+	stats: {
+		strength: 3,
+		agility: 3
+	},
+	schedule: {
+		weekday: {
+			kitchenMorning: '08:00-09:00',
+			work: '09:00-15:00',
+			personalFriends: '15:00-18:00',
+			livingRoom: '18:00-20:00',
+			kitchen: '20:00-21:00',
+			bathroom: '21:00-21:30',
+		  	bedroom: '21:30-00:00',
+		},
+		weekend: {
+			saturday: {
+			  kitchenMorning: '08:00-09:00',
+			  gym: '09:00-11:00',
+			  husband: '11:00-15:00',
+			  familyFriends: '15:00-19:00',
+			  girlfriends: '19:00-21:00',
+			  bathroom: '21:00-21:30',
+			  livingRoom: '21:30-23:00',
+			  bedroom: '23:00-00:00',
+			},
+			sunday: {
+			  kitchenMorning: '08:00-09:00',
+			  gym: '09:00-11:00',
+			  salon: '11:00-13:00',
+			  beach: '13:00-16:00',
+			  family: '16:00-20:00',
+			  familyDinner: '20:00-21:00',
+			  bathroom: '21:00-21:30',
+			  livingRoom: '21:30-22:00',
+			  bedroom: '22:00-00:00',
+			}
+		}
+	}
+}); >>

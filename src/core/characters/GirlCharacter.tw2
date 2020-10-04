@@ -1,0 +1,32 @@
+::Girl Character Class <200,400>
+<<script>>
+  window.GirlCharacter = function (config) {
+	  this.gender = variables().GENDER_FEMALE;
+	  this.genitals = variables().GENITALS_FEMALE;
+	  this.weight = variables().DEFAULT_WEIGHT;
+	  this.height = variables().DEFAULT_HEIGHT;
+
+	  Object.keys(config).forEach(function (pn) {
+		  this[pn] = clone(config[pn]);
+	  }, this);
+  };
+
+  GirlCharacter.prototype = Object.create(BasicCharacter.prototype);
+  GirlCharacter.prototype.constructor = BasicCharacter;
+
+  GirlCharacter.prototype.clone = function () {
+	  return new BasicCharacter(this);
+  };
+
+  GirlCharacter.prototype.toJSON = function () {
+	  var ownData = {};
+
+	  Object.keys(this).forEach(function (pn) {
+		  ownData[pn] = clone(this[pn]);
+	  }, this);
+
+	  return JSON.reviveWrapper(
+	  	'new BasicCharacter($ReviveData$)', ownData
+	  );
+  };
+<</script>>

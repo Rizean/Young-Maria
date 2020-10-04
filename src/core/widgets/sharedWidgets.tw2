@@ -1,0 +1,56 @@
+::SharedWidgets [widget nobr] <100,2200>
+<<widget "increase">>
+	<<switch $args[0]>>
+		<<case 'arousal'>>
+			<<set $mainChar.arousal += $args[1]>>
+			@@.mc-arousal-up; (Your arousal increased) @@
+		<<case 'relationshipWithRalf'>>
+			<<set $mainChar.relationships.ralfDog += $args[1]>>
+			@@.mc-attr-up; (Relationship with Ralf increased) @@
+		<<case 'bjLevel'>>
+			<<set $mainChar.skills.sex.blowjob += 1>>
+			@@.mc-attr-up; (Your blowjob level increased) @@
+		<<case 'beauty'>>
+			<<set $mainChar.beauty += $args[1] >>
+			@@.mc-attr-up; (Your beauty increased) @@
+		<<case 'reputation'>>
+			<<set $mainChar.reputation.school += $args[1] >>
+			@@.mc-attr-up; (Your reputation increased) @@
+		<<case 'intellect'>>
+			<<set $mainChar.intellect += $args[1] >>
+			@@.mc-attr-up; (Your intellect increased) @@
+		<<case 'corruption'>>
+			<<set $mainChar.corruption += $args[1] >>
+			@@.mc-attr-up; (Your corruption increased) @@
+		<<default>>
+			@@.error; UNKNOWN WIDGET PARAMETER! @@
+	<</switch>>
+<</widget>>
+
+<<widget "decrease">>
+	<<switch $args[0]>>
+		<<case 'arousal'>>
+			<<set $mainChar.arousal -= $args[1]>>
+			@@.mc-arousal-down; (Your arousal decreased) @@
+		<<case 'relationshipWithRalf'>>
+			<<set $mainChar.relationships.ralfDog -= $args[1]>>
+			@@.mc-attr-down; (Relationship with Ralf decreased) @@
+		<<case 'bjLevel'>>
+			<<set $mainChar.skills.sex.blowjob -= 1>>
+			@@.mc-attr-down; (Your blowjob level decreased) @@
+		<<case 'beauty'>>
+			<<set $mainChar.beauty -= $args[1] >>
+			@@.mc-attr-down; (Your beauty decreased) @@
+		<<case 'reputation'>>
+			<<set $mainChar.reputation.school -= $args[1] >>
+			@@.mc-attr-down; (Your reputation decreased) @@
+		<<case 'intellect'>>
+			<<set $mainChar.intellect -= $args[1] >>
+			@@.mc-attr-down; (Your intellect decreased) @@
+		<<case 'corruption'>>
+			<<set $mainChar.corruption -= $args[1] >>
+			@@.mc-attr-down; (Your corruption decreased) @@
+		<<default>>
+			@@.error; UNKNOWN WIDGET PARAMETER! @@
+	<</switch>>
+<</widget>>

@@ -1,0 +1,33 @@
+::StoryIncludes
+src/core/clothing/accessories.tw2
+src/core/clothing/clothesItemWidget.tw2
+src/core/clothing/EroticAccessoriesWidget.tw2
+src/core/clothing/LingerieClothesWidget.tw2
+src/core/clothing/mainWardrobe.tw2
+src/core/clothing/Wardrobe.tw2
+
+::Head Clothes [nobr system] <650,1400>
+<<ClothesItem "head">>
+
+::Legs Clothes [nobr system] <850,1400>
+<<ClothesItem "legs">>
+
+::Shoes Clothes [nobr system] <950,1400>
+<<ClothesItem "shoes">>
+
+::Body Clothes [nobr system] <750,1400>
+<<ClothesItem "body">>
+
+::Bra Lingerie Clothes [system] <750,2000>
+<<LingerieClothesItem "bra">>
+
+::Panties Lingerie Clothes [system] <850,2000>
+<<LingerieClothesItem "panties">>
+
+::Office suit <591,1997>
+<<link "Back" $backButton>><</link>>
+
+You must wear this at work. Rules, rules everywhere!
+(+10 allure)
+
+<div class="default-image-wrapper"><img src="pics/OfficeSuit.jpg"></div>

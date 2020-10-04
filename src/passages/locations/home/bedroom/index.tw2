@@ -3,11 +3,11 @@ src/passages/locations/home/bedroom/bed.tw2
 src/passages/locations/home/bedroom/checkFreshNews.tw2
 src/passages/locations/home/bedroom/inBedPicture.tw2
 src/passages/locations/home/bedroom/messages.tw2
+src/passages/locations/home/bedroom/mirror.tw2
 src/passages/locations/home/bedroom/nap.tw2
 src/passages/locations/home/bedroom/sleep.tw2
 src/passages/locations/home/bedroom/trainYourThroat.tw2
 src/passages/locations/home/bedroom/useLaptop.tw2
-src/passages/locations/home/bedroom/wardrobe.tw2
 
 
 ::Bedroom <1000,900>

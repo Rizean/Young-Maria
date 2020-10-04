@@ -1,0 +1,185 @@
+::StoryIncludes
+
+
+::Sibling Character [nobr] <400,200>
+<<if def $sibling>>
+	<<run State.setVar("$siblingAge", parseInt(variables().siblingAge)); >>
+  <<if $sibling === 'brother'>>
+	<<set $sibling to new ManCharacter({
+	  firstName: $siblingName,
+	  lastName: "Doe",
+	  age: $siblingAge,
+	  gender: 'male',
+	  type: 'brother',
+	  typeMin: 'bro',
+	  corruption: 0,
+	  energy: 100,
+	  arousal: 0,
+	  intellect: 1,
+	  stats: {
+		strength: 2,
+		agility: 2
+	  },
+	  appearance: {
+		isBrushed: false,
+		image: '',
+		head: {
+		  image: '',
+		  hair: {
+			  color: '',
+			  length: '',
+			  style: '',
+			  modification: '',
+		  },
+		  eyes: {
+			  size: '',
+			  color: '',
+			  lashesSize: '',
+		  },
+		  lips: {
+			  size: '',
+			  color: ''
+		  },
+		  isWearingGlasses: false
+		},
+		chest: {
+		  size: 'B',
+		  image: '',
+		},
+		body: {
+		  type: 'normal',
+		  image: '',
+		}
+	  },
+	  schedule: {
+		  weekday: {
+			  kitchenMorning: '08:30-09:00',
+			  study: '09:00-14:00',
+			  football: '14:00-16:00',
+			  walk: '16:00-19:00',
+			  livingRoom: '19:00-20:00',
+			  kitchen: '20:00-21:00',
+			  training: '21:00-21:30',
+			  bathroom: '21:30-22:00',
+			  room: '22:00-00:00',
+		  },
+		  weekend: {
+			  saturday: {
+				kitchenMorning: '10:00-10:30',
+				work: '10:30-13:00',
+				walk: '13:00-16:00',
+				beach: '16:00-17:00',
+				walk: '17:00-20:00',
+				livingRoom: '20:00-21:00',
+				training: '21:00-21:30',
+				bathroom: '21:30-22:00',
+				room: '22:00-00:00',
+			  },
+			  sunday: {
+				kitchenMorning: '10:00-10:30',
+				bestFriend: '10:30-16:00',
+				family: '16:00-20:00',
+				familyDinner: '20:00-21:00',
+				training: '21:00-21:30',
+				bathroom: '21:30-22:00',
+				room: '22:00-00:00',
+			  }
+		  }
+	  }
+	}); >>
+
+	<<switch $sibling.age>>
+	  <<case 14 15 16>>
+	  	<<set $sibling.appearance.image = "pics/sibling/male/16yo.jpg">>
+		<<set $sibling.penisLength = random(14, 17)>>
+	  <<case 17 18>>
+	  	<<set $sibling.appearance.image = "pics/sibling/male/18yo.jpg">>
+		<<set $sibling.penisLength = random(17, 22)>>
+	  <<case 19 20>>
+	  	<<set $sibling.appearance.image = "pics/sibling/male/20yo.jpg">>
+		<<set $sibling.penisLength = random(18, 24)>>
+	  <<case 21 22>>
+	  	<<set $sibling.appearance.image = "pics/sibling/male/22yo.jpg">>
+		<<set $sibling.penisLength = random(20, 25)>>
+	  <<case 23 24>>
+	  	<<set $sibling.appearance.image = "pics/sibling/male/24yo.jpg">>
+		<<set $sibling.penisLength = random(22, 27)>>
+	  <<case 25 26>>
+	  	<<set $sibling.appearance.image = "pics/sibling/male/26yo.jpg">>
+		<<set $sibling.penisLength = random(23, 30)>>
+	  <<default>>
+		  @@.error; UNKNOWN CASE OPTION! @@
+	<</switch>>
+  <<elseif $sibling === 'sister'>>
+	<<set $sibling to new GirlCharacter({
+	  firstName: $siblingName,
+	  lastName: "Doe",
+	  age: $siblingAge,
+	  gender: 'female',
+	  type: 'sister',
+	  typeMin: 'sis',
+	  corruption: 0,
+	  energy: 100,
+	  arousal: 0,
+	  intellect: 1,
+	  stats: {
+		strength: 0,
+		agility: 0
+	  },
+	  schedule: {
+		  weekday: {
+			  kitchenMorning: '08:30-09:00',
+			  study: '09:00-14:00',
+			  dancing: '14:00-16:00',
+			  walk: '16:00-19:00',
+			  livingRoom: '19:00-20:00',
+			  kitchen: '20:00-21:00',
+			  training: '21:00-21:30',
+			  bathroom: '21:30-22:00',
+			  room: '22:00-00:00',
+		  },
+		  weekend: {
+			  saturday: {
+				kitchenMorning: '10:00-10:30',
+				work: '10:30-13:00',
+				walk: '13:00-15:00',
+				beach: '15:00-17:00',
+				walk: '17:00-20:00',
+				livingRoom: '20:00-21:00',
+				training: '21:00-21:30',
+				bathroom: '21:30-22:00',
+				room: '22:00-00:00',
+			  },
+			  sunday: {
+				kitchenMorning: '10:00-10:30',
+				bestFriend: '10:30-16:00',
+				family: '16:00-20:00',
+				familyDinner: '20:00-21:00',
+				training: '21:00-21:30',
+				bathroom: '21:30-22:00',
+				room: '22:00-00:00',
+			  }
+		  }
+	  }
+	}); >>
+
+	<<switch $sibling.age>>
+	   <<case 14 15 16>>
+	  	<<set $sibling.appearance.image = "pics/sibling/female/16yo.jpg">>
+	  <<case 17 18>>
+	  	<<set $sibling.appearance.image = "pics/sibling/female/18yo.jpg">>
+	  <<case 19 20>>
+	  	<<set $sibling.appearance.image = "pics/sibling/female/20yo.jpg">>
+	  <<case 21 22>>
+	  	<<set $sibling.appearance.image = "pics/sibling/female/22yo.jpg">>
+	  <<case 23 24>>
+	  	<<set $sibling.appearance.image = "pics/sibling/female/24yo.jpg">>
+	  <<case 25 26>>
+	  	<<set $sibling.appearance.image = "pics/sibling/female/26yo.jpg">>
+	  <<default>>
+		  @@.error; UNKNOWN CASE OPTION! @@
+	<</switch>>
+  <</if>>
+
+
+<</if>>

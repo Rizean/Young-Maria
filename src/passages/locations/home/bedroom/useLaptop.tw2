@@ -108,3 +108,193 @@ Horse dildo - <<link "vagina">><<set $masturbationDildoUsing = "Horse">><<set $m
 -->
 In progress
 Stay tune!
+
+
+::Buy lewd stuff <766,2266>
+You feel like you want to buy some more... exotic items. You have a quick search around the internet for something new. What do you wanna buy?
+
+[[Big Bad Dragon dildos]]
+
+[[Back->Use laptop]]
+
+::Big Bad Dragon dildos <766,2416>
+Here you can order some animalistic dildos of enormous sizes! Please, make sure you have enough space under your bed to hide your new rubber friend ;)
+
+Canine (400$) - <<if $hasCanineDildo != true>><<if $mainChar.money >= 400>><<link "Buy">><<set $hasCanineDildo = true>><<set $mainChar.money -= 400>><<goto "Big Bad Dragon dildos">><</link>><<else>>Not enough money<<endif>><<else>>You have this<<endif>>
+Horse (500$) - <<if $hasHorseDildo != true>><<if $mainChar.money >= 500>><<link "Buy">><<set $hasHorseDildo = true>><<set $mainChar.money -= 500>><<goto "Big Bad Dragon dildos">><</link>><<else>>Not enough money<<endif>><<else>>You have this<<endif>>
+
+[[Back->Buy lewd stuff]]
+
+::Dildo masturbation [nobr] <1291,1868>
+<<set $minute += 30>><<set $masturbatedWithDildoLastDay = $dayCount>><<HaveASexWidget "masturbate" "self">>
+
+<div class="default-image-wrapper">
+	[img[String.format("pics/dildo" + $masturbationDildoUsing + $masturbationHoleUsing + random(1,3) + ".gif")]]
+</div>
+
+<<if $masturbationHoleUsing == "Vagina">>
+	<<set $mainChar.sexStats.vaginal += 1>>
+<<elseif $masturbationHoleUsing == "Anal">>
+	<<set $mainChar.sexStats.anal += 1>>
+<<endif>>
+
+<br /> <br />
+&emsp;You give the dildo some lube, covering it in your saliva. Then, you reach down and push it gently into your <<if $masturbationHoleUsing == "Vagina">>pussy<<elseif $masturbationHoleUsing == "Anal">>ass<<endif>>.
+&emsp;After a few moments, you pick up the pace. It feels good even if it's just rubber. Soon, you feel the pleasure near climax and you cum hard. Your sore hole becomes a bit looser...
+
+<br /><p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+<br />
+<<if $masturbationHoleUsing == "Vagina">>
+	<<set $mainChar.sexStats.vaginalCapacity += 1>>
+	<p class="add">+1 vaginal capacity</p>
+<<elseif $masturbationHoleUsing == "Anal">>
+	<<set $mainChar.sexStats.analCapacity += 1>>
+	<p class="add">+1 anal capacity</p>
+<<endif>>
+<br />
+<br />Vaginal capacity: $mainChar.sexStats.vaginalCapacity <<if $mainChar.sexStats.vaginalCapacity >= 10>><strong>max</strong><<endif>>
+<br />Anal capacity: $mainChar.sexStats.analCapacity <<if $mainChar.sexStats.analCapacity >= 10>><strong>max</strong><<endif>>
+<br />
+<br />[[Back->Bedroom]]
+
+
+::Web cam <506,2273>
+<<if visited() == 1>><<set $webNickname = $mainChar.firstName>><<endif>><<if visited() == 1>><<set $webMessagesCounter = 0>><<endif>>Your nickname: <i>$webNickname</i> <sup>[[change->Change webNickname]]</sup>
+
+Messages: $webMessagesCounter <<if $webMessagesCounter > 0>>[[Read->Web messages read]]<<endif>>
+
+<<if $gaveShowLastDay == $dayCount>>You already gave a show today!<<else>><<if $mainChar.energy >= 70>>[[Start a show!]]<<else>>You are to tired to start a show...<<endif>><<endif>>
+
+[[Back->Use laptop]]
+
+::Start a show! <506,2423>
+<<set $hour += 1>><<set $gaveShowLastDay = $dayCount>><<HaveASexWidget "masturbate" "self">>
+
+<div class="default-image-wrapper">
+	[img[String.format("pics/webCam" +  random(1,16) + ".webp")]]
+</div>
+
+&emsp;After an hour of performing lewd actions for you fans, you count the donations you received throughout. You did a pretty good job! Now, how much did you actually make?
+<<nobr>>
+
+<<set _baseIncome to random(7, 16)>>
+<<if $day > 5>>
+	<<set _weekendBonus to random(1, 3)>>
+<<else>>
+	<<set _weekendBonus = 0>>
+<<endif>>
+<<if $mainChar.beauty >= 0 and $mainChar.beauty < 25>>
+	<<set _beautyBonus = 0>>
+<<elseif $mainChar.beauty >= 25 and $mainChar.beauty < 50>>
+	<<set _beautyBonus to random(1, 2)>>
+<<elseif $mainChar.beauty >= 50 and $mainChar.beauty < 75>>
+	<<set _beautyBonus to random(3, 5)>>
+<<elseif $mainChar.beauty >= 75>>
+	<<set _beautyBonus to random(6, 10)>>
+<<endif>>
+<<if $mainChar.corruption >= 0 and $mainChar.corruption < 25>>
+	<<set _corruptionBonus = 0>>
+<<elseif $mainChar.corruption >= 25 and $mainChar.corruption < 50>>
+	<<set _corruptionBonus to random(1, 2)>>
+<<elseif $mainChar.corruption >= 50 and $mainChar.corruption < 75>>
+	<<set _corruptionBonus to random(3, 5)>>
+<<elseif $mainChar.corruption >= 75>>
+	<<set _corruptionBonus to random(6, 10)>>
+<<endif>>
+<<if visited() >= 0 and visited() < 10>>
+	<<set _popularityBonus = 0>>
+<<elseif visited() >= 10 and visited() < 20>>
+	<<set _popularityBonus to random(2, 5)>>
+<<elseif visited() >= 20 and visited() < 40>>
+	<<set _popularityBonus to random(6, 10)>>
+<<elseif visited() >= 40>>
+	<<set _popularityBonus to random(11, 20)>>
+<<endif>>
+
+<<set _finalIncome = _baseIncome + _weekendBonus + _beautyBonus + _corruptionBonus + _popularityBonus>>
+
+<</nobr>>
+Total income: _finalIncome dollars
+<p class="add">+$ _finalIncome</p><<set $mainChar.money += _finalIncome>>
+
+<p class="add">+1 Corruption</p> <p class="minus">-70 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 70>>
+
+[[Say Goodbye and stop the stream->Web cam]]
+
+::Change webNickname <626,2423>
+Current nickname: <i>$webNickname</i>
+Change to: <<textbox "$webNickname" $webNickname>>
+
+[[Apply->Web cam]]
+
+::Web cam widgets [widget nobr] <410,2628>
+<<widget "WebMessages">>
+
+<<if $webMessagesTryingToReceiveDay < $dayCount>>
+
+	<<set $webMessagesGettingChance to either(true,false,false)>>
+
+	<<if $webMessagesGettingChance == true>>
+		<<set $webMessagesGettingHour to random(4, 15)>>
+		<<if $hour >= $webMessagesGettingHour>>
+			<<set $webMessagesCounter += 1>>
+		<<endif>>
+	<<endif>>
+
+	<<set $webMessagesTryingToReceiveDay = $dayCount>>
+
+<<endif>>
+
+<</widget>>
+
+::Web messages read <387,2421>
+<<set $webMessagesCounter -= 1>><<set $webMessageRequest to either("donation","send panties","write on body")>><<set $minute += 3>><<if $webMessageRequest == "donation">>Someone just sent you some extra money :3
+<<set _income to random(5, 15)>>
+<p class="add">+$ _income</p><<set $mainChar.money += _income>>
+<<elseif $webMessageRequest == "send panties">>Someone asks you to send them your... panties. Um, okay, wish granted.
+<<set _income to random(8, 20)>>
+<p class="add">+$ _income</p><<set $mainChar.money += _income>>
+<<elseif $webMessageRequest == "write on body">>Someone asks you to write a few words on your beautiful body. Well, it's quite hard but sexy as well. Plus, they sent good money.
+
+@@.image-wrapper-w50p;
+	[img['pics/bodyWriting' + random(1, 4) + '.webp']]
+@@
+
+<<set _income to random(15, 25)>>
+<p class="add">+$ _income</p><<set $mainChar.money += _income>><<endif>>
+
+<<if $webMessagesCounter > 0>>[[Read another message->Web messages read]]
+<<endif>>[[Back->Web cam]]
+
+
+::Non-consensual <1744,2100>
+&emsp;You decide to search for some non-consensual porn. A lot of girls would love to be taken forcefully by a strong man. Is it rape if she enjoys it? You relax your body and begin to watch...
+
+<<set $hour += 1>>@@.image-wrapper-w70p;[img[String.format('pics/nonConsensual' + random(1,8) + '.webp')]]@@
+<<HaveASexWidget "masturbate" "self">>
+&emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+
+[[Back->Bedroom]]
+
+::Real bestiality <1638,2100>
+&emsp;You've heard of beastiality but you've only ever seen cartoons and anime versions. You decide to dig a little deeper and soon find yourself searching for something more real.
+&emsp;With a lot of effort, you soon come across one such video. You feel a little naughty for this but that just adds to your horniess. You can't help it, you watch the video.
+
+<<set $hour += 1>><div class="default-image-wrapper">[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'Zoo' + random(1, 8) + 'REAL.jpg')]]</div>
+<<HaveASexWidget "masturbate" "self">>
+&emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+
+[[Back->Bedroom]]
+
+::Bestiality <1618,1985>
+&emsp;You saw something recently about people being fucked by animals. You do some searching and soon find yourself deep into videos about Bestiality.
+&emsp;You didn't think you would find this hot, but the way the animals fuck these women so roughly really turns you on. You soon relax and start to enjoy such animalistic sex.
+
+<<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7,8)>><<if _image == 1>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo4.jpg"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo5.jpg"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo6.jpg"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo7.jpg"><<elseif _image == 8>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo8.jpg"></div><<endif>>
+<<HaveASexWidget "masturbate" "self">>
+&emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+
+[[Back->Bedroom]]

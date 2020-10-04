@@ -1,8 +1,6 @@
 ::StoryIncludes
-src/passages/stats/sexStats.tw2
 src/passages/stats/changelog.tw2
 src/passages/stats/hallOfGlory.tw2
-src/passages/stats/accessories.tw2
 
 ::Stats [system] <975,25>
 Name: $mainChar.firstName

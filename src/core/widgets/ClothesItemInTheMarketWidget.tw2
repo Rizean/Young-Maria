@@ -1,0 +1,42 @@
+::Clothes Item In The Market Widget [widget nobr] <2560,1180>
+<<widget "ClothesItemInTheMarket">>
+	<!-- $args[0] - market clothes item object -->
+	<!-- $args[1] - market clothes item title -->
+	* <<link $args[0].name "Lexena Market Clothes Item View">>
+		<<set $tempClothesItem = $args[0] >>
+	<</link>> for $
+	<<if settings.lessPrices == true>>
+		<<if $wereClothesShopPricesReduced != true>>
+			<<set $args[0].price /= 2>>
+		<<endif>>
+	<<else>>
+		<<if $wereClothesShopPricesReduced == true>>
+			<<set $args[0].price *= 2>>
+		<<endif>>
+	<<endif>>
+	<<=$args[0].price>> -
+	<<if $wardrobe.available.includes($args[0].name)>>
+		You already have this!
+	<<else>>
+		<<if $mainChar.money < $args[0].price>>
+			You don't have enough money!
+		<<else>>
+			<<link "Buy">>
+				<<set $minute += 1>>
+				<<set $mainChar.money -= $args[0].price>>
+				<<run $wardrobe.addItem($args[0].type, $args[0]); >>
+				<<goto "Clothes Shop">>
+			<</link>>
+		<<endif>>
+	<<endif>>
+	<br />
+<</widget>>
+
+::Lexena Market Clothes Item View [system] <2600,1300>
+[[Back->Clothes Shop]]
+
+$tempClothesItem.description
+
+@@.image-wrapper-w70p;
+	[img[$tempClothesItem.image]]
+@@

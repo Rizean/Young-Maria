@@ -1,0 +1,25 @@
+::END: Mother! <610,2628>
+<<set $hour += 8>><<set $minute = 0>><<set $mainChar.pregnancy.day = 0>><<set $mainChar.pregnancy.isPregnant = false>><<set $mainChar.pregnancy.knowsAboutPregnancy = false>>&emsp;You've been having more and more contractions lately. You think it might be time soon. You're about to lie down, try and soothe your pain a little when you look down at your big belly and realise your legs are wet!
+&emsp;OH DAMN! Guess it's happening now.
+&emsp;Another big contraction causes a sharp pain to shoot through your lower abdomen. It makes you shout out and in a few minutes your parents are fussing over you and helping you into the car.
+&emsp;After twenty long (very long!) minutes later, you are in the maternity ward sobbing. You are surrounded by a crowd of doctors, they've given you something for the pain as they tell you it's time.
+&emsp;You've never felt anything like this pain. It's so much for you to bare that time becomes irrelevant. You're not sure how many minutes or hours have passed. You just want the pain to stop.
+
+...
+
+...
+
+<<linkreplace "...">>...
+
+&emsp;Eventually after some time, the pain subsides slightly and you hear a quiet whimpering. A nurse, by the name of Rita, lifts your baby to you. It's a <<linkreplace "...">><<set _babyGender to either("boy","girl")>>_babyGender!
+&emsp;You take your new <<if _babyGender == "boy">>son<<else>>daughter<<endif>> with weak hands and smile. This little person changes everything. You feel some new feeling growing in your chest.
+&emsp;Nothing will be the same... And you embrace it.
+
+
+<h5 agile="center"><u><strong>The end: Mother!</strong></u></h5>
+
+<p agile="center">Thank you for playing :3 Please press the "Restart" button in bottom left corner under "saves" and "settings". If you want to go back use the left arrow in the top left corner.</p><</linkreplace>><</linkreplace>>
+
+
+
+

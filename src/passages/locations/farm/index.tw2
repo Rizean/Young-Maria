@@ -1,6 +1,6 @@
 ::StoryIncludes
 src/passages/locations/farm/ralf.tw2
-
+src/passages/locations/farm/barn.tw2
 
 ::Tell them you are dying to see that farm <300,1146>
 <<set $mainChar.energy -= 70>><<set $hour = 20>><<set $minute = 0>>&emsp;Your parents agree and you soon all bundle into the car. City buildings soon turn to trees as you make your way into lushious country.

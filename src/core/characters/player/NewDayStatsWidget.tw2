@@ -1,0 +1,31 @@
+::New day stats widget [widget nobr] <225,2200>
+<<widget "NewDayStats">>
+
+<<if settings.pregnancy == true>>
+	<<if $mainChar.pregnancy.isPregnant == true>>
+		<<set $mainChar.pregnancy.day += 1>>
+		<<set $mainChar.menstruation.day = 0>>
+	<<endif>>
+	<<set $mainChar.pregnancy.isOnPills = false>>
+<<endif>>
+
+<<if settings.menstruation == true>>
+	<<if $mainChar.menstruation.day >= 18>>
+		<<set $mainChar.menstruation.day = 1>>
+	<<else>>
+		<<set $mainChar.menstruation.day += 1>>
+	<<endif>>
+<<endif>>
+
+<<if $mainChar.eroticLook.intimateHaircut == 'shaved'>>
+	<<set $mainChar.eroticLook.intimateHaircut = 'stubble'>>
+<<elseif $mainChar.eroticLook.intimateHaircut == 'stubble'>>
+	<<set $mainChar.eroticLook.intimateHaircut = 'hairy'>>
+<<endif>>
+
+<<if $wereVitaminsTaken == true>>
+	<<set $mainChar.maxEnergy -= 10>>
+<<endif>>
+<<set $wereVitaminsTaken = false>>
+
+<</widget>>

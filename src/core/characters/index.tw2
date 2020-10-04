@@ -1,3 +1,19 @@
 ::StoryIncludes
 src/core/characters/dad/index.tw2
 src/core/characters/mom/index.tw2
+src/core/characters/player/index.tw2
+src/core/characters/sibling/index.tw2
+
+src/core/characters/BasicCharacterClass.tw2
+src/core/characters/GirlCharacter.tw2
+src/core/characters/ManCharacter.tw2
+src/core/characters/SissyCharacter.tw2
+src/core/characters/TrapCharacter.tw2
+
+
+// TODO: I'm not really sure what this does?
+::Characters <200,100>
+<<include "Main Character">>
+<<include "Mom Character">>
+<<include "Dad Character">>
+<<include "Sibling Character">>

@@ -1,0 +1,37 @@
+::Accessories Item Widget [widget nobr system] <800,1500>
+<<widget "AccessoriesItem">>
+	<!-- $args[0] - name of the accessory item, i.e. "neck", "arms" -->
+	<table width="100%" border="5" class="wardrobe-clothes">
+		<caption><<= $args[0].toLocaleUpperFirst() >> accessories</caption>
+			<tbody>
+				<<for _itemTitle, _item range $wardrobe.accessories[$args[0]]>>
+					<tr>
+						<td width="20%">
+							<<capture _itemTitle>>
+								<<if $wardrobe.accessories[$args[0]][_itemTitle].name === $mainChar.look.accessories[$args[0]].name>>
+									<<set _accessoriesName = $wardrobe.accessories[$args[0]][_itemTitle].name + " (take off)" >>
+									<<link _accessoriesName "Wardrobe">>
+										<<set $mainChar.look.accessories[$args[0]] = $emptyItem >>
+									<</link>>
+								<<else>>
+									<<set _accessoriesName = $wardrobe.accessories[$args[0]][_itemTitle].name + " (wear)" >>
+									<<link _accessoriesName "Wardrobe">>
+										<<set $mainChar.look.accessories[$args[0]] = $wardrobe.accessories[$args[0]][_itemTitle] >>
+									<</link>>
+								<</if>>
+							<</capture>>
+						</td>
+						<td align="center">
+							[img[$wardrobe.accessories[$args[0]][_itemTitle].image]]
+						</td>
+						<td width="20%">
+							<<= $wardrobe.accessories[$args[0]][_itemTitle].description >>
+						</td>
+					</tr>
+				<</for>>
+			</tbody>
+	</table>
+	<br />
+	<br />
+	[[Back->Wardrobe]]
+<</widget>>

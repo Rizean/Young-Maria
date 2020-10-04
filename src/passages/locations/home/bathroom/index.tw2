@@ -1,10 +1,13 @@
 ::StoryIncludes
+src/passages/locations/home/bathroom/applyMakeup.tw2
 src/passages/locations/home/bathroom/brushTeeth.tw2
+src/passages/locations/home/bathroom/combYourself.tw2
 src/passages/locations/home/bathroom/giveSpyShow.tw2
 src/passages/locations/home/bathroom/haveAShower.tw2
 src/passages/locations/home/bathroom/ignoreSpy.tw2
 src/passages/locations/home/bathroom/kickOutSpy.tw2
 src/passages/locations/home/bathroom/lookOutWindow.tw2
+src/passages/locations/home/bathroom/mirror.tw2
 src/passages/locations/home/bathroom/useToilet.tw2
 src/passages/locations/home/bathroom/wash.tw2
 src/passages/locations/home/bathroom/washFace.tw2

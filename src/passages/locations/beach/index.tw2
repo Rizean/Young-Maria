@@ -1,5 +1,6 @@
 ::StoryIncludes
 src/passages/locations/beach/bar.tw2
+src/passages/locations/beach/beachIntoxication.tw2
 src/passages/locations/beach/changeClothes.tw2
 src/passages/locations/beach/goSwimming.tw2
 src/passages/locations/beach/sunbath.tw2

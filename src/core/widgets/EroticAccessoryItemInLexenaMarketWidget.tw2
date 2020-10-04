@@ -1,0 +1,75 @@
+::Erotic Accessory Item in Lexena Market Widget [nobr widget system] <2700,1080>
+<<widget "EroticAccessoryItemLexenaMarket">>
+	<!-- $args[0] - erotic accessory item i.e. dildo, butt plug -->
+	* <<link $args[0].name "Lexena Market Erotic Item View Widget">>
+		<<set $tempEroticItem = $args[0] >>
+	<</link>> for $
+	<<if settings.lessPrices == true>>
+		<<if $wereEroticMarketPricesReduced != true>>
+			<<set $args[0].price /= 2>>
+		<<endif>>
+	<<else>>
+		<<if $wereEroticMarketPricesReduced == true>>
+			<<set $args[0].price *= 2>>
+		<<endif>>
+	<<endif>>
+	<<= $args[0].price >> -
+    <<if $args[0].hasOwnProperty('type') >>
+        <<if $wardrobe.available.includes($args[0].name)>>
+            You already have this
+        <<else>>
+            <<if $mainChar.money < $args[0].price>>
+                You don't have enough money!
+            <<else>>
+                <<link "Buy">>
+					<<set $minute += 1>>
+                    <<set $mainChar.money -= $args[0].price>>
+                    <<run $wardrobe.addEroticAccessory($args[0].type, $args[0]); >>
+                    <<goto "Erotic Market">>
+                <</link>>
+            <<endif>>
+        <<endif>>
+    <<else>>
+        <<if $args[0].use === 'single'>>
+            <<if $inventory.has('eroticItems', $args[0].name)>>
+                You already have this
+            <<else>>
+                <<if $mainChar.money < $args[0].price>>
+                    You don't have enough money!
+                <<else>>
+                    <<link "Buy">>
+                        <<set $mainChar.money -= $args[0].price>>
+                        <<run $inventory.add('eroticItems', $args[0]); >>
+                        <<goto "Erotic Market">>
+                    <</link>>
+                <<endif>>
+            <<endif>>
+        <<elseif $args[0].use === 'many'>>
+            <<if ! $inventory.has('eroticItems', $args[0].name)>>
+                <<if $mainChar.money < $args[0].price>>
+                    You don't have enough money!
+                <<else>>
+                    <<link "Buy">>
+						<<set $minute += 1>>
+                        <<set $mainChar.money -= $args[0].price>>
+                        <<run $inventory.add('eroticItems', $args[0]); >>
+                        <<goto "Erotic Market">>
+                    <</link>>
+                <<endif>>
+            <<else>>
+                <<if $mainChar.money < $args[0].price>>
+                    You don't have enough money!
+                <<else>>
+                    <<set _countName = 'Buy (You have ' + $inventory.eroticItems[$args[0].name].count + ')' >>
+                    <<link _countName>>
+						<<set $minute += 1>>
+                        <<set $mainChar.money -= $args[0].price>>
+                        <<run $inventory.addCount('eroticItems', $args[0]); >>
+                        <<goto "Erotic Market">>
+                    <</link>>
+                <<endif>>
+            <<endif>>
+        <<endif>>
+    <<endif>>
+	<br />
+<</widget>>

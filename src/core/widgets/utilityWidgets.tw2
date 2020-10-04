@@ -1,0 +1,278 @@
+::Utility widgets [widget] <100,2320>
+<<widget "intoxicationWidget">><<nobr>>
+<<run console.log(`intoxication: ${$mainChar.intoxication} techIntoxicationHour: ${$techIntoxicationHour} intoxicationTime: ${$intoxicationTime}`)>>
+<<if $mainChar.intoxication >= 0 and $hour < 7>>
+	<<set $techHour = $hour + 24>>
+<<else>>
+	<<set $techHour = $hour>>
+<<endif>>
+<<set $techHour1 = $techHour * 60>>
+<<set $realTime = $minute + $techHour1>>
+
+<<set $techIntoxicationHour = $intoxicationHour * 60>>
+<<set $intoxicationTime = $intoxicationMinute + $techIntoxicationHour>>
+
+<<set $intoxicationTimeDifference = $realTime - $intoxicationTime>>
+<<set $techIntoxicationTimeDifference = $intoxicationTimeDifference / 10>>
+<<silently>><<- $techIntoxicationTimeDifference.toFixed(0)>><</silently>>
+
+<<if $techIntoxicationTimeDifference <= $mainChar.intoxication>>
+	<<set $mainChar.intoxication -= $techIntoxicationTimeDifference>>
+<<else>>
+	<<set $mainChar.intoxication = 0>>
+<<endif>>
+
+<<if $mainChar.intoxication < 1>>
+	<<if $lastIntoxicationTier != 0>>
+		<<set $lastIntoxicationTier = 0>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 0>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 1 and $mainChar.intoxication < 10>>
+	<<if $lastIntoxicationTier != 2>>
+		<<set $lastIntoxicationTier = 2>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 2>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 10 and $mainChar.intoxication < 20>>
+	<<if $lastIntoxicationTier != 4>>
+		<<set $lastIntoxicationTier = 4>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 4>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 20 and $mainChar.intoxication < 30>>
+	<<if $lastIntoxicationTier != 6>>
+		<<set $lastIntoxicationTier = 6>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 6>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 30 and $mainChar.intoxication < 40>>
+	<<if $lastIntoxicationTier != 8>>
+		<<set $lastIntoxicationTier = 8>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 8>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 40 and $mainChar.intoxication < 50>>
+	<<if $lastIntoxicationTier != 10>>
+		<<set $lastIntoxicationTier = 10>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 10>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 50 and $mainChar.intoxication < 60>>
+	<<if $lastIntoxicationTier != 12>>
+		<<set $lastIntoxicationTier = 12>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 12>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 60 and $mainChar.intoxication < 70>>
+	<<if $lastIntoxicationTier != 14>>
+		<<set $lastIntoxicationTier = 14>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 14>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 70 and $mainChar.intoxication < 80>>
+	<<if $lastIntoxicationTier != 16>>
+		<<set $lastIntoxicationTier = 16>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 16>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 80 and $mainChar.intoxication < 90>>
+	<<if $lastIntoxicationTier != 18>>
+		<<set $lastIntoxicationTier = 18>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 18>>
+	<<endif>>
+<<elseif $mainChar.intoxication >= 90 and $mainChar.intoxication < 100>>
+	<<if $lastIntoxicationTier != 20>>
+		<<set $lastIntoxicationTier = 20>>
+		<<set $newIntoxicationStatus = true>>
+		<<set $twoIntoxication = $oneIntoxication>>
+		<<set $oneIntoxication = 20>>
+	<<endif>>
+<<endif>>
+
+<<if $newIntoxicationStatus == true>>
+	<<set $newIntoxicationStatus = false>>
+	<<if $oneIntoxication > $twoIntoxication>>
+		<<set $corruptedIntoxication = $oneIntoxication - $twoIntoxication>>
+		<<set $mainChar.corruption += $corruptedIntoxication>>
+	<<elseif $twoIntoxication > $oneIntoxication>>
+		<<set $corruptedIntoxication = $twoIntoxication - $oneIntoxication>>
+		<<set $mainChar.corruption -= $corruptedIntoxication>>
+	<<else>>
+		<<set $mainChar.corruption += $oneIntoxication>>
+	<<endif>>
+<<endif>>
+<<run console.log(`intoxication: ${$mainChar.intoxication} techIntoxicationHour: ${$techIntoxicationHour} intoxicationTime: ${$intoxicationTime}`)>>
+<</nobr>><</widget>>
+
+
+
+<<widget "timeWidget">><<nobr>>
+
+<<if $minute >= 60>>
+	<<set $hour += 1>>
+	<<set $minute = 0>>
+<<endif>>
+<<if $minute < 10>>
+    <<set $showMinute = '0' + $minute>>
+<<else>>
+    <<set $showMinute = $minute>>
+<<endif>>
+
+<<if $hour >= 24>>
+	<<set $hour = 0>>
+<<endif>>
+<<if $hour < 10>>
+    <<set $showHour = '0' + $hour>>
+<<else>>
+    <<set $showHour = $hour>>
+<<endif>>
+
+<</nobr>><</widget>>
+
+
+
+<<widget "dayChangeWidget">><<nobr>>
+<<if $day >= 8>>
+	<<set $day = 1>>
+	<<set $dayCount += 1>>
+	<<NewDayStats>>
+	<<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+	<<dateChangeWidget>>
+<<endif>>
+<<if $day == 1 && $timeOfDay == "Night" && $dayChange != "Has been">>
+	<<set $day = 2>>
+	<<set $dayCount += 1>>
+	<<NewDayStats>>
+	<<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+	<<dateChangeWidget>>
+	<<set $dayChange = "Has been">>
+<<elseif $day == 1 && $timeOfDay == "Day" && $dayChange == "Has been">>
+	<<set $dayChange = "Hasn't been">>
+<<endif>>
+<<if $day == 2 && $timeOfDay == "Night" && $dayChange != "Has been">>
+	<<set $day = 3>>
+	<<set $dayCount += 1>>
+	<<NewDayStats>>
+	<<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+	<<dateChangeWidget>>
+	<<set $dayChange = "Has been">>
+<<elseif $day == 2 && $timeOfDay == "Day" && $dayChange == "Has been">>
+	<<set $dayChange = "Hasn't been">>
+<<endif>>
+<<if $day == 3 && $timeOfDay == "Night" && $dayChange != "Has been">>
+	<<set $day = 4>>
+	<<set $dayCount += 1>>
+	<<NewDayStats>>
+	<<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+	<<dateChangeWidget>>
+	<<set $dayChange = "Has been">>
+<<elseif $day == 3 && $timeOfDay == "Day" && $dayChange == "Has been">>
+	<<set $dayChange = "Hasn't been">>
+<<endif>>
+<<if $day == 4 && $timeOfDay == "Night" && $dayChange != "Has been">>
+	<<set $day = 5>>
+	<<set $dayCount += 1>>
+	<<NewDayStats>>
+	<<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+	<<dateChangeWidget>>
+	<<set $dayChange = "Has been">>
+<<elseif $day == 4 && $timeOfDay == "Day" && $dayChange == "Has been">>
+	<<set $dayChange = "Hasn't been">>
+<<endif>>
+<<if $day == 5 && $timeOfDay == "Night" && $dayChange != "Has been">>
+	<<set $day = 6>>
+	<<set $dayCount += 1>>
+	<<NewDayStats>>
+	<<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+	<<dateChangeWidget>>
+	<<set $dayChange = "Has been">>
+<<elseif $day == 5 && $timeOfDay == "Day" && $dayChange == "Has been">>
+	<<set $dayChange = "Hasn't been">>
+<<endif>>
+<<if $day == 6 && $timeOfDay == "Night" && $dayChange != "Has been">>
+	<<set $day = 7>>
+	<<set $dayCount += 1>>
+	<<NewDayStats>>
+	<<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+	<<dateChangeWidget>>
+	<<set $dayChange = "Has been">>
+<<elseif $day == 6 && $timeOfDay == "Day" && $dayChange == "Has been">>
+	<<set $dayChange = "Hasn't been">>
+<<endif>>
+<<if $day == 7 && $timeOfDay == "Night" && $dayChange != "Has been">>
+	<<set $day = 1>>
+	<<set $dayCount += 1>>
+	<<NewDayStats>>
+	<<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+	<<dateChangeWidget>>
+	<<set $dayChange = "Has been">>
+<<elseif $day == 7 && $timeOfDay == "Day" && $dayChange == "Has been">>
+	<<set $dayChange = "Hasn't been">>
+<<endif>>
+
+<</nobr>><</widget>>
+
+<<widget "exploreCityWidget">><<nobr>>
+
+<<set _placeArray = ["Park","High Tai","Bank","Beauty Salon","Beach","Bar"]>>
+
+<<if $isParkAvailable == true>>
+	<<set _placeArray.delete("Park")>>
+<<endif>>
+<<if $isHighTaiAvailable == true>>
+	<<set _placeArray.delete("High Tai")>>
+<<endif>>
+<<if $isBankAvailable == true>>
+	<<set _placeArray.delete("Bank")>>
+<<endif>>
+<<if $isBeautySalonAvailable == true>>
+	<<set _placeArray.delete("Beauty Salon")>>
+<<endif>>
+<<if $isBeachAvailable == true>>
+	<<set _placeArray.delete("Beach")>>
+<<endif>>
+<<if $isBarAvailable == true>>
+	<<set _placeArray.delete("Bar")>>
+<<endif>>
+
+<<set _place to either(_placeArray)>>
+
+<</nobr>><</widget>>
+
+<<widget "Brother">><<if $sibling == "brother">>Brother<<elseif $sibling == "sister">>Sister<</widget>>
+<<widget "brother">><<if $sibling == "brother">>brother<<elseif $sibling == "sister">>sister<</widget>>
+<<widget "He">><<if $sibling == "brother">>He<<elseif $sibling == "sister">>She<</widget>>
+<<widget "he">><<if $sibling == "brother">>he<<elseif $sibling == "sister">>she<</widget>>
+<<widget "His">><<if $sibling == "brother">>His<<elseif $sibling == "sister">>Her<</widget>>
+<<widget "his">><<if $sibling == "brother">>his<<elseif $sibling == "sister">>her<</widget>>
+<<widget "Him">><<if $sibling == "brother">>Him<<elseif $sibling == "sister">>Her<</widget>>
+<<widget "him">><<if $sibling == "brother">>him<<elseif $sibling == "sister">>her<</widget>>
+<<widget "Himself">><<if $sibling == "brother">>Himself<<elseif $sibling == "sister">>Herself<</widget>>
+<<widget "himself">><<if $sibling == "brother">>himself<<elseif $sibling == "sister">>herself<</widget>>
+
+<<widget "Hard">><<if $sibling == "brother">>Hard<<elseif $sibling == "sister">>Wet<</widget>>
+<<widget "hard">><<if $sibling == "brother">>hard<<elseif $sibling == "sister">>wet<</widget>>
+<<widget "Cock">><<if $sibling == "brother">>Cock<<elseif $sibling == "sister">>Pussy<</widget>>
+<<widget "cock">><<if $sibling == "brother">>cock<<elseif $sibling == "sister">>pussy<</widget>>
+<<widget "Dick">><<if $sibling == "brother">>Dick<<elseif $sibling == "sister">>Cunt<</widget>>
+<<widget "dick">><<if $sibling == "brother">>dick<<elseif $sibling == "sister">>cunt<</widget>>
+<<widget "Penis">><<if $sibling == "brother">>Penis<<elseif $sibling == "sister">>Vagina<</widget>>
+<<widget "penis">><<if $sibling == "brother">>penis<<elseif $sibling == "sister">>vagina<</widget>>
+<<widget "Shaft">><<if $sibling == "brother">>Shaft<<elseif $sibling == "sister">>Love hole<</widget>>
+<<widget "shaft">><<if $sibling == "brother">>shaft<<elseif $sibling == "sister">>love hole<</widget>>
+<<widget "Precum">><<if $sibling == "brother">>Precum<<elseif $sibling == "sister">>Lube<</widget>>
+<<widget "precum">><<if $sibling == "brother">>precum<<elseif $sibling == "sister">>lube<</widget>>
+<<widget "Cum">><<if $sibling == "brother">>Cum<<elseif $sibling == "sister">>Girl cum<</widget>>
+<<widget "cum">><<if $sibling == "brother">>cum<<elseif $sibling == "sister">>girl cum<</widget>>

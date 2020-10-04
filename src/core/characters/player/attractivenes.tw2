@@ -1,0 +1,63 @@
+::Attractivenes <0,1100>
+<<script>>
+	(function() {
+		const clothesCategories = ['clothes', 'lingerie', 'accessories', 'erotic_accessories'];
+		let attractiveness = variables().mainChar.attractiveness;
+
+		for (let i = 0; i < clothesCategories.length; i++) {
+			attractiveness += variables().mainChar.getAllure(clothesCategories[i]);
+		}
+
+		if (variables().mainChar.appearance.isCombed) {
+			attractiveness += 5;
+		}
+
+		switch(variables().mainChar.appearance.makeup) {
+			case "none":
+				attractiveness += 0;
+				break;
+			case "light":
+				attractiveness += 5;
+				break;
+			case "tangible":
+				attractiveness += 8;
+				break;
+			case "bright":
+				attractiveness += 10;
+				break;
+			default:
+				alert('unknown case!');
+		}
+
+
+		if (variables().mainChar.appearance.head.lips.color !== 'none') {
+			attractiveness += 4;
+		}
+
+		if (variables().mainChar.cleanliness < 30) {
+			attractiveness -= 10;
+		} else if (variables().mainChar.cleanliness >= 30 && variables().mainChar.cleanliness < 60) {
+			attractiveness -= 5;
+		}
+
+		if (variables().mainChar.appearance.teethBrushed == true) {
+			attractiveness += 5;
+		} else {
+			attractiveness -= 2;
+		}
+
+		if (variables().mainChar.menstruation.isProtected != true && variables().mainChar.menstruation.day >= 15) {
+			attractiveness -= 10;
+		}
+
+		if (variables().mainChar.eroticLook.intimateHaircut == 'shaved') {
+			attractiveness += 2;
+		} else if (variables().mainChar.eroticLook.intimateHaircut = 'stubble') {
+			attractiveness += 1;
+		} else if (variables().mainChar.eroticLook.intimateHaircut = 'hairy') {
+			attractiveness += 0;
+		}
+
+		$(output).wiki('Attractiveness: ' + attractiveness);
+	})();
+<</script>>

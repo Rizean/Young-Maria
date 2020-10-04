@@ -1,0 +1,9 @@
+::Comb yourself [nobr] <1600,1480>
+@@.image-wrapper-w70p;
+	[img['pics/appearance/combing.jpg']]
+@@
+&emsp;You pick up the comb and brush through your hair. Your hair is now neatly brushed! <br />
+<br />
+@@.add; + combed hair @@ <<set $mainChar.appearance.isCombed = true>> <br />
+<br />
+[[Bathroom]]

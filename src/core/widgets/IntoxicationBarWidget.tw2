@@ -1,0 +1,4 @@
+::Intoxication bar widget [widget] <100,2500>
+<<widget "intoxicationBar">><<nobr>>
+<progress class="progressBar" @value="$mainChar.intoxication" @max="100"></progress>
+<</nobr>><</widget>>

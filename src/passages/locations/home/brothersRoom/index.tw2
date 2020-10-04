@@ -3,6 +3,7 @@ src/passages/locations/home/brothersRoom/brothersRoomSchedule.tw2
 src/passages/locations/home/brothersRoom/chatWithBrother.tw2
 src/passages/locations/home/brothersRoom/cleanRoom.tw2
 src/passages/locations/home/brothersRoom/nap.tw2
+src/passages/locations/home/brothersRoom/playBoyMagazine.tw2
 src/passages/locations/home/brothersRoom/playPS4.tw2
 src/passages/locations/home/brothersRoom/sleepWithBrother.tw2
 
@@ -22,6 +23,18 @@ You are in your [[brother's room->brothers room description]]
 		[[Get up->Brother room]]
 	@@
 <</if>>
+
+::brothers room description [nobr] <2300,320>
+@@.image-wrapper-w70p; <img src="pics/sibling/male/room.jpg" alt="sibling room" /> @@
+&emsp;Though your room is slightly bigger, your brother's is plenty big enough. The space is well lit with three large windows, only partially blocked by white blinds. <br />
+&emsp;In the center of the room against the wall there is a large <<if $mainChar.relationships.sibling < 15 && ($hour >= 0 && $hour < 8)>>double bed<<else>>[[double bed->Sleep in brother's bed][$minute += 1]]<</if>>, over which a lamp hangs. Around the bed are many [[shelves->View brother shelves][$minute += 1]]. <br />
+&emsp;To the left of the bed is a chest of [[drawers->View brother drawer][$minute += 1]] on which a small globe of the Earth stands. Just next to the drawers, set into the wall, is your brother's [[wardrobe->View brother wardrobe][$minute += 1]]. <br />
+&emsp;Opposite the bed is a desk with a chair which is where your brother does his work. <br />
+&emsp;To the left of the desk is a small sofa with a blanket and some cushions. Next to this is a low table that has another globe of the Earth on it and a soccer ball on one of the shelves. Lining the rest are a few [[books->View brother's books][$minute += 1]]. <br />
+&emsp;Also in your brother’s room there is large TV. Connected to this is a shiny PS4 with several well-known games littered on the floor nearby.
+<br />
+<br />
+[[Back->Brother room]]
 
 ::View brother shelves [nobr] <2780,300>
 <<if $mainChar.relationships.sibling < 20 && $sibling.currentLocation == $BROTHER_LOCATION_BROTHER_ROOM>>

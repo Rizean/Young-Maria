@@ -1,0 +1,19 @@
+::Creation hair [nobr] <1600,100>
+Hair color:
+<<listbox "$mainChar.appearance.head.hair.color" autoselect>>
+	<<optionsfrom $hairOptions>>
+<</listbox>>
+<br />
+Hair style:
+<<listbox "$mainChar.appearance.head.hair.style" autoselect>>
+	<<optionsfrom $hairStyles>>
+<</listbox>>
+<br />
+Hair length:
+<<listbox "$mainChar.appearance.head.hair.length" autoselect>>
+	<<optionsfrom $hairLengths>>
+<</listbox>>
+<br />
+<br />
+
+<<link "Back">><<set $mainChar.appearance.head.image = String.format('pics/appearance/face/' + $mainChar.appearance.head.hair.color + '/' + $mainChar.appearance.head.hair.length + '/' + $mainChar.appearance.head.hair.style + '/image.jpg')>><<goto "Edit appearance">><</link>>

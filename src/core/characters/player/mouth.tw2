@@ -1,0 +1,27 @@
+::Character mouth [system] <140,900>
+<<if $mainChar.sexStats.bj === 0>>
+	@@.image-wrapper-w50p;
+		[img['pics/appearance/mouth/chaste.jpg']]
+	@@
+<<elseif $mainChar.sexStats.bj >= 1 && $mainChar.sexStats.bj < 10>>
+	@@.image-wrapper-w50p;
+		[img['pics/appearance/mouth/inexperienced.jpg']]
+	@@
+<<elseif $mainChar.sexStats.bj >= 10 && $mainChar.sexStats.bj < 25>>
+	@@.image-wrapper-w50p;
+		[img['pics/appearance/mouth/somewhat_experienced.jpg']]
+	@@
+<<elseif $mainChar.sexStats.bj >= 25 && $mainChar.sexStats.bj < 40>>
+	@@.image-wrapper-w50p;
+		[img['pics/appearance/mouth/experienced.jpg']]
+	@@
+<<elseif $mainChar.sexStats.bj >= 40 && $mainChar.sexStats.bj < 70>>
+	@@.image-wrapper-w50p;
+		[img['pics/appearance/mouth/deepthroat.jpg']]
+	@@
+<<elseif $mainChar.sexStats.bj >= 70>>
+	@@.image-wrapper-w50p;
+		[img['pics/appearance/mouth/pro.jpg']]
+	@@
+<<endif>>
+<<back "Back">>

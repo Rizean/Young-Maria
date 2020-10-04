@@ -1,0 +1,274 @@
+::Basic Character class <300,500>
+<<script>>
+  // todo es6 class
+  window.BasicCharacter = function (config) {
+	  this.firstName = '';
+	  this.lastName = '';
+	  this.age = '';
+	  this.money = 100;
+	  this.corruption = 0;
+	  this.gender = '';
+	  this.beauty = 0;
+	  this.energy = 0;
+	  this.maxEnergy = 100;
+	  this.arousal = 0;
+	  this.intellect = 0;
+	  this.intoxication = 0;
+	  this.genitals = '';
+	  this.appearance = {
+		isBrushed: false,
+		image: '',
+		head: {
+		  image: '',
+		  hair: {
+			  color: '',
+			  length: '',
+			  style: '',
+			  modification: '',
+		  },
+		  eyes: {
+			  size: '',
+			  color: '',
+			  lashesSize: '',
+		  },
+		  lips: {
+			  size: '',
+			  color: ''
+		  },
+		  isWearingGlasses: false
+		},
+		chest: {
+		  size: 'B',
+		  image: '',
+		},
+		body: {
+		  type: 'normal',
+		  image: '',
+		}
+	  },
+
+	  Object.keys(config).forEach(function (pn) {
+		  this[pn] = clone(config[pn]);
+	  }, this);
+  };
+
+  BasicCharacter.prototype.clone = function () {
+	  return new BasicCharacter(this);
+  };
+
+  BasicCharacter.prototype.toJSON = function () {
+	  var ownData = {};
+
+	  Object.keys(this).forEach(function (pn) {
+		  ownData[pn] = clone(this[pn]);
+	  }, this);
+
+	  return JSON.reviveWrapper(
+	  	'new BasicCharacter($ReviveData$)', ownData
+	  );
+  };
+
+  BasicCharacter.prototype.setFirstName = function(firstName) {
+  	if (firstName) {
+		this.firstName = firstName;
+	}
+  };
+
+  BasicCharacter.prototype.getFirstName = function() {
+  	return this.firstName;
+  };
+
+  BasicCharacter.prototype.setLastName = function(lastName) {
+  	if (lastName) {
+		this.lastName = lastName;
+	}
+  };
+
+  BasicCharacter.prototype.getLastName = function() {
+  	return this.lastName;
+  };
+
+  BasicCharacter.prototype.setAge = function(age) {
+  	if (age > 0) {
+		this.age = age;
+	}
+  };
+
+  BasicCharacter.prototype.getAge = function() {
+  	return this.age;
+  };
+
+  BasicCharacter.prototype.increaseCorruption = function(value) {
+    if (value && value > 0) {
+		if ((this.corruption + value) > 100) {
+			this.corruption = 100;
+		} else {
+			this.corruption += value;
+		}
+	}
+  };
+
+  BasicCharacter.prototype.decreaseCorruption = function(value) {
+  	if (value && value > 0) {
+		if ((this.corruption - value) < 0) {
+			this.corruption = 0;
+		} else {
+			this.corruption -= value;
+		}
+	}
+  };
+
+  BasicCharacter.prototype.setCorruption = function(value) {
+  	if (value && value > 0) {
+		this.corruption = value;
+	}
+  }
+
+  BasicCharacter.prototype.getCorruption = function() {
+  	return this.corruption;
+  };
+
+  BasicCharacter.prototype.setGender = function(gender) {
+  	var availableGenders = [
+		variables().GENDER_MALE,
+		variables().GENDER_FEMALE,
+		variables().GENDER_TRANS
+	];
+
+	if (availableGenders.includes(gender)) {
+		this.gender = gender;
+	}
+  };
+
+  BasicCharacter.prototype.getGender = function() {
+  	return this.gender;
+  };
+
+  BasicCharacter.prototype.increaseBeauty = function(value) {
+    if (value && value > 0) {
+		this.beauty += value;
+	}
+  };
+
+  BasicCharacter.prototype.decreaseBeauty = function(value) {
+  	if (value && value > 0) {
+		this.beauty -= value;
+	}
+  }
+
+  BasicCharacter.prototype.getBeauty = function() {
+  	return this.beauty;
+  };
+
+  BasicCharacter.prototype.increaseEnergy = function(value) {
+	if ((this.energy + value) > this.maxEnergy) {
+		this.energy = this.maxEnergy;
+	}
+
+	this.energy += value;
+  };
+
+  BasicCharacter.prototype.decreaseEnergy = function(value) {
+  	if ((this.energy - value) < 0) {
+		this.energy = 0;
+	}
+
+	this.energy -= value;
+  };
+
+  BasicCharacter.prototype.setEnergy = function(value) {
+  	if (value > this.maxEnergy) {
+		this.energy = this.maxEnergy;
+	} else if (value < 0) {
+		this.energy = 0;
+	}
+
+	this.energy = energy;
+  };
+
+  BasicCharacter.prototype.getEnergy = function() {
+  	return this.energy;
+  };
+
+  BasicCharacter.prototype.increaseMaxEnergy = function(value) {
+  	this.maxEnergy += value;
+  }
+
+  BasicCharacter.prototype.decreaseMaxEnergy = function(value) {
+  	this.maxEnergy -= value;
+  };
+
+  BasicCharacter.prototype.getMaxEnergy = function() {
+  	return this.maxEnergy;
+  };
+
+  BasicCharacter.prototype.increaseArousal = function(value) {
+  	if ((this.arousal + value) > 100) {
+		this.arousal = 100;
+	}
+
+	this.arousal += arousal;
+  }
+
+  BasicCharacter.prototype.decreaseArousal = function(value) {
+  	if ((this.arousal - value) < 0) {
+		this.arousal = 0;
+	}
+
+	this.arousal -= value;
+  };
+
+  BasicCharacter.prototype.setArousal = function(value) {
+  	if (value && value >= 0) {
+	  	this.arousal = value || 0;
+	}
+  }
+
+  BasicCharacter.prototype.getArousal = function() {
+  	return this.arousal;
+  };
+
+  BasicCharacter.prototype.increaseIntellect = function(value) {
+  	if (value && value > 0) {
+		this.intellect += value;
+	}
+  }
+
+  BasicCharacter.prototype.decreaseIntellect = function(value) {
+  	if (value && value > 0) {
+		this.intellect -= value;
+	}
+  }
+
+  BasicCharacter.prototype.setIntellect = function(value) {
+  	this.intellect = value;
+  }
+
+  BasicCharacter.prototype.getIntellect = function() {
+  	return this.intellect;
+  };
+
+  BasicCharacter.prototype.increaseIntoxication = function(value) {
+  	if (value && value > 0) {
+		this.intoxication += value;
+	}
+  }
+
+  BasicCharacter.prototype.decreaseIntoxication = function(value) {
+  	if (value && value > 0) {
+		this.intoxication -= value;
+	}
+  }
+
+  BasicCharacter.prototype.setIntoxication = function(value) {
+  	this.intoxication = value;
+  }
+
+  BasicCharacter.prototype.getIntoxication = function() {
+  	return this.intoxication;
+  };
+
+  BasicCharacter.prototype.increaseRelationshipWithSibling = function(value) {
+  	this.relationships.sibling += value || 1;
+  }
+<</script>>

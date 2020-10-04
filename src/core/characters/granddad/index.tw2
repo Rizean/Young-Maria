@@ -1,0 +1,31 @@
+::StoryIncludes
+
+
+::Granddad schedule [nobr] <475,1126>
+<<if $hour < 7>>
+	<<set _granddadActivity = "sleeping">>
+	<<set $granddadSeeYou to 0>>
+<<elseif $hour >= 7 and $hour < 9>>
+	<<set _granddadActivity = "having breakfast">>
+	<<set $granddadSeeYou to random(1,15)>>
+<<elseif $hour >= 9 and $hour < 10>>
+	<<set _granddadActivity = "working in the barn">>
+	<<set $granddadSeeYou to random(1,10)>>
+<<elseif $hour >= 10 and $hour < 12>>
+	<<set _granddadActivity = "having a lunch">>
+	<<set $granddadSeeYou to random(1,15)>>
+<<elseif $hour >= 12 and $hour < 17>>
+	<<set _granddadActivity = "working in the garden">>
+	<<set $granddadSeeYou to random(1,12)>>
+<<elseif $hour >= 17 and $hour < 18>>
+	<<set _granddadActivity = "having a dinner">>
+	<<set $granddadSeeYou to random(1,15)>>
+<<elseif $hour >= 18 and $hour < 21>>
+	<<set _granddadActivity = "working in the barn">>
+	<<set $granddadSeeYou to random(1,10)>>
+<<elseif $hour >= 21>>
+	<<set _granddadActivity = "sleeping">>
+	<<set $granddadSeeYou to 0>>
+<<endif>>
+
+Your granddad is _granddadActivity right now.

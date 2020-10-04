@@ -1,0 +1,62 @@
+::Global variables <0,0>
+// constants
+<<set $GENDER_MALE = 'male' >>
+<<set $GENDER_FEMALE = 'female' >>
+<<set $GENDER_TRANS = 'trans' >>
+
+<<set $DEFAULT_WEIGHT = 60 >>
+<<set $DEFAULT_HEIGHT = 170 >>
+
+<<set $GENITALS_MALE = 'penis' >>
+<<set $GENITALS_FEMALE = 'vagina' >>
+<<set $GENITALS_HERMAPHRODITE = 'hermaphrodite' >>
+
+<<set $CHEST_AA = 'aa' >>
+<<set $CHEST_A = 'a' >>
+<<set $CHEST_B = 'b' >>
+<<set $CHEST_C = 'c' >>
+<<set $CHEST_D = 'd' >>
+<<set $CHEST_H = 'h' >>
+<<set $CHEST_I = 'i' >>
+<<set $CHEST_J = 'j' >>
+<<set $CHEST_K = 'k' >>
+
+<<set $BROTHER_LOCATION_BROTHER_ROOM = 'brother_room'>>
+<<set $BROTHER_LOCATION_LIVING_ROOM = 'living_room'>>
+<<set $BROTHER_LOCATION_YOUR_BEDROOM = 'your_bedroom'>>
+<<set $BROTHER_LOCATION_SHOWER = 'shower'>>
+<<set $BROTHER_LOCATION_KITCHEN = 'kitchen'>>
+<<set $BROTHER_LOCATION_SCHOOL = 'school'>>
+<<set $BROTHER_LOCATION_FOOTBALL_FIELD = 'football_field'>>
+
+<<set $SISTER_LOCATION_SISTER_ROOM = 'brother_room'>>
+<<set $SISTER_LOCATION_LIVING_ROOM = 'living_room'>>
+<<set $SISTER_LOCATION_YOUR_BEDROOM = 'your_bedroom'>>
+<<set $SISTER_LOCATION_SHOWER = 'shower'>>
+<<set $SISTER_LOCATION_KITCHEN = 'kitchen'>>
+<<set $SISTER_LOCATION_SCHOOL = 'school'>>
+<<set $SISTER_LOCATION_FOOTBALL_FIELD = 'football_field'>>
+
+// global variables
+<<set $hour = 8>>
+<<set $minute = 0>>
+<<set $day = 1>>
+<<set $dayCount = 1>>
+<<set $stashNeatness = 0>>
+<<set $stashCleaning = "None">>
+<<set $GFSoldPhotosPrices = []>>
+<<set $dateDay = 1>>
+<<set $dateMonth = "September">>
+<<set $clothesAllure = 0>>
+<<set $isBestialityReal = false>>
+<<set $emptyItem = {name: '', image: ''} >>
+<<set $brothersRoomCleaned = false>>
+<<set $bathroomDoorLocked = false>>
+<<set $webMessagesCounter = 0>>
+<<set $webMessagesTryingToReceiveDay = 0>>
+
+// version
+<<set $gameVersion = 600>>
+<<set $gameVersionDisplay = "6.0.0">>
+
+// bug fix

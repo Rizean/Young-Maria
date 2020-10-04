@@ -1,0 +1,97 @@
+::Date change widget [widget] <225,2551>
+<<widget "dateChangeWidget">><<nobr>>
+<<if $dayCount % 7 == 0>>
+	<<set $brothersRoomCleaned = false>>
+<<endif>>
+<<if $dateMonth == "September">>
+	<<if $dateDay == 30>>
+		<<set $dateMonth = "October">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "October">>
+	<<if $dateDay == 31>>
+		<<set $dateMonth = "November">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "November">>
+	<<if $dateDay == 30>>
+		<<set $dateMonth = "December">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "December">>
+	<<if $dateDay == 31>>
+		<<set $dateMonth = "January">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "January">>
+	<<if $dateDay == 31>>
+		<<set $dateMonth = "February">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "February">>
+	<<if $dateDay == 28>>
+		<<set $dateMonth = "March">>
+		<<set $dateDay = 1>>
+	<<elseif $dateDay > 28>>
+		<<set $dateDay = 28>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "March">>
+	<<if $dateDay == 31>>
+		<<set $dateMonth = "April">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "April">>
+	<<if $dateDay == 30>>
+		<<set $dateMonth = "May">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "May">>
+	<<if $dateDay == 31>>
+		<<set $dateMonth = "June">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "June">>
+	<<if $dateDay == 30>>
+		<<set $dateMonth = "July">>
+		<<set $dateDay = 1>>
+	<<elseif $dateDay == 6>>
+		<<set $dateDay += 1>>
+		<<set $mainChar.age += 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "July">>
+	<<if $dateDay == 31>>
+		<<set $dateMonth = "August">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<elseif $dateMonth == "August">>
+	<<if $dateDay == 31>>
+		<<set $dateMonth = "September">>
+		<<set $dateDay = 1>>
+	<<else>>
+		<<set $dateDay += 1>>
+	<<endif>>
+<<endif>>
+
+<</nobr>><</widget>>

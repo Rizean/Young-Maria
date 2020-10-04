@@ -1,0 +1,178 @@
+::StoryIncludes
+
+
+::Bar <3391,714>
+<<if $hour < 7 or $hour > 22>>A door on the sign read "Closed". Better come back at another time.
+<<else>><div class="default-image-wrapper"><img src="pics/citybar/Bar.jpg"></div>
+
+You walk through the front door. The smell of alcohol and excessive body spray fills your nose. In the background, you can faintly hear some pop music playing though it's mostly drowned out by loud conversations. You take a seat at the bar. The atmosphere in this place is... imperfectly perfect.
+"Yo, lady, need a drink?" the barman asks.
+
+[[Talk to bartender]]<<if $hour >= 21>>
+
+<hr>
+Bar games!
+Now in progress: [[DARTS]]
+<hr><<endif>>
+
+<<linkreplace "Order something">>Beer (6$) - <<if $mainChar.money >= 6>><<link "Order">><<set $mainChar.money -= 6>><<set $barDrinking = "Beer">><<goto "BarDrinking">><</link>><<else>>Not enough money<<endif>>
+Wine (8$) - <<if $mainChar.money >= 8>><<link "Order">><<set $mainChar.money -= 8>><<set $barDrinking = "Wine">><<goto "BarDrinking">><</link>><<else>>Not enough money<<endif>>
+Whiskey (15$) - <<if $mainChar.money >= 15>><<link "Order">><<set $mainChar.money -= 15>><<set $barDrinking = "Whiskey">><<goto "BarDrinking">><</link>><<else>>Not enough money<<endif>>
+Vodka (22$) - <<if $mainChar.money >= 22>><<link "Order">><<set $mainChar.money -= 22>><<set $barDrinking = "Vodka">><<goto "BarDrinking">><</link>><<else>>Not enough money<<endif>><</linkreplace>>
+
+[[Bar restroom]]
+<<endif>>
+[[Go out->living room]]
+
+::BarDrinking <3250,596>
+<<if $barDrinking == "Beer">><div class="default-image-wrapper"><img src="pics/citybar/Beer.jpg"></div>
+
+You are taking a deep sip of the golden liquid, admiring the sourness and the refreshing taste.
+<<set $mainChar.intoxication += 4>><<set $intoxicationHour = $hour>><<set $intoxicationMinute = $minute>>
+<<elseif $barDrinking == "Wine">><div class="default-image-wrapper"><img src="pics/citybar/Wine.jpg"></div>
+
+You drink a glass of wine with a slight sourness and a floral bouquet of aromas, feeling yourself a bit more frisky with every sip.
+<<set $mainChar.intoxication += 8>><<set $intoxicationHour = $hour>><<set $intoxicationMinute = $minute>>
+<<elseif $barDrinking == "Whiskey">><div class="default-image-wrapper"><img src="pics/citybar/Whiskey.jpg"></div>
+
+A hot wave with a refreshing aftertaste and a heavy bouquet of tastes feels like a tamed flame on your tongue. You truly love the taste of whiskey.
+<<set $mainChar.intoxication += 15>><<set $intoxicationHour = $hour>><<set $intoxicationMinute = $minute>>
+<<elseif $barDrinking == "Vodka">><div class="default-image-wrapper"><img src="pics/citybar/Vodka.jpg"></div>
+
+The first drops of Vodka burn your lips and tongue, leaving the soft wheat aftertaste. Your stomach aches in response, but you are sure that it's alright.
+<<set $mainChar.intoxication += 22>><<set $intoxicationHour = $hour>><<set $intoxicationMinute = $minute>>
+<<endif>>
+<<unset $barDrinking>>[[Back->Bar]]
+
+::Talk to bartender <3521,577>
+<div class="default-image-wrapper"><img src="pics/citybar/Bartender.jpg"></div>
+<<if $mainChar.intoxication < 30>><<set _event to either(1,2,3)>><<elseif $mainChar.intoxication >= 30 and $mainChar.intoxication < 60>><<set _event to either(1,2,3,4,5)>><<elseif $mainChar.intoxication >= 60>><<set _event to either(1,2,3,4,5,6,7,8)>><<endif>>
+<<if _event == 1>>"You know, Bartending isn't as easy as one might think. Sure, anyone can apply but it takes real skill to be great. Plus, you can only break so many glasses before they kick you to the curb... Trust me..."<<elseif _event == 2>>"Bartenders should get paid more. We deal with a lot of shit. Not to mention, we pratically act as therapists as well... You should hear some of the things people tell me!"<<elseif _event == 3>>"My ex-girlfriend loved bars, but didn't like me as a bartender... Doesn't make sense..."<<elseif _event == 4>>"Enjoying your drink? Do you want to try something else?"<<elseif _event == 5>>"Only a person with a strong stomach can mix beer and vodka. Trust me, only naturals can do this!"<<elseif _event == 6>>"Your cheeks are red, maybe you should call someone? Or did you want me to call an uber for you?"<<elseif _event == 7>>"Woah, be carefull! Don't fall from the chair!"<<elseif _event == 8>>"You have such a pretty smile. This is on the house."
+
+He pours you some strange liquid. It tastes like... sugar?..<<set $mainChar.intoxication += 3>><<set $intoxicationHour = $hour>><<set $intoxicationMinute = $minute>><<endif>>
+
+[[Back->Bar]]
+
+::Bar restroom <3688,572>
+<div class="default-image-wrapper"><img src="pics/citybar/BarWC.jpg"></div>
+
+You decide you need the loo. You head over to the restrooms. Which door do you choose?
+
+[[Men->BarWCMen]]|[[Women->BarWCWomen]]
+
+[[Back->Bar]]
+
+::BarWCMen <3801,455>
+You enter the men's restroom. The smell of urine fills your nose and you restrain from gagging.
+
+<div class="default-image-wrapper"><img src="pics/citybar/BarWCInside.jpg"></div>
+<<set _men to either(0,0,0,0,1,1,1,2,2,3)>>
+<<if _men == 0>>There is nobody here... Thank goodness.<<elseif _men == 1>>A lonely man stands by the sinks. He looks at you curiously but says nothing...<<elseif _men == 2>>There is a couple of men talking happily with one another. They're so engrossed in their conversation that they don't pay attention to you.<<elseif _men == 3>>A group of men whisper amongst themselves. As they pass you by on their way to the exit, they look at you with interest.<<endif>>
+
+<<set $minute += 2>>You go to the loo and then wash your hands.
+<<if $mainChar.corruption >= 60>>
+[[Enter the last cabin]]
+<<endif>>
+[[Back->Bar restroom]]
+
+::BarWCWomen <3800,677>
+You enter the women's restroom. It smells clean and fresh but also overpowered by the mixture of perfumes sprayed in the air.
+<div class="default-image-wrapper"><img src="pics/citybar/BarWCInside.jpg"></div>
+
+<<set $minute += 2>>You go to the loo and then wash your hands.
+
+[[Back->Bar restroom]]
+
+::Enter the last cabin <3936,443>
+<div class="default-image-wrapper"><img src="pics/citybar/BarWCInside.jpg"></div>
+
+Curiosity gets the better of you and you enter the last cabin, locking the door behind you. A quick glance around and you notice a hole in the wall. Above the hole is some writing; "$10 in exchange for some fun". Easy money for beer~
+
+<<if $hour < 7 or $hour > 22>>Sadly, the bar is closing.<<else>><<if $mainChar.energy >= 15>>[[Wait]]<<else>>You don't have enough energy!<<endif>><<endif>>
+
+[[Back->BarWCMen]]
+
+::Wait <3936,593>
+<<set _time to random(5,40)>><<set $minute += _time>>You sit on the toilet and wait. After some time, you hear a man next door. You knock at the wall and he... <<set _chance to either(true, false)>><<if _chance == false>>simply does his business before leaving. Bad luck.<<else>>takes out his wallet and slides a $10 through the hole! What follows is something less green and papery. Time to work~
+
+<div class="default-image-wrapper">[img[String.format("pics/citybar/BarGH" + random(1, 5) + ".jpg")]]</div>
+
+<p class="add">+$10</p> <p class="add">+1 Corruption</p> <p class="minus">-15 Energy</p><<set $mainChar.money += 10>><<set $mainChar.energy -= 15>><<set $mainChar.corruption += 1>><<HaveASexWidget "bj" "bar customer">><<endif>>
+
+<<if $hour < 7 or $hour > 22>>Sadly, the bar is closing.<<else>><<if $mainChar.energy >= 15>>[[Wait]]<<else>>You don't have enough energy!<<endif>><<endif>>
+
+[[Back->BarWCMen]]
+
+::DARTS <3371,449>
+<div class="default-image-wrapper"><img src="pics/citybar/BarGamesDarts.jpg"></div>
+
+You wander over to a dartboard. Next to it is a plaque with rules. They read as follows:
+1) Place a coin into the board and wait for it to light up.
+2) Throw a dart. You have 5 seconds to throw.
+3) Try to get the highest score.
+
+You put a coin into the little slot and shortly after the dartboard lights up. The board is ready for you to begin playing.
+
+(Instead of real aiming, you need to "calculate the trajectory". Remember, you only have 5 seconds to do this.)
+
+[[Start a game->Bar game field Darts]]
+
+[[Back->Bar]]
+
+::Bar game field Darts <3363,319>
+<div class="default-image-wrapper"><img src="pics/citybar/BarGamesDarts.jpg"></div>
+
+You are aiming...
+<<set $dartsFirstVariable to random(20,70)>><<set $dartsSecondVariable to random(20,70)>><<set $dartsRightAnswer = $dartsFirstVariable + $dartsSecondVariable>>
+<strong>$dartsFirstVariable + $dartsSecondVariable = </strong>
+<<textbox "$dartsAnswer" "" autofocus>>
+
+<<link "Throw!">>
+	<<if time() lt 5000>>
+		<<set $dartsInTime = true>>
+	<<else>>
+		<<set $dartsInTime = false>>
+	<<endif>>
+	<<goto "Bar game field2 Darts">>
+<</link>>
+
+[[Quit the game->Bar]]
+
+::Bar game field2 Darts <3516,311>
+<div class="default-image-wrapper"><img src="pics/citybar/BarGamesDarts.jpg"></div>
+<<if $dartsInTime == true>><<if $dartsRightAnswer == $dartsAnswer>>
+><strong><u><p class="add">Bull's eye!</p></u></strong>
+
+Those watching you applaud and cheer! Clearly, they're drunk but the support feels good.
+
+<p class="add">+1$</p><<set $mainChar.money += 1>>
+<<else>>
+><strong><u><p class="minus">You missed!</p></u></strong>
+
+A few drunk people around you are laughing cause you missed. That's not cool...
+
+<p class="minus">-1$</p><<set $mainChar.money -= 1>>
+<<endif>><<else>>
+><strong><u><p class="minus">You threw too late!</p></u></strong>
+
+Oof, you didn't throw in time. Now everyone around you is laughing at your failure. How embarrassing...
+
+<p class="minus">-1$</p><<set $mainChar.money -= 1>>
+<<endif>>
+Do you want another go?
+
+[[Yes->Bar game field Darts]]
+
+[[Quit the game->Bar]]
+
+
+
+<<link "try to run back into the light">>
+	<<if time() lt 5000>>
+		/% The player clicked the link in under 5s, so they escape %/
+		<<goto "Well lit passageway">>
+	<<else>>
+		/% Else, they're eaten by a grue %/
+		<<goto "Eaten by a grue">>
+	<</if>>
+<</link>>

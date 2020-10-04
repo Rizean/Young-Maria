@@ -1,0 +1,25 @@
+::Miss school part [nobr] <1201,980>
+<<set $mainChar.hasBeenAtSchool = true>>
+<<set $minute += 20>>
+&emsp;"Babyyy!" <br />
+&emsp;Oh, crap! It looks like you missed your classes! That's very, very bad. <br />
+&emsp;Your mom and dad spend nearly 3 hours explaining the importance of school. Not to mention why it's so crucial to study. <br />
+&emsp;After a long (very long) speech, your parents finally let you go. But you feel very bad about this situation... <br />
+<br /><<if $mainChar.relationships.dad >= 40 && $mainChar.corruption >= 40>>
+	&emsp;Your dad tells you to go his bedroom. You head there straight away not wanting to make this situation any worse. <br />
+	&emsp;You wait for your father. When he arrives, he closes the door behind him and marches over to you. He sits down on the bed and pulls you to him, bending you over his knees. <br />
+	&emsp;He strips you of your bottom clothing to bare your ass to him. Without warning, he then strikes a forceful hand across your ass cheek. <br />
+	<br />
+	@@.image-wrapper-w50p;
+	[img[String.format('pics/spanking' + random(1,5) + '.gif')]]
+	@@
+	<br />
+	&emsp;You feel a sharp sting on your backside which is followed by many many more. After a few minutes of constant spanking, you're sure your ass is bright red by now. <br />
+	&emsp;You can feel the pain when you stand and redress yourself. Your father says nothing as he leaves you to think on what happened. Though you didn't enjoy the lecture, the spanking... was more tolerable and maybe even pleasurable? <br />
+	<br />
+<<endif>>
+<p class="minus">-2 Corruption</p> <p class="minus">-2 relations with dad</p> <p class="minus">-2 relations with mom</p> <br />
+<<set $mainChar.corruption -= 2>>
+<<set $mainChar.relationships.dad -= 2>>
+<<set $mainChar.relationships.mom -= 2>>
+[[Back->living room]]
