@@ -1,0 +1,135 @@
+::Sleep with bro [nobr] <2380,0>
+<<if $mainChar.relationships.sibling < 15>>
+@@.bc-text;
+  Yo sis, I'm going to sleep. Get out of my bed. <br />
+  Don't you have your own room? <br />
+  <<if $mainChar.intoxication != 0>><<set $mainChar.intoxication = 0>><<endif>><<if $timeOfDay == "Day">><<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>><<if $day == 8>><<set $day = 1>><<endif>><<endif>><<set $hour = 8>><<set $minute = 0>><<set $mainChar.energy += $mainChar.maxEnergy>>
+@@
+	[[Get up->Brother room]]
+<<elseif $mainChar.relationships.sibling >= 15>>
+  <<goto "Sleep with brother">>
+<</if>>
+
+::Sleep with brother [nobr] <2880,0>
+<<set $hour = 8>>
+<<set $minute = 0>>
+<<set $day += 1>>
+<<set $dayCount += 1>>
+<<if settings.pregnancy == true>>
+	<<set $mainChar.pregnancy.isOnPills = false>>
+<<endif>>
+<<if settings.menstruation == true>>
+	<<if $mainChar.menstruation.day >= 18>>
+		<<set $mainChar.menstruation.day = 1>>
+	<<else>>
+		<<set $mainChar.menstruation.day += 1>>
+	<<endif>>
+<<endif>>
+<<set $mainChar.energy += $mainChar.maxEnergy>>
+<<if $mainChar.corruption >= 60 && $sibling.corruption >= 60>>
+	<<set _morningWoodChance to either(true,false,false)>>
+<<endif>>
+
+<<if $mainChar.corruption < 15 && $sibling.corruption < 15>>
+  @@.narrator;
+	&emsp;When your brother decided to go to bed, he lay down beside you. He tried not to invade your space but occasionally he would brush up against you. <br />
+  @@
+  8 a.m. <br />
+  @@.bc-text;
+  	Hey sis, time to get up!
+  @@
+  <br />
+  [[Get up->Brother room]]
+<<elseif $mainChar.corruption >= 15>>
+  &emsp;When your brother goes to bed, he accidentally wakes you... <br />
+  &emsp;As you doze off again, your mind wanders and you think about your... <br />
+  @@#sleep-with-brother-corruption-15-25;
+  	<<linkreplace "Continue to sleep">>
+		<<replace "#sleep-with-brother-corruption-15-25">>
+		  8 a.m. <br />
+		  @@.bc-text;
+			  Hey sis, time to get up!
+		  @@
+		  <br />
+		  [[Get up->Brother room]]
+		<</replace>>
+	<</linkreplace>> <br />
+  	<<linkreplace "Find out if brother is sleeping">>
+		<<replace "#sleep-with-brother-corruption-15-25">>
+		  @@.mc-text;
+		  	Hey bro, are you sleeping?
+		  @@
+		  <<set _randSleep = random(0, 1)>>
+		  <<if _randSleep == 0>>
+		  	No answer... <br />
+			Guess he is sleeping. <br />
+			[[Get up->Brother room]]
+		  <<elseif _randSleep == 1>>
+		  	@@.bc-text; No, I can’t fall asleep... @@
+			@@.mc-text; What are you thinking about? @@
+			@@.bc-text;
+			  Honestly, I think I stopped appreciating what I have... <br />
+			  I have a really good life, better than many at least... <br />
+			  Our parents are together and they care about me. Our family has a good, stable, financial position. <br />
+			  I have a lot of friends, most I'd consider best friends. They look out for me. <br />
+			  I love my hobbies and I'm good at them. <br />
+			  I have a great sister...
+			@@
+			@@.mc-text; Then what's the problem? @@
+			@@.bc-text;
+				The problem is that I've gotten bored of it all... <br />
+				My head is increasingly clogged up by the thought that all my actions are meaningless... <br />
+				Think about it. We, like millions of other people who lived before us, just sink into oblivion. In the end, are any of our actions meaningful? <br />
+				Things; hobbies, relationships, studies... <br />
+				All this is beginning to lose value to me...
+			@@
+			@@.mc-text;
+				Dude, you don't need to worry about that. <br />
+				Like you said, you have a great life. It doesn't matter that you're not changing history, you're free to live your life how you want to! <br />
+				You're right, we do sink into oblivion eventually, so why waste your time trying to be meaningful? <br />
+				Don't fret about the future or the past. Live in the present, enjoy your life that has been given to you. <br />
+				And be happy! <br />
+			@@
+			@@.bc-text;
+			  Yeah, I guess. Maybe you're right... <br />
+			  I'll try... <br />
+			  Thanks for the support, sis. Who knew you could be so smart?
+			@@
+			@@.mc-text;
+				Shut up, idiot. Now, let's get some sleep.
+			@@
+   		    <<set $mainChar.energy += $mainChar.maxEnergy>>
+			<br />
+			@@.narrator;
+				...
+			@@
+			8AM <br />
+			<<if _morningWoodChance == true>>
+				@@.narrator;
+					&emsp;You wake up and turn over. Your brother is still asleep but it would seem his body is not. Underneath the covers, a big bulge is raising the sheets. Clearly, your brother has no problems with morning wood.
+				@@
+				<br />
+				<<linkreplace "Help him">>
+					@@.image-wrapper-w70p;
+			[img[String.format('pics/BrotherMorningFuck' + random(1,4) + '.webp')]]<<HaveASexWidget "vaginal" "sibling">>
+					@@
+					@@.bc-text;
+						Oh, my! I love you~
+					@@
+					<br />
+					<<set $sibling.corruption += 1>>
+					<<set $mainChar.relationships.sibling += 1>>
+				<</linkreplace>>
+			<<else>>
+				@@.bc-text;
+					Hey sis, time to get up!
+				@@
+				<br />
+			<<endif>>
+			[[Get up->Brother room]]
+		  <</if>>
+		<</replace>>
+	<</linkreplace>> <br />
+	[[Get up->Brother room]]
+  @@
+<</if>>

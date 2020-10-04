@@ -1,0 +1,13 @@
+::Right Next Door [system] <5475,2650>
+<<set $isRightNextDoorRead = true>><div class="default-image-wrapper"><img src="pics/books/RightNextDoor.jpg"></div>
+
+&emsp;A single mom by day and ER nurse by night, Emma kissed her wild past goodbye to focus on raising her two young daughters. Unfortunately, nobody with kids and a night time job has the time to be chasing relationships or sexual desires. Juggling work, parenting and house chores is tricky but Emma is keeping it together... Mostly...
+&emsp;Single dad, Will Taylor, hauled his collection of concert T-shirts and carpentry tools to New Bedford, expecting to build a new life with his young son. A fresh start with great schools, good friends... and the hottest mom he's even seen living a mere ten yards from his front door.
+&emsp;From the very first time they touch, Emma and Will's connection is electric. Soon, stolen kisses and dirty texting aren't enough, they need adults-only time. And lots of it...
+
+~Several Hours Later~
+
+You tried but you knew you were loud. You're sure your parents heard... Something...
+<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+
+[[Go back->Smartphone]]

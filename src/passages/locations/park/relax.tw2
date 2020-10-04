@@ -1,0 +1,193 @@
+::Relax a little <3136,1471>
+You decide you want to relax a bit in the warm sun. You move to find a more secluded location and settle down on the grass with your bag by your side.
+
+<<set $hour += 1>><div class="default-image-wrapper"><img src="pics/pRelax.jpg"></div>
+
+With the sun on your body, you take a quick rest. Around you, the sounds of birds in the trees and children playing in the distance helps you to relax...
+<p class="add">+10 Energy</p><<set $mainChar.energy += 10>>
+<<if $mainChar.corruption > 40>>This place is so quiet... You bet nobody will notice if you [[set free an inner "beast"]]
+<<endif>>
+[[Go back->Park]]
+
+::set free an inner "beast" [nobr] <3126,1586>
+<<set _image to either(1,2,3,4)>>You look around to you make sure no-one is watching and remove your clothes. You place them close by, just in case. Then you move one hand down to your pussy lips and begin to tease them.
+
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/pMasturbation1.gif">
+    </div>
+    <<HaveASexWidget "masturbate" "self">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/pMasturbation2.gif">
+    </div>
+    <<HaveASexWidget "masturbate" "self">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/pMasturbation3.gif">
+    </div>
+    <<HaveASexWidget "masturbate" "self">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/pMasturbation4.gif">
+    </div>
+    <<HaveASexWidget "masturbate" "self">>
+<<endif>>
+<br />
+After a few seconds of rubbing your pussy lips, you take two fingers and stick them inside. With the cold air nipping at your nethers, the public space giving you the excitment of being caught at anytime, and your fingers pumping in and out you soon find yourself overwhelmed with pleasure. It isn't long before you cum... <br />
+What a dirty slut you are cumming in public like that... <br />
+<p class="add">+1 Corruption</p> <br />
+
+<<set $mainChar.corruption += 1>>
+<<set $minute += 20>>
+<<set _event to random(1, 3)>>
+
+<<if _event == 1>>
+    Suddenly you hear a twig snap. You turn to see a stranger jerking off behind a tree. With the devilish smile on his face, you have a feeling he's been watching you for a while. But now what? <br />
+    <br />
+    <<if $mainChar.corruption > 50>>
+        [[How about a quick blowjob, stud?]] <br />
+        [[Take your clothes and run away->Park]] <br />
+    <<else>>
+        [[Take your clothes and run away->Park]] <br />
+    <<endif>>
+<<endif>>
+<br />
+[[Go back->Park]]
+
+::How about a quick blowjob, stud? [nobr] <3250,1586>
+<<set $minute += 20>>
+<<if settings.nonConsent == true>>
+	<<set _event to either(1,2,3,4,5)>>
+<<else>>
+	<<set _event to either(1,2,3,4)>>
+<<endif>>
+
+<<if _event == 5>>&emsp;The guy approaches you and suddenly grabs your head, forcing you closer. He clamps a strong, callous hand over your mouth. <br />
+&emsp;"Don't fucking scream! Not a single sound, bitch!" <br />
+&emsp;The roughness of the man frightened you. You nod in understanding. <br />
+@@.image-wrapper-w50p;	[img[String.format('pics/ParkRape' + random(1,5) + '.gif')]]
+@@
+<br />
+&emsp;After he finishes, he straightens out his clothes and leaves you in his mess.
+&emsp;You stay where you are for a while you recover, trying not to sob. Once you've gathered some strength, you stand up and walk away on shaking legs. <br />
+
+<p class="add">+1 Corruption</p> <br /><<set $mainChar.corruption += 1>><<HaveASexWidget "rape" "stranger in the park">><br />
+<br />
+[[Back to main alley->Park]]
+<<else>>
+<<set _image to random(1, 4)>>
+
+&emsp;You curl one finger towards you as you say this, inviting the stranger to approach. He does so hesitantly and stops about one foot from you. <br />
+&emsp;You close the rest of the distance, get on your knees and take his cock in your hands. After a couple seconds of stroking his shaft, you open your mouth and envelope it around his hard dick. You bob your head up and down his length as your tongue darts around his shaft, coating it in your saliva. You slurp it up, enjoying the taste of this random stranger as he fucks your mouth. <br />
+
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/pBlowjob1.gif">
+    </div>
+    <<HaveASexWidget "bj" "stranger in the park">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/pBlowjob2.gif">
+    </div>
+    <<HaveASexWidget "bj" "stranger in the park">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/pBlowjob3.gif">
+    </div>
+    <<HaveASexWidget "bj" "stranger in the park">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/pBlowjob4.gif">
+    </div>
+    <<HaveASexWidget "bj" "stranger in the park">>
+<<endif>>
+
+<<set _event to random(1, 2)>>
+<<if _event == 1>>
+	&emsp;"God, this feels good, baby. But I want more." <br />
+    <br />
+    <<if $mainChar.corruption > 60>>
+        [[And you are still horny]] <br />
+    <<endif>>
+
+    [[Nope, not today~->Park]] <br />
+<<else>>
+    &emsp;Here, in the park on your knees before a total stranger, you hope no-one sees you... <br />
+    <p class="add">+1 Corruption</p> <br />
+
+    <<set $mainChar.corruption += 1>>
+    <br />
+    [['Swallow and say "bye-bye"'->Park]]
+<<endif>><<endif>>
+
+::And you are still horny [nobr] <3248,1696>
+<<set $minute += 30>>
+<<set _image to random(1, 4)>>&emsp;You remove the man from your mouth and stand up with a mischievous twinkle in your eye. The man takes this as a yes to wanting more and pushes you up against a tree. Your bare breasts rub against the bark, stimulating your erect nipples. <br />
+&emsp;He grabs your ass cheeks with one hand whilst his other guides his dick towards your entrance. Then, he slowly slides inside you. All your saliva on his dick makes it easy for him to penetrate you and you feel his thick cock pushing down your pussy canal. <br />
+&emsp;Over and over again, the man pulls out almost completely before pushing inside and eventually he begins to pick up the pace. Now the man fucks you hard, pumping in and out of your pussy. <br />
+&emsp;The mixture of the stranger inside you, your breasts rubbing against the tree and the cold air nipping at your clit causes you to reach yet another climax. As you cum, your pussy tightens around his cock and you hear the man grunt with satisfaction and slow down. It seems he's ready to cum too.
+
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/pSex1.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "stranger in the park">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/pSex2.gif">
+    </div>
+    <<HaveASexWidget "anal" "stranger in the park">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/pSex3.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "stranger in the park">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/pSex4.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "stranger in the park">>
+<<endif>>
+<br />
+&emsp;Oh god... Please don't cum inside... <br />
+<p class="add">+1 Corruption</p> <br />
+<br />
+<<set $mainChar.corruption += 1>>
+<<set _event to random(1, 2)>>
+
+<<if _event == 1>>
+    &emsp;The man pulls out and you sigh with relief but then you hear another person's feet crunching on the ground. "Hey dude, come fuck this chick with me!" [[Oh no...->Fuck with 2 guys in the park]]
+<<else>>
+    &emsp;The man grunts but doesn't pull out. Too late you realise he's cumming inside your womb. His hot sticky semen fills you up. The thought of being cummed in by a total strange is... hot. [[Guess it's time to leave now->Park]]
+<<endif>>
+
+::Fuck with 2 guys in the park [nobr] <3236,1801>
+<<set $minute += 40>>&emsp;You turn to see another man coming closer to you. It seems these two were already hanging out in the park together since they are friendly towards each other. <br />
+&emsp;You feel the first man's hands on your waist and he spins you around. He grabs you by the cheeks and pulls you close to him before crashing his lips down on yours. <br />
+&emsp;As the kiss deepens, you can feel the mans hands roam down your body and stop on your breasts where they twist and pull on your sensititve nipples. It's a little painful but also you feel yourself becoming more aroused when he tugs. <br />
+&emsp;Then you feel another set of hands on your ass, massaging your cheeks before spreading them apart. It isn't long until you feel a hard cock slip past your pussy walls and thrust itself down your canal.
+<br />
+&emsp;This cock is thicker than the first strangers and it's a tighter fit. Of course, this only increases your pleasure as you feel his large dick scraping against your walls. <br />
+<br />
+
+<div class="default-image-wrapper">
+    <img src="pics/pDoubleSex.gif">
+</div>
+
+<<HaveASexWidget "vaginal" "strangers in the park">>
+<<HaveASexWidget "handjob" "strangers in the park">>
+<<HaveASexWidget "threesome" "strangers in the park">>
+
+&emsp;The first stranger removes himself from your lips and pushes your head down towards his cock. You take it eagerly in your mouth like an obediant little slut and soon suck his whole length using your tongue as extra stimulation. You manage to take a lot of his cock inside your mouth almost to the base. <br />
+&emsp;A few minutes pass where both men pick up speed; the man behind you ramming into your pussy with ferocious speed whilst the man you're currently sucking off is pushing you further down his shaft causing you to gag slightly. <br />
+&emsp;As you're spitroasted vigorously, you cum once more. The moans and clenching of your pussy encourages the men to finish up. The man behind you shoves as far as he can inside to unload his hot stream of cum. <br />
+&emsp;The man in front keeps you from removing your mouth and cums; his sticky semen shotting down your throat. You swallow as much as you can whilst trying not to choke. <br />
+&emsp;"Damn that was incredible! We should come to the park more often!" The first stranger says, finally removing his cock from your mouth. <br />
+&emsp;The other stranger hums in agreement and gives you a slap on your ass. The two men then both give you one final squeeze and slap before leaving you with their cum seeping out of two of your three orifices. <br />
+<p class="add">+1 Corruption</p> <br />
+
+<<set $mainChar.corruption += 1>>
+
+<br />
+[[Time to get dressed and leave this area->Park]]

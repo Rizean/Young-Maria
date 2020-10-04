@@ -1,0 +1,9 @@
+::look out the window bathroom [nobr] <1480,1480>
+@@.image-wrapper-w70p;
+	[img['pics/bathroom/look_out_the_window.jpg']]
+@@
+<<set $minute += 1>>
+&emsp;You look out the window but you don’t see anything special.
+<br />
+<br />
+[[Back->Bathroom]]

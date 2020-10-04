@@ -1,0 +1,14 @@
+::Daddy's Girl [system] <4725,2650>
+<<set $isDaddysGirlRead = true>><div class="default-image-wrapper"><img src="pics/BookDG.jpg"></div>
+
+&emsp;Stella, an orphan at a very young age, was raised on a country estate by an eccentric yet lovable Grandmother. During her traumatic and lonely childhood, she only ever had a motherly figure. An absentee father figure filled her imagination but, as she grew older, those thoughts about protection and nuturing became sexual fantasies.
+&emsp;When she became a mature yet wild woman, she finally stumbled upon the perfect match that could fill that void. Together, they embarked on a taboo-shattering, uninhibited, and intensley erotic journey with a man she only ever referred to as Daddy...
+&emsp;Their role-playing fantasies walk the line between the transgressive and the sensual, continually challenging the reader's ideas of what society considers the norm for relationships.
+&emsp;The beauty of the narrator's voice is portrayed through the simplicity and poetry of Stella's observations as she faces the adventurous life she only ever dreamed of...
+
+~Several Hours Later~
+
+You find yourself breathing deeply. You loved it...
+<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+
+[[Go back->Smartphone]]

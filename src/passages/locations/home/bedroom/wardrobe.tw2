@@ -1,0 +1,153 @@
+::Wardrobe [nobr system] <800,1100>
+<div class="default-image-wrapper">
+    <img src="pics/wardrobe.jpg">
+</div>
+<table width="100%" align="center" border="5" class="wardrobe-clothes">
+    <caption>Clothes: </caption>
+    <thead>
+        <tr>
+            <th>Head</th>
+            <th>Body</th>
+            <th>Legs</th>
+            <th>Shoes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+			<<if $mainChar.look.clothes.head.name === ''>>
+            	<td align="center">[[-->Head Clothes]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.clothes.head.name->Head Clothes]]</td>
+			<<endif>>
+			<<if $mainChar.look.clothes.body.name === ''>>
+            	<td align="center">[[-->Body Clothes]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.clothes.body.name->Body Clothes]]</td>
+			<<endif>>
+			<<if $mainChar.look.clothes.legs.name === ''>>
+            	<td align="center">[[-->Legs Clothes]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.clothes.legs.name->Legs Clothes]]</td>
+			<<endif>>
+			<<if $mainChar.look.clothes.shoes.name === ''>>
+            	<td align="center">[[-->Shoes Clothes]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.clothes.shoes.name->Shoes Clothes]]</td>
+			<<endif>>
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<table width="100%" align="center" border="5" class="wardrobe-clothes">
+    <caption>Lingerie: </caption>
+    <thead>
+        <tr>
+            <th>Bra</th>
+            <th>Panties</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+			<<if $mainChar.look.lingerie.bra.name === ''>>
+            	<td align="center">[[-->Bra Lingerie Clothes]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.lingerie.bra.name->Bra Lingerie Clothes]]</td>
+			<<endif>>
+			<<if $mainChar.look.lingerie.panties.name === ''>>
+            	<td align="center">[[-->Panties Lingerie Clothes]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.lingerie.panties.name->Panties Lingerie Clothes]]</td>
+			<<endif>>
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<table width="100%" align="center" border="5" class="wardrobe-clothes">
+    <caption>Accessories: </caption>
+    <thead>
+        <tr>
+            <th>Neck</th>
+            <th>Fingers</th>
+            <th>Arms</th>
+            <th>Ears</th>
+            <th>Eyes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+			<<if $mainChar.look.accessories.neck.name === ''>>
+            	<td align="center">[[-->Neck Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.accessories.neck.name->Neck Accessories]]</td>
+			<<endif>>
+			<<if $mainChar.look.accessories.finger.name === ''>>
+            	<td align="center">[[-->Finger Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.accessories.finger.name->Finger Accessories]]</td>
+			<<endif>>
+			<<if $mainChar.look.accessories.arms.name === ''>>
+            	<td align="center">[[-->Arms Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.accessories.arms.name->Arms Accessories]]</td>
+			<<endif>>
+			<<if $mainChar.look.accessories.ears.name === ''>>
+            	<td align="center">[[-->Ears Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.accessories.ears.name->Ears Accessories]]</td>
+			<<endif>>
+			<<if $mainChar.look.accessories.eyes.name === ''>>
+            	<td align="center">[[-->Eyes Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.accessories.eyes.name->Eyes Accessories]]</td>
+			<<endif>>
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<table width="100%" align="center" border="5" class="wardrobe-clothes">
+    <caption>Erotic accessories: </caption>
+    <thead>
+        <tr>
+            <th>Neck</th>
+            <th>Front</th>
+            <th>Back</th>
+            <th>Mouth</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+			<<if $mainChar.look.erotic_accessories.neck.name === ''>>
+            	<td align="center">[[-->Neck Erotic Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.erotic_accessories.neck.name->Neck Erotic Accessories]]</td>
+			<<endif>>
+			<<if $mainChar.look.erotic_accessories.front.name === ''>>
+            	<td align="center">[[-->Front Erotic Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.erotic_accessories.front.name->Front Erotic Accessories]]</td>
+			<<endif>>
+			<<if $mainChar.look.erotic_accessories.back.name === ''>>
+            	<td align="center">[[-->Back Erotic Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.erotic_accessories.back.name->Back Erotic Accessories]]</td>
+			<<endif>>
+			<<if $mainChar.look.erotic_accessories.mouth.name === ''>>
+            	<td align="center">[[-->Mouth Erotic Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.erotic_accessories.mouth.name->Mouth Erotic Accessories]]</td>
+			<<endif>>
+			<<if $mainChar.look.erotic_accessories.body.name === ''>>
+            	<td align="center">[[-->Body Erotic Accessories]]</td>
+			<<else>>
+            	<td align="center">[[$mainChar.look.erotic_accessories.body.name->Body Erotic Accessories]]</td>
+			<<endif>>
+        </tr>
+    </tbody>
+</table>
+<br />
+
+[[Back->Bedroom]]

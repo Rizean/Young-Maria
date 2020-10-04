@@ -1,0 +1,37 @@
+::StoryIncludes
+src/passages/locations/farm/ralf.tw2
+
+
+::Tell them you are dying to see that farm <300,1146>
+<<set $mainChar.energy -= 70>><<set $hour = 20>><<set $minute = 0>>&emsp;Your parents agree and you soon all bundle into the car. City buildings soon turn to trees as you make your way into lushious country.
+
+<div class="default-image-wrapper"><img src="pics/Farm.jpg"></div>
+
+&emsp;As you get out of the car, you are approached by an elderly man. He introduces himself as your Grandfather and complains to your parents that he hasn't seen them in ages. When he turns to you, he mentions you've grown up a lot since he saw the baby pictures of you.
+&emsp;A large dog suddenly comes barreling down the path barely stopping as it reaches you. You reach down to pet it and your Grandfather says his name is Ralf. By his friendly nature you can tell he's very sweet but perhaps a little too friendly?
+
+<div class="default-image-wrapper"><img src="pics/Ralf.jpg"></div>
+
+&emsp;You spend all day at the farm. You walk around its many acres followed by Ralf who occasionally persuades you to play with him. There is also a lake nearby that you and your sibling take a swim in as your parents watch.
+&emsp;When it became too dark to do anything else, you <<link "returned home">><<set $hour += 1>><<goto "living room">><</link>>, totally exhausted, but happy :3
+
+<strong>Farm</strong> is now available!<<set $isFarmAvailable = true>>
+
+::Farm <300,1280>
+<div class="default-image-wrapper"><img src="pics/Farm.jpg"></div>
+
+<<include "Granddad schedule">>
+
+<<if $mainChar.energy >= 10>>[[Play with Ralf]]<<if $mainChar.relationships.ralfDog >= 10>>|[[Play with Ralf outside]]<<endif>><<else>>You are too tired to play with Ralf<<endif>><<if $farm == true>>
+[[Go to barn]]<<if $mainChar.corruption >= 90>>
+[[Pig stall]]<<endif>><<endif>>
+
+
+<<if $mainChar.money >= 3>><<link "Go home - 3$">><<set $hour += 1>><<set $mainChar.money -= 3>><<goto "living room">><</link>><<else>><<link "Go home - 3$ (Ask your Grandfather to give you some money for the ride...)">><<set $hour += 1>><<goto "living room">><</link>><<endif>>
+
+::Farm Into [nobr] <1196,754>
+<<if $day == 7 and $isFarmAvailable != true>>
+	&emsp;Your parents are talking about spending the day in the countryside. They say your great grandfather lives on a large farm there. <br />
+	&emsp;As it's been a while since you last saw him, they ask you if you'd like to go visit? <br /> <br />
+	[[Tell them you are dying to see that farm]] <br />
+<<endif>>

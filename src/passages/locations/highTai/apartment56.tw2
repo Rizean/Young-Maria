@@ -1,0 +1,243 @@
+::Apartment №56 (Your Stash) <3130,2036>
+<<if $isFirstStashVisit != false>><<set $isFirstStashVisit = false>>&emsp;With your new key in hand you make your way to your apartment 56. As you approach the door, you put in your key and unlock it. Then you slowly push the door open...
+
+HOLY SHIT!!
+
+<div class="default-image-wrapper"><img src="pics/stashRuined.jpg"></div>
+
+&emsp;You look around the place; everything is broken; everything is damaged; everything is fucked up! You scout all the rooms and find that a total of three windows are broken. You think it might be a mixture of strong winds, birds and torrential rain. Well, there's no point in buying another apartment, you think, especially if they're going to be the same as this one... Or worse...
+&emsp;While you're thinking, a piece of curtain flapping in the wind catches your eye. You stride over to it and rip the material. It easily splits in your hands but the material itself is fairly durable. You have an idea...
+&emsp;You work your way around the apartment, dusting any surfaces you can with the makeshift cloth. In the living room area you spy a TV set. You go over to it and notice that it's broken... Damn... Underneath you spot a DVD player. You press the button and the little display lights up. It works!
+&emsp;You go over to a tiled part of the apartment, which must be the kitchen. You open one of the untouched cupboards. There's no food and therefore no insects. Good. You open another cupboard and let out a deep sigh as you find an array of cleaning products inside a bucket! You silently thank the old tenants for leaving them behind.
+&emsp;In another corner of the apartment you notice the wallpaper coming off the wall and there's mold collecting behind it. You try not to gag. God, this place needs work...
+&emsp;After you spend hours cleaning the floor and walls as much as you can. You already begin to notice a difference though you have a long way to go. You also realise you'll have to ask for Ron's help with the TV and some of the other broken furniture. But hey, you've made a great start!
+
++12 Stash neatness<<set $stashNeatness += 12>><<set $hour += 6>>
+
+[[Look around->Apartment №56 (Your Stash)]]
+<<elseif $isFirstStashVisit == false>>This is your secret place. The Stash.
+
+<div class="default-image-wrapper"><img src="pics/stash.jpg"></div>
+
+[[Description]]<<if $stashNeatness == 100>>
+[[Improve Stash]]<<endif>>
+
+<<nobr>>
+<<if $stashNeatness != 100>>
+This place still needs some work... ($stashNeatness/100) -
+	<<if $mainChar.energy < 60>>
+		You don't have enough energy!
+	<<else>>
+		[[Clean it]]
+	<<endif>>
+<<endif>>
+
+<<if $stashNeatness == 100>>
+	<<if $inventory.grocery['Shampoo'].count > 0>>
+		[[Take a bath]]
+	<<else>>
+		You could take a bath. But you've run out of shampoo!
+	<<endif>>
+<<endif>><br />
+
+<<if $hour >= 20>>
+	/* 50% chance of dreaming at night in stash - higher chance of sexual stuff, since you're a rebellious girl */
+	<<set _willDream to either(1,2,3)>>
+	<<if _willDream == 1 and $mainChar.corruption >= 90>>
+		<<set $sleepAt = "stash">>
+		[[Sleep->Dreams]] <br />
+	<<else>>
+		[[Sleep->Sleep at Stash]] <br />
+	<<endif>>
+<<else>>
+	You don't want to sleep.
+<<endif>>
+<</nobr>>
+
+You have $inventory.grocery['Shampoo'].count uses of a shampoo.
+
+[[Go out->High Tai]]<<endif>>
+
+::Description <3281,1954>
+&emsp;You look at your Stash. <<if $stashCleanFirst == true>>&emsp;The windows were fixed by Ron with clean glass and good, new frames.<<else>>&emsp;The windows are broken and it's chilly in here. You should fix it. <<endif>><<if $stashCleanSecond == true>>&emsp;The different wallpapers really bring this place to life. And the ceiling<<if $isFlowerOwned == true>> with a lovely flower on it<<endif>> is neat, too. You did great work! <<else>>&emsp;The walls are dusty and covered in spots of mould. Gross. <<endif>><<if $stashCleanThird == true>>&emsp;As you walk through all the rooms, you admire the house and the cleanliness of it now. <<if $isCarpetOwned == true>>&emsp;The big rug you bought lately feels comfortable under your feet. <<endif>><<else>>&emsp;As you walk through all rooms, you feel disgusting about all this mould and dust. It needs a lot of work... <<endif>><<if $stashCleanFourth == true>>&emsp;There is a TV set and a DVD in the living room. They look and work like brand new models, thanks to Ron.<<else>>&emsp;There is a TV set and a DVD in the living room but the TV set is broken. Perhaps you should ask somebody to fix it...<<endif>><<if $stashCleanFirst == true && $stashCleanSecond == true && $stashCleanThird == true && $stashCleanFourth == true>>
+
+&emsp;You did a great job and now have a good looking place! Hooray!<<endif>>
+
+[[Back->Apartment №56 (Your Stash)]]
+
+::Clean it <3270,2093>
+&emsp;Well, it's time to tackle the monstrosity that is your apartment...
+
+<div class="default-image-wrapper"><img src="pics/cleaning.jpg"></div>
+
+<<if $stashCleaning == "None">><<set $stashCleaning = "First">><<set $stashCleanFirst = true>>&emsp;You think through what you need to do. First of all, you need to fix the windows but where do you begin? Well, you can't do it alone, that much is obvious.
+&emsp;You open your door to leave the apartment but are suddenly blocked. You look up to see Ron stood with a toolbox in hand. He gives you a shrug. "Big Six saw you entering this apartment... Thought I'd see if you needed any help."
+&emsp;You thank Ron and let him inside. Together, you spend a lot of time fixing the windows. Ron replaces the windows with some new glass he bought and you work on repainting the sills and frames when he's done...
+&emsp;A few hours later you are sitting in Ron's apartment chatting happily with him as you both drink some tea. "Well, your place is ruined. It's bad luck really. Mr. Key never really knows the state in which the apartments are in when he gives you the key... But hey, you need any more help, you let me know. I like to be useful."
+<p class="minus">-60 Energy</p> <p class="add">+24 Stash neatness</p><<set $stashNeatness += 24>><<set $hour += 5>><<set $mainChar.energy -= 60>>
+
+[[You thank him and return to your apartment.->Apartment №56 (Your Stash)]]
+<<elseif $stashCleaning == "First">><<set $stashCleaning = "Second">><<set $stashCleanSecond = true>>&emsp;You look at the new windows and smile. That's one job done. Your smile fades when you see the rotting wallpaper. That's definitely the next job.
+&emsp;You go out and buy some cheap wallpaper, paste, and paint. When you return you begin ripping off the old wallpaper, cleaning the dirt from underneath exposed parts and sticking the new wallpaper on top.
+&emsp;You make your way through every room repeating the process where needed. Some of the areas could be left for a simple clean another time. It takes a lot of work and by the end of it all, you're absolutely exhausted. At least it looks better than before...
+<p class="minus">-60 Energy</p> <p class="add">+20 Stash neatness</p><<set $stashNeatness += 20>><<set $hour += 8>><<set $mainChar.energy -= 60>>
+
+[[You clean yourself up a little and take a quick break.->Apartment №56 (Your Stash)]]
+<<elseif $stashCleaning == "Second">><<set $stashCleaning = "Third">><<set $stashCleanThird = true>>&emsp;With new windows and wallpaper, the next thing would be to clean the place. You grab a bucket and fill it with water, then grab a piece of cloth, some Fairy liquid and you're off!
+&emsp;A LOT of time passes. You didn't realise how much there was to do until it's all done and your whole body aches. Not to mention that you've exhausted yourself. But hey, the place looks much better now!
+<p class="minus">-60 Energy</p> <p class="add">+26 Stash neatness</p><<set $stashNeatness += 26>><<set $hour += 9>><<set $mainChar.energy -= 60>>
+
+[[Time for a break, you've definately earnt it!->Apartment №56 (Your Stash)]]
+<<elseif $stashCleaning == "Third">><<set $stashCleaning = "Fourth">><<set $stashCleanFourth = true>>&emsp;You look around the apartment. Most of the work you could do alone is done. Unfortunately, the things that are left are more complicated for you to do alone; damaged wires, icky plumbing, moving and fixing furniture, the TV... Oh god...
+&emsp;A knock at the door pulls you out of your downhill mentality. You open it to see Ron stood. "Hey, guess who found you some new and cheap furniture?!" He says with a smirk.
+&emsp;Oh thank goodness! You invite him in and you both get to work. Whilst Ron fixes a lot of the electrics and plumbing, you meet with some of the guys who bring in your new furniture. You recognise some of them from the big apartment a few floors down. After several hours of sorting everything out, the men leave you and Ron to deal with the last few things.
+&emsp;Once it's all done, you stand with Ron and look at the new and improved apartment; your stash. Is this really the end of possibly the hardest work you've ever done?? Yes, yes it is...
+&emsp;Damn... It looks good!
+
+<p class="minus">-60 Energy</p> <p class="add">+18 Stash neatness</p><<set $stashNeatness += 18>><<set $hour += 9>><<set $mainChar.energy -= 60>>
+
+&emsp;"Well, we did it..." you say.
+&emsp;Ron puts an arm around your shoulder and gives you friendly and supportive squeeze. "I've got a good bottle of whiskey. Wanna come over?"
+
+[[Let's go to his place!]]<<endif>>
+
+::Let's go to his place! <3393,2096>
+&emsp;You both go to Ron's apartment. Soon you're drinking, laughing and watching some random show on the TV.
+&emsp;"...little wheel, down the road, Jacky. Is that a joke to you? Noo, bro, not a jo-"
+&emsp;You tune out. They have some shit shows nowadays...
+&emsp;As your focus returns to Ron, you notice he's finishing his thrid bottle of beer already. Coupled with the whiskey he had earlier, you wonder how he can still act so sober.
+&emsp;You aren't aware you are staring until Ron's face blocks your vision. "You okay, pretty lady?"
+&emsp;"Sure... I'm just very grateful for all the help." You smile at him.
+&emsp;Ron shrugs. "Ah, it's no biggie. I can never refuse such an attractive girl."
+&emsp;Ah, there's his drunk side. Yet still very sweet...
+&emsp;Whether it's the alcohol in your system or the guilt eating away at you for letting him help you without a reward, you lift your leg and straddle him. You place each of your hands either side of his face.
+
+[[You want to thank him in a more intimate way...]]
+
+::You want to thank him in a more intimate way... [nobr] <3390,2226>
+&emsp;You lean down and plant your lips on his. The kiss is deep and slow but Ron soon breaks away. "We shouldn't be doing this... I'm much older than you and it doesn't feel right..." he says. <br />
+&emsp;You shake your head. "This is your reward so shut up and kiss me!" You crash your lips on his before he has a chance to refuse. As the kiss deepens and your tongues fight for dominance, you feel his dick harden under both your clothes and his. <br />
+&emsp;After a few minutes of making out, he stands up from the sofa bringing you with him. You wrap your legs around him as he takes you out onto a little balcony area. <br />
+&emsp;Once there, he drops you to the floor and pushes you onto your knees. Then he unzips his pants and reveals his erect cock. Without even thinking, you take his dick in your mouth and stimulate it using your tongue for extra points. <br />
+&emsp;After a couple minutes of gagging and slurping, Ron removes his dick and pulls you to your feet. Then he turns you around and bends you over. <br /> <br />
+
+<div class="default-image-wrapper">
+    <img src="pics/thankRon.gif">
+</div>
+<<HaveASexWidget "vaginal" "Ron">>
+
+&emsp;He tears off your clothes and positions himself by your entrance. Before long he pushes his dick inside your pussy. It's tight but that only adds to the pleasure as you can feel him scraping along your walls. <br />
+&emsp;Soon, Ron picks up the pace, fucking you with an animalistic lust. The speed causes you to cum quickly and you clench around his cock. Ron can't hold it much longer and pulls out to cum onto your butt. <br />
+&emsp;You can feel his sticky semen leaking down your ass crack where some of it drips into your ass. What a dirty slut you are... <br />
+&emsp;"Damn... That was SO goo-" You didn't let him finish his sentence as you spun and attaked him with a loving kiss. <br />
+
+<<link "For the next few hours you lie in his bed; cuddling and talking about everything...">>
+    <<set $hour += 8>>
+    <<set $mainChar.energy += $mainChar.maxEnergy>>
+    <<goto "Apartment №56 (Your Stash)">>
+<</link>>
+
+::Sleep at Stash <3240,2360>
+<<if $mainChar.intoxication != 0>><<set $mainChar.intoxication = 0>><<endif>><<if $timeOfDay == "Day">><<set $day += 1>><<set $dayCount += 1>><<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>><<dateChangeWidget>><<endif>><<if $day == 8>><<set $day = 1>><<endif>><div class="default-image-wrapper"><img src="pics/stashSleep.jpg"></div>
+<<set $mainChar.appearance.isCombed = false>>
+<<set $mainChar.appearance.teethBrushed = false>>
+
+You slept until your smartphone alarm wakes you up at 10AM.<<if $mainChar.look.erotic_accessories.back.name == "Butt plug">> Your butt plug feels so good~<<elseif $mainChar.look.erotic_accessories.back.name == "Tail butt plug">> Your tail butt plug feels so good~<<endif>>
+<<if $mainChar.look.erotic_accessories.back.name == "Butt plug" or $mainChar.look.erotic_accessories.back.name == "Tail butt plug">><p class="add">+1 Corruption</p>  <<set $mainChar.corruption += 1>><<endif>><<set $hour = 10>><<set $minute = 0>><p class="add">+100 Energy</p><<set $mainChar.energy += $mainChar.maxEnergy>>
+
+[[Let's face a new day->Apartment №56 (Your Stash)]]
+
+::Improve Stash <3100,2191>
+You decide to work on this place a bit more...
+
+As you walk through rooms, you try to figure out what you can do:
+<<if $isFlowerOwned != true>>
+Add a flower on the window sill (20 Energy, $10) - <<if $mainChar.energy < 20>>You don't have enough energy!<<elseif $mainChar.money < 10>>You don't have enough money!<<else>><<link "Add">><<set $mainChar.energy -= 20>><<set $mainChar.money -= 10>><<set $hour += 1>><<set $isFlowerOwned = true>><<goto "Improve Stash">><</link>><<endif>><<endif>> <<if $isCarpetOwned != true>>
+Add a carpet in the living room (30 Energy, $70) - <<if $mainChar.energy < 30>>You don't have enough energy!<<elseif $mainChar.money < 70>>You don't have enough money!<<else>><<link "Add">><<set $mainChar.energy -= 30>><<set $mainChar.money -= 70>><<set $hour += 3>><<set $isCarpetOwned = true>><<goto "Improve Stash">><</link>><<endif>><<endif>> <<if $isStashBrothel != true>>
+[[Make Stash a brothel]]<<endif>>
+
+[[Go back->Apartment №56 (Your Stash)]]
+
+::Make Stash a brothel <3103,2316>
+Well, it is the perfect place for it, why not?
+
+
+<u>WARNING: You will lose your Stash, but gain a big income. There will be no way back.</u>
+
+
+Make Stash a brothel (12 days, $700) - <<if $mainChar.money < 700>>You don't have enough money<<else>><<link "Do it!">><<set $mainChar.money -= 700>><<set $hour += 9>><<set $isStashBrothel = true>><<set $brothelBuildDayDone = $dayCount + 8>><<goto "High Tai">><</link>><<endif>>
+[[Not now->Improve Stash]]
+
+::Apartment №56 (Your brothel) <2966,2094>
+<<if $isWorkingAtBrothelAvailable != true>><<set _event to either("sick girl","none","none","none")>><<else>><<set _event to either("dad","none","none","none")>><<endif>><<if $brothelFirstVisit != false>><<set $isBrothelBuilt = true>><<set $dayBrothelStarted = $dayCount>><<set $brothelFirstVisit = false>>Once the builders leave, you enter your apartment and smile proudly. Considering the state of your stash before, you're in awe at what it's become. It's... gorgeous!
+
+<div class="default-image-wrapper"><img src="pics/brothel.jpg"></div>
+
+You hope such a place will be able to bring you a lot of money...
+
+[[So, let's start!->Apartment №56 (Your brothel)]]
+<<elseif $brothelFirstVisit == false>><<if _event == "sick girl" and visited() >= 5 and $mainChar.girlsAmountInBrothel >= 2>>A sweet looking girl comes up to you with a somewhat sullen look on her face. "Excuse, Mistress, Amanda is absent today. She called me earlier to say that she was ill and will not be able to make it in."
+
+You sigh. Damn.. Well, looks like this place needs a new hero!
+
+<strong>Working at brothel</strong> is available now!<<set $isWorkingAtBrothelAvailable = true>>
+
+[[Okay->Apartment №56 (Your brothel)]]<<else>>&emsp;Alright. This is your brothel where hired girls can make money for you. Profit forecast for the month is below.
+<<if $isWorkingAtBrothelAvailable == true>>
+<<if $mainChar.energy >= 30>>[[Work at your brothel]]<<else>>You are too tired to work here!<<endif>>
+<<endif>>
+Girls working: $mainChar.girlsAmountInBrothel/5<<if $mainChar.girlsAmountInBrothel < 5>>
+Hire more girls - <<if $mainChar.money < 200>>You don't have enough money!<<else>><<link "$200">><<set $mainChar.money -= 200>><<set $mainChar.girlsAmountInBrothel += 1>><<goto "Apartment №56 (Your brothel)">><</link>><<endif>><<endif>>
+<<set $brothelReputation = $dayCount - $dayBrothelStarted>><<set $girlPerDayIncome = $brothelReputation + 100>><<set $totalIncome = $mainChar.girlsAmountInBrothel * $girlPerDayIncome * 30>><<set $communalPayments = $mainChar.girlsAmountInBrothel * 17 * 30>><<set $girlsSalary = $mainChar.girlsAmountInBrothel * 60 * 30>><<set $gratitudeForProtection = 5 * 30>><<set $foodAndDrinks = $mainChar.girlsAmountInBrothel * 5 * 30>><<set $condomsLube = $mainChar.girlsAmountInBrothel * 2 * 30>><<set $eventOtherExpenses to either(1,2,3,4,5)>><<set $otherExpenses = $mainChar.girlsAmountInBrothel * $eventOtherExpenses * 30>><<set $generalExpenses = $communalPayments + $girlsSalary + $gratitudeForProtection + $foodAndDrinks + $condomsLube + $otherExpenses>><<set $netProfit = $totalIncome - $generalExpenses>><<set $mainChar.brothelDailyIncome = $netProfit / 30>>
+<hr>
+Net pofit: $netProfit | Daily: $mainChar.brothelDailyIncome
+
+Total income: $totalIncome
+General expenses: $generalExpenses
+Girls salary: $girlsSalary
+Communal payments: $communalPayments
+Gratitude for protection of locals: $gratitudeForProtection
+Food and drinks: $foodAndDrinks
+Condoms and lube: $condomsLube
+Other expenses: $otherExpenses
+<hr>
+
+
+<<if $mainChar.brothelSafe == 0>>Safe is empty<<else>>You found $mainChar.brothelSafe bucks in the safe! <<link "Take it">><<set $mainChar.money += $mainChar.brothelSafe>><<set $mainChar.brothelSafe = 0>><<goto "Apartment №56 (Your brothel)">><</link>><<endif>>
+
+[[Go out->High Tai]]<<endif>><<endif>>
+
+::Take a bath <3258,2230>
+<<nobr>>
+	<<set _imageNum = random(1, 3)>>
+	<<switch _imageNum>>
+	  <<case 0>>
+		  <div class="default-image-wrapper">
+			<div class="default-image-wrapper"><img src="pics/bathroom/bathroom0.gif" alt="bathroom0">
+		  </div>
+	  <<case 1>>
+		  <div class="default-image-wrapper">
+			<div class="default-image-wrapper"><img src="pics/bathroom/bathroom1.gif" alt="bathroom1">
+		  </div>
+	  <<case 2>>
+		  <div class="default-image-wrapper">
+			<div class="default-image-wrapper"><img src="pics/bathroom/bathroom2.gif" alt="bathroom2">
+		  </div>
+	  <<case 3>>
+		  <div class="default-image-wrapper">
+			<div class="default-image-wrapper"><img src="pics/bathroom/bathroom3.gif" alt="bathroom3">
+		  </div>
+   <</switch>>
+<</nobr>>
+
+You had a good time; nice and carefree...
+<p class="add">+10 Energy</p><<set $mainChar.energy += 10>><<set $hour += 1>>
+<<nobr>>
+  <<set $mainChar.appearance.isCombed = false>>
+  <<set $mainChar.appearance.makeup = 'none'>>
+  <<set $mainChar.appearance.head.lips.color = 'none'>>
+  <<set $mainChar.cleanliness = 100>>
+  <<set $inventory.grocery['Shampoo'].count -= 1>>
+<</nobr>>
+
+[[Go back->Apartment №56 (Your Stash)]]

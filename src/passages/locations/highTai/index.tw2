@@ -1,0 +1,16 @@
+::StoryIncludes
+src/passages/locations/highTai/looksInteresting.tw2
+src/passages/locations/highTai/workAtYourBrothel.tw2
+src/passages/locations/highTai/apartment23.tw2
+src/passages/locations/highTai/apartment42.tw2
+src/passages/locations/highTai/apartment56.tw2
+
+::High Tai <2937,1947>
+<div class="default-image-wrapper"><img src="pics/highTai.jpg"></div>
+
+Go to the:
+
+<<if $isKeyChatted != true && $isKeyOwned != true>>[[Apartment №42 (Mr. Key)][$minute += 5]]<<elseif $isKeyPaid != true && $mainChar.money < 300 && $isKeyOwned != true>>Apartment №42 (Mr. Key) - You don't have enough money! ($300)<<elseif $isKeyPaid != true && $mainChar.money >= 300 && $isKeyOwned != true>>[[Apartment №42 (Mr. Key)][$minute += 5]]<<elseif $isKeyPaid == true && $dayCount < $dayKeyReady && $isKeyOwned != true>>Apartment №42 (Mr. Key) - The key isn't ready yet!<<elseif $isKeyPaid == true && $dayCount >= $dayKeyReady && $isKeyOwned != true>>[[Apartment №42 (Mr. Key)][$minute += 5]]<<elseif $isKeyOwned == true>><<if $isStashBrothel == true && $brothelBuildDayDone >= $dayCount>>Apartment №56 (Your brothel) - Is still being built. You might have to wait a few days<<elseif $isStashBrothel == true && $brothelBuildDayDone < $dayCount>>[[Apartment №56 (Your brothel)][$minute += 5]]<<else>>[[Apartment №56 (Your Stash)][$minute += 5]]<<endif>><<endif>>
+[[Apartment №23 (Ron)->Apartment №23 (Ron) Door][$minute += 5]]
+
+[[Go out]]

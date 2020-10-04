@@ -1,0 +1,50 @@
+::StoryIncludes
+
+
+::Bank <3900,1525>
+<<if $bankFirstVisit != false>><<set $bankFirstVisit = false>>You enter the modern, white Skyscraper. Within minutes, an assistant comes up to you and offers his help. You admit you don't have an account and the assistant quickly perks up. He leads you into a secluded office.
+
+<div class="default-image-wrapper"><img src="pics/bank1.jpg"></div>
+
+Once inside the room, the assistant pulls out a piece of paper and slides it over to you with a pen. "Sign here, and here, and here..." he says, pointing to difference spots on the paper. After you sign, he hands over a shiny new card. "This is your new credit card. You can use it at ATMs to retrieve or deposit money." He types something onto the computer. "You'll also need a password, for security reasons."
+
+<<textbox "$cardPassword" "">>
+
+"That's all sorted for you. If you have any questions, don't hesitate to visit us again. He gives you a polite smile, [["Thank you for your patronage."->Bank]]<<elseif $bankFirstVisit == false && $cardPassword == "">>"Excuse me, miss, you need to create a new password."
+
+<<textbox "$cardPassword" "">>
+
+[["That's all. Thank you for your patronage."->Bank]]<<elseif $bankFirstVisit == false && $cardPassword != "">>You approached an ATM and inserted your card.
+
+<div class="default-image-wrapper"><img src="pics/bank2.jpg"></div>
+
+Now it's time for your password.<sub>[[forgot->Stats]]</sub>
+
+<<textbox "$checkCardPassword" "">>
+
+<<link "Enter">><<if $checkCardPassword == $cardPassword>><<goto "Bank card">><<elseif $checkCardPassword != $cardPassword>><<goto "Bank password mistake">><<endif>><</link>>
+
+[[Go back->Go out][$minute += 10]]
+<<endif>>
+
+::Bank card [system] <3825,1650>
+Correct, you are in.
+
+Account balance: $mainChar.bankBalance
+
+CASH WITHDRAWAL:
+<<if $mainChar.bankBalance == 0>>Not enough money to withdraw<<else>><<if $mainChar.bankBalance >= 10>><<link "$10">><<set $mainChar.bankBalance -= 10>><<set $mainChar.money += 10>><<goto "Bank card">><</link>><<endif>><<if $mainChar.bankBalance >= 20>> <<link "$20">><<set $mainChar.bankBalance -= 20>><<set $mainChar.money += 20>><<goto "Bank card">><</link>><<endif>><<if $mainChar.bankBalance >= 50>> <<link "$50">><<set $mainChar.bankBalance -= 50>><<set $mainChar.money += 50>><<goto "Bank card">><</link>><<endif>><<if $mainChar.bankBalance >= 100>> <<link "$100">><<set $mainChar.bankBalance -= 100>><<set $mainChar.money += 100>><<goto "Bank card">><</link>><<endif>> <<link "All out">><<set $mainChar.money += $mainChar.bankBalance>><<set $mainChar.bankBalance = 0>><<goto "Bank card">><</link>><<endif>>
+
+CASH DEPOSIT:
+<<if $mainChar.money == 0>>Not enough money to deposit<<else>><<if $mainChar.money >= 10>><<link "$10">><<set $mainChar.money -= 10>><<set $mainChar.bankBalance += 10>><<goto "Bank card">><</link>><<endif>><<if $mainChar.money >= 20>> <<link "$20">><<set $mainChar.money -= 20>><<set $mainChar.bankBalance += 20>><<goto "Bank card">><</link>><<endif>><<if $mainChar.money >= 50>> <<link "$50">><<set $mainChar.money -= 50>><<set $mainChar.bankBalance += 50>><<goto "Bank card">><</link>><<endif>><<if $mainChar.money >= 100>> <<link "$100">><<set $mainChar.money -= 100>><<set $mainChar.bankBalance += 100>><<goto "Bank card">><</link>><<endif>> <<link "All in">><<set $mainChar.bankBalance += $mainChar.money>><<set $mainChar.money = 0>><<goto "Bank card">><</link>><<endif>>
+
+[[Done, go out->Go out]]
+
+::Bank password mistake [system] <3950,1650>
+"Wrong password!"
+
+You can see your password in [[Stats]]. Let's try again...
+
+<<textbox "$checkCardPassword" "">>
+
+<<link "Enter">><<if $checkCardPassword == $cardPassword>><<goto "Bank card">><<elseif $checkCardPassword != $cardPassword>><<goto "Bank password mistake">><<endif>><</link>>

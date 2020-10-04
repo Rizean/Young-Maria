@@ -1,0 +1,17 @@
+::help mom on the kitchen [nobr] <2500,800>
+@@.image-wrapper-w70p;
+	[img['pics/help_mom_in_the_kitchen.jpg']]
+@@
+You join your mom in the kitchen and soon get to helping. Whilst you're cooking, you each take it in turns to talk about your day. You enjoy cooking together. <br />
+When dinner's ready, you both serve the food to the family.
+@@.add; +1 relationship with mom @@ <br />
+@@.minus; -10 energy @@
+
+<<set $minute += 20>>
+<<set $mainChar.energy -= 10>>
+<<set $mainChar.relationships.mom += 1>>
+
+<br />
+<br />
+
+[[Back->Kitchen]]

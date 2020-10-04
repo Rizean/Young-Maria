@@ -1,0 +1,125 @@
+::Clean brothers room [nobr] <3080,0>
+@@.mc-text;
+	Damn bro, your room's disgusting! <br />
+	How can you live like this?
+@@
+@@.bc-text;
+	You're more than welcome to clean it, sis...
+@@
+@@.image-wrapper-w70p;
+	[img['pics/sibling/cleaning_room.jpg']]
+@@
+@@.narrator;
+	&emsp;You can't stand the sight of the mess and decide to take him up on the offer. You go around his room, dusting and cleaning until it's... well at least better than it was before.
+@@
+@@.bc-text;
+	Wow, I didn't think you'd actually clean... Thanks sis!
+@@
+@@.add; +1 relations with $sibling.type @@ <br />
+@@.minus; -20 energy @@
+<br />
+<<set $mainChar.energy -= 20>>
+<<set $mainChar.relationships.sibling += 1>>
+<<if $mainChar.corruption >= 15>>
+	[[clean more "thoroughly"->Clean brothers room ero]]
+<<endif>>
+<<set $brothersRoomCleaned = true>>
+<br />
+[[Back->Brother room]]
+
+::Clean brothers room ero [nobr] <3180,0>
+<<if $mainChar.look.lingerie.panties.name !== ''>>
+  @@.image-wrapper-w50p;
+		[img[String.format('pics/sibling/cleaning_room_ero/with_panties/{0}.jpg', random(1, 5))]]
+  @@
+<<else>>
+  @@.image-wrapper-w50p;
+																	[img[String.format('pics/sibling/cleaning_room_ero/without_panties/{0}.jpg', random(1, 5))]]
+  @@
+<<endif>>
+@@.narrator;
+	&emsp;You decide to clean a little more thoroughly. As you're cleaning, you have an urge to to tease your brother. When reaching the lower spots, you make sure to stick your ass in the air, hoping it will catch your brothers attention. <br />
+@@
+<<if $mainChar.corruption >= 30>>
+	<<if $mainChar.energy >= 10>>
+		<<set _rand = random(1, 2) >>
+		<<if _rand == 1>>
+			@@.narrator;
+				&emsp; $sibling.firstName catches your movements out the corner of his eye. He looks over and watches with a twinkle in his eye... Is that lust?
+			@@
+			[[Tease him..->tease brother in his room]]
+		<<else>>
+			@@.narrator; Your brother does not pay attention to you.. @@
+		<<endif>>
+	<<endif>>
+<<endif>>
+
+<br />
+<br />
+[[Back->Brother room]]
+
+::tease brother in his room [nobr] <3300,0>
+@@.narrator;
+	&emsp;After making sure that your brother is looking at you with interest, you decide to take it further...
+@@
+<<if $mainChar.look.lingerie.panties.name !== ''>>
+	@@.image-wrapper-w50p;
+		[img[String.format('pics/sibling/cleaning_room_ero/teasing/with_panties/{0}.gif', random(1, 4))]]
+	@@
+<<else>>
+	@@.image-wrapper-w50p;
+		[img[String.format('pics/sibling/cleaning_room_ero/teasing/without_panties/{0}.gif', random(1, 4))]]
+	@@
+<<endif>>
+@@.narrator;
+	&emsp;Whilst bending over, you make sure to wiggle your butt. As you stand, you lift your shirt and tease him with your bare midriff. <br />
+	&emsp; $sibling.firstName `s gaze is stuck to your body as he watches you move sensually. He's enjoying the view. <br />
+	&emsp;Unfortunately, as soon as you turn to him, he immediately turns his head away. Though you aren't sure he was gazing at you, the pinkness in your brother's cheek would suggest otherwise. <br />
+@@
+@@.bc-text.thought;
+	(Omg, my sis has such a hot body...)
+@@
+<<if $mainChar.corruption >= 50>>
+	@@.mc-text;
+		Hey bro, did you like the view? ;)
+	@@
+	<<if $sibling.corruption >= 20>>
+		<<set _naughtyBro to either(true, false, false)>>
+		<<if $sibling.corruption >= 50 and _naughtyBro == true>>
+			@@.narrator;
+				&emsp;He suddenly grabs your waist and whispers, unzipping his pants:
+			@@
+			<<set _sexEvent to either("bj","vaginal")>>
+			<<if _sexEvent == "bj">>
+				@@.bc-text; I love it. Btw, I think you missed a spot. Drop on your knees and clean it, sis. @@
+				<br />
+				@@.image-wrapper-w50p;
+[img[String.format('pics/brotherRoomCleaningBlowjob.webp')]]
+				@@
+				<<HaveASexWidget "bj" "sibling
+				<br />
+			<<else>>
+				@@.bc-text; Sure. You are so beautiful. Let me reward you, sis. @@
+				<br />
+				@@.image-wrapper-w50p;
+[img[String.format('pics/brotherRoomCleaningVaginal.webp')]]
+				@@
+				<<HaveASexWidget "vaginal" "sibling">>
+				<br />
+			<<endif>>
+		<<else>>
+			@@.bc-text; Of course sis, do it more often! ;) @@
+		<<endif>>
+	<<else>>
+		@@.bc-text; Y-yes...@@
+	<<endif>>
+<<endif>>
+<<set $sibling.corruption += 1>>
+@@.add; +1 brother corruption @@
+
+<br />
+<br />
+
+@@.narrator;
+	&emsp;Winking at your brother, you readjust your clothes and[[return->Brother room]] to the middle of the room.
+@@

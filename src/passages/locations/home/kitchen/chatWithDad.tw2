@@ -1,0 +1,18 @@
+::chat with your dad in the kitchen [nobr] <2200,800>
+@@.image-wrapper-w70p;
+	[img['pics/chat_with_dad_in_the_kitchen.jpg']]
+@@
+You sit next to your father. You start a conversation about his work and he happily answers. He then asks about you; how your life is going. You respond chirpily. Both of you enjoy the conversation. <br />
+@@.minus; -5 energy @@ <br />
+@@.add; +1 relationship with dad @@
+<br />
+<br />
+
+<<set $minute += 20>>
+<<set $mainChar.energy -= 5>>
+<<set $mainChar.relationships.dad += 1>>
+<<if $mainChar.corruption >= 30 && $hour == 8>>
+    [["Have a nice day!"->wish a nice day kitchen][$whomHaveNiceDay = 'dad']] <br />
+<<endif>>
+<br />
+[[Back->Kitchen]]

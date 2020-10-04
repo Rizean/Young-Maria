@@ -1,0 +1,19 @@
+::Buy new books [system] <4500,2775>
+* 'Daddy's Girl' for $50 - <<if $isDaddysGirlOwned == true>>You already have this.<<else>><<if $mainChar.money < 50>>You don't have enough money!<<else>><<link "Buy">><<set $mainChar.money -= 50>><<set $isDaddysGirlOwned = true>><<goto "Buy new books">><</link>><<endif>><<endif>>
+Quite a light read, good for beginners.
+* 'Forbidden' for $50 - <<if $isForbiddenOwned == true>>You already have this.<<else>><<if $mainChar.money < 50>>You don't have enough money!<<else>><<link "Buy">><<set $mainChar.money -= 50>><<set $isForbiddenOwned = true>><<goto "Buy new books">><</link>><<endif>><<endif>>
+The description looks quite arousing.
+* 'Under Mr. Nolan's Bed' for $70 - <<if $isUnderOwned == true>>You already have this.<<else>><<if $mainChar.money < 70>>You don't have enough money!<<else>><<link "Buy">><<set $mainChar.money -= 70>><<set $isUnderOwned = true>><<goto "Buy new books">><</link>><<endif>><<endif>>
+You feel horny just by reading the description.
+* 'Her Rival's Touch' for $80 - <<if $isHerRivalsTouchOwned == true>>You already have this.<<else>><<if $mainChar.money < 80>>You don't have enough money!<<else>><<link "Buy">><<set $mainChar.money -= 80>><<set $isHerRivalsTouchOwned = true>><<goto "Buy new books">><</link>><<endif>><<endif>>
+Do I really wanna read it?
+* 'Right Next Door' for $90 - <<if $isRightNextDoorOwned == true>>You already have this.<<else>><<if $mainChar.money < 90>>You don't have enough money!<<else>><<link "Buy">><<set $mainChar.money -= 90>><<set $isRightNextDoorOwned = true>><<goto "Buy new books">><</link>><<endif>><<endif>>
+I need to hide this...
+* 'Daddy Me' for $100 - <<if $isDaddyMeOwned == true>>You already have this.<<else>><<if $mainChar.money < 100>>You don't have enough money!<<else>><<link "Buy">><<set $mainChar.money -= 100>><<set $isDaddyMeOwned = true>><<goto "Buy new books">><</link>><<endif>><<endif>>
+Wow... Dad should not see this...
+* 'Ride Me Dirty' for $120 - <<if $isRideMeDirtyOwned == true>>You already have this.<<else>><<if $mainChar.money < 120>>You don't have enough money!<<else>><<link "Buy">><<set $mainChar.money -= 120>><<set $isRideMeDirtyOwned = true>><<goto "Buy new books">><</link>><<endif>><<endif>>
+I found a new use for my pillow...
+* 'Seven Nights of Sin' for $150 - <<if $isSevenNightsOfSinOwned == true>>You already have this.<<else>><<if $mainChar.money < 150>>You don't have enough money!<<else>><<link "Buy">><<set $mainChar.money -= 150>><<set $isSevenNightsOfSinOwned = true>><<goto "Buy new books">><</link>><<endif>><<endif>>
+Maybe, I can have these nights too...
+
+[[Back->Read online]]

@@ -1,0 +1,103 @@
+::Haircut and hairdressing [nobr] <4375,848>
+Charlotte nods and gestures to a seat by a mirror. You take a seat and she stands behind you, placing a cape around your neck that covers your clothes. <br />
+She asks what you'd like? You consult with her and soon come to a decision...
+
+<br /><br />
+
+* Hair treatment (+15 Beauty) for $150 -
+<<if $mainChar.money >= 150>>
+    <<if $mainChar.energy >= 30>>
+        [[Go->Hairdressing][$hour += 2]]
+    <<else>>
+        You are too tired for this...
+    <<endif>>
+<<else>>
+    You don't have enough money!
+<<endif>>
+<br />
+* New haircut (+10 Beauty) - [[See catalog->Haircut catalog]]
+
+<br /><br />
+
+[[Back->Beauty Salon]]
+
+::Hairdressing <4373,998>
+<div class="default-image-wrapper"><img src="pics/BeautySalonHairdressing.png"></div>
+
+What can be better than the feeling of getting your hair washed by a professional?
+<p class="add">+15 Beauty</p> <p class="minus">-$150</p> <p class="minus">-30 Energy</p><<set $mainChar.money -= 150>><<set $mainChar.beauty +=15>><<set $mainChar.energy -= 30>>
+
+[[Back->Beauty Salon]]
+
+::Haircut catalog [nobr] <4248,1000>
+<<include "Hair Variables">>
+
+<<set _prevColor = $mainChar.appearance.head.hair.color>>
+<<set _prevStyle = $mainChar.appearance.head.hair.style>>
+<<set _prevLength = $mainChar.appearance.head.hair.length>>
+
+Hair color:
+<<listbox "$mainChar.appearance.head.hair.color" autoselect>>
+	<<optionsfrom $hairOptions>>
+<</listbox>>
+<br />
+Hair style:
+<<listbox "$mainChar.appearance.head.hair.style" autoselect>>
+	<<optionsfrom $hairStyles>>
+<</listbox>>
+<br />
+Hair length:
+<<listbox "$mainChar.appearance.head.hair.length" autoselect>>
+	<<optionsfrom $hairLengths>>
+<</listbox>>
+<br />
+<br />
+
+<div class="default-image-wrapper"><img id="mainCharHairstyle" @src="$mainChar.appearance.head.image"></div>
+
+* Change hairstyle (+10 Beauty) for 100$ -
+<<if $mainChar.money >= 100>>
+    <<if $mainChar.energy >= 30>>
+	  <<link "Do it">>
+		  <<set $mainChar.appearance.head.image = String.format('pics/appearance/face/' + $mainChar.appearance.head.hair.color + '/' + $mainChar.appearance.head.hair.length + '/' + $mainChar.appearance.head.hair.style + '/image.jpg')>>
+		  <<goto "New Haircut">>
+	  <</link>>
+    <<else>>
+        You are too tired for this...
+    <<endif>>
+<<else>>
+    You don't have enough money!
+<<endif>>
+
+<br />
+
+* Actually, I think I like my current hairstyle -
+<<link "Go back">>
+	<<set _prevColor = $mainChar.appearance.head.hair.color>>
+	<<set _prevStyle = $mainChar.appearance.head.hair.style>>
+	<<set _prevLength = $mainChar.appearance.head.hair.length>>
+	<<goto "Beauty Salon">>
+<</link>>
+
+<<script>>
+$(document).ready(function() {
+	$('.macro-listbox').change( function() {
+		var hairColor = State.variables.mainChar.appearance.head.hair.color;
+		var hairStyle = State.variables.mainChar.appearance.head.hair.style;
+		var hairLength = State.variables.mainChar.appearance.head.hair.length;
+
+		var photoSrc = 'pics/appearance/face/' + hairColor + '/' + hairLength + '/' + hairStyle + '/image.jpg';
+
+		$("#mainCharHairstyle").attr('src', photoSrc);
+	});
+});
+<</script>>
+
+::New Haircut [nobr] <4247,1123>
+<div class="default-image-wrapper"><img src="pics/BeautySalonHaircut.gif"></div>
+
+After Charlotte finishes attending to your hair, she smiles at you in the reflection of the mirror. It feels good to get a fresh look once in a while!
+<br />
+<p class="add">+10 Beauty</p>  <p class="minus">-$100</p>  <p class="minus">-30 Energy</p><<set $mainChar.money -= 100>><<set $mainChar.beauty += 10>><<set $mainChar.energy -= 30>>
+<br />
+[[Back->Beauty Salon]]

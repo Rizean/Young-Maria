@@ -1,0 +1,17 @@
+::Go swimming <4050,2550>
+&emsp;You enter the sea and wade in deep. As the sand disappears under your feet, you start to swim. <br />
+
+<<set $minute += 40>><<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/swimming1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/swimming2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/swimming3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/swimming4.jpg"></div><<endif>>
+
+&emsp;After some time swimming and floating on your back, you are tired but you had a great time! You even feel a little more beautiful as if the water revitalised your skin. You also feel stronger.
+<<nobr>>
+  <<if visited() % 10 == 0 and $wasSwimEnergyIncreased != true>>
+	  <<set $mainChar.maxEnergy += 10>>
+	  <strong>Your maximum energy has increased!</strong>
+	  <<set $wasSwimEnergyIncreased = true>>
+  <</if>>
+<</nobr>>
+
+<p class="add">+1 Beauty</p> <p class="minus">-25 Energy</p><<set $mainChar.beauty += 1>><<set $mainChar.energy -= 25>>
+
+[[Go out->Beach]]

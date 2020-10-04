@@ -1,0 +1,284 @@
+::be naughty living room [nobr] <1968,1588>
+@@.narrator;
+With the attention on you, a small flame of curiosity and excitement flares up inside you.<br/>
+You want more and so decide to feed the flame. <br />
+@@
+
+<<if previous() == 'read a book'>>
+	<<set $livingRoomAction = 'reading_a_book'>>
+<<elseif previous() == 'watch TV'>>
+	<<set $livingRoomAction = 'watching_tv'>>
+<<endif>>
+
+@@#be-naughty-lr-options;
+	<<include "stretch your body teasing lr">> <br />
+	<<if $mainChar.corruption >= 30>>
+		<<include "play with your little sisters teasing lr">> <br />
+	<<endif>>
+	<<if $mainChar.corruption >= 40>>
+		<<include "reveal your little narrow secret teasing lr">> <br />
+	<<endif>>
+	<br />
+	[[change your mind->living room]]
+@@
+
+::stretch your body teasing lr [nobr] <2100,1600>
+<<linkreplace "stretch your body">>
+		<<replace "#be-naughty-lr-options">>
+			@@.narrator;
+				@emsp;You lift your arms, stretching them into the air. Knowing this kept their attention, you decide to stretch your body a little "accidentally" showing off your ass.
+			@@
+			<<if $mainChar.look.lingerie.panties.name == ''>>
+				<<set _panties = 'wtp'>>
+			<<else>>
+				<<set _panties = 'wp'>>
+			<<endif>>
+
+			<<set _randFormat = either('photos', 'gif') >>
+
+			<<if _randFormat == 'photos'>>
+				<<if $livingRoomAction == 'watching_tv'>>
+					@@.image-wrapper-w50p;
+						[img[String.format('pics/teasing/livingroom/ass/pic/' + _panties + '/' + random(1, 6) + '.jpg')]]
+					@@
+				<<elseif $livingRoomAction == 'reading_a_book'>>
+					@@.image-wrapper-w50p;
+						[img[String.format('pics/teasing/livingroom/ass/pic/' + _panties + '/' + random(7, 13) + '.jpg')]]
+					@@
+				<<endif>>
+			<<else>>
+				@@.image-wrapper-w50p;
+					[img[String.format('pics/teasing/livingroom/ass/gif/' + _panties + '/' + random(1, 5) + '.gif')]]
+				@@
+			<<endif>>
+
+			<<if $livingRoomAction == 'reading_a_book'>>
+				<<include "family teasing reaction lr book">>
+			<<elseif $livingRoomAction == 'watching_tv'>>
+				<<include "family teasing reaction">>
+			<<endif>>
+
+			<<set $mainChar.energy -= 15>>
+			@@.minus; -15 energy @@
+			<<set $minute += 20>>
+			<br />
+			[[Continue->living room]]
+		<</replace>>
+	<</linkreplace>>
+
+::play with your little sisters teasing lr [nobr] <2200,1600>
+<<linkreplace "play with your two little sisters">>
+		<<replace "#be-naughty-lr-options">>
+			@@.narrator;
+				@emsp;You decide you want to put on a show that's more interesting than what's on the TV. You go to put your hands behind your head but on the way you pull down your shirt slightly. The top of nipple can just about be seen. When your hands are in position, you stick your chest out.
+			@@
+			<<set _randFormat = either('photos', 'gif') >>
+
+			<<if _randFormat == 'photos'>>
+				@@.image-wrapper-w50p;
+					[img[String.format('pics/teasing/livingroom/tits/pic/partially/' + random(1, 5) + '.jpg')]]
+				@@
+			<<else>>
+				@@.image-wrapper-w50p;
+					[img[String.format('pics/teasing/livingroom/tits/gif/' + random(1, 4) + '.gif')]]
+				@@
+			<<endif>>
+
+			<<if $livingRoomAction == 'reading_a_book'>>
+				<<include "family teasing reaction lr book">>
+			<<elseif $livingRoomAction == 'watching_tv'>>
+				<<include "family teasing reaction">>
+			<<endif>>
+
+			<br />
+			<<if $mainChar.corruption >= 35>>
+				[[it seems to you that you can go further...->play with tits lr ot]] <br />
+			<<endif>>
+			<<set $mainChar.energy -= 15>>
+			@@.minus; -15 energy @@
+			<<set $minute += 20>>
+			 <br />
+			[[Continue->living room]]
+		<</replace>>
+	<</linkreplace>>
+
+::reveal your little narrow secret teasing lr [nobr] <2300,1600>
+<<linkreplace "reveal your little narrow secret">>
+		<<replace "#be-naughty-lr-options">>
+			@@.narrator;
+				@emsp;You like to be a bad girl and you are ready to prove this once again. <br />
+				@emsp;You reach down and pull aside your clothes, revealing your wettening pussy. As the cold air touches you, an exciting thrill coarses through your body. <br />
+				@emsp;Will anyone notice your frankness? You hope so... <br />
+			@@
+			<<if $livingRoomAction == 'watching_tv'>>
+				@@.image-wrapper-w50p;
+					[img[String.format('pics/teasing/livingroom/pussy/{0}.jpg', random(1, 6))]]
+				@@
+			<<elseif $livingRoomAction == 'reading_a_book'>>
+				@@.image-wrapper-w50p;
+					[img[String.format('pics/teasing/livingroom/pussy/{0}.jpg', random(7, 13))]]
+				@@
+			<<endif>>
+
+			<<if $livingRoomAction == 'reading_a_book'>>
+				<<include "family teasing reaction lr book">>
+			<<elseif $livingRoomAction == 'watching_tv'>>
+				<<include "family teasing reaction">>
+			<<endif>>
+
+			<br />
+			<<set $mainChar.energy -= 15>>
+			@@.minus; -15 energy @@
+			<br />
+			<<set $minute += 20>>
+			[[Continue->living room]]
+		<</replace>>
+	<</linkreplace>>
+
+::family teasing reaction [nobr] <2000,1400>
+<<if $watchTVWith.includes('dad')>>
+				<<set _rand = random(1, 2) >>
+
+				<<if _rand == 1>>
+					@@.narrator;
+						@emsp;Your dad notices and "appreciates" your flirting. <br />
+						@emsp;His attention excites you even more. <br />
+					@@
+					@@.add; +1 dad corruption @@
+					<<set $dad.corruption += 1>>
+				<<else>>
+					@@.narrator;
+						@emsp;Your dad doesn’t notice your efforts.
+					@@
+				<<endif>>
+			<<endif>>
+
+			<<if $watchTVWith.includes('sibling')>>
+				<<set _rand = random(1, 2) >>
+
+				<<if _rand == 1>>
+					@@.narrator;
+						@emsp;You get the attention of your $sibling.type who can't take <<if $sibling.type == 'sister'>>her<<else>>his<<endif>> eyes off you. <br />
+						You notice your $sibling.type ’s look and give him a smile and a wink back. <br />
+					@@
+					@@.add; +1 $sibling.type corruption @@
+					<<set $sibling.corruption += 1>>
+				<<else>>
+					@@.narrator;
+						Your $sibling.type doesn’t notice your efforts.
+					@@
+				<<endif>>
+			<<endif>>
+
+			<<if $watchTVWith.includes('mom')>>
+				<<set _rand = random(1, 2) >>
+
+				<<if _rand == 1>>
+					@@.narrator;
+						@emsp;When you finish your little performance, you notice that you've attracted interest from your mom. <br />
+						@emsp;As soon as you look at her, she abruptly turns away from you and continues to do her own business. <br />
+						@emsp;This woman definitely has secrets! <br />
+						@emsp;Your mother’s interest arouses you a little. <br />
+					@@
+					@@.add; +1 mom corruption @@
+					<<set $mom.corruption += 1>>
+				<<else>>
+					@@.narrator;
+						@emsp;Your mom doesn’t notice your efforts.
+					@@
+				<<endif>>
+			<<endif>>
+
+::play with tits lr ot [nobr] <2180,1700>
+@@.narrator;
+	@emsp;You feel that this isn't enough. You remove on hand and trace it down your neck. When you get to your chest, you pull down your top as well, exposing one perfectly perky boob.
+@@
+@@.image-wrapper-w50p;
+	[img[String.format('pics/teasing/livingroom/tits/pic/ot/{0}.jpg', random(0, 5))]]
+@@
+
+<<if $livingRoomAction == 'reading_a_book'>>
+	<<include "family teasing reaction lr book">>
+<<elseif $livingRoomAction == 'watching_tv'>>
+	<<include "family teasing reaction">>
+<<endif>>
+<br />
+<<set $minute += 10>>
+<<if $mainChar.corruption >= 40>>
+	[[excited even more you go hard->play with tits lr full]]
+<<endif>>
+<br />
+<br />
+[[end the show->living room]]
+
+::play with tits lr full [nobr] <2200,1820>
+@@.narrator;
+	@emsp;Now that you've got one tit expose, it’s hard for you to stop. Instead you decide to free both beauties. Your other hand joins the first and pulls the other side of your shirt down. Both of your breasts are now on full display to anyone who might be watching.
+@@
+@@.image-wrapper-w50p;
+	[img[String.format('pics/teasing/livingroom/tits/pic/full/{0}.jpg', random(1, 5))]]
+@@
+
+<<if $livingRoomAction == 'reading_a_book'>>
+	<<include "family teasing reaction lr book">>
+<<elseif $livingRoomAction == 'watching_tv'>>
+	<<include "family teasing reaction">>
+<<endif>>
+<<set $minute += 10>>
+<br />
+<br />
+[[end the show->living room]]
+
+::family teasing reaction lr book [nobr] <2100,1400>
+<<if $readWith.includes('dad')>>
+				<<set _rand = random(1, 2) >>
+
+				<<if _rand == 1>>
+					@@.narrator;
+						@emsp;Your dad notices and "appreciates" your flirting. <br />
+						@emsp;His attention excites you even more. <br />
+					@@
+					@@.add; +1 dad corruption @@
+					<<set $dad.corruption += 1>>
+				<<else>>
+					@@.narrator;
+						@emsp;Your dad doesn’t notice your efforts.
+					@@
+				<<endif>>
+			<<endif>>
+
+			<<if $readWith.includes('sibling')>>
+				<<set _rand = random(1, 2) >>
+
+				<<if _rand == 1>>
+					@@.narrator;
+						@emsp;You get the attention of your $sibling.type who can't take <<if $sibling.type == 'sister'>>her<<else>>his<<endif>> eyes off you. <br />
+						@emsp;You notice your $sibling.type ’s look and give a smile and a wink back. <br />
+					@@
+					@@.add; +1 $sibling.type corruption @@
+					<<set $sibling.corruption += 1>>
+				<<else>>
+					@@.narrator;
+						@emsp;Your $sibling.type doesn’t notice your efforts.
+					@@
+				<<endif>>
+			<<endif>>
+
+			<<if $readWith.includes('mom')>>
+				<<set _rand = random(1, 2) >>
+
+				<<if _rand == 1>>
+					@@.narrator;
+						@emsp;When you finish your little performance, you notice that you've attracted interest from your mom. <br />
+						@emsp;As soon as you look at her, she abruptly turns away from you and continues to do her own business. <br />
+						@emsp;This woman definitely has secrets! <br />
+						@emsp;Your mother’s interest arouses you a little. <br />
+					@@
+					@@.add; +1 mom corruption @@
+					<<set $mom.corruption += 1>>
+				<<else>>
+					@@.narrator;
+						@emsp;Your mom doesn’t notice your efforts.
+					@@
+				<<endif>>
+			<<endif>>

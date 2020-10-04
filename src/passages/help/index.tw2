@@ -22,5 +22,17 @@ Need help? Contact me via <a class="patreon" href="https://Patreon.com/MariaModd
 
 
 ::StoryIncludes
-src/passages/help/storyHelp.tw2
+src/passages/help/brotherHelp.tw2
+src/passages/help/dreamsHelp.tw2
 src/passages/help/errorsHelp.tw2
+src/passages/help/farmHelp.tw2
+src/passages/help/highTaiHelp.tw2
+src/passages/help/jackHelp.tw2
+src/passages/help/jerryHelp.tw2
+src/passages/help/loadingHelp.tw2
+src/passages/help/problemSolver1.tw2
+src/passages/help/problemSolver2.tw2
+src/passages/help/problemSolver3.tw2
+src/passages/help/problemSolver4.tw2
+src/passages/help/schoolHelp.tw2
+src/passages/help/storyHelp.tw2

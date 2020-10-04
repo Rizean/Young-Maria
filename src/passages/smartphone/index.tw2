@@ -1,3 +1,15 @@
+::StoryIncludes
+src/passages/smartphone/books/index.tw2
+src/passages/smartphone/cheat.tw2
+src/passages/smartphone/gallery.tw2
+src/passages/smartphone/girlfriendForRent.tw2
+src/passages/smartphone/jobHunters.tw2
+src/passages/smartphone/jobs.tw2
+src/passages/smartphone/read.tw2
+src/passages/smartphone/sellPhotos.tw2
+src/passages/smartphone/takePhoto.tw2
+src/passages/smartphone/thisBoyLooksReallyNice.tw2
+
 ::Smartphone [nobr system] <1799,538>
 <div class="default-image-wrapper">
 	<img src="pics/smartphone.jpeg">
@@ -12,10 +24,3 @@ You open your phone. What would you like to do? <br />
 [[JobHunters.net]] <br />
 [[Cheat]] <<if $isStayHomeBonusTaken != true>>(free bonus)<<endif>>
 
-::StoryIncludes
-src/passages/smartphone/takePhoto.tw2
-src/passages/smartphone/read.tw2
-src/passages/smartphone/gallery.tw2
-src/passages/smartphone/sellPhotos.tw2
-src/passages/smartphone/jobs.tw2
-src/passages/smartphone/girlfriendForRent.tw2

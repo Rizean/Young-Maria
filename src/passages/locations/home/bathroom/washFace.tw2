@@ -1,0 +1,12 @@
+::wash your face [nobr] <1480,1140>
+@@.image-wrapper-w70p;
+	[img['pics/bathroom/wash_face.jpg']]
+@@
+<<set $minute += 2>>
+&emsp;You make your way over to the wash basin. You turn on the tap and bend over the sink.
+&emsp;Grabbing some water with your hands, you splash your face and rub the water into your skin to cleanse it. <br />
+<br />
+@@.minus; - makeup @@ <<set $mainChar.appearance.makeup = 'none'>> <br />
+<<set $mainChar.appearance.head.lips.color = 'none'>>
+<br />
+[[Back->Bathroom]]

@@ -1,0 +1,94 @@
+::Go to the bar [nobr] <4075,2800>
+<<if $hour < 7 or $hour > 22>>
+    The bar is closed at night! <br />
+<<else>>
+    <div class="default-image-wrapper">
+        <img src="pics/BeachBar.jpg">
+    </div>
+
+    &emsp;You walk over to the beach bar and take a seat on one of the stools. <br />
+
+    <<if visited() == 1>>
+        &emsp;A barman notices you and approaches. "Hi, I've never seen you here before. My name is Davis. Want something to drink?" <br />
+    <<else>>
+        &emsp;"Hello, sweety! What can I get ya?" <br />
+    <<endif>>
+
+*
+<<if $mainChar.money >= 5>>
+    <<link "Beer">>
+        <<set $mainChar.money -= 5>>
+        <<set $mainChar.intoxication += 4>>
+        <<set $intoxicationHour = $hour>>
+        <<set $intoxicationMinute = $minute>>
+        <<goto "Go to the bar">>
+    <</link>>
+<<else>>
+    Beer
+<<endif>>
+<sup>soft</sup> - $5
+<br />
+*
+<<if $mainChar.money >= 7>>
+    <<link "Wine">>
+        <<set $mainChar.money -= 7>>
+        <<set $mainChar.intoxication += 6>>
+        <<set $intoxicationHour = $hour>>
+        <<set $intoxicationMinute = $minute>>
+        <<goto "Go to the bar">>
+    <</link>>
+<<else>>
+    Wine
+<<endif>>
+<sup>soft</sup> - $7
+<br />
+*
+<<if $mainChar.money >= 10>>
+    <<link "Mojito">>
+        <<set $mainChar.money -= 10>>
+        <<set $mainChar.intoxication += 11>>
+        <<set $intoxicationHour = $hour>>
+        <<set $intoxicationMinute = $minute>>
+        <<goto "Go to the bar">>
+    <</link>>
+<<else>>
+    Mojito
+<<endif>>
+<sup>med</sup> - $10
+<br />
+*
+<<if $mainChar.money >= 14>>
+    <<link "Rum">>
+        <<set $mainChar.money -= 14>>
+        <<set $mainChar.intoxication += 16>>
+        <<set $intoxicationHour = $hour>>
+        <<set $intoxicationMinute = $minute>>
+        <<goto "Go to the bar">>
+    <</link>>
+<<else>>
+    Rum
+<<endif>>
+<sup>med</sup> - $14
+<br />
+* <<if $mainChar.money >= 20>><<link "Vodka">><<set $mainChar.money -= 20>><<set $mainChar.intoxication += 22>>
+        <<set $intoxicationHour = $hour>>
+        <<set $intoxicationMinute = $minute>><<goto "Go to the bar">><</link>><<else>>Vodka<<endif>><sup>hard</sup> - $20
+<br />
+* <<if $mainChar.money >= 30>><<link "Absinthe">><<set $mainChar.money -= 30>><<set $mainChar.intoxication += 35>>
+        <<set $intoxicationHour = $hour>>
+        <<set $intoxicationMinute = $minute>><<goto "Go to the bar">><</link>><<else>>Absinthe<<endif>><sup>hard</sup> - $30
+
+<br />
+<br />
+<<endif>>
+
+<<if $mainChar.intoxication >= 90>>
+	<<set _intoxicationEvent to either(true, false, false)>>
+	<<if _intoxicationEvent == true>>
+		[[Go back->Beach 90intoxication]]
+	<<else>>
+		[[Go back->Beach]]
+	<<endif>>
+<<else>>
+	[[Go back->Beach]]
+<<endif>>

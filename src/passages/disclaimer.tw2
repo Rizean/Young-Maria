@@ -1,0 +1,15 @@
+::Disclaimer <1500,400>
+<h1 align="center">DISCLAIMER</h1>
+<h2 align="center">Warning: Adult content! Fetishes!</h2>
+<hr>
+<div align="center">&emsp;This is a work of fiction; any resemblance to actual persons, places, or events is unintended. All characters in the game are fictional too. All coincidence with reality is random.
+&emsp;All characters in this game are fictional and any similarities to any persons living or dead are purely coincidental.
+&emsp;All explicit images are performed by consenting adults aged 18 or older. Images are for illustrative purposes only.</div>
+<hr>
+<strong><u>This game has no incest content, the main character was adopted and has no blood relatives presented in the game</u></strong>
+<hr>
+<<run UI.settings()>>
+<div align="center">Are you 21+ years old and want to play?</div>
+<div align="center">[[Yes!->Create the character]]|[[No->Beginning]]</div>
+<<set $siblingName = 'Mio'>>
+<<set $siblingAge = '18'>>

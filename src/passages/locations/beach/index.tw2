@@ -1,0 +1,77 @@
+::StoryIncludes
+src/passages/locations/beach/bar.tw2
+src/passages/locations/beach/changeClothes.tw2
+src/passages/locations/beach/goSwimming.tw2
+src/passages/locations/beach/sunbath.tw2
+src/passages/locations/beach/sunbathWithParents.tw2
+
+
+
+::Beach [nobr] <3900,2200>
+<<if $timeOfDay == "Day">>
+	<div class="default-image-wrapper">
+		<img src="pics/Beach.jpg">
+	</div>
+<<else>>
+	<div class="default-image-wrapper">
+		<img src="pics/NightBeach.jpg">
+	</div>
+<<endif>>
+
+<<if $timeOfDay == "Night">>
+	<strong>Be careful, the beach is a dangerous place at night!</strong>
+	<br />
+<<endif>>
+
+You walk along the sand. The sound of the waves pleases you, filling your mind with calmness...
+<br />
+
+<<if $wardrobe.available.includes('Bikini')>>
+	<<if $mainChar.look.clothes.body.name !== 'Bikini'>>
+		<<if $mainChar.energy >= 25>>
+			[[Change clothes in a bikini->Change clothes]]<br />
+		<<endif>>
+	<<else>>
+		[[Put clothes on->Change clothes]]<br />
+
+		<<if $day == 7>>
+			<<if $hour >= 13 && $hour < 16>>
+				You see your parents sunbathing on the beach. <br />
+
+                <<if $mainChar.energy >= 25>>
+                    [[Take a sunbath with them]]<br />
+                <<else>>
+                    You are too tired to sunbath right now...<br />
+                <<endif>>
+			<<endif>>
+		<<endif>>
+
+        <<if $day == 6>>
+            <<if $hour >= 15 && $hour < 17>>
+                You see your $sibling.type on the beach. <br />
+            <<endif>>
+        <<endif>>
+
+		<<if $mainChar.energy >= 25 and $hour <= 20 and $hour >= 5>>
+			[[Go swimming]]<br />
+			[[Take a sunbath]]<br />
+		<<else>>
+			You are too tired for swimming or taking a sunbath or its too late...<br />
+		<<endif>>
+	<<endif>>
+<<else>>
+	<br />
+	You should buy a bikini!<br />
+<<endif>>
+
+[[Go to the bar]]
+<<if $hour < 7 or $hour > 20>>
+	(closed)
+<<endif>>
+<br />
+
+<<if $mainChar.look.clothes.body.name !== 'Bikini'>>
+	[[Go back->Go out]]
+<<else>>
+	You should change in regular clothes before going back to city
+<<endif>>

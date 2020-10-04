@@ -1,0 +1,22 @@
+::ignore bathroom spy [nobr] <1086,2390>
+@@.narrator;
+	Though you can feel someone watching you, you ignore your $personSpyBathroom ’s presence and keep washing in the shower.
+@@
+@@.image-wrapper-w50p;
+	[img['pics/bathroom/ignore_shower.gif']]
+@@
+<<set $minute += 10>>
+
+<<if $personSpyBathroom == 'dad'>>
+  <<set $mainChar.relationships.dad += 1>>
+  @@.add; +1 relations with dad @@ <br />
+<<elseif $personSpyBathroom == 'mom'>>
+  <<set $mainChar.relationships.mom += 1>>
+  @@.add; +1 relations with mom @@ <br />
+<<elseif $personSpyBathroom == 'sibling'>>
+  <<set $mainChar.relationships.sibling += 1>>
+  @@.add; +1 relations with $sibling.type @@ <br />
+<<endif>>
+<br />
+<br />
+[[Back->Bathroom]]

@@ -1,0 +1,17 @@
+::use toilet [nobr] <1480,1260>
+@@.image-wrapper-w50p;
+	[img['pics/bathroom/toilet.jpg']]
+@@
+<br />
+[[Use the toilet]] <br />
+[[Back->Bathroom]]
+
+::Use the toilet [nobr] <1500,1600>
+@@.image-wrapper-w50p;
+	[img['pics/bathroom/use_the_toilet.jpg']]
+@@
+<<set $minute += 3>>
+After using the toilet, you wipe yourself with paper and get up.
+<br />
+<br />
+[[Bathroom]]

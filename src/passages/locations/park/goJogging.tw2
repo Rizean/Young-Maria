@@ -1,0 +1,18 @@
+::Go jogging <3400,1800>
+<<if ! $wardrobe.available.includes('Sport outfit')>>Oops, it looks like you don't have a propper outfit.. Visit [[Clothes Shop]]
+
+[[Go back->Park]]
+<<else>><<set $hour += 1>>You decide you want to go for a run. With the change of clothes you brought, you head to the public toilets and swap into your athletic wear. You then put your other clothes in your bag, exit the toilets and begin your jog.
+<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/jogging1.webp"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/jogging2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/jogging3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/jogging4.gif"></div><<endif>>
+
+As you run through the park, you feel the cold wind on your soft skin. It helps to keep you cool as you start to work up a sweat. After about an hour of running, you feel exhausted but you also feel stronger and more beautiful.
+<<nobr>>
+  <<if visited() % 10 == 0 and $wasJoggingEnergyIncreased != true>>
+	  <<set $mainChar.maxEnergy += 10>>
+	  <strong>Your maximum energy has increased!</strong>
+	  <<set $wasJoggingEnergyIncreased = true>>
+  <</if>>
+<</nobr>>
+<p class="add">+1 Beauty</p> <p class="minus">-25 Energy</p><<set $mainChar.beauty += 1>><<set $mainChar.energy -= 25>>
+
+[[Go back->Park]]<<endif>>

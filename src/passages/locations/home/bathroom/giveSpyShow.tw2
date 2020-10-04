@@ -1,0 +1,30 @@
+::give a show bathroom spy [nobr] <1206,2391>
+@@.narrator;
+	&emsp;You like your $personSpyBathroom ’s attention and you want to give a little “show” for your viewer. <br />
+	&emsp;You seductively present your body to them and use the water, wetting your most intimate parts. They watch you lustfully, their eyes devouring your naked, wet body.
+@@
+@@.image-wrapper-w50p;
+	[img[String.format('pics/teasing/bathroom/shower/base/{0}.gif', random(1, 2))]]
+@@
+
+<<set $minute += 10>>
+
+<<if $personSpyBathroom == 'dad'>>
+  <<set $mainChar.relationships.dad += 1>>
+  <<set $dad.corruption += 1>>
+  @@.add; +1 relations with dad @@ <br />
+  @@.add; +1 dad corruption @@
+<<elseif $personSpyBathroom == 'mom'>>
+  <<set $mainChar.relationships.mom += 1>>
+  <<set $mom.corruption += 1>>
+  @@.add; +1 relations with mom @@ <br />
+  @@.add; +1 mom corruption @@
+<<elseif $personSpyBathroom == 'sibling'>>
+  <<set $mainChar.relationships.sibling += 1>>
+  <<set $sibling.corruption += 1>>
+  @@.add; +1 relations with $sibling.type @@ <br />
+  @@.add; +1 $sibling.type corruption @@
+<<endif>>
+<br />
+<br />
+[[Back->Bathroom]]

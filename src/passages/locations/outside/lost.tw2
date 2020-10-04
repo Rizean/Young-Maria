@@ -1,0 +1,73 @@
+::very quite district <2788,1446>
+<<set _event to either(1)>><<if _event == 1>>You make your way through this part of the city but soon find yourself lost amongst the buildings. This part is unknown to you and there are no obvious landmarks to help you find your way. As you're looking around for something familiar, a random guy catches your eyes. You find him quite handsome...
+
+<<set _image to either(1,2,3)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/blackGuy1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/blackGuy2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/blackGuy3.jpg"></div><<endif>>
+
+You stare for too long and now the man has notices you too...
+
+You bite your bottom lip. Guess all you can do now is [[ask him to help you.->Black guy]]<<endif>>
+
+::Black guy <2791,1566>
+<<if $isJacksHouseAvailable != true>>You ask the man for directions back to the main part of the city.
+
+He comes up to you. "Ooh, you got a pretty face, baby..." He moves behind you and slapps your butt.
+
+Uh oh, this isn't good...
+
+"I can help ya, baby, but first..." He closes the distance between you two and now you can feel the bulge in his pants. "you gotta help me..."
+
+[[Well, it looks like you have no choice.]]<<if $isGunOwned == true>>
+[[Pull out your shining black gun and force him to show the way->living room]]<<endif>>
+<<link "Tell him to fuck off and try your best to find the way back">><<set $hour += 4>><<set $minute = 0>><<goto "Go out">><</link>><<else>>"Hey, baby girl!"
+Oh, it's Jack, what a relief!
+"The centre? Again? Heh, that way, baby girl."
+
+[[Thank him and make your way home->living room]]
+or <<link "ask him if he can invite you to his place">><<set $isJacksHouseSurelyOpen = true>><<goto "Jack's house">><</link>><<endif>>
+
+::Well, it looks like you have no choice. [nobr] <2801,1687>
+<<set $minute += 20>><<set $isJacksHouseAvailable = true>>You agreed, if a little relucatantly, and the man took your hand leading you to a house further down the road. You enter the place but as soon as you step into the lounge area, he forces you onto your knees. He steps in front of you, pulls out his hard cock and slaps it across your face. "Oh yeah, bitch. You're gonna suck my cock real good." <br />
+
+<<set _image to random(1, 5)>>
+
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ1.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ2.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ3.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ4.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<elseif _image == 5>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ5.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<endif>>
+<br />
+The man forces his large black cock into your mouth. The sheer size of it already causes you to gag. Fortunately, you don't have to do anything as the man grabs your head and forces you to suck him off. Unfortunately, he picks up the pace rather abruptly and soon he's deepthroating you with ferocious speed. <br /> <br />
+Before long, the man slows and shoots a thick, warm stream of semen down your throat. With his cock still in your mouth, you have no option but to swallow or choke. <br /> <br />
+Eventually he pulls out and some of the cum you didn't swallow seeps out of your mouth. God, that was a rough blowjob...
+Wait, are you dripping? <br />
+<p class="add">+1 Corruption</p> <br />
+<br />
+<<set $minute += 40>>
+<<set $mainChar.corruption += 1>>
+
+As you get up, the man gives you his address. "That was great. You got a nice tight throat. You should visit again soon. Oh, name's Jack by the way." <br /> <br />
+<strong>Jack's house</strong> is now available! <br /> <br />
+
+He gives you directions to the main city and you [['leave his house on shaky legs.'|living room]] <br />
+<br />

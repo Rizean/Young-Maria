@@ -1,0 +1,68 @@
+::Apartment №23 (Ron) Door <2719,2104>
+&emsp;You approach the wooden door with a gold plated number on the door. Apartment 23, Ron's place. You also notice a piece of paper attached to the wood. It reads:
+
+<<if $isKeyOwned == true>>"HERE ON WEEKENDS"
+
+<<if $day == 6 or $day == 7>>&emsp;You ring the bell. A few seconds later the door swings open to reveal Ron on the other side. He [[lets you in with smile->Apartment №23 (Ron)]]<<else>>&emsp;Oh... today is $dayOfWeek. My bad.<<endif>><<else>>"WILL BE HERE SOON"<<endif>>
+
+[[Go back to the hall->High Tai]]
+
+::Apartment №23 (Ron) <2603,2238>
+<div class="default-image-wrapper"><img src="pics/ronsPlace.jpg"></div>
+
+&emsp;You enter the apartment. You move over to the sofa and take a seat. Ron goes into the kitchen to make you a cup of tea. When he comes back out, he perches next to you and hands you the mug.
+&emsp;You soon fall into natural conversation. At one point, you notice Ron's arm is draped dangerously close to your shoulders behind you. You also notice his other hand is dangerously close to your leg...
+
+<<if $stashCleanFourth == true>><<link "Ask Ron if you can sleep at his place tonight">><<goto "Ask Ron if you can sleep at his place tonight">><</link>><<endif>>
+
+[[Go back->High Tai]]
+
+::Ask Ron if you can sleep at his place tonight [nobr] <2600,2111>
+&emsp;"Sure, who can say 'no' to so pretty lady". You laugh and kiss him. <br />
+&emsp;You laugh and find yourself leaning in toward him. Before long, your lips lock onto his and you kiss him deeply. <br />
+<<if $timeOfDay == "Day">>
+&emsp;You spend all day playing board games and drinking tea. Occasionally, Ron offers you some light alcohol to which you accept. When you got bored of games, you and Ron would sit and cuddle on the sofa watching terrible TV shows or listening to some cool music. You didn't notice how quickly time passed by... <br />
+<<endif>>
+&emsp;Ron turns to face you. "Where did you wanna sleep, miss?" <br />
+&emsp;What a silly question... You take his hand in yours and make your way towards a closed door. God, you hope that's the bedroom... <br />
+&emsp;As you open the door and see the bed inside, you silently sigh with relief. You turn to face him, walking backwards towards the bed, and strip off your clothing. <br />
+&emsp;As your clothes fall away, revealing your perfect body, you see Ron's "excitement" begin to strain against his pants. <br />
+&emsp;"Oh, I see. You want to sleep with me, ey?" Suddenly, Ron pushes you onto the bed and hastily strips off his own clothing. Once his pants are off, his growing member reveals itself. You lick your lips in anticpation of feeling his big cock inside you. <br />
+
+<<if $mainChar.intoxication != 0>>
+    <<set $mainChar.intoxication = 0>>
+<<endif>>
+
+<<if $timeOfDay == "Day">>
+    <<set $day += 1>>
+    <<set $dayCount += 1>>
+    <<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>>
+    <<dateChangeWidget>>
+
+    <<if $day == 8>>
+        <<set $day = 1>>
+    <<endif>>
+<<endif>>
+
+<div class="default-image-wrapper">
+    <img src="pics/ronSex.gif">
+</div>
+<<HaveASexWidget "vaginal" "Ron">>
+
+&emsp;Ron jumps onto the bed on top of you and, with a lustful hunger, grabs one of your tits and squeezes it before taking the nipple into his mouth. <br />
+&emsp;He teases your erect nipple taking it between his teeth and tugging on it. Small moans escape your lips that only grow in volume as his teasing becomes more rough and painful. <br />
+&emsp;He doesn't waste anytime positioning himself by your entrance. Then, with one quick and precise thrust, he enters you. His big cock grinds against your walls and he pushes himself further in. <br />
+&emsp;Your moans cannot be denied now. Ron laughs and tugs on your nipple causing you to let out an ecstatic groan. It seems he wants his neighbours to hear his young lover having a good time. And you want it too. <br />
+&emsp;During your passionate love making, Ron picks up the pace and soon he's pounding into you so far that his long cock repeateadly hits your cervix. <br />
+&emsp;After a few more powerful thrusts, he pushes past the barrier and enters your womb. Ramming into you over and over again, it isn't long before you feel yourself reaching your peak. <br />
+&emsp;He seems to notice this and grabs your nipple, twisting it hard. This sends you over the edge and you cum, your body shaking and clamping down around Ron's cock. To which he responds by also cumming. His thick, sticky semen shoots into your womb. <br />
+&emsp;You both take a minute to calm yourselves. After you've caught your breath, Ron pulls out of you and snuggles up against you to spoon you from behind. In this comfortable, cosy position, you both soon fall asleep... <br />
+
+@@.add; +1 Corruption @@ <br />
+
+<<set $mainChar.corruption += 1>>
+<<set $hour = 10>>
+<<set $minute = 0>>
+<br />
+&emsp;You stir from your slumber to feel Ron's warm lips against yours. "Good morning, princess..." <br />
+&emsp;You and Ron have a lovely breakfast but soon it's time to go. [[You leave him but he won't leave your mind for a long time...->High Tai]]

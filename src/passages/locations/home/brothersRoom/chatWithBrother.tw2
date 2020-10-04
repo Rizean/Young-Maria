@@ -1,0 +1,355 @@
+::Chat with brother [nobr] <2280,0>
+<<switch $chatWithBrotherAbout>>
+	@@.mc-text; Hey, bro. Are you free for a chat? @@
+	@@.bc-text; Yo, sis. Sure. @@
+	<<case 'school'>>
+		<<set _randChat = either('teachers', 'classmates', 'classes', 'teaching', 'girls', 'bullies') >>
+			<<switch _randChat>>
+				<<case 'teachers'>>
+					@@.mc-text; Do like your teachers? @@
+					@@.bc-text;
+						Actually, yeah. Most of my teachers are great guys. They're calm and understanding. <br />
+						It's nice to learn from them. <br />
+						But... <br />
+						My English teacher annoys me. <br />
+						He constantly thinks his subject is more important than the others.
+					@@
+					@@.mc-text; Oh... Have you tried to reason with him? @@
+					@@.bc-text;
+						Of course! <br />
+						But he always has the same response; "Hey kid, I'm the teacher here. English is the epitome of your life. You can't surive without it. Besides, how can you call yourself English if you don't know it?"
+					@@
+					@@.mc-text;
+						Seriously? Does he not understand how stupid that sounds?
+					@@
+					@@.bc-text;
+						Apparently not...
+					@@
+					@@.mc-text;
+					  Damn, what an ass... But hey, I wouldn't worry about it. <br />
+					  Someday you're gonna show him that you can be successful without having your life revolve around English and him.
+					@@
+					@@.bc-text;
+						For sure...
+					@@
+				<<case 'classmates'>>
+					@@.mc-text; Do you like your classmates? @@
+					@@.bc-text;
+						Yeah, sure. Most of them are nice, decent people. <br />
+						A few of them have become some of my best friends. Others are mostly just classmates, you know?  <br />
+						We help each other in the classroom but that's where our relationship ends. <br />
+						Sometimes though, I admit, we hardly get any work done in class... <br />
+					@@
+					@@.mc-text;
+					Is it true that most girls in your year are sluts?
+					@@
+					@@.bc-text;
+					  Nah, those are just rumors... <br />
+					  I know a lot of the girls and they aren't sluts. <br />
+					  I mean, they may look like and act like they are but they're not. In fact, most of them are actually really down-to-earth girls.
+					@@
+					@@.mc-text;
+						Really? Cause it seems to me they might be pretending. I've heard many rumours...  <br />
+					@@
+					@@.bc-text;
+					  Maybe... <br />
+					  But since when did you start believing in rumours?
+					@@
+				<<case 'classes'>>
+					@@.mc-text; Do you like any subjects at school? @@
+					@@.bc-text;
+						Of course! <br />
+						I like pretty much all my subjects... Except English and Chemistry. <br />
+						When I do Chemistry, everything else around me is more interesting. I get so distracted. <br />
+						If Heisenberg taught Chemistry... Well, now that would be an entirely different experience.
+					@@
+					@@.mc-text;
+						Yeah? You could probably become the most popular drug maker in the city.
+					@@
+					@@.bc-text;
+					  And what's wrong with that? <br />
+					  You could join me! <br />
+					  This city needs heroes...
+					@@
+					@@.mc-text; And prisoners... @@
+					@@.bc-text;
+						Ha! Okay, fair enough. Maybe in another life...
+					@@
+				<<case 'teaching'>>
+					@@.mc-text;
+						Do you like the way they teach at school?
+					@@
+					@@.bc-text;
+						Not really... <br />
+					  	The program is, surprisingly, pretty outdated. It'd be better if they taught us with more modern methods. <br />
+					  	But this isn't the teachers' fault. They do the best with what they're given. <br />
+					  	If anyone's to blame it's the government. They really need a new curriculum.
+					@@
+					@@.mc-text;
+						Yeah, I can agree with that. But we can always study more at home and teach ourselves.
+					@@
+					@@.bc-text;
+						They already give us enough homework. Study more and no-one will have any time for hobbies. Maybe that's why they do it...
+					@@
+				<<case 'girls'>>
+					@@.mc-text; Are there any girls you like? @@
+					@@.bc-text;
+						There are a few that have got my attention. <br />
+						There's a lot of girls with attractive faces and gorgeous bodies. <br />
+						And most of them are super nice to talk to. I enjoy spending time with them. <br />
+						However, there are some that... Well, they don't scare me as such... Still I'd rather not go near them. <br />
+						You should see them! They have piercings in several places and make-up as dark as a black hole. Most of their attire is thoroughly torn and they wear spikes on almost every article of clothing. <br />
+					@@
+					@@.mc-text;
+						That sounds to me like they're goths... <br />
+						Or at least they like more gothic clothing. <br />
+						But is it really your place to judge? I mean, it sounds to me like they're just being themselves. I say all the more power to them. I wish I had that sort of confidence...
+					@@
+					@@.bc-text;
+						Why? So you could go around wearing spiked collars and leather clothing?
+					@@
+					@@.mc-text;
+						Why not? Sounds hot to me.
+					@@
+					@@.bc-text; Well... Yeah... I guess they do look quite hot... In a dark and dangerous way. @@
+				<<case 'bullies'>>
+					@@.mc-text; Have you ever been bullied? @@
+					@@.bc-text;
+						Oh... Yeah, I was once. <br />
+						I was at my locker, getting books for the next class when they came up to me. They tried to insult me, but when I ignored them, they decided to be more physical. <br />
+						Fortunately, my reaction speed is pretty good. One of them threw a fist that I dodged. When I threw a punch back, I clocked one of them right on the nose. <br />
+						The dude crumpled to the floor, holding his nose and crying like a baby. It was the funniest thing. <br />
+						I got detention for a week, sure, but now they never both me again. They still glare at me as I walk past.
+					@@
+					@@.mc-text;
+						Damn, nice one bro! <br />
+						Could you teach me how to fight?
+					@@
+					@@.bc-text;
+						Sure! As long as you don't go crying to mommy and daddy after I beat you.
+					@@
+					@@.mc-text; Same goes for you. @@
+					@@.bc-text; Ha! You think you could beat me? @@
+					@@.mc-text; Yeah. Just name the time and place! @@
+					@@.mc-text; Alright, alright. We'll see. @@
+				<<default>>
+					@@.error; UNKNOWN CASE OPTION! @@
+			<</switch>>
+	<<case 'work'>>
+		<<set _randChat = either('boss', 'collegues', 'place', 'work', 'company') >>
+		<<switch _randChat>>
+			<<case "boss">>
+				@@.mc-text; Do you get along with your boss? @@
+				@@.bc-text;
+					Yeah, I suppose. <br />
+					He’s a great guy. Not much older than me actually. <br />
+					I guess that's why we work well together. Not to mention, it makes it easier to talk to him. Since he gets all my references. <br />
+					We actually went to a bar once and he told me that he was thinking of giving me his job. It was only so he could climb the corperate ladder himself, but still...
+				@@
+				@@.mc-text;
+					Hey, bro, that's awesome. Congrats! <br />
+				@@
+				@@.bc-text;
+					Unfortunately, I don't know if he was telling the truth. I mean, the man had a lot to drink that night...
+				@@
+				@@.mc-text;
+					Well, you know what they say; drunk minds speak sober thoughts... Or something like that... <br />
+					Besides, you're a great employee. You work really hard and if anyone deserves his position, it's you.
+				@@
+				@@.bc-text;
+					Thanks sis!
+				@@
+			<<case "collegues">>
+				@@.mc-text;
+					Do you get on with your colleagues?
+				@@
+				@@.bc-text;
+					Sure. <br />
+					They're great people and seem to work hard. There's this one girl in my department that probably works as hard as I do!
+				@@
+				@@.mc-text;
+					Oh? Is that so? <br />
+					And do you like this girl?
+				@@
+				@@.bc-text;
+					She's pretty. Has a nice body too...
+				@@
+				@@.mc-text;
+					And yet you haven't asked her out? <br />
+					Why not?! She's hot, hard-working. Sounds like a nice person too. Seems to me like she's a perfect match.
+				@@
+				@@.bc-text;
+					Maybe... I'll think about it...
+				@@
+			<<case "place">>
+				@@.mc-text; What are your offices like?? @@
+				@@.bc-text;
+				  Pretty good! The desks are close together but with enough space to not feel claustrophobic. <br />
+				  The building is bright and clean, most of the time. There's also plenty of parking space so no-one's fighting over parking spots. <br />
+				  There's also a shopping center nearby which is super useful when I want to grab lunch or just go for a walk in my break.
+				@@
+				@@.mc-text;
+					Oh, hey, I could come visit you during your break sometime! We could grab lunch or something?
+				@@
+				@@.bc-text;
+					That would be nice. Just let me know in advance.
+				@@
+				@@.mc-text;
+					Obviously!
+				@@
+			<<case "work">>
+				@@.mc-text;
+					Do you like your job?
+				@@
+				@@.bc-text;
+					Yeah, I really do. It's a good fit for me.
+				@@
+				@@.mc-text;
+					Are you going to stay with this company?
+				@@
+				@@.bc-text;
+					I think so. Unless, of course, I get fired but then they'd lose a top notch employee! <br />
+				  Seriously though, it's great. The job is challenging without being too difficult. Plus the salary's pretty good. <br />
+				@@
+				@@.mc-text;
+					Ah, sounds like you're enjoying it there. That's good.
+				@@
+				@@.bc-text;
+					It sure is.
+				@@
+			<<case "company">>
+				@@.mc-text; What does your company do exactly? @@
+				@@.bc-text;
+					My company is engaged in cloud IT solutions. <br />
+					We deal with things like management, storage, transmission, dissemination of information. <br />
+					Most of the people in our company are IT professionals, but the marketing department is also quite large.
+				@@
+				@@.mc-text;
+					I didn't get much of what you said but it sounded cool! <br />
+					Do you have any vacancies? It would be pretty awesome to work alongside my bro.
+				@@
+				@@.bc-text;
+					Actually, there is... <br />
+					The marketing department is currently looking for a new recruit. But you'd have to have the appropriate experience and qualifications. <br />
+					We do have testers though. <br />
+					Usually, they don’t require any previous experience or qualifications. Only the desire to destroy and create chaos! Just kidding! <br />
+					But seriously, if you want to try out, you can. You get training in advance.
+				@@
+				@@.mc-text;
+					Okay! <br />
+					I'll let you know if I apply. Thanks, bro.
+				@@
+				@@.bc-text;
+					No problem, sis.
+				@@
+			<<default>>
+				@@.error; UNKNOWN CASE OPTION! @@
+		<</switch>>
+	<<case 'family'>>
+		<<set _randChat = either('dad', 'mom', 'parents', 'granddad', 'ralf') >>
+		<<switch _randChat>>
+			<<case 'dad'>>
+				@@.mc-text; How're you getting on with dad? @@
+				@@.bc-text;
+					Pretty well. We have a lot of things in common so we bond a lot. <br />
+					He also gives me plenty of advice for life. In exchange I keep him up-to-date with the newest and hottest trends.
+				@@
+				@@.mc-text;
+					Seriously? Like what?
+				@@
+				@@.bc-text;
+					Well, for example, dad's currently teaching me how to repair things. Sinks, toilets, TVs, etc. Soon there won't be anything I can't fix! <br />
+				  Though at the moment he's helping me with my car. <br />
+				 Whilst we're doing that, I tell him about the current music and clothings trends, the latest memes, the hottest celebrities and so on.
+				@@
+				@@.mc-text;
+					Really? And what does he think about it all?
+				@@
+				@@.bc-text;
+					Well, you know dad. When he sees a pretty woman, he always says "no beauty can compare to that of your mother's".  <br />
+					But all in all, he's pretty open-minded. He's trying to understand the ways in which the world has changed from when he was a kid. Though he hates memes. <br />
+					He says "what's the point in putting a caption with a picture? Surely not everyone understands the meaning?" He thinks that a joke having to rely on relativity isn't a joke at all and lacks originality.
+				@@
+				@@.mc-text;
+					Seriously? That's hilarious. <br />
+					Memes are, like, the foundation of our generation!
+				@@
+				@@.bc-text;
+					I know right! But hey, he's old.
+				@@
+			<<case "mom">>
+				@@.mc-text; How're you getting on with mom? @@
+				@@.bc-text;
+				  Mom's pretty cool. We don't have as much in common as I do with dad, but she tries. <br />
+				  We mostly talk about what's going on in our lives. Relationships, hobbies, that sort of thing. <br />
+				  In fact, we have a deal going right now. <br />
+				  I help her with her computer problems and, in turn, she gives me advice on how to talk to girls. <br />
+				  Some of her tips are a little outdated but, to my surprise, they actually work! <br />
+				  Of course, she's much more up-to-date than dad so that probably helps.
+				@@
+				@@.mc-text;
+					That's good. Mom definitely tries her best for us. <br />
+					But if you needed advice with girls, why didn't you just come to me?
+				@@
+				@@.bc-text;
+					Sorry, I didn't realise you had such a fragile ego, heh!
+				@@
+			<<case "parents">>
+				@@.mc-text; What do you think of our parents? @@
+				@@.bc-text;
+					They're good together! <br />
+					Though dad is more logical and rational and mom is more empathetic, they get on well. I guess what they say is true; opposites do attract! <br />
+					As parents? They're pretty cool. They rarely swear, at least in front of us, and they're always showing support.
+				@@
+				@@.mc-text;
+					Yeah, they're pretty great. <br />
+					I don't think anything could ruin their relationship. <br />
+					We're lucky to have such great parents.
+				@@
+				@@.bc-text;
+					Absolutely!
+				@@
+			<<case "granddad">>
+				@@.mc-text; How long has it been since you've seen Grandad? @@
+				@@.bc-text;
+					Oh, quite a while now. <br />
+					Was probably a child when I last saw him. But I guess now that we're closer to his farm, we'll probably see him a lot more. <br />
+					Unfortunately, that also means helping out more around the farm. Don't get me wrong, I like his farm but I'm not a country boy. <br />
+					Getting down and dirty isn't really my thing but if it gets mom and dad off my back, then I'll gladly help anyday. <br />
+					Plus, we get first dibs on his harvest! Nothing beats fresh produce...
+				@@
+				@@.mc-text;
+					Yeah, the farm is a pretty dirty place. But I like how open it is. Do you remember the stories he used to tell us?
+				@@
+				@@.bc-text;
+					Do I?! He used to get so carried away whilst telling them that he'd always forget his point!
+				@@
+				@@.mc-text;
+					Oh my god, yeah!
+				@@
+			<<case "ralf">>
+				@@.mc-text;
+					What do you think of Ralf? The dog on Grandad's farm.
+				@@
+				@@.bc-text;
+					Oh, I remember him when he was just a puppy! <br />
+					In fact, I remember us going to pick him up on the way to the farm. I never imagined he'd grow to be so big!
+				@@
+				@@.mc-text;
+					Right? He's huge! <br />
+					Apparently, when we were playing outside once, he barrelled into me and knocked me to the ground. Then he licked me so much I cried...
+				@@
+				@@.bc-text;
+					Ha! Seriously? Damn, I wish I'd seen that! <br />
+					At least he tried to apologise for what he did. He's a good boy.
+				@@
+			<<default>>
+				@@.error; UNKNOWN CASE OPTION! @@
+		<</switch>>
+	<<default>>
+		@@.error; UNKNOWN CASE OPTION @@
+<</switch>>
+[[Back->Brother room]]
+<<set $mainChar.relationships.sibling += 1>>
+<<set $minute += 15>>
+<<set $mainChar.energy -= 10>>

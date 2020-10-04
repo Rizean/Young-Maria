@@ -1,0 +1,28 @@
+::StoryIncludes
+src/passages/locations/home/kitchen/chatWithDad.tw2
+src/passages/locations/home/kitchen/chatWithMom.tw2
+src/passages/locations/home/kitchen/chatWithSibling.tw2
+src/passages/locations/home/kitchen/helpMom.tw2
+src/passages/locations/home/kitchen/joinFamilyDinner.tw2
+src/passages/locations/home/kitchen/kitchenSchedule.tw2
+src/passages/locations/home/kitchen/niceDay.tw2
+src/passages/locations/home/kitchen/washDishes.tw2
+
+
+
+::Kitchen [nobr] <2200,1140>
+@@.image-wrapper-w70p; <img src="pics/kitchen.jpeg"> @@
+You are in a huge [[kitchen->kitchen description]]. <br />
+<<include "Kitchen schedule">>
+<br />
+[[Go back->living room][$minute += 1]]
+
+::kitchen description [nobr] <2200,1020>
+@@.image-wrapper-w70p; <img src="pics/kitchen.jpeg"> @@
+The kitchen is large with white tiled walls. Though pretty, they are a pain to clean for your mother. <br />
+There is a big window that lets in lots of natural light, making the space even more bright. <br />
+The counters are black and white, giving the kitchen a very modern look. Upon them sit a range of household appliances of the newest and highest quality. On many of the counters a variety of plants. Your mom is very proud of her plant collection. <br />
+In the middle of the room is a kitchen island with a sink and some bar stools to sit at. There is also your mothers fruit bowl and a vase full of luscious leaves. <br />
+There is an archway that leads into another room. In here is where your mother does the laundry. Many of the cleaning products can also be found in here.
+
+[[Back->Kitchen]]

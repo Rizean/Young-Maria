@@ -1,0 +1,69 @@
+::Check fresh news [system] <980,2098>
+<div class="default-image-wrapper"><img src="pics/SocialNetworksNews.png"></div>
+
+<<if $mainChar.energy > 0>>You browse through your feed.
+
+<<set _dressDescription to either("green","white","pink","black","velvet","blue","red","yellow","dark","light","neat","beautiful","light","little","expensive")>><<set _sales to either("couch","sofa","TV set","fridge","car")>><<set _feed to either("- A video with a sneezing kitten -","- Some lady tries to sell her very expensive dogs -","- A pic of a cute boy -","- Some girl have lost her keys yesterday and asking if anybody seen them -","- A pretty corgi is playing with his ball outdoors -","- Top 10 ideas for breakfast -","- Ad of a new film -","- A porno pic -","- A ton of motivation videos -","- Sales at the local grocery shop -","- A gorgeous lady in a _dressDescription dress -","- Ten places where you can meet your love -","- Some man sells his _sales -","- Some girl complains about her boyfriend.. He is a real jerk! -","- Some alpha boy is looking for alpha girl -")>>_feed
+
+<<radiobutton "$comment" "Plain">>Leave a plain comment
+<<radiobutton "$comment" "Funny">>Leave a funny comment
+<<radiobutton "$comment" "Sarcastic">>Leave a sarcastic comment
+<<radiobutton "$comment" "Asking">>Leave an asking comment<<if $mainChar.corruption >= 10>>
+<<radiobutton "$comment" "Flirtatious">>Leave a flirtatious comment<<endif>>
+
+<<link "Scroll more">>
+<<if $mainChar.laptop.socials.commentPoints < 20>>
+	<<if $comment == "Plain">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.5>>
+	<<elseif $comment == "Funny">>
+		<<set $mainChar.laptop.socials.commentPoints += 1>>
+	<<elseif $comment == "Sarcastic">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.7>>
+	<<elseif $comment == "Asking">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.6>>
+	<<elseif $comment == "Flirtatious">>
+		<<set $mainChar.laptop.socials.commentPoints += 2>>
+	<<endif>>
+<<elseif $mainChar.laptop.socials.commentPoints >= 20 and $mainChar.laptop.socials.commentPoints <= 30>>
+	<<if $comment == "Plain">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.2>>
+	<<elseif $comment == "Funny">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.4>>
+	<<elseif $comment == "Sarcastic">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.3>>
+	<<elseif $comment == "Asking">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.2>>
+	<<elseif $comment == "Flirtatious">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.4>>
+	<<endif>>
+<<endif>>
+<<goto "Check fresh news">><</link>>
+<<link "Go back">>
+<<if $mainChar.laptop.socials.commentPoints < 10>>
+	<<if $comment == "Plain">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.2>>
+	<<elseif $comment == "Funny">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.3>>
+	<<elseif $comment == "Sarcastic">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.4>>
+	<<elseif $comment == "Asking">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.3>>
+	<<elseif $comment == "Flirtatious">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.4>>
+	<<endif>>
+<<elseif $mainChar.laptop.socials.commentPoints >= 10 and $mainChar.laptop.socials.commentPoints <= 30>>
+	<<if $comment == "Plain">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.1>>
+	<<elseif $comment == "Funny">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.2>>
+	<<elseif $comment == "Sarcastic">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.2>>
+	<<elseif $comment == "Asking">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.1>>
+	<<elseif $comment == "Flirtatious">>
+		<<set $mainChar.laptop.socials.commentPoints += 0.2>>
+	<<endif>>
+<<endif>>
+<<goto "Spend some time on social networks">><</link>><<else>>You are too tired...
+
+[[Go to your bedroom->Bedroom]]<<endif>>

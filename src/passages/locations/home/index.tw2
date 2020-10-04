@@ -1,2 +1,28 @@
 ::StoryIncludes
+src/passages/locations/home/bathroom/index.tw2
 src/passages/locations/home/bedroom/index.tw2
+src/passages/locations/home/brothersRoom/index.tw2
+src/passages/locations/home/kitchen/index.tw2
+src/passages/locations/home/livingRoom/index.tw2
+src/passages/locations/home/parentsBedroom/index.tw2
+src/passages/locations/home/sistersRoom/index.tw2
+src/passages/locations/home/goOut.tw2
+src/passages/locations/home/createCharacter.tw2
+
+::take a look at your new house <1523,638>
+<<if $siblingAge < 18 or $siblingAge > 26>>Sibling age must be between 18 and 26!
+[[Back->Create the character]]
+<<else>>
+  <<if $mainChar.age < 18 or $mainChar.age > 25>>Your age must be between 18 and 25!
+
+  [[Back->Create the character]]
+  <<else>><<if $wasNameRandomized == true>><<set $mainChar.firstName = $randomName>><<endif>>&emsp;Today was more challenging than you expected. Between the move, the long drive, unpacking and cleaning the new house, you feel weighed down and exhausted.
+  &emsp;Thankfully, now that you have done most of the chores, you have the opportunity to look around your new house.
+
+  <div class="default-image-wrapper"><img src="pics/moving.jpg"></div>
+
+   &emsp; You wondered how your parents were able to afford such a large home, but you have no complaints about all the new space you can move around in. The living room offers a spacious area to watch TV together with your family. As you peek into the open kitchen, you can see your mother unpacking boxes to fill the cupboards.
+	&emsp;When you start climbing the stairs, you can hear your father cursing. You glance into your parents bedroom to see him glaring at the instructions for the large TV he's installing.
+	&emsp;You go back out to the hall and see, through an open door, a large bathroom that is considerably nicer than the one you had before. There are two more closed doors that lead to yours and your sibling's bedrooms. All in all your parents did pretty good finding this house.
+    &emsp;Now that you've roamed the house, maybe you should check out your own [[room->Bedroom]].<<endif>>
+<</if>>

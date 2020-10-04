@@ -1,0 +1,128 @@
+::Play with Ralf <300,1400>
+<<set $minute += 30>><<set $mainChar.energy -= 10>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfIndoors.jpg"></div>
+
+&emsp;You were playing with Ralf for some time; running around the house and "fighting" in the living room - the most safe area here.
+
+<p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>>
+
+[[Back->Farm]]
+
+::Play with Ralf outside <300,1600>
+<<set $minute += 40>><<set $mainChar.energy -= 10>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfOutdoors.jpg"></div><<if visited() > 1>><<if $mainChar.relationships.ralfDog >= 30 and $wasRalfAccepted != true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","firstTouch")>><<elseif $mainChar.relationships.ralfDog >= 30 and $mainChar.relationships.ralfDog < 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive")>><<elseif $mainChar.relationships.ralfDog >= 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive","lustyActive")>><<endif>><<endif>>
+
+&emsp;You were playing with Ralf outside; throwing sticks, chasing field mice and running across the open space.
+
+<<if _RalfsBehaviour == "firstTouch">>&emsp;When you were fighting, Ralf turned over and froze, showing his belly. You thought perhaps he wanted some belly scratches but then you notice it...
+&emsp;Protruding from his sheath is a big, red, knotted, fully erected dog dick. Ralf is waiting for your reaction...
+
+[[Give him a handjob while no one sees->Ralf first handjob]]<<if $mainChar.corruption >= 50>>
+[[Give him a blowjob while no one sees->Ralf first blowjob]]<<endif>>
+[[Pretend you didn't notice->Farm]]<<elseif _RalfsBehaviour == "lustyPassive">>&emsp;The dog fell down, showing his erected cock. It seems that Ralf wants some sexual attention.
+
+[[Give him some loving touch]]
+[[Use your mouth]]
+[[Pretend you didn't noticed->Farm]]<<elseif _RalfsBehaviour == "lustyActive">>&emsp;Ralf seems too active... When you were fighting in the backyard, he almost bit you a couple of times. Now he knocks you down onto your belly and you feel his fully erected cock, throbbing and dirtying your clothes with precum! That's why he is so rough today...
+
+<<if $isCollarOwned != true>>[[Bare your ass and let him make you his bitch]]<<else>>[[Take a breeding pose]]<<endif>>
+[[Scold him and go away]]<<else>><p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<endif>>
+
+[[Back->Farm]]
+
+
+::Ralf first handjob <180,1780>
+<<set $minute += 10>><div class="default-image-wrapper">[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfsCock.gif')]]</div><<set $wasRalfAccepted = true>>
+
+&emsp;You peer around, making sure your Grandfather isn't watching. After checking that no-one's around, you move your hand closer and wrap it around the hot canine dick. Your soft fingers envelope Ralf's cock, which begins to shake in anticipation. It seems he's enjoying this. Your hand starts to move up and down the strange shaft.
+&emsp;A few minutes pass and you realise that the cock has grown bigger and become hotter. After a few final strokes, Ralf growls and you feel your hand suddenly covered in thick white dog cum.
+
+<div class="default-image-wrapper"><<if $isBestialityReal != true>>[img[String.format('https://MariaMod.' + 'site/p' + 'ics/ZooRalfHandjob.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfHandjobREAL.jpg')]]<<endif>></div><<HaveASexWidget "handjob" "Ralf">>
+
+&emsp;What you had just done seems wrong but a part of you finds it extremely hot. You're horny and can't help it. You want more...
+<p class="add">+1 Corruption</p> <p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<set $mainChar.corruption += 1>>
+
+[[Back->Farm]]
+
+::Ralf first blowjob <295,1790>
+<<set $minute += 10>><div class="default-image-wrapper">[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfsCock.gif')]]</div><<set $wasRalfAccepted = true>>
+
+&emsp;You have an urge to taste the canine dick so you look around to make sure no-one is watching. After a short hesitation, you lean down and take the canine cock into your mouth. Ralf starts to pant in pleasure and anticipation.
+&emsp;The more you suck the salty dog`s dick, the more wet you become. Why is it so hot? You begin to think about it; the way his knotted dick fills your mouth entirely.
+&emsp;Suddenly, your thoughts are disrupted when a thick stream of warm cum shots down your throat. You are a little overwhelmed by how much he seems to have but it soon stops. You quickly swallow as much as you can and clean the rest of his shaft. You don't want anyone seeing his leftovers...
+
+<div class="default-image-wrapper"><<set _image to either(1,2)>><<if _image == 1>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfSuck1.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfSuck1REAL.jpg')]]<<endif>><<elseif _image == 2>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfSuck2.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfSuck2REAL.jpg')]]<<endif>><<endif>></div><<HaveASexWidget "bj" "Ralf">>
+
+&emsp;With the taste of cum still in your mouth, you're horny and can't help it. You want more...
+<p class="add">+1 Corruption</p> <p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<set $mainChar.corruption += 1>>
+
+[[Back->Farm]]
+
+::Bare your ass and let him make you his bitch <403,1793>
+<<set $minute += 20>>&emsp;You decide to give into your desires, after all, these thoughts aren't new to you. You've wanted this for a while now.
+&emsp;You turn around, presenting your ass to him. Your pants are already soaked with your dripping juices. As if Ralf could sense this, he stands and comes over to you, sniffing at your wet crotch.
+&emsp;The giant dog paws at your clothes and manages to tear them away. Then he gets on top, pushing you down into the grass. You reach back, spreading your ass cheeks to mak<p style="font-size: 20px; font-weight: bolder">*THRUST*</p> AHHH!
+&emsp;Ralf's big canine penis finds your hole and enters it, all in one swift move. He starts to thrust his hips back and forward, piercing your poor little pussy.
+
+<i>So big... So hot... So strong...</i>
+
+<div class="default-image-wrapper"><<set _image to either(1,2,3,4,5)>><<if _image == 1>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck1.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck1REAL.jpg')]]<<endif>><<elseif _image == 2>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck2.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck2REAL.jpg')]]<<endif>><<elseif _image == 3>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck3.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck3REAL.jpg')]]<<endif>><<elseif _image == 4>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck4.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck4REAL.jpg')]]<<endif>><<elseif _image == 5>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck5.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck5REAL.jpg')]]<<endif>><<endif>></div><<set $mainChar.sexStats.vaginal += 1>>
+
+&emsp;After several minutes of Ralf fucking your body, he finally starts to cum. His thick streams of semen melts your sore womb and the huge knot prevents any leakages. Unfortunately, it also stops you from moving away. Ralf takes this opportunity to give your face several sloppy kisses.
+&emsp;When Ralf's knot shrinks enough to be pulled out, he slips out of your sore hole and lays next to you, completely exhausted. The cold air touchs your gaping red cunt, which is covered in dog cum and lubricant. You reach for Ralf's cock and start to clean it with your tongue.
+&emsp;Once his dick is clean, you reach over and take off the dog's collar. It is black and made of some leathery material. You put it around your neck.
+
+<div class="default-image-wrapper"><img src="pics/collar.jpg"></div>
+
+<strong>Collar obtained!</strong> <<run $wardrobe.addAccessory('neck', {name: 'Dog collar', image: 'pics/collar.jpg', allure: 10, description: "Ralf's collar. You wear it as his breeding bitch<code><3</code>", obscenity: 0}); >><<set $mainChar.look.erotic_accessories.neck = $wardrobe.erotic_accessories.neck["Dog collar"]>>
+<strong>Greetings, you became a breeding slut!</strong>
+
+<p class="add">+1 Corruption</p> <p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<set $mainChar.corruption += 1>>
+
+[[Back->Farm]]
+
+::Scold him and go away <125,1293>
+&emsp;You free yourself from the dog's strong grip and scold Ralf for his behaviour. He is angry and gives you a sharp growl before trotting away from you. It seems he understood though you're sure he's upset at you.
+
+<p class="minus">-3 Corruption</p> <p class="minus">-2 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog -= 2>><<set $mainChar.corruption -= 3>>
+
+[[Back->Farm]]
+
+::Take a breeding pose <414,1914>
+<<set $minute += 20>>&emsp;You know your place now. You pull down your pants and kneel in a doggy-style position; face in ground, legs spread.
+&emsp;Ralf mounts you. You feel the tip of his cock pressing against your love-hole. Without warning, he makes a strong dash forward, tearing apart your wet pussy. After a few thrusts Ralf begins to fuck you hard and fast, making you cry in both pain and pleasure.
+
+<div class="default-image-wrapper"><<set _image to either(1,2,3,4,5)>><<if _image == 1>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck1.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck1REAL.jpg')]]<<endif>><<elseif _image == 2>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck2.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck2REAL.jpg')]]<<endif>><<elseif _image == 3>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck3.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck3REAL.jpg')]]<<endif>><<elseif _image == 4>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck4.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck4REAL.jpg')]]<<endif>><<elseif _image == 5>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck5.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfFuck5REAL.jpg')]]<<endif>><<endif>></div><<set $mainChar.sexStats.vaginal += 1>>
+
+&emsp;Whilst being roughly fucked, time seemed to stop. It was just Ralf and you; his own personal fuck-toy. Eventually Ralf pauses. You start to wonder why until you feel your pussy beginning to burn. He's cumming deep inside you, filling his bitch's womb with very hot seed.
+&emsp;You were bred by an alpha dog and you truly loved it...
+
+<<if $granddadSeeYou != 1>><p class="add">+1 Corruption</p> <p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<set $mainChar.corruption += 1>><<else>>&emsp;Suddenly you hear a muffled gasp. You raise your head and see your Grandfather, passing by with a bucket. He quickly walks away, saying nothing but you can see by the look on his face that he saw something. You try to free yourself but Ralf growls at you, reminding you of your place.
+
+<p class="minus">-3 Corruption</p> <p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<set $mainChar.corruption -= 3>><<endif>>
+
+[[Back->Farm]]
+
+::Give him some loving touch <191,1910>
+<<set $minute += 10>>&emsp;You take Ralf's dick into your hands and begin to sensually massage the shaft. You hear him whimper with excitment. But he's not the only one. You feel your pants starting to become wet.
+
+<div class="default-image-wrapper"><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfHandjob.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfHandjobREAL.jpg')]]<<endif>></div><<HaveASexWidget "handjob" "Ralf">>
+
+&emsp;Ralf looks pleased with your handjob and after a minute or so his very hot cum begins to stream onto and down your hand.
+
+<<if $granddadSeeYou == 1>>&emsp;As you look up, you see your Grandad walking by, carrying some stuff for the barn. You hastily hide your hand and just in time because when he looks up and sees you, all he sees is you playing with a very calm Ralf. Nothing special!
+
+<<endif>><p class="add">+1 Corruption</p> <p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<set $mainChar.corruption += 1>>
+
+You clean yourself up and return [[home->Farm]]
+
+::Use your mouth <306,1911>
+<<set $minute += 10>>&emsp;Well, he asked for it! Without any sign of shyness, you lean down and lick the hot cock tip. The taste of salty beast semen drives you crazy. You begin to suck it off.
+
+<div class="default-image-wrapper"><<set _image to either(1,2)>><<if _image == 1>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfSuck1.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfSuck1REAL.jpg')]]<<endif>><<elseif _image == 2>><<if $isBestialityReal != true>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfSuck2.jpg')]]<<else>>[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'ZooRalfSuck2REAL.jpg')]]<<endif>><<endif>></div><<HaveASexWidget "bj" "Ralf">>
+
+&emsp;Ralf starts to pant with great pleasure. It isn't long before your mouth feels his first streams of cum. You begin to drink it, enjoying the hot liquid cascade down your throat.
+
+<p class="add">+1 Corruption</p> <p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<set $mainChar.corruption += 1>>
+
+<<if $granddadSeeYou == 1>>&emsp;You hear a noise coming from behind you but when you turn your head, there is no-one there. Strange... Maybe, it was the wind?
+
+<<endif>>You clean yourself and Ralf's cock before returning [[home->Farm]]

@@ -1,0 +1,73 @@
+::Night walking <3600,900>
+<<set $mainChar.energy -= 20>><<set $hour += 1>><<set _event to either(1,2,3,4,5,6)>><<if _event == 1>>"Hey, kiddo". You turn around to see a mugger!
+
+<div class="default-image-wrapper"><img src="pics/mugger.jpg"></div>
+<<set _robbed to either(20,30,40,50,60,100,150,200)>><<if _robbed > $mainChar.money>><<set _robbed = $mainChar.money>><<endif>>
+"Give me <<if _robbed == $mainChar.money>>all your money<<else>>_robbed bucks<<endif>>, faster!"
+
+<<link "Give him money and go">><<set $mainChar.money -= _robbed>><<goto "Go out">><</link>><<if $isGunOwned == true>>
+[[Show him YOUR gun and make him run away->Go out]]<<endif>>
+<<elseif _event == 2>><div class="default-image-wrapper"><img src="pics/rapist.jpg"></div>
+
+&emsp;"What do we have here? How about a quickie right here and now? Don't shout or there'll be trouble..."
+&emsp;It's a rape!
+
+[[Yes, just, please, don't kill me!]]<<if $isGunOwned == true>>
+[[Cool down his libido with your gun and go away->Go out]]<<endif>>
+<<elseif _event == 3>><div class="default-image-wrapper"><img src="pics/JerrysStreet.jpg"></div>
+
+<<if $isJerryMet != true>>&emsp;You see a cute boy sitting at a bench. He looks deeply into the night sky. Is he okay?<<elseif $isJerryMet == true>>&emsp;You see Jerry starring into the dark sky. As you approach, he doesn't turn or acknowledge your existence. He looks a little sick, as always...<<endif>>
+
+<<if $isJerryMet == true && $mainChar.energy < 20>>&emsp;Unfortunately, you know what will happen next and you are too tired for this...<<else>>[[Approach him]]<<endif>>
+[[Pass him->Go out]]
+
+<<elseif _event == 4>><div class="default-image-wrapper"><img src="pics/DrunkMan.jpg"></div>
+
+&emsp;Some drunk guy stumbles up to you. You can smell the alcohol on his breath. He looks at you and <<if $clothesAllure >= 50>> asks:
+&emsp;"Hey, girl! How much for an hour?"
+&emsp;Obviously, in his drunken state, he mistook you for a whore...
+
+<<if $mainChar.energy < 20>>You are too tired...<<else>>[[$40, man]]<<endif>>
+[[Tell him to fuck off->Go out]]<<elseif $clothesAllure < 50>> says:
+&emsp;"Wait... You don't look like a whore..."
+
+<<if $mainChar.corruption >= 70>><<if $mainChar.energy < 40>>You are too tired...<<else>>[[$40, man]]<<endif>>
+<<endif>>[[...Just go away->Go out]]<<endif>>
+
+<<else>><div class="default-image-wrapper"><img src="pics/city2.jpg"></div>
+
+&emsp;You find nothing interesting. Maybe you should go home?
+
+[[Go home->living room]]<<if $mainChar.energy >= 20>>
+[[Keep walking->Night walking]]<<endif>><<endif>>
+
+::Yes, just, please, don't kill me! <3565,1166>
+&emsp;The man takes a threatening step towards you but you hold your tongue. You don't want him to kill you. He grabs you by the neck, shoves you down an alleyway and holds you up against the wall so your tits are squashed against the brick. The man hastily rips of your clothing, baring your ass to him. You hear him unzip his pants.
+
+&emsp;Oh, God, but... But I don't want to...
+
+<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/rape1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/rape2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/rape3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/rape4.gif"></div><<endif>><<HaveASexWidget "rape" "midnight rapist">>
+
+&emsp;The man doesn't even bother to lube either of you up. Instead, he lines himself up with your pussy and in one swift motion, thrusts himself inside you forcefully and deeply.
+&emsp;With one hand around your neck cutting off your windpipe and the other gripping your waist to keep steady, the man pounds into you over and over again.
+&emsp;You hate this and try to shut him out by clenching your pussy down around his cock. Unfortunately, this only causes the man to pick up speed as he's encouraged by your defiant attitude.
+&emsp;Soon your body betrays you and you feel yourself getting wetter and wetter which allows the man to penetrate you further until he manages to push past your cervix.
+&emsp;He fucks you raw and painfully like a rabbit during mating season. Then, as he begins to slow down, he pushes once more deep inside you and unloads his seed into your womb.
+&emsp;Once he's completely emptied his balls into you, he zips up his pants and flees the scene. Your shaking legs crumple under you and you fall to the floor.
+
+&emsp;You can't believe it... You were raped...
+<p class="minus">-4 Corruption</p>  <p class="minus">-40 Energy</p><<set $mainChar.corruption -= 4>><<set $mainChar.energy -= 40>>
+
+[[Pick yourself up and leave the area->Go out]]
+
+::$40, man <3480,1315>
+<<set $hour += 1>>The man's face lights up. He nods enthusiastically and you tell him to take you his. Eagerly, the man leads you to his apartment which isn't far from the street where you met. As you enter, he hands you $40 as promised and offers you a drink. <br />
+Before long he's fucking you hard, his hands squeezing and slapping your ass as he does so. Alcohol is in the air, in the stranger, and in you. You couldn't resist it. Life of a night girl is tough...
+
+<<set _image to either(1,2,3,4,5,6)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/whoring1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/whoring2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/whoring3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/whoring4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/whoring5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/whoring6.gif"></div><<endif>><<HaveASexWidget "vaginal" "midnight stranger">>
+
+The man cums inside you. You clean him of what's left. Now you've done your part, you go to leave his apartment.
+<p class="add">+$40</p> <p class="add">+1 Corruption</p> <p class="minus">-10 Energy</p><<set $mainChar.money += 40>><<set $mainChar.energy -= 10>><<set $mainChar.corruption += 1>><<if $mainChar.beauty >= 20>><<if $mainChar.beauty >= 20 && $mainChar.beauty < 40>><<set _tip to either(1,2,3,4,5)>><<elseif $mainChar.beauty >= 40 && $mainChar.beauty < 60>><<set _tip to either(6,7,8,9,10)>><<elseif $mainChar.beauty >= 60 && $mainChar.beauty < 80>><<set _tip to either(11,12,13,14,15)>><<elseif $mainChar.beauty >= 80>><<set _tip to either(16,17,18,19,20)>><<endif>><<set _doubleTip = _tip*2>>
+On your way out, the guy slips you (<p class="add">+ _doubleTip bucks</p>) because of your beauty!<<set $mainChar.money += _doubleTip>><<endif>>
+
+[[Return to the streets->Go out]]

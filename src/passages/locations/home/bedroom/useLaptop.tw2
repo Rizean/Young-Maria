@@ -1,0 +1,110 @@
+::Use laptop <1146,1840>
+<div class="default-image-wrapper"><img src="pics/Laptop.png"></div>
+
+You turn on your laptop. What do you wanna do?
+
+<<if $inventory.has('techItems', 'Web cam')>>[[Web cam]]
+<<endif>><<if $mainChar.energy < 30>>You're too tired to masturbate<<else>>[[Masturbate]]<<endif>><<if $mainChar.corruption >= 70>>
+[[Buy lewd stuff]]<<endif>> <!--
+<<if $mainChar.energy < 5>>You're too tired to spend time on social networks<<else>>[[Spend some time on social networks]]<<endif>> - [In progress (40%)] -->
+
+[[Go back->Bedroom]]
+
+::Masturbate <1413,1844>
+&emsp;You feel a little lonely. The best solution? Dream about hot things on your body or inside of your body. Let yourself relax, like every girl does.
+&emsp;You have access to a lot of porn. What whould you like to watch today?
+* [[Straight]]
+* [[Lesbians]]
+* [[BDSM]]
+* [[Group]]
+* [[Public]]<<if settings.nonConsent == true>>
+* [[Non-consensual]]<<endif>><<if $farm == true>>
+* [[Hentai bestiality->Bestiality]]
+* [[Real bestiality]]<<endif>>
+
+<<if $hasCanineDildo == true or $hasHorseDildo == true>>Or maybe you'd like to play with your Bad Dragon toys?<<if $masturbatedWithDildoLastDay == $dayCount>>You already stretched yourself today, give your hole some rest<<else>><<if $hasCanineDildo == true>>
+Canine dildo - <<link "vagina">><<set $masturbationDildoUsing = "Canine">><<set $masturbationHoleUsing = "Vagina">><<goto "Dildo masturbation">><</link>> | <<link "anal">><<set $masturbationDildoUsing = "Canine">><<set $masturbationHoleUsing = "Anal">><<goto "Dildo masturbation">><</link>><<endif>><<if $hasHorseDildo == true>>
+Horse dildo - <<link "vagina">><<set $masturbationDildoUsing = "Horse">><<set $masturbationHoleUsing = "Vagina">><<goto "Dildo masturbation">><</link>> | <<link "anal">><<set $masturbationDildoUsing = "Horse">><<set $masturbationHoleUsing = "Anal">><<goto "Dildo masturbation">><</link>><<endif>><<endif>>
+
+<<endif>>[[Go back->Bedroom]]
+
+::Straight <1386,1993>
+&emsp;You decide to go for some straight porn. You search for some time until you find a video of a man and women engaged in sexy, passionate sex. Satisfied with this find, you relax and watch the action unfurl.
+
+<<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Straight1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Straight2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Straight3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/Straight4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/Straight5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/Straight6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/Straight7.gif"></div><<endif>>
+<<HaveASexWidget "masturbate" "self">>
+&emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+
+[[Back->Bedroom]]
+
+::Lesbians <1563,1881>
+&emsp;You decide to search for some lesbian porn. It isn't long before you've found a hot, steamy video of two beautiful women pleasuring each other. You relax your body and begin to watch...
+
+<<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Lesbians1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Lesbians2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Lesbians3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/Lesbians4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/Lesbians5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/Lesbians6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/Lesbians7.gif"></div><<endif>>
+<<HaveASexWidget "masturbate" "self">>
+&emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+
+[[Back->Bedroom]]
+
+::BDSM <1495,1990>
+&emsp;You decide you want something a little more rough this time. You starting searching for some bondage videos. Fairly soon you come across a video that really captures your attention. You watch with intense lust as a beautiful woman is bound, tortured with toys and fucked.
+
+<<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/BDSM1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/BDSM2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/BDSM3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/BDSM4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/BDSM5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/BDSM6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/BDSM7.gif"></div><<endif>>
+<<HaveASexWidget "masturbate" "self">>
+&emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+[[Back->Bedroom]]
+
+::Group <1528,2106>
+&emsp;You're searching through some porn sites when a video that was recommended catches your eye. It's about a group sex. The thought of multiple hot bodies surrounding your naked one arouses you a lot. You click the video and settle down to watch it.
+
+<<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Group1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Group2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Group3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/Group4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/Group5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/Group6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/Group7.gif"></div><<endif>>
+<<HaveASexWidget "masturbate" "self">>
+&emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+
+[[Back->Bedroom]]
+
+::Public <1411,2103>
+&emsp;Today you feel more rebellious. You want to find something that pushes your boundaries. You begin to search for some public porn. After a short while, you find a video of a woman being humiliated out in the open.
+&emsp;You're a little taken aback, perhaps even embarrassed, as you watch. Yet a part of you is really horny for this. You let that part take over your mind and body.
+
+<<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Public1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Public2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Public3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/Public4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/Public5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/Public6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/Public7.gif"></div><<endif>>
+<<HaveASexWidget "masturbate" "self">>
+&emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
+<p class="add">+1 Corruption</p> <p class="minus">-30 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 30>>
+
+[[Back->Bedroom]]
+
+
+::Spend some time on social networks [system] <1118,1958>
+<div class="default-image-wrapper"><img src="pics/SocialNetworks.jpg"></div>
+
+<<if $mainChar.energy > 5>>[[Check fresh news]]
+[[Check your page]]
+<<link "Messages" <<if $newMessage > 0>> ($newMessage)<<endif>>">><<goto "Messages">><</link>><<else>>You should rest a bit...<<endif>>
+
+[[Go back->Use laptop]]
+
+::Check your page [system] <1200,2100>
+<!-- <<if $pageNameFontStyle == "normal">>
+	<<if $pageNameColor == "grey">>
+		<div align="center" style="color: grey; font-weight: normal; font-size: 26px">$pageName</div>
+	<<elseif $pageNameColor == "white">>
+		<div align="center" style="color: white; font-weight: normal">$pageName</div>
+	<<endif>>
+<<else $pageNameFontStyle == "italic">>
+	<<if $pageNameColor == "grey">>
+		<div align="center" style="color: grey; font-weight: italic">$pageName</div>
+	<<elseif $pageNameColor == "white">>
+		<div align="center" style="color: white; font-weight: italic">$pageName</div>
+	<<endif>>
+<<endif>>
+
+<<link "Grey">>
+
+-->
+In progress
+Stay tune!

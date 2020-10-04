@@ -1,0 +1,101 @@
+::Create the character <1520,520>
+<<nobr>>
+
+
+
+<<set $randomName to either("Maria","Kate","Diana","Olivia","Sophia","Amelia","Lily","Emily","Isabella","Mia","Isabelle","Emma","Valeria","Abigail","Natalia","Sarah","Ella","Elena","Zoe","Ashley","Samantha","Gabriela","Ann")>>
+
+<</nobr>>&emsp;A melodious bird song gently rouses you from your slumber. With much effort, you slowly reach over for your smartphone and attempt to focus on it. 8:00am. Well, at least it's not too early.
+&emsp;You drop your phone back down and stare at the ceiling, the light from the warm sun illuminates your room. If you listen carefully, you can hear the mild breeze shuffling through leaves. Eventually, you will yourself to get up from your comfy bed. It is time to face the day.
+&emsp;Today you are moving into your new house.
+&emsp;What's bad about this one you're currently in? Nothing. Except the fact that it's too far from your step father's new work. You love this place but, without a home of your own, you have no choice...
+&emsp;As you make your way over to your wardrobe, you pass the mirror. You stop and take a quick glance. You are a pretty young girl with healthy, glowing skin and a good, fit body.
+
+<div class="default-image-wrapper"><img src="pics/mirror.jpg"></div>
+Your name is <<if $mainChar.firstName !== 'Maria'>><<textbox "$mainChar.firstName" $mainChar.firstName>><<else>><<textbox "$mainChar.firstName" "Maria">><<endif>> (<<checkbox "$wasNameRandomized" false true>> Random).
+<<nobr>>
+You are <<if $mainChar.age != '18'>><<textbox "$mainChar.age" $mainChar.age>><<else>><<textbox "$mainChar.age" "18">><<endif>><sup><strong></strong></sup> years old.
+<<mouseover>>
+	<<link "Info">><</link>> <br />
+<<onmousein>>
+	<<replace '#age-tooltip'>>
+		Minimum age - 18, maximum - 25. <br />
+		Pick 18 to unlock School. Pick 19 or older to unlock the ability to work.
+	<</replace>>
+<<onmouseout>>
+	<<replace '#age-tooltip'>><</replace>>
+<</mouseover>>
+<p id="age-tooltip"></p>
+<</nobr>>
+[[Edit appearance]]
+
+<<nobr>>
+Today is the <<listbox "$dateDay" autoselect>>
+	<<option 1>>
+	<<option 2>>
+	<<option 3>>
+	<<option 4>>
+	<<option 5>>
+	<<option 6>>
+	<<option 7>>
+	<<option 8>>
+	<<option 9>>
+	<<option 10>>
+	<<option 11>>
+	<<option 12>>
+	<<option 13>>
+	<<option 14>>
+	<<option 15>>
+	<<option 16>>
+	<<option 17>>
+	<<option 18>>
+	<<option 19>>
+	<<option 20>>
+	<<option 21>>
+	<<option 22>>
+	<<option 23>>
+	<<option 24>>
+	<<option 25>>
+	<<option 26>>
+	<<option 27>>
+	<<option 28>>
+	<<option 29>>
+	<<option 30>>
+<</listbox>>th of <<listbox "$dateMonth" autoselect>>
+	<<option "September">>
+	<<option "October">>
+	<<option "November">>
+	<<option "December">>
+	<<option "January">>
+	<<option "February">>
+	<<option "March">>
+	<<option "April">>
+	<<option "May">>
+	<<option "June">>
+	<<option "July">>
+	<<option "August">>
+<</listbox>>
+<</nobr>> \
+/*<<nobr>>
+You <<radiobutton "$corruptionTemp" "0" checked>>don't notice | <<radiobutton "$corruptionTemp" "5">>like | <<radiobutton "$corruptionTemp" "10">>love boys.
+	<<mouseover>>
+		<<link "Info">><</link>> <br />
+	<<onmousein>>
+		<<replace '#corruption-tooltip'>>
+		  "don't notice" - 0 start Corruption <br />
+		  "like" - 5 start Corruption <br />
+		  "love" - 10 start Corruption <br />
+		<</replace>>
+	<<onmouseout>>
+		<<replace '#corruption-tooltip'>><</replace>>
+	<</mouseover>>
+<p id="corruption-tooltip"></p>
+<</nobr>>*/
+<<if settings.isSiblingAllowed == true>>
+	&emsp;You have a step <<radiobutton "$sibling" "brother" checked>>brother | <<radiobutton "$sibling" "sister">>sister<sup><u><i>in process</i></u></sup>
+	&emsp;Their name is <<if $siblingName != 'Mio'>><<textbox "$siblingName" $siblingName>><<else>><<textbox "$siblingName" "Mio">><<endif>> and their age is <<if $siblingAge != '18'>><<textbox "$siblingAge" $siblingAge>><<else>><<textbox "$siblingAge" 18>><<endif>> \
+	<<nobr>>
+	/* They are <<radiobutton "$siblingStartCorruption" "0" checked>>pure <<if settings.isSiblingInteractionAllowed == true>>| <<radiobutton "$siblingStartCorruption" "5">>had seen sex once | <<radiobutton "$siblingStartCorruption" "10">>tried to masturbate<<endif>>*/<</nobr>><<endif>>
+&emsp;<strong>"SWEETHEART!!!"</strong>
+&emsp;Your step mother's voice rings out from beyond your bedroom door. She probably thinks you're still asleep and is coming to wake you up.
+&emsp;It's [[time to go->take a look at your new house]] and help your step parents with the last steps before you hit the road and move far, far away from your motherland...

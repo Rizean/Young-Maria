@@ -1,0 +1,104 @@
+::Home bed [nobr] <1020,740>
+<<include "Main char in bed picture">>
+<br />
+You lay on your bed. <br />
+<br />
+
+<<if $hour >= 20 || $hour <= 8>>
+	<<if settings.pregnancy == true and $mainChar.pregnancy.day >= 26>>
+		<<set $sleepAt = "home">>
+        <<link "Sleep" "END: Mother!">>
+            <<set $timeOfDay = "Night">>
+        <</link>>
+	<<else>>
+		<<set _willDream to random(1, 4)>>
+		<<if _willDream == 1 && $mainChar.corruption >= 90>>
+			<<set $sleepAt = "home">>
+            <<link "Sleep" "Dreams">>
+                <<set $timeOfDay = "Night">>
+            <</link>>
+            <br />
+		<<else>>
+            <<link "Sleep" "Sleep">>
+                <<set $timeOfDay = "Night">>
+            <</link>>
+			<br />
+		<<endif>>
+	<<endif>>
+<<endif>>
+
+[[Have a nap]] for
+
+<<listbox "$napHour" autoselect>>
+	<<option 1>>
+	<<option 2>>
+	<<option 3>>
+	<<option 4>>
+<</listbox>> hours and
+
+<<listbox "$napMinute" autoselect>>
+	<<option 0>>
+	<<option 1>>
+	<<option 2>>
+	<<option 3>>
+	<<option 4>>
+	<<option 5>>
+	<<option 6>>
+	<<option 7>>
+	<<option 8>>
+	<<option 9>>
+	<<option 10>>
+	<<option 11>>
+	<<option 12>>
+	<<option 13>>
+	<<option 14>>
+	<<option 15>>
+	<<option 16>>
+	<<option 17>>
+	<<option 18>>
+	<<option 19>>
+	<<option 20>>
+	<<option 21>>
+	<<option 22>>
+	<<option 23>>
+	<<option 24>>
+	<<option 25>>
+	<<option 26>>
+	<<option 27>>
+	<<option 28>>
+	<<option 29>>
+	<<option 30>>
+	<<option 31>>
+	<<option 32>>
+	<<option 33>>
+	<<option 34>>
+	<<option 35>>
+	<<option 36>>
+	<<option 37>>
+	<<option 38>>
+	<<option 39>>
+	<<option 40>>
+	<<option 41>>
+	<<option 42>>
+	<<option 43>>
+	<<option 44>>
+	<<option 45>>
+	<<option 46>>
+	<<option 47>>
+	<<option 48>>
+	<<option 49>>
+	<<option 50>>
+	<<option 51>>
+	<<option 52>>
+	<<option 53>>
+	<<option 54>>
+	<<option 55>>
+	<<option 56>>
+	<<option 57>>
+	<<option 58>>
+	<<option 59>>
+<</listbox>> minutes
+
+<br />
+<br />
+[[Get up->Bedroom]]

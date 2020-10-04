@@ -1,0 +1,12 @@
+::StoryIncludes
+src/passages/locations/park/relax.tw2
+src/passages/locations/park/goJogging.tw2
+
+
+::Park <3143,1368>
+You enter the park. There's lots of luscious greenery around. The smell of aromatic flowers and trees fills your nose. You take a deep breath of fresh air. <<if $timeOfDay == "Day">><div class="default-image-wrapper"><img src="pics/park1.jpg"></div><<else>><div class="default-image-wrapper"><img src="pics/park2.jpg"></div><<endif>><<if $timeOfDay == "Night">>
+<strong>Be careful, the park is a dangerous place at night!</strong><<endif>>
+<<if $timeOfDay == "Day">>[[Relax a little]]<<else>>It's too late for relaxing.<<endif>>
+<<if $timeOfDay == "Day">><<if $mainChar.energy >= 25>>[[Go jogging]]<<else>>You are too tired for jogging...<<endif>><<else>>It's too late for jogging, too<<endif>>
+
+[[Go back->Go out][$minute += 10]]

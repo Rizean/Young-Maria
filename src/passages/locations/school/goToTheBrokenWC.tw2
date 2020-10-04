@@ -1,0 +1,268 @@
+::Go to the broken WC <2200,2280>
+<<set $minute += 10>><<set $timesAtWC = 0>><<if $isntFirstWCVisit != true>><<set $isntFirstWCVisit = true>>&emsp;You step awkwardly into the room. There were four toilet stalls; all covered in graffiti and all broken. One of the middle stalls is occupied by a pretty brunette girl who is watching you with disinterest.
+&emsp;"Are you Cristy's friend?" She asks, nonchalantly.
+&emsp;<p class="char">"Y-yes"</p>
+&emsp;She points with her head to the stall next to her. "Just go to your stall and wait."
+&emsp;You nod and move into the next stall. In the side of the stall is a hole about four inches wide and tall. Above the hole are the words, "YOU ARE THE SLUT THIS SCHOOL NEEDS!".
+&emsp;Well, that's true...
+
+&emsp;After a few minutes, the door of the toilet opens and some guy comes in. He looks at you, then at your neighbour and chooses her. Kneeling in your stall, you couldn't see what was happening but you could hear it;
+~Unzipping sounds~
+~Rustling of dollar bills~
+~Gurgling, smacking sounds~
+"Uggggrh..."
+~Unzipping sounds, again~
+"Thanks, Diana."
+"My pleasure."
+
+... wow.
+
+[[Wait 10 minutes]]
+<<elseif $isntFirstWCVisit == true>>&emsp;You step into the broken toilets. Diana is already there, scrolling on her phone. As you make your way over to the empty stall, she raises her head.
+&emsp;<p class="char">"Afternoon, Diana."</p>
+&emsp;"Hey, $mainChar.firstName."
+&emsp;You give her a small smile before entering your stall and kneeling down by the hole in the wall. There you wait...
+
+[[Wait 10 minutes]]<<endif>>
+
+::Wait 10 minutes [nobr] <2200,2400>
+<<set $minutes += 10>>
+<<set $timesAtWC += 1>>
+<<set _client to either("boy","boy","boy","boy","girl")>>
+<<set _serviceB to either("oral","oral","oral","vaginal","anal")>>
+<<set _chance to either(true,true,true,false)>>
+
+<<if _chance == true>>
+    &emsp;A _client comes in to the room. <br />
+    <<set _dialog to either('Hello, ladies. Who wants to give me some pleasure?','Sup','U-um, hello...? I heard you were pleasuring people...','Good day, everybody! I`d like to receive some pleasure from you, sweet girls!','Hi, girls! Ready for some fun?')>>
+    &emsp;"_dialog" <br />
+    &emsp;"What do you want?" Diana asks. <br />
+
+    <<if _client == "boy" and _serviceB == "oral">>
+        <<set _dialog2 to either('I want a wet, slick tongue on my cock.','Can you suck me off?','A blowjob.','I`ve heard you are good at sucking.','For you to blow me.','You to suck me off.')>>
+    <<elseif _client == "boy" and _serviceB == "vaginal">>
+        <<set _dialog2 to either('I`d like to fuck somebody.','I want to feel my cock inside a tight pussy.','Well, I haven`t had sex in a while... So, guess!','I want to fuck one of you.')>>
+    <<elseif _client == "boy" and _serviceB == "anal">>
+        <<set _dialog2 to either('I want to fuck someone`s ass.','I want to feel a warm tight butthole from the inside.','I`d like to fuck a girl in her ass.')>>
+    <<elseif _client == "girl">>
+        <<set _dialog2 to either('All I want is to feel another girl`s warm tongue on my clit.','Nothing but some loving attention.','I want someone to make me moan.','I want to buy an orgasm.','For someone to make my legs shake for the rest of the day.')>>
+    <<endif>>
+    <br />
+    &emsp;"_dialog2" <br />
+    &emsp;The _client paused. Then they said, "So, who wants to offer their skills?" <br />
+    &emsp;Diana said, "I'll offer my services." <br />
+
+    <<if _client == "boy" and _serviceB == "oral">>
+        <<if $mainChar.corruption >= 20>>
+            &emsp;You offer yours as well. <br />
+        <<else>>
+            &emsp;You shake your head. You're too innocent for this! <br />
+        <<endif>>
+    <<elseif _client == "boy" and _serviceB == "vaginal">>
+        <<if $mainChar.corruption >= 40>>
+            &emsp;You nod, offering your services as well. <br />
+        <<else>>
+            &emsp;You reject them. You would never do such a thing! <br />
+        <<endif>>
+    <<elseif _client == "boy" and _serviceB == "anal">>
+        <<if $mainChar.corruption >= 60>>
+            &emsp;You smirk at them, eagerly offering your services. <br />
+        <<else>>
+            &emsp;You blush and refuse them. You couldn't do that, you're too innocent! <br />
+        <<endif>>
+    <<elseif _client == "girl">>
+        <<if $mainChar.corruption >= 15>>
+            &emsp;You offer your services as well. <br />
+        <<else>>
+            &emsp;You don't offer up your services. You're too innocent for this! <br />
+        <<endif>>
+    <<endif>>
+    <br />
+    &emsp;The visitor looks at both of you, takes a step toward the stalls and chooses...
+
+    <<set _choice to either(0,1,2,3,4,6,8,10,15,20,40,80,100,110)>>
+
+    <<if _choice <= $mainChar.reputation.school>>
+        you! <br />
+    <<else>>
+        Diana... You are a little hurt but you're not that well known yet. Maybe you could boost your reputation... <br />
+    <<endif>>
+
+    <<if _choice <= $mainChar.reputation.school>>
+        &emsp;You received $
+        <<set _pay to either(7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25)>>
+        _pay from your client. <br />
+
+        <<set _dialog3 to either('Let us start, girl','I`ve heard about you...','Show me what you can do.','Make me moan in pleasure.','I hope you are better than my girlfriend.','I know you want it, too.','Stop rubbing yourself, little one.','You look familiar...','You want me, don`t you?','I need this so badly...','I bet you know what to do.','So, let`s start.','I know that you cost much more, but that`s all I have for now, kitty.','Good girl.','Make yourself ready for me.','I`m amped up for this.','This will be unforgettable.')>>
+        &emsp;"_dialog3" <br />
+        <br />
+        <<if _client == "boy" and _serviceB == "oral">>
+            <<set _image to random(1, 7)>>
+
+            <<if _image == 1>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHOral1.gif">
+                </div>
+                <<HaveASexWidget "bj" "gloryhole person">>
+            <<elseif _image == 2>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHOral2.gif">
+                </div>
+                <<HaveASexWidget "bj" "gloryhole person">>
+            <<elseif _image == 3>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHOral3.gif">
+                </div>
+                <<HaveASexWidget "bj" "gloryhole person">>
+            <<elseif _image == 4>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHOral4.gif">
+                </div>
+                <<HaveASexWidget "bj" "gloryhole person">>
+            <<elseif _image == 5>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHOral5.gif">
+                </div>
+                <<HaveASexWidget "bj" "gloryhole person">>
+            <<elseif _image == 6>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHOral6.gif">
+                </div>
+                <<HaveASexWidget "bj" "gloryhole person">>
+            <<elseif _image == 7>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHOral7.gif">
+                </div>
+                <<HaveASexWidget "bj" "gloryhole person">>
+            <<endif>>
+        <<elseif _client == "boy" and _serviceB == "vaginal">>
+            <<set _image to random(1, 6)>>
+
+            <<if _image == 1>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHVaginal1.gif">
+                </div>
+                <<HaveASexWidget "vaginal" "gloryhole person">>
+            <<elseif _image == 2>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHVaginal2.gif">
+                </div>
+                <<HaveASexWidget "vaginal" "gloryhole person">>
+            <<elseif _image == 3>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHVaginal3.gif">
+                </div>
+                <<HaveASexWidget "vaginal" "gloryhole person">>
+            <<elseif _image == 4>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHVaginal4.gif">
+                </div>
+                <<HaveASexWidget "vaginal" "gloryhole person">>
+            <<elseif _image == 5>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHVaginal5.gif">
+                </div>
+                <<HaveASexWidget "vaginal" "gloryhole person">>
+            <<elseif _image == 6>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHVaginal6.gif">
+                </div>
+                <<HaveASexWidget "vaginal" "gloryhole person">>
+            <<endif>>
+        <<elseif _client == "boy" and _serviceB == "anal">>
+            <<set _image to random(1, 7)>>
+
+            <<if _image == 1>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHAnal1.gif">
+                </div>
+                <<HaveASexWidget "anal" "gloryhole person">>
+            <<elseif _image == 2>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHAnal2.gif">
+                </div>
+                <<HaveASexWidget "anal" "gloryhole person">>
+            <<elseif _image == 3>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHAnal3.gif">
+                </div>
+                <<HaveASexWidget "anal" "gloryhole person">>
+            <<elseif _image == 4>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHAnal4.gif">
+                </div>
+                <<HaveASexWidget "anal" "gloryhole person">>
+            <<elseif _image == 5>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHAnal5.gif">
+                </div>
+                <<HaveASexWidget "anal" "gloryhole person">>
+            <<elseif _image == 6>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHAnal6.gif">
+                </div>
+                <<HaveASexWidget "anal" "gloryhole person">>
+            <<elseif _image == 7>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHAnal7.gif">
+                </div>
+                <<HaveASexWidget "anal" "gloryhole person">>
+            <<endif>>
+        <<elseif _client == "girl">>
+            <<set _image to random(1, 7)>>
+
+            <<if _image == 1>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHGirl1.gif">
+                </div>
+            <<elseif _image == 2>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHGirl2.gif">
+                </div>
+            <<elseif _image == 3>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHGirl3.gif">
+                </div>
+            <<elseif _image == 4>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHGirl4.gif">
+                </div>
+            <<elseif _image == 5>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHGirl5.gif">
+                </div>
+            <<elseif _image == 6>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHGirl6.gif">
+                </div>
+            <<elseif _image == 7>>
+                <div class="default-image-wrapper">
+                    <img src="pics/GHGirl7.gif">
+                </div>
+            <<endif>>
+        <<endif>>
+        <br />
+        <<set _dialog4 to either('Wow, that was amazing!','I love you, girl...','Holy fuck, that was good...','Would you marry me...?','I came so hard I can`t feel my legs!','You are the best...','I`ve never met such a BAD girl!','Good kitty.','Fuck, that was good...','I`ll meet you again, one day.','Damn, I`m done, but still want more.','You stole my heart...','I love you...')>>
+
+        &emsp;"_dialog4" <br />
+        <p class="add">+$ _pay</p> <br />
+        <p class="add">+1 Corruption</p> <br />
+        <p class="add">+1 Reputation</p> <br />
+        <br />
+        <<set $mainChar.corruption += 1>>
+        <<set $mainChar.money += _pay>>
+        <<set $mainChar.reputation.school += 1>>
+    <<endif>>
+<<elseif _chance == false>>
+    &emsp;You kneel in silence. Seems like there are no clients for the moment. You can hear Diana laughing at something on her phone. <br />
+<<endif>>
+
+<<if $timesAtWC == 5>>
+    You are tired... Time to
+    <<link "go out">>
+        <<set $minute += 20>>
+        <<goto "Go out">>
+    <</link>>
+<<elseif $timesAtWC < 5>>
+    [[Wait 10 minutes]]<br />
+<<endif>>

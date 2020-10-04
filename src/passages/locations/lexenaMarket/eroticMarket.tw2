@@ -1,0 +1,29 @@
+::Erotic Market [nobr] <2680,980>
+<div class="default-image-wrapper"><img src="pics/eMarket.jpg"></div>
+
+<<for _eroticAccessoryTitle, _eroticAccessoryItem range $lexenaMarket.erotic_accessories>>
+	<<EroticAccessoryItemLexenaMarket _eroticAccessoryItem _eroticAccessoryTitle>>
+<</for>>
+
+<<if settings.lessPrices == true>>
+	<<if $wereEroticMarketPricesReduced != true>>
+		<<set $wereEroticMarketPricesReduced = true>>
+	<<endif>>
+<<else>>
+	<<if $wereEroticMarketPricesReduced == true>>
+		<<set $wereEroticMarketPricesReduced = false>>
+	<<endif>>
+<<endif>>
+
+<br />
+[[Go back->Lexena Market]]
+
+
+::Lexena Market Erotic Item View Widget [system] <2680,1180>
+[[Back->Erotic Market]]
+
+$tempEroticItem.description
+
+@@.image-wrapper-w70p;
+	[img[$tempEroticItem.image]]
+@@

@@ -1,0 +1,10 @@
+::Accessories [system] <975,125>
+Current clothes: $mainChar.look.clothes.body.name | Bra <<if $mainChar.look.lingerie.bra.name !== ''>>on<<else>>off<<endif>> Panties <<if $mainChar.look.lingerie.panties.name !== ''>>on<<else>>off<<endif>>
+
+Neck: <<if $mainChar.look.accessories.neck.name !== ''>>$mainChar.look.accessories.neck.name <<elseif $mainChar.look.erotic_accessories.neck.name !== ''>>$mainChar.look.erotic_accessories.neck.name<<else>>-<<endif>>
+Jewelry: <<if $mainChar.look.accessories.finger.name !== ''>>$mainChar.look.accessories.finger.name<<else>>-<<endif>>
+Nipples: <<if $mainChar.look.erotic_accessories.body.name !== ''>>$mainChar.look.erotic_accessories.body.name<<if $mainChar.look.lingerie.bra.name !== ''>>(Hidden)<<else>>(Visible)<<endif>><<else>>-<<endif>>
+Butt: <<if $mainChar.look.erotic_accessories.back.name !== "">>$mainChar.look.erotic_accessories.back.name<<if $mainChar.look.clothes.body.name === "">>(Visible)<<else>>(Hidden)<<endif>><<else>>-<<endif>>
+Legs: <<if $mainChar.look.clothes.legs.name !== ''>>$mainChar.look.clothes.legs.name<<if $mainChar.look.clothes.body.name == "Usual clothes">>(Hidden)<<else>>(Visible)<<endif>><<else>>-<<endif>>
+
+<<back "Back">>

@@ -1,0 +1,22 @@
+::LivingRoomNudity part [nobr] <1196,1095>
+<<if $mainChar.relationships.dad > 30 && $mainChar.look.clothes.body.name === '' && ($mainChar.look.lingerie.bra.name === '' || $mainChar.look.lingerie.panties.name === '') && settings.isSiblingInteractionAllowed == true>>
+		<<if $timeOfDay == "Day">>
+			<<set _event to either(1,2,3,4)>>
+			<<if _event == 1>>
+				&emsp;Your dad notices your nudity while you are going through the living room. <br />
+				<<if $mainChar.relationships.dad < 30>>
+					&emsp;Though he pretends he didn't see anything, you catch a glimpse of an awkward smile playing on his lips. <br />
+					<p class="add">+1 relations with dad</p> <br />
+					<<set $mainChar.relationships.dad += 1>>
+				<<elseif $mainChar.relationships.dad >= 30 && $mainChar.relationships.dad < 70>>
+					&emsp;He enjoys your beauty. His eyes lingering slightly longer over your body than they should have. <br />
+					<p class="add">+1 relations with dad</p> <br />
+					<<set $mainChar.relationships.dad += 1>>
+				<<elseif $mainChar.relationships.dad >= 70>>
+					&emsp;As he walks past, he slaps your naughty butt which makes you giggle. <br />
+					<p class="add">+1 relations with dad</p> <br />
+					<<set $mainChar.relationships.dad += 1>>
+				<<endif>>
+			<<endif>>
+		<<endif>>
+	<<endif>>

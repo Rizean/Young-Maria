@@ -1,0 +1,60 @@
+::JobHunters.net [system] <4500,1725>
+&emsp;You go to a website that hosts a lot of jobs looking for cheap workers. It's a good place to earn some quick and easy money. You take a look at the jobs on offer...
+
+[[Copyrighting]]
+<<nobr>>
+  (
+  <<if $mainChar.timesWorkedOn.copyright >= 11>>pro
+  <<elseif $mainChar.timesWorkedOn.copyright >= 7>>advanced
+  <<elseif $mainChar.timesWorkedOn.copyright >= 4>>intermediate
+  <<else>>junior
+  <</if>>
+  )
+<</nobr>>
+[[Testing new games]]
+<<nobr>>
+  (
+  <<if $mainChar.timesWorkedOn.testingGames >= 11>>pro
+  <<elseif $mainChar.timesWorkedOn.testingGames >= 7>>advanced
+  <<elseif $mainChar.timesWorkedOn.testingGames >= 4>>intermediate
+  <<else>>junior
+  <</if>>
+  )
+<</nobr>>
+[[Writing opinions]]
+<<nobr>>
+  (
+  <<if $mainChar.timesWorkedOn.writingOpinions >= 11>>pro
+  <<elseif $mainChar.timesWorkedOn.writingOpinions >= 7>>advanced
+  <<elseif $mainChar.timesWorkedOn.writingOpinions >= 4>>intermediate
+  <<else>>junior
+  <</if>>
+  )
+<</nobr>>
+[[Make design]]
+<<nobr>>
+  (
+  <<if $mainChar.timesWorkedOn.makeDesign >= 11>>pro
+  <<elseif $mainChar.timesWorkedOn.makeDesign >= 7>>advanced
+  <<elseif $mainChar.timesWorkedOn.makeDesign >= 4>>intermediate
+  <<else>>junior
+  <</if>>
+  )
+<</nobr>>
+[[Writing documentation]]
+<<nobr>>
+  (
+  <<if $mainChar.timesWorkedOn.writingDocs >= 11>>pro
+  <<elseif $mainChar.timesWorkedOn.writingDocs >= 7>>advanced
+  <<elseif $mainChar.timesWorkedOn.writingDocs >= 4>>intermediate
+  <<else>>junior
+  <</if>>
+  )
+<</nobr>><<if $mainChar.age > 18>>
+[[Secretary]]<<endif>><<if $mainChar.corruption > 10>>
+<strong>Adult advertisements</strong>
+
+[[GF photos]]<<endif>><<if $mainChar.corruption > 70>>
+[[GF for a night]]<<endif>>
+
+[[Go back->Smartphone]]

@@ -1,0 +1,84 @@
+::watch TV [nobr] <1803,1171>
+<<set _event to either(1,2,3)>>
+<<if _event != 1>>
+	@@.image-wrapper-w50p;
+		[img[String.format('pics/TV{0}.jpg', random(1, 4))]]
+	@@
+
+    @emsp;Just a boring TV program, but the company of your parents made this time wonderful and a little funny. <br />
+
+    <br />
+<<elseif _event == 1>>
+    <<set _image to either(1,3,4)>>
+    <<if _image == 1>>
+        <div class="default-image-wrapper">
+            <img src="pics/TVboobs1.jpg">
+        </div>
+    <<elseif _image == 3>>
+        <div class="default-image-wrapper">
+            <img src="pics/TVboobs3.jpg">
+        </div>
+    <<elseif _image == 4>>
+        <div class="default-image-wrapper">
+            <img src="pics/TVboobs4.jpg">
+        </div>
+    <<endif>>
+
+    "I-Is this really a TV show?"  <br />
+    <br />
+<<endif>>
+
+@emsp;You sit down and after a few minutes of watching TV you start talking about various topics, including what's shown on TV. <br />
+
+@@.minus; -10 Energy @@ <br />
+
+<<set $mainChar.energy -= 10>>
+<<set $minute += 20>>
+
+<<if $watchTVWith.includes('sibling')>>
+    <<set $mainChar.relationships.sibling += 1>>
+    @@.add; +1 relationship with $sibling.type @@ <br />
+<<endif>>
+<<if $watchTVWith.includes('mom')>>
+    <<include "Without clothes (mom version)">>
+	<<if $mainChar.relationships.mom > 30>>
+		<<set $mainChar.relationships.mom += 1>>
+    	@@.add; +1 relationship with mom @@ <br />
+	<<endif>>
+<<endif>>
+<<if $watchTVWith.includes('dad')>>
+    <<include "Without clothes (dad version)">>
+	<<if $mainChar.relationships.dad > 30>>
+    	<<set $mainChar.relationships.dad += 1>>
+    	@@.add; +1 relationship with dad @@ <br />
+	<<endif>>
+<<endif>>
+
+<<if _event == 1>>
+    <<if $mainChar.corruption < 10>>
+        <p class="add">+1 Corruption</p> <br />
+        <<set $mainChar.corruption += 1>>
+    <</if>>
+<<endif>>
+<br />
+<br />
+<<if $mainChar.corruption >= 20>>
+	<<if $mainChar.energy >= 15>>
+		[[be naughty->be naughty living room]] <br />
+	<<endif>>
+<<endif>>
+<<if $watchTVWith.length > 1>>
+    [[tell them you have to go->living room]]
+<<else>>
+    <<if $watchTVWith.includes('dad')>>
+        [[tell him you have to go->living room]]
+    <<elseif $watchTVWith.includes('mom') >>
+        [[tell her you have to go->living room]]
+    <<else>>
+        <<if $sibling.type == 'sister'>>
+            [[tell her you have to go->living room]]
+        <<else>>
+            [[tell him you have to go->living room]]
+        <<endif>>
+    <<endif>>
+<<endif>>

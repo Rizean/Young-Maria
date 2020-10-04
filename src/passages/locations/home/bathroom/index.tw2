@@ -1,0 +1,172 @@
+::StoryIncludes
+src/passages/locations/home/bathroom/brushTeeth.tw2
+src/passages/locations/home/bathroom/giveSpyShow.tw2
+src/passages/locations/home/bathroom/haveAShower.tw2
+src/passages/locations/home/bathroom/ignoreSpy.tw2
+src/passages/locations/home/bathroom/kickOutSpy.tw2
+src/passages/locations/home/bathroom/lookOutWindow.tw2
+src/passages/locations/home/bathroom/useToilet.tw2
+src/passages/locations/home/bathroom/wash.tw2
+src/passages/locations/home/bathroom/washFace.tw2
+
+
+::Bathroom [nobr] <1600,1080>
+@@.image-wrapper-w70p; <img src="pics/bathroom.jpg"> @@
+<<if $hour == 8 && $minute >= 30>>
+    <<if previous() == 'Have a shower'>>
+        &emsp;Coming out of the shower, you hear a knock at the door. <br />
+        &emsp;You dress quickly before opening the door to see your father stood there. <br />
+        &emsp;He asks if you're done. He would like to shower now. <br />
+        [[Leave the bathroom->living room][$minute += 1]]
+    <<else>>
+        &emsp;As you approach the bathroom, you hear running water. <br />
+        &emsp;It seems your father is taking a shower. <br />
+        <br />
+        <<if $mainChar.corruption >= 20>>
+            [[and it’s hard for you to restrain your curiosity->peep on father]] <br /> <br />
+        <<endif>>
+
+        [[Leave the bathroom->living room][$minute += 1]]
+    <<endif>>
+    <br />
+<<elseif $hour == 21 && $minute <= 30>>
+    <<if previous() == 'Have a shower'>>
+        &emsp;Coming out of the shower, you hear a knock at the door. <br />
+        &emsp;You dress quickly before opening the door to see your mother stood there. <br />
+        &emsp;She asks if you're done. She'd like to shower now.. <br />
+        <br />
+        [[Leave the bathroom->living room][$minute += 1]]
+    <<else>>
+        &emsp;As you approach the bathroom, you hear running water. <br />
+        &emsp;It seems your mom is taking a shower. <br />
+        <br />
+
+        <<if $mainChar.corruption >= 20>>
+            [[and it’s hard for you to restrain your curiosity->peep on mother]] <br /> <br />
+        <<endif>>
+        [[Leave the bathroom->living room][$minute += 1]]
+    <<endif>>
+    <br />
+<<elseif $hour == 21 && $minute >= 30>>
+    <<if previous() == 'Have a shower'>>
+        &emsp;Coming out of the shower, you hear a knock at the door. <br />
+        &emsp;You dress quickly before opening the door to see $sibling.type stood there. <br />
+        &emsp;<<if $sibling.gender == $GENDER_MALE>>He<<else>>She<<endif>> asks if you're done. They'd like to shower now. <br />
+        <br />
+        [[Leave the bathroom->living room][$minute += 1]]
+    <<else>>
+        &emsp;As you approach the bathroom, you hear water running. <br />
+        &emsp;It seems your $sibling.type is taking a shower. <br />
+        <br />
+
+        <<if $mainChar.corruption >= 20>>
+            [[and it’s hard for you to restrain your curiosity->peep on sibling]] <br /> <br />
+        <<endif>>
+        [[Leave the bathroom->living room][$minute += 1]]
+    <<endif>>
+    <br />
+<<else>>
+    &emsp;You are in the bathroom. It is spacious and dazzling white.
+    &emsp;Your mother does a good job keeping it so clean. <br />
+    &emsp;There is a beautiful white square bath in the corner where you can [[relax->wash in the bathroom]]. <br />
+	&emsp;To the left of the bath is a [[toilet->use toilet]]. <br />
+    &emsp;To the left of the toilet is a sink in which you can [[wash your face]] and <<if $mainChar.appearance.teethBrushed>>brush your teeth<<else>>[[brush your teeth]]<<endif>> <br />
+    &emsp;A medium-sized [[mirror->Mirror]] hangs above the sink. <br />
+    <<if $inventory.grocery['Shampoo'].count > 0>>
+        &emsp;Opposite the sink and toilet is a shower, where you can [[have a shower->Have a shower]]. <br />
+    <<else>>
+        &emsp;Opposite the sink and toilet is a shower. You could have a shower here... If you had any shampoo. <br />
+    <<endif>>
+		<br />
+    	You have $inventory.grocery['Shampoo'].count uses of shampoo.
+    	<br />
+    	<<if settings.menstruation == true>>
+		<br />
+   		You have <<print $inventory.pharmacy['Tampons'].count>> tampons<<if $mainChar.menstruation.day >= 15 and $inventory.pharmacy['Tampons'].count > 0>> (<<if $mainChar.menstruation.isProtected != true>><<linkreplace "apply">><<set $inventory.pharmacy['Tampons'].count -= 1>><<set $mainChar.menstruation.isProtected = true>>applied<</linkreplace>><<else>>no need<<endif>>)<<endif>>
+    <<endif>>
+	<br />
+	<<if $inventory.pharmacy['Birth control pills'].count > 0>>
+		<br />
+		You have <<print $inventory.pharmacy['Birth control pills'].count>> birth control pills<<if $inventory.pharmacy['Birth control pills'].count > 0>> (<<if $mainChar.pregnancy.isOnPills != true>><<linkreplace "take">><<set $inventory.pharmacy['Birth control pills'].count -= 1>><<set $mainChar.pregnancy.isOnPills = true>>taken<</linkreplace>><<else>>taken<<endif>>)<<endif>>
+		<<if $mainChar.menstruation.day >= 15 or $mainChar.pregnancy.knowsAboutPregnancy == true>>
+		<br />
+		[You don't need birth control pills]
+		<<endif>>
+		<br />
+	<<endif>>
+	<<if $inventory.pharmacy['Pregnancy test'].count > 0>>
+		<br />
+		<<linkreplace "Use pregnancy test (left: <<print $inventory.pharmacy['Pregnancy test'].count>>)">>
+			<<set $minute += 10>>
+			<<set $inventory.pharmacy['Pregnancy test'].count -= 1>>
+			You used pregnancy test and ... <br />
+			<<if $mainChar.pregnancy.isPregnant == true>>
+				<<set $mainChar.pregnancy.knowsAboutPregnancy = true>>
+				<strong>You are pregnant!</strong> <br />
+
+				<<if $mainChar.pregnancy.day <= 7>>@@.image-wrapper-w70p; <img src="pics/PregnantLightly.jpg"> @@<<else>>@@.image-wrapper-w70p; <img src="pics/PregnantHeavily.jpg"> @@<<endif>>
+
+				And you have been pregnant for $mainChar.pregnancy.day day<<if $mainChar.pregnancy.day > 1>>s<<endif>>!
+			<<else>>
+				You are not pregnant!
+			<<endif>>
+		<</linkreplace>>
+	<<endif>>
+	<<if $inventory.grocery['Razors'].count > 0>>
+		<br />
+		<<linkreplace "Shave legs (razors left: <<print $inventory.grocery['Razors'].count>>)">>
+			<<set $minute += 20>>
+			<<set $inventory.grocery['Razors'].count -= 1>>
+			You shaved your legs. <br />
+			<br />
+			@@.add; Intimate haircut: shaved @@ <<set $mainChar.eroticLook.intimateHaircut = 'shaved'>>
+		<</linkreplace>>
+	<<endif>>
+	<br />
+    <br />
+    [[Go back->living room][$minute += 1]]
+<<endif>>
+
+
+::peep on father [nobr] <1800,1660>
+<<set $minute += 10>>
+	You open the door and see your father under the stream of water. He has a hot body but your attention is drawn to the large, flaccid cock. Several thoughts cross your mind. What would it look like hard? How would it feel inside of you? <br />
+
+	@@.image-wrapper-w70p;
+		[img['pics/bathroom/shower/dad/washing.gif']]
+	@@
+
+	<br />
+	You realise you've been staring for too long. It's time to [[leave->living room]] before he notices you!
+
+::peep on mother [nobr] <1800,1780>
+<<set $minute += 10>>
+	Opening the door a little, you see your mother washing her body thoroughly. She's very attractive for her age. Her body is in excellent condition. You have an urge to run your hands across that body. You want to know what those incredible boobs feel like. And her pussy... <br />
+
+	@@.image-wrapper-w70p;
+		[img[String.format('pics/bathroom/shower/mom/washing{0}.gif', random(1, 3))]]
+	@@
+	<br />
+
+	The heat in your lower body warns you. It's time to [[leave->living room]] before she notices you!
+
+::peep on sibling [nobr] <1800,1900>
+<<set $minute += 10>>
+	Silently and quietly opening the door a crack, you look to see your sibling washing. They're so hot with the steamy water running down their body. You get an urge to step inside, to help them wash their more... delicate parts.
+	<<if $sibling.type == 'brother'>>
+		@@.image-wrapper-w70p;
+			[img['pics/bathroom/shower/brother/washing.gif']]
+		@@
+
+	<br />
+
+	You shake your head of these thoughts. It's time to [[leave->living room]] before he notices you!
+	<<else>>
+		@@.image-wrapper-w70p;
+			[img[String.format('pics/bathroom/shower/sister/washing{0}.gif', random(1, 4))]]
+		@@
+
+	<br />
+
+		You shake your head of these thoughts. It's time to [[leave->living room]] before she notices you!
+	<<endif>>

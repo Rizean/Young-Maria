@@ -1,0 +1,130 @@
+::Living room schedule [nobr] <1180,1200>
+<<if $weekday>>
+    <!-- MOM -->
+    <<if $hour >= 16 && $hour < 17>>
+        <br />
+        &emsp;Your mom is watching tv <br />
+
+        <<if $mainChar.energy >= 10>>
+            [[Watch TV with her->watch TV][$watchTVWith = ['mom']]] <br />
+        <<else>>
+            &emsp;You are too tired to watch TV. <br />
+        <<endif>>
+        <br />
+    <<endif>>
+
+    <!-- MOM AND DAD -->
+    <<if $hour >= 17 && $hour < 19>>
+        <br />
+        &emsp;Your parents are watching TV. <br />
+        <<if $mainChar.energy >= 10>>
+            [[Watch TV with them->watch TV][$watchTVWith = ['mom', 'dad']]] <br />
+        <<else>>
+            &emsp;You are too tired to watch TV. <br />
+        <<endif>>
+        <br />
+    <<endif>>
+
+    <<if $hour == 19>>
+        &emsp;Your dad and $sibling.type are watching TV. <br />
+
+        <<if $mainChar.energy >= 10>>
+            [[Watch TV with them->watch TV][$watchTVWith = ['dad', 'sibling']]] <br />
+        <<else>>
+            &emsp;You are too tired to watch TV. <br />
+        <<endif>>
+    <<endif>>
+
+    <<if $hour >= 23 || $hour < 8>>
+        &emsp;Your parents are sleeping... <br />
+    <<endif>>
+<<elseif $day == 6>>
+    <<if $hour == 21 && $minute <= 30>>
+        &emsp;Your dad is reading a book. <br />
+        [[read a book with him->read a book][$readWith = ['dad']]] <br />
+    <<elseif $hour >= 21 && $hour < 23>>
+        &emsp;Your dad is reading a book. <br />
+        &emsp;Your mom is reading a book. <br />
+        [[read a book with them->read a book][$readWith = ['dad', 'mom']]] <br />
+    <<endif>>
+
+    <<if $hour == 20>>
+        &emsp;Your $sibling.type is watching TV. <br />
+        <<if $sibling.type == 'sister'>>
+            <<set _pronoun = 'her' >>
+        <<else>>
+            <<set _pronoun = 'him' >>
+        <<endif>>
+
+        <<if $mainChar.energy >= 10>>
+            <<set _tempSent = 'Watch TV with ' + _pronoun >>
+            [[_tempSent->watch TV][$watchTVWith = ['sibling']]] <br />
+        <<else>>
+            &emsp;You are too tired to watch TV. <br />
+        <<endif>>
+    <<endif>>
+<<elseif $day == 7>>
+    <<if $hour >= 16 && $hour < 20>>
+        &emsp;Your family spends time playing board games and talking about different topics. <br />
+        [[join them->spend time with family]]
+    <<elseif $hour == 21>>
+        &emsp;Your dad is reading a book while the TV is on. <br />
+    <<endif>>
+
+    <<if $hour == 21 && $minute >= 30>>
+        &emsp;Your mom is watching TV. <br />
+        <<if $mainChar.energy >= 10>>
+            [[Watch TV with her->watch TV][$watchTVWith = ['mom']]] <br />
+        <<else>>
+            &emsp;You are too tired to watch TV. <br />
+        <<endif>>
+    <<endif>>
+<<endif>>
+<br />
+
+::read a book [nobr] <1191,1311>
+@@.image-wrapper-w70p;
+	[img['pics/reading_a_book.jpg']]
+@@
+
+&emsp;You take a random book from your home library and spend about 20 minutes reading. <br />
+<<if $readWith.length > 1>>
+    <<set _temp = 'parents'>>
+<<else>>
+    <<set _temp = 'parent' >>
+<<endif>>
+&emsp;Sometimes you get distracted and talk about books with your _temp <br />
+
+<<if $readWith.includes('dad')>>
+    <<set $mainChar.relationships.dad += 1>>
+    @@.add; +1 relationship with dad @@
+<<endif>>
+<<if $readWith.includes('mom')>>
+    <<set $mainChar.relationships.mom += 1>>
+    @@.add; +1 relationship with mom @@
+<<endif>>
+<br />
+<br />
+<<set $minute += 20>>
+
+[[be a "bad girl"->be naughty living room]] <br />
+[[finish reading->living room]]
+
+::spend time with family [nobr] <1300,1300>
+@@.image-wrapper-w70p;
+	[img['pics/playing_with_family.jpg']]
+@@
+&emsp;You join the game your family is playing. You have a fun time playing board games and talking about different topics together. <br />
+
+<<set $mainChar.relationships.dad += 1>>
+<<set $mainChar.relationships.mom += 1>>
+<<set $mainChar.relationships.sibling += 1>>
+
+@@.add; relationship with mom + 1 @@ <br />
+@@.add; relationship with dad + 1 @@ <br />
+@@.add; relationship with $sibling.type + 1 @@ <br />
+<br />
+<<set $hour = 20>>
+<<set $minute = 0>>
+
+The game is over and you [[leave->living room]].

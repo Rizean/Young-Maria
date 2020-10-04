@@ -1,0 +1,250 @@
+::Time to work! [nobr] <3125,3050>
+<<if $partOfWork == 1>>
+    <<set $hour to either(9,10)>>
+<<elseif $partOfWork == 2>>
+    <<set $hour to either(11,12)>>
+<<elseif $partOfWork == 3>>
+    <<set $hour to either(13,14)>>
+<<elseif $partOfWork == 4>>
+    <<set $hour to either(15,16)>>
+<<endif>>
+<<set $minute to either(0,5,10,15,20,25,30,35,40,45,50,55)>>
+
+<div align="center">
+    <table border="0">
+        <tr>
+            <td class="timer">
+                <p style="color:#F5F4F4; font-size: 6px">.</p>
+
+                <<if $hour < 10>>
+                    0
+                <<endif>>
+
+                $hour:
+
+                <<if $minute < 10>>
+                    0
+                <<endif>>
+
+                $minute
+            </td>
+        </tr>
+    </table>
+</div>
+
+<<if $partOfWork == 1>>
+    <<set $event to random(1, 5)>>
+<<else>>
+    <<set $event to random(1, 7)>>
+<<endif>>
+
+<<if $event == 1>>
+    &emsp;You were sitting at your desk, getting your work done, when some girl runs into your cubicle and starts to shout at you. <br />
+    &emsp;"WHAT DO YOU THINK YOU ARE DOING???" <br />
+    &emsp;<p class="char">"Erm..."</p> <br />
+    &emsp;"HOLY FUCKING SHIT! I TOLD YOU TO WORK ON THE UPCOMING PROJECT" <br />
+    &emsp;<p class="char">"I'm sorry, but I think-"</p> <br />
+    &emsp;"HELL YEAH, YOU WILL BE SORRY, BETTY" <br />
+    &emsp;<p class="char">"I'm not Betty..."</p> <br />
+    &emsp;"..." <br />
+    &emsp;<p class="char">"..."</p> <br />
+	&emsp;She reads your badge out loud; "$mainChar.firstName". Her face turns as red as a tomato. "Oh, shit, I'm so sorry. Gosh, you look a lot like Betty..." <br />
+    &emsp;<p class="char">"It's ok, ma'am."</p> <br />
+    &emsp;"Well... Erm... Forget this happened." She gives you one last apologetic smile before fleeing from the awkward situation she created. <br /> <br />
+    &emsp;That was... interesting. I wonder who Betty is? You shrug and go back to your work. <br />
+    <p class="minus">-5 Energy</p> <br />
+    <<set $mainChar.energy -= 5>>
+
+    <<if $partOfWork == 4>>
+        [[Go home->living room]] <br />
+    <<else>>
+        <<link "->">>
+            <<set $partOfWork += 1>>
+            <<goto "Time to work!">>
+        <</link>>
+    <<endif>>
+<<elseif $event == 2>>
+    &emsp;You're working on your computer when you hear a faint little beep. The signal of a new email. <br />
+    &emsp;<p class="char">"Oh!"</p> <br />
+    &emsp;You look at the recipient. It's from one of the colleagues. But no subject... Okay, let's open it up! <br /> <br />
+    "In connection with the requirements under Article <br />
+
+    <<set _law to either("45-U","33-GT","74-U","167-LtI","GT-17")>>
+    _law and the Federal Legislative Assembly of 20
+    <<set _year to either("05","13","18","00","12","04","07")>>
+    _year..." <br /> <br />
+
+    &emsp;Pls, no~ Better forward it to Mr. McEvoy. <br />
+    <br />
+    <<if $partOfWork == 4>>
+        [[Go home->living room]] <br />
+    <<else>>
+        <<link "->">>
+            <<set $partOfWork += 1>>
+            <<goto "Time to work!">>
+        <</link>>
+    <<endif>>
+<<elseif $event == 3>>
+    &emsp;*BEEP* <br />
+    &emsp;<p class="char">"Another email..."</p> <br />
+    &emsp;Oh! It's from our Russian colleagues! <br /> <br />
+    &emsp;"Мы вам макет отправили еще три недели назад, редиски. Как вы умудрились его снова потерять? Я заебался уже, серьезно. Ищите сами. <br />
+	&emsp;С наилучшими пожеланиями, раб Божий. <br />
+	&emsp;Артём." <br /> <br />
+    ... <br /> <br />
+    &emsp;Forward to Mr. McEvoy. <br />
+    <br />
+    <<if $partOfWork == 4>>
+        [[Go home->living room]] <br />
+    <<else>>
+        <<link "->">>
+            <<set $partOfWork += 1>>
+            <<goto "Time to work!">>
+        <</link>>
+    <<endif>>
+<<elseif $event == 4>>
+    &emsp;You are going through some of your work when some guy rushes into your cubicle. "Hey, is Mr. McEvoy here?" <br />
+    &emsp;<p class="char">"Yes, sir. Oh, but he said not to be disturbed for the next hour."</p> <br />
+    &emsp;"Ah, don't worry, Mr. McEvoy is an old friend..." He smiles and puts a chocolate bar in front of you. "I'm sure he won't mind you making an exception for me?" <br />
+    <&emsp;p class="char">"... Sure :3"</p> <br /> <br />
+    &emsp;What a sweet young man... <br />
+    <p class="add">+5 Energy</p> <br />
+    <<set $mainChar.energy += 5>>
+    <br />
+    <<if $partOfWork == 4>>
+        [[Go home->living room]] <br />
+    <<else>>
+        <<link "->">>
+            <<set $partOfWork += 1>>
+            <<goto "Time to work!">>
+        <</link>>
+    <<endif>>
+<<elseif $event == 5>>
+    &emsp;You are scrolling through some emails when the telephone makes a strange *bip* sound. <br />
+    &emsp;"$mainChar.firstName, I'm in need of a coffee." <br />
+	&emsp;Press, hold, mistake, swear, hold another button. <br />
+    &emsp;<p class="char">"Okay, Mr. McEvoy. Right away!"</p> <br />
+    &emsp;You hastily rush over to the break room and make his coffee. Whilst the machine buzzes away, you gaze out of the window watching the world play out slowly- *BIIIIIP* You sigh, pick up the ready coffee and make your way into Mr. McEvoy's office. <br />
+    &emsp;<p class="char">"Mr. McEvoy, your coffee."</p> <br />
+    &emsp;"Ah, thank you!" <br />
+    &emsp;You give him a polite nod and take your leave. On the way back to your desk, you swing by the break room and make yourself another cup of nice hot coffee for yourself. A little benefit of being a secretary~ <br />
+    <br />
+    <<if $partOfWork == 4>>
+        [[Go home->living room]] <br />
+    <<else>>
+        <<link "->">>
+            <<set $partOfWork += 1>>
+            <<goto "Time to work!">>
+        <</link>>
+    <<endif>>
+<<elseif $event == 6>>
+    &emsp;You were reading through emails when an angry electronic voice emenates from the phone. "$mainChar.firstName, I need your ass here! Now!" <br />
+    &emsp;Oh fuck! <br />
+    &emsp;You quickly make your way to Mr. McEvoy's office. As you approach the door, you knock gently, shyly step inside and close the door behind you. Mr. MvEvoy is standing near a window. He looks really angry. <br />
+    &emsp;"I swear the British will be the death of me." He turns to face you and scowls. "That meeting has really wound me up and I need a way to let off some steam. Bend over the desk, now!" <br />
+	&emsp;Wait... What? You frown but all comes clear when you see Mr. McEvoy unbuckling his pants. Oh... <br />
+	&emsp;"I said, now!" <br />
+	&emsp;You move over to his desk and bend over the smooth wood. Your ass on display for your boss. You hear movement and suddenly feel a cold hand lift up your skirt. <br />
+	&emsp;"Damn, you have such a nice ass." Mr. McEvoy gives it a slap not long before he pushes himself inside you forcefully. He is very pent up... <br /> <br />
+
+    <<set _image to random(1, 6)>>
+    <<if _image == 1>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossFuck1.gif">
+        </div>
+        <<HaveASexWidget "vaginal" "MrMcEvoy">>
+    <<elseif _image == 2>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossFuck2.gif">
+        </div>
+        <<HaveASexWidget "vaginal" "MrMcEvoy">>
+    <<elseif _image == 3>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossFuck3.gif">
+        </div>
+        <<HaveASexWidget "vaginal" "MrMcEvoy">>
+    <<elseif _image == 4>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossFuck4.gif">
+        </div>
+        <<HaveASexWidget "vaginal" "MrMcEvoy">>
+    <<elseif _image == 5>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossFuck5.gif">
+        </div>
+        <<HaveASexWidget "anal" "MrMcEvoy">>
+    <<elseif _image == 6>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossFuck6.gif">
+        </div>
+        <<HaveASexWidget "vaginal" "MrMcEvoy">>
+    <<endif>>
+    &emsp;Mr. McEvoy wastes no time in fucking you roughly from behind. His movements are hard and fast, pushing deep inside you everytime he thrusts. He's like a Jackrabbit pounding into you with no remorse. Eventually he slows and pulls out. You feel his hot sticky cum shoot onto your bare ass. <br />
+	&emsp;"That's better. Thanks, $mainChar.firstName, you can go now." <br />
+	&emsp;You promptly pull down your skirt and make your way to the bathroom to clean yourself up. You also take this opportunity to give yourself a well-needed break... You just hope nobody hears you moaning...
+    <p class="add">+1 Corruption</p> <br />
+    <<set $mainChar.corruption += 1>>
+
+    <<if $partOfWork == 4>>
+        [[Go home->living room]] <br />
+    <<else>>
+        <<link "->">>
+            <<set $partOfWork += 1>>
+            <<goto "Time to work!">>
+        <</link>>
+    <<endif>>
+<<elseif $event == 7>>
+    &emsp;"$mainChar.firstName, come here!" <br />
+    &emsp;You turn to see Mr. McEvoy stood at the door to one of the meeting rooms. As he disappears inside, you follow him. When you reach the room, you see Mr. McEvoy sat at one end with a bunch of papers, folders and books surrounding him. <br />
+	&emsp;You step beside him. He pulls your hand down and forces you to the floor so you're kneeling next to him. "You know, I've got a lot of work to do here. I could use some relief." <br />
+	&emsp;You are about to ask what he means when he unzips his pants and releases his hard cock. "Well? Get to work!" <br />
+    &emsp;<p class="char">"Um, okay, Mr. McEvoy!"</p> <br />
+	&emsp;You take his cock in your hand and stroke the shaft. After a few minutes you use your mouth around his thick cock; slurping and gagging on his length. <br /> <br />
+
+    <<set _image to random(1, 5)>>
+    <<if _image == 1>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossSuck1.gif">
+        </div>
+        <<HaveASexWidget "bj" "MrMcEvoy">>
+    <<elseif _image == 2>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossSuck2.gif">
+        </div>
+        <<HaveASexWidget "bj" "MrMcEvoy">>
+    <<elseif _image == 3>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossSuck3.gif">
+        </div>
+        <<HaveASexWidget "bj" "MrMcEvoy">>
+    <<elseif _image == 4>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossSuck4.gif">
+        </div>
+        <<HaveASexWidget "bj" "MrMcEvoy">>
+    <<elseif _image == 5>>
+        <div class="default-image-wrapper">
+            <img src="pics/bossSuck5.gif">
+        </div>
+        <<HaveASexWidget "bj" "MrMcEvoy">>
+    <<endif>>
+
+    &emsp;After a couple of minutes, you hear the door open. You quickly shuffle under the desk but continue blowing your boss. After all, you don't won't to be berated for not doing your job... <br />
+	&emsp;You could hear Mr. McEvoy struggling to form coherent sentences and keep himself from cumming whilst he had a visitor. <br />
+	&emsp;Thankfully, the intruder leaves fairly quickly and just in time; Mr. McEvoy cums into your mouth, his hot sticky seed shooting down your throat. <br />
+	&emsp;He dismisses you to clean yourself up. Well, a slut is a slut. Besides, you can't deny that you enjoyed being used like that. Guess it's time for you to relieve yourself now... <br /> <br />
+    <p class="add">+1 Corruption</p> <br />
+    <<set $mainChar.corruption += 1>>
+
+    <<if $partOfWork == 4>>
+        <<link "Go home">>
+            <<set $minute += 30>>
+            <<goto "Go out">>
+        <</link>>
+    <<else>>
+        <<link "->">>
+            <<set $partOfWork += 1>>
+            <<goto "Time to work!">>
+        <</link>>
+    <<endif>>
+<<endif>>

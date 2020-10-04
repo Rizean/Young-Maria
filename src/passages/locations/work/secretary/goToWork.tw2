@@ -1,0 +1,15 @@
+::Go to work <3125,2900>
+<<set $hour = 9>><<set $minute = 0>>&emsp;You make your way to work safely.
+
+<div class="default-image-wrapper"><img src="pics/OfficeHall.jpg"></div>
+
+<<if visited() == 1>>&emsp;When you arrive, you're a little nervous because this is your first day! You remember being told when you got the job to go straight to Mr. McEvoy. So you head up to his office with some directions from one of the workers.
+&emsp;After a brief summary of your job, Mr. McEvoy guides you to your cubicle. "This is your work space. Keep it tidy and clean from clutter. Sometimes I'll call via this..." he points at the black phone-like device on your table, "...phone. All you have to do is press this button, this one, then hold this one and answer. Understood?"
+&emsp;<p class="char">"Yes, Mr. McEvoy!"</p>
+&emsp;"Thatta girl! Now, get to work. This company won't run itself!" Mr. McEvoy chuckles to himself and begins to walk away when he suddenly turns back to you. "Oh, almost forgot! There's a coffee machine in the break room. You'll use that to make me coffee when I ask. Good day!"
+&emsp;<p class="char">"Oh okay!"</p>
+&emsp;You call to Mr. McEvoy but he's already out of hearing distance. At least your job seems fairly simple...<<else>>&emsp;You arrive at your work and greet your co-workers. Mr. McEvoy is there instructing one of the other employees and you give him a small wave. Then you sit at your computer and get to work.<<endif>>
+
+<<if $day == 1>><<if $mainChar.beauty >= 30>><<set $weekPay = 150>><<elseif $mainChar.beauty >= 60>><<set $weekPay = 200>><<elseif $mainChar.beauty >= 90>><<set $weekPay = 250>><<endif>>&emsp;You find an envelope on your table with $weekPay dollars inside!
+<p class="add">+$$weekPay</p><<set $mainChar.money += $weekPay>>
+<<endif>><<link "Time to work!">><<set $partOfWork = 1>><<goto "Time to work!">><</link>>

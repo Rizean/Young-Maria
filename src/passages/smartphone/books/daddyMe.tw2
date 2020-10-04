@@ -1,0 +1,14 @@
+::Daddy Me [system] <5350,2650>
+<<set $isDaddyMeRead = true>><div class="default-image-wrapper"><img src="pics/books/DaddyMe.jpg"></div>
+
+&emsp;Dreams are supposed to be encouraged. Not mine. My brother likes to keep me on a tight leash, tethered to an unexceptional life. But when Ronan Hayes walks into our family-owned bar, he opens my cage and offers me the one thing I never had: freedom.
+&emsp;Ronan wants to give me the world. A chance to take flight and soar. He sees something special in me, and I want nothing more than to be that for him. Special.
+&emsp;He's my dream maker. My shot at a better life. My hope for something more. My everything.
+&emsp;Ronan craves to take care of me. He's a protector, a confidant, a provider. A lover. He wants to daddy me. And I want to let him...
+
+~Several Hours Later~
+
+You've locked the door and a good thing too... You are soaked and incredibly satisfied...
+<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+
+[[Go back->Smartphone]]

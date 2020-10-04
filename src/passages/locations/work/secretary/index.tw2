@@ -1,0 +1,84 @@
+::StoryIncludes
+src/passages/locations/work/secretary/goToWork.tw2
+src/passages/locations/work/secretary/timeToWork.tw2
+
+
+::Secretary <3570,2716>
+"Sales Global Protection is looking to hire a full-time Office Assistant for its corporate headquarters. 3+ years of experience working in a similar role and knowing of Russian REQUIRED. Pay starts at $100/Week.
+
+Responsibilities include, but are not limited to:
+* Performing general office duties such as answering and screening phone calls
+* Filing and organizing paperwork
+* Managing HR processes such as employee paperwork and on-boarding of new hires
+* Performing other related tasks such as assisting in organizing and duplicating materials, filing, shredding, scanning
+
+Mr. McEvoy, cab. №466"
+
+&emsp;You look over the advertisement. Well, you don't know Russian and you have no experience but it's worth a shot... Right?
+
+<<if $hour < 8 or $hour > 19>>The building is closed at this time!<<else>>[[Go to the address!]]<<endif>>
+
+[[Back->JobHunters.net]]
+
+::Go to the address! <3444,2723>
+<<set $minute += 30>>&emsp;You walk to the address, which takes you thirty minutes, and find a big building looming over you. Upon a plaque above the door is a sign reading "Sales Global Protection". You've found it but now what? You have no experience, you are young and don't know Russian... But it's still a job and you need the money
+
+<div class="default-image-wrapper"><img src="pics/OfficeHall.jpg"></div>
+
+&emsp;You push open the door and step into the large reception area. Your shoes click on the floor (is that marble?) as you approach the front desk.
+&emsp;The girl working there looks up from her computer and gives you a polite smile. "Hi, what can I do for you?"
+&emsp;You ask to see the man mentioned in the advertisement.
+&emsp;"Mr. McEvoy?"
+&emsp;<p class="char">"Yeah, that's him. Can I see him?"</p>
+&emsp;"Oh! Erm... sure! Right this way!"
+&emsp;The woman stands from the desk and leads you further into the building. As you ride the elevator to the upper most floors, the woman gives you a quick introduction about the job, the place and the boss; Mr. McEvoy. At your question about his personality, the woman becomes silent.
+&emsp;"Mr. McEvoy can be... difficult sometimes."
+&emsp;<p class="char">"That's okay! I used to struggle with my teachers at school too so it's nothing new to have difficult superiors."</p>
+&emsp;The girl shakes her head and starts to walk past a bunch of workers and cubicles. "That's not- What I mean to say is is that Mr. McEvoy can be a little impatient and... rough with a pretty girl around. And you are very pretty... Do you get what I'm saying?"
+&emsp;It takes a while but what she means eventually dawns on you. You simply nod your head.
+&emsp;"Look, most of the time he's fine but sometimes... If you get the job, just be careful..." The woman gestures to the door you've stopped at. "This is his office. Good luck in there!" She gives you one final smile and turns to leave.
+&emsp;You watch her walk away and you can't help but feel a little doubtful about the situation. You shake your head. No, there's no turning back now! You're here and you need the job. [[Okay, let's do this.]]
+
+::Okay, let's do this. <3436,2833>
+&emsp;You take a deep breath and knock on the door. A deep voice gives you the go ahead to open the door. You step into the clean and organised office. Sat at the wooden desk is a surprisingly handsome young man.
+
+<div class="default-image-wrapper"><img src="pics/MrMcEvoy.jpg"></div>
+
+&emsp;Distracted by his attractiveness, you freeze at the door.
+&emsp;The man looks up at you. "Are you just going to stand there all day or are you going to take a seat? I assume you're here for the job?"
+&emsp;You force yourself to move and take a seat opposite his desk.
+&emsp;He begins asking you a load of questions about previous work experience, skills and talents that would be useful in the job, your knowledge of the Russian language. Unfortunately your reply to these questions was the same; you have none.
+&emsp;It is clear that his patience is wearing thin as with every answer, Mr. McEvoy's writing becomes sloppier. Eventually he slams down the pen. "Are you shitting me? You come here wanting a job but you have nothing to offer? Is this job a joke to you?"
+&emsp;You hastily shake your head but his sudden temper has rendered your tongue useless. You feel like a deer caught in headlights; unable to move or speak.
+&emsp;He slumps back against his chair and rubs his temples. "No, no. You're aren't suitable for this post. The only thing going for you is your beauty but that won't be enough here. Now get out. I'm done with you." He drops his gaze and shoos you away.
+&emsp;His words hurt, you can't deny it, but you also remember something the reception woman said. If beauty is the best you have then you need to own it. Maybe you can try to [[seduce him]]?
+
+::seduce him <3428,2945>
+<<set $hour += 1>>&emsp;You shift yourself so you are sat on the edge of the seat and unbutton your shirt slightly. Then you put on your most alluring voice.
+&emsp;<p class="char">"Mr. McEvoy, sir, I know that I don't have a lot of experience but..."</p> You remove one of your shoes, and run your bare foot up his leg.
+&emsp;At his crotch, you gently rub your toes up and down where his dick should be. <p class="char">"I'm eager to learn and I'm sure I can be useful in other ways."</p> As you say this, you feel his cock straining against his pants under your foot.
+&emsp;He shifts his gaze back to you and raises a brow. "You really want this job, huh?"
+&emsp;<p class="char">"Yes, sir..."</p>
+&emsp;"Then bring that sexy body over here," he says as he pushes his chair back from the desk.
+&emsp;You strut over to him and straddle his lap.
+&emsp;"Damn... Young and lustful, huh?" He brings your face down to his where he kisses you hard, his tongue playing with yours. His hands roam down your body and come to rest on your ass where he gives it a playful squeeze. He breaks off the kiss. "Here's the deal; if I enjoy this you can have the job. Now bend over my desk."
+&emsp;You eagerly follow his orders, getting off his lap and bending over the smooth wood. In this position, your ass is presented to Mr. McEvoy like a prize to be won.
+&emsp;He pulls down your clothes and gives your butt a couple of hard slaps. After you're sure he's made your ass cheeks raw, you feel his cock rubbing along your pussy lips. You think he's going to penetrate your pussy but he moves further up and prods at your ass.
+&emsp;"Wait, sir, I-"
+&emsp;You are cut off as Mr. McEvoy plunges into your ass hole with one swift and forceful thrust. You now understand that he was using your pussy juices to lubricate his cock.
+&emsp;Mr. McEvoy rocks back and forth, pushing his cock further in with each thrust. You are surprised by how thick he feels but then again, your ass isn't exactly gaping wide. The fullness is incredible though and you find yourself moaning with pleasure. However, your moans are muffled when Mr. McEvoy's hand covers your mouth.
+
+<div class="default-image-wrapper"><img src="pics/MrMcEvoyInterview.gif"></div><<HaveASexWidget "anal" "MrMcEvoy">>
+
+&emsp;During your 'interview', Mr. McEvoy increased his pace. Now he rams into your ass with a strange determination. You realise this determination was because he was nearing his climax. He slows and in one final deep thrust, he shoots a jet of warm cum down your ass canal. This sends you over the edge and you cum, your walls tightening around his cock. Eventually you relax and Mr. McEvoy pulls himself free.
+&emsp;"Fuck that was good." Mr. McEvoy rezips his pants and sits back down. You're about to do the same when his hands on your ass stops you. "Don't move."
+&emsp;Too afraid to move, you remain as still as possible. You feel Mr. McEvoy's hands part your ass and you know he's staring at your ass driping with his cum. After a few minutes, he spins you around.
+&emsp;"Alright, you got the job. You work from 9:00 to 17:00. Every Monday, I'll pay you $100 for that weeks work. But I'd be willing to increase the pay if you were to... make yourself more fit and attractive." He chuckles. "Your job will consist of sorting emails, checking and organising files and answering phone calls. Anything you don't understand you send to me. Understood?"
+&emsp;<p class="char">"Yes, sir!"</p>
+&emsp;"Oh and don't be late. You're late, you're out. No excuses, no warnings." Mr. McEvoy licks his lips hungrily as he watches some of his cum leak from your ass and fall onto the floor. "If you miss a day of work, your punishment will be severe. Understood?"
+&emsp;<p class="char">"Yes, Mr. McEvoy, I'll do my best!"</p>
+&emsp;He gestures for you to leave. You quickly redress yourself and gather your belongings.
+&emsp;On you way out, Mr. McEvoy calls to you. "Oh, one more thing! Since you are so eager to please me, you'll also be my office slut. You refuse to do what I want, you're fired..." He smirks. "You start tomorrow."
+<p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 20>>
+
+<<link "Go home">><<set $isJobHad = true>><<set $weekPay = 100>><<set $minute += 30>><<goto "living room">><</link>>

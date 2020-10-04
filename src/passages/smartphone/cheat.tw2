@@ -1,0 +1,12 @@
+::Cheat [system] <1800,700>
+Type any code here:
+<<textbox "$cheat" "">><<if $isStayHomeBonusTaken != true>>
+<hr>
+Stay home bonus: +10 to all stats of all family members
+<<button "Take" "Stay home bonus: second wave">><</button>>
+<hr><<endif>>
+
+[[Cheat!]]
+[[Back->Smartphone]]
+
+Don't have any cheat codes yet? Visit my <a class="patreon" href="https://Patreon.com/MariaModd" target="_blank"><p style="color:white ; background-color: #f96753; border-radius: 15px; font-weight: bold"><p style="color:#f96753">.</p> Patreon <p style="color:#f96753">.</p></p></a> for them!

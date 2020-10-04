@@ -1,0 +1,54 @@
+::StoryIncludes
+
+::Sister room [nobr] <2300,480>
+@@.image-wrapper-w70p; <img src="pics/sibling/female/room.jpg" alt="sibling female room" /> @@
+&emsp;Your sister’s room is smaller than yours but that only adds to its cosy aesthetic. It is beautiful and comfortable yet that doesn't surprise you since your sister always has an eye for gorgeous design. <br />
+&emsp;In the right corner of your sister's room is a bed which is tucked neatly into the corner against both walls. Over the bed hangs a bewitching ceiling lamp in the shape of a red lotus. Next to the bed, on the left, is a dark oak bedside table. On it rest a cute little lamp and some trinkets. <br />
+&emsp;Opposite the bed is a dark oak desk table with several draws and small macbook on top. Pushed orderly under the desk is her office chair which is black and ergonomic. Above the table are several matching wooden shelves that store your sister's books and more trinkets. <br />
+&emsp;In the centre of the room, is an elegant white plush carpet to balance the light and dark colours of the space. You really like this carpet because walking on it feels like walking on a soft, ticklish cloud. <br />
+&emsp;On the wall between the bed and the table is a window that illuminates the whole room. Around the window hang baby pink curtains. Your sister said they were more for decoration rather than blocking out the sun. <br />
+&emsp;In the left corner of the room is a double wardrobe, also made of dark oak, in which hangs a lot of your sister's dresses, trousers, skirts etc. You've borrowed a few of these clothes before though you've always asked before hand. <br />
+&emsp;You are stood by the door which is between the desk and a small TV on a matching dark oak TV stand. A few feet in front of the TV is a small red loveseat adorned with several cute cushions. <br />
+<br />
+<br />
+<<if $mainChar.energy >= 10>>
+<<if $hour >= 19 && ($hour <= 23 && $minute <= 59)>>
+	<!-- <<include "ToplessNakedWithSiblingBrother">> -->
+	<<set $sibling.currentLocation = $SISTER_LOCATION_SISTER_ROOM >>
+	<<set $sibling.currentState = either('bed', 'table', 'sofa', 'playing', 'exercising', 'watching TV') >>
+	<<switch $sibling.currentState>>
+		<<case 'bed'>>
+			<<include "Sister in brothers bed">>
+		<<case 'table'>>
+			<<include "Sister sitting at the table sisters room">>
+		<<case 'sofa'>>
+			<<include "Sister sitting in sofa sisters room">>
+		<<case 'playing'>>
+			<<include "Sister playing PS4 sisters room">>
+		<<case 'exercising'>>
+			<<include "Sister exercising sisters room">>
+		<<case 'watching TV'>>
+			<<include "Sister watching TV sisters room">>
+		<<default>>
+			@@.error; UNKNOWN CASE @@
+	<</switch>>
+<<elseif $hour >= 0 && $hour < 8>>
+	&emsp;Your [[sister->Sister char info]] is sleeping. <br />
+<</if>>
+<<elseif $mainChar.energy < 10>>
+&emsp;You are too tired!
+<</if>>
+<br />
+[[Living room->living room]]
+
+::Sister char info [nobr notFinished] <2300,600>
+[img[String.format($sibling.appearance.image)]]
+<br />
+&emsp;Your sister is gorgeous. She is $sibling.age years old. <<if $mainChar.relationships.sibling < 15>> Your relationship with her can hardly be called friendly... <<endif>> <br />
+&emsp;You often quarrel with one another and these can lead to going days without speaking to each other. If anyone asks, you often say you hate each other. <br />
+&emsp;However, in difficult situations, you are still ready to support and help one another because you are family. <br />
+&emsp;You have a few common interests including reading, watching TV, shopping, make-up. Her own interests, that differ from yours, include dancing, streaming games, and drawing. <br />
+&emsp;Your sister has several friends and some often come around to hang with her. You figure these ones, as they are usually the same ones each time, are here more close friends. <br />
+&emsp;Though your sister has never specifically said, she think she may have a boyfriend as there is male friend she often goes out with. But, you cannot say for sure and don't want to assume. <br />
+
+[[Back->Sister room]]

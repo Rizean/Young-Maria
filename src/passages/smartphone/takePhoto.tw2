@@ -137,7 +137,7 @@
 [[Back->Take a photo]]
 
 ::Take a photo of tongue out [system] <4850,1975>
-<<showSelfie 0 3 tongueout isTongueOutPhotoTaken>>Maybe this tongue wants something to do...<</showSelfie>>
+<<showPhoto 0 3 tongueout isTongueOutPhotoTaken>>Maybe this tongue wants something to do...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo of your butt [system] <5100,1975>
@@ -145,62 +145,62 @@
 [[Back->Take a photo]]
 
 ::Take a photo with banana [system] <5225,1975>
-<<showSelfie 1 5 banana isBananaPhotoTaken>>Mmm... Tasty banana... Nom-nom!<</showSelfie>>
+<<showPhoto 1 5 banana isBananaPhotoTaken>>Mmm... Tasty banana... Nom-nom!<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo in underwear [system] <5225,2100>
-<<showSelfie 1 12 underwear isUnderwearPhotoTaken>>Quite sexy! ;)<</showSelfie>>
+<<showPhoto 1 12 underwear isUnderwearPhotoTaken>>Quite sexy! ;)<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo of your butt in panties [system] <5350,1975>
-<<showSelfie 0 8 buttpanties isButtInPantiesPhotoTaken>>It's too hot in pants...<</showSelfie>>
+<<showPhoto 0 8 buttpanties isButtInPantiesPhotoTaken>>It's too hot in pants...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a bottomless photo [system] <5475,1975>
-<<showSelfie 0 5 bottomless isBottomlessPhotoTaken>>I think it's a nice view... ;P<</showSelfie>>
+<<showPhoto 0 5 bottomless isBottomlessPhotoTaken>>I think it's a nice view... ;P<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo of your naked butt [system] <5600,1975>
-<<showSelfie 0 13 naked_butt isNakedButtPhotoTaken>>Oh... Look! No panties...<</showSelfie>>
+<<showPhoto 0 13 naked_butt isNakedButtPhotoTaken>>Oh... Look! No panties...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo of your breasts [system] <5725,1975>
-<<showSelfie 1 26 breasts isBreastPhotoTaken>>Those look perky! Yummy...<</showSelfie>>
+<<showPhoto 1 26 breasts isBreastPhotoTaken>>Those look perky! Yummy...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a nude photo [system] <4725,2100>
-<<showSelfie 1 30 nude isNudePhotoTaken>>You are adorable!<</showSelfie>>
+<<showPhoto 1 30 nude isNudePhotoTaken>>You are adorable!<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take an on/off photo [system] <4850,2100>
-<<showSelfie 0 25 onoff isOnOffPhotoTaken>>Do you see the difference?<</showSelfie>>
+<<showPhoto 0 25 onoff isOnOffPhotoTaken>>Do you see the difference?<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo of your pussy [system] <4975,2100>
-<<showSelfie 0 22 pussy isPussyPhotoTaken>>I don't know if I should do THIS...<</showSelfie>>
+<<showPhoto 0 22 pussy isPussyPhotoTaken>>I don't know if I should do THIS...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a dripping photo [system] <5100,2100>
-<<showSelfie 0 7 wet isDrippingPhotoTaken>>Thinking about you...<</showSelfie>>
+<<showPhoto 0 7 wet isDrippingPhotoTaken>>Thinking about you...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo with butt plug [system] <5350,2100>
-<<showSelfie 0 9 butt_plug isButtPlugPhotoTaken>>Do you like my butt plug? My ass has been asking for it...<</showSelfie>>
+<<showPhoto 0 9 butt_plug isButtPlugPhotoTaken>>Do you like my butt plug? My ass has been asking for it...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo with tail butt plug [system] <5475,2100>
-<<showSelfie 0 9 tail_plug isTailButtPlugPhotoTaken>>This kitty is very submissive, meow...<</showSelfie>>
+<<showPhoto 0 9 tail_plug isTailButtPlugPhotoTaken>>This kitty is very submissive, meow...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo while masturbating [system] <5600,2100>
-<<showSelfie 1 9 masturbation isMasturbatingPhotoTaken>>You like it, don't you?<</showSelfie>>
+<<showPhoto 1 9 masturbation isMasturbatingPhotoTaken>>You like it, don't you?<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo while masturbating with your dildo [system] <5725,2100>
-<<showSelfie 1 4 dildo isDildoPhotoTaken>>Mmm... So good...<</showSelfie>>
+<<showPhoto 1 4 dildo isDildoPhotoTaken>>Mmm... So good...<</showPhoto>>
 [[Back->Take a photo]]
 
 ::Take a photo while masturbating with cucumber [system] <5850,2100>
-<<showSelfie 0 2 cucumber isCucumberPhotoTaken>>Fruits have many uses...<</showSelfie>>
+<<showPhoto 0 2 cucumber isCucumberPhotoTaken>>Fruits have many uses...<</showPhoto>>
 [[Back->Take a photo]]
 

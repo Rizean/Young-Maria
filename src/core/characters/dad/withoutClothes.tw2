@@ -1,0 +1,53 @@
+::Without clothes (dad version) [nobr] <1189,1441>
+<<if $mainChar.look.clothes.body.name === ''>>
+	<<if $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name === ''>>
+		<<if $mainChar.relationships.dad < 30>>
+			@@.male-text;
+				- Hey, $mainChar.firstName, what the f...!? Why are you naked?! Go and put some clothes on! <br />
+			@@
+			<<set $canTalkWithDad = false>>
+			<<set $mainChar.relationships.dad -= 1>>
+			@@.minus; -1 relations with dad @@
+		<<elseif $mainChar.relationships.dad >= 30>>
+			@@.male-text;
+				- You look good in that outfit, honey... <br />
+			@@
+		<<endif>>
+	<<elseif $mainChar.look.lingerie.bra.name !== '' && $mainChar.look.lingerie.panties.name === ''>>
+		<<if $mainChar.relationships.dad < 30>>
+			@@.male-text;
+				- $mainChar.firstName, what's going on with you!? Go to your room and cover yourself, immediately! <br />
+			@@
+			<<set $canTalkWithDad = false>>
+			<<set $mainChar.relationships.dad -= 1>>
+			@@.minus; -1 relations with dad @@
+		<<elseif $mainChar.relationships.dad >= 30>>
+			@@.male-text;
+				- Are you hot in your panties too? Heh... <br />
+			@@
+		<<endif>>
+	<<elseif $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name !== ''>>
+		<<if $mainChar.relationships.dad < 30>>
+			@@.male-text;
+				- $mainChar.firstName, what's wrong with you? Go to your room and cover your yourself, immediately! <br />
+			@@
+			<<set $canTalkWithDad = false>>
+			<<set $mainChar.relationships.dad -= 1>>
+			@@.minus; -1 relations with dad @@
+		<<elseif $mainChar.relationships.dad > 30>>
+			@@.male-text;
+				- Hey darl... Oh, $mainChar.firstName, it's you... I thought your mom decided to tease me again. <br />
+			@@
+		<<endif>>
+	<<else>>
+		<<if $mainChar.relationships.dad < 10>>
+			@@.male-text;
+				- $mainChar.firstName, I understand that you're at home, but could you throw some clothes on? You're embarrassing me... <br />
+			@@
+		<<elseif $mainChar.relationships.dad >= 10>>
+			@@.male-text;
+				- You have great taste in choosing underwear! <br />
+			@@
+		<<endif>>
+	<<endif>>
+<<endif>>

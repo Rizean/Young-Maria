@@ -1,0 +1,25 @@
+::chat with your sibling in the kitchen [nobr] <2300,800>
+<<if $sibling.type === 'sister'>>
+	@@.image-wrapper-w70p;
+		[img['pics/chat_with_sister_in_the_kitchen.jpg']]
+	@@
+<<else>>
+	@@.image-wrapper-w70p;
+		[img['pics/chat_with_brother_in_the_kitchen.jpg']]
+	@@
+<<endif>>
+You go over to your brother and talk about most things. Your brother blathers on about his success whilst you talk about your interests. You find common ground and you're both enjoying the conversation. <br />
+@@.add; +1 relationship with $sibling.type @@ <br />
+@@.minus; -5 energy @@
+
+<br />
+<br />
+
+<<set $minute += 20>>
+<<set $mainChar.energy -= 5>>
+<<set $mainChar.relationships.sibling += 1>>
+<<if $mainChar.corruption >= 30 && $hour == 8>>
+    [["Have a nice day!"->wish a nice day kitchen][$whomHaveNiceDay = 'sibling']] <br />
+<<endif>>
+<br />
+[[Back->Kitchen]]

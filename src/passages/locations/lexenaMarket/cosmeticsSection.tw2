@@ -1,0 +1,93 @@
+::Lexena cosmetics section [nobr] <2880,980>
+@@.image-wrapper-w70p;
+	[img['pics/cosmetics_shop.jpg']]
+@@
+
+A beautiful young girl approaches you. "Hello! We have plenty of cosmetics for those looking to spruce up their look. What can I do you for?" <br /><br />
+
+<<for _cosmeticItemTitle, _cosmeticItem range $lexenaMarket.cosmetics>>
+    <<CosmeticItemWidget _cosmeticItem>>
+<</for>>
+
+<<if settings.lessPrices == true>>
+	<<if $wereLexenaCosmeticsPricesReduced != true>>
+		<<set $wereLexenaCosmeticsPricesReduced = true>>
+	<<endif>>
+<<else>>
+	<<if $wereLexenaCosmeticsPricesReduced == true>>
+		<<set $wereLexenaCosmeticsPricesReduced = false>>
+	<<endif>>
+<<endif>>
+
+<br />
+[[Go back->Lexena Market]]
+
+::Cosmetic Shop Item Widget [nobr widget system] <2920,1080>
+<<widget "CosmeticItemWidget">>
+	<!-- $args[0] - cosmetic item object -->
+	<<set _itemName = $args[0].name + ' (' + $args[0].count + ')'; >>
+	<<link _itemName "Lexena Market Cosmetic Item View Widget">>
+		<<set $tempCosmeticItem = $args[0] >>
+	<</link>> for $
+	<<if settings.lessPrices == true>>
+		<<if $wereLexenaCosmeticsPricesReduced != true>>
+			<<set $args[0].price /= 2>>
+		<<endif>>
+	<<else>>
+		<<if $wereLexenaCosmeticsPricesReduced == true>>
+			<<set $args[0].price *= 2>>
+		<<endif>>
+	<<endif>>
+	<<=$args[0].price>> -
+    <<if $args[0].use === 'single'>>
+        <<if $inventory.has('cosmetics', $args[0].name)>>
+            You already have this!
+        <<else>>
+            <<if $mainChar.money < $args[0].price>>
+                You don't have enough money!
+            <<else>>
+                <<link "Buy">>
+					<<set $minute += 1>>
+                    <<set $mainChar.money -= $args[0].price>>
+                    <<run $inventory.add('cosmetics', $args[0]);>>
+                    <<goto "Lexena cosmetics section">>
+                <</link>>
+            <<endif>>
+        <<endif>>
+    <<elseif $args[0].use === 'many'>>
+        <<if ! $inventory.has('cosmetics', $args[0].name)>>
+            <<if $mainChar.money < $args[0].price>>
+                You don't have enough money!
+            <<else>>
+                <<link 'Buy'>>
+					<<set $minute += 1>>
+                    <<set $mainChar.money -= $args[0].price>>
+                    <<run $inventory.add('cosmetics', $args[0]);>>
+                    <<goto "Lexena cosmetics section">>
+                <</link>>
+            <<endif>>
+        <<else>>
+            <<if $mainChar.money < $args[0].price>>
+                You don't have enough money!
+            <<else>>
+                <<set _countTitle = 'Buy (You have ' + $inventory.cosmetics[$args[0].name].count + ')'>>
+                <<link _countTitle>>
+					<<set $minute += 1>>
+                    <<set $mainChar.money -= $args[0].price>>
+                    <<run $inventory.addCount('cosmetics', $args[0]);>>
+                    <<goto "Lexena cosmetics section">>
+                <</link>>
+            <<endif>>
+        <<endif>>
+    <<endif>>
+	<br />
+<</widget>>
+
+::Lexena Market Cosmetic Item View Widget [system] <2920,1200>
+[[Back->Lexena cosmetics section]]
+
+$tempCosmeticItem.description
+
+@@.image-wrapper-w70p;
+	[img[$tempCosmeticItem.image]]
+@@

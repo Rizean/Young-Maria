@@ -1,0 +1,32 @@
+::Full body swedish massage <4500,850>
+You ask for the massage. Charlotte smiles and gestures to some stairs. You walk up the stairs and find the masseuse is... a man? Hmm...
+"Hello, my name is Diego. I'll be your masseuse today."
+Oh, ok. This should be fun...
+
+<div class="default-image-wrapper"><img src="pics/BeautySalonMassage.jpg"></div>
+
+Diego leads you to a room and asks you to strip as he leaves. You do as he asks then lay on the table and place the towel over your naked body. He re-enters and gets to work, oiling up his hands before massaging every tense part of you.
+
+About halfway through, he asks you to turn over. He gives you permission to relax, to rest a little. Sweet...
+
+You lost all sense of time in that room. Diego took care of every inch of your body. His hands were strong and callous but "loving" and warm.
+
+<p class="add">+20 Beauty</p> <p class="minus">-$200</p> <p class="minus">-40 Energy</p><<set $mainChar.money -= 200>><<set $mainChar.beauty +=20>><<set $mainChar.energy -= 40>><<if $mainChar.corruption >= 50>>
+Ask Diego if he can make a little more [["private" massage]]<<endif>>
+
+[[Back->Beauty Salon]]
+
+::"private" massage <4500,1000>
+<<set $hour += 1>>Diego doesn't seem surprised by your question. In fact, there's almost no expression on his face at all.
+"In that case, Miss,-" He walks to the door and locks it with his key. "-'Lorem desiderio - lex`. It means desire of the client - the order."
+
+He comes back over to you and once again grabs the oil. Once his hands are nicely oiled, he runs them over your body. This time, his focus is on your breasts. He kneads them; pinching and pulling your sensitive nipples. Soon, he moved further down, his hands stroking down your bare torso...
+
+<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/massage1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/massage2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/massage3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/massage4.gif"></div><<endif>>
+
+He arrives at your crotch. He begins to gently rub along your pussy lips. You can feel the burning all over your body. He takes two of his fingers and slowly pushes them into your vagina. His fingers expertly pump in and out, hitting your most intimate parts. Overtime, his speed increases until he's roughly finger-fucking you.
+
+Soon the pleasure becomes to much and you find yourself cumming infront of a smiling Diego. It seems he enjoys bringing young girls to climax. Afterwards, you take your masseuse's advice and rest a little. Once you regain some composure, you dress and give him a kiss as a tip.
+<p class="add">+1 Corruption</p><<set $mainChar.corruption += 1>>
+
+[[Back->Beauty Salon]]

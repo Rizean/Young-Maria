@@ -1,0 +1,17 @@
+::Seven Nights of Sin [system] <5225,2650>
+<<set $isSevenNightsOfSinRead = true>><div class="default-image-wrapper"><img src="pics/books/SevenNightsOfSin.jpg"></div>
+
+&emsp;He's the powerful CEO. I'm the know-it-all intern. And one day, things went further than they should have. I don't have any regrets - well, maybe just one...
+
+&emsp;But first, allow me to introduce myself. My name is Yasmin. I'm twenty-four-years-old and I work at a state-of-the-art company with one of the most renouned (and attractive) CEOs of the world: Harry Letterman.
+&emsp;Now, Mr. Letterman is known for his... charming personality and a lot of women have lost their jobs because of this. So, when I joined the company as the new intern, I promised myself that I would not fall in love with him.
+&emsp;Unfortunately, that was exactly what I did.
+&emsp;After a very stupid bet I made with Harry at a very unorthodox night out, I now have seven days to prove my trust and devotion to the company. To win, I must simply not fall in love with him. But that's easier said than done, especially during those seven sensual nights.
+&emsp;Turns out, money is a powerful drug but love is even more addictive...
+
+~Several Hours Later~
+
+You are so horny after reading that... You wish you had a CEO to fall in love with...
+<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+
+[[Go back->Smartphone]]

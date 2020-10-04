@@ -1,0 +1,49 @@
+::Sit and chat with your mom while you have a snack [nobr] <2200,1200>
+<div class="default-image-wrapper">
+    <img src="pics/mom.jpg">
+</div>
+
+You spent some time with your mother, gossiping and having fun. <br />
+
+<p class="minus">
+    -10 Energy
+</p> <br />
+<p class="add">
+    +1 relations with mom
+</p> <Br />
+
+<<set $mainChar.energy -= 10>>
+<<set $mainChar.relationships.mom += 1>>
+<<set $minute += 10>>
+
+<<if $mainChar.look.clothes.body.name === '' && $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name === ''>>
+    <<if $mainChar.relationships.mom >= 40 && settings.isSiblingInteractionAllowed == true>>
+        Your mother's cheeks are red. Is it because of your nudity? [[It looks like this horny woman needs your attention]]. <br />
+    <<endif>>
+<<endif>>
+<br />
+<<if $mainChar.corruption >= 30 && $hour == 8>>
+    [["Have a nice day!"->wish a nice day kitchen][$whomHaveNiceDay = 'mom']] <br />
+<<endif>>
+<br />
+[[End your conversation->Kitchen][$minute += 1]]
+
+::It looks like this horny woman needs your attention [nobr] <2200,1300>
+<div class="default-image-wrapper">
+    <img src="pics/momFuck.gif">
+</div>
+<<HaveASexWidget "giveCuni" "mom">>
+
+Upon seeing your mother's red cheeks, you can't help yourself. You lean over and run your hand underneath her clothes. Soon you find your destination, your mother's wet pussy. You rub gently, your fingers brushing against her clit. Your mother lets out a quiet moan. It only excites you more. <br />]
+Before you can do anything else, your mother pulls your hand out and picks you up. She then sits you on the counter, removes your clothes and plants her head between your legs. You're taken to extreme pleasures as her tongue skillfully licks at your pussy. <br />
+Shortly after, she puts two fingers into your hole. They expertly twist inside, hitting all the right spots. You both moan loudly. You realise she's also fingering herself at the same time. <br />
+After a few minutes of finger fucking, you hear your mother cum. As she finishes, her fingers fuck you with incredible speed.
+<br />
+<p class="add">+1 Corruption</p> <br />
+<p class="add">+1 relations with mom</p> <br />
+<br />
+<<set $mainChar.relationships.mom += 1>>
+<<set $minute += 20>>
+<<set $mainChar.corruption += 1>>
+<br />
+[[You came and should go now->Kitchen][$minute += 1]]

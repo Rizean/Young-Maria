@@ -1,0 +1,23 @@
+::wish a nice day kitchen [nobr] <2200,1400>
+@@.mc-text;
+	Hey, $whomHaveNiceDay, have a nice day!
+@@
+@@.image-wrapper-w50p;
+	[img[String.format('pics/teasing/kitchen/gifs/{0}.gif', random(1, 6))]]
+@@
+<<set $minute += 30>>
+<<if $whomHaveNiceDay == 'mom'>>
+	@@.female-text; Thanks, baby! @@ <br />
+	<<set $mom.corruption += 1>>
+	@@.add; +1 mom corruption @@ <br />
+<<elseif $whomHaveNiceDay == 'dad'>>
+	@@.male-text; Thanks, baby! @@ <br />
+	<<set $dad.corruption += 1>>
+	@@.add; +1 dad corruption @@ <br />
+<<elseif $whomHaveNiceDay == 'sibling'>>
+	@@.bc-text; T-thanks, sis! @@ <br />
+	<<set $sibling.corruption += 1>>
+	@@.add; +1 $sibling.type corruption @@ <br />
+<<endif>>
+<br />
+[[Back->Kitchen]]

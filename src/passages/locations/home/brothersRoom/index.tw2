@@ -1,0 +1,140 @@
+::StoryIncludes
+src/passages/locations/home/brothersRoom/brothersRoomSchedule.tw2
+src/passages/locations/home/brothersRoom/chatWithBrother.tw2
+src/passages/locations/home/brothersRoom/cleanRoom.tw2
+src/passages/locations/home/brothersRoom/nap.tw2
+src/passages/locations/home/brothersRoom/playPS4.tw2
+src/passages/locations/home/brothersRoom/sleepWithBrother.tw2
+
+::Brother room [nobr] <2280,80>
+@@.image-wrapper-w70p; <img src="pics/sibling/male/room.jpg" alt="sibling room" /> @@
+You are in your [[brother's room->brothers room description]]
+<br />
+<<include "Brother room schedule">>
+[[Living room->living room][$minute += 1]]
+
+::Sleep in brother's bed [nobr] <2780,0>
+<<if $sibling.currentState !== 'bed'>>
+	<<include "Main char in bed picture">>
+	@@#in-brothers-bed;
+		<<if $hour >= 20>>[[Sleep->Sleep with bro]] <br /><<endif>>
+		[[Have a nap->Have a nap in brother's room]] <br />
+		[[Get up->Brother room]]
+	@@
+<</if>>
+
+::View brother shelves [nobr] <2780,300>
+<<if $mainChar.relationships.sibling < 20 && $sibling.currentLocation == $BROTHER_LOCATION_BROTHER_ROOM>>
+	@@.bc-text;
+		Hey, what the hell are you doing digging through my stuff!?
+	@@
+	[[Move away->Brother room]]
+<<else>>
+	&emsp;On these shelves you see many different things. There are plenty of riveting books, plus a few textbooks on his favourite subjects. Various figures, car models, and awards for $sibling.firstName are scattered about the shelving.
+	&emsp;There are also some puzzles and board games. One of the shelves holds a ukulele; you've heard your brother play a couple times, he's pretty good. <br />
+
+	[[Back->Brother room]]
+<</if>>
+
+::View brother drawer [nobr] <2900,180>
+<<if $mainChar.relationships.sibling < 20 && $sibling.currentLocation == $BROTHER_LOCATION_BROTHER_ROOM>>
+	@@.bc-text;
+		Hey, what the hell are you doing digging through my stuff!?
+	@@
+	[[Move away->Brother room]]
+<<else>>
+	&emsp;Opening your brother’s top drawer, you find there are lot of things you'd expect; socks, underwear, shirts. Amongst the clothes are a few crumpled pieces of paper and a notepad. Under one pile of clothing are some unused condoms.
+
+	@@.mc-text.thought;
+		(His drawer is so messy!)
+	@@
+	[[Back->Brother room]]
+<</if>>
+
+::View brother wardrobe [nobr] <2900,300>
+<<if $mainChar.relationships.sibling < 20 && $sibling.currentLocation == $BROTHER_LOCATION_BROTHER_ROOM>>
+	@@.bc-text;
+		Hey, what the hell are you doing digging through my stuff!?
+	@@
+	[[Move away->Brother room]]
+<<else>>
+	&emsp;You open the wardrobe doors to see that your brother has a lot of outfits. Most are grey or black but a few have more vibrant colours; red, blue, green etc.
+	&emsp;There are a few boxes underneath full of more books, trinkets, old action figures and games. There's nothing out of the ordinary. <br />
+	<br />
+	[[Back->Brother room]]
+<</if>>
+
+::View brother's books <2780,180>
+&emsp;One of the things you do have in common is that you both like to read. Amongst his books, you see there is a wide range of reading material. Some you might enjoy, but there are others on topics like Geography, Travel, Sport and Technology that are of less interest to you.
+&emsp;Whilst flicking through his selection, you see a thin book sticking out between two paperbacks.
+<<if visited() == 1>>Oh? Is this a... [[PlayBoy magazine]]?..<<else>>You see a [[PlayBoy magazine]], hidden in the corner<<endif>>
+
+[[Back->Brother room]]
+
+::Brother char info [nobr system] <2300,200>
+&emsp;This is your brother. He is $sibling.age years old. <br />
+[img[String.format($sibling.appearance.image)]]
+<br />
+&emsp;Your relationship with him can hardly be called friendly. You often quarrel with one another and your interests almost never line up. <br />
+&emsp;Yet, in difficult situations, you don't hesitate to help each other. You are family after all. <br />
+&emsp;He has several friends and it seems he could have a girlfriend. You can't be sure though as he doesn't really mention anyone explicitly. <br />
+&emsp;Your brother particulary likes football, geography and the IT industry. He is a very inquistive individual. <br />
+<br />
+[[Back->Brother room]]
+
+
+::Sit next to the brother on sofa [nobr] <2175,125>
+@@.narrator; &emsp;You take a seat next to your brother. @@
+<<if $mainChar.relationships.sibling < 10>>
+  @@.bc-text;
+	  What are you doing? Can't you see I'm reading?
+  @@
+  @@.mc-text; Oh! Sorry. @@
+<<elseif $mainChar.relationships.sibling >= 10>>
+	@@.image-wrapper-w70p;
+		<img src="pics/sibling/male/sitonsofa/image.jpg" alt="sit on sofa with brother" />
+	@@
+	<br />
+	@@.narrator;
+		&emsp;After a couple minutes of silence, you start talking to your brother. He closes the book and turns to you. The conversation is a little awkward but neither of you complain. <br />
+	@@
+<</if>>
+<br />
+<<set $minute += 30>>
+<<set $mainChar.energy -= 10>>
+[[Back->Brother room]]
+
+::Train with brother <2500,0>
+@@.bc-text; Hey sis, I can't talk to you yet @@
+<<set $mainChar.energy -= 10>>
+[[Back->Brother room]]
+
+::Brother sitting in sofa brothers room [nobr] <2120,0>
+Your [[brother->Brother char info]] is sitting on the couch and reading a book <br /> <br />
+<<if $sibling.age <= 18>>
+	[[Chat about school->Chat with brother][$chatWithBrotherAbout = 'school']] <br />
+<<else>>
+	[[Chat about work->Chat with brother][$chatWithBrotherAbout = 'work']] <br />
+<</if>>
+[[Chat about family->Chat with brother][$chatWithBrotherAbout = 'family']] <br />
+[[Sit next to->Sit next to the brother on sofa]] <br />
+
+::Brother playing PS4 brothers room [nobr] <2580,0>
+Your [[brother->Brother char info]] is playing PS4 <br /> <br />
+<<if $sibling.age <= 18>>
+	[[Chat about school->Chat with brother][$chatWithBrotherAbout = 'school']] <br />
+<<else>>
+	[[Chat about work->Chat with brother][$chatWithBrotherAbout = 'work']] <br />
+<</if>>
+[[Chat about family->Chat with brother][$chatWithBrotherAbout = 'family']] <br />
+[[Play PS4 with brother]] <br />
+
+::Brother exercising brothers room [nobr] <2700,0>
+Your [[brother->Brother char info]] is training <br /> <br />
+<<if $sibling.age <= 18>>
+	[[Chat about school->Chat with brother][$chatWithBrotherAbout = 'school']] <br />
+<<else>>
+	[[Chat about work->Chat with brother][$chatWithBrotherAbout = 'work']] <br />
+<</if>>
+[[Chat about family->Chat with brother][$chatWithBrotherAbout = 'family']] <br />
+[[Train with brother]] <br />

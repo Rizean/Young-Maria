@@ -1,0 +1,554 @@
+::Train your throat <800,780>
+<p id="train-throat-text">&emsp;Relaxing in your room, you find yourself ruminating about recent events. Even a few arousing thoughts that have leaked into your mind resurface. When you close your eyes, you think back to that conversation you overheard between two older girls in the school's locker room.
+
+&emsp;"Boys are perverts," a pretty blonde complained.
+&emsp;"Well, duh," her friend responded, chuckling.
+&emsp;The blonde shook her head. "No, I'm serious. All they care about is getting off. They pressure you to do things until you give in. Then they take and take and take without giving a damn about what you want. If you don't want to fuck them, then you better learn how to give good blowjobs because they will hound you until you get them off."
+&emsp;"But what even is a blowjob?"
+&emsp;"Oh, you sweet innocent thing," she mocked, "It ain't hard. You just put your mouth around their penis and suck until they cum. You'll know if they like it because they'll grunt and moan. Now, come on, we've got class to get to."
+
+&emsp;You open your eyes. Could you actually do that? Could you suck on a penis like that to satisfy a man? And where do you even begin to learn? You curse yourself; the internet of course.
+&emsp;A few Google searches later and you find yourself on a website full of videos, pictures and hot tips about giving the perfect blowjobs. On the website you see more on facials, swallowing, and Bukkake? Gross!
+&emsp;You're overwhelmed by the amount of information on the site and aren't really sure where to begin. You do, however, notice that one thing is very clear about all this; you're going to have to convince your throat to accomodate a lot of insertions.
+&emsp;Suddenly, you start to picture a big strong man leering over you while you submissivly salivate all over his huge cock. You are held there until he releases hot streaming wads of his cum into your waiting mouth. The idea brings a whole new definition of wetness inbetween your legs and a heat that you just can't shake.
+&emsp;More Google searches reveals a few ideas on how to become skilled at blowjobs without a male to practice on and you set your mind to mastering this skill, for, um, research purposes...
+
+You can choose an object for training!</p>
+<<nobr>>
+    <span id="choose-banana"><<linkreplace "Choose a banana">>
+        <<set $mainChar.energy -= 40>>
+        <<set _trainingSubject = "banana">>
+        <<replace "#train-throat-text">><</replace>>
+        <<replace "#choose-cucumber">><</replace>>
+        <<if $isDildoOwned == true>>
+            <<replace "#choose-dildo">><</replace>>
+        <</if>>
+        <<switch $mainChar.sexSkills.bj>>
+            <<case 0>>
+                &emsp;The familiar fruity taste of the banana makes it easier to take into your mouth. However, you don't quite reach your throat before gagging. <br />
+                &emsp;You try to do it very sensually and gently though. <br /><br />
+                <<set _trainThroatBananaGoodNum = random(0, 1)>>
+                <<switch _trainThroatBananaGoodNum>>
+                    <<case 0>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/good/train_banana_good0.gif" alt="train throat banana good 0"></div> <br />
+                    <<case 1>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/good/train_banana_good1.gif" alt="train throat banana good 1"></div> <br />
+                <</switch>>
+
+                You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-banana-good-countdown0">$seconds seconds remaining</span> <br />
+                <<set $seconds to 10>>
+                <<silently>>
+                    <<repeat 1s>>
+                        <<set $seconds to $seconds - 1>>
+                        <<if $seconds gt 0>>
+                            <<replace "#train-throat-banana-good-countdown0">>$seconds seconds remaining <br /><</replace>>
+                        <<else>>
+                            <<replace "#train-throat-banana-good-countdown0">>
+                                <br />
+								&emsp;You practiced hard, trying to swallow the banana and also hold it there for as long as possible... <br />
+                                <p class="minus">-40 energy</p> <br />
+
+                                <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                    <span class="char">You have reached a new level of deepthroat!</span>
+                                    <<set $mainChar.sexSkills.bj += 1>>
+                                <</if>>
+                                <<if $mainChar.energy >= 40>>
+                                    <<link "Practice more">>
+                                        <<goto "Train your throat">>
+                                    <</link>>
+                                    or
+                                    [[Finish|Bedroom]]
+                                <<else>>
+                                    Your mouth is too tired to continue.
+                                    [[Finish|Bedroom]]
+                                <</if>>
+                            <</replace>>
+                            <<stop>>
+                        <</if>>
+                    <</repeat>>
+                <</silently>>
+            <<case 1>>
+                &emsp;You are doing well! <br />
+                &emsp;You can put a banana in your throat a short way and for only a moment, but the progress is undeniable. <br /> <br />
+                <<set _trainThroatBananaGoodNum = random(0, 1)>>
+                <<switch _trainThroatBananaGoodNum>>
+                    <<case 0>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/good/train_banana_good0.gif" alt="train throat banana good 0"></div>
+                    <<case 1>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/good/train_banana_good1.gif" alt="train throat banana good 1"></div>
+                <</switch>>
+
+                You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-banana-good-countdown1">$seconds seconds remaining</span> <br />
+                <<set $seconds to 10>>
+                <<silently>>
+                    <<repeat 1s>>
+                        <<set $seconds to $seconds - 1>>
+                        <<if $seconds gt 0>>
+                            <<replace "#train-throat-banana-good-countdown1">>$seconds seconds remaining <br /><</replace>>
+                        <<else>>
+                            <<replace "#train-throat-banana-good-countdown1">>
+                                <br />
+								&emsp;You practiced hard and tried to swallow the banana as deep as possible. Your focus was on how long you could hold it there. ... <br />
+                                <p class="minus">-40 energy</p> <br />
+
+                                <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                    <span class="char">You have reached a new level of deepthroat!</span>
+                                    <<set $mainChar.sexSkills.bj += 1>>
+                                <</if>>
+                                <<if $mainChar.energy >= 40>>
+                                    <<link "Practice more">>
+                                        <<goto "Train your throat">>
+                                    <</link>>
+                                    or
+                                    [[Finish|Bedroom]]
+                                <<else>>
+                                    Your mouth is too tired to continue.
+                                    [[Finish|Bedroom]]
+                                <</if>>
+                            <</replace>>
+                            <<stop>>
+                        <</if>>
+                    <</repeat>>
+                <</silently>>
+            <<case 2>>
+                &emsp;Your training has seen progress! <br />
+                &emsp;A banana easily enters your throat, but you can't keep it there for long yet (about several seconds)... <br />
+                &emsp;You're confindent now that if you had a real penis in front of you, you could satisfy a man. The thought makes you blush.<br /> <br />
+                <<set _trainThroatBananaPerfectNum = random(1, 2)>>
+                <<switch _trainThroatBananaPerfectNum>>
+                    <<case 0>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/perfect/train_banana_perfect0.gif" alt="train throat banana perfect 0"></div>
+                    <<case 1>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/perfect/train_banana_perfect1.gif" alt="train throat banana perfect 1"></div>
+                    <<case 2>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/perfect/train_banana_perfect2.gif" alt="train throat banana perfect 2"></div>
+                <</switch>>
+
+                You are training your throat with a <<= _trainingSubject>>... <span id="throat-train-banana-perfect-countdown0">$seconds seconds remaining</span> <br />
+                <<set $seconds to 10>>
+                <<silently>>
+                    <<repeat 1s>>
+                        <<set $seconds to $seconds - 1>>
+                        <<if $seconds gt 0>>
+                            <<replace "#throat-train-banana-perfect-countdown0">>$seconds seconds remaining <br /><</replace>>
+                        <<else>>
+                            <<replace "#throat-train-banana-perfect-countdown0">>
+                                <br /
+								&emsp;You practiced hard. You focused on pushing it further down your throat... <br />
+                                <p class="minus">-40 energy</p> <br />
+
+                                <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                    <span class="char">You have reached a new level of deepthroat!</span>
+                                    <<set $mainChar.sexSkills.bj += 1>>
+                                <</if>>
+                                <<if $mainChar.energy >= 40>>
+                                    <<link "Practice more">>
+                                        <<goto "Train your throat">>
+                                    <</link>>
+                                    or
+                                    [[Finish|Bedroom]]
+                                <<else>>
+                                    Your mouth is too tired to continue.
+                                    [[Finish|Bedroom]]
+                                <</if>>
+                            <</replace>>
+                            <<stop>>
+                        <</if>>
+                    <</repeat>>
+                <</silently>>
+            <<case 3>>
+                &emsp;You've mastered the deep throating a banana technique! <br />
+                &emsp;A banana easily enters your throat and you can hold it there for as long as you can hold your breath. <br />
+                &emsp;However, now you can't look at a banana without thinking about a penis... <br />
+                <<set _trainThroatBananaPerfectNum = random(1, 2)>>
+                <<switch _trainThroatBananaPerfectNum>>
+                    <<case 0>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/perfect/train_banana_perfect0.gif" alt="train throat banana perfect 0"></div>
+                    <<case 1>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/perfect/train_banana_perfect1.gif" alt="train throat banana perfect 1"></div>
+                    <<case 2>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/banana/perfect/train_banana_perfect2.gif" alt="train throat banana perfect 2"></div>
+                <</switch>>
+
+                You are training your throat with a <<= _trainingSubject>>... <span id="throat-train-banana-perfect-countdown1">$seconds seconds remaining</span> <br />
+                <<set $seconds to 10>>
+                <<silently>>
+                    <<repeat 1s>>
+                        <<set $seconds to $seconds - 1>>
+                        <<if $seconds gt 0>>
+                            <<replace "#throat-train-banana-perfect-countdown1">>$seconds seconds remaining <br /><</replace>>
+                        <<else>>
+                            <<replace "#throat-train-banana-perfect-countdown1">>
+                                <br />
+								&emsp;You practiced hard. You tried to keep the banana there as long as possible without gagging... <br />
+                                <p class="minus">-40 energy</p> <br />
+
+                                <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                    <span class="char">You have reached a new level of deepthroat!</span>
+                                    <<set $mainChar.sexSkills.bj += 1>>
+                                <</if>>
+                                <<if $mainChar.energy >= 40>>
+                                    <<link "Practice more">>
+                                        <<goto "Train your throat">>
+                                    <</link>>
+                                    or
+                                    [[Finish|Bedroom]]
+                                <<else>>
+                                    Your mouth is too tired to continue.
+                                    [[Finish|Bedroom]]
+                                <</if>>
+                            <</replace>>
+                            <<stop>>
+                        <</if>>
+                    <</repeat>>
+                <</silently>>
+            <<default>>
+                Your throat is well trained and ready for any challenge ;)
+        <</switch>>
+        <<HaveASexWidget "bj" "banana">>
+    <</linkreplace>></span><br />
+
+    <span id="choose-cucumber"><<linkreplace "Choose a cucumber">>
+        <<set $mainChar.energy -= 40>>
+        <<set _trainingSubject = "cucumber">>
+        <<replace "#train-throat-text">><</replace>>
+        <<replace "#choose-banana">><</replace>>
+        <<if $isDildoOwned == true>>
+            <<replace "#choose-dildo">><</replace>>
+        <</if>>
+        <<switch $mainChar.sexSkills.bj>>
+            <<case 0>>
+                &emsp;You take a cucumber in your mouth and work on it with your tongue, trying to push it in a little further, but so far it’s difficult. <br /><br />
+                <<set _trainThroatCucumberGoodNum = 0>>
+                <<switch _trainThroatCucumberGoodNum>>
+                    <<case 0>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/cucumber/good/train_throat_cucumber_good0.gif" alt="train throat cucumber good 0"></div> <br />
+                <</switch>>
+
+                You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-cucumber-good-countdown0">$seconds seconds remaining</span> <br />
+                <<set $seconds to 10>>
+                <<silently>>
+                    <<repeat 1s>>
+                        <<set $seconds to $seconds - 1>>
+                        <<if $seconds gt 0>>
+                            <<replace "#train-throat-cucumber-good-countdown0">>$seconds seconds remaining <br /><</replace>>
+                        <<else>>
+                            <<replace "#train-throat-cucumber-good-countdown0">>
+                                <br />
+								&emsp;You practiced hard. You tried to swallow the <<=_trainingSubject>> whilst also focusing on how long you could hold it there. <br />
+                                <p class="minus">-40 energy</p> <br />
+
+                                <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                    <span class="char">You have reached a new level of deepthroat!</span>
+                                    <<set $mainChar.sexSkills.bj += 1>>
+                                <</if>>
+                                <<if $mainChar.energy >= 40>>
+                                    <<link "Practice more">>
+                                        <<goto "Train your throat">>
+                                    <</link>>
+                                    or
+                                    [[Finish|Bedroom]]
+                                <<else>>
+                                    Your mouth is too tired to continue.
+                                    [[Finish|Bedroom]]
+                                <</if>>
+                            <</replace>>
+                            <<stop>>
+                        <</if>>
+                    <</repeat>>
+                <</silently>>
+            <<case 1>>
+                &emsp;Your throat begins to succumb to the size. The cucumber slides into your throat deeper and remains there longer. <br /> <br />
+                <<set _trainThroatCucumberGoodNum = 0>>
+                <<switch _trainThroatCucumberGoodNum>>
+                    <<case 0>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/cucumber/good/train_throat_cucumber_good0.gif" alt="train throat cucumber good 0"></div> <br />
+                <</switch>>
+
+                You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-cucumber-good-countdown1">$seconds seconds remaining</span> <br />
+                <<set $seconds to 10>>
+                <<silently>>
+                    <<repeat 1s>>
+                        <<set $seconds to $seconds - 1>>
+                        <<if $seconds gt 0>>
+                            <<replace "#train-throat-cucumber-good-countdown1">>$seconds seconds remaining <br /><</replace>>
+                        <<else>>
+                            <<replace "#train-throat-cucumber-good-countdown1">>
+                                <br />
+								&emsp;You practiced hard. You focused on swallowing the <<=_trainingSubject>> as deep as possible. <br />
+                                <p class="minus">-40 energy</p> <br />
+
+                                <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                    <span class="char">You have reached a new level of deepthroat!</span>
+                                    <<set $mainChar.sexSkills.bj += 1>>
+                                <</if>>
+                                <<if $mainChar.energy >= 40>>
+                                    <<link "Practice more">>
+                                        <<goto "Train your throat">>
+                                    <</link>>
+                                    or
+                                    [[Finish|Bedroom]]
+                                <<else>>
+                                    Your mouth is too tired to continue.
+                                    [[Finish|Bedroom]]
+                                <</if>>
+                            <</replace>>
+                            <<stop>>
+                        <</if>>
+                    <</repeat>>
+                <</silently>>
+            <<case 2>>
+                    &emsp;The cucumber can now slide half way into your mouth. You feel even more confident with your oral abilities. <br />
+                <<set _trainThroatCucumberPerfectNum = 0>>
+                <<switch _trainThroatCucumberPerfectNum>>
+                    <<case 0>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/cucumber/perfect/train_throat_cucumber_perfect0.gif" alt="train throat cucumber perfect 0"></div> <br />
+                <</switch>>
+
+                You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-cucumber-perfect-countdown0">$seconds seconds remaining</span> <br />
+                <<set $seconds to 10>>
+                <<silently>>
+                    <<repeat 1s>>
+                        <<set $seconds to $seconds - 1>>
+                        <<if $seconds gt 0>>
+                            <<replace "#train-throat-cucumber-perfect-countdown0">>$seconds seconds remaining <br /><</replace>>
+                        <<else>>
+                            <<replace "#train-throat-cucumber-perfect-countdown0">>
+                                <br />
+								&emsp;You practiced hard. Focusing on holding the <<=_trainingSubject>> in your mouth as long as possible, you tried to steady your breahting. <br />
+                                <p class="minus">-40 energy</p> <br />
+
+                                <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                    <span class="char">You have reached a new level of deepthroat!</span>
+                                    <<set $mainChar.sexSkills.bj += 1>>
+                                <</if>>
+                                <<if $mainChar.energy >= 40>>
+                                    <<link "Practice more">>
+                                        <<goto "Train your throat">>
+                                    <</link>>
+                                    or
+                                    [[Finish|Bedroom]]
+                                <<else>>
+                                    Your mouth is too tired to continue.
+                                    [[Finish|Bedroom]]
+                                <</if>>
+                            <</replace>>
+                            <<stop>>
+                        <</if>>
+                    <</repeat>>
+                <</silently>>
+            <<case 3>>
+                &emsp;Deepthroating the cucumber, you imagine that you are practicing on a real cock instead. You relish in the idea of huge cock wider than your wrist being forced down your throat. <br /> <br />
+                <<set _trainThroatCucumberPerfectNum = 0>>
+                <<switch _trainThroatCucumberPerfectNum>>
+                    <<case 0>>
+                        <div class="default-image-wrapper"><img src="pics/train_throat/cucumber/perfect/train_throat_cucumber_perfect0.gif" alt="train throat cucumber perfect 0"></div> <br />
+                <</switch>>
+
+                You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-cucumber-perfect-countdown1">$seconds seconds remaining</span> <br />
+                <<set $seconds to 10>>
+                <<silently>>
+                    <<repeat 1s>>
+                        <<set $seconds to $seconds - 1>>
+                        <<if $seconds gt 0>>
+                            <<replace "#train-throat-cucumber-perfect-countdown1">>$seconds seconds remaining <br /><</replace>>
+                        <<else>>
+                            <<replace "#train-throat-cucumber-perfect-countdown1">>
+                                <br />
+								&emsp;You practiced hard. You tried to focus on how much you could swallow of the <<=_trainingSubject>>. <br />
+                                <p class="minus">-40 energy</p> <br />
+
+                                <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                    <span class="char">You have reached a new level of deepthroat!</span>
+                                    <<set $mainChar.sexSkills.bj += 1>>
+                                <</if>>
+                                <<if $mainChar.energy >= 40>>
+                                    <<link "Practice more">>
+                                        <<goto "Train your throat">>
+                                    <</link>>
+                                    or
+                                    [[Finish|Bedroom]]
+                                <<else>>
+                                    Your mouth is too tired to continue.
+                                    [[Finish|Bedroom]]
+                                <</if>>
+                            <</replace>>
+                            <<stop>>
+                        <</if>>
+                    <</repeat>>
+                <</silently>>
+            <<default>>
+                &emsp;Your throat is now well trained and ready for any challenge. You feel a lot more confident in your blowjob skills. <br />
+        <</switch>>
+        <<HaveASexWidget "bj" "cucumber">>
+    <</linkreplace>></span><br />
+
+    <span id="choose-dildo"><<if $inventory.has('eroticItems', 'Dildo')>>
+        <<linkreplace "Choose a dildo">>
+            <<set $mainChar.energy -= 40>>
+            <<set _trainingSubject = "dildo">>
+            <<replace "#train-throat-text">><</replace>>
+            <<replace "#choose-banana">><</replace>>
+            <<replace "#choose-cucumber">><</replace>>
+
+            <<switch $mainChar.sexSkills.bj>>
+                <<case 0>>
+                    &emsp;With some trepidation, you take the dildo in your mouth. You try to push it down your throat but your gag reflex keeps you from getting it much further than your tongue. <br /><br />
+                    [img[String.format('pics/train_throat/toy/good/train_throat_toy_good' + random(1, 5) + '.gif')]]
+
+                    <br />
+					You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-dildo-good-countdown0">$seconds seconds remaining</span> <br />
+                    <<set $seconds to 10>>
+                    <<silently>>
+                        <<repeat 1s>>
+                            <<set $seconds to $seconds - 1>>
+                            <<if $seconds gt 0>>
+                                <<replace "#train-throat-dildo-good-countdown0">>$seconds seconds remaining <br /><</replace>>
+                            <<else>>
+                                <<replace "#train-throat-dildo-good-countdown0">>
+                                    <br />
+									&emsp;You practiced hard. Whilst trying to swallow the <<=_trainingSubject>> as deep as possible, you also focused on how long you could hold it there. <br />
+                                    <p class="minus">-40 energy</p> <br />
+
+                                    <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                        <span class="char">You have reached a new level of deepthroat!</span>
+                                        <<set $mainChar.sexSkills.bj += 1>>
+                                    <</if>>
+                                    <<if $mainChar.energy >= 40>>
+                                        <<link "Practice more">>
+                                            <<goto "Train your throat">>
+                                        <</link>>
+                                        or
+                                        [[Finish|Bedroom]]
+                                    <<else>>
+                                        Your mouth is too tired to continue.
+                                        [[Finish|Bedroom]]
+                                    <</if>>
+                                <</replace>>
+                                <<stop>>
+                            <</if>>
+                        <</repeat>>
+                    <</silently>>
+                <<case 1>>
+                    &emsp;Determined to master this skill despite your uncertainty, you ease the dildo into your mouth. You clutch it tightly with your lips and caress it with your tongue. <br />
+                    &emsp;Gradually, you begin to feel more confident and push it further. Unfortunately, it’s still difficult to keep it there for a long time. <br /> <br />
+                    [img[String.format('pics/train_throat/toy/good/train_throat_toy_good' + random(1, 5) + '.gif')]]
+
+                    <br />
+					You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-dildo-good-countdown1">$seconds seconds remaining</span> <br />
+                    <<set $seconds to 10>>
+                    <<silently>>
+                        <<repeat 1s>>
+                            <<set $seconds to $seconds - 1>>
+                            <<if $seconds gt 0>>
+                                <<replace "#train-throat-dildo-good-countdown1">>$seconds seconds remaining <br /><</replace>>
+                            <<else>>
+                                <<replace "#train-throat-dildo-good-countdown1">>
+                                    <br />
+									&emsp;You practiced hard. Your focus was on trying to swallow the <<=_trainingSubject>> as deep as possible. <br />
+                                    <p class="minus">-40 energy</p> <br />
+
+                                    <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                        <span class="char">You have reached a new level of deepthroat!</span>
+                                        <<set $mainChar.sexSkills.bj += 1>>
+                                    <</if>>
+                                    <<if $mainChar.energy >= 40>>
+                                        <<link "Practice more">>
+                                            <<goto "Train your throat">>
+                                        <</link>>
+                                        or
+                                        [[Finish|Bedroom]]
+                                    <<else>>
+                                        Your mouth is too tired to continue.
+                                        [[Finish|Bedroom]]
+                                    <</if>>
+                                <</replace>>
+                                <<stop>>
+                            <</if>>
+                        <</repeat>>
+                    <</silently>>
+                <<case 2>>
+                    &emsp;You have become more confident in your abilities. Also, your obsession with cock shaped objects down your throat has become more intense. You can now almost feel a real cock in your throat as you practice. <br /> <br />
+                    [img[String.format('pics/train_throat/toy/perfect/train_throat_toy_perfect' + random(1, 4) + '.gif')]]
+
+                    <br />
+					You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-dildo-perfect-countdown0">$seconds seconds remaining</span> <br />
+                    <<set $seconds to 10>>
+                    <<silently>>
+                        <<repeat 1s>>
+                            <<set $seconds to $seconds - 1>>
+                            <<if $seconds gt 0>>
+                                <<replace "#train-throat-dildo-perfect-countdown0">>$seconds seconds remaining <br /><</replace>>
+                            <<else>>
+                                <<replace "#train-throat-dildo-perfect-countdown0">>
+                                    <br />
+									&emsp;You practiced hard. Whilst holding the <<=_trainingSubject>> in your mouth as long as you could, you also stroked your tongue over the dildo. <br />
+                                    <p class="minus">-40 energy</p> <br />
+
+                                    <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                        <span class="char">You have reached a new level of deepthroat!</span>
+                                        <<set $mainChar.sexSkills.bj += 1>>
+                                    <</if>>
+                                    <<if $mainChar.energy >= 40>>
+                                        <<link "Practice more">>
+                                            <<goto "Train your throat">>
+                                        <</link>>
+                                        or
+                                        [[Finish|Bedroom]]
+                                    <<else>>
+                                        Your mouth is too tired to continue.
+                                        [[Finish|Bedroom]]
+                                    <</if>>
+                                <</replace>>
+                                <<stop>>
+                            <</if>>
+                        <</repeat>>
+                    <</silently>>
+                <<case 3>>
+                    &emsp;You can now deepthroat a dildo like a pro. You barely ever even trigger a tear reaction from choking on it. The oblong object easily slides down your throat.<br />
+                    &emsp;With each push into your eager mouth your mind imagines a real man using you for his pleasure, driving his manhood deep into your face while you work dilligently to please him. <br />
+                    &emsp;You are really starting to enjoy this.<br /> <br />
+                    [img[String.format('pics/train_throat/toy/perfect/train_throat_toy_perfect' + random(1, 4) + '.gif')]]
+
+                    <br />
+					You are training your throat with a <<= _trainingSubject>>... <span id="train-throat-dildo-perfect-countdown1">$seconds seconds remaining</span> <br />
+                    <<set $seconds to 10>>
+                    <<silently>>
+                        <<repeat 1s>>
+                            <<set $seconds to $seconds - 1>>
+                            <<if $seconds gt 0>>
+                                <<replace "#train-throat-dildo-perfect-countdown1">>$seconds seconds remaining <br /><</replace>>
+                            <<else>>
+                                <<replace "#train-throat-dildo-perfect-countdown1">>
+                                    <br />
+									&emsp;You practiced hard. Your focus was swallowing the <<=_trainingSubject>> as deep as possible whilst also holding it there. <br />
+                                    <p class="minus">-40 energy</p> <br />
+
+                                    <<if $mainChar.sexSkills.bj < 4 && visited() % 10 == 0>>
+                                        <span class="char">You have reached a new level of deepthroat!</span>
+                                        <<set $mainChar.sexSkills.bj += 1>>
+                                    <</if>>
+                                    <<if $mainChar.energy >= 40>>
+                                        <<link "Practice more">>
+                                            <<goto "Train your throat">>
+                                        <</link>>
+                                        or
+                                        [[Finish|Bedroom]]
+                                    <<else>>
+                                        Your mouth is too tired to continue.
+                                        [[Finish|Bedroom]]
+                                    <</if>>
+                                <</replace>>
+                                <<stop>>
+                            <</if>>
+                        <</repeat>>
+                    <</silently>>
+                <<default>>
+                    Your throat is well trained and ready for any challenge ;)
+            <</switch>>
+            <<HaveASexWidget "bj" "dildo">>
+        <</linkreplace>>
+    <</if>></span>
+
+    <br /><br />  [[Back|Bedroom]]
+<</nobr>>

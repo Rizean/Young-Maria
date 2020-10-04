@@ -1,0 +1,32 @@
+::kick out bathroom spy [nobr] <960,2390>
+@@.mc-text;
+	Hey! Get out of here, you damn pervert!
+@@
+<br />
+@@.image-wrapper-w50p;
+	[img['pics/bathroom/kick_out_bathroom.gif']]
+@@
+@@.narrator;
+	You kicked your $personSpyBathroom out of the bathroom.
+@@
+<<set $minute += 10>>
+
+<<if $personSpyBathroom == 'dad'>>
+  <<set $mainChar.relationships.dad -= 1>>
+  <<set $dad.corruption -= 1>>
+  @@.minus; -1 relations with dad @@ <br />
+  @@.minus; -1 dad corruption @@
+<<elseif $personSpyBathroom == 'mom'>>
+  <<set $mainChar.relationships.mom -= 1>>
+  <<set $mom.corruption -= 1>>
+  @@.minus; -1 relations with mom @@ <br />
+  @@.minus; -1 mom corruption @@
+<<elseif $personSpyBathroom == 'sibling'>>
+  <<set $mainChar.relationships.sibling -= 1>>
+  <<set $sibling.corruption -= 1>>
+  @@.minus; -1 relations with $sibling.type @@ <br />
+  @@.minus; -1 $sibling.type corruption @@
+<<endif>>
+<br />
+<br />
+[[Back->Bathroom]]

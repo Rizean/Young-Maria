@@ -1,0 +1,41 @@
+::Messages [system] <1091,2100>
+<<nobr>>
+<<if $newMessages > 1>>
+	<<set _randomDialog to either("dialog1","dialog2","dialog3")>>
+<<endif>>
+<<if _randomDialog == "dialog1" and $dialog1Available != true>>
+	<<set $dialog1Available = true>>
+	<<set $dialog1IncomingMessage = 1>>
+	<<set $dialog1NewMessage = 1>>
+<<elseif _randomDialog == "dialog1" and $dialog1Available == true>>
+	<<set $dialog1IncomingMessage += 1>>
+	<<set $dialog1NewMessage += 1>>
+<<elseif _randomDialog == "dialog2" and $dialog2Available != true>>
+	<<set $dialog2Available = true>>
+	<<set $dialog2IncomingMessage = 1>>
+	<<set $dialog2NewMessage = 1>>
+<<elseif _randomDialog == "dialog2" and $dialog2Available == true>>
+	<<set $dialog2IncomingMessage += 1>>
+	<<set $dialog2NewMessage += 1>>
+<<elseif _randomDialog == "dialog3" and $dialog3Available != true>>
+	<<set $dialog3Available = true>>
+	<<set $dialog3IncomingMessage = 1>>
+	<<set $dialog3NewMessage = 1>>
+<<elseif _randomDialog == "dialog3" and $dialog3Available == true>>
+	<<set $dialog3IncomingMessage += 1>>
+	<<set $dialog3NewMessage += 1>>
+<<endif>>
+<</nobr>><<if $dialog1Available != true and $dialog2Available != true and $dialog3Available != true>><i>No messages yet...</i><<endif>><<if $dialog1Available == true>><<if $dialog1NewMessage >= 1>><<link "<strong>Tillman Roper</strong> ($dialog1NewMessage)">><<goto "Tillman Roper">><</link>><<else>>[[Tillman Roper]]<<endif>><<endif>>
+
+[[Back->Spend some time on social networks]]
+
+::Tillman Roper [system] <1103,2228>
+<<if $dialog1IncomingMessage >= 1>>Hi, baby! What's up? ;D
+
+<<if $dialog1Answer1 != "kind" and $dialog1Answer1 != "playful">><<link "Not much, just laying in bed">><<set $dialog1Answer1 = "kind">><<goto "TillmanRoper">></link>>
+<<link "I'm choosing which t-shirt I'd like to wear today... [2 pics of blouses with no bra under them]">><<set $dialog1Answer1 = "playful">><<goto "TillmanRoper">></link>><<elseif $dialog1Answer1 == "kind">><div agile="right">Not much, just laying in bed</div><<elseif $dialog1Answer1 == "playful">><div agile="right">I'm choosing which t-shirt I'd like to wear today... [2 pics of blouses with no bra under them]</div><<endif>><<if $dialog1IncomingMessage >= 2>>
+<<if $dialog1Answer1 == "kind">>Cool, same :) Mind showing your face?<<else>>Oh,<<endif>>
+
+
+
+[[Back->Messages]]

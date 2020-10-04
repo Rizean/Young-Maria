@@ -1,0 +1,189 @@
+::Kitchen schedule [nobr] <2201,908>
+<<if $weekday>>
+    <!-- MOM -->
+    <<if $hour == 8>>
+        Your mom cooks and serves breakfast <br />
+        <<if $mainChar.energy >= 10>>
+            <<include "Without clothes (mom version)">>
+
+            <<if $canTalkWithMom !== false>>
+                [[Sit and chat with your mom while you have a snack]] <br />
+                [[Help her->help mom on the kitchen]]
+            <<else>>
+                <<set $canTalkWithMom = true>>
+            <<endif>>
+        <<else>>
+            You are too tired to chat with your mom. <br />
+        <<endif>>
+    <<endif>>
+    <<if $hour >= 19 && $hour < 21>>
+        <br />
+        Your mom cooks and serves dinner whilst chatting with someone on the phone. <br />
+		<<if $mainChar.energy >= 10>>
+        	[[Help her->help mom on the kitchen]]
+		<<else>>
+			You are too tired to help your mom. <br />
+		<<endif>>
+        <br />
+    <<endif>>
+
+    <!-- DAD -->
+    <<if $hour == 8 && $minute >= 30>>
+        <br />
+        Your father is having breakfast. <br />
+		<<if $mainChar.energy >= 10>>
+        	[[Chat with him->chat with your dad in the kitchen]]
+		<<else>>
+			You are too tired to chat with your dad. <br />
+		<<endif>>
+        <br />
+    <<endif>>
+    <<if $hour == 20>>
+        <br />
+        Your dad is having dinner. <br />
+        <<if $mainChar.energy >= 10>>
+        	[[Chat with him->chat with your dad in the kitchen]]
+		<<else>>
+			You are too tired to chat with your dad. <br />
+		<<endif>>
+        <br />
+    <<endif>>
+
+    <!-- SIBLING -->
+    <<if $hour == 8 && $minute <= 30>>
+        <br />
+        Your $sibling.type is having breakfast. <br />
+		<<if $mainChar.energy >= 10>>
+        	<<set _temp = 'Chat with your ' + $sibling.type >>
+        	[[_temp->chat with your sibling in the kitchen]] <br />
+		<<else>>
+			You are too tired to chat with your $sibling.type <br />
+		<<endif>>
+        <br />
+    <<endif>>
+
+    <<if $hour == 20>>
+        Your $sibling.type is having dinner. <br />
+        <<if $mainChar.energy >= 10>>
+        	<<set _temp = 'Chat with your ' + $sibling.type >>
+        	[[_temp->chat with your sibling in the kitchen]]
+		<<else>>
+			You are too tired to chat with your $sibling.type <br />
+		<<endif>>
+    <<endif>>
+<<elseif $day == 6>>
+    <!-- MOM -->
+    <<if $hour == 8>>
+        Your mom cooks and serves breakfast. <br />
+        <<if $mainChar.energy >= 10>>
+            <<include "Without clothes (mom version)">>
+
+            <<if $canTalkWithMom !== false>>
+                [[Sit and chat with your mom while you have a snack]] <br />
+                [[Help her->help mom on the kitchen]]
+            <<else>>
+                <<set $canTalkWithMom = true>>
+            <<endif>>
+        <<else>>
+            You are too tired to chat with your mom. <br />
+        <<endif>>
+    <<endif>>
+
+    <!-- DAD -->
+    <<if $hour == 8 && $minute >= 30>>
+        <br />
+        Your father is having breakfast. <br />
+		<<if $mainChar.energy >= 10>>
+        	[[Chat with him->chat with your dad in the kitchen]]
+		<<else>>
+			You are too tired to chat with your dad. <br />
+		<<endif>>
+        <br />
+    <<endif>>
+
+    <!-- SIBLING -->
+    <<if $hour == 10 && $minute <= 30>>
+        <br />
+        Your $sibling.type is having breakfast. <br />
+        <<if $mainChar.energy >= 10>>
+        	<<set _temp = 'Chat with your ' + $sibling.type >>
+        	[[_temp->chat with your sibling in the kitchen]]
+		<<else>>
+			You are too tired to chat with your $sibling.type <br />
+		<<endif>>
+        <br />
+    <<endif>>
+<<elseif $day == 7>>
+    <!-- MOM -->
+    <<if $hour == 8>>
+        Your mom cooks and serves breakfast. <br />
+        <<if $mainChar.energy >= 10>>
+            <<include "Without clothes (mom version)">>
+
+            <<if $canTalkWithMom !== false>>
+                [[Sit and chat with your mom while you have a snack]] <br />
+                [[Help her->help mom on the kitchen]] <br />
+            <<else>>
+                <<set $canTalkWithMom = true>>
+            <<endif>>
+        <<else>>
+            You are too tired to chat with your mom. <br />
+        <<endif>>
+    <<endif>>
+
+    <!-- DAD -->
+    <<if $hour == 8 && $minute >= 30>>
+        <br />
+        Your father is having breakfast. <br />
+		<<if $mainChar.energy >= 10>>
+        	[[Chat with him->chat with your dad in the kitchen]]
+		<<else>>
+			You are too tired to chat with your dad. <br />
+		<<endif>>
+        <br />
+    <<elseif $hour == 20>>
+		<br />
+        Your family is having dinner while chatting. <br />
+		<<if $mainChar.energy >= 10>>
+        	[[Join them->join family dinner]] <br />
+		<<else>>
+			You are too tired to join them. <br />
+		<<endif>>
+		<br />
+    <<endif>>
+
+	<<if $hour >= 11 && $hour <= 18 && settings.nonConsent == true>>
+		<<set _chance to random(1,20)>>
+		<<if _chance == 20>>
+			<<set $minute += 15>>
+			&emsp;Your dad suddenly pins you against the island counter, grabs your ass and gives it a firm slap. <br />
+			&emsp;"Shhh... Calm down, pumpkin..." <br />
+			&emsp;He quickly pulls out his semi hard cock, kissing and biting your neck. Then he pulls down your clothes and lines himself up with your entrance. <br />
+			&emsp;Once he's in position, he slowly inserts himself inside you and pushes as far in as he can. The tip prods at your cervix but he doesn't go any further. <br />
+			&emsp;He grabs onto your waist and holds it steady as he rocks his hips back and forth, thrusting into you. For a few minutes, he's fucking you somewhat gently but also a little roughly. <br />
+			<br />@@.image-wrapper-w50p;
+			[img[String.format('pics/quickieKitchen' + random(1,4) + '.gif')]]
+			@@
+			<br />
+			&emsp;After a few more minutes of this strange fucking, he pulls out and cums on your lower abdomen. The hot, creamy liquid sticks to your body. <br />
+			&emsp;Your dad gives your ass another slap before leaving you standing still half naked in the kitchen.
+			&emsp;You watch as he walks away. You're not really sure if it was a rape or not since he wasn't that rough... But then you didn't particularly want it so... <br />
+
+<p class="add">+1 Corruption</p><p class="minus">-10 Energy</p> <<set $mainChar.corruption += 1>><<set $mainChar.energy -= 10>><<HaveASexWidget "rape" "Dad">>
+			<br />
+		<<endif>>
+	<<endif>>
+
+    <!-- SIBLING -->
+    <<if $hour == 10 && $minute <= 30>>
+        <br />
+        Your $sibling.type is having breakfast. <br />
+		<<if $mainChar.energy >= 10>>
+			<<set _temp = 'Chat with your ' + $sibling.type >>
+			[[_temp->chat with your sibling in the kitchen]] <br />
+		<<else>>
+			You are too tired to chat with your $sibling.type. <br />
+		<<endif>>
+        <br />
+    <<endif>>
+<<endif>>

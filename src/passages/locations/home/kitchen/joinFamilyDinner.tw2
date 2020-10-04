@@ -1,0 +1,26 @@
+::join family dinner [nobr] <2400,800>
+@@.image-wrapper-w70p;
+	[img['pics/family_dinner.jpg']]
+@@
+You join the table. Your family has already started to help themselves. <br />
+Throughout the dinner, you all bring up different topics and discuss them with your own views. <br />
+It mostly involves talking about the events of the day, what happened at work or school. Sometimes your parents bring up their childhood. It makes you happy to hear about their lives when they were your age. <br />
+You talk about your life, new clothes you've bought, things you've learnt. You also talk about your future and what you want to do with it. <br />
+Overall you enjoy the dinner. <br />
+
+@@.add; +1 relationship with dad @@ <br />
+@@.add; +1 relationship with mom @@ <br />
+@@.add; +1 relationship with $sibling.type @@ <br />
+
+<<set $hour = 21>>
+<<set $minute = 0>>
+<<set $mainChar.relationships.dad += 1>>
+<<set $mainChar.relationships.mom += 1>>
+<<set $mainChar.relationships.sibling += 1>>
+
+<br />
+<br />
+<<if $mainChar.energy >= 10>>
+	[[Wash the dishes->wash the dishes after family dinner]] <br />
+<<endif>>
+[[Back->Kitchen]]

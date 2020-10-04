@@ -1,0 +1,25 @@
+::ask mom for some makeup tips [nobr] <2000,900>
+@@.narrator;
+	You go over to the bed and lay down next to your mom, propping yourself up with one elbow. This causes your boobs to bunch together. <br />
+	As you talk with your mom about makeup tips and the best way to apply it, you see her eyes darting to your cleavage. <br />
+	Due to your position, your chest sticks out a bit from under your clothes. The top of your nipples can just about be seen above the collar of your shirt. <br />
+	You, of course, know that this what your mother sees. But you pretend you don't notice. <br />
+	Though watching her eyes drawn to your slightly exposed chest excites you a little.
+@@
+@@.image-wrapper-w50p;
+	[img['pics/teasing/parentsroom/ask_mom_makeup.jpg']]
+@@
+@@.narrator;
+	Your mom tells you some secrets and shares her experience with makeup. Sometimes, she fumbles over her words or forgets what point she's trying to make. This is because your mother keeps staring at your boobs, getting distracted by how nice you look. <br />
+	You notice her stares and smile playfully when she looks back at you, letting her know that all this was done intentionally.
+@@
+
+<<set $mom.corruption += 1>>
+<<set $minute += 20>>
+<<set $mainChar.energy -= 10>>
+<br />
+@@.minus; -10 energy @@ <br />
+@@.add; +1 mom corruption @@
+<br />
+<br />
+[[Back->Parents' bedroom]]

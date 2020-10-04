@@ -1,0 +1,91 @@
+::Go out [nobr] <3300,900>
+<<if $timeOfDay == "Day">>
+    <div class="default-image-wrapper">
+        <img src="pics/city1.jpg">
+    </div>
+<<else>>
+    <div class="default-image-wrapper">
+        <img src="pics/city2.jpg">
+    </div>
+<<endif>>
+
+<<if $isParkAvailable != true
+    or $isHighTaiAvailable != true
+    or $isBankAvailable != true
+    or $isBeautySalonAvailable != true
+    or $isBeachAvailable != true
+	or $isBarAvailable != true
+>>
+    <<if $timeOfDay == "Day" && $mainChar.energy >= 20>>
+        The city still has some areas you've yet to explore! [[Explore them]] <br /><br />
+    <<elseif $timeOfDay == "Day" && $mainChar.energy < 20>>
+        You are too tired to explore the city!  <br /><br />
+    <<endif>>
+<<else>>
+    You have explored every interesting place in this city, but you can [[just walk around->Explore them]].  <br /><br />
+<<endif>>
+
+<<if $timeOfDay == "Night" && $mainChar.relationships.mom < 30 && $mainChar.relationships.dad < 30>>
+    You should [[go home->living room]], your parents don't allow you to walk around at night! <br /><br />
+<<elseif $timeOfDay == "Night" && $mainChar.relationships.mom > 30 && $mainChar.relationships.dad > 30>>
+    You are not in the mood to explore the city at the night.  <br /><br />
+
+    <<if $mainChar.energy >= 20>>
+        But you can just [[walk around->Night walking]], right?  <br /><br />
+    <<else>>
+        Besides, you need to rest a little...  <br /><br />
+    <<endif>>
+<<endif>>
+
+<<if $timeOfDay == "Night">>
+    <strong>Be careful, the city is dangerous at night!</strong>  <br /><br />
+<<endif>>
+
+<u><strong>East Area:</strong></u>  <br />
+<<if $isParkAvailable == true>>
+    [[Park][$minute += 10]]  <br />
+<<endif>>
+<<if $isBankAvailable == true>>
+    [[Bank][$minute += 10]]  <br />
+<<endif>>
+<<if $isBeautySalonAvailable == true>>
+    <<if $timeOfDay == "Day">>
+        [[Beauty Salon][$minute += 10]]  <br />
+    <<else>>
+        Beauty Salon is closed for the night.  <br />
+    <<endif>>
+<<endif>>
+<br />
+<u><strong>West Area:</strong></u>  <br />
+<<if $isJacksHouseAvailable == true>>
+    [[Jack's house][$minute += 10]]  <br />
+<<endif>>
+<<if $isHighTaiAvailable == true>>
+    [[High Tai][$minute += 20]]  <br />
+<<endif>>
+<<if $isBeachAvailable == true>>
+    [[Beach][$minute += 20]]  <br />
+<<endif>>
+<<if $isFarmAvailable == true>>
+    <<if $mainChar.money >= 3>>
+        <<link "Farm - 3$">>  <br />
+            <<set $hour += 1>>
+            <<set $mainChar.money -= 3>>
+            <<goto "Farm">>
+        <</link>>
+    <<else>>
+        Farm - 3$
+    <<endif>>
+<<endif>>
+<br />
+<u><strong>Center:</strong></u>  <br />
+<<if $timeOfDay == "Day">>
+    [[Lexena Market][$minute += 20]]  <br />
+<<else>>
+    Lexena Market is closed for the night.  <br />
+<<endif>>
+<<if $isBarAvailable == true>>
+    <<if $hour < 7 or $hour > 22>>Bar is closing now.<<else>>[[Bar][$minute += 20]]<<endif>>  <br />
+<<endif>>
+<br />
+[[Home->living room][$minute += 10]]

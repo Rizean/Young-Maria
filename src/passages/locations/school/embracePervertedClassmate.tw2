@@ -1,0 +1,59 @@
+::Embrace your perverted classmate by spreading legs <2206,2115>
+&emsp;You spread your legs, giving the boy more access to your pussy. He took this as encouragement and proceeded to shove two fingers up your hole.
+&emsp;"Mmm..." you moaned quietly.
+<div class="default-image-wrapper">
+	<<set _fingeringImg = random(0, 1)>>
+	<<switch _fingeringImg>>
+		<<case 0>>
+			<img src="pics/school/guy/hidden/fingering/fingering0.gif" alt="fingering #1">
+		<<case 1>>
+			<img src="pics/school/guy/hidden/fingering/fingering1.gif" alt="fingering #2">
+	<</switch>>
+</div>
+
+&emsp;The boy whispered, "Do you like it?"
+&emsp;<p class="char">"Y-yes..."</p>
+<<if $mainChar.corruption < 40>>
+  &emsp;Your classmate fingered you for what felt like hours. Hours of absolute bliss. You tried your very hardest to keep quiet as the class continued. Soon enough, his roaming fingers brought you to a pleasurable climax. And just in time too, as the bell rang for the end of class.
+  &emsp;After you gathered your thoughts, you leant over and kissed him on the cheek. Then you grabbed your gear and fled from the classroom. You didn't stop to notice that your chair now had a small wet spot on it.
+
+<p class="add">+1 Reputation</p> <p class="add">+1 Corruption</p><<set $mainChar.reputation.school += 1>><<set $mainChar.corruption += 1>>
+
+[[Go out]]
+<<else>>
+	&emsp;It was clear that your classmate had some experience when it came to pleasuring a woman because his fingers expertly found your most sensitive spots. Unfortunately, you couldn't enjoy it as much as you should because you were trying not to moan out loud. But it felt fantastic...
+	&emsp;<p id="school-guy-go-home-after-fingering">[[(Shyly kiss him, tell him you had a great time and run away)|Go out]]</p>
+	@@.mc-text; I don't want to stay in debt ;) @@\
+	<<nobr>>
+	<br />
+	  <<linkreplace "(Unzip his pants, grab his cock and start jerking off)">>
+	  	<<replace "#school-guy-go-home-after-fingering">><</replace>>
+			<div class="default-image-wrapper">
+			  <<set _masturbationImg = random(1, 2)>>
+			  <<switch _masturbationImg>>
+				  <<case 0>>
+					<img src="pics/school/guy/hidden/masturbation/masturbation0.gif" alt="masturbation #1" />
+				  <<case 1>>
+					<img src="pics/school/guy/hidden/masturbation/masturbation1.gif" alt="masturbation #2" />
+				  <<case 2>>
+					<img src="pics/school/guy/hidden/masturbation/masturbation2.gif" alt="masturbation #3" />
+				<</switch>>
+			</div><<HaveASexWidget "receiveMasturbation" "classmate">>
+			<br />
+			@@.uc-text; Oh wow... What a slutty chick! Your hand feels amazing... ;) @@ <br />
+  			<p class="add">+3 Reputation</p> <p class="add">+1 Corruption</p><<set $mainChar.reputation.school += 3>><<set $mainChar.corruption += 1>>
+
+		  <br />
+		  <<if $mainChar.corruption >= 60>>
+			  @@.uc-text; Hey, do you wanna go to the library? It's much quieter... @@ <br />
+			  <<link "That's a good idea actually!">><<set $mainChar.isInSchoolLibraryAlone = false>><<goto "School library">><</link>><br>
+			  [[Oh, I have plans. I should go...|Go out]]
+		  <<else>>
+		  		[[Go out]]
+		  <</if>>
+	  <</linkreplace>>
+	<</nobr>>
+<</if>>
+<<if $CristyOffered == true and $isSchoolSlut != true>>
+
+[[Meet with Cristy]]<<elseif $isSchoolSlut == true>><<if $day == 1 or $day == 3 or $day == 5>>[[Go to the broken WC]]<<endif>><<endif>>

@@ -1,0 +1,134 @@
+::Have a shower [nobr] <1643,1160>
+<<set _event to either(1,2,3,4)>>
+
+<<if $mainChar.corruption > 60 && _event == 1 && $timeOfDay == "Day" && $mainChar.relationships.dad > 40 && $mainChar.relationships.mom > 40 && settings.isSiblingInteractionAllowed == true>>
+	@@.image-wrapper-w70p;
+		[img['pics/bathroom/shower/yourself.gif']]
+
+	@@
+	You had a nice shower! <br />
+	@@.add; +10 Energy @@ <<set $mainChar.energy += 10>> <br />
+	@@.minus; - combed @@ <<set $mainChar.appearance.isCombed = false>> <br />
+  	@@.minus; - makeup @@ <<set $mainChar.appearance.makeup = 'none'>> <br />
+  	@@.minus; - lipstick @@ <<set $mainChar.appearance.head.lips.color = 'none'>> <br />
+  	@@.add; +100 cleanliness @@ <<set $mainChar.cleanliness = 100>> <br />
+  	@@.add; -1 shampoo @@ <<set $inventory.grocery['Shampoo'].count -= 1>> <br />
+
+	<<set $minute += 15>>
+	"Hey, pumpkin, mind if I join you?". Your
+	<<set $bathroomParent to either("Father","Mother")>>
+	<<if $bathroomParent == "Father">>
+		father
+	<<elseif $bathroomParent == "Mother">>
+		mother
+	<<endif>>
+	 would like to shower with you.  <br />
+
+	 <<if $bathroomParent == "Father">>
+	 	[['Tell him that you need some help in washing the "inner parts"'->Sex in bathroom with parents]] <br />
+	<<elseif $bathroomParent == "Mother">>
+		[['Tell her that you need some help in washing the "inner parts"'->Sex in bathroom with parents]] <br />
+	<<endif>>
+	<br />
+	[[Go back->living room]] <br />
+<<else>>
+	@@.image-wrapper-w70p;
+		[img['pics/bathroom/shower/yourself.gif']]
+	@@
+
+	You had a nice shower! <br />
+	@@.add; +10 Energy @@ <<set $mainChar.energy += 10>> <br />
+	@@.minus; - combed @@ <<set $mainChar.appearance.isCombed = false>> <br />
+  	@@.minus; - makeup @@ <<set $mainChar.appearance.makeup = 'none'>> <br />
+  	@@.minus; - lipstick @@ <<set $mainChar.appearance.head.lips.color = 'none'>> <br />
+  	@@.add; +100 cleanliness @@ <<set $mainChar.cleanliness = 100>> <br />
+  	@@.add; -1 shampoo @@ <<set $inventory.grocery['Shampoo'].count -= 1>> <br />
+
+	<<set $minute += 15>>
+	<br />
+	<<set _rand = random(1, 5)>>
+    <<if $hour == 8 && _rand == 3 && $bathroomDoorLocked == false && $dad.corruption >= 10>>
+        @@.narrator;
+            &emsp;Whislt you're washing yourself, you hear a noise at the door. Out of the corner of your eye you notice the door is slightly ajar. <br />
+            &emsp;Turning to the door, you see your dad. <br />
+            <br />
+			<<set $personSpyBathroom = 'dad' >>
+			  [[get outraged and kick out->kick out bathroom spy]] <br />
+			  <<if $mainChar.corruption >= 15>>
+			  		[[ignore and keep washing->ignore bathroom spy]] <br />
+			  <<endif>>
+			  <<if $mainChar.corruption >= 25>>
+			  		[[give him a show->give a show bathroom spy]] <br />
+			  <<endif>>
+        @@
+    <<else>>
+	    [[Go back->Bathroom]]
+    <<endif>>
+<<endif>>
+
+::Sex in bathroom with parents [nobr] <1605,1280>
+<<if $bathroomParent == "Father">>
+    <<set _image to either(1,2,3)>>
+
+    <<if _image == 1>>
+        <div class="default-image-wrapper">
+            <img src="pics/bathFuckDad1.gif">
+        </div>
+        <<HaveASexWidget "vaginal" "dad">>
+    <<elseif _image == 2>>
+        <div class="default-image-wrapper">
+            <img src="pics/bathFuckDad2.gif">
+        </div>
+        <<HaveASexWidget "vaginal" "dad">>
+    <<elseif _image == 3>>
+        <div class="default-image-wrapper">
+            <img src="pics/bathFuckDad3.gif">
+        </div>
+        <<HaveASexWidget "vaginal" "dad">>
+    <<endif>>
+
+    &emsp;Your father smirks and says he'd love to help out. When he steps inside, he pushes your chest against the wall and reaches down to grab his cock. He positions himself by your entrance.
+	&emsp;In one swift movement, he shoves his hard cock deep inside your pussy. He then begins to ram into your tight hole, thrusting hard and fast. His other hand goes around your neck, clamping down with a tight grip.
+	&emsp;The ferosity brings you to climax quickly and you cum hard, your pussy constricting around his cock. Your father groans loudly, pulling out his cock to shoot his sticky cum onto lower back. The white liquid is quickly washed away in the hot water. You're definitely clean now. At least, that is figuratively speaking... <br />
+     <br />
+    <p class="add">+1 Corruption</p> <br />
+    <p class="add">+1 relations with dad</p> <br />
+    <br />
+    <<set $mainChar.relationships.dad += 1>>
+    <<set $minute += 20>>
+    <<set $mainChar.corruption += 1>>
+
+    [[Dry both of you with towel and go out->living room]]
+<<elseif $bathroomParent == "Mother">>
+    <<set _image to either(1,2,3)>>
+
+    <<if _image == 1>>
+        <div class="default-image-wrapper">
+            <img src="pics/bathFuckMom1.gif">
+        </div>
+        <<HaveASexWidget "receiveCuni" "mom">>
+    <<elseif _image == 2>>
+        <div class="default-image-wrapper">
+            <img src="pics/bathFuckMom2.gif">
+        </div>
+        <<HaveASexWidget "receiveMasturbation" "mom">>
+    <<elseif _image == 3>>
+        <div class="default-image-wrapper">
+            <img src="pics/bathFuckMom3.gif">
+        </div>
+        <<HaveASexWidget "receiveCuni" "mom">>
+    <<endif>>
+
+    &emsp;Your mother hastily enters the shower. Without warning, she pushes you against the wall and shoves two fingers deep inside your pussy. She beings to finger you, hard and fast.
+	&emsp;She pulls out moments later, to your disappointment, but only so that she can kneel down to lap up your wet juices. The feeling of her tongue brushing against your clit is incredible.
+	&emsp;Soon, her two fingers reinsert themselves. The stimulation from her tongue and rough fingering is too much. You reach your climax, cumming hard. Well, at least you're clean now. Figuratively speaking, of course... <br />
+    <br />
+    <p class="add">+1 Corruption</p> <br />
+    <p class="add">+1 relations with mom</p> <br />
+    <br />
+    <<set $mainChar.relationships.mom += 1>>
+    <<set $minute += 20>>
+    <<set $mainChar.corruption += 1>>
+
+    [[Dry both of you with towel and go out->Bathroom]]
+<<endif>>

@@ -1,0 +1,16 @@
+::Ride Me Dirty [system] <5100,2650>
+<<set $isRideMeDirtyRead = true>><div class="default-image-wrapper"><img src="pics/books/RideMeDirty.jpg"></div>
+
+&emsp;They're going to claim her. Together. She just doesn't know it yet.
+
+&emsp;Catherine's life is in New York and the property she's inherited is in Bridgewater, Montana. However, she often returns to the town she visited every summer as a child which stirs up long, forgotten memories and a heartbreaking crush.
+&emsp;The feelings she had were not just for one man either, but two in the form of cousins: Jack and Sam Kane. When she developed the crush, they were hot teens but now, as she returns to the town, she finds the hot teens have turned into smoking-hot cowboys. Fortunately for her, in Bridgewater, one cowboy's never enough...
+
+&emsp;In this contemporary version of Vanessa Vale's USA Today bestselling, Bridgewater Ménage series, Catherine is forced to make a decision. She must choose between being the big-city lawyer or the small town cowgirl with two men who want to take her for a very dirty ride...
+
+~Several Hours Later~
+
+You lick your lips... Imagine being Catherine in the hottest threesome ever...
+<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+
+[[Go back->Smartphone]]

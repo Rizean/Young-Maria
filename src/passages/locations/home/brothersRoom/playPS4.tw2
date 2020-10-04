@@ -1,0 +1,185 @@
+::Play PS4 with brother [nobr] <1980,0>
+<<if $mainChar.relationships.sibling < 15>>
+		<<set _event to either(1)>>
+<<elseif $mainChar.relationships.sibling >= 15 && $mainChar.relationships.sibling < 30>>
+	<<set _event to either(2)>>
+<<elseif $mainChar.relationships.sibling >= 30 && $mainChar.relationships.sibling < 50>>
+	<<set _event to either(2,4)>>
+<<elseif $mainChar.relationships.sibling >= 50>>
+	<<if $mainChar.look.clothes.body.name !== "">>
+		<<set _event to either(2,4)>>
+	<<else>>
+		<<set _event to either(2,3,4)>>
+	<<endif>>
+<<endif>>
+
+<<set $mainChar.energy -= 10>>
+@@.mc-text; Hey, bro, can I play with you? @@
+<<if _event == 1>>
+	@@.bc-text; What? @@
+	@@.bc-text; No! I'm in the middle of a game, fuck off! <br /> @@
+
+	<<linkreplace "Insult him in response">>
+		<<if $sibling.age < $mainChar.age>>
+			@@.mc-text; Fuck you! I was just trying to bond! @@
+		<<else>>
+			@@.mc-text; Yeah? Well I don't want to bond. I want to game! @@
+		<</if>>
+		<<set $mainChar.relationships.sibling -= 1>>
+	<</linkreplace>>
+	<br />
+	[[Back->Brother room]]
+<<elseif _event == 2>>
+	<<include "Playing PS4 with brother 15-30">>
+<<elseif _event == 3>>
+	@@.bc-text; Sure! Have a seat, I'll get another controller. <br />
+	You know? I always enjoy playing with you. <br /> @@
+	<<include "Playing PS4 with brother 30-50">>
+
+[img[String.format("pics/sibling/male/playingps3/play_together" + random(1, 3) + ".jpg")]] <br />
+	[[Back->Brother room]]
+<<elseif _event == 4>>
+	You don’t even have to ask. <br />
+[img[String.format("pics/sibling/male/playingps3/play_together" + random(1, 3) + ".jpg")]] <br />
+	[[Back->Brother room]]
+<</if>>
+
+::Playing PS4 with brother 15-30 [nobr] <2000,80>
+@@.bc-text; Yeah, have a seat @@
+	@@.narrator;
+		&emsp;You sit down next to your brother and take the second controller he's handed you. You soon get used to the controls. <br />
+		&emsp;You have a great time playing with brother! <br />
+		&emsp;Sometimes you get a little too into the game and start shouting at the TV. Your brother laughs and teases you about it. Other times, you strike up a conversation and both of you talk whilst playing. <br />
+	@@
+ [img[String.format("pics/sibling/male/playingps3/play_together" + random(1, 3) + ".jpg")]]
+		<br />
+	<<if $mainChar.corruption >= 10>>
+		[[Get closer to the TV->Brother PS4 get closer to tv]] <br />
+	<</if>>
+	<<if $mainChar.corruption >= 50>>
+		[["Hey bro, I'm cold.."->Brother PS4 cold]]
+	<</if>>
+	<br />
+<<set $minute += 30>>
+	<<set $mainChar.relationships.sibling += 1>>
+	[[Back->Brother room]]
+
+::Brother PS4 get closer to tv [nobr] <2000,180>
+[img[String.format("pics/sibling/male/playingps3/tease_shorts" + random(0, 1) + ".jpg")]] <br />
+			@@.narrator;
+				&emsp;Wanting to see better, you move closer to the TV. <br />
+				&emsp;Your brother watches with curiosity but when you kneel, his gaze is drawn to your round ass. <br />
+			@@
+			<<if $sibling.corruption >= 30>>
+				@@.narrator;
+					&emsp;He gets up and comes over to. You feel a sharp pain on your rear as he spanks you.
+				@@
+				@@#brother-playing-closer-to-tv-spanks-ass-pervert;
+				  <<linkreplace '"Hey pervert!"'>>
+					<<replace "#brother-playing-closer-to-tv-spanks-ass-smile">><</replace>>
+					@@.mc-text; Hey, pervert, I'm your sister! @@
+					@@.bc-text; Yeah, and you have a stunning ass! @@
+					<<set $mainChar.relationships.sibling -= 1>>
+				  <</linkreplace>>
+				@@
+				<br />
+				@@#brother-playing-closer-to-tv-spanks-ass-smile;
+				  <<if $mainChar.corruption >= 70>>
+					<<linkreplace "Smile">>
+					  <<replace "#brother-playing-closer-to-tv-spanks-ass-pervert">><</replace>>
+					  @@.narrator;
+					  	&emsp;You look to your brother and give him a shy, innocent smile.
+					  @@
+					  <<set $mainChar.relationships.sibling += 1>>
+					  <<set $sibling.corruption += 1>>
+					<</linkreplace>>
+				  <</if>>
+				@@
+			<<elseif $sibling.corruption >= 10>>
+				@@.bc-text; Hey, sis, great ass! @@
+				@@.narrator;
+					You turn to look at him and smile shyly.
+				@@
+			<<else>>
+				@@.narrator;
+					&emsp;He immediately looks away from your ass so that you don't notice him staring. <br />
+					&emsp;However, sometimes, he casts quick glances to your butt.
+				@@
+				<<set $sibling.corruption += 1>>
+			<</if>>
+			[[End playing->Brother room]]
+
+::Playing PS4 with brother 30-50 [nobr] <2000,400>
+@@.mc-text; Damn, it's hot in here, isn't it? @@
+@@.bc-text; Why don't you take your clothes off~ @@
+@@.mc-text; Good idea! @@
+@@.narrator; You take off your top, showing your <<set _cupSizeName = $mainChar.appearance.chest.size.toUpperFirst() + '-cups' >>_cupSizeName @@
+<<set $mainChar.appearance.chest.image = String.format('pics/appearance/chest/cups/' + $mainChar.appearance.chest.size.toLowerCase() + '/image.jpg')>>[img[String.format($mainChar.appearance.chest.image)]] <br />
+<<if $sibling.corruption < 10>>
+	@@.narrator; Your brother's face turns red and he looks away, trying to distract himself.
+	@@
+	@@.mc-text; Hey, you said to take off my clothes ;3 @@
+	@@.bc-text; Yeah, but I didn't think you'd actually do it... @@
+<<elseif $sibling.corruption >= 10 && $sibling.corruption < 40>>
+	@@.narrator; Your brother's face turns red. You feel that his eyes are on your body, devouring every exposed part. @@
+	@@.mc-text; Enjoying the view, bro? @@
+	@@.bc-text;	Sure... This game has great graphics... @@
+<<elseif $sibling.corruption >= 40 && $sibling.corruption < 60>>
+	@@.bc-text; Wait, did you seriously just strip? You're nasty, you know that right? @@
+	@@.mc-text; I do :3 @@
+	@@.narrator; You both laugh. @@
+<<elseif $sibling.corruption >= 60>>
+	@@.bc-text; Damn... You really just took off your clothes? You're seriously nasty, you know that right? @@
+	@@.mc-text; I do :3 @@
+	@@.bc-text; And what do nasty sisters get, hmm? ;3 @@
+	@@.narrator; &emsp;He moves behind you and grabs your breasts, kneading them in his hands. You moan softly as he continues to fondle. Suddenly, you feel a large bulge press against your butt and his hot breath on your ear as he leans towards you and whispers: @@
+	@@.bc-text; Nasty sisters get nasty brothers! @@
+	@@.narrator; &emsp;Your brother wastes no time in stripping you of the rest of your clothes. He then proceeds to remove his own. Once you are both naked, he lifts you up and chucks you onto the bed. He then moves behind you, grabbing your waist and pulling your ass closer to him. <br />
+	&emsp;He clutches your neck with one hand whilst his other hand reaches down and rubs along your pussy lips. You let out a whimper. This reaction spurs your brother on. He grabs his big, hard cock and pushes the tip against your hole for only a moment before he shoves the rest inside in one forceful thrust. <br />
+	&emsp;You gasp at the intrusion but you soon feel only pleasure as he rocks his hips back and forth, pushing in and out of your tight pussy. You can feel his dick grinding against your walls as it pushes further and further in. Your brother picks up the pace, now pounding into you. This causes you to let out a loud groan. Your brother places his free hand over your mouth, quietening any future moans. <br />
+	&emsp;This continues for some time; your brother roughly fucking you like the nasty sister you are whilst you continue to game (albeit badly). Soon, you feel your brother slow down. He pulls out and removes his hand from your mouth to grab his cock. He jerks off quickly and then shoots his hot, sticky cum all over your exposed ass. <br />
+	&emsp;What would your parents think if they could see you now? Covered in your own brother's cum.
+	 @@
+	<br />
+	@@.image-wrapper-w70p;
+[img[String.format('pics/BrotherPS4Fucking' + random(1, 11) + '.jpg')]]<<HaveASexWidget "vaginal" "sibling">>
+	@@
+	<br />
+	@@.bc-text; You are the best sister ever~ @@
+	@@.narrator; &emsp;You give him a knowing smirk as you take some of his cum on your finger and stick it in your mouth, sucking slowly and seductively. @@
+<</if>>
+	<<set $sibling.corruption += 1>>
+	<<set $mainChar.relationships.sibling += 1>><br />
+[[End playing->Brother room]]
+
+::Brother PS4 cold <2000,280>
+@@.mc-text; Hey, bro, aren't you cold? @@
+@@.bc-text; Yeah, I guess it is a bit chilly in here. @@
+@@.mc-text; Well, why don't we warm each other up? @@
+@@.bc-text; How'd you mean? @@
+@@.narrator; &emsp;You move over to him and spread his legs. Then you sandwich yourself in between them and lean back against his body. @@
+[img[String.format("pics/sibling/male/playingps3/lie_between_his_legs" + random(0, 1) + ".jpg")]] <br />
+<<if $sibling.corruption < 10>>
+	@@.narrator;
+		&emsp;After a few seconds, you already start to feel warmer, the heat of your close bodies radiating to one another. There's also a little... tension in the air.
+		&emsp;You can feel your brother's body contract a little. His voice has become quieter and he's trying not to move too much.
+		&emsp;He's shy. Never before has his sister been this close to him...
+	@@
+	@@.mc-text; See? Isn't that better? Aren't your warmer already? @@
+	@@.bc-text; Oh, yeah, definitely... Thanks, sis... @@
+<<else>>
+	@@.narrator; &emsp;After a few seconds, you can already feel the warmth from your bodies snugly fit together. You also feel a little... excitment. It seems there's another area on your body that's warming. @@
+	@@.bc-text; Yep... This is definitely warmer! @@
+	@@.narrator;
+		&emsp;Shortly after you continue gaming, you feel a small pressure pressing into your lower back.
+	@@
+	@@.bc-text.thought;
+		Damn, she’s so hot... Why can’t I control myself?! She's my sister! Stop it, $sibling.firstName! God, if only she weren't my sister...
+	@@
+	@@.mc-text.thought;
+		What is tha- Oh... He has a boner? Does he really get turned on by me? Well, that makes this more interesting...
+	@@
+<</if>>
+	<<set $sibling.corruption += 1>>
+	<<set $mainChar.relationships.sibling += 1>>
+[[End playing->Brother room]]

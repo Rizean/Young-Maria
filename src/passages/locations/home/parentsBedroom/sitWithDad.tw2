@@ -1,0 +1,38 @@
+::Sit with your dad and talk a little [nobr] <2000,1100>
+<div class="default-image-wrapper">
+    <img src="pics/dad.jpg">
+</div>
+
+You make your way over to your dad who's sat at the desk, working. You lean against his desk and begin chatting with him. Though he barely stopped his work, you still enjoyed your conversation! <br />
+<p class="minus">
+    -10 Energy
+</p> <br />
+<p class="add">
+    +1 relations with dad
+</p> <br />
+
+<<set $mainChar.energy -= 10>>
+<<set $mainChar.relationships.dad += 1>>
+<<set $minute += 20>>
+
+<<if $mainChar.look.clothes.body.name === '' && $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name === ''>>
+    <<if $mainChar.relationships.dad > 40 && settings.isSiblingInteractionAllowed == true>>
+        It looks like your bare skin lifted up "the emotional state" of your father. [[Would you help him with it?]] <br />
+    <<endif>>
+<<endif>>
+<br />
+
+<<if $mainChar.corruption >= 20 && $mainChar.energy >= 10>>
+	[[You worry about your weight and ask your dad about it->ask dad about your weight]] <br />
+<<endif>>
+[[Go back->Parents' bedroom][$minute += 1]]
+
+
+::Would you help him with it? <2000,1200>
+<div class="default-image-wrapper"><img src="pics/dadSucking.gif"></div><<HaveASexWidget "bj" "Dad">>
+
+You lean over, unbuckling his pants and pulling out his hard cock. You take it in your hands and start stroking. Your fathers' eyes are wide with shock but he doesn't stop you. You decide to take it further. Kneeling down, you lean over him and take his cock in your mouth. Your tongue darts around his shaft, covering it in your saliva as you bob up and down. Though you do not see him, you can hear your father breathing heavily. He's definitely enjoying this. You speed up and soon enough, he nears climax.
+"Fuck, I love your mouth..."
+<p class="add">+1 Corruption</p> <p class="add">+1 relations with dad</p><<set $mainChar.relationships.dad += 1>><<set $minute += 30>><<set $mainChar.corruption += 1>>
+
+[[He finished down your throat and you leave->living room]]

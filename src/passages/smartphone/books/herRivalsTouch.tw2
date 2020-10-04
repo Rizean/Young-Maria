@@ -1,0 +1,14 @@
+::Her Rival's Touch [system] <5601,2650>
+<<set $isHerRivalsTouchRead = true>><div class="default-image-wrapper"><img src="pics/books/HerRivalsTouch.jpg"></div>
+
+&emsp;Liam Neale has spent eight years searching for the woman who rocked his world - and then robbed him. But Kenzie's not just any woman. She's the most volatile of the Horseman that rule the Island of Ys: War.
+&emsp;With the Horsemen's revenge plot finally picking up speed, the last thing Kenzie needs is the distraction Liam offers. If she had just a little more self-control, maybe she would be able to keep her hands of him. But alas, Kenzie and self-control have never been on speaking terms.
+&emsp;Determined to have her cake and eat it too, Kenzie offers liam a deal. A seven day fling and then he leaves the island forever...
+&emsp;But the Horsemen's enemies are circling and it's never been more hazardous to be attached to the Island of Ys. All Liam wants to do is protect Kenzie from the demons of her past but with the clock ticking down, and her trust in short supply, they're both in more danger than either of them could have dreamed...
+
+~Several Hours Later~
+
+Having a strong female protagonist and a male love interest... Gosh, you wish your life was as pleasurable and exciting...
+<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+
+[[Go back->Smartphone]]

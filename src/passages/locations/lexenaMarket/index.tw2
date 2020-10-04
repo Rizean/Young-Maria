@@ -1,2 +1,22 @@
 ::StoryIncludes
+src/passages/locations/lexenaMarket/clothesShop.tw2
+src/passages/locations/lexenaMarket/cosmeticsSection.tw2
+src/passages/locations/lexenaMarket/dimeTime.tw2
+src/passages/locations/lexenaMarket/eroticMarket.tw2
+src/passages/locations/lexenaMarket/gunsStorage.tw2
 src/passages/locations/lexenaMarket/lexenaMarketStore.tw2
+src/passages/locations/lexenaMarket/magicTech.tw2
+src/passages/locations/lexenaMarket/pharmacyMarket.tw2
+
+
+::Lexena Market <2723,871>
+<div class="default-image-wrapper"><img src="pics/market.jpg"></div>
+[[Guns Storage][$minute += 5]]
+[[Dime Time][$minute += 5]]
+[[Clothes Shop][$minute += 5]]
+[[Erotic Market][$minute += 5]]
+[[Magic Tech][$minute += 5]]
+[["The Prince's Lover" (Cosmetics)->Lexena cosmetics section][$minute += 5]]
+[["The Witches of the Rainbow" (Pharmacy)->"Pharmacy" market][$minute += 5]]
+
+[[Go back->Go out][$minute += 10]]

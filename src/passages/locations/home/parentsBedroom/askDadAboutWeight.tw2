@@ -1,0 +1,36 @@
+::ask dad about your weight [nobr] <2000,1000>
+@@.mc-text;
+	Daddy, I'm very worried about my weight... <br />
+	I think I might need to lose a few pounds! <br />
+	What do you think?
+@@
+@@.narrator;
+	You raise your shirt to show your belly to your dad. <br />
+	But you raised it a little higher than necessary...
+@@
+@@.image-wrapper-w50p;
+	[img['pics/teasing/parentsroom/raise_a_shirt.jpg']]
+@@
+@@.bc-text;
+	Don't worry about it, baby, you have a great body...
+@@
+@@.bc-text.thought;
+	(...and those boobs? Damn...)
+@@
+@@.bc-text;
+	Relax. There's no need to panic. You don't need to lose weight.
+@@
+@@.mc-text;
+	Phew...
+	Thanks, dad!
+@@
+
+<<set $minute += 10>>
+<<set $mainChar.energy -= 10>>
+<<set $dad.corruption += 1>>
+<br />
+@@.add; +1 dad corruption @@ <br />
+@@.minus; -10 energy @@
+<br />
+<br />
+[[Back->Parents' bedroom]]

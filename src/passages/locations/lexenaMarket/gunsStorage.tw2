@@ -1,0 +1,49 @@
+::Guns Storage [nobr] <2500,980>
+<div class="default-image-wrapper"><img src="pics/gStorage.jpg"></div>
+You enter the store with shaking hands. You quickly shuffle over to the guy behind the counter. <br />
+"What do you need?" he asks. <br />
+<br />
+*[[Sig Sauer 9mm]] for $
+<<if settings.lessPrices == true>>
+	75
+<<else>>
+	150
+<<endif>>
+-
+<<if $isGunOwned == true>>
+	You already have this!
+<<else>>
+	<<if settings.lessPrices == true>>
+		<<if $mainChar.money < 75>>
+			You don't have enough money!
+		<<else>>
+			<<link "Buy">>
+				<<set $minute += 1>>
+				<<set $mainChar.money -= 75>>
+				<<set $isGunOwned = true>>
+				<<goto "Guns Storage">>
+			<</link>>
+		<<endif>>
+	<<else>>
+		<<if $mainChar.money < 150>>
+			You don't have enough money!
+		<<else>>
+			<<link "Buy">>
+				<<set $minute += 1>>
+				<<set $mainChar.money -= 150>>
+				<<set $isGunOwned = true>>
+				<<goto "Guns Storage">>
+			<</link>>
+		<<endif>>
+	<<endif>>
+<<endif>>
+<br />
+<br />
+[[Back->Lexena Market]]
+
+
+::Sig Sauer 9mm <2500,1100>
+<<link "Back" "Guns Storage">><</link>>
+Though it's nothing special, this gun will help you defend yourself against any that might do you harm!
+
+<div class="default-image-wrapper"><img src="pics/Gun.jpg"></div>

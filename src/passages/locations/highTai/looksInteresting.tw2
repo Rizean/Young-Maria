@@ -1,0 +1,46 @@
+::Well, it looks interesting <2730,1865>
+The man leads you into the building. "By the way, I'm Ron." He says over his shoulder as he strolls down the dark and empty hallway. Finally he comes to an apartment, takes out his key and opens the door. He steps aside and gestures for you to enter first.
+
+Ron's place is small but cosy. His furniture isn't anything to rave about but it provides the basic necessities. It also looks fairly up-to-date which kind of contradicts the old, rundown aesthetic outside.
+
+"Like I said, this building was abandoned not that long ago which means most of the rooms still have furniture from the previous occupants. Speaking of occupants, allow me to introduce you to them." He leads you outside his apartment and down the corridor.
+
+On your way through the grey hallways, Ron gives you some backstory on each of the apartments and their occupants.
+
+"Apartment №30 is taken by one of the local drug dealers, Mett. A quiet guy but beware because he loves to argue."
+
+"Ah, Apartment №38. Owned by Jay, or Big Six as he likes to call himself. He's a gambler with no skill but a lot of luck. If you play against him... Well... Don't... Also, he's a heavy drinker..."
+
+"Now this Apartment, №42 belongs to <strong>Mr. Key</strong>." Ron laughs seeing your confused expression. "He never gave his real name." Ron shrugs. "But he's always at home; working."
+
+"What does Mr. Key do?" You ask.
+
+"More of a question of what doesn't he do!" Ron chuckles. "Look, every empty apartment in this place is locked. But these locks are special meaning that local thieves can't open them. Mr. Key, however, can. If you want an apartment, he's the guy you ask. No-one really knows how he does it. All we know is that he investigates the locks, goes away and comes back later with a key perfect for that lock. It's pretty amazing actually."
+
+Ron stops at a set of stairs and makes his way down them. As you reach the bottom you see a large open area. Some parts are closed off with walls and doors but there's a spacious section in the middle that connects them all.
+
+"This used to be a closed off floor like the rest but some local kids came in and wrecked the place. We decided to finish what they started and tore down a lot of the walls. Now, the area is like one big apartment where people come to relax together."
+
+You look around the place. There's a fire set in one of the corners with three boys and a girl huddling around it. They are singing what you recognise as old scout songs. One old man, stoned out of his mind, is laying on a very old sofa in front of a damaged TV set. He looks dead but you're sure he's just sleeping. On a little table in another corner, there's some boys playing cards. A group of punk looking girls see you staring and stick out their pierced tongues at you.
+
+"Lesbians... They're always a little skeptical around new folk." Ron says, giving your shoulder a comforting squeeze.
+
+You turn and spy, through an open door, a crippled veteran sleeping on a huge, moth-eaten double bed. Whilst beyond another door is a boy wrestling with a girl... Oh no, wait... They're fucking.
+
+"As you can see, people do what they want here... [[Well, let's go back]]"
+
+::Well, let's go back <3500,2100>
+<<set $hour += 2>>You returned to the Ron's place.
+
+<div class="default-image-wrapper"><img src="pics/ronsPlace.jpg"></div>
+
+&emsp;"So, why do you live here?" You ask.
+&emsp;Ron scoffs, "Live here? Nah, I don't live here. This is just my... 'stash'. I come here to get away from the world for a few days."
+&emsp;A Stash... That actually sounds pretty good, you think. Everybody needs their own personal space to hide from it all. Especially when reality gets a little much...
+&emsp;As if Ron reads your mind, he smiles, "If you want, you could get your own stash. Remember Mr. Key? He can make you a key to your very own place."
+&emsp;You sit silently for a moment pondering over what Ron just said. Well, sometimes you need a quiet place. Moreover, this building is quite... interesting.
+&emsp;"Like I said, Mr. Key's always home. Just go to him with $300 and return in a few days."
+&emsp;Ok... That's not too much for a whole new home, right?
+&emsp;Ron gets up and brushes down his pants. "Sorry to cut this short, but I gotta run. Places to be and all..."
+&emsp;You get up and the two of you make your way to the door. He opens it and you're about to step through when he places a hand on your arm. "Hey, if you do decide to get a place, be sure to visit, okay?"
+&emsp;You smile, thank him and exit his apartment. He closes the door behind you. Well, guess it's time to [[go home.->Go out][$minute += 10]]

@@ -1,0 +1,19 @@
+::wash in the bathroom [nobr] <1500,1720>
+@@.image-wrapper-w50p;
+	[img[String.format('pics/bathroom/relax_in_the_bath/{0}.jpg', random(1, 3))]]
+@@
+&emsp;You walk over to the bath and turn on the taps. Whilst waiting for the bath to fill, you scroll through social media. <br />
+&emsp;Once the bath is full, you strip and get in. As soon as the hot water touches your naked body, you already feel yourself starting to relax. <br />
+&emsp;You close your eyes and enjoy the moment. <br />
+&emsp;After a few minutes, you thoroughly wash your body and head, then wash off the shampoo and exit the bath. <br />
+<br />
+<<set $minute += 30>>
+<<set $mainChar.appearance.makeup = 'none'>>
+<<set $mainChar.appearance.isCombed = false>>
+<<set $mainChar.cleanliness = 100>>
+<<set $mainChar.appearance.head.lips.color = 'none'>>
+<<set $inventory.grocery['Shampoo'].count -= 1>>
+@@.add; +20 Energy @@<<set $mainChar.energy += 20>> <br />
+@@.add; +100 Cleanliness @@ <br />
+<br />
+[[Bathroom]]

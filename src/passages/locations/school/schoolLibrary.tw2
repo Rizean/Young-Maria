@@ -1,0 +1,850 @@
+::School library <1606,2268>
+<img src="pics/library/library-bg.jpg" width="100%">
+<<if $mainChar.isInSchoolLibraryAlone == false>>
+	&emsp;You and your horny classmate make your way into the school library. To avoid suspicion, you run your hand along the books and take some with you as you travel deeper into the building. You head into the quietest and least used part of the library...
+	<<linkreplace "So... Where did we leave off? &#128521;">>
+		<<replace "#library-guy-reject">><</replace>>
+		&emsp;The guy presses you against the shelf and passionately kisses you. As the kiss deepens and your excitment grows, you undress each other.
+		<img src="pics/library/join/man/kissing/0.gif" alt="library man kissing" width="50%" />
+		[[Let him use his shaft][$minute += 20]]
+		[[Try his "device" in your mouth][$minute += 20]]
+		[[Let him explore your wet cave][$minute += 20]]
+		[[Give your ass][$minute += 20]]
+		[[Let him decide][$minute += 20]]
+	<</linkreplace>>
+	@@#library-guy-reject;
+	  <<linkreplace "Sorry, but I just wanted to read something, nothing more ;">>
+		  @@.uc-text; What? Are you kidding me? Damn bitch... @@
+		  @@.mc-text; &#128519; @@
+		  [[Library hall->School library]]
+	  <</linkreplace>>
+	@@
+	<<set $mainChar.isInSchoolLibraryAlone = true>>
+<<else>>
+  <<if $hour < 16>>
+	  The library closes at 16:00...
+
+	  [[Ask the librarian for a book->Kind of book]] \
+  <<else>>
+	  The library is closed!
+  <</if>>
+  [[Go home->living room][$minute += 15]]
+  <<if $CristyOffered == true and $isSchoolSlut != true>>
+	  [[Meet with Cristy]]
+  <<elseif $isSchoolSlut == true>>
+	  <<if $day == 1 or $day == 3 or $day == 5>>
+		  [[Go to the broken WC]]
+	  <<endif>>
+  <<endif>>
+<</if>>
+
+::Kind of book <1601,2386>
+<div class="default-image-wrapper"><img src="pics/library/librarian/redhair/default.jpg" alt="redhair librarian"></div>
+&emsp;You stroll up to the librarian and politely ask for help. She asks you what kind of book you are looking for... \
+<<nobr>>
+  <<set _bookGenres = [
+	  'Drama',
+	  'Poetry',
+	  'Romance',
+	  'Thriller',
+	  'History',
+	  'Health',
+	  'Science',
+	  'Travel'];
+  >>
+
+  <<if $mainChar.energy >= 20>>
+	<ul>
+	  <<for _bookGenre range _bookGenres>>
+		  <li>[[_bookGenre|Read a book]]</li>
+	  <</for>>
+	  <<if $mainChar.corruption >= 40>>
+		<li>[[Erotic|Read a book]]</li>
+	  <</if>>
+	</ul>
+  <<else>>
+  	  <br />
+	  You are tired to read!
+  <</if>>
+<</nobr>>
+[[Go to the library->School library]]
+
+::Read a book <1600,2500>
+<img src="pics/library/readbook.jpg" alt="read a book">
+<<set $hour += 1>>
+<<set $mainChar.energy -= 20>> \
+@@.mc-attr-down; -20 energy @@
+<<return "Back">>
+<<set _random = State.random() * 100 + 1>> \
+<<if _random < 20>> \
+	&emsp;You settle down to read.
+	&emsp;After a few minutes, you come across a very boring passage. You mind begins to wander but it's drawn back to reality when you hear a strange noise... [[Check it out|Strange noise in a lib]]
+<</if>>
+
+::Strange noise in a lib <1600,2606>
+<<set $libraryGender = either('man','girl')>>Your curiosity gets the better of you and you decide to follow the noise. You walk through the aisles and the sound gets louder...
+<<if $libraryGender === 'man'>>
+	&emsp;Just as you peek around the end of the bookshelf, you see a guy sitting in the far corner of the room. Laying in front of him is an erotic journal open to a double page with, from what you can make out, a very large picture of a hot scantily clad woman.
+	&emsp;You look closer and notice his hand moving rhythmically up and down underneath his trousers. Now, you understand the noise you heard before is that of this man pleasing himself...
+
+<img src="pics/library/masturbation/man.gif" alt="masturbation man">
+
+<<elseif $libraryGender === 'girl'>>
+	&emsp;You peek around the corner to see a girl sitting with her back to you at an empty table. After a short observation, you notice that in front of her lies a laptop showing off a very promiscious website.
+	&emsp;From this angle you can't see much, but what you can see is one of her hands resting on her lap whilst the other is bent outwards like a chicken wing.
+	&emsp;You want a better angle, so you creep through the bookshelf until you're now seeing this girl from the side. Here, you notice the hand on her lap is actually under her skirt and between her wide open legs, twitching. The other hand is massaging her chest, squeezing the breast through the thin bra.
+	&emsp;The noise you heard before? This girl moaning...
+
+<<set _randPic = String.format("pics/library/masturbation/woman{0}.gif", random(1, 4))>>@@.default-image-wrapper;<img @src="_randPic" alt="girl masturbation" />@@
+<</if>>
+
+&emsp;You hate to admit it but their performoance excites you a little...
+
+<<if $mainChar.corruption >= 10>>[[Spy and masturbate->Library spy and masturbate][$minute += 20]]
+<</if>>[[Come up and shame->Library come up][$minute += 5]]
+[[Film it->Film library masturbate][$minute += 10]]
+[[Just leave->School library][$minute += 10]]
+
+::Library spy and masturbate <1480,2900>
+&emsp;A part of you is shocked by what is happening but another part, a more horny part, is becoming more excited...
+	&emsp;Soon you cannot resist the temptation and drop your belongings on the fall carefully before slowly snaking one hand under your skirt and the other under your shirt. Your body is already ready for your nipples are hard and erect and your pussy moist.
+	&emsp;Your fingers get to work stroking and circling your clit, and pinching and twisting your nipples. With your middle finger, you press on your red swollen "button" and move them around teasing your little clit. Such pleasure makes you utter quiet moans...
+	&emsp;Feeling the pulsation inside your pussy, you slightly lower your fingers and tenderly insert one inside. It pushes in and out of you rhythmically, prodding against your inner walls eagerly.
+	&emsp;But one is not enough. The second finger enters and, though it is a tight squeeze, your narrow hole is only stimulated more by this. With two fingers now inside you, you pick up the pace and penetrate your pussy making sure to curl your fingers and hit all the most sensitive parts.
+	&emsp;As vulgar thoughts enter your head like being caught here, like this masturbating to a random stranger, your pace quickens more. Your fingers move faster and deeper. Your thumb goes to your clit and puts pressure on the little "button". It takes you your last rational thoughts to not moan out loud... <br />
+
+<img src="pics/library/masturbation/self.gif" alt="self masturbation" />
+<<timed 5s t8n>>
+	&emsp;After a few minutes, you feel the all-consuming pleasure build and boil over. Your body begins to shake, your legs give way and it takes everything you have left to not collapse. A warm, carefree buzz spreads throughout your body.
+	&emsp;During this stormy orgasm, sharp jets burst from your pussy, spilling onto the floor. <br />
+
+<img src="pics/library/masturbation/self_orgasm.gif" alt="self masturbation orgasm" /><<HaveASexWidget "masturbate" "yourself">>
+	&emsp;You take a few moments to recover and straighten out your clothes. When you're finished, you raise your head to see that the person you were watching has gone. No evidence is left that they were even there to begin with.
+	&emsp;You decide to leave this place lest someone finds you standing over your own cum puddle. You collect your belongings and [[return to the main library area->School library]]
+<</timed>>
+
+::Library come up <1591,2888>
+@@.mc-text; ($mainChar.firstName): Hey, WTF are you doing!? @@ \
+<<set _randReaction = random(0, 1); >> \
+<<if _randReaction === 0>> \
+@@.uc-text; OH FUCK! @@
+<<if $libraryGender === 'girl'>>
+@@.image-center;
+<img src="pics/library/girls/shame.jpg" alt="shame" />
+@@
+<</if>>
+@@.uc-text;
+Oh my gosh, I-I'm so sorry! I-I didn't mean to- I mean I didn't think... Please don't tell anyone about this...
+@@
+@@#library-dont-tell;
+  <<linkreplace "Ok, I won't...">> \
+	<<replace "#library-caught-return">><</replace>> \
+	@@.uc-text;
+	Oh thank goodness! I'm so embarrassed... \
+	@@
+	@@.n-text;
+	&emsp;The $libraryGender quickly readjusts their clothes, grabs their belongings and hastily scrambles away from you.
+	@@
+	[[Library hall->School library]]
+  <</linkreplace>> \
+@@ \
+<<include "Library caught return">>
+<<elseif _randReaction === 1>> \
+@@.uc-text;
+Isn't it obvious?
+I mean, if you're interested, why don't you join me? ;)
+@@
+<<if $libraryGender === 'girl'>> \
+  @@.image-full-center;
+  	<img src="pics/library/girls/join.jpg" alt="join me" />
+  @@
+  @@#library-caught-not-join;
+	<<linkreplace "What!? I'm not such a frivolous whore like you!">> \
+	  <<goto "School library">>
+	<</linkreplace>> \
+  @@ \
+<<elseif $libraryGender === 'man'>> \
+  @@#library-caught-not-join;
+	<<linkreplace "(Just leave)">> \
+		<<goto "School library">>
+	<</linkreplace>>
+  @@ \
+<</if>> \
+  <<if $mainChar.corruption >= 50>> \
+	<<linkreplace "Oh... well... I suppose it could be fun... ;)">>
+		<<replace "#library-caught-not-join">><</replace>>
+		<<include "Library caught join">>
+	<</linkreplace>>
+  <</if>>
+<</if>>
+
+::Library caught join <1600,3100>
+<<if $libraryGender === 'girl'>>
+	@@.uc-text; I knew it, you little wretch ;) @@
+	&emsp;The girl makes her way over to you. As she approaches you, she pulls you in by your shirt and crashes her lips onto yours. So ingrossed in your tongues fighting one another, you don't notice the girl hastily undressing you.
+	&emsp;When you do, you are already practically naked. You don't want to be the only one so you quickly undress her too. Your hands shake but you aren't sure whether it's from nerves, adrenaline or excitment.
+	From the passionate kiss, you assume it's excitement...
+
+	<img src="pics/library/join/girl/kissing/0.gif" alt="library join girl kissing" width="50%" />
+	<<set _randAction to either('fingering', 'cuni', 'annilingus', 'fingering ass', 'dildo', 'dildo ass'); >>
+	<<switch _randAction>>
+		<<case 'fingering'>>
+			<<set $minute += 20>>
+			@@.uc-text; I want to feel your fingers inside my tight pussy... @@
+			&emsp;The girl's warm breath tickles your ear as she whispers. You do as told and soon your hands slowly descend down her back until they finally reach her butt.
+			&emsp;You grab her buttocks and squeeze them. You continue to knead her ass with the occasional light slap. The girl bites her lip.
+			&emsp;Spurred on by her reaction, you move one of your hands around her waist and trail it down her stomach to the top of her panties. Once there, you slowly push your hand behind the fabric and you feel how horny the girl is...
+			@@.mc-text; Wow, you're so wet already? @@
+			&emsp;She gives you a small, bashful smile and at the same moment your other hand comes around to her chest where you take one nipple between two fingers and tease it.
+			&emsp;Her nipples soon harden in response to your twisting and pinching. They look so inviting and you dip your head to grab one erect bud between your teeth. Your tongue shoots out licking over the stiff nipple.
+			&emsp;When the girl moans, you return your focus to your other hand in her pants. You start playing with her clit, skillfully stimulating it like you would your own. The sensations she experiences make her moisten even more and you hear a quiet but very seductive moan escape her lips.
+			&emsp;Suddenly, your fingers stop working her clit and move down into the epicentre of the storm. At first, they tease her pussy lips a little but, after a couple seconds, you slowly penetrate the girl with your middle finger. It enters into her tight hole easily thanks to the natural lubrication and her juices all over your finger.
+			@@.uc-text; Oh yeeees... @@
+			&emsp;The girl clearly likes your actions!
+			&emsp;Your second finger joins the first to give even more pleasure to the playful girl. With two fingers now inside her, you pick up the pace and begin pumping them in and out, faster and faster.
+		[img[String.format("pics/library/join/girl/fingering/" + random(1, 8) + ".gif")]]<<HaveASexWidget "receiveMasturbation" "library girl">>
+			&emsp;As soon as you accelerate, the girl snakes her own hand down to you wet pussy. She begins to gently massage your clit. Caught a little offguard by it, you close your eyes and notice your breathing has become heavier and more raspy.
+			&emsp;Using this newfound pleasure in yourself, you quicken your movements once again. The girl, however, doesn't want to get all the attention. She speeds up and is soon matching the rhythm of your fingering.
+			&emsp;Shortly after, the girl's movements are more erratic. You realise she is close to cumming. You feel a sense of power flow through and to send her over the edge, you place your thumb on her clit and rub.
+			&emsp;The girl lets out an involuntary moan and arches her back. Her legs start to shake and she hastily grabs onto your shoulders as the violent pleasure washes over her.
+			&emsp;After a couple seconds, the shakes subside and you pull your hand away to notice her cum coating your fingers. You lift your hand and place them in you mouth, licking off her tasty juices.
+			@@.uc-text; Wow, I definitely need to come here more often... @@
+			&emsp;She gives you a kiss on the cheek as a thanks and speedily redresses. Once she's finished, she passes by you and says she hopes to meet you again. Then she leaves you, partially nude and kinda unsatisfied...
+			[[Redress and return to the main area->School library]]
+		<<case 'cuni'>>
+			<<set $minute += 20>>
+			@@.uc-text; My pussy hasn't felt a hot, wet tongue for a long time... @@
+			&emsp;Without another word, the girl leads you to the table. She gets on top and opens her legs, revealing her glistening pussy to you. You take the hint and sink lower down her body, leaving a trail of your saliva as you lick and bit along her succulent flesh.
+			&emsp;By the time you reach her pussy, you go straight to her clit and tease it. Your warm tongue covers her red "button" and presses it causing explosions of pleasure to shake her body.
+			&emsp;After these teasing games, you focus on her main attraction; the tight little hole. You move further downward and use your tongue to rub along her lips a couple times.
+			&emsp;Once you've done this, you stop above her hole and penetrate inside it with your slick tongue. It studies every centimetre of her hole with a ferocious interest, hitting the spots that make the girl shudder with pleasure.
+		[img[String.format("pics/library/join/girl/cuni/" + random(1, 3) + ".gif")]]<<HaveASexWidget "giveCuni" "library girl">>
+			&emsp;During your pleasuring, you switch between teasing her clit and penetrating her hole. Your tongue dances around her centre of euphoria, causing the girl to cover her mouth with her hand and whimper into it.
+			&emsp;Seeing the girl so turned on by what you're doing excites you even more. You speed up, your tongue darting in and out of her pussy before prodding her "button".
+			&emsp;After a few minutes, you begin to feel her pussy throb and, next to your head, her legs shake. The girl's hand grabs your hair, pushing you closer to her pussy whilst her legs clamp you into place.
+			&emsp;With no escape, you hasten your movements really trying to hit all the most sensitive parts of her inner walls. This sends the girl over the edge and she lets out a child-like cry as she cums.
+			&emsp;When the girl finally recovers from her climax, she relaxes her body and looks you in the eye with a lustful smile.
+			@@.uc-text; Damn, you're great with your tongue. I wouldn't mind reliving these moments again and again... @@
+			&emsp;The girl gives you one last playful wink before tidying herself up and leaving the library. You watch as she leaves, happy you got her off but also a little annoyed you weren't satisfied...
+			[[Better redress and return to the main area->School library]]
+		<<case 'annilingus'>>
+			<<set $minute += 20>>
+			&emsp;The girl bends over the table, her ass in the air and wiggling before you.
+			@@.uc-text; Ever tasted ass before? @@
+			&emsp;You shake your head but curiosity gets the better of you and you amble over to her. First, you start by teasing and licking her clit and pussy. This you know how to do... Or at least, have an idea of what to do.
+			&emsp;Her pussy begins to secrete even more juices that begin to flow down her pussy. Using this juice, you lap it up with your tongue before moving to her anus.
+			&emsp;To get better access, you spread her cheeks with your hands. Then you spread the juices around her tight ass hole but not penetrating it just yet. You occasionally tease her ass by ever so slightly prodding it with your warm tongue.
+			[img[String.format("pics/library/join/girl/annilingus/" + random(1, 3) + ".gif")]]<<HaveASexWidget "receiveMasturbation" "library girl">><<HaveASexWidget "annilingusGive" "library girl">>
+			@@.uc-test; You're such a tease! Just put it in already! @@
+			&emsp;You let out a chuckle at the girl's desperation but give her what she wants. Slowly, you push your tongue inside her narrow anus. At first, it's a gentle rhythmic penetrating.
+			&emsp;The girl is impatient and turns slightly to grab your head. She then pulls your head back before pushing you back against her ass again. It's almost like she's using you as a kind of dildo, your tongue dipping in and out of her ass repeatedly.
+			&emsp;After a few seconds, she drops her hand now confident you'll continue going at the speed she set. But you have different views and pick up the pace. You tongue penetrates her ass faster and deeper.
+			&emsp;The girl lets out a quiet moan and drops to the table, her back arched but ass still in the air. Eventually the girl tenses up and you feel her ass clench slightly around your tongue. Shortly after, the girl's body quivers as she cums.
+			@@.uc-text; I never thought I'd cum from that... @@
+			&emsp;The girl recovers and dresses herself. Before she leaves, she thanks you for the new and pleasant experience.
+			&emsp;You watch the girl walk away. You can't say you particularly enjoyed the experience but you did enjoy giving the girl such pleasure.
+			[[Time to dress and return to the main area->School library]]
+		<<case 'fingering ass'>>
+			<<set $minute += 20>>
+			&emsp;Not knowing her preferences, you slowly lower your hands over her body, enjoying her soft breasts. Kneading one in one hand and twisting the nipple in the other.
+			&emsp;After a few seconds, one of your hands travels further down her body until it reaches the top of her panties. Slowly, your hand reaches underneath her panties and feels her wet pussy. One of your fingers massages her clit.
+			@@.uc-text; Hey baby, why don't you go down a little lower? ;) @@
+			&emsp;You're a little shocked at first but return her mischievious smile with a lustful one of your own. Now you know what she likes...
+			&emsp;Using her juices to lubricate your fingers, you move your hand around her back and slowly insert one finger into her tight ass. As you enter, the girl makes a long, quiet moan and you feel her ass slightly clench around your finger.
+			&emsp;You take this as an okay to go deeper and push your finger further inside her anus. You rhythmically move your finger in and out of her ass.
+			[img[String.format("pics/library/join/girl/fingering_ass/" + random(0, 1) + ".gif")]]<<HaveASexWidget "masturbate" "library girl">>
+			@@.uc-text; Honey, I need one more... @@
+			&emsp;She whispers into your ear. Your middle finger still wet from her juices joins your first finger and together they push gently into her anus. It's more difficult than just the one but inch by inch they penetrate deeper down her narrow hole.
+			&emsp;The girl lets out an involuntary gasp as you push further in. In the heat of the moment, she leans forward and crashes her lips upon yours. You hear a little moan and feel her mouth hum against yours.
+			&emsp;You pick up the pace, fucking her tight ass to the full depth of your fingers. The girl sits on your fingers, grinding her hips and bouncing up and down upon them like they were a dick.
+			&emsp;Suddenly, you feel her ass clench tightly around your fingers and a long moan escape her lips. Her body shakes and her legs quiver as she cums.
+			&emsp;The girl falls limp onto you and pants for several minutes as she composes herself.
+			@@.uc-text;  I missed that so much... Thank you... @@
+			&emsp;She tidies herself up and gives you a naked hug as she smiles warmly. Then she redresses and hastily leaves the library.
+			&emsp;You watch as she leaves with a kind smile upon your face. You may not have been fully satisfied but you enjoyed giving her the pleasure.
+			[[Go to the library->School library]]
+		<<case 'dildo'>>
+			<<set $minute += 20>>
+			@@.uc-text; I have something here... @@
+			&emsp;You watch in confusion as the girl pulls out a bright pink, phallic object.
+			@@.uc-text; I hope you know how to use it ;) @@
+			&emsp;You give her a little knowing smile and take the dildo from her. Bringing it up to her mouth, you lean in as well and both of you eagerly lick up and down the rubbery shaft.
+			&emsp;Once the dildo is sufficiently lubricated, you push the girl back against the nearby desk and trail the wet tip down the girl's body toward her glistening pussy.
+			&emsp;As you reach it, you rub the object around her clit, teasing her. She moans deeply and you take this opportunity to trail the dildo further down and drive it into her pussy.
+			- Oh yeah... A little unusual when someone else does it...
+			[img[String.format("pics/library/join/girl/dildo/" + random(1, 2) + ".gif")]]<<HaveASexWidget "masturbate" "library girl">>
+			&emsp;You pick up pace and begin fucking her with the dildo. Her body moves to the rhythm of your thrusting, which gives her even more pleasure.
+			&emsp;Her hand runs through your hair gently as she leans back emitting short but frequent moans. You decide to go one step further and use your free fingers to rub along her clit.
+			&emsp;Suddenly the girl bites her lip, grabs your hand and inserts the dildo completely inside herself. You keep up your speed and soon the girl's legs are shaking as she cums.
+			&emsp;Once she recovers from her orgasm, you pull out the dildo and return it to her. She takes it and sucks off all the liquid whilst giving you a playful wink.
+			@@.uc-text; Damn baby, that was good. Thanks for that! @@
+			&emsp;She puts her dildo back in her bag and hugs you. As she's in you ear, she whispers that she hopes this isn't your last meeting. Then she gives you a quick peck on your cheek before leaving.
+			&emsp;You watch her walk away with a smile. You may not have been satisfied yourself but it was still an experience you enjoyed. Now it's time to [[return to the main hall->School library]]
+		<<case 'dildo ass'>>
+			<<set $minute += 20>>
+			@@.uc-text; I brought something with me... @@
+			&emsp;You watch with curiosity as the girl pulls out a bright pink, phallic object from her bag.
+			@@.uc-text; Don't worry, this is for me ;) @@
+			&emsp;She takes her position on the floor before pulling out some lube and using it to lubricate her dildo and her... ass?
+			&emsp;Once the didlo is sufficiently lubricated, she hands it to you and uses her hands to spread her ass cheeks wide, presenting her tight hole to you.
+			&emsp;The sight of her glistening wet pussy and puckered ass hole awaiting pleasure excites you. You bend over her body and carefully insert the dildo into her ass.
+			&emsp;A quiet gasp escapes the girl's lips as the object pushes deeper inside her narrow cave. The gasp turns to lingering moans as the dildo scrapes against her anal walls.
+			&emsp;The girl squirms from the intruder but soon her body relaxes and you start to fuck her ass with the pink object. You also lean down and lick her breasts and nipples.
+		[img[String.format("pics/library/join/girl/dildo_ass/" + random(1, 2) + ".gif")]]<<HaveASexWidget "masturbate" "library girl">>
+			&emsp;Aroused even more, the girl grinds against your hand to make the dildo push further inside her ass.
+			@@.uc-text; FUCK, FUCK ME HARDER! @@
+			&emsp;She harshly whispers into your ear. Heeding her orders, you begin to accelerating your thrusting and with each thrust you probe her ass deeper and deeper.
+			&emsp;The girl moans loudly and you place a hand over her mouth to silence the sounds. With worry that you'll get caught, you decide to go all out and bring her to orgasm quickly.
+			&emsp;You remove your second hand from her mouth and use it to massage her clit. The girl's body responds by arching and tensing all over.
+			@@.uc-text; YES YES YES YES YE... @@
+			&emsp;Her eyes roll back in pleasure, her body starts to shake and her legs clamp around your hand. After several seconds, her breathing eases and her body relaxes once more.
+			&emsp;The girl looks at you with a satisfied smile before redressing, gathering her belongings and leaving the library.
+			&emsp;You dress at the same time, and notice a note on the table before you leave. Upon it are words "That was great! I'll be waiting for you here again..." in scrawled handwriting.
+			&emsp;After reading the note, you [[return to the main hall->School library]]
+		<<default>>
+			@@#error; UNKNOWN SWITCH PARAMETER! @@
+	<</switch>>
+<<elseif $libraryGender === 'man'>>
+	<<set _randAction to either('sex', 'anal', 'blowjob', 'handjob'); >>
+		@@.uc-text; I KNOW it will be fun, baby ;) @@
+		&emsp;The guy stands up and strides over to you before crashing his lips upon yours. As the kiss intensifies, he slowly starts taking off your clothes.
+		&emsp;It dawns on you that you are in public place and could be caught at any moment... You tremble with excitment at that prospect.
+
+		<img src="pics/library/join/man/kissing/0.gif" alt="library join man kissing" width="50%" />
+	<<switch _randAction>>
+		<<case 'sex'>>
+			<<set $minute += 20>>
+			&emsp;After you're stripped of your clothes, the guy spins you around and bends you over. To keep from falling, you place your hands on the wooden floor as the guy arranges you into a downward dog style position.
+			&emsp;Once you're as comfortable as you can be bent over with your ass in the air, the guy pulls out his cock and lubricates it in your juices by rubbing it along your pussy lips.
+			&emsp;Gripping your ass with one hand, he uses his other hand to insert his cock into your dripping hole. A deep moan emanates from your throat as his dick enters your cunt filling the narrow tunnel.
+			&emsp;The intrusion into your hole causes you to compress your muscles which clamp around the guy's shaft. He grunts and you can hear his breathing become more raspy.
+			@@.uc-text; Oh fuck, yeah... @@
+		[img[String.format("pics/library/join/man/sex/" + random(1, 4) + ".gif")]]<<HaveASexWidget "vaginal" "library guy">>
+
+			&emsp;Excited by your tightness, his thrusts become faster and harder, sliding further into your pussy with each push. Because of this, you can already feel a pleasant and warm burning building inside you.
+			@@.uc-text; Fuck, I'm so close... @@
+			&emsp;Shortly after he says this, the guy pounds into you roughly a few more times. As you feel his slick cock slip out and rub along your clit, the heat inside of you explodes and you close your eyes as the pleasure takes over.
+			&emsp;You're pulled out of your dreamy state when you feel hot loads spurt onto your ass. You hear a few grunts as more streams land on your naked body and slowly trickle down your back.
+			/* Collect and eat his sperm */
+			&emsp;Not wanting to let such nutrients go to waste, you wipe your hand through his sperm and then put it to your mouth. With your gaze locked on his, you hungrily lick up all the white liquid.
+			@@.uc-text; Thanks for the fun, baby. Hope we see each other again ;) @@
+			&emsp;Once the guy leaves, you hastily redress and gather your belongings. Then you head back [[to the main hall->School library]].
+		<<case 'anal'>>
+			<<set $minute += 20>>
+			&emsp;Having removed your clothes, the guy then removes his own. Once his cock hangs free, you tease him by gently stroking his hardening dick. He does not take kindly to this, however.
+			&emsp;Without another word, he grabs you by the hips and pushes you to the floor. Then, he kneels behind you and rubs his dick along your soaking pussy.
+			&emsp;You think he's going to enter your pussy as he prods the entrance with his tip but you feel his cock travel north. Before you can protest, he shoves his thick dick into your ass hole.
+			@@.uc-text; What a tight ass! Feels good around my dick... @@
+			&emsp;There's pain as his thickness stretches your narrow tunnel but you don't stop him. You can't. It feels too good.
+			&emsp;The guy grabs your arms and uses them as handles to rock your body back and forth against his cock. With each thrust, he pushes further and further down your ass eliciting deep groans from you both.
+			&emsp;After several poundings, you relax into the movements and like how hard he's fucking you...
+			[img[String.format("pics/library/join/man/anal/" + random(1, 4) + ".gif")]]<<HaveASexWidget "anal" "library guy">>
+
+			&emsp;Before you get used to his thrusts, he picks up the pace and begins to really ram into your ass. The slap of his balls against your pussy are not quiet and you worry that you'll be heard but it seems the guy doesn't care as his speed increases still.
+			&emsp;For a while, he's like a jackhammer pummelling into your tight ass repeatedly. Both of you are moaning and groaning as the pleasures build and build.
+			&emsp;Soon, you feel his movements ease slightly and you know what's about to come... Him.
+			/* Snuggle up to the guy with your ass */
+			&emsp;Even though the guy fucked you hard, he decides to be kind and removes his dick from your ass. A few seconds later you feel his hot load covering your lower back.
+			/* Collect and lick sperm */
+			&emsp;As the man stands, he gives your ass a violent slap and chuckles to himself before dressing and leaving.
+			&emsp;A little in pain, you slowly dress and try to cover his cum as best you can. Once you're decent, you gather your belongings and head back [[to the main hall->School library]].
+		<<case 'blowjob'>>
+			<<set $minute += 20>>
+			@@.uc-text; Well, baby, why don't you put that mouth to good use? @@
+			&emsp;He doesn't wait for your response and pushes you onto your knees. You look up at him as he unzips and pulls down his trousers. You see his underwear is already straining against the dick that's desperately trying to escape.
+			&emsp;A small smile appears on your lips and you shuffle closer as he removes his boxers. The cock springs free, almost hitting you in the face, and you stare lustfully at the hard, thick meat in front of you.
+			&emsp;When you lean in, you notice the tip is already glistening with pre-cum. A teardrop of drool escapes between your lips as you stick your tongue out and lap up some of the white liquid.
+			&emsp;The guy lets out a grunt as your tongue teases the tip of his cock. But he isn't the only one getting excited from this. You can feel your pussy wettening as the events unfold.
+			&emsp;You glide your tongue along his shaft all the way to the base and back up again. You do this a couple times more but then you open your mouth and gently wrap your lips around his tip.
+			&emsp;Slowly, you move his shaft a little further into your mouth. Your tongue continues to work hard, slathering his cock in your saliva.
+			@@.uc-text; Oh yeah, baby, just like that... @@
+			&emsp;Hearing his encouragement, your head begins to move back and forth faster. With each suck, you also push his cock deeper inside your mouth and down your throat.
+			&emsp;The intrusion does cause you to gag slightly but at the moment it's still bearable. Your lips tightly clasp around his cock whilst your tongue continues to pay special attention to the tip.
+		[img[String.format("pics/library/join/man/blowjob/" + random(1, 5) + ".gif")]]<<HaveASexWidget "bj" "library guy">>
+			&emsp;As you're blowing this guy, you feel hands run through your hair. Before you can do anything, you are thrusted onto his cock. You gag and splutter as the hard, thick dick stretches your throat.
+			&emsp;A small part of you wants to push him away. The other part, however, eagerly continues pleasuring him. You do as he did, sliding your lips up and down his shaft as quickly and as deeply as you can.
+			&emsp;With the amount of saliva on his cock, it's inevitable to keep quiet as slurps echo about the room. You just hope nobody else can hear it...
+			/* Take a guy's cock in his mouth */
+			&emsp;Suddenly, the guy pulls out of your mouth. He takes his cock in one hand and begins jerking it off. A moment later, ropes of hot, white, viscous liquid shoots onto your face.
+			&emsp;Driven by lust, you open your mouth and try to catch as much of his semen as you can. Once the guy finishes unloading onto you, you lick your lips seductively.
+
+			<img src="pics/library/join/man/blowjob/cumshot.gif" alt="library join man blowjob cumshot" width="50%" />
+
+			@@.uc-text; Oh, yeah... Did not expect to have that much fun here... @@
+			&emsp;The guy gives you an arrogant wink, pulls up his trousers and gathers his belongings. As he goes to leave, he looks back at you and thanks you one last time.
+			&emsp;You wipe the remaining ropes of cum off your face, get dressed and [[return to the main hall->School library]]
+		<<case 'handjob'>>
+			<<set $minute += 20>>
+			&emsp;The guy pulls down his trousers and his underwear, revealing a large, hard cock just waiting for attention.
+			@@.uc-text; I hope you know how to handle it... @@
+			@@.mc-text; Well, if I do it wrong, you can punish me ;) @@
+			&emsp;You take the cock in one hand and begin with slow, gentle strokes up and down his veiny shaft. You look up at him but there's no sign you're doing anything wrong yet so you continue.
+			&emsp;Returning your attention to his dick, you stroke a little faster. Sometimes, you stop at the tip and tenderly rub a finger over the leaking head.
+			&emsp;A deep groan emits from the guy and you take this as a signal to go further. As you raise your gaze and look him dead in the eye, your hand speeds up again.
+			&emsp;You watch with hunger as he closes his eyes...
+
+	[img[String.format("pics/library/join/man/handjob/" + random(1, 3) + ".gif")]]<<HaveASexWidget "handjob" "library guy">>
+			&emsp;You take this opportunity and raise your second hand to the base of his cock. Here, you begin to massage his balls lightly and carefully.
+			&emsp;Your warm hand on his balls seems to do the job. You observe the guy's breathing becoming heavier and heavier. He opens his eyes and looks down at you before leaning over and plants his lips upon yours.
+			&emsp;You feel his lips vibrate against yours as he moans and the cock in your hand starts to pulsate. You quickly point the cock at your chest. Just in time too!
+			&emsp;Hot, thick sperm shoots out from his rigid cock straight at your breasts. The sticky white liquid gradually dribbles down your chest and over your naked body.
+
+			<img src="pics/library/join/man/handjob/cumshot.gif" alt=" library join man handjob cumshot" width="50%" />
+
+			&emsp;You look down as if surprised but seductively wipe the cum off your nipples and lick it from your fingers. You do this several times whilst staring at the guy intensely.
+			@@.uc-text; Mmm, damn... Thanks, baby. @@
+			&emsp;The guy gives you one last kiss before redressing and leaving you on your knees.
+			&emsp;You better do the same. You quickly dress and gather your belongings. Then, you [[head to the main hall->School library]]
+		<<default>>
+			@@#error; UNKNOWN SWITCH PARAMETER! @@
+	<</switch>>
+<</if>>
+
+
+::Film library masturbate <1720,2888>
+&emsp;A thought crosses your mind and you take out your phone from your backpack. You lift it up cautiously, using the bookshelf to hide yourself. Such a moment shouldn't be wasted so you open the camera app and press record.
+	&emsp;Who knows? Maybe you could use this recording later...
+<img src="pics/library/film_masturbating.jpg" alt="film masturbating" />
+[[Go to library hall->School library]]
+
+
+::Library caught return <1598,2996>
+@@#library-caught-return; \
+  <<if $mainChar.corruption >= 30>> \
+	<<linkreplace "Ok, I won't tell as long as you give me something in return.">> \
+		<<replace "#library-dont-tell">><</replace>>
+		@@.uc-text; (//Damn it!//) L-Like what?@@
+		@@#library-return-fingers;
+		<<linkreplace "Like using those fingers to pleasure me">> \
+		  <<set $minute += 20>>
+		  <<replace "#library-return-mouth">><</replace>> \
+		  <<replace "#library-return-other">><</replace>> \
+		  <<replace "#library-return-leave">><</replace>> \
+		  @@.uc-text; What?! I-I guess I have no choice... @@
+		  <<if $libraryGender === 'girl'>> \
+		  &emsp;The girl drops her head in embarrassment but you can see her cheeks are flushed. Shyly, she stands and begins to approach you whilst keeping her gaze glued to the floor.
+		  &emsp;When she reaches you, she lifts her eyes and, upon seeing your somewhat vulgar smile, pouts.
+		  @@.mc-text; Don't look at me like that. If you didn't want to be caught, why masturbate in a public library? @@
+		  &emsp;As if she remembers why she was masturbating in the first place, the girl seems to become more confident and... excited. She doesn't answer you but instead bends you over the table and lifts up your skirt exposing your bare ass.
+		  &emsp;You turn your head so you can see her as she gets on finger and rubs it along your wettening pussy lips.
+		  @@.uc-text; Looks like someone's already wet ;) @@
+		  @@.mc-text; Yeah, well, you put on quite a hot show... @@
+		  &emsp;The girl giggles and uses her finger to prod your hole though she doesn't push it in, only teasing the outside. Her other fingers rub along your labia and a stream of your juices cover her dainty fingers. Her thumb travels further down towards your clit where she slowly begins to rub circles on your sensitive "button".
+		  &emsp;The teasing gets to you and you soon become too impatient. You push your hips back trying to get her fingers to enter into your needy pussy. They do ever so slightly which causes you to let out a quiet lingering moan.
+		  &emsp;This moan seems to excite the girl and with one gentle push, enters not one but two fingers into your tight hole. You can feel her fingers prodding against your walls and curling inside of you. It feels good, really good.
+		  &emsp;As you moan, her movements acclerate. Those well-manicured fingers of hers pump in and out of you at a quicker pace. Her thumb continues to tease and poke your little clit...
+			  <<set _randPicUrl = String.format("pics/library/return/fingering/girl/{0}.gif", random(1, 5)) >>
+			  <img @src="_randPicUrl" alt="return fingering girl" width="50%" />
+
+			  &emsp;There's no denying that this girl knows what she's doing. Her fingers expertly explore your cavern and hit all the right spots that get you softly moaning against the table.
+			  &emsp;You take a moment to look at her and notice her second hand is underneath her own skirt and moving to the same rhythm of the fingers inside you.
+			  &emsp;Seems she wants to finish what you interrupted...
+			  &emsp;Seeing the girl enjoying pleasuring you only gets you more excited. Soon the girls fingers are absolutely covered in your juices and some of it even flows down her hand and wrist. She takes a moments breath to remove her fingers and lap up all that liquid.
+			  @@.uc-text; Mmm, how delicious... @@
+			  /* (Ask her to try her juices) - TODO: add it later */
+			  &emsp;You're about to respond but then the girl plunges her fingers back in and now fucks you with more speed than you thought she was capable of. After a few seconds, you feel your pleasure growing to the point where it will soon spill over.
+			  @@.mc-text; Fuckk... Yes... I'm about you cum! @@
+			  &emsp;At this the girl increases her pace once more and curls her fingers to hit your g-spot. This sends you over the edge and as you look back at her and see her lustful smile, you put a hand over your mouth...
+
+			  <img src="pics/library/return/fingering/girl/orgasm.gif" alt="library return girl orgasm" width="50%" />
+
+			  &emsp;The euphoria inside your body has reached its limit and with one final moan, stiffled only by the hand over your mouth, you explode with indescribable pleasure.
+			  &emsp;You legs tremble against the table and your body clenches together. You pussy constricts around the girls fingers keeping them in place but she doesn't stop.
+			  &emsp;The girl continues to finger fuck you until you feel yourself loose control and, when she removes her fingers, streams of cum shoot out of your hole like a fountain. Some land on the floor with a splutter whilst some land in the girls open mouth.
+			  @@.mc-text; Damn, that was awesome! @@
+			  @@.uc-text; I must concur. Didn't think I would enjoy that so much... @@
+
+			  &emsp;As the two of you straighten your clothing and gather your belongings you see a puddle on the floor from where the girl was squatting. It seems you weren't the only one that came from that experience.
+			  &emsp;You give the girl one last playful wink and [[return to the main hall->School library]]
+		  <<elseif $libraryGender === 'man'>> \
+			  @@.uc-text; Oh... Well in that case, come here! ;) @@
+			  &emsp;The guy holds his hand out to you. You take it and he pulls you down to him, positioning you between his legs. He runs his hands along your legs gradually travelling up your inner thighs. You can feel the heat from his breath as he whispers in your ear:
+			  @@.uc-text; I'm not an expert at this but I'll try my best... @@
+			  @@.mc-text; Don't worry, I'll help if necessary. @@
+			  &emsp;He chuckles and grabs your breasts over your shirt, kneading them in his hands. But the man is impatient and forcefully rips open your shirt exposing your chest.
+			  &emsp;One hand plays with your boob, twisting and pulling on your erecting nipple. The other hand travels down your abdomen, under your skirt and to your pubic area. When this hand reaches your pussy lips and drags a slow teasing finger along them, you let out a quiet, involuntary moan.
+			  &emsp;The man can feel how wet your pussy is and this seems to excite him as you can feel the bulge in his pants pushing against your lower back.
+			  /* (Start touching it between the legs) TODO: add it later */
+			  &emsp;For now the man focuses on playing with your little clit. His middle finger dances around your sensitive red "button" occasionally teasing it by flicking it gently. His massaging of your clit increases in pace which causes you to begin breathing heavily. Your mouth opens slightly and the man takes his hand off your breasts to plug your gaping mouth with his callous fingers.
+			  <<set _randPicUrl = String.format("pics/library/return/fingering/man/{0}.gif", random(1, 2)) >>
+			  <img @src="_randPicUrl" alt="return fingering man" width="50%" />
+
+			  &emsp;It's a good thing he did because suddenly he dips a digit into your pussy and you moan loudly. Well, not so loudly now as your mouth is full of his saliva-coated fingers.
+			  &emsp;Feeling his plump finger in your pussy gets your heart racing. You grind your hips back against him, knowing that this will spur on his actions as you push your ass on his hardening member.
+			  &emsp;The man lets out a short gasp and understands your neediness. He slowly inserts another digit into your hole. Both fingers travel further and further inside you, curling and taunting your pussy as they do so.
+			  &emsp;You moan once again and the man removes his fingers from your mouth to return to playing with your breasts. However, now there's extra dirtiness as you can feel your own saliva being spread along your hard nipples.
+			  &emsp;Excited by this, you grind your hips against him trying to push his fingers further inside you but it isn't enough. You move one of your hands over his and take it in yours to gain control over it.
+			  &emsp;The guy's hand becomes your dildo. You manipulate his movements moving his hand faster and stronger causing his fingers to pump in and out of you at a pleasurable speed.
+			  &emsp;With your other hand, you massage your clitoris like he did earlier. Pushing and teasing your little "button" which begins to send waves of pleasure through your whole body.
+			  &emsp;Your actions soon turn into chaotic convulsions as a strong orgasm takes over your mind and body, forcing you to disconnect from reality and only enjoy the warm buzz that covers you like a dense duvet. It gives you unimaginable pleasure...
+			  &emsp;In your moment of pure bliss you were unaware that the man had put his fingers back into your mouth, stifling your moans. As your convulsions slightly died down, you notice the man had not taken his fingers out of your pussy.
+			  &emsp;His fingers didn't stop either and soon the pressure built again. Now that the man had an idea of how fast you wanted your pussy to be finger fucked, he continued to do so.
+				  <img src="pics/library/return/fingering/man/orgasm.gif" alt="library return man fingering orgasm" width="50%" />
+			  &emsp;It wasn't long before another huge wave of pleasure courses through your body and you are seized with convulsions that crush your body. As he pulls his fingers out, jets of your cum spurt forth and soak your skirt and the floor in front of you.
+			  &emsp;You feel his hot breath once more against your ear as he whispers.
+			  @@.uc-text; You're so hot... Let's do this again sometime. You know where you can find me. @@
+			  &emsp;You stand up on very shaky legs, straighten out your skirt and rebutton your shirt. After a few deep breaths, you look back at the guy and notice him using both your saliva and your pussy jucies to coat his hard cock. Guess he does need to finish relieveing himself now.
+			  &emsp;The man looks up and gives you smirk as his cock throbs and shoots out white liquid. You should probably go back [[to the main area now->School library]].
+		  <</if>> \
+		<</linkreplace>> \
+		@@ \
+		@@#library-return-mouth;
+		  <<if $mainChar.corruption >= 40>> \
+			<<linkreplace "How about you use that mouth for something other than talking?">> \
+		  	  <<set $minute += 20>>
+			  <<replace "#library-return-fingers">><</replace>> \
+			  <<replace "#library-return-other">><</replace>> \
+			  <<replace "#library-return-leave">><</replace>> \
+			  <<if $libraryGender === 'girl'>> \
+				&emsp;The girl looks bewildered and opens her mouth to speak though no words come out.
+				@@.mc-text; See? Your mouth is already preparing for me. @@
+				@@.uc-text; But-but I... I don't know how! I've never- @@
+				@@.mc-text; Relax, I'll teach you. @@
+				&emsp;You approach the girl and take a seat upon the desk right in front of her. Realizing that she can’t escape from this situation, the girl leans forward and lifts up your skirt to expose your glistening wet pussy.
+				&emsp;You smile down at her with a vulgar smile whilst unbuttoning your shirt and freeing your perky breasts. The girl seems to stiffen as she takes in your semi-naked form. Perhaps this is the first time she's seen a naked female body?
+				&emsp;Her shocked eyes only excites you more. You knead one breast in your hand whilst the other goes to your pussy lips and parts them. The girl can now see just how wet and ready your throbbing hole is...
+				@@.uc-text; (Oh hell... She's so wet and her hole looks so tight! Must be contagious because I'm getting wetter too...) @@
+				@@.mc-text; Well? Are you going to do anything? We don't have much time, you know! @@
+				&emsp;Having returned to reality, the girl runs her warm tender hands up your inner thighs. She touches your body where she can as if she's taking you all in; belly, legs, ass.
+				&emsp;As she leans closer, her eyes are fixated by your clit which sticks out from the rest of your smooth pussy like it's asking for attention.
+				@@.uc-text; (Hmm... I think I read about this... I've definitely seen it in porn. Perhaps it's worth a try?) @@
+				&emsp;The girl's tongue darts out of her mouth and laps up your juices. Her warmth transfers to you and you can't help but moan as you feel her saliva on your pussy. After a couple of seconds, her tongue moves further up and focuses on your little "button".
+				&emsp;The tip of her tongue seems to draw symbols on your clit, every now and again putting some pressure upon it and teasing it. You let out a quiet moan and knead your breasts with both hands.
+	/* Tell her to put a finger in your pussy / ass | TODO: add it later */
+				<<set _randPicUrl = String.format("pics/library/return/cuni/girl/{0}.gif", random(1, 4)) >>
+				<img @src="_randPicUrl" alt="return cuni girl" width="50%" />
+
+				&emsp;After stimulating your clit, her attention goes to your pussy lips and the gap between them. Her tongue begins to prod your hole, not quite entering it though. She revolves around your entrance taunting you.
+				&emsp;You become impatient and grab her head with one of your hands, pushing her further to your pussy so her nose is rubbing against your clit. This causes yet another moan to escape your lips.
+				&emsp;Either from your dominance or your sweet moans, the girl gets more excited and finally pushes her tongue into your narrow cave. Wanting even more pleasure, you help the girl out and move your body towards her tongue that travel deeper inside you.
+				&emsp;You can feel her tongue swirling around inside you, hitting your walls and you most sensitive spots. You even feel her mouth vibrating against your pussy.
+				&emsp;You look over and notice one of her hands on your leg whilst the other is out of sight. She must be masturbating under the table!
+				&emsp;Though her moans vibrating your pussy and clit are incredible, you want all of her attention. In a fit of passion, you tangle your hand in her hair and forcibly grind your pussy against her mouth.
+				&emsp;The girl goes not mind however. On the contrary, she grabs both of your legs with her hands and parts them wide allowing more access for her. She then spins her tongue around inside you whilst pumping the long organ in and out.
+				&emsp;After a few seconds of this, an explosion occurs inside of you. It's like a bomb filled with pleasure capsules has detonated and sent shockwave after shockwave of euphoria throughout your body, making it shake...
+
+				<img src="pics/library/return/cuni/girl/orgasm.gif" alt="return cuni girl orgasm" width="50%" />
+
+				&emsp;The girl raises her head and looks at you, returning your vulagar smile earlier straight back at you. Her mouth glistens with your juices and as she opens it and sticks out her tongue, globules of your cum drip onto the floor.
+				@@.uc-text; So? How did I do? @@
+				@@.mc-text; Judging by the amounts of cum on your tongue, I'd say you already know the answer to that question. @@
+				@@.uc-text; Then I did quite well, huh? ;) @@
+				@@.mc-text; You did more than quite well! @@
+				&emsp;As you redress yourself, the girl gives you a sweet smile and skips off to another section of the library. You wonder if maybe she's going to finish off what you interrupted... You both dress while looking at each other
+				&emsp;You decide you best head back to the [[main area->School library]].
+			  <<elseif $libraryGender === 'man'>> \
+				@@.uc-text; Wait... As in... Oh god... I can give it a go... But promise me you won't tell anyone about this! @@
+				@@.mc-text; Well that will depend on how good you are... @@
+				&emsp;The guy gives you a glare and stands up. He then pushes you against the bookshelf and rips open your shirt. He gives your breasts and nipples a quick lick and tug before kneeling in front of you.
+				&emsp;He lifts up your skirt and you grab it with one hand whilst opening your legs for him. His gaze pierces your pussy and you notice a tent rising in his pants. The thought of this guy being so turned on by your pussy turns you on more. Soon your secreting even more juices.
+				&emsp;The man smirks, seeing your dripping wet pussy, and leans in. His tongue slowly licks up your pussy lips to your clit where he flicks it a couple of times. A moan escapes your lips without warning but this only spurs the man on more.
+				&emsp;You grab onto his hair, running your hands through the silky strands. But it wasn't for support, you want to take control.
+				&emsp;Using his hair as your handle, you guide him deeper and push his mouth against you so his nose brushes your lower abdomen. The man takes the hint and begins using his tongue more ferociously to attack your clit.
+				&emsp;He wraps his arms under your legs and rests his hands on your ass to both squeeze your round cheeks and press his face even harder to your pussy.
+				<<set _randPicUrl = String.format("pics/library/return/cuni/man/{0}.gif", random(1, 2)) >>
+				<img @src="_randPicUrl" alt="return cuni man" width="50%" />
+
+				&emsp;For a few seconds, you let him continue as he is. He does pick up speed and even rubs his tongue up and down your labia a few times. You remove your hand from his head and play with your erect nipples for a little while, tugging and twisting them between your fingers.
+				&emsp;After a short while, you suddenly feel a warm, wet organ enter your narrow hole. The pleasure it brings of feeling this strange intruder inside you is incredible and you close your eyes to relish in the bliss.
+				&emsp;Soon, the harder the guy licks and penetrates your pussy, the more distinctly you feel the rush of euphoric waves course through your body.
+				&emsp;With the orgams threatening to erupt, you grab back onto the man's hair and push him as much as you can against your pussy whilst your hips grind in rhythm too.
+				&emsp;A few moments pass before you are overwhelmed by the orgasm that seizes your body. You are barely able to stand so the man has to take your full weight as you convulse and shake above him.
+				<img src="pics/library/return/cuni/man/orgasm.gif" alt="return cuni man orgasm" width="50%" />
+				&emsp;In your euphoric state, you didn't realise that your legs had clamped the man in place until your body relaxes and he abruptly pulls away coughing.
+				@@.uc-text; Damn bitch, I almost choked! @@
+				@@.mc-text; Well, I'd say you did an adequate job so you're secret is safe with me. @@
+				@@.uc-text; You know what? Fuck you! @@
+				&emsp;You watch as the man stands up and storms away. He may not have enjoyed it as much as you did but you can see him struggling to walk as his huge boner still bulges.
+				&emsp;If he doesn't jerk off to your wet pussy, you're gonna be severly pissed off. You shake your head and decide it's best to forget it. You still had a great time! You readjust your clothes and head to the main [[library hall->School library]].
+			  <</if>> \
+			<</linkreplace>> \
+		  <</if>> \
+		@@ \
+		@@#library-return-other; \
+			<<if $mainChar.corruption >= 60>> \
+		  	  <<set $minute += 20>>
+			  <<if $libraryGender === 'girl'>> \
+				<<linkreplace "Have you ever heard of... scissoring?">> \
+					<<replace "#library-return-fingers">><</replace>> \
+					<<replace "#library-return-mouth">><</replace>> \
+					<<replace "#library-return-leave">><</replace>> \
+						@@.uc-text; Scissors? Wait... You don't mean-? @@
+						&emsp;Before the girl could finish her sentence, you close the distance between you and plant a passionate kiss upon her lips. The girl is hesitant at first but when the kiss deepens, you can feel her relaxing into as she stands to reach your height.
+						&emsp;Whilst you're both fighting for dominance with your tonuges, your hands travel over her body and undress her as you go. The girl follows your lead and soon you're both naked, hot and excited for more.
+						&emsp;Still intwined and kissing, you both drop to the ground slowly. When you're sat on the floor, you part lips and look at the girl with lust in your eyes. A reflection of your expression can be seen on her face...
+						&emsp;The girl lies on her side, her legs outstretched toward you. You lift on of them and shuffle downward before laying that leg on your shoulder.
+						&emsp;Your pussies are now touching and you can feel the heat emenating from hers. The proximity excites you both even more which causes your holes too ooze even more.
+						&emsp;You use the juices to lubricate your pussies and grind your hips back and forth. You can feel the friction on your clit and labia. It's exhilarating.
+						<<set _randPicUrl = String.format("pics/library/return/scissors/{0}.gif", random(1, 5)) >>
+						<img @src="_randPicUrl" alt="return scissors" width="50%" />
+
+						 &emsp;Pleasure begins to build and you can feel your pussy throbbing for more. In an attempt to give it more, you grab the girl's waist and pull her closer to you.
+						 &emsp;She reacts by grabbing your legs and tugging them toward herself. With you both pushing your pussies against one another, you pick up the pace.
+						 &emsp;It isn't long before you cum. The waves of pleasure flow through you and her as you both collapse allowing the quivering ecstasy to overtake your body...
+						  @@.uc-text; That was definitely... Something...@@
+						 &emsp;After a few seconds, you gather yourself and redress before heading to the [[main library hall->School library]]
+				<</linkreplace>>
+			  <<elseif $libraryGender === 'man'>> \
+				  <<linkreplace "How about you show me what you're hiding in your pants there?">> \
+					<<replace "#library-return-fingers">><</replace>> \
+					<<replace "#library-return-mouth">><</replace>> \
+					<<replace "#library-return-leave">><</replace>> \
+						@@.uc-text; Oh, well, if you insist ;) @@
+						&emsp;The guy stands up and comes over to you. When he reaches you, he pulls you close and plants kisses on your neck. You can feel his excitement growing in his pants.
+						&emsp;Without much warning, the man grabs you by the ass, gives it a squeeze, and pushes you against an empty table hidden in this corner of the library.
+						&emsp;He uses your ass to lift you up and place you on the table. From there, he pulls open your shirt and plays with your perky breasts. After he's teased your chest, he moves his hands down over your body and removes the rest of your clothes.
+						&emsp;Once he sees your pussy, shining from the leaking juices, he hastily unzips his pants and lines himself up with your entrance. It doesn't take him very long to push himself inside your narrow cave with one swift thrust.
+						<<set _randPicUrl = String.format("pics/library/return/sex/{0}.gif", random(1, 4)) >>
+						<img @src="_randPicUrl" alt="return sex" width="50%" />
+
+						&emsp;To get better access to your pussy, he grabs your thighs and opens them wider. From there he picks up the pace, ramming into your tight little pussy repeatedly whilst also trying to be quiet.
+						&emsp;Though the slapping isn't as loud as you want, you still become more excited as you feel his balls hit your ass. You clutch your breasts, kneading them and twisting the nipples between two of your fingers.
+						&emsp;Soon you can feel your pussy throbbing, squeezing open and closing against the guys cock. As if he could feel this too, he started pumping into your cunt further and harder.
+						&emsp;With one large thrust, you feel yourself loose control. A stormy orgasm is brewing inside you and you want it to boil over and give you waves of pleasure so you shift further down the table allowing the man to push deeper down your canal.
+						&emsp;This proves too much for the guy and he quickly removes his cock before rubbing it along your labia and clit to cum over your lower abdomen.
+						&emsp;As you get covered in this stranger's sticky semen, it sends you over the edge. The orgasm explodes inside you spreading euphoria over your body as you convulse and shake.
+							<img src="pics/library/return/sex/orgasm.gif" alt="library return sex orgasm" width="50%" />
+							@@.mc-text; F-ffuuuuck... That was aaaaawesome... @@
+							@@.uc-text; And you look fucking hot coated in my cum, slut! @@
+							&emsp;You give the guy a playful wink and he chuckles before readjusting his pants and walking away. You lay on the table, his cum hardening on your naked body, for a little while as you collecting your thoughts and calm your breathing.
+							&emsp;Finally, you stand from the table, hide the cum under your clothes and return to the [[main hall->School library]].
+				  <</linkreplace>> \
+			  <</if>> \
+			<</if>> \
+		@@ \
+		@@#library-return-leave;
+			[[Change your mind and leave->School library]]
+		@@
+	<</linkreplace>>
+  <</if>>
+@@
+
+::Let him use his shaft <1400,2240>
+&emsp;Once you're both undressed, you feel the guys hand travel across your body pinching at bare skin as he goes. When he reaches your dripping pussy, he gives it a taunting rub that sends chills down your spine.
+&emsp;In response, you take his dick in your own hands. Skillfully jerking his cock, you rub the tip of it on your clit and pussy lips. Soon his shaft becomes coated in your sticky juices.
+&emsp;Before you can do much more, the guy pulls you away from the shelving and turns you around. He then bends you over so your ass is pushing against his hard cock. With great pleasure and a deep grunt, the guy enters his entire cock into your narrow pussy.
+@@.mc-text; Hey! Watch out, cowboy! @@
+@@.uc-text; Soon you'll be asking for more, baby ;) @@
+&emsp;He slowly starts to fuck you. His thick cock scrapes against your walls causing jolts of pleasure to zap through your body like electricity. His callous hands grab your waist, gripping it tightly and using it as extra support so that he can thrust deep inside you.
+
+[img[String.format("pics/library/join/man/sex/" + random(1, 4) + ".gif")]]<<HaveASexWidget "vaginal" "libraryGuy">>
+
+&emsp;The guy picks up speed, heavy breathing accompanying his rough pounding. You bite lip to avoid moaning too loud but the deep hums only excite the guy more and soon his balls are slapping against your clit as he rams into you repeatedly. You worry it might attract attention...
+&emsp;Either the guy wants people to see you like this or he doesn't care because, after a couple minutes, he's grunting as he thrusts deep inside you. Your body bounces against his and you feel the build up of pleasure soon reaching it's limit.
+&emsp;Your mind turns to jelly as you forget about everything but the feeling of his hot, hard cock pumping in and out of you. It isn't long before that pleasure explodes like a bomb sending shockwaves of euphoria throughout your body.
+&emsp;With your pussy throbbing and clenching around his cock, the guy lets out a moan to let you know he's reached his peak too. Before long, you feel his cock slip out of your soaking wet pussy and soon jets of his thick, hot sperm land upon your bare back and ass.
+
+<img src="pics/library/join/man/cumshot_sex.gif" alt="library join man cumshot sex" width="50%" />
+
+&emsp;You collapse onto the library floor, breathing heavily as you recover from your orgasm. The guy gives your ass a hard but playful slap and thanks you for the good time. You turn your head to see him dressing before walking away...
+&emsp;Perhaps you should do the same. It's time to [[leave->School library]]
+
+::Try his "device" in your mouth <1400,2360>
+&emsp;Once you're both undressed, you push the guy away a bit to get some space between you. Then you trace your lips down to his neck, kissing and nibbling at the succlent flesh.
+&emsp;Eventually, you travel further downward. Your tongue gliding across his smooth, toned body. You hear him suck in a sharp breath and know you are doing well so far...
+&emsp;When you come to his cock you notice how hard it is. You can't wait to feel it inside your mouth so without further ado, you grab his cock in one hand and gently, teasingly, kiss the tip.
+&emsp;Your tongue protrudes out of your mouth and licks over the tip of the guy's shaft. Directing your seductive gaze up at the guys face, you keep eye contact as your mouth widens and your lips enclose around his cock.
+&emsp;You watch him moan as your mouth slides down his shaft until you reach about halfway. You pull back before sliding down again. You repeat this process over and over again eventually accelerating your pace.
+
+[img[String.format("pics/library/join/man/blowjob/" + random(1, 5) + ".gif")]]<<HaveASexWidget "bj" "libraryGuy">>
+
+&emsp;The guy relaxes into it, one of his hands gently raking through your hair. He doesn't yank on it but merely runs his hand through it almost sensually. You see the pleasure on his face and decide to take it further pushing your mouth down the length of his shaft even more. Soon you feel his cock throbbing in your throat and you know his at his limit...
+
+@@#library-blowjob-cumshot-hold;
+  <<if $mainChar.corruption >= 60>> \
+	<<linkreplace "Hold the cock in your mouth">> \
+		<<replace "#library-blowjob-cumshot-pull-back">><</replace>>
+		&emsp;Despite the throbbing, you don't pull away and instead keep holding his cock in your mouth. Suddenly you feel a hot, thick liquid fill shoot down your throat. It catches you off guard slightly and you choke and splutter on the cum.
+		&emsp;With his thick cock in your mouth, some of his cum doesn't fit and it seeps out between the gap to flow down your chin. When you do eventually remove his cock from you mouth, you clean up his tip as it leaves.
+		<img src="pics/library/join/man/blowjob/cumshot_in_mouth.gif" alt="library blowjob mouth cumshot" width="50%" />
+		&emsp;As you gaze seductively at him, you lick your lips collecting the extra sperm that you hadn't already gathered. He gives you a mischeivous smirk.
+		@@.uc-text; Oh hell, I love such endings ;) @@
+		&emsp;Due to the amount of cum in you, you find it hard to reply so instead you open your mouth and show him how full of his cum you are.
+
+		<<nobr>>
+			<<if $mainChar.corruption >= 80>>
+				<<linkreplace "Swallow his load">>
+					<<replace "#library-blowjob-cumshot-pull-back">><</replace>>
+					&emsp;The guy instructs you swallow it all.
+					&emsp;As you keep your gaze locked onto his, you do as told and take one big gulp, swallowing his sticky load. Once that's gone, you use a finger to gather the rest of the cum that escaped and devour that hot, viscoud liquid too.
+					@@.uc-text; WOW! What a hot slut... @@
+					&emsp;The guy gives your head a pat before leaving you still kneeling as he dresses and leaves.
+				<</linkreplace>>
+			<</if>> \
+		<</nobr>>
+		&emsp;You make sure to clean the rest of his cum that can still be seen and redress. Then you pick yourself up from the floor and [[go back to the main hall->School library]]
+	<</linkreplace>>
+  <</if>> \
+@@ \
+@@#library-blowjob-cumshot-pull-back;
+  <<linkreplace "Pull your head back">> \
+	  <<replace "#library-blowjob-cumshot-hold">><</replace>>
+	  &emsp;After you feel his cock begin to quiver, you remove him from your mouth. You don't move but instead wait patiently in front of him.
+	  &emsp;He gets the hint and jerks his dick for the last stretch. After a couple of seconds, thread by thread of hot, sticky semen coats your face...
+		<img src="pics/library/join/man/blowjob/cumshot_on_face.gif" alt="library man join blowjob cumshot on face" width="50%" />
+		@@.uc-text; Oh yeah baby, that was great... @@
+		@@.mc-text; Mmm, I love the feeling of your cum on me. @@
+
+&emsp;The guy gives your exposed breast a slap as he leaves. You wipe your face of his cum with some tissue you found and try to tidy yourself up. Then, once you're dressed, you [[go back to the main hall->School library]]
+  <</linkreplace>>
+@@
+
+::Let him explore your wet cave <1400,2480>
+&emsp;Once you're both undressed, you grab his hand with yours and guide it to your already dripping wet pussy. The guy understands what you want but doesn't use his hand. Instead, he plants kisses all over your neck, collarbone, chest and stomach. Eventually his warm kisses reach your abdomen...
+&emsp;The guy lifts one of your legs over his shoulder and leans in. You can feel his warm breath tickling your clit and it makes you shudder. The smell of your wet pussy must have turned the guy on more because he has no hesitation in sticking his tongue into your narrow hole.
+&emsp;He moves his tongue in different directions, trying to surprise you and reach your more sensitive spots. Sometimes he pulls out only to to play with your "red button" which sends chills over your whole body.
+
+[img[String.format("pics/library/join/man/cuni/" + random(0, 1) + ".gif")]]<<HaveASexWidget "receiveCuni" "libraryGuy">>
+
+&emsp;You put your hands on his head, grab his hair and hold him tighter to your pussy. He takes this as consent to go further and sticks his tongue back inside your tight hole with more speed. He begins fucking your pussy with his slick tongue.
+&emsp;After a couple of seconds, moans escape from you lips as hot tingling waves envelop your body and...
+&emsp;You cum. Your body quivering and shaking as the waves of pleasure course through you.
+&emsp;The guy feels your pussy clench against his tongue. He removes it from your hole and looks up at you, smirking confidently. Standing, the guy gives you a kiss on your lips spreading your wet juices from his mouth to yours and then leaves.
+&emsp;You lay back against the shelving for a minute, enjoying the come down after the explosion of euphoria. Then you take a deep breath, redress and [[go back to the main hall->School library]]
+
+::Give your ass <1400,2600>
+&emsp;Once you're both undressed, you push the guy away from you and turn your back on him. You turn your head to face him and give him a lustful bite of your lip as you spread your ass cheeks. The guy's face contorts into a mischievous smile when he realised what you want...
+&emsp;The guy doesn't waste anytime and grabs your body, pushing your chest against the shelving. He snuggles up behind you so you can feel his hard cock against between your cheeks.
+&emsp;You wrap one of your arms around his neck as he lubricates his dick in your juices by rubbing it along your wet pussy lips. This causes a slight moan to emanate from your throat and the guy takes this opportunity to thrust his cock deep inside your ass in one forceful move.
+&emsp;The deeper his penis penetrates you, the more the pleasurable fire burns inside you. Your mind is soon only occupied by one thing; his big cock filling up your tight little ass hole and how good it makes you feel...
+&emsp;You're drawn away from your thoughts when you feel the guy picking up speed, ramming into your ass more and more. It isn't long before you feel his balls slapping against your pussy. That feeling adds fuel to the ever-growning fires of pleasure inside you...
+
+[img[String.format("pics/library/join/man/anal/" + random(1, 4) + ".gif")]]<<HaveASexWidget "anal" "libraryGuy">>
+
+&emsp;You grab onto the shelving in front of you for extra support as the guy keeps accelerating his pacing. You want more though, and soon you're helping him push his entire length inside you as you rock back onto his cock.
+@@#library-join-man-fucks-ass-snuggle;
+  <<if $mainChar.corruption >= 70>> \
+	<<linkreplace "Snuggle your ass against his cock">> \
+		<<replace "#libray-join-man-fucks-ass-pull-away">><</replace>>
+		&emsp;You cuddle your ass against the guy's shaft in anticipation of what was to come next. There's no denying he was ready from the way his thick cock throbbed inside your narrow cave.
+		&emsp; After a couple more seconds of slower thrusts, you feel the first spurt of his hot, sticky semen filling your ass. Eventually, the guy withdraws his dick and some of the cum that couldn't fill your ass seeps out of your slightly agape hole.
+
+		<img src="pics/library/join/man/anal/cumshot_in_ass.gif" alt="library man join anal cumshot in ass" width="40%" />
+		@@.uc-text; Oh yeah... Love to cum inside... @@
+		@@.mc-text; Love to take it inside... ;) @@
+		&emsp;You wipe his load from your ass and your legs and stick your sticky fingers into your mouth to taste his cum. The man watches and gives you playful wink.
+		&emsp;You return the wink with one just as playful before you redress and [[go back to the main hall->School library]]
+	<</linkreplace>>
+  <</if>> \
+@@ \
+@@#libray-join-man-fucks-ass-pull-away;
+  <<linkreplace "pull away from his dick">>
+	<<replace "#library-join-man-fucks-ass-snuggle">><</replace>>
+		&emsp;Not wanting his cum inside your ass, you pull away from him. Just in time too because as soon as his cock slips out, you feel hot sperm covering your cheeks and lower back...
+
+		<img src="pics/library/join/man/anal/cumshot_on_ass.gif" alt="library man join anal cumshot on ass" width="50%" />
+
+		&emsp;It seems almost endless as stream after stream spurts onto you. Some of the more heavier jets, flow between your ass, tickling your pussy and dripping down your legs.
+		&emsp;The guy smiles smugly at you before leaving you to clean yourself up. You do so rather hastily, not wanting to get spotted, and [[go back to the main hall->School library]]
+  <</linkreplace>>
+@@
+
+
+::Let him decide <1400,2720>
+<<set _rand to either('sex', 'cuni', 'blowjob', "anal") >> \
+/* TODO: add handjob */ \
+<<switch _rand>> \
+	<<case "sex">>
+	&emsp;The guy pushes up against you. The tip of his hard cock rubbing your wet pussy lips. Once it is fully lubricated, the man bends slightly and positions himself by your entrance. Then, with one swift movement, he pushes his cock inside you.
+	&emsp;At first, he's slow and his movements are almost sensual. You can feel his thickness filling your narrow tunnel and scraping along the walls.
+
+[img[String.format("pics/library/join/man/sex/" + random(1, 4) + ".gif")]]<<HaveASexWidget "vaginal" "libraryGuy">>
+
+	&emsp;Eventually, the guy picks up speed. He uses your hips as handles as he pumps further and faster into you. A few quiet moans escape your lips and it takes a lot of your focus to not be too loud.
+	&emsp;The guy rams into you with what seems like inhuman speed but it's more likely that you are too distracted by the pleasure his dick is giving you.
+	&emsp;You can feel it filling up your pussy. Being here, in public space being fucked like a whore is sending you over the edge. You cum sooner than expected and your body shakes as euphoria takes over.
+	&emsp;Soon the guy's pacing slows and you realise too late what is happening. Fortunately, he pulls out and you look down to see streams of his sticky, white cum shooting onto your naked body.
+
+	<img src="pics/library/join/man/cumshot_sex.gif" alt="library join man cumshot sex" width="50%" />
+	&emsp;After a few more jets, you both pant heavily and rest against one another. Recovering from the pleasure, you both slowly redress. You hide his cum as much as you can with your clothing.
+	&emsp;Then you both say goodbye and go your seperate ways.
+	Guess it's time to return [[to the main hall->School library]]
+	<<case "cuni">>
+	&emsp;The guy peels away from you but grabs your wrist and spins you around him. Then he lifts you by the ass and puts you on a nearby table before spreading your legs wide.
+	&emsp;Kneeling in front of you, the guy runs a slow teasing finger down across your wet pusssy lips. He also gives your little "red button" a massage that causes a pleasurable shiver to run down your spine.
+	&emsp;After he's done teasing you, his tongue darts out of his mouth and laps up your juices hungrily. An involuntary moan emerges from your open mouth and you bite your lip to silence yourself.
+
+[img[String.format("pics/library/join/man/cuni/" + random(0, 1) + ".gif")]]<<HaveASexWidget "receiveCuni" "libraryGuy">>
+
+	&emsp;Whilst the guy attacks your pussy with his tongue, his hands massage your inner thighs. Occasionally, he looks up at you with a smug grin on his face watching as you become victim to his skillful licking.
+	&emsp;The more you moan, the more verocious the man gets. Soon, he's pumping in and out of your pussy with his tongue and swirling it around while inside to hit your sensitive spots.
+	&emsp;You feel your pleasure building and building until it overflows. Your legs unconsciously grip around his head, trapping him in place as your body convulses from the orgasm.
+	&emsp;After a few seconds of heavy breathing, the man escapes from your grip and gives your pussy a slap before dressing and leaving. You follow shortly after, gathering your belongings and heading back [[to the main hall->School library]]
+	<<case "blowjob">>
+	&emsp;The guy puts a hand on your head and pushes you down onto your knees. His hard erection towers in front of you like a monolith. You can see it throbbing slightly, excited for what's to come.
+	&emsp;On your knees, it doesn't take you long to realise what he wants you to do. So you open your mouth and envelope it around the tip of his cock.
+	&emsp;You tease his cock, licking the tip and only putting his shaft a little down your throat. Unforunately, the guy becomes impatient...
+	&emsp;The next time you go down his shaft, he yanks your head toward him so that half of his cock shoots down your throat. The unexpectedness of it causes to choke and gag on the long length of his dick.
+
+[img[String.format("pics/library/join/man/blowjob/" + random(1, 5) + ".gif")]]<<HaveASexWidget "bj" "libraryGuy">>
+	 &emsp;The guy seems to enjoy your struggle and decides to keep your head there with his cock halfway down your throat. You try to focus on breathing through your nose but you're distracted by his thick dick filling your mouth.
+	 &emsp;Eventually the guy pulls out and lets you recover. But it isn't for long and you soon find yourself choking on his cock once more. For a while, the guy repeats this movement: pulling out slowly to let you breath before ramming into your mouth forcefully.
+	 &emsp;Over time, he becomes less rough and instead just pumps in and out of you. He uses your mouth like a fleshlight as he thrusts at his own pace which picks up with each thrust.
+	 &emsp;As he speeds up, he also pushes his cock further down your throat until you're practically taking the whole length. Soon you find him slowing down and you realise what's coming... Him.
+	  @@#library-blowjob-cumshot-hold;
+		<<if $mainChar.corruption >= 60>> \
+		  <<linkreplace "Accept your 'reward'">> \
+			  <<replace "#library-blowjob-cumshot-pull-back">><</replace>>
+			  &emsp;Despite your need to breath, you don't resist him and instead accept your fate. It isn't long before you feel a hot, thick liquid fill your mouth.
+			  &emsp;Some of it shoots down your throat causing you to choke and splutter on the cum. Some of it can't go anywhere and instead seeps through the gap between your lips and his cock.
+			  &emsp;Eventually, once the guy has finished cuming into your mouth, he pulls his cock out with a wet 'shlick' sound. You sit, unmoving, not really knowing what to do.
+			  <img src="pics/library/join/man/blowjob/cumshot_in_mouth.gif" alt="library blowjob mouth cumshot" width="50%" />
+			  @@.uc-text; Swallow it, whore. @@
+			  &emsp;You don't want to go against the guy's wishes so you do as told and swallow the rest with a big gulp. Once it's all gone, you look up at him and open your mouth showing that it has, in fact, all gone.
+			  @@.uc-text; Good girl... @@
+			  &emsp;The guy gives your breast a hard squeeze before dressing you and leaving you, still with his cum around your mouth.
+			  &emsp;Once he leaves, you hastily tidy yourself up, wipe away the remants of a good time and [[go back to the main hall->School library]]
+		  <</linkreplace>> \
+		<</if>> \
+	  @@ \
+	  @@#library-blowjob-cumshot-pull-back;
+		<<linkreplace "Resist him and pull away">>
+			<<replace "#library-blowjob-cumshot-hold">><</replace>>
+			&emsp;You don't want his cum, and besides you need to breath, so you fight back against his strength. In his euphoric state, you manage to pull away but only just in time...
+			&emsp;As soon as his cock leaves your mouth, it erupts sticky, white liquid onto your face like a fountain. A lot of it lands on your still open mouth, getting inside onto your tongue, and on your nose.
+			@@.uc-text; Fuck... You look hot covered in my cum... @@
+			&emsp;You're about to reply but the man just laughs at you and gathers his things, before dressing and walking away. You watch him leave, shocked by the fact he just left you here absolutely stinking of his semen.
+			&emsp;After a few seconds, you realise he doesn't give a shit about you so you wipe your face with some tissues you found and redress. Then you head back [[to the main hall->School library]]
+		<</linkreplace>>
+	  @@
+	<<case "anal">>
+	  &emsp;The guy pulls you away from the shelving and pushes you onto the floor, chest first. You land quite heavily but are unable to move as he grabs your hands and locks them behind your back with one of his holding them tightly and pinning you to the ground.
+	  &emsp;You can't deny that the thought of being used like this, in doggystyle without being able to move, turns you on massively. You can feel your pussy wettening and throbbing for attention.
+	  &emsp;It soon gets it when you feel the guy's cock rubbing up against your pussy and getting coated in your juices. Unfortunately, he doesn't stay there long and soon moves north.
+	  &emsp;You let out a whimper as his cock prods your small ass hole. But this only spurs the man on. He chuckles and before you know it, shoves most of his length down your narrow tunnel.
+	  &emsp;The intrusion causes you to inhale sharply but also moan because the feeling of your ass being filled by this guys thick cock is like ecstasy...
+	[img[String.format("pics/library/join/man/anal/" + random(1, 4) + ".gif")]]<<HaveASexWidget "anal" "libraryGuy">>
+	  &emsp;As the guy pumps in and out of you slowly, you get used to the large member inside you and relax your body. You also want more though, so you push your ass back against him and he thrusts deeper inside you.
+	  &emsp;This continues for a while but over time, the guy pounds into you faster and harder. Soon he's fucking you roughly from behind, causing your breasts to scrape across the floor as your body bounces back and forth.
+	  &emsp;The guy begins to slow and you realise what's next...
+	  @@#library-join-man-fucks-ass-snuggle;
+	  <<if $mainChar.corruption >= 70>> \
+	  <<linkreplace "You want his seed">> \
+	  <<replace "#libray-join-man-fucks-ass-pull-away">><</replace>>
+	  &emsp;Being used like this has turned you into an absolute slut and you can't help but want his seed in your ass. You snuggle your ass against him waiting for your reward.
+	  &emsp;Shortly after, the guy slows and you feel his throbbing cock shoot a spurt of hot, sticky liquid down your tight tunnel. He thrusts a couple more times as more streams explode into your ass as if he were trying to push the liquid as far down as he could.
+
+	  <img src="pics/library/join/man/anal/cumshot_in_ass.gif" alt="library man join anal cumshot in ass" width="40%" />
+
+	  &emsp;After he's emptied his balls, he pulls out and you can feel the hot cum seep from your hole and flow down your already dripping pussy.
+	  @@.uc-text; Mmm... Look at my cum in your ass. @@
+	  &emsp;The feel of his cum inside you and the nastiness of dirty talk sends you over the edge and you let out an involuntarily moan as you cum.
+	  &emsp;He watches you shiver, lets go of your hands and gives your ass a powerful slap. Whilst you recover from your orgasm, the guy dresses and leaves you quivering on the floor.
+	  &emsp;Eventually you gather your thoughts and stand, before redressing and returning [[to the main hall->School library]]
+	  <</linkreplace>> \
+	  <</if>> \
+	  @@ \
+	  @@#libray-join-man-fucks-ass-pull-away;
+	  <<linkreplace "Try to pull away">>
+	  <<replace "#library-join-man-fucks-ass-snuggle">><</replace>>
+	  &emsp;You don't want his cum inside you so you squirm and wriggle as much as you can to pull your ass away from him. The guy gets the hint and just before he blows his load, he pulls out and shoves his length between your ass cheeks.
+	  &emsp;You feel his cock throb as it erupts a fountain of hot, sticky semen. All of the cum lands on your bare, lower back and you let out a quiet moan.
+
+	  <img src="pics/library/join/man/anal/cumshot_on_ass.gif" alt="library man join anal cumshot on ass" width="50%" />
+	  &emsp;Stream after stream, the cum shoots onto you. You can feel the hotness of it on back and you hear the guy grunt satisfied at the position you're in.
+	  &emsp;As you turn, you see him already dressing. He gives you a wink before he leaves. You watch him walk away and redress yourself, trying to cover the sticky liquid on your back as much as you can. Then you return [[to the main hall->School library]]
+	  <</linkreplace>>
+	  @@
+	<<default>>
+		@@#error; UNKNOWN CASE! @@
+<</switch>>

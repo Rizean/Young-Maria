@@ -1,0 +1,214 @@
+::StoryIncludes
+
+::Jack's house <3880,1056>
+<<set _event to either(1,2,3,4)>><<if $isJacksHouseSurelyOpen == true>><<set _event to 2>><<set $isJacksHouseSurelyOpen != true>><<endif>><<if _event == 1>><<set $isJacksHouseSurelyOpen == true>>The door is locked... It seems Jack isn't at home right now.
+
+<<else>><div class="default-image-wrapper"><img src="pics/jacksPlace.jpg"></div>
+
+<<set _conversation to either("I think my new jeans are kinda too wide, what do ya think?","Baby, my boys are playing today, wanna come?","I need to visit my old man someday...","I like junk food, yeah, but I like apples more!","There was a robbery last night... Did you hear something?","Have I shown you my gun? I call it Wigo.","My mom is living in Canada. I should visit her one day.","Why did your family buy a house in this city?","Yesterday I saw my old friend. Forgot our age difference so he became a really OLD friend...","I love TV - fresh news everyday!","You have a nice body. Have you thought about gangbangs?","I like the shop next to my house. I'm friends with the owner. Nice dude.","I had a gf but she was a total bitch and we fought one day. Don't have a gf anymore.","Have you sent nudes to anyone? I've heard that every girl has at least once...")>><<if _conversation == "Baby, my boys are playing today, wanna come?">>"_conversation" <<if $mainChar.corruption > 40 && $mainChar.energy >= 50>>[[Yes, why not?->Playing]]<<else>>Naah...<<endif>><<elseif _conversation == "You have a nice body. Have you thought about gangbangs?">>"_conversation" <<if $mainChar.corruption > 70>>[[Mmm, wanna call some friends?~]]<<else>>Maybe later...<<endif>><<else>>"_conversation"<<endif>>
+
+You have a good time with Jack. He's older than you but that doesn't hinder your relationship in anyway. You both talk and laugh throughout your conversation.
+<<if $mainChar.corruption > 40 && $hour > 14>>
+[[Drink with Jack]]<<endif>><<set _hardon to either(1,2,3)>><<if $mainChar.corruption > 30 && $mainChar.energy >= 20 && _hardon == 1>>
+You notice that Jack has a hard-on. Maybe [[you can offer your help->Suck Jack off]]<<endif>><<endif>>
+
+[[Go out][$minute += 10]]
+
+::Drink with Jack <3750,1230>
+<div class="default-image-wrapper"><img src="pics/jacksAlcohol.jpg"></div>
+
+Jack opens one of his kitchen cupboards. Inside, you see he has a lot of strong, cheap alcohol. He turns to you with a smirk, "So, baby girl, are you sure that you can handle it?"
+
+<<link "Yes!">><<goto "Drink with Jack 2">><</link>>
+[[Better not...->Jack's house]]
+
+::Drink with Jack 2 <3750,1350>
+<<if $mainChar.intoxication != 0>><<set $mainChar.intoxication = 0>><<endif>><<if $timeOfDay == "Day">><<set $day += 1>><<set $dayCount += 1>><<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>><<dateChangeWidget>><<if $day == 8>><<set $day = 1>><<endif>><<endif>><<set $hour = 11>><<set $minute = 0>><div class="default-image-wrapper"><img src="pics/hangover.jpg"></div>
+
+You wake up feeling groggy and woozy with your brain pounding against your skull. Slowly, you look up at the window and are blinded by the bright sunlight. As you try to sit up, you soon find your whole body aching and hurting with every move you make.
+
+"Good morning, baby." You turn to see Jack laying next to you, completely naked.
+
+Wait, why are you in his bed? Oh no...
+
+You hastily move aside the blanket and find your poor pussy all red, sore and filled with semen. All across your thighs are red marks; some are handprints whilst others a thin red lines. You let out a groan.
+
+Jack kisses your forehead. "Yes, baby girl. And that was YOU who asked me to do this!" he says, chuckling. Oh... That bastard...
+<p class="add">+1 Corruption</p> <p class="minus">-50 Energy</p><<set $mainChar.energy -= 50>><<set $mainChar.corruption += 1>>
+
+[[Go to the bathroom and next to the home->living room]]
+
+::Suck Jack off [nobr] <3875,1250>
+You lean over and put your hand on his raging hard-on. You ask if you can help alleviate some of his tension. His grin grows wide. "You are such a cute little whore." <br />
+<br />
+He removes your hand and hastily unzips his pants to free his large, hard cock. Before you can start, he grabs you by the shoulders and guides you to kneel in front of him. "I like you kneeling before me." <br />
+<br />
+You take Jack's cock in one hand and stroke gently along the shaft. After a few seconds, you open your mouth and take his thick member inside you. You bob your head up and down coating his cock in your saliva as you deepthroat him. Gagging and spluttering, you break only to give yourself a second to regain your breath. <br />
+<br />
+Before long, Jack gets more aroused and grabs your head, pushing you further down his length. It's a lot to take and you find your mouth is completely full with it in. You do your duty though; pleasuring him with your hands and tongue. <br />
+<br />
+
+<<set _image to random(1, 5)>>
+
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ1.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ2.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ3.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ4.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<elseif _image == 5>>
+    <div class="default-image-wrapper">
+        <img src="pics/blackGuyBJ5.gif">
+    </div>
+    <<HaveASexWidget "bj" "Jack">>
+<<endif>>
+
+<<if $mainChar.corruption > 50 && $isJackSuckVideoTaken != true>>
+    [[You can make a video, if you want to]] <br />
+<<endif>>
+<br />
+After a couple of minutes, Jack's dick quivers and he gives you a couple last powerful thrusts. He pushes his dick as far as he can with as much force as he can muster. It's a lot but you love it... <br />
+
+<p class="add">+1 Corruption</p> <br />
+<p class="minus">-20 Energy</p> <br />
+
+<<set $minute += 40>>
+<<set $mainChar.corruption += 1>>
+<<set $mainChar.energy -= 20>>
+<<set $isJacksHouseSurelyOpen = true>>
+<br />
+<br />
+[[He finishes onto your face and sends you to the bathroom->Jack's house]]
+
+::You can make a video, if you want to <3893,1371>
+You smile at him and remove him from your mouth. Then you run over to your bag, grab your phone and run back. You take your position again, kneeling dutifully in front of him. You start the recording as you place his cock back in your mouth.
+
+<<set $isJackSuckVideoTaken = true>><div class="default-image-wrapper"><img src="pics/JackSucking.gif"></div>
+
+Throughout the recording, you make sure to look straight at the camera. You try to make sultry gazes look as sexily as you can hoping that whoever will see this video will cum just from watching it.
+
+Even when Jack's dick begins to quiver, you keep recording wanting to get a video of yourself covered in his sticky hot cum. You're sure that will get you a nice reaction.
+
+[[He finishes onto your face and sends you to the bathroom->Jack's house]]
+
+::A video of you, sucking Jack off [system] <5975,2400>
+[[Back->Gallery]]
+
+<div class="default-image-wrapper"><img src="pics/JackSucking.gif"></div>
+
+
+::Playing <4025,1250>
+<<set $hour += 5>>"You will like it, baby!"
+You don't like football, but... Who knows, right?
+
+...
+
+Thankfully the stadium wasn't that far from Jack's house and you arrived there fairly promptly. Jack grabbed snacks and drinks for the both of you and you made your way to the seats. As the game involved Jack's friends, the seats were pretty close to the pitch and you could see more than most.
+
+In the end, you actually enjoyed yourself! Everytime the guys won, Jack would cheer and it always seemed to rouse you into cheering as well. Overall, you had a great time. Which meant you were kind of upset when the game was drawing to an end.
+
+The final whistle blew and the crowd erupts as Jack's team is announced as the winners. He turns to you, pulls you close to him and crashes his lips upon yours.
+
+He pulls away after a several seconds and whispers; "It seems unfair that I get a reward when I didn't play. Why don't you give the boys something sweet to look at?"
+
+You're unsure what he means until you see his eyes flick to your chest. With a nod, you turn to face Jack's team who have returned to their bench. You shout down to them, "Hey boys! Well done on winning!" and give them their reward.
+
+<<set _image to either(1,2,3)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Football1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Football2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Football3.gif"></div><<endif>>
+
+Due to the chilly air, your nipples are hard and erect but the boys seem to enjoy that more. A couple of fans who lingered notice your... prize. Who cares though, right?
+<p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 20>>
+
+[[Go home->living room]]
+
+::Mmm, wanna call some friends?~ [nobr] <4150,1250>
+<<set $hour += 2>>"R you serious?.. Damn, give me five minutes" <br />
+Some time passed and you hear ringing. Jack`s friends coming. <br />
+ <br />
+~Introducing to them~ <br />
+~Drinking with them~ <br />
+~Unzipping sounds~ <br />
+<br />
+They all make their way over to you with mischievous grins adorning their faces. Jack pulls you to your feet as the others begin to hastily and clumsily undress. When they're free of their clothes, they surround you. The men grope and fondle you whilst removing your clothes. It isn't long before you're knelt, naked and already wet, giving all their hard cocks some loving attention. <br />
+<br />
+
+<<set _image to random(1, 6)>>
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/gangbang1.gif">
+    </div>
+    <<HaveASexWidget "gang" "Jacks friends">>
+    <<HaveASexWidget "handjob" "Jacks friends">>
+    <<HaveASexWidget "anal" "Jacks friends">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/gangbang2.gif">
+    </div>
+    <<HaveASexWidget "gang" "Jacks friends">>
+    <<HaveASexWidget "vaginal" "Jacks friends">>
+    <<HaveASexWidget "anal" "Jacks friends">>
+    <<HaveASexWidget "bj" "Jacks friends">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/gangbang3.gif">
+    </div>
+    <<HaveASexWidget "gang" "Jacks friends">>
+    <<HaveASexWidget "vaginal" "Jacks friends">>
+    <<HaveASexWidget "anal" "Jacks friends">>
+    <<HaveASexWidget "bj" "Jacks friends">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/gangbang4.gif">
+    </div>
+    <<HaveASexWidget "gang" "Jacks friends">>
+    <<HaveASexWidget "vaginal" "Jacks friends">>
+    <<HaveASexWidget "bj" "Jacks friends">>
+<<elseif _image == 5>>
+    <div class="default-image-wrapper">
+        <img src="pics/gangbang5.gif">
+    </div>
+    <<HaveASexWidget "gang" "Jacks friends">>
+    <<HaveASexWidget "handjob" "Jacks friends">>
+    <<HaveASexWidget "bj" "Jacks friends">>
+<<elseif _image == 6>>
+    <div class="default-image-wrapper">
+        <img src="pics/gangbang6.gif">
+    </div>
+    <<HaveASexWidget "gang" "Jacks friends">>
+    <<HaveASexWidget "vaginal" "Jacks friends">>
+    <<HaveASexWidget "anal" "Jacks friends">>
+    <<HaveASexWidget "bj" "Jacks friends">>
+    <<HaveASexWidget "handjob" "Jacks friends">>
+<<endif>>
+<br />
+After several minutes of passing you around to slather all their cocks with your saliva, Jack picks you up and leads you to the sofa. He sits down on it first and then pulls you on top of him so you're reverse straddling him. Once there, he lines himself up with your ass hole and pushes his thick cock inside of you. You let out an involuntary moan and the others spur into action. <br />
+<br />
+One of the men grabs your legs and spreads them apart so he can access your pussy. He leans down, aligns himself and abruptly plunges inside causing another moan to escape your lips. Another of the men uses this opportunity to shove his thick dick into your mouth, thrusting deep down your throat. You gag and splutter but it's clear he's not removing it any time soon. Instead, you focus on keeping your breathing steady and calm. It's difficult, of course, because your mind is sent into euphoria as every one of your holes is fucked hard. <br />
+<br />
+The other men surround you, grabbing whatever piece of you they can. Most go for your exposed breasts to knead them and pull at your nipples which send more waves of pleasure coursing through your body. <br />
+You loose track of time. You're only aware of being roughly pounded into as the men pass you around like piece of meat. You've lost track of how many orgasms you've had as well. Not that you care. You're in a state of complete and utter bliss. <br />
+<br />
+Unfortunately, before long, the men slow down and pull out only to aim their quivering cocks at your naked body and shoot stream after stream all over you. <br />
+<br />
+Jack gives you a playful wink. You get the feeling this won't be the only gangbang you experience with him and his friends... <br />
+
+<p class="add">+1 Corruption</p> <br />
+<p class="minus">-30 Energy</p> <br />
+
+<<set $mainChar.corruption += 1>>
+<<set $mainChar.energy -= 30>>
+<br />
+[[Go home->living room]]

@@ -1,0 +1,92 @@
+::Magic Tech [nobr] <2380,980>
+<div class="default-image-wrapper"><img src="pics/MagicTech.jpg"></div>
+
+As you enter the store, a middle-aged man greets you with a smile. "Hi, there. Feel free to ask about any goods." You thank him and wander about the store. There's a lot of technology on sale... <br /><br />
+
+<<for _techItemTitle, _techItem range $lexenaMarket.magicTech>>
+    <<MagicTechItemWidget _techItem>>
+<</for>>
+
+<<if settings.lessPrices == true>>
+	<<if $wereMagicTechPricesReduced != true>>
+		<<set $wereMagicTechPricesReduced = true>>
+	<<endif>>
+<<else>>
+	<<if $wereMagicTechPricesReduced == true>>
+		<<set $wereMagicTechPricesReduced = false>>
+	<<endif>>
+<<endif>>
+
+<hr>
+* Change ID (name) for $<<if settings.lessPrices == true>>100<<else>>200<<endif>> -
+<<if settings.lessPrices == true>>
+	<<if $mainChar.money < 100>>
+    	You don't have enough money! <br />
+	<<else>>
+    	<<link "Change ID">>
+        	<<set $mainChar.money -= 100>>
+        	<<goto "Change ID">>
+    	<</link>>
+	<<endif>>
+<<else>>
+	<<if $mainChar.money < 200>>
+    	You don't have enough money! <br />
+	<<else>>
+    	<<link "Change ID">>
+        	<<set $mainChar.money -= 200>>
+        	<<goto "Change ID">>
+    	<</link>>
+	<<endif>>
+<<endif>>
+ <br />
+ <br />
+[[Go back->Lexena Market]]
+
+
+::Change ID [system] <2400,1280>
+Your current name: $mainChar.firstName
+Your new name: <<textbox "$mainChar.firstName" "Kate">>
+
+[[Apply and go back->Magic Tech]]
+
+::Magic Tech Item Widget [widget nobr system] <2380,1080>
+<<widget "MagicTechItemWidget">>
+	<!-- $args[0] - magic tech item object -->
+	<<link $args[0].name "Lexena Market Magic Tech Item View Widget">>
+		<<set $tempMagicTechItem = $args[0] >>
+	<</link>> for $
+	<<if settings.lessPrices == true>>
+		<<if $wereMagicTechPricesReduced != true>>
+			<<set $args[0].price /= 2>>
+		<<endif>>
+	<<else>>
+		<<if $wereMagicTechPricesReduced == true>>
+			<<set $args[0].price *= 2>>
+		<<endif>>
+	<<endif>>
+	<<=$args[0].price>> -
+	<<if $inventory.has('techItems', $args[0].name)>>
+		You already have this!
+	<<else>>
+		<<if $mainChar.money < $args[0].price>>
+			You don't have enough money!
+		<<else>>
+			<<link "Buy">>
+				<<set $minute += 1>>
+				<<set $mainChar.money -= $args[0].price>>
+				<<run $inventory.add('techItems', $args[0]);>>
+				<<goto "Magic Tech">>
+			<</link>>
+		<<endif>>
+	<<endif>>
+	<br />
+<</widget>>
+
+::Lexena Market Magic Tech Item View Widget [system] <2400,1400>
+[[Back->Magic Tech]]
+
+$tempMagicTechItem.description
+
+@@.image-wrapper-w70p;
+	[img[$tempMagicTechItem.image]]
+@@

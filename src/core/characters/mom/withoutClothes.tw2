@@ -1,0 +1,53 @@
+::Without clothes (mom version) [nobr] <1313,1449>
+<<if $mainChar.look.clothes.body.name === ''>>
+	<<if $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name === ''>>
+		<<if $mainChar.relationships.mom < 30>>
+			@@.female-text;
+				- $mainChar.firstName, what the hell?! Go to your room and get dressed, immediately!  <br />
+			@@
+			<<set $canTalkWithMom = false>>
+			<<set $mainChar.relationships.mom -= 1>>
+			@@.minus; -1 relations with mom @@
+		<<elseif $mainChar.relationships.mom > 30>>
+			@@.female-text;
+				- Attractive curves and nice forms... You're definitely my daughter! <br />
+			@@
+		<<endif>>
+	<<elseif $mainChar.look.lingerie.bra.name !== '' && $mainChar.look.lingerie.panties.name === ''>>
+		<<if $mainChar.relationships.mom < 30>>
+			@@.female-text;
+				- Aren`t you ashamed, $mainChar.firstName? Unbelievable... Go get changed, now! <br />
+			@@
+			<<set $canTalkWithMom = false>>
+			<<set $mainChar.relationships.mom -= 1>>
+			@@.minus; -1 relations with mom @@
+		<<elseif $mainChar.relationships.mom > 30>>
+			@@.female-text;
+				- And for whom is this frankness? <br />
+			@@
+		<<endif>>
+	<<elseif $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name !== ''>>
+		<<if $mainChar.relationships.mom < 30>>
+			@@.female-text;
+				- $mainChar.firstName! I’m a modern mother but I can’t let my daughter walk around like this! Go and get changed! <br />
+			@@
+			<<set $canTalkWithMom = false>>
+			<<set $mainChar.relationships.mom -= 1>>
+			@@.minus; -1 relations with mom @@
+		<<elseif $mainChar.relationships.mom > 30>>
+			@@.female-text;
+				- Oh yes, I also love to give freedom to my babies... <br />
+			@@
+		<<endif>>
+	<<else>>
+		<<if $mainChar.relationships.mom < 10>>
+			@@.female-text;
+				- $mainChar.firstName, since when did you start walking around like this? <br />
+			@@
+		<<elseif $mainChar.relationships.mom > 10>>
+			@@.female-text;
+				- That lingerie suits you! <br />
+			@@
+		<<endif>>
+	<<endif>>
+<<endif>>

@@ -1,0 +1,167 @@
+::Sleep [system nobr] <980,620>
+<<if $mainChar.intoxication != 0>>
+	<<set $mainChar.intoxication = 0>>
+<<endif>>
+
+<div class="default-image-wrapper">
+	<img src="pics/homeSleep.jpg">
+</div>
+
+<<set $mainChar.appearance.isCombed = false>>
+<<set $mainChar.appearance.teethBrushed = false>>
+
+&emsp;You slept until your mother woke you up at 8AM. <br />
+<<if $mainChar.look.erotic_accessories.back.name == "Butt plug">>
+	&emsp;The butt plug inside you feels so good~ <br />
+<<elseif $mainChar.look.erotic_accessories.back.name == "Tail butt plug">>
+	&emsp;The tail butt plug inside you feels so good~ <br />
+<<endif>>
+
+<<if $mainChar.look.erotic_accessories.back.name === "Butt plug" or $mainChar.look.erotic_accessories.back.name == "Tail butt plug">>
+	<p class="add">+1 Corruption</p> <br />
+	<<set $mainChar.corruption += 1>>
+<<endif>>
+
+<<set $hour = 8>>
+<<set $minute = 0>>
+
+<p class="add">+$mainChar.maxEnergy Energy</p> <br />
+<<set $mainChar.energy += $mainChar.maxEnergy>>
+
+<<if $dateDay == 7 and $dateMonth == "June" and $wasBirthdayCelebrated != true>>
+	<<set $wasBirthdayCelebrated = true>>
+	<<set $minute += 20>>
+	<<set $mainChar.energy -= 10>>
+	<br />
+	"HAPPY BIRTHDAY, DEAR!!!" <br />
+
+	<div class="default-image-wrapper">
+		<img src="pics/BirthdayMorning.jpg">
+	</div>
+	<br />
+	&emsp;Your parents enter your room and congratulate you on your Birthday! It's so sweet :3 <br />
+<<endif>>
+<br />
+
+<<if settings.pregnancy == true and $inventory.pharmacy['Birth control pills'].count > 0 and $mainChar.pregnancy.knowsAboutPregnancy != true>>
+	<<if $takingBirthControlPill != true>>
+		<<checkbox "$takingBirthControlPill" false true>> Take a birth control pill (left: <<print $inventory.pharmacy['Birth control pills'].count>>)
+	<<else>>
+		<<checkbox "$takingBirthControlPill" false true checked>> Take a birth control pill (left: <<print $inventory.pharmacy['Birth control pills'].count>>)
+	<<endif>>
+	<<if $mainChar.menstruation.day >= 15>>
+		<br />
+		[You don't need pills these days]
+	<<endif>>
+<br />
+<<endif>>
+<<if settings.menstruation == true and $inventory.pharmacy['Tampons'].count > 0 and $mainChar.menstruation.day >= 15 and $mainChar.pregnancy.knowsAboutPregnancy != true>>
+	<<if $applyingTampon != true>>
+		<<checkbox "$applyingTampon" false true>> Insert tampon (left: <<print $inventory.pharmacy['Tampons'].count>>)
+	<<else>>
+		<<checkbox "$applyingTampon" false true checked>> Insert tampon (left: <<print $inventory.pharmacy['Tampons'].count>>)
+	<<endif>>
+<br />
+<<endif>>
+<<if $inventory.grocery['Razors'].count > 0>>
+	<<if $shavingLegs != true>>
+		<<checkbox "$shavingLegs" false true>> Shave legs (razors left: <<print $inventory.grocery['Razors'].count>>)
+	<<else>>
+		<<checkbox "$shavingLegs" false true checked>> Shave legs (razors left: <<print $inventory.grocery['Razors'].count>>)
+	<<endif>>
+<br />
+<<endif>>
+<<if $inventory.grocery['Shampoo'].count > 0>>
+	<<if $havingShower != true>>
+		<<checkbox "$havingShower" false true>> Have a shower (shampoo left: <<print $inventory.grocery['Shampoo'].count>>)
+	<<else>>
+		<<checkbox "$havingShower" false true checked>> Have a shower (shampoo left: <<print $inventory.grocery['Shampoo'].count>>)
+	<<endif>>
+<br />
+<<endif>>
+<<if $brushingTeeth != true>>
+	<<checkbox "$brushingTeeth" false true>> Brush teeth
+<<else>>
+	<<checkbox "$brushingTeeth" false true checked>> Brush teeth
+<<endif>>
+<br />
+<<if $combingHair != true>>
+	<<checkbox "$combingHair" false true>> Comb hair
+<<else>>
+	<<checkbox "$combingHair" false true checked>> Comb hair
+<<endif>>
+<br />
+<<if $inventory.pharmacy['Vitamins'].count > 0>>
+	<<if $takingVitamins != true>>
+		<<checkbox "$takingVitamins" false true>> Take vitamins (left: <<print $inventory.pharmacy['Vitamins'].count>>)
+	<<else>>
+		<<checkbox "$takingVitamins" false true checked>> Take vitamins (left: <<print $inventory.pharmacy['Vitamins'].count>>)
+	<<endif>>
+<br />
+<<endif>>
+
+<<if settings.menstruation == true and $mainChar.menstruation.day >= 15>>
+	You are on your period. <<linkreplace "<sup>?</sup>">>
+	<br />
+	&emsp;Make sure you have enough tampons/tabs (you can buy them in Lexena Market). You can go to the bathroom and apply them there. It will help you not to lose affection<<if settings.pregnancy == true>>. And don't forget that you can't get pregnant these days <<endif>>
+	<</linkreplace>>
+	<br />
+<<endif>>
+
+<<if settings.pregnancy == true and $mainChar.pregnancy.day == 3 and $mainChar.pregnancy.knowsAboutPregnancy == false>>
+	You feel unwell today. Maybe you should eat more vegetables?
+	<br /> <br />
+<<elseif settings.pregnancy == true and $mainChar.pregnancy.day == 6 and $mainChar.pregnancy.knowsAboutPregnancy == false>>
+	Your belly seems bigger. Maybe it's time to do some exercises?
+	<br /> <br />
+<<elseif settings.pregnancy == true and $mainChar.pregnancy.day >= 10 and $mainChar.pregnancy.knowsAboutPregnancy == false>>
+	You're filled with a motherly feeling. There are no doubts - <strong>you are pregnant!</strong>
+	<<set $mainChar.pregnancy.knowsAboutPregnancy = true>>
+	<br /> <br />
+<<endif>>
+
+<<if $mainChar.pregnancy.day >= 22>>
+	You feel your baby moving in the belly. The magic is about to happen! <sup><i>(End warning!)</i></sup>
+	<br /> <br />
+<<endif>>
+<br />
+<<link "Get up">>
+	<<if settings.pregnancy == true and $inventory.pharmacy['Birth control pills'].count > 0 and $takingBirthControlPill == true>>
+		<<set $mainChar.pregnancy.isOnPills = true>>
+		<<set $inventory.pharmacy['Birth control pills'].count -= 1>>
+		<<set $minute += 2>>
+	<<endif>>
+	<<if settings.menstruation == true and $inventory.pharmacy['Tampons'].count > 0 and $apllyingTampon == true>>
+		<<set $mainChar.menstruation.isProtected = true>>
+		<<set $inventory.pharmacy['Tampons'].count -= 1>>
+		<<set $minute += 3>>
+	<<endif>>
+	<<if $inventory.grocery['Razors'].count > 0 and $shavingLegs == true>>
+		<<set $mainChar.eroticLook.intimateHaircut = 'shaved'>>
+		<<set $inventory.grocery['Razors'].count -= 1>>
+		<<set $minute += 15>>
+	<<endif>>
+	<<if $inventory.grocery['Shampoo'].count > 0 and $havingShower == true>>
+		<<set $mainChar.appearance.isCombed = false>>
+		<<set $mainChar.appearance.makeup = 'none'>>
+		<<set $mainChar.appearance.head.lips.color = 'none'>>
+		<<set $mainChar.cleanliness = 100>>
+		<<set $inventory.grocery['Shampoo'].count -= 1>>
+		<<set $minute += 10>>
+	<<endif>>
+	<<if $brushingTeeth == true>>
+		<<set $mainChar.appearance.teethBrushed = true>>
+		<<set $minute += 3>>
+	<<endif>>
+	<<if $combingHair == true>>
+		<<set $mainChar.appearance.isCombed = true>>
+		<<set $minute += 3>>
+	<<endif>>
+	<<if $inventory.pharmacy['Vitamins'].count > 0 and $takingVitamins == true>>
+		<<set $wereVitaminsTaken = true>>
+		<<set $mainChar.maxEnergy += 10>>
+		<<set $mainChar.energy += $mainChar.maxEnergy>>
+		<<set $minute += 2>>
+	<<endif>>
+	<<goto "Bedroom">>
+<</link>>

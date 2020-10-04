@@ -1,0 +1,31 @@
+::Beginning <1498,280>
+Hello, my nickname is Maria (MariaMod), and this is my game.
+(All characters are 18 years old, any illegal things are just typos, Big Brother is watching you)
+And consider playing via PC since some magic bugs appear and disapper when you are playing via mobile device. There's nothing I can do, sadly
+
+Have fun, comrades!
+
+<strong><u>Main Pics Folder has been updated! The last version is 7.6.0</u></strong>
+<strong>Important news (if you play Offline version)!</strong>
+You should download the Main Pics Folder ( https://MariaMod.site/download/YM-MainPicsFolder.zip ) to get all pics. You download that .zip file and merge the "pics" folder you found there with the "pics" folder I added to the last version .zip file ( https://MariaMod.site/download/YM-Offline.zip ).
+
+<<button "~ START BUTTON ~" "Disclaimer">> … <</button>>
+
+<img class="checking-pic" src="pics/TechFolder/CheckImage.png"  alt="Warning! Pics folder miss MAIN PART. Make sure: 0) You updated the Main Pics Folder; 1) There is only one pics folder and it has name 'pics' (no upper case); 2) Pics folder has the same directory with this game file; 3) You merged Main Pics folder with the latest Offline pics folder correctly" /><img class="checking-pic" src="pics/CheckImage.png"  alt="Warning! Pics folder miss LAST OFFLINE UPDATE PICS. Make sure: 1) There is only one pics folder and it has name 'pics' (no upper case); 2) Pics folder has the same directory with this game file; 3) You merged Main Pics folder with the latest Offline pics folder correctly" />
+
+Also, here you can send feedback, support me, chat with me, watch for new updates (full lists of improvements) and <u><strong>buy cheat codes</strong></u>:
+<a href="https://Patreon.com/MariaModd" target="_blank"><img class="patreon_button" src="pics/Patreon.png"  alt="https://Patreon.com/MariaModd" /></a><a href="https://SubscribeStar.adult/MariaMod" target="_blank"><img class="subscribestar_button" src="pics/SubscribeStar.png"  alt="https://SubscribeStar.adult/MariaMod" /></a><a href="https://discord.gg/GC37yVQ" target="_blank"><img class="discord_button" src="pics/Discord.png"  alt="https://discord.gg/GC37yVQ" /></a><a href="https://BuyMeACoffee.com/MariaMod" target="_blank"><img class="coffee_button" src="pics/BuyMeACoffee.png"  alt="https://BuyMeACoffee.com/MariaMod" /></a>
+Always up-to-date online version on my site:
+http://MariaMod.site/youngmaria.html
+
+<<link "CHANGELOG">><<set $enteredFromBeginning = true>><<set $pastPassage to passage()>><<set $wasMenuItemEntered = true>><<goto "CHANGELOG">><</link>>
+
+Information for developers (writers, too):
+Document about working on Young Maria via GitHub (rules, steps) - https://docs.google.com/document/d/1a2oBNNbyo-Sjqr8T2kYP3WxNOFxRHOPq2f4CbvkstQc/edit?usp=sharing
+GitHub repository - https://github.com/MariaMod/Young-Maria
+Using Twine2 version 2.3.8 and SugarCube version 2.33.2<<nobr>>
+
+
+<<if visited() == 1>><<set $farm = false>><<endif>>
+
+<</nobr>>

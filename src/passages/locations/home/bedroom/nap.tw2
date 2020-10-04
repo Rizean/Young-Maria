@@ -1,0 +1,46 @@
+::Have a nap [system] <863,600>
+<<set $hour += $napHour>><<set $minute += $napMinute>><div class="default-image-wrapper"><img src="pics/homeNap.jpg"></div>
+
+You take a <<nobr>>
+
+<<if $napHour > 0>>
+	$napHour hour<<if $napHour > 1>>s<<endif>>
+<<endif>>
+
+<<if $napHour > 0 and $napMinute > 0>>
+	 and
+<<endif>>
+
+<<if $napMinute > 0>>
+	$napMinute minute<<if $napMinute > 1>>s<<endif>>
+<<endif>>
+
+<</nobr>> long nap. You feel a little more refreshed.
+
+<<nobr>>
+
+<<if $napHour < 1 and $napMinute < 20>>
+	<p class="add">+2 Energy</p><<set $mainChar.energy += 2>>
+<<elseif $napHour < 1 and $napMinute >= 20>>
+	<p class="add">+4 Energy</p><<set $mainChar.energy += 4>>
+<<elseif $napHour == 1 and $napMinute < 30>>
+	<p class="add">+5 Energy</p><<set $mainChar.energy += 5>>
+<<elseif $napHour == 1 and $napMinute >= 30>>
+	<p class="add">+7 Energy</p><<set $mainChar.energy += 7>>
+<<elseif $napHour == 2 and $napMinute < 30>>
+	<p class="add">+10 Energy</p><<set $mainChar.energy += 10>>
+<<elseif $napHour == 2 and $napMinute >= 30>>
+	<p class="add">+15 Energy</p><<set $mainChar.energy += 15>>
+<<elseif $napHour == 3 and $napMinute < 30>>
+	<p class="add">+20 Energy</p><<set $mainChar.energy += 20>>
+<<elseif $napHour == 3 and $napMinute >= 30>>
+	<p class="add">+25 Energy</p><<set $mainChar.energy += 25>>
+<<elseif $napHour == 4 and $napMinute < 30>>
+	<p class="add">+30 Energy</p><<set $mainChar.energy += 30>>
+<<elseif $napHour == 4 and $napMinute >= 30>>
+	<p class="add">+35 Energy</p><<set $mainChar.energy += 35>>
+<<endif>>
+
+<</nobr>>
+
+[[Wake up->Home bed]]

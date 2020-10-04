@@ -1,0 +1,14 @@
+::Under Mr. Nolan's Bed [system] <4975,2650>
+<<set $isUnderRead = true>><div class="default-image-wrapper"><img src="pics/BookUMNB.jpg"></div>
+
+&emsp;Leah and Erica have been best friends ever since they went to the same Catholic school. Both are talented, smart, friendly and beautiful, and get on like a house on fire.
+&emsp;Unfortunately, Erica's mother died a few years ago in a horrific accident and left her handsome father bringing up Erica alone. But, Leah vowed to stay close and has since become a part of the Nolan family.
+&emsp;Their quaint little life is turned upside down though when the girls find something naughty under Mr. Nolan's bed. With their strict, repressive upbringing, it only makes the discovery all the more exciting as they begin their sexual experimentation.
+&emsp;Leah's exploration presses deeper and she soon finds herself torn between her best friend and her best friend's father. But even she couldn't have predicted the shocking and bittersweet outcome of their affair...
+
+~Several Hours Later~
+
+You find your mind filled with lewd desires... And arousing images...
+<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+
+[[Go back->Smartphone]]

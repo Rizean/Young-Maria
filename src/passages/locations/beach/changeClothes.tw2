@@ -1,0 +1,195 @@
+::Change clothes [nobr] <4046,2435>
+<<set $minute += 10>>
+<<set $mainChar.energy -= 5>>
+
+<<if $mainChar.look.clothes.body.name !== 'Bikini'>>
+	<<set $oldClothesInTheBeach = $mainChar.look.clothes.body >>
+	<<set $mainChar.look.clothes.body = $wardrobe.clothes.body['Bikini']>>
+<<else>>
+	<<set $mainChar.look.clothes.body = $oldClothesInTheBeach>>
+<<endif>>
+
+<<if visited() > 1>>
+	<<set _chance to either(true, false, false)>>
+<<endif>>
+
+<<if _chance == true>>
+	<<if visited() > 1 and visited() <= 4>>
+		<<set _event to "peep">>
+	<<elseif visited() > 4 and visited() <= 8>>
+		<<set _event to either("peep","photo")>>
+	<<elseif visited() > 8 and visited() <= 13>>
+		<<set _event to either("peep","photo","sex")>>
+	<<elseif visited() > 13>>
+		<<set _event to either("peep","photo","sex","gangbang")>>
+	<<endif>>
+<<endif>>
+
+<<if _event == "peep">>
+	<div class="default-image-wrapper">
+		<img src="pics/Peeping.jpg">
+	</div>
+
+	&emsp;While you are changing out of your clothes, you get the feeling that someone is watching you... You look around and notice a small hole in the cabin. Movement flickers through it. There is someone peeping on you! <br />
+
+	<<if $mainChar.corruption >= 20>>
+		[[Show them a bit more skin]] <br />
+	<<endif>>
+
+	[[Pretend you didn't notice and just go away->Beach]] <br />
+<<elseif _event == "photo">>
+	<div class="default-image-wrapper">
+		<img src="pics/PeepingPhoto.jpg">
+	</div>
+
+	&emsp;You are midway through changing when you hear a strange click. You turn around and notice a camera eye in a small hole in the wall. Someone's taking photos of you! <br />
+
+	<<if $mainChar.corruption >= 40>>
+		[[Give a little show]] <br />
+	<<endif>>
+
+	[[Shout at them to leave and finish changing->Beach]] <br />
+<<elseif _event == "sex">>
+	<div class="default-image-wrapper">
+		<img src="pics/CabinRaper.jpg">
+	</div>
+
+	&emsp;You strip off all your clothes and are about to redress when a man enters the cabin! You hastily cover yourself with your towel. <br />
+	&emsp;"Hey! Ocupado!" <br />
+	&emsp;The man smirks, "What a nice, young flower we have here..." The bastard moves closer... <br />
+
+	<<if $mainChar.corruption >= 60>>
+		[[Damn, it's your lucky day!]] <br />
+	<<endif>>
+
+	[[Scream to make him run away->Beach]] <br />
+<<elseif _event == "gangbang">>
+	<div class="default-image-wrapper">
+		<img src="pics/cabinGangbang0.gif">
+	</div>
+    <<HaveASexWidget "gang" "beach gangbang">>
+    <<HaveASexWidget "vaginal" "beach gangbang">>
+    <<HaveASexWidget "anal" "beach gangbang">>
+    <<HaveASexWidget "bj" "beach gangbang">>
+
+	&emsp;You have just taken off all your clothes when you hear a group of men outside the cabin door. You freeze, listening to the voices getting louder. <br />
+	&emsp;In a few seconds the door opens to reveal a group of lewd raiders bustling inside. You're about to scream when they surround you and one of them puts his hand over your mouth to stop you alerting anybody. The others begin to grope and molest you. <br />
+	[[There is no escape...]] <br />
+<<else>>
+	<div class="default-image-wrapper">
+		<img src="pics/BeachChangingClothes.jpg">
+	</div>
+
+	You go into the cabin and change without any problems. <br />
+
+	[[Go out->Beach]] <br />
+<<endif>>
+
+::Show them a bit more skin <3921,2455>
+&emsp;You decide to tease your watcher. You bend over and slowly, wiggling as you do so, pull down your clothes revealing your bare ass to them.
+
+<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/peeping1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/peeping2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/peeping3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/peeping4.gif"></div><<endif>>
+
+&emsp;You hear some muttering and think you catch the word "Damn" or something like that. You continue to change and occasionally tease the peeper by shaking your assets or groping your own body.
+&emsp;Eventually, once you think the peeper has been sufficiently teased, you change into your clothes and leave.
+
+<p class="add">+1 Corruption</p><<set $mainChar.corruption += 1>>
+
+[[Go out->Beach]]
+
+::Give a little show <3800,2450>
+<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/peepingCamera1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/peepingCamera2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/peepingCamera3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/peepingCamera4.gif"></div><<endif>>
+
+&emsp;The thought of being some person's masturbating material makes you horny. You decide to give them something more. <br />
+&emsp;As you change, you make sure to bare your skin facing the hole and give them a lusty smile when you reveal your perky breasts. Just as your about to present your private parts to your peeper, you stop and blow a kiss to the camera. <br />
+&emsp;You place your towel over you and change your bottom half under cover. Once you're finished, you give the peeper one last wink and leave the cabin with a bounce in your step.
+
+<p class="add">+1 Corruption</p><<set $mainChar.corruption += 1>>
+
+[[Go out->Beach]]
+
+::Damn, it's your lucky day! [nobr] <3675,2450>
+&emsp;The thought of being violated by a stranger in a beach hut makes you extremely wet. You drop your towel with a seductive smirk and gesture to your 'rapist' to come closer.
+&emsp;He laughs and, when he closes the distance, slaps your ass a couple of times with a lewd desire. "You are such a slut! Now be a good girl and there won't be any trouble..." <br />
+&emsp;Ohh, you will! <br />
+&emsp;Your 'rapist' pulls down his swimwear and reveals his large, hard cock. He pins you against a wall and positions himself by your entrance. <br />
+&emsp;Slowly he pushes himself into your pussy which, because of your wetness, slips deep inside without any restrictions. His thickness fills you up fairly easily and you find yourself moaning out loud because of it. <br />
+&emsp;As the stranger fucks you, his pacing quickens over time and soon he's pounding into you with strong and speedy thrusts. He reaches down with one hand and lifts one of your legs giving himself easier access to your pussy. This allows him to thrust in deeper and quicker. <br />
+<br />
+<<set _image to random(1, 4)>>
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/cabinRape1.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "beach cr man">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/cabinRape2.gif">
+    </div>
+    <<HaveASexWidget "bj" "beach cr man">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/cabinRape3.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "beach cr man">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/cabinRape4.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "beach cr man">>
+<<endif>>
+
+&emsp;It isn't long before you're both moaning and groaning inside the beach hut. Eventually, the man slows and pulls out. He then shoots a stream of hot white cum onto your lower abdomen which trails down and seeps onto your clit and pussy lips. The feeling of this stranger's semen on you pushes you over the edge and you cum yourself. <br />
+&emsp;He watches with a creepy smile as you shake with pleasure before groping and slapping one of your breasts. "Such a pretty flower." He says. <br />
+&emsp;He leans down and crashes his lips onto yours. After a few seconds of his tongue swirling around your mouth, he pulls away and replaces his swimwear before leaving the cabin and you alone completely naked and coated in his cum. <br />
+<p class="add">+1 Corruption</p> <br />
+<<set $mainChar.corruption += 1>>
+<br />
+[[Go out->Beach]]
+
+::There is no escape... [nobr] <3550,2450>
+&emsp;The men waste no time in getting you on your knees and thrusting their cocks into all of your holes. You find yourself on top of one man who has his cock deep inside your vagina, his thickness scraping along your walls. <br />
+&emsp;Another man has penetrated your ass hole from behind. It's a tight fight and without lube it's very rough. Unfortunately for you, this only spurs the man on more as he pushes and pushes himself inside you. <br />
+&emsp;The last man knelt in front of you and forced his big dick into your mouth. As you moan against his cock from the pleasure of being double penetrated, he groans and shoves further down your throat so you are spluttering and gagging. <br />
+&emsp;You can't do anything about your situation and you find yourself succumbing to the pleasure of being used by these strangers at the same time. Soon you're wet and your moans are louder. When they pick up the pace, you can't help but move yourself to give them and you more stimulation. <br />
+<<set _image to either(1,2,3,4)>>
+<<if _image == 1>>
+    <div class="default-image-wrapper">
+        <img src="pics/cabinGangbang1.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "beach gang">>
+    <<HaveASexWidget "anal" "beach gang">>
+    <<HaveASexWidget "bj" "beach gang">>
+<<elseif _image == 2>>
+    <div class="default-image-wrapper">
+        <img src="pics/cabinGangbang2.gif">
+    </div>
+    <<HaveASexWidget "tits" "beach gang">>
+    <<HaveASexWidget "bj" "beach gang">>
+<<elseif _image == 3>>
+    <div class="default-image-wrapper">
+        <img src="pics/cabinGangbang3.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "beach gang">>
+    <<HaveASexWidget "anal" "beach gang">>
+    <<HaveASexWidget "bj" "beach gang">>
+<<elseif _image == 4>>
+    <div class="default-image-wrapper">
+        <img src="pics/cabinGangbang4.gif">
+    </div>
+    <<HaveASexWidget "vaginal" "beach gang">>
+    <<HaveASexWidget "anal" "beach gang">>
+    <<HaveASexWidget "handjob" "beach gang">>
+<<endif>>
+
+&emsp;It isn't long before the men are fucking you hard and fast. Their cocks pounding into every hole available. They also pinch and slap what bare skin they can reach. <br />
+&emsp;The pleasure is overwhelming and you soon cum, your body quivering and clamping down around their cocks. This causes the three men to moan and shoot their hot loads down your holes at the same time. <br />
+&emsp;With the feeling of being filled in every orifice the pleasure in your body begins to build again. The men don't stop either, even though they have cum inside you, as they still ram into you with forceful thrusts. You wonder if they're trying to push their cum as far as they can into your holes. <br />
+&emsp;As this thought fills your brain, you find yourself cumming again and once more clamp around their cocks preventing them from removing themselves. Eventually the pleasure subsides and the men pull out. They all give your butt and boobs a slap before changing and leaving the cabin. <br />
+&emsp;You sit on the floor with some cum seeping out of every hole. They raped you but you enjoyed it! Perhaps you can do that again sometime... <br />
+<br />
+<p class="add">+1 Corruption</p> <br />
+<<set $mainChar.corruption += 1>>
+<br />
+[[Clean yourself and go out->Beach]]
+

@@ -1,0 +1,11 @@
+::brush your teeth [nobr] <1480,1380>
+@@.image-wrapper-w50p;
+	[img['pics/bathroom/brushing_teeth.jpg']]
+@@
+<<set $minute += 3>>
+&emsp;You pick up your toothbrush, put some paste on it and brush your teeth. <br />
+&emsp;Once you're finished, you check your teeth in the mirror. No food and now you have minty fresh breath! <br />
+<br />
+@@.add; + brushed teeth @@ <<set $mainChar.appearance.teethBrushed = true>> <br />
+<br />
+[[Bathroom]]

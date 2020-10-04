@@ -1,0 +1,56 @@
+::Clothes Shop [nobr] <2620,980>
+<div class="default-image-wrapper"><img src="pics/cShop.jpg"></div>
+
+<<for _clothesItemTitle, _clothesItem range $lexenaMarket.clothes>>
+	<<ClothesItemInTheMarket _clothesItem _clothesItemTitle>>
+<</for>>
+
+<<if settings.lessPrices == true>>
+	<<if $wereClothesShopPricesReduced != true>>
+		<<set $wereClothesShopPricesReduced = true>>
+	<<endif>>
+<<else>>
+	<<if $wereClothesShopPricesReduced == true>>
+		<<set $wereClothesShopPricesReduced = false>>
+	<<endif>>
+<<endif>>
+
+<hr>
+* [[Choker]] for $<<if settings.lessPrices == true>>20<<else>>40<<endif>> -
+<<if $wardrobe.available.includes($lexenaMarket.accessories.choker.name)>>
+    You already have this!
+<<else>>
+    <<if settings.lessPrices == true>>
+		<<if $mainChar.money < 20>>
+     	   You don't have enough money!
+    	<<else>>
+      	  <<link "Buy">>
+      		    <<set $mainChar.money -= 20>>
+        	    <<run $wardrobe.addAccessory('neck', $lexenaMarket.accessories.choker); >>
+           		<<goto "Clothes Shop">>
+		  <</link>>
+   		<<endif>>
+	<<else>>
+		<<if $mainChar.money < 40>>
+     	   You don't have enough money!
+    	<<else>>
+      	  <<link "Buy">>
+      		    <<set $mainChar.money -= 40>>
+        	    <<run $wardrobe.addAccessory('neck', $lexenaMarket.accessories.choker); >>
+           		<<goto "Clothes Shop">>
+		  <</link>>
+   		<<endif>>
+	<<endif>>
+<<endif>>
+<br />
+<br />
+
+[[Go back->Lexena Market]]
+
+::Choker [system] <2560,1098>
+<<link "Back" $backButton>><</link>>
+
+Simple and sexy :3
+(+5 allure)
+
+<div class="default-image-wrapper"><img src="pics/Choker.jpg"></div>

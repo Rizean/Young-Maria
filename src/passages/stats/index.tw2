@@ -2,6 +2,7 @@
 src/passages/stats/sexStats.tw2
 src/passages/stats/changelog.tw2
 src/passages/stats/hallOfGlory.tw2
+src/passages/stats/accessories.tw2
 
 ::Stats [system] <975,25>
 Name: $mainChar.firstName
@@ -29,7 +30,8 @@ Relationship with Ralf: $mainChar.relationships.ralfDog<<endif>>
 
 Bank card password: $cardPassword<<endif>>
 <<include "Attractivenes">>
-Clothes: $mainChar.look.clothes.body.name [[More...]]<<if settings.menstruation == true>>
+Clothes: $mainChar.look.clothes.body.name
+Accessories: [[Accessories]]<<if settings.menstruation == true>>
 
 Period day: $mainChar.menstruation.day <<if $mainChar.menstruation.day >= 15 and $mainChar.menstruation.isProtected != true>>(go to bathroom and apply a tampon!)<<elseif $mainChar.menstruation.day >= 15 and $mainChar.menstruation.isProtected == true>>(protected)<<endif>><<if settings.pregnancy == true>>
 <<if $mainChar.pregnancy.isOnPills == true>>You are on pills today<<else>>You didn't take birth control pills today<<endif>> <<if $mainChar.menstruation.day >= 15 or $mainChar.pregnancy.knowsAboutPregnancy == true>>[You don't need pills today]<<endif>>

@@ -1,0 +1,34 @@
+::Main char in bed picture <1300,0>
+<<if $mainChar.look.clothes.body.name === ''
+	&& $mainChar.look.lingerie.bra.name === ''
+	&& $mainChar.look.lingerie.panties.name == ''
+>>
+	@@.image-wrapper-w50p;
+		[img['pics/home_bed/naked.jpg']]
+	@@
+<<elseif $mainChar.look.clothes.body.name === ''
+	&& $mainChar.look.lingerie.bra.name === ''
+	&& $mainChar.look.lingerie.panties.name !== ''
+>>
+	@@.image-wrapper-w50p;
+		[img['pics/home_bed/topless.jpg']]
+	@@
+<<elseif $mainChar.look.clothes.body.name === ''
+	&& $mainChar.look.lingerie.bra.name !== ''
+	&& $mainChar.look.lingerie.panties.name === ''
+>>
+	@@.image-wrapper-w50p;
+		[img['pics/home_bed/in_bra_only.jpg']]
+	@@
+<<elseif $mainChar.look.clothes.body.name === ''
+	&& $mainChar.look.lingerie.bra.name !== ''
+	&& $mainChar.look.lingerie.panties.name !== ''
+>>
+	@@.image-wrapper-w50p;
+		[img['pics/home_bed/lingerie.jpg']]
+	@@
+<<elseif $mainChar.look.clothes.body.name !== ''>>
+	@@.image-wrapper-w50p;
+		[img['pics/home_bed/clothed.jpg']]
+	@@
+<<endif>>

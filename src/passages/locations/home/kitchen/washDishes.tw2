@@ -1,0 +1,14 @@
+::wash the dishes after family dinner [nobr] <2500,700>
+@@.image-wrapper-w70p;
+	[img['pics/wash_the_dishes.jpg']]
+@@
+You wash the dishes after dinner, thereby helping your mother. She appreciates your help. <br />
+@@.add; +1 relationship with mom @@
+@@.minus; -10 energy @@
+
+<<set $minute += 20>>
+<<set $mainChar.energy -= 10>>
+<<set $mainChar.relationships.mom += 1>>
+<br />
+<br />
+[[Back->Kitchen]]
