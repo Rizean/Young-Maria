@@ -257,17 +257,3 @@
 	}
 }); >>
 
-
-<<script>>
-	variables().mainChar.getAllure = function(category) {
-		let allure = 0;
-
-		for (const key in this.look[category]) {
-			if (this.look[category][key].allure !== undefined) {
-				allure += this.look[category][key].allure;
-			}
-		}
-
-		return allure;
-	};
-<</script>>

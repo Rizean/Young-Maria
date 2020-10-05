@@ -7,6 +7,19 @@ Young Maria
 ::StoryIncludes
 src/index.tw2
 
+::StoryInit <0,200>
+<<include "Global variables">>
+<<include "Game settings">>
+<<include "Basic Character class">>
+<<include "Girl Character Class">>
+<<include "Man Character Class">>
+<<include "Characters">>
+<<include "Wardrobe Class">>
+<<include "Lexena Market Store">>
+<<include "Inventory Class">>
+<<include "Hair Variables">>
+
+
 ::$past <1506,755>
 Сделайте двойной щелчок мышью на этом параграфе, чтобы отредактировать его.
 
@@ -31,17 +44,7 @@ body {
 
 [[Back->Bedroom]]
 
-::StoryInit <0,200>
-<<include "Global variables">>
-<<include "Game settings">>
-<<include "Basic Character class">>
-<<include "Girl Character Class">>
-<<include "Man Character Class">>
-<<include "Characters">>
-<<include "Wardrobe Class">>
-<<include "Lexena Market Store">>
-<<include "Inventory Class">>
-<<include "Hair Variables">>
+
 
 
 ::Achievements <286,2849>

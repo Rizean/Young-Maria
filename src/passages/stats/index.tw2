@@ -27,7 +27,7 @@ Relationship with Ralf: $mainChar.relationships.ralfDog<<endif>>
 <<if $bankFirstVisit == false>>
 
 Bank card password: $cardPassword<<endif>>
-<<include "Attractivenes">>
+Attractiveness: <<script>>$(output).wiki(variables().mainChar.getAttractiveness())<</script>>
 Clothes: $mainChar.look.clothes.body.name
 Accessories: [[Accessories]]<<if settings.menstruation == true>>
 

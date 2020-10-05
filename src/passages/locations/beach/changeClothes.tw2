@@ -1,6 +1,7 @@
 ::Change clothes [nobr] <4046,2435>
 <<set $minute += 10>>
-<<set $mainChar.energy -= 5>>
+<<doAction -5>><</doAction>>
+
 
 <<if $mainChar.look.clothes.body.name !== 'Bikini'>>
 	<<set $oldClothesInTheBeach = $mainChar.look.clothes.body >>

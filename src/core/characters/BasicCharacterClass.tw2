@@ -161,29 +161,15 @@
   };
 
   BasicCharacter.prototype.increaseEnergy = function(value) {
-	if ((this.energy + value) > this.maxEnergy) {
-		this.energy = this.maxEnergy;
-	}
-
-	this.energy += value;
+      this.energy = ((this.energy + value) > this.maxEnergy) ? this.maxEnergy : this.energy + value
   };
 
   BasicCharacter.prototype.decreaseEnergy = function(value) {
-  	if ((this.energy - value) < 0) {
-		this.energy = 0;
-	}
-
-	this.energy -= value;
+        this.energy = ((this.energy - value) < 0) ? 0 : this.energy - value
   };
 
   BasicCharacter.prototype.setEnergy = function(value) {
-  	if (value > this.maxEnergy) {
-		this.energy = this.maxEnergy;
-	} else if (value < 0) {
-		this.energy = 0;
-	}
-
-	this.energy = energy;
+    this.energy = (value > this.maxEnergy) ? this.energy = this.maxEnergy : (value < 0) ? 0 : value
   };
 
   BasicCharacter.prototype.getEnergy = function() {

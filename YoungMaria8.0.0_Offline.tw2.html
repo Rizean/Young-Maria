@@ -499,10 +499,19 @@ Macro.add('showPhoto', {
 // mouseover.min.js, for SugarCube 2, by Chapel
 ;Macro.add("mouseover",{tags:["onhover","onmouseover","onmousein","onmouseenter","onmouseout"],skipArgs:!0,handler:function(){if(this.payload.length<2)return this.error("No event tag used.");var o={mouseover:[],mousein:[],mouseout:[]},e=$(document.createElement("span")).addClass("macro-"+this.name).wiki(this.payload[0].contents).appendTo(this.output);this.payload.forEach(function(e){switch(e.name){case"onhover":case"onmouseover":o.mouseover.push(e.contents);break;case"onmousein":case"onmouseenter":o.mousein.push(e.contents);break;case"onmouseout":o.mouseout.push(e.contents);break;default:return}}),o.mouseover.length&&e.on("mouseover",this.createShadowWrapper(function(e){$.wiki(o.mouseover.join(" "))})),o.mousein.length&&e.on("mouseenter",this.createShadowWrapper(function(e){$.wiki(o.mousein.join(" "))})),o.mouseout.length&&e.on("mouseout",this.createShadowWrapper(function(e){$.wiki(o.mouseout.join(" "))}))}});
 // end mouseover.min.js
-</script><tw-passagedata pid="1" name="$past" tags="" position="1075,125"></tw-passagedata><tw-passagedata pid="2" name="Background changer" tags="" position="2380,1200">&lt;&lt;link "Back" $pastPassage&gt;&gt;&lt;&lt;/link&gt;&gt;
+</script><tw-passagedata pid="1" name="StoryInit" tags="" position="0,200">&lt;&lt;include "Global variables"&gt;&gt;
+&lt;&lt;include "Game settings"&gt;&gt;
+&lt;&lt;include "Basic Character class"&gt;&gt;
+&lt;&lt;include "Girl Character Class"&gt;&gt;
+&lt;&lt;include "Man Character Class"&gt;&gt;
+&lt;&lt;include "Characters"&gt;&gt;
+&lt;&lt;include "Wardrobe Class"&gt;&gt;
+&lt;&lt;include "Lexena Market Store"&gt;&gt;
+&lt;&lt;include "Inventory Class"&gt;&gt;
+&lt;&lt;include "Hair Variables"&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="$past" tags="" position="1075,125"></tw-passagedata><tw-passagedata pid="3" name="Background changer" tags="" position="2380,1200">&lt;&lt;link "Back" $pastPassage&gt;&gt;&lt;&lt;/link&gt;&gt;
 "Background changer gives you the ability to change the background of this game. Quite obvious."
 
-&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/Bulb.png"&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Change background" tags="" position="800,900">pics/BgPink.jpg",
+&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/Bulb.png"&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Change background" tags="" position="800,900">pics/BgPink.jpg",
 	'pics/BgAnime.jpg",
 	'pics/BgHelloKitty.jpg"
 
@@ -512,16 +521,7 @@ body {
 }
 &lt;/style&gt;
 
-[[Back-&gt;Bedroom]]</tw-passagedata><tw-passagedata pid="4" name="StoryInit" tags="" position="0,200">&lt;&lt;include "Global variables"&gt;&gt;
-&lt;&lt;include "Game settings"&gt;&gt;
-&lt;&lt;include "Basic Character class"&gt;&gt;
-&lt;&lt;include "Girl Character Class"&gt;&gt;
-&lt;&lt;include "Man Character Class"&gt;&gt;
-&lt;&lt;include "Characters"&gt;&gt;
-&lt;&lt;include "Wardrobe Class"&gt;&gt;
-&lt;&lt;include "Lexena Market Store"&gt;&gt;
-&lt;&lt;include "Inventory Class"&gt;&gt;
-&lt;&lt;include "Hair Variables"&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Achievements" tags="" position="286,2849">&lt;!-- TECH MATERIAL
+[[Back-&gt;Bedroom]]</tw-passagedata><tw-passagedata pid="5" name="Achievements" tags="" position="286,2849">&lt;!-- TECH MATERIAL
 
 $mainChar.appearance.head.hair.color: '',
 ['blonde', 'red', 'brunette']
@@ -645,6 +645,7 @@ You must wear this at work. Rules, rules everywhere!
 	Setting.addToggle("isSiblingInteractionAllowed", {label: "Allow interactions with step brother/sister", default: true,});
 	Setting.addToggle("isBarsPreferred", {label: "Energy and Intoxication displaying as bars",default: true,});
 	Setting.addToggle("lessPrices", {label: "Store prices reduced by 50%",default: false,});
+	Setting.addToggle("lessEnergy", {label: "Energy cost reduced by 50%",default: false,});
 	Setting.addToggle("menstruation", {label: "Enable menstruation content",default: true,});
 	Setting.addToggle("pregnancy", {label: "Enable pregnancy content",default: true,});
 	Setting.addToggle("nonConsent", {label: "Enable non-consent (rape) content",default: true,});
@@ -847,7 +848,7 @@ Relationship with Ralf: $mainChar.relationships.ralfDog&lt;&lt;endif&gt;&gt;
 &lt;&lt;if $bankFirstVisit == false&gt;&gt;
 
 Bank card password: $cardPassword&lt;&lt;endif&gt;&gt;
-&lt;&lt;include "Attractivenes"&gt;&gt;
+Attractiveness: &lt;&lt;script&gt;&gt;$(output).wiki(variables().mainChar.getAttractiveness())&lt;&lt;/script&gt;&gt;
 Clothes: $mainChar.look.clothes.body.name
 Accessories: [[Accessories]]&lt;&lt;if settings.menstruation == true&gt;&gt;
 
@@ -1386,29 +1387,15 @@ Using Twine2 version 2.3.8 and SugarCube version 2.33.2&lt;&lt;nobr&gt;&gt;
   };
 
   BasicCharacter.prototype.increaseEnergy = function(value) {
-	if ((this.energy + value) &gt; this.maxEnergy) {
-		this.energy = this.maxEnergy;
-	}
-
-	this.energy += value;
+      this.energy = ((this.energy + value) &gt; this.maxEnergy) ? this.maxEnergy : this.energy + value
   };
 
   BasicCharacter.prototype.decreaseEnergy = function(value) {
-  	if ((this.energy - value) &lt; 0) {
-		this.energy = 0;
-	}
-
-	this.energy -= value;
+        this.energy = ((this.energy - value) &lt; 0) ? 0 : this.energy - value
   };
 
   BasicCharacter.prototype.setEnergy = function(value) {
-  	if (value &gt; this.maxEnergy) {
-		this.energy = this.maxEnergy;
-	} else if (value &lt; 0) {
-		this.energy = 0;
-	}
-
-	this.energy = energy;
+    this.energy = (value &gt; this.maxEnergy) ? this.energy = this.maxEnergy : (value &lt; 0) ? 0 : value
   };
 
   BasicCharacter.prototype.getEnergy = function() {
@@ -1497,35 +1484,81 @@ Using Twine2 version 2.3.8 and SugarCube version 2.33.2&lt;&lt;nobr&gt;&gt;
   	this.relationships.sibling += value || 1;
   }
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Girl Character Class" tags="" position="200,400">&lt;&lt;script&gt;&gt;
-  window.GirlCharacter = function (config) {
-	  this.gender = variables().GENDER_FEMALE;
-	  this.genitals = variables().GENITALS_FEMALE;
-	  this.weight = variables().DEFAULT_WEIGHT;
-	  this.height = variables().DEFAULT_HEIGHT;
+    function GirlCharacter(config) {
+    // ***
+        BasicCharacter.call(this, config)
+    // ***
+          console.log('new girl', config)
 
-	  Object.keys(config).forEach(function (pn) {
-		  this[pn] = clone(config[pn]);
-	  }, this);
-  };
+      this.gender = variables().GENDER_FEMALE;
+      this.genitals = variables().GENITALS_FEMALE;
+      this.weight = variables().DEFAULT_WEIGHT;
+      this.height = variables().DEFAULT_HEIGHT;
 
-  GirlCharacter.prototype = Object.create(BasicCharacter.prototype);
-  GirlCharacter.prototype.constructor = BasicCharacter;
+        Object.keys(config).forEach(pn=&gt;this[pn] = clone(config[pn]))
+    };
 
-  GirlCharacter.prototype.clone = function () {
-	  return new BasicCharacter(this);
-  };
+    GirlCharacter.prototype = Object.create(BasicCharacter.prototype);
+    GirlCharacter.prototype.constructor = GirlCharacter;
 
-  GirlCharacter.prototype.toJSON = function () {
-	  var ownData = {};
+    GirlCharacter.prototype.clone = function () {
+      return new GirlCharacter(this)
+    };
 
-	  Object.keys(this).forEach(function (pn) {
-		  ownData[pn] = clone(this[pn]);
-	  }, this);
+    GirlCharacter.prototype.toJSON = function () {
+      var ownData = {};
+      Object.keys(this).forEach(pn=&gt;ownData[pn] = clone(this[pn]))
+      return JSON.reviveWrapper('new GirlCharacter($ReviveData$)', ownData);
+    };
 
-	  return JSON.reviveWrapper(
-	  	'new BasicCharacter($ReviveData$)', ownData
-	  );
-  };
+    GirlCharacter.prototype.getAttractiveness = function () {
+            console.log('getAttractiveness')
+
+      		const clothesCategories = ['clothes', 'lingerie', 'accessories', 'erotic_accessories'];
+      		let attractiveness = this.attractiveness;
+
+      		for (let i = 0; i &lt; clothesCategories.length; i++) {
+      			attractiveness += this.getAllure(clothesCategories[i]);
+      		}
+
+      		if (this.appearance.isCombed) attractiveness += 5;
+      		const MAKEUP = { none: 0,  light: 5, tangible: 8, bright: 10}
+              attractiveness += MAKEUP[this.appearance.makeup] || 0
+
+      		if (this.appearance.head.lips.color !== 'none') attractiveness += 4;
+
+      		if (this.cleanliness &lt; 30) attractiveness -= 10;
+      		else if (this.cleanliness &gt;= 30 &amp;&amp; this.cleanliness &lt; 60) attractiveness -= 5;
+
+      		if (this.appearance.teethBrushed == true) attractiveness += 5;
+      		else attractiveness -= 2;
+
+      		if (this.menstruation.isProtected != true &amp;&amp; this.menstruation.day &gt;= 15) attractiveness -= 10;
+
+      		if (this.eroticLook.intimateHaircut == 'shaved') {
+      			attractiveness += 2;
+      		} else if (this.eroticLook.intimateHaircut = 'stubble') {
+      			attractiveness += 1;
+      		} else if (this.eroticLook.intimateHaircut = 'hairy') {
+      			attractiveness += 0;
+      		}
+      		return attractiveness
+    }
+
+    GirlCharacter.prototype.getAllure = function(category) {
+    		let allure = 0;
+
+    		for (const key in this.look[category]) {
+    			if (this.look[category][key].allure !== undefined) {
+    				allure += this.look[category][key].allure;
+    			}
+    		}
+
+    		return allure;
+    	}
+
+    window.GirlCharacter = GirlCharacter
+
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Man Character Class" tags="" position="400,400">&lt;&lt;script&gt;&gt;
   window.ManCharacter = function (config) {
 	  this.gender = variables().GENDER_MALE;
@@ -5459,68 +5492,7 @@ Legs: &lt;&lt;if $mainChar.look.clothes.legs.name !== ''&gt;&gt;$mainChar.look.c
 		[img['pics/appearance/anal/hole/' + random(1, 5) + '.jpg']]
 	@@
 &lt;&lt;endif&gt;&gt;
-&lt;&lt;back "Back"&gt;&gt;</tw-passagedata><tw-passagedata pid="188" name="Attractivenes" tags="" position="0,1100">&lt;&lt;script&gt;&gt;
-	(function() {
-		const clothesCategories = ['clothes', 'lingerie', 'accessories', 'erotic_accessories'];
-		let attractiveness = variables().mainChar.attractiveness;
-
-		for (let i = 0; i &lt; clothesCategories.length; i++) {
-			attractiveness += variables().mainChar.getAllure(clothesCategories[i]);
-		}
-
-		if (variables().mainChar.appearance.isCombed) {
-			attractiveness += 5;
-		}
-
-		switch(variables().mainChar.appearance.makeup) {
-			case "none":
-				attractiveness += 0;
-				break;
-			case "light":
-				attractiveness += 5;
-				break;
-			case "tangible":
-				attractiveness += 8;
-				break;
-			case "bright":
-				attractiveness += 10;
-				break;
-			default:
-				alert('unknown case!');
-		}
-
-
-		if (variables().mainChar.appearance.head.lips.color !== 'none') {
-			attractiveness += 4;
-		}
-
-		if (variables().mainChar.cleanliness &lt; 30) {
-			attractiveness -= 10;
-		} else if (variables().mainChar.cleanliness &gt;= 30 &amp;&amp; variables().mainChar.cleanliness &lt; 60) {
-			attractiveness -= 5;
-		}
-
-		if (variables().mainChar.appearance.teethBrushed == true) {
-			attractiveness += 5;
-		} else {
-			attractiveness -= 2;
-		}
-
-		if (variables().mainChar.menstruation.isProtected != true &amp;&amp; variables().mainChar.menstruation.day &gt;= 15) {
-			attractiveness -= 10;
-		}
-
-		if (variables().mainChar.eroticLook.intimateHaircut == 'shaved') {
-			attractiveness += 2;
-		} else if (variables().mainChar.eroticLook.intimateHaircut = 'stubble') {
-			attractiveness += 1;
-		} else if (variables().mainChar.eroticLook.intimateHaircut = 'hairy') {
-			attractiveness += 0;
-		}
-
-		$(output).wiki('Attractiveness: ' + attractiveness);
-	})();
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="189" name="Character body" tags="system" position="620,900">&lt;img src="pics/appearance/body/skinny.jpg" alt="character body" /&gt;
+&lt;&lt;back "Back"&gt;&gt;</tw-passagedata><tw-passagedata pid="188" name="Attractivenes" tags="" position="0,1100">&lt;&lt;script&gt;&gt;(()=&gt;$(output).wiki(variables().mainChar.getAttractiveness()))()&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="189" name="Character body" tags="system" position="620,900">&lt;img src="pics/appearance/body/skinny.jpg" alt="character body" /&gt;
 
 &lt;&lt;back "Back"&gt;&gt;</tw-passagedata><tw-passagedata pid="190" name="Character chest" tags="system" position="500,900">[img[String.format($mainChar.appearance.chest.image)]]
 
@@ -6377,22 +6349,7 @@ Lips size
 		isOnPills: false,
 		knowsAboutPregnancy: false,
 	}
-}); &gt;&gt;
-
-
-&lt;&lt;script&gt;&gt;
-	variables().mainChar.getAllure = function(category) {
-		let allure = 0;
-
-		for (const key in this.look[category]) {
-			if (this.look[category][key].allure !== undefined) {
-				allure += this.look[category][key].allure;
-			}
-		}
-
-		return allure;
-	};
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="202" name="Main character info" tags="nobr system" position="0,500">&lt;&lt;if $mainChar.appearance.head.hair.color !== ''&gt;&gt;
+}); &gt;&gt;</tw-passagedata><tw-passagedata pid="202" name="Main character info" tags="nobr system" position="0,500">&lt;&lt;if $mainChar.appearance.head.hair.color !== ''&gt;&gt;
 	&lt;br /&gt;
 	&lt;&lt;set _charImage = String.format('pics/appearance/face/' + $mainChar.appearance.head.hair.color + '/' + $mainChar.appearance.head.hair.length + '/' + $mainChar.appearance.head.hair.style + '/image.jpg')&gt;&gt;
 	&lt;&lt;set $mainChar.appearance.head.image = _charImage &gt;&gt;
@@ -6814,7 +6771,8 @@ He helps you to go out and says Goodbye. What a nice young rapist, hehe.
 &lt;&lt;set $mainChar.corruption += 1&gt;&gt;&lt;&lt;HaveASexWidget "vaginal" "stranger"&gt;&gt;
 
 [[Back to beach-&gt;Beach]]</tw-passagedata><tw-passagedata pid="219" name="Change clothes" tags="nobr" position="4046,2435">&lt;&lt;set $minute += 10&gt;&gt;
-&lt;&lt;set $mainChar.energy -= 5&gt;&gt;
+&lt;&lt;EnergyWidget -5&gt;&gt;
+
 
 &lt;&lt;if $mainChar.look.clothes.body.name !== 'Bikini'&gt;&gt;
 	&lt;&lt;set $oldClothesInTheBeach = $mainChar.look.clothes.body &gt;&gt;
@@ -8276,7 +8234,7 @@ As you get up, the man gives you his address. "That was great. You got a nice ti
 He gives you directions to the main city and you [['leave his house on shaky legs.'|living room]] &lt;br /&gt;
 &lt;br /&gt;</tw-passagedata><tw-passagedata pid="293" name="Explore them" tags="" position="3300,1106">&lt;&lt;set _image to either(1,2,3,4,5)&gt;&gt;&lt;&lt;if _image == 1&gt;&gt;&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/explore1.jpg"&gt;&lt;/div&gt;&lt;&lt;elseif _image == 2&gt;&gt;&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/explore2.jpg"&gt;&lt;/div&gt;&lt;&lt;elseif _image == 3&gt;&gt;&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/explore3.jpg"&gt;&lt;/div&gt;&lt;&lt;elseif _image == 4&gt;&gt;&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/explore4.jpg"&gt;&lt;/div&gt;&lt;&lt;elseif _image == 5&gt;&gt;&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/explore5.jpg"&gt;&lt;/div&gt;&lt;&lt;elseif _image == 6&gt;&gt;&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/explore6.jpg"&gt;&lt;/div&gt;&lt;&lt;elseif _image == 7&gt;&gt;&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/explore7.jpg"&gt;&lt;/div&gt;&lt;&lt;endif&gt;&gt;
 
-&lt;p class="minus"&gt;-10 Energy&lt;/p&gt;&lt;&lt;set $mainChar.energy -= 10&gt;&gt;&lt;&lt;set $hour += 2&gt;&gt;
+&lt;&lt;doAction -10 2&gt;&gt;&lt;&lt;/doAction&gt;&gt;
 
 &lt;&lt;set _badThingChance to either(true,false,false)&gt;&gt;&lt;&lt;set _event to either(1,2,3)&gt;&gt;&lt;&lt;if _event == 1 &amp;&amp; ($isParkAvailable != true or $isHighTaiAvailable != true or $isBankAvailable != true or $isBeautySalonAvailable != true or $isBeachAvailable != true or $isBarAvailable != true)&gt;&gt;&lt;&lt;exploreCityWidget&gt;&gt;&lt;&lt;if _place == "Park"&gt;&gt;&lt;div class="default-image-wrapper"&gt;&lt;img src="pics/park1.jpg"&gt;&lt;/div&gt;
 
