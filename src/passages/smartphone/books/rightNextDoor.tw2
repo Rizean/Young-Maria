@@ -8,6 +8,6 @@
 ~Several Hours Later~
 
 You tried but you knew you were loud. You're sure your parents heard... Something...
-<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+<<doAction "{c:2,h:8,e:-70}">><</doAction>>
 
 [[Go back->Smartphone]]

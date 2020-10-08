@@ -20,25 +20,25 @@ You take a <<nobr>>
 <<nobr>>
 
 <<if $napHour < 1 and $napMinute < 20>>
-	<p class="add">+2 Energy</p><<set $mainChar.energy += 2>>
+	<<doAction "{e:+2}">><</doAction>>
 <<elseif $napHour < 1 and $napMinute >= 20>>
-	<p class="add">+4 Energy</p><<set $mainChar.energy += 4>>
+    <<doAction "{e:+4}">><</doAction>>
 <<elseif $napHour == 1 and $napMinute < 30>>
-	<p class="add">+5 Energy</p><<set $mainChar.energy += 5>>
+	<<doAction "{e:+5}">><</doAction>>
 <<elseif $napHour == 1 and $napMinute >= 30>>
-	<p class="add">+7 Energy</p><<set $mainChar.energy += 7>>
+	<<doAction "{e:+7}">><</doAction>>
 <<elseif $napHour == 2 and $napMinute < 30>>
-	<p class="add">+10 Energy</p><<set $mainChar.energy += 10>>
+	<<doAction "{e:+10}">><</doAction>>
 <<elseif $napHour == 2 and $napMinute >= 30>>
-	<p class="add">+15 Energy</p><<set $mainChar.energy += 15>>
+	<<doAction "{e:+15}">><</doAction>>
 <<elseif $napHour == 3 and $napMinute < 30>>
-	<p class="add">+20 Energy</p><<set $mainChar.energy += 20>>
+	<<doAction "{e:+20}">><</doAction>>
 <<elseif $napHour == 3 and $napMinute >= 30>>
-	<p class="add">+25 Energy</p><<set $mainChar.energy += 25>>
+	<<doAction "{e:+25}">><</doAction>>
 <<elseif $napHour == 4 and $napMinute < 30>>
-	<p class="add">+30 Energy</p><<set $mainChar.energy += 30>>
+	<<doAction "{e:+30}">><</doAction>>
 <<elseif $napHour == 4 and $napMinute >= 30>>
-	<p class="add">+35 Energy</p><<set $mainChar.energy += 35>>
+	<<doAction "{e:+35}">><</doAction>>
 <<endif>>
 
 <</nobr>>

@@ -9,6 +9,6 @@
 ~Several Hours Later~
 
 You find your mind filled with lewd desires... And arousing images...
-<p class="minus">-70 Energy</p> <p class="add">+2 Corruption</p><<set $mainChar.energy -= 70>><<set $mainChar.corruption += 2>><<set $hour += 8>>
+<<doAction "{c:2,h:8,e:-70}">><</doAction>>
 
 [[Go back->Smartphone]]

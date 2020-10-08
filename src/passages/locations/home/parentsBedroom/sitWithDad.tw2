@@ -4,16 +4,12 @@
 </div>
 
 You make your way over to your dad who's sat at the desk, working. You lean against his desk and begin chatting with him. Though he barely stopped his work, you still enjoyed your conversation! <br />
-<p class="minus">
-    -10 Energy
-</p> <br />
 <p class="add">
     +1 relations with dad
 </p> <br />
 
-<<set $mainChar.energy -= 10>>
+<<doAction "{min:20,e:-5}">><</doAction>>
 <<set $mainChar.relationships.dad += 1>>
-<<set $minute += 20>>
 
 <<if $mainChar.look.clothes.body.name === '' && $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name === ''>>
     <<if $mainChar.relationships.dad > 40 && settings.isSiblingInteractionAllowed == true>>

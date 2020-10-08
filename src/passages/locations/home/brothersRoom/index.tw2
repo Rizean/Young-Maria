@@ -113,13 +113,12 @@ You are in your [[brother's room->brothers room description]]
 	@@
 <</if>>
 <br />
-<<set $minute += 30>>
-<<set $mainChar.energy -= 10>>
+<<doAction "{e:-10,min:30}">><</doAction>>
 [[Back->Brother room]]
 
 ::Train with brother <2500,0>
 @@.bc-text; Hey sis, I can't talk to you yet @@
-<<set $mainChar.energy -= 10>>
+<<doAction "{e:-2}">><</doAction>>
 [[Back->Brother room]]
 
 ::Brother sitting in sofa brothers room [nobr] <2120,0>

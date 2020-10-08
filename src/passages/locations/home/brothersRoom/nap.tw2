@@ -2,6 +2,6 @@
 <div class="default-image-wrapper"><img src="pics/homeNap.jpg"></div>
 <br />
 You rest a little. Sleepy head...<br />
-<p class="add">+20 Energy</p><<set $mainChar.energy += 20>>			  <<set $hour += 4>>
+<<doAction "{h:4,e:20}">><</doAction>>
 <br />
 [[Wake up->Sleep in brother's bed]]

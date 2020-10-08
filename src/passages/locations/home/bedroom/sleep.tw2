@@ -25,13 +25,11 @@
 <<set $hour = 8>>
 <<set $minute = 0>>
 
-<p class="add">+$mainChar.maxEnergy Energy</p> <br />
-<<set $mainChar.energy += $mainChar.maxEnergy>>
+<<doAction "{e:100}">><</doAction>>
 
 <<if $dateDay == 7 and $dateMonth == "June" and $wasBirthdayCelebrated != true>>
 	<<set $wasBirthdayCelebrated = true>>
-	<<set $minute += 20>>
-	<<set $mainChar.energy -= 10>>
+	<<doAction "{e:-10,min:20}">><</doAction>>
 	<br />
 	"HAPPY BIRTHDAY, DEAR!!!" <br />
 

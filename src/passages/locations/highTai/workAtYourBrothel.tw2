@@ -52,7 +52,6 @@
 <p class="add">+$40</p> <br />
 <p class="minus">-30 Energy</p> <br />
 <br />
-<<set $mainChar.money += 40>>
-<<set $mainChar.energy -= 30>>
+<<doAction "{m:+40,e:-30}">><</doAction>>
 
 [[Clean yourself up and take a break->Apartment №56 (Your brothel)]]

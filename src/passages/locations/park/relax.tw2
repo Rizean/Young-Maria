@@ -4,7 +4,7 @@ You decide you want to relax a bit in the warm sun. You move to find a more secl
 <<set $hour += 1>><div class="default-image-wrapper"><img src="pics/pRelax.jpg"></div>
 
 With the sun on your body, you take a quick rest. Around you, the sounds of birds in the trees and children playing in the distance helps you to relax...
-<p class="add">+10 Energy</p><<set $mainChar.energy += 10>>
+<<doAction "{e:10}">><</doAction>>
 <<if $mainChar.corruption > 40>>This place is so quiet... You bet nobody will notice if you [[set free an inner "beast"]]
 <<endif>>
 [[Go back->Park]]

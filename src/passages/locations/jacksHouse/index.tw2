@@ -34,7 +34,7 @@ Wait, why are you in his bed? Oh no...
 You hastily move aside the blanket and find your poor pussy all red, sore and filled with semen. All across your thighs are red marks; some are handprints whilst others a thin red lines. You let out a groan.
 
 Jack kisses your forehead. "Yes, baby girl. And that was YOU who asked me to do this!" he says, chuckling. Oh... That bastard...
-<p class="add">+1 Corruption</p> <p class="minus">-50 Energy</p><<set $mainChar.energy -= 50>><<set $mainChar.corruption += 1>>
+<<doAction "{c:1,e:-50}">><</doAction>>
 
 [[Go to the bathroom and next to the home->living room]]
 
@@ -86,9 +86,7 @@ After a couple of minutes, Jack's dick quivers and he gives you a couple last po
 <p class="add">+1 Corruption</p> <br />
 <p class="minus">-20 Energy</p> <br />
 
-<<set $minute += 40>>
-<<set $mainChar.corruption += 1>>
-<<set $mainChar.energy -= 20>>
+<<doAction "{c:1,e:-20,min:40}">><</doAction>>
 <<set $isJacksHouseSurelyOpen = true>>
 <br />
 <br />
@@ -130,7 +128,7 @@ You're unsure what he means until you see his eyes flick to your chest. With a n
 <<set _image to either(1,2,3)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Football1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Football2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Football3.gif"></div><<endif>>
 
 Due to the chilly air, your nipples are hard and erect but the boys seem to enjoy that more. A couple of fans who lingered notice your... prize. Who cares though, right?
-<p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 20>>
+<<doAction "{c:1,e:-20}">><</doAction>>
 
 [[Go home->living room]]
 
@@ -205,10 +203,5 @@ Unfortunately, before long, the men slow down and pull out only to aim their qui
 <br />
 Jack gives you a playful wink. You get the feeling this won't be the only gangbang you experience with him and his friends... <br />
 
-<p class="add">+1 Corruption</p> <br />
-<p class="minus">-30 Energy</p> <br />
-
-<<set $mainChar.corruption += 1>>
-<<set $mainChar.energy -= 30>>
-<br />
+<<doAction "{c:1,e:-30}">><</doAction>><br />
 [[Go home->living room]]

@@ -13,7 +13,7 @@
 <<set $mainChar.cleanliness = 100>>
 <<set $mainChar.appearance.head.lips.color = 'none'>>
 <<set $inventory.grocery['Shampoo'].count -= 1>>
-@@.add; +20 Energy @@<<set $mainChar.energy += 20>> <br />
+<<doAction "{e:20}">><</doAction>>
 @@.add; +100 Cleanliness @@ <br />
 <br />
 [[Bathroom]]

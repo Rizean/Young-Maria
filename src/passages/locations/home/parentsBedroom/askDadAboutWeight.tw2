@@ -25,8 +25,7 @@
 	Thanks, dad!
 @@
 
-<<set $minute += 10>>
-<<set $mainChar.energy -= 10>>
+<<doAction "{min:10,e:-5}">><</doAction>>
 <<set $dad.corruption += 1>>
 <br />
 @@.add; +1 dad corruption @@ <br />

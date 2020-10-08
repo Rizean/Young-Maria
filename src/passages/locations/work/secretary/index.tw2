@@ -79,6 +79,6 @@ Mr. McEvoy, cab. №466"
 &emsp;<p class="char">"Yes, Mr. McEvoy, I'll do my best!"</p>
 &emsp;He gestures for you to leave. You quickly redress yourself and gather your belongings.
 &emsp;On you way out, Mr. McEvoy calls to you. "Oh, one more thing! Since you are so eager to please me, you'll also be my office slut. You refuse to do what I want, you're fired..." He smirks. "You start tomorrow."
-<p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 20>>
+<<doAction "{c:1,e:-20}">><</doAction>>
 
 <<link "Go home">><<set $isJobHad = true>><<set $weekPay = 100>><<set $minute += 30>><<goto "living room">><</link>>

@@ -3,6 +3,6 @@
 
 &emsp;You spend some time sunbathing with your parents. During this time you make some small talk and by the end of it, you are all tired and a bit "fried". You had a great time though and you thank your parents before leaving them to it.
 
-<p class="add">+1 Beauty</p> <p class="minus">-25 Energy</p><<set $mainChar.beauty += 1>><<set $mainChar.energy -= 25>>
+<<doAction "{b:+1,e:-25}">><</doAction>>
 
 [[Go back->Beach]]

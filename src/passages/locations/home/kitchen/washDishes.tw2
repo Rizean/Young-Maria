@@ -6,8 +6,7 @@ You wash the dishes after dinner, thereby helping your mother. She appreciates y
 @@.add; +1 relationship with mom @@
 @@.minus; -10 energy @@
 
-<<set $minute += 20>>
-<<set $mainChar.energy -= 10>>
+<<doAction "{min:20,e:-10}">><</doAction>>
 <<set $mainChar.relationships.mom += 1>>
 <br />
 <br />

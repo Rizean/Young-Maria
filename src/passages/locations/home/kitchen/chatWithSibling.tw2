@@ -15,8 +15,7 @@ You go over to your brother and talk about most things. Your brother blathers on
 <br />
 <br />
 
-<<set $minute += 20>>
-<<set $mainChar.energy -= 5>>
+<<doAction "{e:-5,min:10}">><</doAction>>
 <<set $mainChar.relationships.sibling += 1>>
 <<if $mainChar.corruption >= 30 && $hour == 8>>
     [["Have a nice day!"->wish a nice day kitchen][$whomHaveNiceDay = 'sibling']] <br />

@@ -1,5 +1,5 @@
 ::Play with Ralf <300,1400>
-<<set $minute += 30>><<set $mainChar.energy -= 10>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfIndoors.jpg"></div>
+<<doAction "{e:-10,min:+30}">><</doAction>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfIndoors.jpg"></div>
 
 &emsp;You were playing with Ralf for some time; running around the house and "fighting" in the living room - the most safe area here.
 
@@ -8,7 +8,7 @@
 [[Back->Farm]]
 
 ::Play with Ralf outside <300,1600>
-<<set $minute += 40>><<set $mainChar.energy -= 10>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfOutdoors.jpg"></div><<if visited() > 1>><<if $mainChar.relationships.ralfDog >= 30 and $wasRalfAccepted != true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","firstTouch")>><<elseif $mainChar.relationships.ralfDog >= 30 and $mainChar.relationships.ralfDog < 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive")>><<elseif $mainChar.relationships.ralfDog >= 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive","lustyActive")>><<endif>><<endif>>
+<<doAction "{e:-10,min:+40}">><</doAction>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfOutdoors.jpg"></div><<if visited() > 1>><<if $mainChar.relationships.ralfDog >= 30 and $wasRalfAccepted != true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","firstTouch")>><<elseif $mainChar.relationships.ralfDog >= 30 and $mainChar.relationships.ralfDog < 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive")>><<elseif $mainChar.relationships.ralfDog >= 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive","lustyActive")>><<endif>><<endif>>
 
 &emsp;You were playing with Ralf outside; throwing sticks, chasing field mice and running across the open space.
 

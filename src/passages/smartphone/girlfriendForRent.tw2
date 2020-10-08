@@ -61,14 +61,8 @@ You can`t go out in these clothes!<<else>>
 <<endif>>
 <br />
 You enjoyed it a lot... <br />
-<p class="add">+$60</p> <br />
-<p class="add">+1 Corruption</p> <br />
-<p class="minus">-70 Energy</p> <br />
+<<doAction "{h:4,e:-70,c:1,m:60}">><</doAction>>
 
-<<set $hour = 4>>
-<<set $mainChar.money += 60>>
-<<set $mainChar.energy -= 70>>
-<<set $mainChar.corruption += 1>>
 
 <<if $mainChar.beauty >= 20>>
     <<if $mainChar.beauty >= 20 && $mainChar.beauty < 40>>

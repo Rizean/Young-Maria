@@ -8,8 +8,7 @@ You sit next to your father. You start a conversation about his work and he happ
 <br />
 <br />
 
-<<set $minute += 20>>
-<<set $mainChar.energy -= 5>>
+<<doAction "{e:-5,min:10}">><</doAction>>
 <<set $mainChar.relationships.dad += 1>>
 <<if $mainChar.corruption >= 30 && $hour == 8>>
     [["Have a nice day!"->wish a nice day kitchen][$whomHaveNiceDay = 'dad']] <br />

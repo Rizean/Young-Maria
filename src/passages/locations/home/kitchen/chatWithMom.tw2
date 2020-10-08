@@ -12,9 +12,8 @@ You spent some time with your mother, gossiping and having fun. <br />
     +1 relations with mom
 </p> <Br />
 
-<<set $mainChar.energy -= 10>>
+<<doAction "{e:-5,min:10}">><</doAction>>
 <<set $mainChar.relationships.mom += 1>>
-<<set $minute += 10>>
 
 <<if $mainChar.look.clothes.body.name === '' && $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name === ''>>
     <<if $mainChar.relationships.mom >= 40 && settings.isSiblingInteractionAllowed == true>>

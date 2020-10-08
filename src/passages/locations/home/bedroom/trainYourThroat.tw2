@@ -16,7 +16,7 @@
 You can choose an object for training!</p>
 <<nobr>>
     <span id="choose-banana"><<linkreplace "Choose a banana">>
-        <<set $mainChar.energy -= 40>>
+        <<doAction "{e:-40}">><</doAction>>
         <<set _trainingSubject = "banana">>
         <<replace "#train-throat-text">><</replace>>
         <<replace "#choose-cucumber">><</replace>>
@@ -209,7 +209,7 @@ You can choose an object for training!</p>
     <</linkreplace>></span><br />
 
     <span id="choose-cucumber"><<linkreplace "Choose a cucumber">>
-        <<set $mainChar.energy -= 40>>
+        <<doAction "{e:-40}">><</doAction>>
         <<set _trainingSubject = "cucumber">>
         <<replace "#train-throat-text">><</replace>>
         <<replace "#choose-banana">><</replace>>
@@ -385,7 +385,7 @@ You can choose an object for training!</p>
 
     <span id="choose-dildo"><<if $inventory.has('eroticItems', 'Dildo')>>
         <<linkreplace "Choose a dildo">>
-            <<set $mainChar.energy -= 40>>
+            <<doAction "{e:-40}">><</doAction>>
             <<set _trainingSubject = "dildo">>
             <<replace "#train-throat-text">><</replace>>
             <<replace "#choose-banana">><</replace>>

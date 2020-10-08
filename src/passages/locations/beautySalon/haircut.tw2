@@ -25,7 +25,7 @@ She asks what you'd like? You consult with her and soon come to a decision...
 <div class="default-image-wrapper"><img src="pics/BeautySalonHairdressing.png"></div>
 
 What can be better than the feeling of getting your hair washed by a professional?
-<p class="add">+15 Beauty</p> <p class="minus">-$150</p> <p class="minus">-30 Energy</p><<set $mainChar.money -= 150>><<set $mainChar.beauty +=15>><<set $mainChar.energy -= 30>>
+<<doAction "{b:+15,e:-30,m:150}">><</doAction>>
 
 [[Back->Beauty Salon]]
 
@@ -98,6 +98,6 @@ $(document).ready(function() {
 
 After Charlotte finishes attending to your hair, she smiles at you in the reflection of the mirror. It feels good to get a fresh look once in a while!
 <br />
-<p class="add">+10 Beauty</p>  <p class="minus">-$100</p>  <p class="minus">-30 Energy</p><<set $mainChar.money -= 100>><<set $mainChar.beauty += 10>><<set $mainChar.energy -= 30>>
+<<doAction "{b:+10,e:-30,m:100}">><</doAction>>
 <br />
 [[Back->Beauty Salon]]

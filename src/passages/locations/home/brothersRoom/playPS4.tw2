@@ -13,7 +13,7 @@
 	<<endif>>
 <<endif>>
 
-<<set $mainChar.energy -= 10>>
+<<doAction "{e:-10}">><</doAction>>
 @@.mc-text; Hey, bro, can I play with you? @@
 <<if _event == 1>>
 	@@.bc-text; What? @@

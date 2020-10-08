@@ -270,11 +270,7 @@
 
 			<br />
 
-			<p class="add">+1 Corruption</p>
-			<<if $mainChar.energy >= 10>>
-				<p class="minus">-10 Energy</p>
-				<<set $mainChar.energy -= 10>>
-			<<endif>>
+            <<doAction "{e:-10,c:1}">><</doAction>>
 
 			<<set $sibling.corruption += 1>>
 			<<set $mainChar.relationships.sibling += 1>>

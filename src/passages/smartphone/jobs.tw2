@@ -10,7 +10,7 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<p class="add">+<<= $mainChar.skills.job.copyright * 10>>$</p> <p class="minus">-20 Energy</p><<set $hour += 6>><<set $mainChar.energy -= 20>><<set $mainChar.money += $mainChar.skills.job.copyright * 10>>
+<<doAction "{h:6,e:-20}">><</doAction>> <p class="add">+<<= $mainChar.skills.job.copyright * 10>>$</p> <<set $mainChar.money += $mainChar.skills.job.copyright * 10>>
 
 [[Go back->JobHunters.net]]<<endif>>
 
@@ -26,7 +26,7 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<p class="add">+<<= $mainChar.skills.job.testing * 18>>$</p> <p class="minus">-30 Energy</p><<set $hour += 5>><<set $mainChar.energy -= 30>><<set $mainChar.money += $mainChar.skills.job.testing * 18>>
+<<doAction "{h:5,e:-30}">><</doAction>><p class="add">+<<= $mainChar.skills.job.testing * 18>>$</p> <<set $mainChar.money += $mainChar.skills.job.testing * 18>>
 
 [[Go back->JobHunters.net]]<<endif>>
 
@@ -42,7 +42,7 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<p class="add">+<<= $mainChar.skills.job.writingOpinions * 20>>$</p> <p class="minus">-30 Energy</p><<set $hour += 8>><<set $mainChar.energy -= 30>><<set $mainChar.money += $mainChar.skills.job.writingOpinions * 20>>
+<<doAction "{h:8,e:-30}">><</doAction>><p class="add">+<<= $mainChar.skills.job.writingOpinions * 20>>$</p> <<set $mainChar.money += $mainChar.skills.job.writingOpinions * 20>>
 
 [[Go back->JobHunters.net]]<<endif>>
 
@@ -58,7 +58,7 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<p class="add">+<<= $mainChar.skills.job.makeDesign * 60>>$</p> <p class="minus">-60 Energy</p><<set $hour += 8>><<set $mainChar.energy -= 60>><<set $mainChar.money += $mainChar.skills.job.makeDesign * 60>>
+<<doAction "{h:8,e:-60}">><</doAction>><p class="add">+<<= $mainChar.skills.job.makeDesign * 60>>$</p> <<set $mainChar.money += $mainChar.skills.job.makeDesign * 60>>
 
 [[Go back->JobHunters.net]]<<endif>>
 
@@ -74,6 +74,6 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<p class="add">+<<= $mainChar.skills.job.writingDocs * 20>>$</p> <p class="minus">-20 Energy</p><<set $hour += 5>><<set $mainChar.energy -= 20>><<set $mainChar.money += $mainChar.skills.job.writingDocs * 20>>
+<<doAction "{h:5,e:-20}">><</doAction>><p class="add">+<<= $mainChar.skills.job.writingDocs * 20>>$</p> <<set $mainChar.money += $mainChar.skills.job.writingDocs * 20>>
 
 [[Go back->JobHunters.net]]<<endif>>

@@ -30,10 +30,7 @@
 
 @emsp;You sit down and after a few minutes of watching TV you start talking about various topics, including what's shown on TV. <br />
 
-@@.minus; -10 Energy @@ <br />
-
-<<set $mainChar.energy -= 10>>
-<<set $minute += 20>>
+<<doAction "{min:20,e:-10}">><</doAction>>
 
 <<if $watchTVWith.includes('sibling')>>
     <<set $mainChar.relationships.sibling += 1>>

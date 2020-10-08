@@ -169,7 +169,7 @@
 			&emsp;Your dad gives your ass another slap before leaving you standing still half naked in the kitchen.
 			&emsp;You watch as he walks away. You're not really sure if it was a rape or not since he wasn't that rough... But then you didn't particularly want it so... <br />
 
-<p class="add">+1 Corruption</p><p class="minus">-10 Energy</p> <<set $mainChar.corruption += 1>><<set $mainChar.energy -= 10>><<HaveASexWidget "rape" "Dad">>
+<<doAction "{c:1,e:-10}">><</doAction>><<HaveASexWidget "rape" "Dad">>
 			<br />
 		<<endif>>
 	<<endif>>

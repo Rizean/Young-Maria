@@ -71,9 +71,7 @@
 
 ::Read a book <1600,2500>
 <img src="pics/library/readbook.jpg" alt="read a book">
-<<set $hour += 1>>
-<<set $mainChar.energy -= 20>> \
-@@.mc-attr-down; -20 energy @@
+<<doAction "{e:-10,h:1}">><</doAction>>
 <<return "Back">>
 <<set _random = State.random() * 100 + 1>> \
 <<if _random < 20>> \

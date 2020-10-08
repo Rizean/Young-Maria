@@ -1,5 +1,5 @@
 ::Night walking <3600,900>
-<<set $mainChar.energy -= 20>><<set $hour += 1>><<set _event to either(1,2,3,4,5,6)>><<if _event == 1>>"Hey, kiddo". You turn around to see a mugger!
+<<doAction "{e:-20, h:1}">><</doAction>><<set _event to either(1,2,3,4,5,6)>><<if _event == 1>>"Hey, kiddo". You turn around to see a mugger!
 
 <div class="default-image-wrapper"><img src="pics/mugger.jpg"></div>
 <<set _robbed to either(20,30,40,50,60,100,150,200)>><<if _robbed > $mainChar.money>><<set _robbed = $mainChar.money>><<endif>>
@@ -56,7 +56,7 @@
 &emsp;Once he's completely emptied his balls into you, he zips up his pants and flees the scene. Your shaking legs crumple under you and you fall to the floor.
 
 &emsp;You can't believe it... You were raped...
-<p class="minus">-4 Corruption</p>  <p class="minus">-40 Energy</p><<set $mainChar.corruption -= 4>><<set $mainChar.energy -= 40>>
+<<doAction "{c:-4,e:-40}">><</doAction>>
 
 [[Pick yourself up and leave the area->Go out]]
 
@@ -67,7 +67,7 @@ Before long he's fucking you hard, his hands squeezing and slapping your ass as 
 <<set _image to either(1,2,3,4,5,6)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/whoring1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/whoring2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/whoring3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/whoring4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/whoring5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/whoring6.gif"></div><<endif>><<HaveASexWidget "vaginal" "midnight stranger">>
 
 The man cums inside you. You clean him of what's left. Now you've done your part, you go to leave his apartment.
-<p class="add">+$40</p> <p class="add">+1 Corruption</p> <p class="minus">-10 Energy</p><<set $mainChar.money += 40>><<set $mainChar.energy -= 10>><<set $mainChar.corruption += 1>><<if $mainChar.beauty >= 20>><<if $mainChar.beauty >= 20 && $mainChar.beauty < 40>><<set _tip to either(1,2,3,4,5)>><<elseif $mainChar.beauty >= 40 && $mainChar.beauty < 60>><<set _tip to either(6,7,8,9,10)>><<elseif $mainChar.beauty >= 60 && $mainChar.beauty < 80>><<set _tip to either(11,12,13,14,15)>><<elseif $mainChar.beauty >= 80>><<set _tip to either(16,17,18,19,20)>><<endif>><<set _doubleTip = _tip*2>>
+<<doAction "{c:1,e:-10,m:40}">><</doAction>><<if $mainChar.beauty >= 20>><<if $mainChar.beauty >= 20 && $mainChar.beauty < 40>><<set _tip to either(1,2,3,4,5)>><<elseif $mainChar.beauty >= 40 && $mainChar.beauty < 60>><<set _tip to either(6,7,8,9,10)>><<elseif $mainChar.beauty >= 60 && $mainChar.beauty < 80>><<set _tip to either(11,12,13,14,15)>><<elseif $mainChar.beauty >= 80>><<set _tip to either(16,17,18,19,20)>><<endif>><<set _doubleTip = _tip*2>>
 On your way out, the guy slips you (<p class="add">+ _doubleTip bucks</p>) because of your beauty!<<set $mainChar.money += _doubleTip>><<endif>>
 
 [[Return to the streets->Go out]]

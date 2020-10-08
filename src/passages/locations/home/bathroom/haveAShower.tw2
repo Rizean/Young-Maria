@@ -7,7 +7,7 @@
 
 	@@
 	You had a nice shower! <br />
-	@@.add; +10 Energy @@ <<set $mainChar.energy += 10>> <br />
+	<<doAction "{e:10}">><</doAction>>
 	@@.minus; - combed @@ <<set $mainChar.appearance.isCombed = false>> <br />
   	@@.minus; - makeup @@ <<set $mainChar.appearance.makeup = 'none'>> <br />
   	@@.minus; - lipstick @@ <<set $mainChar.appearance.head.lips.color = 'none'>> <br />
@@ -37,7 +37,7 @@
 	@@
 
 	You had a nice shower! <br />
-	@@.add; +10 Energy @@ <<set $mainChar.energy += 10>> <br />
+	<<doAction "{e:10}">><</doAction>>
 	@@.minus; - combed @@ <<set $mainChar.appearance.isCombed = false>> <br />
   	@@.minus; - makeup @@ <<set $mainChar.appearance.makeup = 'none'>> <br />
   	@@.minus; - lipstick @@ <<set $mainChar.appearance.head.lips.color = 'none'>> <br />

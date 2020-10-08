@@ -13,6 +13,6 @@ As you run through the park, you feel the cold wind on your soft skin. It helps 
 	  <<set $wasJoggingEnergyIncreased = true>>
   <</if>>
 <</nobr>>
-<p class="add">+1 Beauty</p> <p class="minus">-25 Energy</p><<set $mainChar.beauty += 1>><<set $mainChar.energy -= 25>>
+<<doAction "{b:1,e:-25}">><</doAction>>
 
 [[Go back->Park]]<<endif>>

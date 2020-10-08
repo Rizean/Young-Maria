@@ -11,8 +11,7 @@ About halfway through, he asks you to turn over. He gives you permission to rela
 
 You lost all sense of time in that room. Diego took care of every inch of your body. His hands were strong and callous but "loving" and warm.
 
-<p class="add">+20 Beauty</p> <p class="minus">-$200</p> <p class="minus">-40 Energy</p><<set $mainChar.money -= 200>><<set $mainChar.beauty +=20>><<set $mainChar.energy -= 40>><<if $mainChar.corruption >= 50>>
-Ask Diego if he can make a little more [["private" massage]]<<endif>>
+<<doAction "{b:+20,m:-200,e:-40}">><</doAction>> <<if $mainChar.corruption >= 50>>Ask Diego if he can make a little more [["private" massage]]<<endif>>
 
 [[Back->Beauty Salon]]
 

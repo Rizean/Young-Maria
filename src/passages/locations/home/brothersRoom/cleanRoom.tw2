@@ -16,9 +16,8 @@
 	Wow, I didn't think you'd actually clean... Thanks sis!
 @@
 @@.add; +1 relations with $sibling.type @@ <br />
-@@.minus; -20 energy @@
 <br />
-<<set $mainChar.energy -= 20>>
+<<doAction "{e:-20}">><</doAction>>
 <<set $mainChar.relationships.sibling += 1>>
 <<if $mainChar.corruption >= 15>>
 	[[clean more "thoroughly"->Clean brothers room ero]]

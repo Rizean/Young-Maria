@@ -209,10 +209,6 @@ You two don't like talking, so in five minutes you were horny and totally ready.
 <<endif>>
 <br />
 Sweet moments...<br />
-<p class="add">+1 Corruption</p><br />
-<p class="minus">-10 Energy</p><br />
-<br />
-<<set $mainChar.corruption += 1>>
-<<set $mainChar.energy -= 10>>
+<<doAction "{c:1,e:-10}">><</doAction>>
 <br />
 [[Go home->living room]]

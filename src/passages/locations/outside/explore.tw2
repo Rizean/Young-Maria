@@ -1,7 +1,7 @@
 ::Explore them <3300,1106>
 <<set _image to either(1,2,3,4,5)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/explore1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/explore2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/explore3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/explore4.jpg"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/explore5.jpg"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/explore6.jpg"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/explore7.jpg"></div><<endif>>
 
-<<doAction -10 2>><</doAction>>
+<<doAction "{e:-10,h:2}">><</doAction>>
 
 <<set _badThingChance to either(true,false,false)>><<set _event to either(1,2,3)>><<if _event == 1 && ($isParkAvailable != true or $isHighTaiAvailable != true or $isBankAvailable != true or $isBeautySalonAvailable != true or $isBeachAvailable != true or $isBarAvailable != true)>><<exploreCityWidget>><<if _place == "Park">><div class="default-image-wrapper"><img src="pics/park1.jpg"></div>
 

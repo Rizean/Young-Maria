@@ -15,8 +15,8 @@
 
 &emsp;Let's hope you have a better day tomorrow.
 
-
-<p class="minus">-1 Reputation</p> <p class="minus">-30 Energy</p><<set $mainChar.reputation.school -= 1>><<set $mainChar.energy -= 30>>
+<<doAction "{e:-30}">><</doAction>>
+<p class="minus">-1 Reputation</p> <<set $mainChar.reputation.school -= 1>>
 <<elseif _event == 4>> \
 <<nobr>>
     &emsp;Throughout the morning you noticed the lascivious look of a bully from your class. His eyes devoured your chest. Everytime you turned away, you could hear him and his friends whispering. When you faced them, they all wore arrogant smirks. <br />
@@ -61,7 +61,7 @@
             &emsp;A little surprised, you slowly button your shirt and say out loud, <p class="char"> "How desperate must you be to expose someone's chest like that? That or you're just stupid... Don't worry though, your secret of never having seen a pair of tits is safe with me. And the whole school... </p>
         <</if>>
     <</if>><br />
-    <p class="add">+1 Reputation</p> <p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.reputation.school += 1>><<set $mainChar.energy -= 20>><<set $mainChar.corruption += 1>>
+    <<doAction "{c:1,e:-20}">><</doAction>> <p class="add">+1 Reputation</p> <<set $mainChar.reputation.school += 1>>
 <</nobr>>
 <<elseif _event == 2>> &emsp;During your lunch break, you had an argument with one of your classmates. It got a little heated but in the end, you won the argument. Unforunately, he didn't take the lose very well and decided to humiliate you
 &emsp;As you stand up to leave for the next class, the classmate reaches for the hem of your skirt and pulls it up.
@@ -91,9 +91,9 @@
 
 <<if $mainChar.corruption < 30>> &emsp;You gasp and quickly push down your skirt, shouting at him. He panics and runs but everyone's still staring at you. You feel yourself melting under everyone's gaze. How shameful...
 
-<p class="add">+1 Reputation</p> <p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.reputation.school += 1>><<set $mainChar.energy -= 20>><<set $mainChar.corruption += 1>><<else>> &emsp;You are shocked at the turn of events but it doesn't bother you. You let the skirt drop and turn to the boy with a raised brow. "There's other ways to get under a girl's skirt, you know?"
+<<doAction "{c:1,e:-20}">><</doAction>><p class="add">+1 Reputation</p> <<set $mainChar.reputation.school += 1>><<else>> &emsp;You are shocked at the turn of events but it doesn't bother you. You let the skirt drop and turn to the boy with a raised brow. "There's other ways to get under a girl's skirt, you know?"
 
-<p class="add">+1 Reputation</p> <p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.reputation.school += 1>><<set $mainChar.energy -= 20>><<set $mainChar.corruption += 1>><<endif>><<elseif $mainChar.look.lingerie.panties.name === ''>>
+<<doAction "{c:1,e:-20}">><</doAction>><p class="add">+1 Reputation</p> <<set $mainChar.reputation.school += 1>><<endif>><<elseif $mainChar.look.lingerie.panties.name === ''>>
 <<nobr>>
     <<if $mainChar.look.erotic_accessories.back.name == "Tail butt plug">>
         <<set _upSkirtNakedWithTailButtPlugNum = random(1, 0)>>
@@ -141,20 +141,20 @@
 <</nobr>>
 <<if $mainChar.corruption < 60>> &emsp;Everyone in the cafeteria becomes silent as they realise what had happened. The boy you were arguing with blushes as pink as a peach and quickly flees the scene. You feel your cheeks redden as you cover yourself. All eyes are still on you... Why can't the Earth open and swallow you hole right now?
 
-<p class="add">+1 Reputation</p> <p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.reputation.school += 1>><<set $mainChar.energy -= 20>><<set $mainChar.corruption += 1>><<else>> &emsp;The act catches you by surprise but you don't react in the way the boy was hoping. Instead, you smooth down your skirt and turn to your classmate with a smirk.
+<<doAction "{c:1,e:-20}">><</doAction>><p class="add">+1 Reputation</p> <<set $mainChar.reputation.school += 1>><<else>> &emsp;The act catches you by surprise but you don't react in the way the boy was hoping. Instead, you smooth down your skirt and turn to your classmate with a smirk.
 &emsp;"First time seeing a pussy, eh? You know, there's better ways to go about it..." Everyone, including your classmate, are in complete and utter shock. You ignore them and contine to clean up, strutting with confidence to your next class.
 
-<p class="add">+1 Reputation</p> <p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.reputation.school += 1>><<set $mainChar.energy -= 20>><<set $mainChar.corruption += 1>><<endif>><<endif>><<elseif _event == 3>><div class="default-image-wrapper"><img src="pics/skirtBoy.jpg"></div>
+<<doAction "{c:1,e:-20}">><</doAction>><p class="add">+1 Reputation</p> <<set $mainChar.reputation.school += 1>><<endif>><<endif>><<elseif _event == 3>><div class="default-image-wrapper"><img src="pics/skirtBoy.jpg"></div>
 
 &emsp;The day was pretty uneventful until one of your classes took an... interesting turn.
 &emsp;You were sitting in the classroom, reading some boring textbooks, when a hot guy sitting next you leans over and whispers: "Hey, $mainChar.firstName, I think you're super hot."
-&emsp;<p class="char">"I thnk you're hot too." </p> you answer, a little flustered.
+&emsp;<p class="char">"I think you're hot too." </p> you answer, a little flustered.
 &emsp;Suddenly, he reaches over with his hand and sneaks it under your skirt.  "Well then, $mainChar.firstName, why don't we have some fun together?" He says, his fingers rubbing up and down your wettening pussy lips.
 &emsp;The feeling of his fingers on your clit is exhilarating... But do you want to take it further?
 [[Embrace your perverted classmate by spreading legs][$minute += 20]]<<else>><div class="default-image-wrapper"><img src="pics/everydaySchool.jpg"></div>
 
 &emsp;Today was a fairly ordinary day. There was no drama, no humiliation, no surprise pop quizes. Just a normal day. In classes you payed attention, did the work and contributed to some of the discussions. At lunch you spent the time chatting and laughing with some of your classmates. All in all, the day passed quickly and soon it was time to leave.
-<p class="minus">-10 Energy</p><<set $mainChar.energy -= 10>><<endif>>
+<<doAction "{e:-10}">><</doAction>><<endif>>
 <<nobr>>
     <<if $mainChar.look.erotic_accessories.back.name == "Tail butt plug">>
         &emsp; <p class="char-narrator">Throughout the day, every pair of eyes were on you... Well, they were actually on your ass and the fluffy tail that swung below it.</p> <br />

@@ -15,8 +15,8 @@
 @@
 
 <<set $mom.corruption += 1>>
-<<set $minute += 20>>
-<<set $mainChar.energy -= 10>>
+<<doAction "{min:10,e:-5}">><</doAction>>
+
 <br />
 @@.minus; -10 energy @@ <br />
 @@.add; +1 mom corruption @@

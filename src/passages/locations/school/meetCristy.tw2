@@ -20,7 +20,7 @@
 &emsp;Though you contribute some of your thoughts on the matter, Cristy takes the lead, talking mostly about herself. You don't mind though since it seems she's actually enjoying talking to you.
 &emsp;After about half-an-hour, Cristy apologises to you for having to excuse herself. She gives you a small, short hug before slipping through the open gate and disappearing through the forest.
 &emsp;It was a strange conversation and you feel a little nauseous after all the talk about sex...
-<p class="add">+1 Corruption</p> <p class="minus">-10 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 10>>
+<<doAction "{c:1,e:-10}">><</doAction>>
 
 [[Go home->living room]]
 
@@ -88,7 +88,7 @@
 <<if $CristyOffered == true>>[[Sneak closer...->Visit Cristy's gangbang]]<<endif>>
 
 &emsp;You can't take anymore. You struggle to get up, your legs shaking with... excitement? Anticipation? Anxiety? You aren't sure what you're feeling but whatever it is, it's too much!
-<p class="add">+1 Corruption</p> <p class="minus">-10 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 10>>
+<<doAction "{c:1,e:-10}">><</doAction>>
 
 <<link "Go home">><<set $minute += 30>><<goto "living room">><</link>>
 
@@ -126,6 +126,6 @@
 &emsp;When the men finally cum, soaking yours and Cristy's body in their sticky, hot semen, you are completely worn out.
 &emsp;With a lot of effort, you dress and make your way home on extremely shaky legs. It hurts now but the pleasure and satisfaction... You can't wait to do it again.
 
-<p class="add">+1 Corruption</p> <p class="minus">-20 Energy</p><<set $mainChar.corruption += 1>><<set $mainChar.energy -= 20>><<HaveASexWidget "gang" "Cristy friends">>
+<<doAction "{c:1,e:-20}">><</doAction>><<HaveASexWidget "gang" "Cristy friends">>
 
 <<link "Go home">><<set $hour += 2>><<goto "living room">><</link>>

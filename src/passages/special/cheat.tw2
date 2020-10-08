@@ -1,18 +1,18 @@
 ::Cheat! [system] <1800,825>
-<<if $cheat == "ymoney">><<set $mainChar.money += 300>>Correct!
-<p class="add">+$300</p><<elseif $cheat == "addbjexp">><<set $mainChar.sexStats.bj += 10>>Correct!
-<p class="add">+10 bj given</p><<elseif $cheat == "addanalexp">><<set $mainChar.sexStats.anal += 10>>Correct!
-<p class="add">+10 anal</p><<elseif $cheat == "addvagexp">><<set $mainChar.sexStats.vaginal += 10>>Correct!
-<p class="add">+10 vaginal</p><<elseif $cheat == "ycorrupt">><<set $mainChar.corruption += 30>>Correct!
-<p class="add">+30 Corruption</p><<elseif $cheat == "beautifulm">><<set $mainChar.beauty += 30>>Correct!
-<p class="add">+30 Beauty</p><<elseif $cheat == "populargirl">><<set $mainChar.reputation.school += 30>>Correct!
-<p class="add">+30 Reputation</p><<elseif $cheat == "drinksomecoffee">><<set $mainChar.energy += $mainChar.maxEnergy>>Correct!
-<p class="add">+100 energy</p><<elseif $cheat == "soulmate">><<set $mainChar.relationships.sibling += 10>>Correct!
-<p class="add">+10 relationship with sibling</p><<elseif $cheat == "scorrupt">><<set $sibling.corruption += 10>>Correct!
-<p class="add">+10 sibling corruption</p><<elseif $cheat == "sdaddy">><<set $dad.corruption += 10>>Correct!
-<p class="add">+10 dad corruption</p><<elseif $cheat == "smommy">><<set $mom.corruption += 10>>Correct!
-<p class="add">+10 mom corruption</p><<elseif $cheat == "yparentsliberty">><<set $mainChar.relationships.mom += 10>><<set $mainChar.relationships.dad += 10>>Correct!
-<p class="add">+10 relationship with mom</p> <p class="add">+10 relationship with dad</p><<elseif $cheat == "datechanger">>Correct! Please, pick up the current date:
+<<if $cheat == "ymoney">><<set $mainChar.money += 300>>Correct!<p class="add">+$300</p>
+<<elseif $cheat == "addbjexp">><<set $mainChar.sexStats.bj += 10>>Correct!<p class="add">+10 bj given</p>
+<<elseif $cheat == "addanalexp">><<set $mainChar.sexStats.anal += 10>>Correct!<p class="add">+10 anal</p>
+<<elseif $cheat == "addvagexp">><<set $mainChar.sexStats.vaginal += 10>>Correct!<p class="add">+10 vaginal</p>
+<<elseif $cheat == "ycorrupt">><<set $mainChar.corruption += 30>>Correct!<p class="add">+30 Corruption</p>
+<<elseif $cheat == "beautifulm">><<set $mainChar.beauty += 30>>Correct!<p class="add">+30 Beauty</p>
+<<elseif $cheat == "populargirl">><<set $mainChar.reputation.school += 30>>Correct!<p class="add">+30 Reputation</p>
+<<elseif $cheat == "drinksomecoffee">><<set $mainChar.energy += $mainChar.maxEnergy>>Correct!<p class="add">+100 energy</p>
+<<elseif $cheat == "soulmate">><<set $mainChar.relationships.sibling += 10>>Correct!<p class="add">+10 relationship with sibling</p>
+<<elseif $cheat == "scorrupt">><<set $sibling.corruption += 10>>Correct!<p class="add">+10 sibling corruption</p>
+<<elseif $cheat == "sdaddy">><<set $dad.corruption += 10>>Correct!<p class="add">+10 dad corruption</p>
+<<elseif $cheat == "smommy">><<set $mom.corruption += 10>>Correct!<p class="add">+10 mom corruption</p>
+<<elseif $cheat == "yparentsliberty">><<set $mainChar.relationships.mom += 10>><<set $mainChar.relationships.dad += 10>>Correct!<p class="add">+10 relationship with mom</p> <p class="add">+10 relationship with dad</p>
+<<elseif $cheat == "datechanger">>Correct! Please, pick the current date:
 
 <<nobr>>
 Day: <<listbox "$dateDay" autoselect>>
@@ -60,8 +60,8 @@ Day: <<listbox "$dateDay" autoselect>>
 	<<option "July">>
 	<<option "August">>
 <</listbox>>
-<</nobr>><<elseif $cheat == "bestmansfriend">><<set $mainChar.relationships.ralfDog += 30>>Correct!
-<p class="add">+30 Relationship with Ralf</p><<elseif $cheat == "realmansfriend">>Sorry, this cheat code isn't available anymore...<<else>>Oops, the cheat code is wrong! Remember, all letters must be lower case<<endif>>
+<</nobr>><<elseif $cheat == "bestmansfriend">><<set $mainChar.relationships.ralfDog += 30>>Correct!<p class="add">+30 Relationship with Ralf</p>
+<<elseif $cheat == "realmansfriend">>Sorry, this cheat code isn't available anymore...<<else>>Oops, the cheat code is wrong! Remember, all letters must be lower case<<endif>>
 
 [[Repeat this code->Cheat!]]
 [[Back to the Cheat input->Cheat]]
