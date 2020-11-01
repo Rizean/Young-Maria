@@ -1,8 +1,6 @@
 ::Create the character <1520,520>
 <<nobr>>
 
-
-
 <<set $randomName to either("Maria","Kate","Diana","Olivia","Sophia","Amelia","Lily","Emily","Isabella","Mia","Isabelle","Emma","Valeria","Abigail","Natalia","Sarah","Ella","Elena","Zoe","Ashley","Samantha","Gabriela","Ann")>>
 
 <</nobr>>&emsp;A melodious bird song gently rouses you from your slumber. With much effort, you slowly reach over for your smartphone and attempt to focus on it. 8:00am. Well, at least it's not too early.
@@ -30,50 +28,12 @@ You are <<if $mainChar.age != '18'>><<textbox "$mainChar.age" $mainChar.age>><<e
 [[Edit appearance]]
 
 <<nobr>>
+<<set _daysInMonth = ''.padStart(30, 1).split('').map((ele,i)=>String(i+1))>>
+<<set _monthsInYear = ["September", "October", "November", "December", "January", "February", "March", "April", "May", "June", "July", "August"]>>
 Today is the <<listbox "$dateDay" autoselect>>
-	<<option 1>>
-	<<option 2>>
-	<<option 3>>
-	<<option 4>>
-	<<option 5>>
-	<<option 6>>
-	<<option 7>>
-	<<option 8>>
-	<<option 9>>
-	<<option 10>>
-	<<option 11>>
-	<<option 12>>
-	<<option 13>>
-	<<option 14>>
-	<<option 15>>
-	<<option 16>>
-	<<option 17>>
-	<<option 18>>
-	<<option 19>>
-	<<option 20>>
-	<<option 21>>
-	<<option 22>>
-	<<option 23>>
-	<<option 24>>
-	<<option 25>>
-	<<option 26>>
-	<<option 27>>
-	<<option 28>>
-	<<option 29>>
-	<<option 30>>
+	<<optionsfrom _daysInMonth>>
 <</listbox>>th of <<listbox "$dateMonth" autoselect>>
-	<<option "September">>
-	<<option "October">>
-	<<option "November">>
-	<<option "December">>
-	<<option "January">>
-	<<option "February">>
-	<<option "March">>
-	<<option "April">>
-	<<option "May">>
-	<<option "June">>
-	<<option "July">>
-	<<option "August">>
+	<<optionsfrom _monthsInYear>>
 <</listbox>>
 <</nobr>> \
 /*<<nobr>>
@@ -116,3 +76,88 @@ You <<radiobutton "$corruptionTemp" "0" checked>>don't notice | <<radiobutton "$
   <<set $mainChar.appearance.chest.image = String.format('pics/appearance/chest/cups/' + $mainChar.appearance.chest.size + '/image.jpg')>>
   <<set $mainChar.appearance.head.image = String.format('pics/appearance/face/' + $mainChar.appearance.head.hair.color + '/' + $mainChar.appearance.head.hair.length + '/' + $mainChar.appearance.head.hair.style + '/image.jpg')>>
 <</if>>
+
+
+::Hair Variables [nobr] <1446,0>
+<<set $hairOptions = ['blonde', 'red', 'brunette'] >>
+<<set $hairStyles = ['straight'] >>
+<<set $hairLengths = [
+	'short',
+	'shoulders',
+	'chest',
+	'long'
+] >>
+
+::Creation hair [nobr] <1600,100>
+Hair color:
+<<listbox "$mainChar.appearance.head.hair.color" autoselect>>
+	<<optionsfrom $hairOptions>>
+<</listbox>>
+<br />
+Hair style:
+<<listbox "$mainChar.appearance.head.hair.style" autoselect>>
+	<<optionsfrom $hairStyles>>
+<</listbox>>
+<br />
+Hair length:
+<<listbox "$mainChar.appearance.head.hair.length" autoselect>>
+	<<optionsfrom $hairLengths>>
+<</listbox>>
+<br />
+<br />
+
+<<link "Back">><<set $mainChar.appearance.head.image = String.format('pics/appearance/face/' + $mainChar.appearance.head.hair.color + '/' + $mainChar.appearance.head.hair.length + '/' + $mainChar.appearance.head.hair.style + '/image.jpg')>><<goto "Edit appearance">><</link>>
+
+
+::Creation breasts [nobr] <1600,0>
+<<set _breastsSizes = ['a', 'b', 'c', 'd'] >>
+Breasts size:
+<<listbox "$mainChar.appearance.chest.size" autoselect>>
+	<<optionsfrom _breastsSizes>>
+<</listbox>>
+ cup <br />
+ Random <<checkbox "$randomBreastsSize" false true>>
+<br />
+<br />
+
+<<link "Back">>
+	<<if $randomBreastsSize == true>>
+		<<set $mainChar.appearance.chest.size to either('a', 'b', 'c', 'd', 'e', 'f')>>
+	<<endif>>
+	<<goto "Edit appearance">>
+<</link>>
+
+::Creation eyes [nobr] <1700,100>
+<<set _eyeSizes = ['small', 'medium', 'big', 'very big'] >>
+<<set _eyeColors = ['grey', 'blue', 'green', 'brown'] >>
+<<set _lasheSizes = ['small', 'medium', 'big'] >>
+Eyes color:
+<<listbox "$mainChar.appearance.head.eyes.color" autoselect>>
+	<<optionsfrom _eyeColors>>
+<</listbox>>
+<<set $mainChar.appearance.head.eyes.size = 'medium'>>
+<<set $mainChar.appearance.head.eyes.lashesSize = 'medium'>>
+<br />
+<br />
+
+[[Back->Edit appearance]]
+
+::Creation lips [nobr] <1800,100>
+<<set _lipsSizes = ['thin', 'medium', 'nice'] >>
+Lips size
+<<listbox "$mainChar.appearance.head.lips.size" autoselect>>
+	<<optionsfrom _lipsSizes>>
+<</listbox>>
+<br />
+<br />
+
+[[Back->Edit appearance]]
+
+::Edit appearance [nobr system] <1696,300>
+[[Hair->Creation hair]] <br />
+[[Eyes->Creation eyes]] <br /><!--
+[[Lips->Creation lips]] <br />-->
+[[Breasts->Creation breasts]] <br />
+<<include "Main character info">>
+<br />
+[[Save and go back->Create the character]]

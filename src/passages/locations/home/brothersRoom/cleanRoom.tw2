@@ -17,11 +17,9 @@
 @@
 @@.add; +1 relations with $sibling.type @@ <br />
 <br />
-<<doAction "{e:-20}">><</doAction>>
+<<=$mainChar.doAction({e:-20,min:10})>>
 <<set $mainChar.relationships.sibling += 1>>
-<<if $mainChar.corruption >= 15>>
-	[[clean more "thoroughly"->Clean brothers room ero]]
-<<endif>>
+<<if $mainChar.corruption >= 15>>[[clean more "thoroughly"->Clean brothers room ero]]<<endif>>
 <<set $brothersRoomCleaned = true>>
 <br />
 [[Back->Brother room]]
@@ -39,18 +37,16 @@
 @@.narrator;
 	&emsp;You decide to clean a little more thoroughly. As you're cleaning, you have an urge to to tease your brother. When reaching the lower spots, you make sure to stick your ass in the air, hoping it will catch your brothers attention. <br />
 @@
-<<if $mainChar.corruption >= 30>>
-	<<if $mainChar.energy >= 10>>
-		<<set _rand = random(1, 2) >>
-		<<if _rand == 1>>
-			@@.narrator;
-				&emsp; $sibling.firstName catches your movements out the corner of his eye. He looks over and watches with a twinkle in his eye... Is that lust?
-			@@
-			[[Tease him..->tease brother in his room]]
-		<<else>>
-			@@.narrator; Your brother does not pay attention to you.. @@
-		<<endif>>
-	<<endif>>
+<<if $mainChar.canDoAction({corruption: 30, energy: 10})>>
+    <<set _rand = random(1, 2) >>
+    <<if _rand == 1>>
+        @@.narrator;
+            &emsp; $sibling.firstName catches your movements out the corner of his eye. He looks over and watches with a twinkle in his eye... Is that lust?
+        @@
+        [[Tease him..->tease brother in his room]]
+    <<else>>
+        @@.narrator; Your brother does not pay attention to you.. @@
+    <<endif>>
 <<endif>>
 
 <br />
@@ -78,7 +74,7 @@
 @@.bc-text.thought;
 	(Omg, my sis has such a hot body...)
 @@
-<<if $mainChar.corruption >= 50>>
+<<if $mainChar.canDoAction({corruption: 50})>>
 	@@.mc-text;
 		Hey bro, did you like the view? ;)
 	@@

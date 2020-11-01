@@ -1,5 +1,5 @@
 ::Play with Ralf <300,1400>
-<<doAction "{e:-10,min:+30}">><</doAction>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfIndoors.jpg"></div>
+<<=$mainChar.doAction({e:-10,min:30})>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfIndoors.jpg"></div>
 
 &emsp;You were playing with Ralf for some time; running around the house and "fighting" in the living room - the most safe area here.
 
@@ -8,7 +8,7 @@
 [[Back->Farm]]
 
 ::Play with Ralf outside <300,1600>
-<<doAction "{e:-10,min:+40}">><</doAction>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfOutdoors.jpg"></div><<if visited() > 1>><<if $mainChar.relationships.ralfDog >= 30 and $wasRalfAccepted != true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","firstTouch")>><<elseif $mainChar.relationships.ralfDog >= 30 and $mainChar.relationships.ralfDog < 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive")>><<elseif $mainChar.relationships.ralfDog >= 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive","lustyActive")>><<endif>><<endif>>
+<<=$mainChar.doAction({e:-10,min:40})>><div class="default-image-wrapper"><img src="pics/PlayingWithRalfOutdoors.jpg"></div><<if visited() > 1>><<if $mainChar.relationships.ralfDog >= 30 and $wasRalfAccepted != true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","firstTouch")>><<elseif $mainChar.relationships.ralfDog >= 30 and $mainChar.relationships.ralfDog < 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive")>><<elseif $mainChar.relationships.ralfDog >= 50 and $wasRalfAccepted == true and $farm == true>><<set _RalfsBehaviour to either("usual","usual","usual","lustyPassive","lustyActive")>><<endif>><<endif>>
 
 &emsp;You were playing with Ralf outside; throwing sticks, chasing field mice and running across the open space.
 
@@ -72,7 +72,7 @@
 
 <div class="default-image-wrapper"><img src="pics/collar.jpg"></div>
 
-<strong>Collar obtained!</strong> <<run $wardrobe.addAccessory('neck', {name: 'Dog collar', image: 'pics/collar.jpg', allure: 10, description: "Ralf's collar. You wear it as his breeding bitch<code><3</code>", obscenity: 0}); >><<set $mainChar.look.erotic_accessories.neck = $wardrobe.erotic_accessories.neck["Dog collar"]>>
+<strong>Collar obtained!</strong> <<run $mainChar.wardrobe.addAccessory('neck', {name: 'Dog collar', image: 'pics/collar.jpg', allure: 10, description: "Ralf's collar. You wear it as his breeding bitch<code><3</code>", obscenity: 0}); >><<set $mainChar.look.erotic_accessories.neck = $mainChar.wardrobe.erotic_accessories.neck["Dog collar"]>>
 <strong>Greetings, you became a breeding slut!</strong>
 
 <p class="add">+1 Corruption</p> <p class="add">+1 Relationship with Ralf</p><<set $mainChar.relationships.ralfDog += 1>><<set $mainChar.corruption += 1>>

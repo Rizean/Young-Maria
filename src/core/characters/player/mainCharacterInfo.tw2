@@ -1,72 +1,11 @@
 ::Main character info [nobr system] <0,500>
-<<if $mainChar.appearance.head.hair.color !== ''>>
-	<br />
-	<<set _charImage = String.format('pics/appearance/face/' + $mainChar.appearance.head.hair.color + '/' + $mainChar.appearance.head.hair.length + '/' + $mainChar.appearance.head.hair.style + '/image.jpg')>>
-	<<set $mainChar.appearance.head.image = _charImage >>
-	<p class="image-wrapper-small">[img[String.format(_charImage)]]</p>
-	<br />
-	Your name is $mainChar.firstName $mainChar.lastName. You are $mainChar.age years old. <br />
-	<<if $mainChar.appearance.head.hair.length === 'boyish'>>
-		&emsp;You have a $mainChar.appearance.head.hair.color $mainChar.appearance.head.hair.style boyish haircut. Many people consider this hairstyle unsuitable for a girl, but you are quite comfortable with it. Sometimes people mistake you for a guy.
-	<<elseif $mainChar.appearance.head.hair.length === 'pixie'>>
-		&emsp;You like your $mainChar.appearance.head.hair.color $mainChar.appearance.head.hair.style pixie hair. Some of your peers also wear this hairstyle because it is easy to care for. It also makes you seem a little younger.
-	<<elseif $mainChar.appearance.head.hair.length === 'short'>>
-		&emsp;You have $mainChar.appearance.head.hair.color $mainChar.appearance.head.hair.style short hair. It is a pretty popular hairstyle nowadays. You do not need to spend much time on it. Besides, whatever the weather, you look great!
-	<<elseif $mainChar.appearance.head.hair.length === 'shoulders'>>
-		<<= $mainChar.appearance.head.hair.color.toUpperFirst() >> &emsp; $mainChar.appearance.head.hair.style shoulder-length hair quite suits you. Your mom really likes this hairstyle (as she wears the same one). Sometimes your hair falls in front of your face and obstructs the view.
-	<<elseif $mainChar.appearance.head.hair.length === 'chest'>>
-		&emsp;You have $mainChar.appearance.head.hair.color $mainChar.appearance.head.hair.style chest-length hair. This is one of the most popular hairstyles amongst girls of your age. This longer hairstyle is more difficult to care for but worth the effort.
-	<<elseif $mainChar.appearance.head.hair.length === 'long'>>
-		<<= $mainChar.appearance.head.hair.color.toUpperFirst() >> &emsp; $mainChar.appearance.head.hair.style long hair adorns your head. It falls well past your chest, attracting the attention of others. But beware, this length of hair is hell to tend to.
-	<</if>>
-<</if>>
-<<if $mainChar.appearance.head.eyes.color !== ''>>
-	<br />
-	<<if $mainChar.appearance.head.eyes.size === 'small'>>
-		&emsp;Small $mainChar.appearance.head.eyes.color eyes are not a hallmark of your face, but are well suited to the overall composition.
-	<<elseif $mainChar.appearance.head.eyes.size === 'medium'>>
-		&emsp;Nice $mainChar.appearance.head.eyes.color eyes perfectly complement your face, drawing attention to yourself.
-	<<elseif $mainChar.appearance.head.eyes.size === 'big'>>
-		&emsp;You have big $mainChar.appearance.head.eyes.color eyes. When someone looks at you, the first thing they see is your big eyes.
-	<<elseif $mainChar.appearance.head.eyes.size === 'very big'>>
-		&emsp;People can't help but notice your very big anime-like $mainChar.appearance.head.eyes.color eyes. They seem to fascinate everyone around you with their charming allure!
-	<</if>>
-<</if>>
-<<if $mainChar.appearance.head.eyes.lashesSize !== ''>>
-	<br />
-	<<if $mainChar.appearance.head.eyes.lashesSize === 'small'>>
-		&emsp;You have pretty little eyelashes though they are barely visible.
-	<<elseif $mainChar.appearance.head.eyes.lashesSize === 'medium'>>
-		&emsp;Medium sized eyelashes look great! They complement your eyes well but are not the centre of attention.
-	<<elseif $mainChar.appearance.head.eyes.lashesSize === 'big'>>
-		&emsp;Large eyelashes perfectly decorate your eyes, making you look even more expressive and alluring.
-	<</if>>
-<</if>>
-<<if $mainChar.appearance.head.lips.size !== ''>>
-	<br />
-	<<if $mainChar.appearance.head.lips.size === 'thin'>>
-		&emsp;You have discreet thin lips. They suit your face but are scarcely noticable.
-	<<elseif $mainChar.appearance.head.lips.size === 'medium'>>
-		&emsp;You have normal, pretty attractive lips. They look good!
-	<<elseif $mainChar.appearance.head.lips.size === 'nice'>>
-		&emsp;You have full, attractive lips. When people look at you, they are drawn to your seductive lips.
-	<</if>>
-<</if>>
-<<if $mainChar.appearance.chest.size !== ''>>
-	<br />
-	<<set _cupSizeName = $mainChar.appearance.chest.size.toUpperFirst() + '-cup' >>
-&emsp;Your breasts are EU _cupSizeName
-<</if>>
 <br />
-<<switch $mainChar.appearance.makeup>>
-	<<case 'none'>>
-		&emsp;You don't have makeup on right now.
-	<<case 'light'>>
-		&emsp;You are wearing light makeup that enhances some parts of your face.
-	<<case 'tangible'>>
-		&emsp;You are wearing tangible makeup that hides your flaws and emphasizes features.
-	<<case 'bright'>>
-		&emsp;There is a thick layer of makeup on you that has altered your appearance and brightened it up.
-	<<default>>
-		<<run alert('unknown option!'); >>
-<</switch>>
+<p class="image-wrapper-small">[img[$mainChar.getImage('head')]]</p>
+<br/>Your name is $mainChar.firstName $mainChar.lastName. You are $mainChar.age years old. <<=$mainChar.getDescription('hair')>>
+<br/>&emsp;<<=$mainChar.getDescription('eyes')>>
+<br/>&emsp;<<=$mainChar.getDescription('lashes')>>
+<br/>&emsp;<<=$mainChar.getDescription('lips')>>
+<br/>
+<<set _cupSizeName = $mainChar.appearance.chest.size.toUpperFirst() + '-cup' >>
+&emsp;Your breasts are EU _cupSizeName
+<br/>&emsp;<<=$mainChar.getDescription('makeup')>>

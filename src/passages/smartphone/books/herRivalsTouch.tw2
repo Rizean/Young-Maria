@@ -9,6 +9,6 @@
 ~Several Hours Later~
 
 Having a strong female protagonist and a male love interest... Gosh, you wish your life was as pleasurable and exciting...
-<<doAction "{c:2,h:8,e:-70}">><</doAction>>
+<<=$mainChar.doAction({c:2,h:8,e:-70})>>
 
 [[Go back->Smartphone]]

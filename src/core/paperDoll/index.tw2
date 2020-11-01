@@ -4,7 +4,7 @@
 ::Paper Doll [nobr] <625,3043>
 <div style="position: relative; top: 0; left: 0">
 	<div id="DollMainBody">
-		[img[String.format('pics/PaperDoll/MainBody' + $dollEyesColor + 'Eyes.png')]]
+		[img[String.format('pics/PaperDoll/Head/eyes/' + $dollEyesColor + '.png')]]
 	</div>
 	<div id="DollButtPlug">
 		[img[String.format('pics/PaperDoll/LowerBody/ButtPlug/' + $dollButtPlug + '.png')]]

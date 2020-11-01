@@ -60,7 +60,7 @@
 	};
 <</script>>
 
-<<set $wardrobe to new Wardrobe({
+<<set $mainChar.wardrobe to new Wardrobe({
 	clothes: {
 	    head: {},
         body: {

@@ -55,6 +55,7 @@
 <<set $webMessagesCounter = 0>>
 <<set $webMessagesTryingToReceiveDay = 0>>
 
+
 // version
 <<set $gameVersion = 600>>
 <<set $gameVersionDisplay = "6.0.0">>

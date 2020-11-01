@@ -2,6 +2,6 @@
 <div class="default-image-wrapper"><img src="pics/homeNap.jpg"></div>
 <br />
 You rest a little. Sleepy head...<br />
-<<doAction "{h:4,e:20}">><</doAction>>
+<<=$mainChar.takeNap({h:2})>>
 <br />
 [[Wake up->Sleep in brother's bed]]

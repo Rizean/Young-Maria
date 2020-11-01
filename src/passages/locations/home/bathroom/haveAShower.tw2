@@ -7,12 +7,11 @@
 
 	@@
 	You had a nice shower! <br />
-	<<doAction "{e:10}">><</doAction>>
+	<<=$mainChar.doAction({e:10,cl:100})>>
 	@@.minus; - combed @@ <<set $mainChar.appearance.isCombed = false>> <br />
   	@@.minus; - makeup @@ <<set $mainChar.appearance.makeup = 'none'>> <br />
   	@@.minus; - lipstick @@ <<set $mainChar.appearance.head.lips.color = 'none'>> <br />
-  	@@.add; +100 cleanliness @@ <<set $mainChar.cleanliness = 100>> <br />
-  	@@.add; -1 shampoo @@ <<set $inventory.grocery['Shampoo'].count -= 1>> <br />
+  	@@.add; -1 shampoo @@ <<set $mainChar.inventory.grocery['Shampoo'].count -= 1>> <br />
 
 	<<set $minute += 15>>
 	"Hey, pumpkin, mind if I join you?". Your
@@ -37,12 +36,11 @@
 	@@
 
 	You had a nice shower! <br />
-	<<doAction "{e:10}">><</doAction>>
+	<<=$mainChar.doAction({e:10,cl:100})>>
 	@@.minus; - combed @@ <<set $mainChar.appearance.isCombed = false>> <br />
   	@@.minus; - makeup @@ <<set $mainChar.appearance.makeup = 'none'>> <br />
   	@@.minus; - lipstick @@ <<set $mainChar.appearance.head.lips.color = 'none'>> <br />
-  	@@.add; +100 cleanliness @@ <<set $mainChar.cleanliness = 100>> <br />
-  	@@.add; -1 shampoo @@ <<set $inventory.grocery['Shampoo'].count -= 1>> <br />
+  	@@.add; -1 shampoo @@ <<set $mainChar.inventory.grocery['Shampoo'].count -= 1>> <br />
 
 	<<set $minute += 15>>
 	<br />

@@ -5,7 +5,7 @@
 <<if ! $mainChar.appearance.isCombed>>
 	Your hair is messed up! [[Comb yourself][$minute += 1]] <br />
 <<endif>>
-<<if $inventory.cosmetics.hasOwnProperty('Makeup kit') && $inventory.cosmetics['Makeup kit'].count>>
+<<if $mainChar.inventory.cosmetics.hasOwnProperty('Makeup kit') && $mainChar.inventory.cosmetics['Makeup kit'].count>>
 	You can [[apply makeup->Apply makeup]]. <br />
 <<endif>>
 <br />

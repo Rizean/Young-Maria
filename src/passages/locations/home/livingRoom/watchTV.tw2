@@ -30,7 +30,7 @@
 
 @emsp;You sit down and after a few minutes of watching TV you start talking about various topics, including what's shown on TV. <br />
 
-<<doAction "{min:20,e:-10}">><</doAction>>
+<<=$mainChar.doAction({e:-10,min:20})>>
 
 <<if $watchTVWith.includes('sibling')>>
     <<set $mainChar.relationships.sibling += 1>>

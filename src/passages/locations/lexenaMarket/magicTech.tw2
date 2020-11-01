@@ -65,7 +65,7 @@ Your new name: <<textbox "$mainChar.firstName" "Kate">>
 		<<endif>>
 	<<endif>>
 	<<=$args[0].price>> -
-	<<if $inventory.has('techItems', $args[0].name)>>
+	<<if $mainChar.inventory.has('techItems', $args[0].name)>>
 		You already have this!
 	<<else>>
 		<<if $mainChar.money < $args[0].price>>
@@ -74,7 +74,7 @@ Your new name: <<textbox "$mainChar.firstName" "Kate">>
 			<<link "Buy">>
 				<<set $minute += 1>>
 				<<set $mainChar.money -= $args[0].price>>
-				<<run $inventory.add('techItems', $args[0]);>>
+				<<run $mainChar.inventory.add('techItems', $args[0]);>>
 				<<goto "Magic Tech">>
 			<</link>>
 		<<endif>>

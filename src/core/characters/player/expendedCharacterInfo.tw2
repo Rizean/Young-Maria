@@ -1,110 +1,34 @@
 ::Expended character info [nobr system] <380,800>
-<<if $mainChar.appearance.head.hair.color !== ''>>
-	<br />
-	<<set _charImage = String.format('pics/appearance/face/' + $mainChar.appearance.head.hair.color + '/' + $mainChar.appearance.head.hair.length + '/' + $mainChar.appearance.head.hair.style + '/image.jpg')>>
-	<<set $mainChar.appearance.head.image = _charImage >>
-	<p class="image-wrapper-small">[img[String.format(_charImage)]]</p>
-	<br />
-	Your name is $mainChar.firstName $mainChar.lastName. You are $mainChar.age years old. <br /> <br />
-	You don't wear any makeup. <br /> <br />
-	You have slightly tanned, delicate, pleasant-to-the-touch skin. <br /> <br />
-	<<if $mainChar.appearance.head.hair.length === 'boyish'>>
-		&emsp;You have a $mainChar.appearance.head.hair.color $mainChar.appearance.head.hair.style boyish haircut. Many people consider this hairstyle unsuitable for a girl, but you are quite comfortable with it. Sometimes people mistake you for a guy.
-	<<elseif $mainChar.appearance.head.hair.length === 'pixie'>>
-		&emsp;You like your $mainChar.appearance.head.hair.color $mainChar.appearance.head.hair.style pixie hair. Some of your peers also wear this hairstyle because it is easy to care for. It also makes you seem a little younger.
-	<<elseif $mainChar.appearance.head.hair.length === 'short'>>
-		&emsp;You have $mainChar.appearance.head.hair.color $mainChar.appearance.head.hair.style short hair. It is a pretty popular hairstyle nowadays. You do not need to spend much time on it. Besides, whatever the weather, you look great!
-	<<elseif $mainChar.appearance.head.hair.length === 'shoulders'>>
-		<<= $mainChar.appearance.head.hair.color.toUpperFirst() >> &emsp; $mainChar.appearance.head.hair.style shoulder-length hair quite suits you. Your mom really likes this hairstyle (she wears the same one). Sometimes your hair falls in front of your face and obstructs the view.
-	<<elseif $mainChar.appearance.head.hair.length === 'chest'>>
-		&emsp;You have $mainChar.appearance.head.hair.color $mainChar.appearance.head.hair.style chest-length hair. This is one of the most popular hairstyles amongst girls of your age. This longer hairstyle is more difficult to care for but worth the effort.
-	<<elseif $mainChar.appearance.head.hair.length === 'long'>>
-		<<= $mainChar.appearance.head.hair.color.toUpperFirst() >> &emsp; $mainChar.appearance.head.hair.style long hair adorns your head. It falls well past your chest, attracting the attention of others. But beware, this length of hair is hell to tend to.
-	<</if>>
-<</if>>
-<<if $mainChar.appearance.head.eyes.color !== ''>>
-	<br />
-	<<if $mainChar.appearance.head.eyes.size === 'small'>>
-		&emsp;Small $mainChar.appearance.head.eyes.color eyes are not a hallmark of your face, but are well suited to the overall composition
-	<<elseif $mainChar.appearance.head.eyes.size === 'medium'>>
-		&emsp;Nice $mainChar.appearance.head.eyes.color eyes perfectly complement your face, drawing attention to yourself.
-	<<elseif $mainChar.appearance.head.eyes.size === 'big'>>
-		&emsp;You have big $mainChar.appearance.head.eyes.color eyes. When someone looks at you, the first thing they see is your big eyes.
-	<<elseif $mainChar.appearance.head.eyes.size === 'very big'>>
-		&emsp;People can't help but notice your big anime-like $mainChar.appearance.head.eyes.color eyes. They seem to fascinate everyone around you with their charming allure!
-	<</if>>
-<</if>>
-<<if $mainChar.appearance.head.eyes.lashesSize !== ''>>
-	<br />
-	<<if $mainChar.appearance.head.eyes.lashesSize === 'small'>>
-		&emsp;You have pretty little eyelashes though they are barely visible.
-	<<elseif $mainChar.appearance.head.eyes.lashesSize === 'medium'>>
-		&emsp;Medium sized eyelashes look great! They complement your eyes well but are not the centre of attention.
-	<<elseif $mainChar.appearance.head.eyes.lashesSize === 'big'>>
-		&emsp;Large eyelashes perfectly decorate your eyes, making you look even more expressive and alluring.
-	<</if>>
-<</if>>
-<<if $mainChar.appearance.head.lips.size !== ''>>
-	<br />
-	<<if $mainChar.appearance.head.lips.size === 'thin'>>
-		&emsp;You have discreet thin lips. They suit your face but are scarcely noticable.
-	<<elseif $mainChar.appearance.head.lips.size === 'medium'>>
-		&emsp;You have normal, pretty attractive lips. They look good!
-	<<elseif $mainChar.appearance.head.lips.size === 'nice'>>
-		&emsp;You have full, attractive lips. When people look at you, they are drawn to your seductive lips.
-	<</if>>
-<</if>>
 <br />
-<<switch $mainChar.appearance.makeup>>
-	<<case 'none'>>
-		&emsp;You don't have makeup on right now.
-	<<case 'light'>>
-		&emsp;You are wearing light makeup that enhances some parts of your face.
-	<<case 'tangible'>>
-		&emsp;You are wearing tangible makeup that hides your flaws and emphasizes features.
-	<<case 'bright'>>
-		&emsp;There is a thick layer of makeup on you that has altered your appearance and brightened it up.
-	<<default>>
-		<<run alert('unknown option!'); >>
-<</switch>>
+<<set _charImage = String.format('pics/appearance/face/' + $mainChar.getDescription('hairColor') + '/' + $mainChar.getDescription('hairLength') + '/' + $mainChar.getDescription('hairStyle') + '/image.jpg')>>
+<<set $mainChar.appearance.head.image = _charImage >>
+<p class="image-wrapper-small">[img[String.format(_charImage)]]</p>
 <br />
-<<if $mainChar.sexStats.bj === 0>>
-	&emsp;You have an innocent [[mouth->Character mouth]]
-<<elseif $mainChar.sexStats.bj >= 1 && $mainChar.sexStats.bj < 10>>
-	&emsp;Your [[mouth->Character mouth]] is inexperienced, but it looks cute and adds excitement. You're not sure how to use your tongue and have problems controlling your teeth. You focus too much on your technique to pay attention to your partner. Your throat is very sensitive and resists "foreign objects".
-<<elseif $mainChar.sexStats.bj >= 10 && $mainChar.sexStats.bj < 25>>
-	&emsp;Your [[mouth->Character mouth]] already has some experience. You can even use your tongue to lick and add more stimulation. Sometimes you look into the eyes of your partner. Your throat sensitivity is lower than average and you can sometimes even take a whole dick in your mouth.
-<<elseif $mainChar.sexStats.bj >= 25 && $mainChar.sexStats.bj < 40>>
-	&emsp;You have a pretty well trained [[mouth->Character mouth]]. Your tongue is much more skillfull, meaning you can lick entire shafts and really stimulate pussies. You can confidently maintain eye contact whilst still giving satisfaction to your parnter. Your throat gives almost no complaints and you can take much more dick than most.
-<<elseif $mainChar.sexStats.bj >= 40 && $mainChar.sexStats.bj < 70>>
-	&emsp;You have a professionally trained [[mouth->Character mouth]] that has had a lot of experience! Your tongue confidently turns a cock, skillfully processing its head and professionally working on the barrel. You also remember that you need to pay attention to the testicles. During eye contact, you smile and laugh with your eyes, adding excitement to your partner. Your mouth is almost insensitive and even a big cock can penetrate your throat for a few seconds. You also have a lot of salivation, which helps you a lot. Girls go crazy with your mouth! You are able to expertly serve pussies and bring your partner to several orgasms.
-<<elseif $mainChar.sexStats.bj >= 70>>
-	&emsp;Even experienced porn actresses should praise your [[mouth->Character mouth]]! Your tongue applies perfect pressure and knows where to concentrate. In fact, you can bring your partner to orgasm only with your tongue, without even using your whole mouth! Confidence and vulgarity mixes in your gaze, which forces the partner to submit to your experience and completely relax, concentrating on pleasure. The sensitivity of your throat is completely gone and now you can serve any dick. You can also take a while cock in your mouth right down to the base. As soon as you start having fun with a woman, the only thing she can do is press your head to her pussy and hold it with all her strength, because no one wants to stop the pleasure that you can bring.
-<<endif>>
+Your name is $mainChar.firstName $mainChar.lastName. You are $mainChar.age years old. <br /> <br />
+You have slightly tanned, delicate, pleasant-to-the-touch skin. <br /> <br />
+&emsp;<<=$mainChar.getDescription('hair')>>
+<br/>&emsp;<<=$mainChar.getDescription('eyes')>>
+<br/>&emsp;<<=$mainChar.getDescription('lashes')>>
+<br/>&emsp;<<=$mainChar.getDescription('lips')>>
+<br/>&emsp;<<=$mainChar.getDescription('makeup')>>
 <br />
-<<if $mainChar.sexStats.vaginal === 0>>
-	&emsp;Your $mainChar.eroticLook.intimateHaircut [[pussy->Character pussy]] still has hymen
-<<elseif $mainChar.sexStats.vaginal >= 1 && $mainChar.sexStats.vaginal < 20>>
-	&emsp;You have an inexperienced tight $mainChar.eroticLook.intimateHaircut [[pussy->Character pussy]] between your legs
-<<elseif $mainChar.sexStats.vaginal >= 20 && $mainChar.sexStats.vaginal < 45>>
-	&emsp;Your $mainChar.eroticLook.intimateHaircut [[pussy->Character pussy]] is already comfortable with dicks and looks pretty used.
-<<elseif $mainChar.sexStats.vaginal >= 45 && $mainChar.sexStats.vaginal < 70>>
-	&emsp;Your experienced $mainChar.eroticLook.intimateHaircut [[pussy->Character pussy]] is quite stretched and most members can enter without problems.
-<<elseif $mainChar.sexStats.vaginal >= 70>>
-	&emsp;Your poor $mainChar.eroticLook.intimateHaircut [[hole->Character pussy]] has seen a lot. It is very stretched, but elastic and can take in more than just human cocks...
-<<endif>>
+&emsp;<<=$mainChar.getSexStatsDescription('bj')>>
 <br />
-<<if $mainChar.sexStats.anal === 0>>
-	&emsp;You have a chaste [[anal->Character anal]].
-<<elseif $mainChar.sexStats.anal >= 1 && $mainChar.sexStats.anal < 20>>
-	&emsp;You have a tight [[anal->Character anal]] that can take small dicks.
-<<elseif $mainChar.sexStats.anal >= 20 && $mainChar.sexStats.anal < 50>>
-	&emsp;Your [[anal->Character anal]] is sufficiently developed and you are happy to serve most members.
-<<elseif $mainChar.sexStats.anal >= 50>>
-	&emsp;Your [[anal->Character anal]] gapes more than most. Small dicks no longer give you pleasure, in fact, you almost don't feel them anymore.
-<<endif>>
+&emsp;<<=$mainChar.getSexStatsDescription('vaginal')>>
+<br />
+&emsp;<<=$mainChar.getSexStatsDescription('anal')>>
 <br />
 <<set _cupSizeName = $mainChar.appearance.chest.size.toUpperFirst() + '-cup' >>
 &emsp;Your breasts are EU [[_cupSizeName->Character chest]]
 <<set $mainChar.appearance.chest.image = String.format('pics/appearance/chest/cups/' + $mainChar.appearance.chest.size.toLowerCase() + '/image.jpg')>><br />
 &emsp;You are [[skinny->Character body]]
+
+::Character anal [system] <380,920>
+<<=$mainChar.showPicture($mainChar.getAppearancePicture('anal'))>>
+
+::Character mouth [system] <140,900>
+<<=$mainChar.showPicture($mainChar.getAppearancePicture('bj'))>>
+
+::Character pussy [system] <260,901>
+<<=$mainChar.showPicture($mainChar.getAppearancePicture('pussy'))>>
+

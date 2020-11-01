@@ -15,7 +15,7 @@
 @@
 
 <<set $mom.corruption += 1>>
-<<doAction "{min:10,e:-5}">><</doAction>>
+<<=$mainChar.doAction({e:-5,min:10})>>
 
 <br />
 @@.minus; -10 energy @@ <br />

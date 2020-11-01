@@ -4,28 +4,28 @@
 	<table width="100%" border="5" class="wardrobe-clothes">
 		<caption><<= $args[0].toLocaleUpperFirst() >> clothes</caption>
 			<tbody>
-				<<for _itemTitle, _item range $wardrobe.clothes[$args[0]]>>
+				<<for _itemTitle, _item range $mainChar.wardrobe.clothes[$args[0]]>>
 					<tr>
 						<td width="20%">
 							<<capture _itemTitle>>
-								<<if $wardrobe.clothes[$args[0]][_itemTitle].name === $mainChar.look.clothes[$args[0]].name>>
-									<<set _clothesName = $wardrobe.clothes[$args[0]][_itemTitle].name + " (take off)" >>
+								<<if $mainChar.wardrobe.clothes[$args[0]][_itemTitle].name === $mainChar.look.clothes[$args[0]].name>>
+									<<set _clothesName = $mainChar.wardrobe.clothes[$args[0]][_itemTitle].name + " (take off)" >>
 									<<link _clothesName "Wardrobe">>
 										<<set $mainChar.look.clothes[$args[0]] = $emptyItem >>
 									<</link>>
 								<<else>>
-									<<set _clothesName = $wardrobe.clothes[$args[0]][_itemTitle].name + " (wear)" >>
+									<<set _clothesName = $mainChar.wardrobe.clothes[$args[0]][_itemTitle].name + " (wear)" >>
 									<<link _clothesName "Wardrobe">>
-										<<set $mainChar.look.clothes[$args[0]] = $wardrobe.clothes[$args[0]][_itemTitle] >>
+										<<set $mainChar.look.clothes[$args[0]] = $mainChar.wardrobe.clothes[$args[0]][_itemTitle] >>
 									<</link>>
 								<</if>>
 							<</capture>>
 						</td>
 						<td align="center">
-							[img[$wardrobe.clothes[$args[0]][_itemTitle].image]]
+							[img[$mainChar.wardrobe.clothes[$args[0]][_itemTitle].image]]
 						</td>
 						<td width="20%">
-							<<= $wardrobe.clothes[$args[0]][_itemTitle].description >>
+							<<= $mainChar.wardrobe.clothes[$args[0]][_itemTitle].description >>
 						</td>
 					</tr>
 				<</for>>

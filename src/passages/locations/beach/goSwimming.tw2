@@ -12,6 +12,6 @@
   <</if>>
 <</nobr>>
 
-<<doAction "{b:+1,e:-25}">><</doAction>>
+<<=$mainChar.doAction({b:1,e:-25})>>
 
 [[Go out->Beach]]

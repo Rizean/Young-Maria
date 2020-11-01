@@ -71,7 +71,7 @@
 
 ::Read a book <1600,2500>
 <img src="pics/library/readbook.jpg" alt="read a book">
-<<doAction "{e:-10,h:1}">><</doAction>>
+<<=$mainChar.doAction({e:-10,h:1})>>
 <<return "Back">>
 <<set _random = State.random() * 100 + 1>> \
 <<if _random < 20>> \

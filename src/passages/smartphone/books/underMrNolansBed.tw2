@@ -9,6 +9,6 @@
 ~Several Hours Later~
 
 You find your mind filled with lewd desires... And arousing images...
-<<doAction "{c:2,h:8,e:-70}">><</doAction>>
+<<=$mainChar.doAction({c:2,h:8,e:-70})>>
 
 [[Go back->Smartphone]]

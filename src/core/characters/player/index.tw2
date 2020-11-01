@@ -1,24 +1,14 @@
 ::StoryIncludes
 src/core/characters/player/accessories.tw2
-src/core/characters/player/anal.tw2
-src/core/characters/player/attractivenes.tw2
 src/core/characters/player/body.tw2
 src/core/characters/player/chest.tw2
 src/core/characters/player/createCharacter.tw2
-src/core/characters/player/creationEyes.tw2
-src/core/characters/player/creationHair.tw2
-src/core/characters/player/creationLips.tw2
-src/core/characters/player/editAppearance.tw2
 src/core/characters/player/expendedCharacterInfo.tw2
-src/core/characters/player/hairVariables.tw2
 src/core/characters/player/HaveASexWidget.tw2
 src/core/characters/player/dreams.tw2
 src/core/characters/player/mainCharacter.tw2
 src/core/characters/player/mainCharacterInfo.tw2
-src/core/characters/player/mouth.tw2
 src/core/characters/player/NewDayStatsWidget.tw2
-src/core/characters/player/pussy.tw2
-src/core/characters/player/sexStats.tw2
 src/core/characters/player/shortCharacterInfo.tw2
 
 

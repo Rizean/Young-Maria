@@ -4,7 +4,6 @@ src/core/clothing/clothesItemWidget.tw2
 src/core/clothing/EroticAccessoriesWidget.tw2
 src/core/clothing/LingerieClothesWidget.tw2
 src/core/clothing/mainWardrobe.tw2
-src/core/clothing/Wardrobe.tw2
 
 ::Head Clothes [nobr system] <650,1400>
 <<ClothesItem "head">>

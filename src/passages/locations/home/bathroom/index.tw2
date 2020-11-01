@@ -75,33 +75,33 @@ src/passages/locations/home/bathroom/washFace.tw2
 	&emsp;To the left of the bath is a [[toilet->use toilet]]. <br />
     &emsp;To the left of the toilet is a sink in which you can [[wash your face]] and <<if $mainChar.appearance.teethBrushed>>brush your teeth<<else>>[[brush your teeth]]<<endif>> <br />
     &emsp;A medium-sized [[mirror->Mirror]] hangs above the sink. <br />
-    <<if $inventory.grocery['Shampoo'].count > 0>>
+    <<if $mainChar.inventory.grocery['Shampoo'].count > 0>>
         &emsp;Opposite the sink and toilet is a shower, where you can [[have a shower->Have a shower]]. <br />
     <<else>>
         &emsp;Opposite the sink and toilet is a shower. You could have a shower here... If you had any shampoo. <br />
     <<endif>>
 		<br />
-    	You have $inventory.grocery['Shampoo'].count uses of shampoo.
+    	You have $mainChar.inventory.grocery['Shampoo'].count uses of shampoo.
     	<br />
     	<<if settings.menstruation == true>>
 		<br />
-   		You have <<print $inventory.pharmacy['Tampons'].count>> tampons<<if $mainChar.menstruation.day >= 15 and $inventory.pharmacy['Tampons'].count > 0>> (<<if $mainChar.menstruation.isProtected != true>><<linkreplace "apply">><<set $inventory.pharmacy['Tampons'].count -= 1>><<set $mainChar.menstruation.isProtected = true>>applied<</linkreplace>><<else>>no need<<endif>>)<<endif>>
+   		You have <<print $mainChar.inventory.pharmacy['Tampons'].count>> tampons<<if $mainChar.menstruation.day >= 15 and $mainChar.inventory.pharmacy['Tampons'].count > 0>> (<<if $mainChar.menstruation.isProtected != true>><<linkreplace "apply">><<set $mainChar.inventory.pharmacy['Tampons'].count -= 1>><<set $mainChar.menstruation.isProtected = true>>applied<</linkreplace>><<else>>no need<<endif>>)<<endif>>
     <<endif>>
 	<br />
-	<<if $inventory.pharmacy['Birth control pills'].count > 0>>
+	<<if $mainChar.inventory.pharmacy['Birth control pills'].count > 0>>
 		<br />
-		You have <<print $inventory.pharmacy['Birth control pills'].count>> birth control pills<<if $inventory.pharmacy['Birth control pills'].count > 0>> (<<if $mainChar.pregnancy.isOnPills != true>><<linkreplace "take">><<set $inventory.pharmacy['Birth control pills'].count -= 1>><<set $mainChar.pregnancy.isOnPills = true>>taken<</linkreplace>><<else>>taken<<endif>>)<<endif>>
+		You have <<print $mainChar.inventory.pharmacy['Birth control pills'].count>> birth control pills<<if $mainChar.inventory.pharmacy['Birth control pills'].count > 0>> (<<if $mainChar.pregnancy.isOnPills != true>><<linkreplace "take">><<set $mainChar.inventory.pharmacy['Birth control pills'].count -= 1>><<set $mainChar.pregnancy.isOnPills = true>>taken<</linkreplace>><<else>>taken<<endif>>)<<endif>>
 		<<if $mainChar.menstruation.day >= 15 or $mainChar.pregnancy.knowsAboutPregnancy == true>>
 		<br />
 		[You don't need birth control pills]
 		<<endif>>
 		<br />
 	<<endif>>
-	<<if $inventory.pharmacy['Pregnancy test'].count > 0>>
+	<<if $mainChar.inventory.pharmacy['Pregnancy test'].count > 0>>
 		<br />
-		<<linkreplace "Use pregnancy test (left: <<print $inventory.pharmacy['Pregnancy test'].count>>)">>
+		<<linkreplace "Use pregnancy test (left: <<print $mainChar.inventory.pharmacy['Pregnancy test'].count>>)">>
 			<<set $minute += 10>>
-			<<set $inventory.pharmacy['Pregnancy test'].count -= 1>>
+			<<set $mainChar.inventory.pharmacy['Pregnancy test'].count -= 1>>
 			You used pregnancy test and ... <br />
 			<<if $mainChar.pregnancy.isPregnant == true>>
 				<<set $mainChar.pregnancy.knowsAboutPregnancy = true>>
@@ -115,11 +115,11 @@ src/passages/locations/home/bathroom/washFace.tw2
 			<<endif>>
 		<</linkreplace>>
 	<<endif>>
-	<<if $inventory.grocery['Razors'].count > 0>>
+	<<if $mainChar.inventory.grocery['Razors'].count > 0>>
 		<br />
-		<<linkreplace "Shave legs (razors left: <<print $inventory.grocery['Razors'].count>>)">>
+		<<linkreplace "Shave legs (razors left: <<print $mainChar.inventory.grocery['Razors'].count>>)">>
 			<<set $minute += 20>>
-			<<set $inventory.grocery['Razors'].count -= 1>>
+			<<set $mainChar.inventory.grocery['Razors'].count -= 1>>
 			You shaved your legs. <br />
 			<br />
 			@@.add; Intimate haircut: shaved @@ <<set $mainChar.eroticLook.intimateHaircut = 'shaved'>>

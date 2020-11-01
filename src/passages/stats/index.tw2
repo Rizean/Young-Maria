@@ -27,7 +27,7 @@ Relationship with Ralf: $mainChar.relationships.ralfDog<<endif>>
 <<if $bankFirstVisit == false>>
 
 Bank card password: $cardPassword<<endif>>
-Attractiveness: <<script>>$(output).wiki(variables().mainChar.getAttractiveness())<</script>>
+Attractiveness: <<= $mainChar.getAttractiveness()>>
 Clothes: $mainChar.look.clothes.body.name
 Accessories: [[Accessories]]<<if settings.menstruation == true>>
 
@@ -43,3 +43,14 @@ Sex stats: [[Sex stats]]
 
 Give me your feedback + watch for new games and updates: <a class="patreon" href="https://Patreon.com/MariaModd" target="_blank"><p style="color:white ; background-color: #F76826; border-radius: 15px"><p style="color:#F76826">.</p> Patreon <p style="color:#F76826">.</p></p></a>
 
+::Sex stats [nobr] <1075,225>
+Masturbated: $mainChar.sexStats.masturbated <br />
+Handjobs given: $mainChar.sexStats.handjob <br />
+Blowjobs given: $mainChar.sexStats.bj <br />
+Had vaginal sex: $mainChar.sexStats.vaginal <br />
+Had anal sex: $mainChar.sexStats.anal <br />
+Had gangbangs: $mainChar.sexStats.ganged <br />
+Titsjob given: $mainChar.sexStats.tits <br />
+
+<br />
+<<back "Back">>

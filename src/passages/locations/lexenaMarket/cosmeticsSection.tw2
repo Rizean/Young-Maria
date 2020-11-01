@@ -9,16 +9,6 @@ A beautiful young girl approaches you. "Hello! We have plenty of cosmetics for t
     <<CosmeticItemWidget _cosmeticItem>>
 <</for>>
 
-<<if settings.lessPrices == true>>
-	<<if $wereLexenaCosmeticsPricesReduced != true>>
-		<<set $wereLexenaCosmeticsPricesReduced = true>>
-	<<endif>>
-<<else>>
-	<<if $wereLexenaCosmeticsPricesReduced == true>>
-		<<set $wereLexenaCosmeticsPricesReduced = false>>
-	<<endif>>
-<<endif>>
-
 <br />
 [[Go back->Lexena Market]]
 
@@ -28,55 +18,31 @@ A beautiful young girl approaches you. "Hello! We have plenty of cosmetics for t
 	<<set _itemName = $args[0].name + ' (' + $args[0].count + ')'; >>
 	<<link _itemName "Lexena Market Cosmetic Item View Widget">>
 		<<set $tempCosmeticItem = $args[0] >>
-	<</link>> for $
-	<<if settings.lessPrices == true>>
-		<<if $wereLexenaCosmeticsPricesReduced != true>>
-			<<set $args[0].price /= 2>>
-		<<endif>>
-	<<else>>
-		<<if $wereLexenaCosmeticsPricesReduced == true>>
-			<<set $args[0].price *= 2>>
-		<<endif>>
-	<<endif>>
-	<<=$args[0].price>> -
+	<</link>> for $<<=$mainChar.getPrice($args[0].price)>> -
     <<if $args[0].use === 'single'>>
-        <<if $inventory.has('cosmetics', $args[0].name)>>
-            You already have this!
+        <<if $mainChar.inventory.has('cosmetics', $args[0].name)>>You already have this!
         <<else>>
-            <<if $mainChar.money < $args[0].price>>
-                You don't have enough money!
+			<<if $mainChar.canBuy($args[0].price)>>
+                <<link "Buy">><<run $mainChar.buy({price: $args[0].price, type: 'item', subType: 'cosmetics', item: $args[0], goto: 'Lexena cosmetics section', minutes: 1})>><</link>>
             <<else>>
-                <<link "Buy">>
-					<<set $minute += 1>>
-                    <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.add('cosmetics', $args[0]);>>
-                    <<goto "Lexena cosmetics section">>
-                <</link>>
+				You don't have enough money!
             <<endif>>
         <<endif>>
     <<elseif $args[0].use === 'many'>>
-        <<if ! $inventory.has('cosmetics', $args[0].name)>>
-            <<if $mainChar.money < $args[0].price>>
-                You don't have enough money!
+        <<if ! $mainChar.inventory.has('cosmetics', $args[0].name)>>
+            <<if $mainChar.canBuy($args[0].price)>>
+					<<link "Buy">><<run $mainChar.buy({price: $args[0].price, type: 'item', subType: 'cosmetics', item: $args[0], goto: 'Lexena cosmetics section', minutes: 1})>><</link>>
             <<else>>
-                <<link 'Buy'>>
-					<<set $minute += 1>>
-                    <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.add('cosmetics', $args[0]);>>
-                    <<goto "Lexena cosmetics section">>
-                <</link>>
+				You don't have enough money!
             <<endif>>
         <<else>>
-            <<if $mainChar.money < $args[0].price>>
-                You don't have enough money!
-            <<else>>
-                <<set _countTitle = 'Buy (You have ' + $inventory.cosmetics[$args[0].name].count + ')'>>
+            <<if $mainChar.canBuy($args[0].price)>>
+                <<set _countTitle = 'Buy (You have ' + $mainChar.inventory.cosmetics[$args[0].name].count + ')'>>
                 <<link _countTitle>>
-					<<set $minute += 1>>
-                    <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.addCount('cosmetics', $args[0]);>>
-                    <<goto "Lexena cosmetics section">>
+                    <<link "Buy">><<run $mainChar.buy({price: $args[0].price, type: 'item', subType: 'cosmetics', item: $args[0], goto: 'Lexena cosmetics section', minutes: 1, add: true})>><</link>>
                 <</link>>
+            <<else>>
+				You don't have enough money!
             <<endif>>
         <<endif>>
     <<endif>>

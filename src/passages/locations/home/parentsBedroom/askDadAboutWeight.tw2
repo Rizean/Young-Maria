@@ -25,7 +25,7 @@
 	Thanks, dad!
 @@
 
-<<doAction "{min:10,e:-5}">><</doAction>>
+<<=$mainChar.doAction({e:-5,min:10})>>
 <<set $dad.corruption += 1>>
 <br />
 @@.add; +1 dad corruption @@ <br />

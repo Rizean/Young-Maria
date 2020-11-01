@@ -8,6 +8,6 @@
 ~Several Hours Later~
 
 You tried but you knew you were loud. You're sure your parents heard... Something...
-<<doAction "{c:2,h:8,e:-70}">><</doAction>>
+<<=$mainChar.doAction({c:2,h:8,e:-70})>>
 
 [[Go back->Smartphone]]

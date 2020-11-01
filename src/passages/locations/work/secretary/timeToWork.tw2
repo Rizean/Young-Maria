@@ -52,7 +52,7 @@
     &emsp;<p class="char">"It's ok, ma'am."</p> <br />
     &emsp;"Well... Erm... Forget this happened." She gives you one last apologetic smile before fleeing from the awkward situation she created. <br /> <br />
     &emsp;That was... interesting. I wonder who Betty is? You shrug and go back to your work. <br />
-    <<doAction "{e:-5}">><</doAction>>
+    <<=$mainChar.doAction({e:-5})>>
 
     <<if $partOfWork == 4>>
         [[Go home->living room]] <br />
@@ -107,7 +107,7 @@
     &emsp;"Ah, don't worry, Mr. McEvoy is an old friend..." He smiles and puts a chocolate bar in front of you. "I'm sure he won't mind you making an exception for me?" <br />
     <&emsp;p class="char">"... Sure :3"</p> <br /> <br />
     &emsp;What a sweet young man... <br />
-    <<doAction "{e:5}">><</doAction>>
+    <<=$mainChar.doAction({e:5})>>
     <br />
     <<if $partOfWork == 4>>
         [[Go home->living room]] <br />

@@ -8,17 +8,6 @@ You look around the store. There's plenty of groceries to choose from in here...
 <<for _groceryItemTitle, _groceryItem range $lexenaMarket.dime_time>>
     <<GroceryItemLexenaMarket _groceryItem>>
 <</for>>
-
-<<if settings.lessPrices == true>>
-	<<if $wereDimeTimePricesReduced != true>>
-		<<set $wereDimeTimePricesReduced = true>>
-	<<endif>>
-<<else>>
-	<<if $wereDimeTimePricesReduced == true>>
-		<<set $wereDimeTimePricesReduced = false>>
-	<<endif>>
-<<endif>>
-
 <br />
 [[Go back->Lexena Market]]
 
@@ -41,7 +30,7 @@ You look around the store. There's plenty of groceries to choose from in here...
 	<<endif>>
 	<<=$args[0].price>> -
     <<if $args[0].use === 'single'>>
-        <<if $inventory.has('grocery', $args[0].name)>>
+        <<if $mainChar.inventory.has('grocery', $args[0].name)>>
             You already have this!
         <<else>>
             <<if $mainChar.money < $args[0].price>>
@@ -50,20 +39,20 @@ You look around the store. There's plenty of groceries to choose from in here...
                 <<link "Buy">>
 					<<set $minute += 1>>
                     <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.add('grocery', $args[0]);>>
+                    <<run $mainChar.inventory.add('grocery', $args[0]);>>
                     <<goto 'Dime Time'>>
                 <</link>>
             <<endif>>
         <<endif>>
     <<elseif $args[0].use === 'many'>>
-        <<if ! $inventory.has('grocery', $args[0].name)>>
+        <<if ! $mainChar.inventory.has('grocery', $args[0].name)>>
             <<if $mainChar.money < $args[0].price>>
                 You don't have enough money!
             <<else>>
                 <<link 'Buy'>>
 					<<set $minute += 1>>
                     <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.add('grocery', $args[0]);>>
+                    <<run $mainChar.inventory.add('grocery', $args[0]);>>
                     <<goto 'Dime Time'>>
                 <</link>>
             <<endif>>
@@ -71,11 +60,11 @@ You look around the store. There's plenty of groceries to choose from in here...
             <<if $mainChar.money < $args[0].price>>
                 You don't have enough money!
             <<else>>
-                <<set _countTitle = 'Buy (You have ' + $inventory.grocery[$args[0].name].count + ')'>>
+                <<set _countTitle = 'Buy (You have ' + $mainChar.inventory.grocery[$args[0].name].count + ')'>>
                 <<link _countTitle>>
 					<<set $minute += 1>>
                     <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.addCount('grocery', $args[0]);>>
+                    <<run $mainChar.inventory.addCount('grocery', $args[0]);>>
                     <<goto 'Dime Time'>>
                 <</link>>
             <<endif>>

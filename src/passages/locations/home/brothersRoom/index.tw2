@@ -113,12 +113,12 @@ You are in your [[brother's room->brothers room description]]
 	@@
 <</if>>
 <br />
-<<doAction "{e:-10,min:30}">><</doAction>>
+<<=$mainChar.doAction({e:-10,min:30})>>
 [[Back->Brother room]]
 
 ::Train with brother <2500,0>
 @@.bc-text; Hey sis, I can't talk to you yet @@
-<<doAction "{e:-2}">><</doAction>>
+<<=$mainChar.doAction({min:1})>>
 [[Back->Brother room]]
 
 ::Brother sitting in sofa brothers room [nobr] <2120,0>

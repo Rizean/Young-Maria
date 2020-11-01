@@ -3,7 +3,6 @@ src/passages/locations/home/bedroom/bed.tw2
 src/passages/locations/home/bedroom/checkFreshNews.tw2
 src/passages/locations/home/bedroom/inBedPicture.tw2
 src/passages/locations/home/bedroom/messages.tw2
-src/passages/locations/home/bedroom/mirror.tw2
 src/passages/locations/home/bedroom/nap.tw2
 src/passages/locations/home/bedroom/sleep.tw2
 src/passages/locations/home/bedroom/trainYourThroat.tw2
@@ -17,13 +16,14 @@ src/passages/locations/home/bedroom/useLaptop.tw2
     &emsp;Most of your furniture is made of simple birch wood but with the pale purple walls and pretty decorations, your room is full of bright colours. <br />
     &emsp;Located in the center is a large [[double bed->Home bed]]. You didn't have one in the old place so this is a definite upgrade. <br />
     &emsp;To the left of the bed is a small bedside table with a lamp and some of your trinkets perched on top. <br />
-    <<if $inventory.has('techItems', 'Laptop')>>
+    <<if $mainChar.inventory.has('techItems', 'Laptop')>>
        &emsp;Opposite the bed is your desk which has a [[laptop->Use laptop]] on. Around the laptop are some stationary items. <br />
     <<else>>
         &emsp;Opposite the bed is your desk littered with most of your stationary items. There is room for a laptop here. <br />
     <</if>>
     &emsp;To the right of your desk is a TV stand with extra shelving and drawers. In the middle rests a small silver TV. <br />
    &emsp;Next to your bed, on the right, is your [[wardrobe->Wardrobe]]. Most of your clothes hang up nicely inside. <br />
+   &emsp;Beside your Wardrobe is a [[mirror->Home mirror]].<br />
     &emsp;There is plenty of room in front of your wardrobe and TV stand for some exercise. <br />
     <<if $isBackgroundChangerOwned == true>>
         [[Change background]] <br />
@@ -53,3 +53,9 @@ src/passages/locations/home/bedroom/useLaptop.tw2
 		&emsp;You make a note of what you have to do. But perhaps it's time to go to Lexena Market and buy some "girl pills"? :3 <</linkreplace>><<else>>Not enough money<<endif>>
 	<<endif>>
 <</nobr>>
+
+
+::Home mirror [system] <1120,600>
+<<include "Main character info">>
+
+[[Bedroom]]

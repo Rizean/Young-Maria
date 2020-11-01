@@ -27,6 +27,6 @@ Hell yes! You want this so badly right now. And your hot kiss is the best answer
 
 He helps you to go out and says Goodbye. What a nice young rapist, hehe.
 
-<<doAction "{c:+1,e:-10}">><</doAction>><<HaveASexWidget "vaginal" "stranger">>
+<<=$mainChar.doAction({c:1,e:-10})>><<HaveASexWidget "vaginal" "stranger">>
 
 [[Back to beach->Beach]]

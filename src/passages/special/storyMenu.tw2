@@ -1,4 +1,4 @@
-::StoryMenu# <100,0>
+::StoryMenu <100,0>
 <<if passage() == "Beginning">>
 	<<link "Changelog">>
 		<<set $enteredFromBeginning = true>>

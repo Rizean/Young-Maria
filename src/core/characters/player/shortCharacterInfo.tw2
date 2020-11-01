@@ -3,26 +3,4 @@
 <<set $mainChar.appearance.head.image = _charImage >>
 <p class="image-wrapper-small">[img[String.format(_charImage)]]</p>
 <br />
-<<if $mainChar.appearance.head.eyes.lashesSize !== ''>>
-	<br />
-	<<if $mainChar.appearance.head.eyes.lashesSize === 'small'>>
-		&emsp;You have pretty little eyelashes though they are barely visible.
-	<<elseif $mainChar.appearance.head.eyes.lashesSize === 'medium'>>
-		&emsp;Medium sized eyelashes look great! They complement your eyes well but are not the centre of attention.
-	<<elseif $mainChar.appearance.head.eyes.lashesSize === 'big'>>
-		&emsp;Large eyelashes perfectly decorate your eyes, making you look even more expressive and alluring
-	<</if>>
-<</if>>
-<br />
-<<switch $mainChar.appearance.makeup>>
-	<<case 'none'>>
-		&emsp;You don't have makeup on right now.
-	<<case 'light'>>
-		&emsp;You are wearing light makeup that enhances some parts of your face.
-	<<case 'tangible'>>
-		&emsp;You are wearing tangible makeup that hides your flaws and emphasizes features.
-	<<case 'bright'>>
-		&emsp;There is a thick layer of makeup on you that has altered your appearance and brightened it up.
-	<<default>>
-		<<run alert('unknown option!'); >>
-<</switch>>
+<br/>&emsp;<<=$mainChar.getDescription('makeup')>>

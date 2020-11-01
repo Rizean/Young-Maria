@@ -194,7 +194,7 @@ Energy:
     <</if>>
     <<include "Set default character state">>
     <<include "Sibling Character">>
-    <<run $inventory.add('grocery', {
+    <<run $mainChar.inventory.add('grocery', {
         name: 'Shampoo',
         image: 'pics/personal_items/shampoo.jpg',
         description: 'Keeps your body and hair clean',
@@ -202,7 +202,7 @@ Energy:
         price: 150,
         use: 'many',
     });>>
-	<<run $inventory.add('grocery', {
+	<<run $mainChar.inventory.add('grocery', {
 		name: 'Razors',
 		image: 'pics/personal_items/razors.jpg',
 		description: 'Cuts your bush',
@@ -210,7 +210,7 @@ Energy:
 		price: 200,
 		use: 'many',
 	});>>
-	<<run $inventory.add('pharmacy', {
+	<<run $mainChar.inventory.add('pharmacy', {
 		name: 'Tampons',
 		image: 'pics/personal_items/tampons.jpg',
 		description: 'Take on unexpected moments',
@@ -218,7 +218,7 @@ Energy:
 		price: 250,
 		use: 'many',
 	});>>
-	<<run $inventory.add('pharmacy', {
+	<<run $mainChar.inventory.add('pharmacy', {
 			name: 'Pregnancy test',
 			image: 'pics/personal_items/pregnancy_test.jpg',
 			description: 'The game started...',
@@ -226,7 +226,7 @@ Energy:
 			price: 100,
 			use: 'many',
 	});>>
-	<<run $inventory.add('pharmacy', {
+	<<run $mainChar.inventory.add('pharmacy', {
 			name: 'Birth control pills',
 			image: 'pics/personal_items/birth_control_pills.jpg',
 			description: "Who doesn't want a lot of hassle and sleepless nights?",
@@ -234,7 +234,7 @@ Energy:
 			price: 150,
 			use: 'many',
 	});>>
-	<<run $inventory.add('pharmacy', {
+	<<run $mainChar.inventory.add('pharmacy', {
 			name: 'Vitamins',
 			image: 'pics/personal_items/vitamins.jpg',
 			description: 'Drink once a day for good health and energy!',

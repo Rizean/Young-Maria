@@ -1,5 +1,5 @@
 ::Go jogging <3400,1800>
-<<if ! $wardrobe.available.includes('Sport outfit')>>Oops, it looks like you don't have a propper outfit.. Visit [[Clothes Shop]]
+<<if ! $mainChar.wardrobe.available.includes('Sport outfit')>>Oops, it looks like you don't have a propper outfit.. Visit [[Clothes Shop]]
 
 [[Go back->Park]]
 <<else>><<set $hour += 1>>You decide you want to go for a run. With the change of clothes you brought, you head to the public toilets and swap into your athletic wear. You then put your other clothes in your bag, exit the toilets and begin your jog.
@@ -13,6 +13,6 @@ As you run through the park, you feel the cold wind on your soft skin. It helps 
 	  <<set $wasJoggingEnergyIncreased = true>>
   <</if>>
 <</nobr>>
-<<doAction "{b:1,e:-25}">><</doAction>>
+<<=$mainChar.doAction({b:1,e:-30,min:30})>>
 
 [[Go back->Park]]<<endif>>

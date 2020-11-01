@@ -1,45 +1,19 @@
 ::Have a nap [system] <863,600>
-<<set $hour += $napHour>><<set $minute += $napMinute>><div class="default-image-wrapper"><img src="pics/homeNap.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/homeNap.jpg"></div>
 
 You take a <<nobr>>
 
-<<if $napHour > 0>>
-	$napHour hour<<if $napHour > 1>>s<<endif>>
-<<endif>>
+<<if $napHour > 0>>$napHour hour<<if $napHour > 1>>s<<endif>><<endif>>
 
-<<if $napHour > 0 and $napMinute > 0>>
-	 and
-<<endif>>
+<<if $napHour > 0 and $napMinute > 0>>and<<endif>>
 
-<<if $napMinute > 0>>
-	$napMinute minute<<if $napMinute > 1>>s<<endif>>
-<<endif>>
+<<if $napMinute > 0>>$napMinute minute<<if $napMinute > 1>>s<<endif>><<endif>>
 
 <</nobr>> long nap. You feel a little more refreshed.
 
 <<nobr>>
 
-<<if $napHour < 1 and $napMinute < 20>>
-	<<doAction "{e:+2}">><</doAction>>
-<<elseif $napHour < 1 and $napMinute >= 20>>
-    <<doAction "{e:+4}">><</doAction>>
-<<elseif $napHour == 1 and $napMinute < 30>>
-	<<doAction "{e:+5}">><</doAction>>
-<<elseif $napHour == 1 and $napMinute >= 30>>
-	<<doAction "{e:+7}">><</doAction>>
-<<elseif $napHour == 2 and $napMinute < 30>>
-	<<doAction "{e:+10}">><</doAction>>
-<<elseif $napHour == 2 and $napMinute >= 30>>
-	<<doAction "{e:+15}">><</doAction>>
-<<elseif $napHour == 3 and $napMinute < 30>>
-	<<doAction "{e:+20}">><</doAction>>
-<<elseif $napHour == 3 and $napMinute >= 30>>
-	<<doAction "{e:+25}">><</doAction>>
-<<elseif $napHour == 4 and $napMinute < 30>>
-	<<doAction "{e:+30}">><</doAction>>
-<<elseif $napHour == 4 and $napMinute >= 30>>
-	<<doAction "{e:+35}">><</doAction>>
-<<endif>>
+<<=$mainChar.takeNap({h:$napHour,m:$napMinute})>>
 
 <</nobr>>
 

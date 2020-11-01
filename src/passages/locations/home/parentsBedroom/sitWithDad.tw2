@@ -8,7 +8,7 @@ You make your way over to your dad who's sat at the desk, working. You lean agai
     +1 relations with dad
 </p> <br />
 
-<<doAction "{min:20,e:-5}">><</doAction>>
+<<=$mainChar.doAction({e:-5,min:10})>>
 <<set $mainChar.relationships.dad += 1>>
 
 <<if $mainChar.look.clothes.body.name === '' && $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name === ''>>

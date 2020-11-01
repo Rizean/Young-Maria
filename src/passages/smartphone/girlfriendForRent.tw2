@@ -61,8 +61,7 @@ You can`t go out in these clothes!<<else>>
 <<endif>>
 <br />
 You enjoyed it a lot... <br />
-<<doAction "{h:4,e:-70,c:1,m:60}">><</doAction>>
-
+<<=$mainChar.doAction({h:4,e:-70,c:1,m:60})>>
 
 <<if $mainChar.beauty >= 20>>
     <<if $mainChar.beauty >= 20 && $mainChar.beauty < 40>>

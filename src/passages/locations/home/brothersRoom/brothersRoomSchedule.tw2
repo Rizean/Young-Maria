@@ -270,7 +270,7 @@
 
 			<br />
 
-            <<doAction "{e:-10,c:1}">><</doAction>>
+            <<=$mainChar.doAction({e:-10,c:1})>>
 
 			<<set $sibling.corruption += 1>>
 			<<set $mainChar.relationships.sibling += 1>>

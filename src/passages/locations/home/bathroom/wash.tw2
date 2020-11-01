@@ -10,10 +10,9 @@
 <<set $minute += 30>>
 <<set $mainChar.appearance.makeup = 'none'>>
 <<set $mainChar.appearance.isCombed = false>>
-<<set $mainChar.cleanliness = 100>>
 <<set $mainChar.appearance.head.lips.color = 'none'>>
-<<set $inventory.grocery['Shampoo'].count -= 1>>
-<<doAction "{e:20}">><</doAction>>
-@@.add; +100 Cleanliness @@ <br />
+<<set $mainChar.inventory.grocery['Shampoo'].count -= 1>>
+<<=$mainChar.doAction({e:20,cl:100,min:30})>>
+
 <br />
 [[Bathroom]]

@@ -58,7 +58,7 @@ You want more and so decide to feed the flame. <br />
 				<<include "family teasing reaction">>
 			<<endif>>
 
-            <<doAction "{min:20,e:-10}">><</doAction>>
+            <<=$mainChar.doAction({e:-10,min:20})>>
 			<br />
 			[[Continue->living room]]
 		<</replace>>
@@ -92,7 +92,7 @@ You want more and so decide to feed the flame. <br />
 			<<if $mainChar.corruption >= 35>>
 				[[it seems to you that you can go further...->play with tits lr ot]] <br />
 			<<endif>>
-			<<doAction "{min:20,e:-10}">><</doAction>>
+			<<=$mainChar.doAction({e:-10,min:20})>>
 			 <br />
 			[[Continue->living room]]
 		<</replace>>
@@ -123,7 +123,7 @@ You want more and so decide to feed the flame. <br />
 			<<endif>>
 
 			<br />
-			<<doAction "{min:20,e:-10}">><</doAction>>
+			<<=$mainChar.doAction({e:-10,min:20})>>
 			[[Continue->living room]]
 		<</replace>>
 	<</linkreplace>>

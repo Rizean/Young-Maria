@@ -1,2 +1,0 @@
-::Attractivenes <0,1100>
-<<script>>(()=>$(output).wiki(variables().mainChar.getAttractiveness()))()<</script>>

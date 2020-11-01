@@ -13,7 +13,7 @@
 	<<endif>>
 <<endif>>
 
-<<doAction "{e:-10}">><</doAction>>
+<<=$mainChar.doAction({e:-10})>>
 @@.mc-text; Hey, bro, can I play with you? @@
 <<if _event == 1>>
 	@@.bc-text; What? @@

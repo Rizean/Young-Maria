@@ -1,8 +1,0 @@
-::Edit appearance [nobr system] <1696,300>
-[[Hair->Creation hair]] <br />
-[[Eyes->Creation eyes]] <br /><!--
-[[Lips->Creation lips]] <br />-->
-[[Breasts->Creation breasts]] <br />
-<<include "Main character info">>
-<br />
-[[Save and go back->Create the character]]

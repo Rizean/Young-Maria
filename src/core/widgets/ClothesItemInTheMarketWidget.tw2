@@ -2,31 +2,17 @@
 <<widget "ClothesItemInTheMarket">>
 	<!-- $args[0] - market clothes item object -->
 	<!-- $args[1] - market clothes item title -->
+	<!-- $args[2] - type -->
 	* <<link $args[0].name "Lexena Market Clothes Item View">>
 		<<set $tempClothesItem = $args[0] >>
-	<</link>> for $
-	<<if settings.lessPrices == true>>
-		<<if $wereClothesShopPricesReduced != true>>
-			<<set $args[0].price /= 2>>
-		<<endif>>
-	<<else>>
-		<<if $wereClothesShopPricesReduced == true>>
-			<<set $args[0].price *= 2>>
-		<<endif>>
-	<<endif>>
-	<<=$args[0].price>> -
-	<<if $wardrobe.available.includes($args[0].name)>>
+	<</link>> for $<<=$mainChar.getPrice($args[0].price)>> -
+	<<if $mainChar.wardrobe.available.includes($args[0].name)>>
 		You already have this!
 	<<else>>
-		<<if $mainChar.money < $args[0].price>>
-			You don't have enough money!
+		<<if $mainChar.canBuy($args[0].price)>>
+		    <<link "Buy">><<run $mainChar.buy({price: $args[0].price, type: $args[2], subType: $args[0].type, item: $args[0], goto: 'Clothes Shop'})>><</link>>
 		<<else>>
-			<<link "Buy">>
-				<<set $minute += 1>>
-				<<set $mainChar.money -= $args[0].price>>
-				<<run $wardrobe.addItem($args[0].type, $args[0]); >>
-				<<goto "Clothes Shop">>
-			<</link>>
+            You don't have enough money!
 		<<endif>>
 	<<endif>>
 	<br />

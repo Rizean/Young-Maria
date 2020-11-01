@@ -351,4 +351,4 @@
 <</switch>>
 [[Back->Brother room]]
 <<set $mainChar.relationships.sibling += 1>>
-<<doAction "{e:-10,min:15}">><</doAction>>
+<<=$mainChar.doAction({e:-10,min:15})>>

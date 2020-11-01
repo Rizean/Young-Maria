@@ -1,5 +1,5 @@
 ::Copyrighting [system] <4725,1725>
-<<if $mainChar.energy < 20>>You are too tired to work.
+<<if !$mainChar.canDoAction({energy: 20})>>You are too tired to work.
 [[Go back->JobHunters.net]]<<else>>&emsp;You worked hard and wrote many advertising and promotional material. Once it was done, you submitted the work and got paid...
 <<nobr>>
   <<if $mainChar.skills.job.copyright <= 4>>
@@ -10,12 +10,12 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<<doAction "{h:6,e:-20}">><</doAction>> <p class="add">+<<= $mainChar.skills.job.copyright * 10>>$</p> <<set $mainChar.money += $mainChar.skills.job.copyright * 10>>
+<<=$mainChar.doAction({e:-20,h:6,m:$mainChar.skills.job.copyright * 10})>>
 
 [[Go back->JobHunters.net]]<<endif>>
 
 ::Testing new games [system] <4850,1725>
-<<if $mainChar.energy < 30>>You are too tired to work.
+<<if !$mainChar.canDoAction({energy: 30})>>You are too tired to work.
 [[Go back->JobHunters.net]]<<else>>&emsp;You worked hard, testing some new and exciting upcoming games. Some were more indie and a little shit but nonetheless pretty good! You enjoyed your work and the best part? You got paid!
 <<nobr>>
   <<if $mainChar.skills.job.testing <= 4>>
@@ -26,12 +26,12 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<<doAction "{h:5,e:-30}">><</doAction>><p class="add">+<<= $mainChar.skills.job.testing * 18>>$</p> <<set $mainChar.money += $mainChar.skills.job.testing * 18>>
+<<=$mainChar.doAction({e:-30,h:5,m:$mainChar.skills.job.testing * 18})>>
 
 [[Go back->JobHunters.net]]<<endif>>
 
 ::Writing opinions [system] <4975,1725>
-<<if $mainChar.energy < 30>>You are too tired to work.
+<<if !$mainChar.canDoAction({energy: 30})>>You are too tired to work.
 [[Go back->JobHunters.net]]<<else>>&emsp;You worked hard and wrote some good opinions about products and goods you've not seen before. Once it was done, you submitted your work and waited for the money to transfer...
 <<nobr>>
   <<if $mainChar.skills.job.writingOpinions <= 4>>
@@ -42,12 +42,12 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<<doAction "{h:8,e:-30}">><</doAction>><p class="add">+<<= $mainChar.skills.job.writingOpinions * 20>>$</p> <<set $mainChar.money += $mainChar.skills.job.writingOpinions * 20>>
+<<=$mainChar.doAction({e:-30,h:8,m:$mainChar.skills.job.writingOpinions * 20})>>
 
 [[Go back->JobHunters.net]]<<endif>>
 
 ::Make design [system] <5100,1725>
-<<if $mainChar.energy < 60>>You are too tired to work.
+<<if !$mainChar.canDoAction({energy: 60})>>You are too tired to work.
 [[Go back->JobHunters.net]]<<else>>&emsp;You worked hard and made some pretty designs for a website. Good job! Once you'd uploaded your work, you waited for the money to come in...
 <<nobr>>
   <<if $mainChar.skills.job.makeDesign <= 4>>
@@ -58,12 +58,12 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<<doAction "{h:8,e:-60}">><</doAction>><p class="add">+<<= $mainChar.skills.job.makeDesign * 60>>$</p> <<set $mainChar.money += $mainChar.skills.job.makeDesign * 60>>
+<<=$mainChar.doAction({e:-60,h:8,m:$mainChar.skills.job.makeDesign * 60})>>
 
 [[Go back->JobHunters.net]]<<endif>>
 
 ::Writing documentation [system] <5225,1725>
-<<if $mainChar.energy < 20>>You are too tired to work.
+<<if !$mainChar.canDoAction({energy: 20})>>You are too tired to work.
 [[Go back->JobHunters.net]]<<else>>&emsp;You worked hard and wrote a decent documentation for some e-commerce project or other. Once it was complete, you sent it over and awaited your pay...
 <<nobr>>
   <<if $mainChar.skills.job.writingDocs <= 4>>
@@ -74,6 +74,6 @@
 	  <</if>>
   <</if>>
 <</nobr>>
-<<doAction "{h:5,e:-20}">><</doAction>><p class="add">+<<= $mainChar.skills.job.writingDocs * 20>>$</p> <<set $mainChar.money += $mainChar.skills.job.writingDocs * 20>>
+<<=$mainChar.doAction({e:-20,h:5,m:$mainChar.skills.job.writingDocs * 20})>>
 
 [[Go back->JobHunters.net]]<<endif>>

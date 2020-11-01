@@ -9,6 +9,6 @@
 ~Several Hours Later~
 
 You've locked the door and a good thing too... You are soaked and incredibly satisfied...
-<<doAction "{c:2,h:8,e:-70}">><</doAction>>
+<<=$mainChar.doAction({c:2,h:8,e:-70})>>
 
 [[Go back->Smartphone]]

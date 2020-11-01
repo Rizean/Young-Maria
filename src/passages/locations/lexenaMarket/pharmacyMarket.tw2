@@ -40,7 +40,7 @@ A middle-aged woman with dark eyes gives you a sad smile. "Hi there, we offer a 
 	<<endif>>
 	<<=$args[0].price>> -
     <<if $args[0].use === 'single'>>
-        <<if $inventory.has('pharmacy', $args[0].name)>>
+        <<if $mainChar.inventory.has('pharmacy', $args[0].name)>>
             You already have this!
         <<else>>
             <<if $mainChar.money < $args[0].price>>
@@ -49,20 +49,20 @@ A middle-aged woman with dark eyes gives you a sad smile. "Hi there, we offer a 
                 <<link "Buy">>
 					<<set $minute += 1>>
                     <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.add('pharmacy', $args[0]);>>
+                    <<run $mainChar.inventory.add('pharmacy', $args[0]);>>
                     <<goto '"Pharmacy" market'>>
                 <</link>>
             <<endif>>
         <<endif>>
     <<elseif $args[0].use === 'many'>>
-        <<if ! $inventory.has('pharmacy', $args[0].name)>>
+        <<if ! $mainChar.inventory.has('pharmacy', $args[0].name)>>
             <<if $mainChar.money < $args[0].price>>
                 You don't have enough money!
             <<else>>
                 <<link 'Buy'>>
 					<<set $minute += 1>>
                     <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.add('pharmacy', $args[0]);>>
+                    <<run $mainChar.inventory.add('pharmacy', $args[0]);>>
                     <<goto '"Pharmacy" market'>>
                 <</link>>
             <<endif>>
@@ -70,11 +70,11 @@ A middle-aged woman with dark eyes gives you a sad smile. "Hi there, we offer a 
             <<if $mainChar.money < $args[0].price>>
                 You don't have enough money!
             <<else>>
-                <<set _countTitle = 'Buy (You have ' + $inventory.pharmacy[$args[0].name].count + ')'>>
+                <<set _countTitle = 'Buy (You have ' + $mainChar.inventory.pharmacy[$args[0].name].count + ')'>>
                 <<link _countTitle>>
 					<<set $minute += 1>>
                     <<set $mainChar.money -= $args[0].price>>
-                    <<run $inventory.addCount('pharmacy', $args[0]);>>
+                    <<run $mainChar.inventory.addCount('pharmacy', $args[0]);>>
                     <<goto '"Pharmacy" market'>>
                 <</link>>
             <<endif>>

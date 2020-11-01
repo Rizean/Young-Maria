@@ -12,6 +12,6 @@
 ~Several Hours Later~
 
 You are so horny after reading that... You wish you had a CEO to fall in love with...
-<<doAction "{c:2,h:8,e:-70}">><</doAction>>
+<<=$mainChar.doAction({c:2,h:8,e:-70})>>
 
 [[Go back->Smartphone]]

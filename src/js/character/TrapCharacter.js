@@ -1,15 +1,13 @@
-::Sissy Character Class <400,600>
-<<script>>
-  window.SissyCharacter = function (config) {
-	  this.gender = $GENDER_FEMALE;
-	  this.genitals = $GENITALS_MALE;
+window.TrapCharacter = function (config) {
+    this.gender = $GENDER_FEMALE;
+    this.genitals = $GENITALS_MALE;
 
-	  Object.keys(config).forEach(function (pn) {
-		  this[pn] = clone(config[pn]);
-	  }, this);
-  };
+    Object.keys(config).forEach(function (pn) {
+        this[pn] = clone(config[pn]);
+    }, this);
+};
 
-  SissyCharacter.prototype = BasicCharacter;
+TrapCharacter.prototype = BasicCharacter;
 
 //  BasicCharacter.prototype.clone = function () {
 // 	  return new BasicCharacter(this);
@@ -26,4 +24,3 @@
 // 	  	'new BasicCharacter($ReviveData$)', ownData
 // 	  );
 //   };
-<</script>>

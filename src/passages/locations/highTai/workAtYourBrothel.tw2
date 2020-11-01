@@ -1,57 +1,36 @@
 ::Work at your brothel [nobr] <2800,2675>
-<<set _time to either(20,25,30,35,40,45,50,55)>>
-<<set $minute += _time>>
-<<set $hour += 1>>
 &emsp;You sit on the bed in one of the private rooms waiting for your first customer. After some time, a young man comes in and asks for your service. Guess it's time to work a bit... <br />
 <br />
 <<set _image to random(1, 8)>>
 <<if _image == 1>>
-    <div class="default-image-wrapper">
-        <img src="pics/brothelWorking1.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/brothelWorking1.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 2>>
-    <div class="default-image-wrapper">
-        <img src="pics/brothelWorking2.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/brothelWorking2.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 3>>
-    <div class="default-image-wrapper">
-        <img src="pics/brothelWorking3.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/brothelWorking3.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 4>>
-    <div class="default-image-wrapper">
-        <img src="pics/brothelWorking4.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/brothelWorking4.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 5>>
-    <div class="default-image-wrapper">
-        <img src="pics/brothelWorking5.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/brothelWorking5.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 6>>
-    <div class="default-image-wrapper">
-        <img src="pics/brothelWorking6.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/brothelWorking6.gif"></div>
 <<elseif _image == 7>>
-    <div class="default-image-wrapper">
-        <img src="pics/brothelWorking7.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/brothelWorking7.gif"></div>
     <<HaveASexWidget "bj" "brother visitor">>
 <<elseif _image == 8>>
-    <div class="default-image-wrapper">
-        <img src="pics/brothelWorking8.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/brothelWorking8.gif"></div>
     <<HaveASexWidget "anal" "brother visitor">>
 <<endif>>
 
 &emsp;Some time later, the young man is fucking your hole with vigorous thrusts. After another few minutes he pulls out and cums on your exposed body, coating you in a thin layer of his sticky semen... <br />
 &emsp;You little whore... Well, actually you currently are a whore... <br />
 
-<p class="add">+$40</p> <br />
-<p class="minus">-30 Energy</p> <br />
-<br />
-<<doAction "{m:+40,e:-30}">><</doAction>>
+<<set _time to either(20,25,30,35,40,45,50,55)>>
+<<=$mainChar.doAction({e:-30,m:40,h:1,min: _time})>>
 
 [[Clean yourself up and take a break->Apartment №56 (Your brothel)]]

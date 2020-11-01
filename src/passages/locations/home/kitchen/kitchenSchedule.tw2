@@ -169,7 +169,7 @@
 			&emsp;Your dad gives your ass another slap before leaving you standing still half naked in the kitchen.
 			&emsp;You watch as he walks away. You're not really sure if it was a rape or not since he wasn't that rough... But then you didn't particularly want it so... <br />
 
-<<doAction "{c:1,e:-10}">><</doAction>><<HaveASexWidget "rape" "Dad">>
+<<=$mainChar.doAction({e:-10,c:1})>><<HaveASexWidget "rape" "Dad">>
 			<br />
 		<<endif>>
 	<<endif>>

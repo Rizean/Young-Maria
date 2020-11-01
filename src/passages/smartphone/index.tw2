@@ -1,25 +1,21 @@
 ::StoryIncludes
 src/passages/smartphone/books/index.tw2
 src/passages/smartphone/cheat.tw2
-src/passages/smartphone/gallery.tw2
 src/passages/smartphone/girlfriendForRent.tw2
 src/passages/smartphone/jobHunters.tw2
 src/passages/smartphone/jobs.tw2
 src/passages/smartphone/read.tw2
-src/passages/smartphone/sellPhotos.tw2
-src/passages/smartphone/takePhoto.tw2
+src/passages/smartphone/selfies.tw2
 src/passages/smartphone/thisBoyLooksReallyNice.tw2
 
 ::Smartphone [nobr system] <1799,538>
-<div class="default-image-wrapper">
-	<img src="pics/smartphone.jpeg">
-</div>
+<div class="default-image-wrapper"><img src="pics/smartphone.jpeg"></div>
 
 You open your phone. What would you like to do? <br />
 [[Take a photo]] <br />
 [[Gallery]] <br />
-<<if $mainChar.energy >= 70>>
-	[[Read online]] <br />
+<<if $mainChar.canDoAction({energy: 70})>>
+[[Read online]] <br />
 <<else>>You don't have enough energy to read for hours <br /><<endif>>
 [[JobHunters.net]] <br />
 [[Cheat]] <<if $isStayHomeBonusTaken != true>>(free bonus)<<endif>>

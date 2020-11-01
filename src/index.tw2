@@ -1,4 +1,5 @@
 ::StoryIncludes
+src/js/index.tw2
 src/core/index.tw2
 src/libs/index.tw2
 src/passages/index.tw2

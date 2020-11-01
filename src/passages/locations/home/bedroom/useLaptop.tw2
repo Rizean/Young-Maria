@@ -3,7 +3,7 @@
 
 You turn on your laptop. What do you wanna do?
 
-<<if $inventory.has('techItems', 'Web cam')>>[[Web cam]]
+<<if $mainChar.inventory.has('techItems', 'Web cam')>>[[Web cam]]
 <<endif>><<if $mainChar.energy < 30>>You're too tired to masturbate<<else>>[[Masturbate]]<<endif>><<if $mainChar.corruption >= 70>>
 [[Buy lewd stuff]]<<endif>> <!--
 <<if $mainChar.energy < 5>>You're too tired to spend time on social networks<<else>>[[Spend some time on social networks]]<<endif>> - [In progress (40%)] -->
@@ -35,7 +35,7 @@ Horse dildo - <<link "vagina">><<set $masturbationDildoUsing = "Horse">><<set $m
 <<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Straight1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Straight2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Straight3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/Straight4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/Straight5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/Straight6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/Straight7.gif"></div><<endif>>
 <<HaveASexWidget "masturbate" "self">>
 &emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
-<<doAction "{e:-30,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-30,c:1})>>
 
 [[Back->Bedroom]]
 
@@ -45,7 +45,7 @@ Horse dildo - <<link "vagina">><<set $masturbationDildoUsing = "Horse">><<set $m
 <<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Lesbians1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Lesbians2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Lesbians3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/Lesbians4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/Lesbians5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/Lesbians6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/Lesbians7.gif"></div><<endif>>
 <<HaveASexWidget "masturbate" "self">>
 &emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
-<<doAction "{e:-30,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-30,c:1})>>
 
 [[Back->Bedroom]]
 
@@ -55,7 +55,7 @@ Horse dildo - <<link "vagina">><<set $masturbationDildoUsing = "Horse">><<set $m
 <<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/BDSM1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/BDSM2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/BDSM3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/BDSM4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/BDSM5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/BDSM6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/BDSM7.gif"></div><<endif>>
 <<HaveASexWidget "masturbate" "self">>
 &emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
-<<doAction "{e:-30,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-30,c:1})>>
 [[Back->Bedroom]]
 
 ::Group <1528,2106>
@@ -64,7 +64,7 @@ Horse dildo - <<link "vagina">><<set $masturbationDildoUsing = "Horse">><<set $m
 <<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Group1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Group2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Group3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/Group4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/Group5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/Group6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/Group7.gif"></div><<endif>>
 <<HaveASexWidget "masturbate" "self">>
 &emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
-<<doAction "{e:-30,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-30,c:1})>>
 
 [[Back->Bedroom]]
 
@@ -75,7 +75,7 @@ Horse dildo - <<link "vagina">><<set $masturbationDildoUsing = "Horse">><<set $m
 <<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Public1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Public2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Public3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/Public4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/Public5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/Public6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/Public7.gif"></div><<endif>>
 <<HaveASexWidget "masturbate" "self">>
 &emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
-<<doAction "{e:-30,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-30,c:1})>>
 
 [[Back->Bedroom]]
 
@@ -143,7 +143,7 @@ Horse (500$) - <<if $hasHorseDildo != true>><<if $mainChar.money >= 500>><<link 
 &emsp;You give the dildo some lube, covering it in your saliva. Then, you reach down and push it gently into your <<if $masturbationHoleUsing == "Vagina">>pussy<<elseif $masturbationHoleUsing == "Anal">>ass<<endif>>.
 &emsp;After a few moments, you pick up the pace. It feels good even if it's just rubber. Soon, you feel the pleasure near climax and you cum hard. Your sore hole becomes a bit looser...
 
-<br /><<doAction "{e:-30,c:1}">><</doAction>>
+<br /><<=$mainChar.doAction({e:-30,c:1})>>
 <br />
 <<if $masturbationHoleUsing == "Vagina">>
 	<<set $mainChar.sexStats.vaginalCapacity += 1>>
@@ -218,7 +218,7 @@ Messages: $webMessagesCounter <<if $webMessagesCounter > 0>>[[Read->Web messages
 Total income: _finalIncome dollars
 <p class="add">+$ _finalIncome</p><<set $mainChar.money += _finalIncome>>
 
-<<doAction "{e:-70,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-70,c:1})>>
 
 [[Say Goodbye and stop the stream->Web cam]]
 
@@ -274,7 +274,7 @@ Change to: <<textbox "$webNickname" $webNickname>>
 <<set $hour += 1>>@@.image-wrapper-w70p;[img[String.format('pics/nonConsensual' + random(1,8) + '.webp')]]@@
 <<HaveASexWidget "masturbate" "self">>
 &emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
-<<doAction "{e:-30,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-30,c:1})>>
 
 [[Back->Bedroom]]
 
@@ -285,7 +285,7 @@ Change to: <<textbox "$webNickname" $webNickname>>
 <<set $hour += 1>><div class="default-image-wrapper">[img[String.format('https://' + 'MariaMod.site' + '/p' + 'ics/' + 'Zoo' + random(1, 8) + 'REAL.jpg')]]</div>
 <<HaveASexWidget "masturbate" "self">>
 &emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
-<<doAction "{e:-30,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-30,c:1})>>
 
 [[Back->Bedroom]]
 
@@ -296,6 +296,6 @@ Change to: <<textbox "$webNickname" $webNickname>>
 <<set $hour += 1>><<set _image to either(1,2,3,4,5,6,7,8)>><<if _image == 1>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo4.jpg"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo5.jpg"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo6.jpg"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo7.jpg"><<elseif _image == 8>><div class="default-image-wrapper"><img src="https://MariaMod.' + 'site/p' + 'ics/Zoo8.jpg"></div><<endif>>
 <<HaveASexWidget "masturbate" "self">>
 &emsp;You spent a lot of time pleasing yourself, bringing yourself to a pleasurable climax. Perhaps it's time for a break?
-<<doAction "{e:-30,c:1}">><</doAction>>
+<<=$mainChar.doAction({e:-30,c:1})>>
 
 [[Back->Bedroom]]

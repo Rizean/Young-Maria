@@ -34,7 +34,7 @@ Wait, why are you in his bed? Oh no...
 You hastily move aside the blanket and find your poor pussy all red, sore and filled with semen. All across your thighs are red marks; some are handprints whilst others a thin red lines. You let out a groan.
 
 Jack kisses your forehead. "Yes, baby girl. And that was YOU who asked me to do this!" he says, chuckling. Oh... That bastard...
-<<doAction "{c:1,e:-50}">><</doAction>>
+<<=$mainChar.doAction({c:1,e:50})>>
 
 [[Go to the bathroom and next to the home->living room]]
 
@@ -77,16 +77,11 @@ Before long, Jack gets more aroused and grabs your head, pushing you further dow
     <<HaveASexWidget "bj" "Jack">>
 <<endif>>
 
-<<if $mainChar.corruption > 50 && $isJackSuckVideoTaken != true>>
-    [[You can make a video, if you want to]] <br />
-<<endif>>
+<<if $mainChar.canDoAction({corruption: 50}) && $isJackSuckVideoTaken != true>>[[You can make a video, if you want to]] <br /><<endif>>
 <br />
 After a couple of minutes, Jack's dick quivers and he gives you a couple last powerful thrusts. He pushes his dick as far as he can with as much force as he can muster. It's a lot but you love it... <br />
 
-<p class="add">+1 Corruption</p> <br />
-<p class="minus">-20 Energy</p> <br />
-
-<<doAction "{c:1,e:-20,min:40}">><</doAction>>
+<<=$mainChar.doAction({c:1,e:-20,min:40})>>
 <<set $isJacksHouseSurelyOpen = true>>
 <br />
 <br />
@@ -103,14 +98,8 @@ Even when Jack's dick begins to quiver, you keep recording wanting to get a vide
 
 [[He finishes onto your face and sends you to the bathroom->Jack's house]]
 
-::A video of you, sucking Jack off [system] <5975,2400>
-[[Back->Gallery]]
-
-<div class="default-image-wrapper"><img src="pics/JackSucking.gif"></div>
-
-
 ::Playing <4025,1250>
-<<set $hour += 5>>"You will like it, baby!"
+"You will like it, baby!"
 You don't like football, but... Who knows, right?
 
 ...
@@ -128,12 +117,12 @@ You're unsure what he means until you see his eyes flick to your chest. With a n
 <<set _image to either(1,2,3)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Football1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Football2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Football3.gif"></div><<endif>>
 
 Due to the chilly air, your nipples are hard and erect but the boys seem to enjoy that more. A couple of fans who lingered notice your... prize. Who cares though, right?
-<<doAction "{c:1,e:-20}">><</doAction>>
+<<=$mainChar.doAction({c:1,e:-20,h:5})>>
 
 [[Go home->living room]]
 
 ::Mmm, wanna call some friends?~ [nobr] <4150,1250>
-<<set $hour += 2>>"R you serious?.. Damn, give me five minutes" <br />
+"R you serious?.. Damn, give me five minutes" <br />
 Some time passed and you hear ringing. Jack`s friends coming. <br />
  <br />
 ~Introducing to them~ <br />
@@ -145,46 +134,34 @@ They all make their way over to you with mischievous grins adorning their faces.
 
 <<set _image to random(1, 6)>>
 <<if _image == 1>>
-    <div class="default-image-wrapper">
-        <img src="pics/gangbang1.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/gangbang1.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "handjob" "Jacks friends">>
     <<HaveASexWidget "anal" "Jacks friends">>
 <<elseif _image == 2>>
-    <div class="default-image-wrapper">
-        <img src="pics/gangbang2.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/gangbang2.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "vaginal" "Jacks friends">>
     <<HaveASexWidget "anal" "Jacks friends">>
     <<HaveASexWidget "bj" "Jacks friends">>
 <<elseif _image == 3>>
-    <div class="default-image-wrapper">
-        <img src="pics/gangbang3.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/gangbang3.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "vaginal" "Jacks friends">>
     <<HaveASexWidget "anal" "Jacks friends">>
     <<HaveASexWidget "bj" "Jacks friends">>
 <<elseif _image == 4>>
-    <div class="default-image-wrapper">
-        <img src="pics/gangbang4.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/gangbang4.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "vaginal" "Jacks friends">>
     <<HaveASexWidget "bj" "Jacks friends">>
 <<elseif _image == 5>>
-    <div class="default-image-wrapper">
-        <img src="pics/gangbang5.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/gangbang5.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "handjob" "Jacks friends">>
     <<HaveASexWidget "bj" "Jacks friends">>
 <<elseif _image == 6>>
-    <div class="default-image-wrapper">
-        <img src="pics/gangbang6.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/gangbang6.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "vaginal" "Jacks friends">>
     <<HaveASexWidget "anal" "Jacks friends">>
@@ -203,5 +180,6 @@ Unfortunately, before long, the men slow down and pull out only to aim their qui
 <br />
 Jack gives you a playful wink. You get the feeling this won't be the only gangbang you experience with him and his friends... <br />
 
-<<doAction "{c:1,e:-30}">><</doAction>><br />
+<<=$mainChar.doAction({c:1,e:-30,h:2})>>
+<br/>
 [[Go home->living room]]

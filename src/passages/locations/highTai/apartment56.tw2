@@ -25,19 +25,11 @@ HOLY SHIT!!
 <<nobr>>
 <<if $stashNeatness != 100>>
 This place still needs some work... ($stashNeatness/100) -
-	<<if $mainChar.energy < 60>>
-		You don't have enough energy!
-	<<else>>
-		[[Clean it]]
-	<<endif>>
+	<<if $mainChar.canDoAction({energy: 60})>>You don't have enough energy!<<else>>[[Clean it]]<<endif>>
 <<endif>>
 
 <<if $stashNeatness == 100>>
-	<<if $inventory.grocery['Shampoo'].count > 0>>
-		[[Take a bath]]
-	<<else>>
-		You could take a bath. But you've run out of shampoo!
-	<<endif>>
+	<<if $mainChar.inventory.grocery['Shampoo'].count > 0>>[[Take a bath]]<<else>>You could take a bath. But you've run out of shampoo!<<endif>>
 <<endif>><br />
 
 <<if $hour >= 20 || $hour <= 8>>
@@ -54,7 +46,7 @@ This place still needs some work... ($stashNeatness/100) -
 <<endif>>
 <</nobr>>
 
-You have $inventory.grocery['Shampoo'].count uses of a shampoo.
+You have $mainChar.inventory.grocery['Shampoo'].count uses of a shampoo.
 
 [[Go out->High Tai]]<<endif>>
 
@@ -74,18 +66,18 @@ You have $inventory.grocery['Shampoo'].count uses of a shampoo.
 &emsp;You open your door to leave the apartment but are suddenly blocked. You look up to see Ron stood with a toolbox in hand. He gives you a shrug. "Big Six saw you entering this apartment... Thought I'd see if you needed any help."
 &emsp;You thank Ron and let him inside. Together, you spend a lot of time fixing the windows. Ron replaces the windows with some new glass he bought and you work on repainting the sills and frames when he's done...
 &emsp;A few hours later you are sitting in Ron's apartment chatting happily with him as you both drink some tea. "Well, your place is ruined. It's bad luck really. Mr. Key never really knows the state in which the apartments are in when he gives you the key... But hey, you need any more help, you let me know. I like to be useful."
-<<doAction "{e:-60,h:5}">><</doAction>> <p class="add">+24 Stash neatness</p><<set $stashNeatness += 24>>
+<<=$mainChar.doAction({e:-60,h:5})>> <p class="add">+24 Stash neatness</p><<set $stashNeatness += 24>>
 
 [[You thank him and return to your apartment.->Apartment №56 (Your Stash)]]
 <<elseif $stashCleaning == "First">><<set $stashCleaning = "Second">><<set $stashCleanSecond = true>>&emsp;You look at the new windows and smile. That's one job done. Your smile fades when you see the rotting wallpaper. That's definitely the next job.
 &emsp;You go out and buy some cheap wallpaper, paste, and paint. When you return you begin ripping off the old wallpaper, cleaning the dirt from underneath exposed parts and sticking the new wallpaper on top.
 &emsp;You make your way through every room repeating the process where needed. Some of the areas could be left for a simple clean another time. It takes a lot of work and by the end of it all, you're absolutely exhausted. At least it looks better than before...
-<<doAction "{e:-60,h:8}">><</doAction>> <p class="add">+20 Stash neatness</p><<set $stashNeatness += 20>>
+<<=$mainChar.doAction({e:-60,h:8})>> <p class="add">+20 Stash neatness</p><<set $stashNeatness += 20>>
 
 [[You clean yourself up a little and take a quick break.->Apartment №56 (Your Stash)]]
 <<elseif $stashCleaning == "Second">><<set $stashCleaning = "Third">><<set $stashCleanThird = true>>&emsp;With new windows and wallpaper, the next thing would be to clean the place. You grab a bucket and fill it with water, then grab a piece of cloth, some Fairy liquid and you're off!
 &emsp;A LOT of time passes. You didn't realise how much there was to do until it's all done and your whole body aches. Not to mention that you've exhausted yourself. But hey, the place looks much better now!
-<<doAction "{e:-60,h:9}">><</doAction>> <p class="add">+26 Stash neatness</p><<set $stashNeatness += 26>>
+<<=$mainChar.doAction({e:-60,h:9})>> <p class="add">+26 Stash neatness</p><<set $stashNeatness += 26>>
 
 [[Time for a break, you've definately earnt it!->Apartment №56 (Your Stash)]]
 <<elseif $stashCleaning == "Third">><<set $stashCleaning = "Fourth">><<set $stashCleanFourth = true>>&emsp;You look around the apartment. Most of the work you could do alone is done. Unfortunately, the things that are left are more complicated for you to do alone; damaged wires, icky plumbing, moving and fixing furniture, the TV... Oh god...
@@ -94,7 +86,7 @@ You have $inventory.grocery['Shampoo'].count uses of a shampoo.
 &emsp;Once it's all done, you stand with Ron and look at the new and improved apartment; your stash. Is this really the end of possibly the hardest work you've ever done?? Yes, yes it is...
 &emsp;Damn... It looks good!
 
-<<doAction "{e:-60,h:9}">><</doAction>> <p class="add">+18 Stash neatness</p><<set $stashNeatness += 18>>
+<<=$mainChar.doAction({e:-60,h:9})>> <p class="add">+18 Stash neatness</p><<set $stashNeatness += 18>>
 
 &emsp;"Well, we did it..." you say.
 &emsp;Ron puts an arm around your shoulder and gives you friendly and supportive squeeze. "I've got a good bottle of whiskey. Wanna come over?"
@@ -121,9 +113,7 @@ You have $inventory.grocery['Shampoo'].count uses of a shampoo.
 &emsp;Once there, he drops you to the floor and pushes you onto your knees. Then he unzips his pants and reveals his erect cock. Without even thinking, you take his dick in your mouth and stimulate it using your tongue for extra points. <br />
 &emsp;After a couple minutes of gagging and slurping, Ron removes his dick and pulls you to your feet. Then he turns you around and bends you over. <br /> <br />
 
-<div class="default-image-wrapper">
-    <img src="pics/thankRon.gif">
-</div>
+<div class="default-image-wrapper"><img src="pics/thankRon.gif"></div>
 <<HaveASexWidget "vaginal" "Ron">>
 
 &emsp;He tears off your clothes and positions himself by your entrance. Before long he pushes his dick inside your pussy. It's tight but that only adds to the pleasure as you can feel him scraping along your walls. <br />
@@ -152,8 +142,8 @@ You decide to work on this place a bit more...
 
 As you walk through rooms, you try to figure out what you can do:
 <<if $isFlowerOwned != true>>
-Add a flower on the window sill (20 Energy, $10) - <<if $mainChar.energy < 20>>You don't have enough energy!<<elseif $mainChar.money < 10>>You don't have enough money!<<else>><<link "Add">> <<doAction "{m:-10,h:+1,e:-20}">><</doAction>><<set $isFlowerOwned = true>><<goto "Improve Stash">><</link>><<endif>><<endif>> <<if $isCarpetOwned != true>>
-Add a carpet in the living room (30 Energy, $70) - <<if $mainChar.energy < 30>>You don't have enough energy!<<elseif $mainChar.money < 70>>You don't have enough money!<<else>><<link "Add">> <<doAction "{m:-70,h:+3,e:-30}">><</doAction>><<set $isCarpetOwned = true>><<goto "Improve Stash">><</link>><<endif>><<endif>> <<if $isStashBrothel != true>>
+Add a flower on the window sill (20 Energy, $10) - <<if $mainChar.canDoAction({energy: 20})>>You don't have enough energy!<<elseif $mainChar.canDoAction({money: 10})>>You don't have enough money!<<else>><<link "Add">> <<=$mainChar.doAction({e:-20,m:-10,h:1})>><<set $isFlowerOwned = true>><<goto "Improve Stash">><</link>><<endif>><<endif>> <<if $isCarpetOwned != true>>
+Add a carpet in the living room (30 Energy, $70) - <<if $mainChar.canDoAction({energy: 30})>>You don't have enough energy!<<elseif $mainChar.canDoAction({money: 70})>>You don't have enough money!<<else>><<link "Add">> <<=$mainChar.doAction({e:-30,m:-70,h:3})>><<set $isCarpetOwned = true>><<goto "Improve Stash">><</link>><<endif>><<endif>> <<if $isStashBrothel != true>>
 [[Make Stash a brothel]]<<endif>>
 
 [[Go back->Apartment №56 (Your Stash)]]
@@ -165,7 +155,7 @@ Well, it is the perfect place for it, why not?
 <u>WARNING: You will lose your Stash, but gain a big income. There will be no way back.</u>
 
 
-Make Stash a brothel (12 days, $700) - <<if $mainChar.money < 700>>You don't have enough money<<else>><<link "Do it!">><<set $mainChar.money -= 700>><<set $hour += 9>><<set $isStashBrothel = true>><<set $brothelBuildDayDone = $dayCount + 8>><<goto "High Tai">><</link>><<endif>>
+Make Stash a brothel (12 days, $700) - <<if !$mainChar.canDoAction({money: 700})>>You don't have enough money<<else>><<link "Do it!">><<=$mainChar.doAction({m:-700})>><<set $hour += 9>><<set $isStashBrothel = true>><<set $brothelBuildDayDone = $dayCount + 8>><<goto "High Tai">><</link>><<endif>>
 [[Not now->Improve Stash]]
 
 ::Apartment №56 (Your brothel) <2966,2094>
@@ -184,7 +174,7 @@ You sigh. Damn.. Well, looks like this place needs a new hero!
 
 [[Okay->Apartment №56 (Your brothel)]]<<else>>&emsp;Alright. This is your brothel where hired girls can make money for you. Profit forecast for the month is below.
 <<if $isWorkingAtBrothelAvailable == true>>
-<<if $mainChar.energy >= 30>>[[Work at your brothel]]<<else>>You are too tired to work here!<<endif>>
+<<if $mainChar.canDoAction({energy: 30})>>[[Work at your brothel]]<<else>>You are too tired to work here!<<endif>>
 <<endif>>
 Girls working: $mainChar.girlsAmountInBrothel/5<<if $mainChar.girlsAmountInBrothel < 5>>
 Hire more girls - <<if $mainChar.money < 200>>You don't have enough money!<<else>><<link "$200">><<set $mainChar.money -= 200>><<set $mainChar.girlsAmountInBrothel += 1>><<goto "Apartment №56 (Your brothel)">><</link>><<endif>><<endif>>
@@ -209,35 +199,26 @@ Other expenses: $otherExpenses
 
 ::Take a bath <3258,2230>
 <<nobr>>
-	<<set _imageNum = random(1, 3)>>
+	<<set _imageNum = random(0, 3)>>
 	<<switch _imageNum>>
 	  <<case 0>>
-		  <div class="default-image-wrapper">
-			<div class="default-image-wrapper"><img src="pics/bathroom/bathroom0.gif" alt="bathroom0">
-		  </div>
+		  <div class="default-image-wrapper"><div class="default-image-wrapper"><img src="pics/bathroom/bathroom0.gif" alt="bathroom0"></div>
 	  <<case 1>>
-		  <div class="default-image-wrapper">
-			<div class="default-image-wrapper"><img src="pics/bathroom/bathroom1.gif" alt="bathroom1">
-		  </div>
+		  <div class="default-image-wrapper"><div class="default-image-wrapper"><img src="pics/bathroom/bathroom1.gif" alt="bathroom1"></div>
 	  <<case 2>>
-		  <div class="default-image-wrapper">
-			<div class="default-image-wrapper"><img src="pics/bathroom/bathroom2.gif" alt="bathroom2">
-		  </div>
+		  <div class="default-image-wrapper"><div class="default-image-wrapper"><img src="pics/bathroom/bathroom2.gif" alt="bathroom2"></div>
 	  <<case 3>>
-		  <div class="default-image-wrapper">
-			<div class="default-image-wrapper"><img src="pics/bathroom/bathroom3.gif" alt="bathroom3">
-		  </div>
+		  <div class="default-image-wrapper"><div class="default-image-wrapper"><img src="pics/bathroom/bathroom3.gif" alt="bathroom3"></div>
    <</switch>>
 <</nobr>>
 
 You had a good time; nice and carefree...
-<<doAction "{h:+1,e:+10}">><</doAction>>
+<<=$mainChar.doAction({e:+10,h:1,cl:100})>>
 <<nobr>>
   <<set $mainChar.appearance.isCombed = false>>
   <<set $mainChar.appearance.makeup = 'none'>>
   <<set $mainChar.appearance.head.lips.color = 'none'>>
-  <<set $mainChar.cleanliness = 100>>
-  <<set $inventory.grocery['Shampoo'].count -= 1>>
+  <<set $mainChar.inventory.grocery['Shampoo'].count -= 1>>
 <</nobr>>
 
 [[Go back->Apartment №56 (Your Stash)]]

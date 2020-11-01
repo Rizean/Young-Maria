@@ -49,8 +49,8 @@ You could go sit in the [[Bay Window]] <br />
         <<else>>
             You must wear your uniform for school. <br />
             <<link "Get dressed in school uniform and go to school" "Go to school">>
-                <<set $mainChar.look.clothes.body.name = $wardrobe.clothes.body['School uniform'].name >>
-                <<set $mainChar.look.clothes.body.image = $wardrobe.clothes.body['School uniform'].image >>
+                <<set $mainChar.look.clothes.body.name = $mainChar.wardrobe.clothes.body['School uniform'].name >>
+                <<set $mainChar.look.clothes.body.image = $mainChar.wardrobe.clothes.body['School uniform'].image >>
             <</link>>
             <br />
         <<endif>>

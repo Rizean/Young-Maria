@@ -1,9 +1,0 @@
-::Hair Variables [nobr] <1446,0>
-<<set $hairOptions = ['blonde', 'red', 'brunette'] >>
-<<set $hairStyles = ['straight'] >>
-<<set $hairLengths = [
-	'short',
-	'shoulders',
-	'chest',
-	'long'
-] >>

@@ -25,11 +25,11 @@
 <<set $hour = 8>>
 <<set $minute = 0>>
 
-<<doAction "{e:100}">><</doAction>>
+<<=$mainChar.doAction({e:100})>>
 
 <<if $dateDay == 7 and $dateMonth == "June" and $wasBirthdayCelebrated != true>>
 	<<set $wasBirthdayCelebrated = true>>
-	<<doAction "{e:-10,min:20}">><</doAction>>
+	<<=$mainChar.doAction({e:-10,min:20})>>
 	<br />
 	"HAPPY BIRTHDAY, DEAR!!!" <br />
 
@@ -41,11 +41,11 @@
 <<endif>>
 <br />
 
-<<if settings.pregnancy == true and $inventory.pharmacy['Birth control pills'].count > 0 and $mainChar.pregnancy.knowsAboutPregnancy != true>>
+<<if settings.pregnancy == true and $mainChar.inventory.pharmacy['Birth control pills'].count > 0 and $mainChar.pregnancy.knowsAboutPregnancy != true>>
 	<<if $takingBirthControlPill != true>>
-		<<checkbox "$takingBirthControlPill" false true>> Take a birth control pill (left: <<print $inventory.pharmacy['Birth control pills'].count>>)
+		<<checkbox "$takingBirthControlPill" false true>> Take a birth control pill (left: <<print $mainChar.inventory.pharmacy['Birth control pills'].count>>)
 	<<else>>
-		<<checkbox "$takingBirthControlPill" false true checked>> Take a birth control pill (left: <<print $inventory.pharmacy['Birth control pills'].count>>)
+		<<checkbox "$takingBirthControlPill" false true checked>> Take a birth control pill (left: <<print $mainChar.inventory.pharmacy['Birth control pills'].count>>)
 	<<endif>>
 	<<if $mainChar.menstruation.day >= 15>>
 		<br />
@@ -53,27 +53,27 @@
 	<<endif>>
 <br />
 <<endif>>
-<<if settings.menstruation == true and $inventory.pharmacy['Tampons'].count > 0 and $mainChar.menstruation.day >= 15 and $mainChar.pregnancy.knowsAboutPregnancy != true>>
+<<if settings.menstruation == true and $mainChar.inventory.pharmacy['Tampons'].count > 0 and $mainChar.menstruation.day >= 15 and $mainChar.pregnancy.knowsAboutPregnancy != true>>
 	<<if $applyingTampon != true>>
-		<<checkbox "$applyingTampon" false true>> Insert tampon (left: <<print $inventory.pharmacy['Tampons'].count>>)
+		<<checkbox "$applyingTampon" false true>> Insert tampon (left: <<print $mainChar.inventory.pharmacy['Tampons'].count>>)
 	<<else>>
-		<<checkbox "$applyingTampon" false true checked>> Insert tampon (left: <<print $inventory.pharmacy['Tampons'].count>>)
+		<<checkbox "$applyingTampon" false true checked>> Insert tampon (left: <<print $mainChar.inventory.pharmacy['Tampons'].count>>)
 	<<endif>>
 <br />
 <<endif>>
-<<if $inventory.grocery['Razors'].count > 0>>
+<<if $mainChar.inventory.grocery['Razors'].count > 0>>
 	<<if $shavingLegs != true>>
-		<<checkbox "$shavingLegs" false true>> Shave legs (razors left: <<print $inventory.grocery['Razors'].count>>)
+		<<checkbox "$shavingLegs" false true>> Shave legs (razors left: <<print $mainChar.inventory.grocery['Razors'].count>>)
 	<<else>>
-		<<checkbox "$shavingLegs" false true checked>> Shave legs (razors left: <<print $inventory.grocery['Razors'].count>>)
+		<<checkbox "$shavingLegs" false true checked>> Shave legs (razors left: <<print $mainChar.inventory.grocery['Razors'].count>>)
 	<<endif>>
 <br />
 <<endif>>
-<<if $inventory.grocery['Shampoo'].count > 0>>
+<<if $mainChar.inventory.grocery['Shampoo'].count > 0>>
 	<<if $havingShower != true>>
-		<<checkbox "$havingShower" false true>> Have a shower (shampoo left: <<print $inventory.grocery['Shampoo'].count>>)
+		<<checkbox "$havingShower" false true>> Have a shower (shampoo left: <<print $mainChar.inventory.grocery['Shampoo'].count>>)
 	<<else>>
-		<<checkbox "$havingShower" false true checked>> Have a shower (shampoo left: <<print $inventory.grocery['Shampoo'].count>>)
+		<<checkbox "$havingShower" false true checked>> Have a shower (shampoo left: <<print $mainChar.inventory.grocery['Shampoo'].count>>)
 	<<endif>>
 <br />
 <<endif>>
@@ -89,11 +89,11 @@
 	<<checkbox "$combingHair" false true checked>> Comb hair
 <<endif>>
 <br />
-<<if $inventory.pharmacy['Vitamins'].count > 0>>
+<<if $mainChar.inventory.pharmacy['Vitamins'].count > 0>>
 	<<if $takingVitamins != true>>
-		<<checkbox "$takingVitamins" false true>> Take vitamins (left: <<print $inventory.pharmacy['Vitamins'].count>>)
+		<<checkbox "$takingVitamins" false true>> Take vitamins (left: <<print $mainChar.inventory.pharmacy['Vitamins'].count>>)
 	<<else>>
-		<<checkbox "$takingVitamins" false true checked>> Take vitamins (left: <<print $inventory.pharmacy['Vitamins'].count>>)
+		<<checkbox "$takingVitamins" false true checked>> Take vitamins (left: <<print $mainChar.inventory.pharmacy['Vitamins'].count>>)
 	<<endif>>
 <br />
 <<endif>>
@@ -124,27 +124,27 @@
 <<endif>>
 <br />
 <<link "Get up">>
-	<<if settings.pregnancy == true and $inventory.pharmacy['Birth control pills'].count > 0 and $takingBirthControlPill == true>>
+	<<if settings.pregnancy == true and $mainChar.inventory.pharmacy['Birth control pills'].count > 0 and $takingBirthControlPill == true>>
 		<<set $mainChar.pregnancy.isOnPills = true>>
-		<<set $inventory.pharmacy['Birth control pills'].count -= 1>>
+		<<set $mainChar.inventory.pharmacy['Birth control pills'].count -= 1>>
 		<<set $minute += 2>>
 	<<endif>>
-	<<if settings.menstruation == true and $inventory.pharmacy['Tampons'].count > 0 and $apllyingTampon == true>>
+	<<if settings.menstruation == true and $mainChar.inventory.pharmacy['Tampons'].count > 0 and $apllyingTampon == true>>
 		<<set $mainChar.menstruation.isProtected = true>>
-		<<set $inventory.pharmacy['Tampons'].count -= 1>>
+		<<set $mainChar.inventory.pharmacy['Tampons'].count -= 1>>
 		<<set $minute += 3>>
 	<<endif>>
-	<<if $inventory.grocery['Razors'].count > 0 and $shavingLegs == true>>
+	<<if $mainChar.inventory.grocery['Razors'].count > 0 and $shavingLegs == true>>
 		<<set $mainChar.eroticLook.intimateHaircut = 'shaved'>>
-		<<set $inventory.grocery['Razors'].count -= 1>>
+		<<set $mainChar.inventory.grocery['Razors'].count -= 1>>
 		<<set $minute += 15>>
 	<<endif>>
-	<<if $inventory.grocery['Shampoo'].count > 0 and $havingShower == true>>
+	<<if $mainChar.inventory.grocery['Shampoo'].count > 0 and $havingShower == true>>
 		<<set $mainChar.appearance.isCombed = false>>
 		<<set $mainChar.appearance.makeup = 'none'>>
 		<<set $mainChar.appearance.head.lips.color = 'none'>>
 		<<set $mainChar.cleanliness = 100>>
-		<<set $inventory.grocery['Shampoo'].count -= 1>>
+		<<set $mainChar.inventory.grocery['Shampoo'].count -= 1>>
 		<<set $minute += 10>>
 	<<endif>>
 	<<if $brushingTeeth == true>>
@@ -155,7 +155,7 @@
 		<<set $mainChar.appearance.isCombed = true>>
 		<<set $minute += 3>>
 	<<endif>>
-	<<if $inventory.pharmacy['Vitamins'].count > 0 and $takingVitamins == true>>
+	<<if $mainChar.inventory.pharmacy['Vitamins'].count > 0 and $takingVitamins == true>>
 		<<set $wereVitaminsTaken = true>>
 		<<set $mainChar.maxEnergy += 10>>
 		<<set $mainChar.energy += $mainChar.maxEnergy>>

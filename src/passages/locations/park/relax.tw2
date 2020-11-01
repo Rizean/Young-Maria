@@ -1,11 +1,11 @@
 ::Relax a little <3136,1471>
 You decide you want to relax a bit in the warm sun. You move to find a more secluded location and settle down on the grass with your bag by your side.
 
-<<set $hour += 1>><div class="default-image-wrapper"><img src="pics/pRelax.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/pRelax.jpg"></div>
 
 With the sun on your body, you take a quick rest. Around you, the sounds of birds in the trees and children playing in the distance helps you to relax...
-<<doAction "{e:10}">><</doAction>>
-<<if $mainChar.corruption > 40>>This place is so quiet... You bet nobody will notice if you [[set free an inner "beast"]]
+<<=$mainChar.doAction({e:5,min:30})>>
+<<if $mainChar.canDoAction({corruption: 40})>>This place is so quiet... You bet nobody will notice if you [[set free an inner "beast"]]
 <<endif>>
 [[Go back->Park]]
 
@@ -13,28 +13,20 @@ With the sun on your body, you take a quick rest. Around you, the sounds of bird
 <<set _image to either(1,2,3,4)>>You look around to you make sure no-one is watching and remove your clothes. You place them close by, just in case. Then you move one hand down to your pussy lips and begin to tease them.
 
 <<if _image == 1>>
-    <div class="default-image-wrapper">
-        <img src="pics/pMasturbation1.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/pMasturbation1.gif"></div>
     <<HaveASexWidget "masturbate" "self">>
 <<elseif _image == 2>>
-    <div class="default-image-wrapper">
-        <img src="pics/pMasturbation2.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/pMasturbation2.gif"></div>
     <<HaveASexWidget "masturbate" "self">>
 <<elseif _image == 3>>
-    <div class="default-image-wrapper">
-        <img src="pics/pMasturbation3.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/pMasturbation3.gif"></div>
     <<HaveASexWidget "masturbate" "self">>
 <<elseif _image == 4>>
-    <div class="default-image-wrapper">
-        <img src="pics/pMasturbation4.gif">
-    </div>
+    <div class="default-image-wrapper"><img src="pics/pMasturbation4.gif"></div>
     <<HaveASexWidget "masturbate" "self">>
 <<endif>>
 <br />
-After a few seconds of rubbing your pussy lips, you take two fingers and stick them inside. With the cold air nipping at your nethers, the public space giving you the excitment of being caught at anytime, and your fingers pumping in and out you soon find yourself overwhelmed with pleasure. It isn't long before you cum... <br />
+After a few seconds of rubbing your pussy lips, you take two fingers and stick them inside. With the cold air nipping at your nethers, the public space giving you the excitement of being caught at anytime, and your fingers pumping in and out you soon find yourself overwhelmed with pleasure. It isn't long before you cum... <br />
 What a dirty slut you are cumming in public like that... <br />
 <p class="add">+1 Corruption</p> <br />
 

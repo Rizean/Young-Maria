@@ -27,7 +27,7 @@ src/passages/locations/beach/sunbathWithParents.tw2
 You walk along the sand. The sound of the waves pleases you, filling your mind with calmness...
 <br />
 
-<<if $wardrobe.available.includes('Bikini')>>
+<<if $mainChar.wardrobe.available.includes('Bikini')>>
 	<<if $mainChar.look.clothes.body.name !== 'Bikini'>>
 		<<if $mainChar.energy >= 25>>
 			[[Change clothes in a bikini->Change clothes]]<br />

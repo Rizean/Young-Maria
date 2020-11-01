@@ -1,8 +1,8 @@
 ::Apply makeup [nobr] <1620,1580>
 <<set _makeupOptions = ['light', 'tangible', 'bright', 'none'] >>
-<<set _availableLipstickColors = $inventory.getAvailableLipstickColors() >>
+<<set _availableLipstickColors = $mainChar.inventory.getAvailableLipstickColors() >>
 
-<<for _cosmeticItemTitle, _cosmeticItem range $inventory.cosmetics>>
+<<for _cosmeticItemTitle, _cosmeticItem range $mainChar.inventory.cosmetics>>
 	You have <<=_cosmeticItem.name>> for <<=_cosmeticItem.count>> uses. <br />
 <</for>>
 

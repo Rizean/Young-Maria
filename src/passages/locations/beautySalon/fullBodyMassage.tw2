@@ -11,12 +11,12 @@ About halfway through, he asks you to turn over. He gives you permission to rela
 
 You lost all sense of time in that room. Diego took care of every inch of your body. His hands were strong and callous but "loving" and warm.
 
-<<doAction "{b:+20,m:-200,e:-40}">><</doAction>> <<if $mainChar.corruption >= 50>>Ask Diego if he can make a little more [["private" massage]]<<endif>>
+<<=$mainChar.doAction({b:10,m:-200,e:20,min:60})>><<if $mainChar.canDoAction({corruption: 50})>>Ask Diego if he can make a little more [["private" massage]]<<endif>>
 
 [[Back->Beauty Salon]]
 
 ::"private" massage <4500,1000>
-<<set $hour += 1>>Diego doesn't seem surprised by your question. In fact, there's almost no expression on his face at all.
+Diego doesn't seem surprised by your question. In fact, there's almost no expression on his face at all.
 "In that case, Miss,-" He walks to the door and locks it with his key. "-'Lorem desiderio - lex`. It means desire of the client - the order."
 
 He comes back over to you and once again grabs the oil. Once his hands are nicely oiled, he runs them over your body. This time, his focus is on your breasts. He kneads them; pinching and pulling your sensitive nipples. Soon, he moved further down, his hands stroking down your bare torso...
@@ -25,7 +25,7 @@ He comes back over to you and once again grabs the oil. Once his hands are nicel
 
 He arrives at your crotch. He begins to gently rub along your pussy lips. You can feel the burning all over your body. He takes two of his fingers and slowly pushes them into your vagina. His fingers expertly pump in and out, hitting your most intimate parts. Overtime, his speed increases until he's roughly finger-fucking you.
 
-Soon the pleasure becomes to much and you find yourself cumming infront of a smiling Diego. It seems he enjoys bringing young girls to climax. Afterwards, you take your masseuse's advice and rest a little. Once you regain some composure, you dress and give him a kiss as a tip.
-<p class="add">+1 Corruption</p><<set $mainChar.corruption += 1>>
+Soon the pleasure becomes to much and you find yourself cumming in front of a smiling Diego. It seems he enjoys bringing young girls to climax. Afterwards, you take your masseuse's advice and rest a little. Once you regain some composure, you dress and give him a kiss as a tip.
+<<=$mainChar.doAction({c:1,e:10,min:60})>>
 
 [[Back->Beauty Salon]]

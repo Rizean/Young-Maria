@@ -16,7 +16,7 @@
 You can choose an object for training!</p>
 <<nobr>>
     <span id="choose-banana"><<linkreplace "Choose a banana">>
-        <<doAction "{e:-40}">><</doAction>>
+        <<=$mainChar.doAction({e:-40})>>
         <<set _trainingSubject = "banana">>
         <<replace "#train-throat-text">><</replace>>
         <<replace "#choose-cucumber">><</replace>>
@@ -53,11 +53,7 @@ You can choose an object for training!</p>
                                     <<set $mainChar.sexSkills.bj += 1>>
                                 <</if>>
                                 <<if $mainChar.energy >= 40>>
-                                    <<link "Practice more">>
-                                        <<goto "Train your throat">>
-                                    <</link>>
-                                    or
-                                    [[Finish|Bedroom]]
+                                    <<link "Practice more">><<goto "Train your throat">><</link>>or[[Finish|Bedroom]]
                                 <<else>>
                                     Your mouth is too tired to continue.
                                     [[Finish|Bedroom]]
@@ -209,7 +205,7 @@ You can choose an object for training!</p>
     <</linkreplace>></span><br />
 
     <span id="choose-cucumber"><<linkreplace "Choose a cucumber">>
-        <<doAction "{e:-40}">><</doAction>>
+        <<=$mainChar.doAction({e:-40})>>
         <<set _trainingSubject = "cucumber">>
         <<replace "#train-throat-text">><</replace>>
         <<replace "#choose-banana">><</replace>>
@@ -383,9 +379,9 @@ You can choose an object for training!</p>
         <<HaveASexWidget "bj" "cucumber">>
     <</linkreplace>></span><br />
 
-    <span id="choose-dildo"><<if $inventory.has('eroticItems', 'Dildo')>>
+    <span id="choose-dildo"><<if $mainChar.inventory.has('eroticItems', 'Dildo')>>
         <<linkreplace "Choose a dildo">>
-            <<doAction "{e:-40}">><</doAction>>
+            <<=$mainChar.doAction({e:-40})>>
             <<set _trainingSubject = "dildo">>
             <<replace "#train-throat-text">><</replace>>
             <<replace "#choose-banana">><</replace>>
@@ -529,11 +525,7 @@ You can choose an object for training!</p>
                                         <<set $mainChar.sexSkills.bj += 1>>
                                     <</if>>
                                     <<if $mainChar.energy >= 40>>
-                                        <<link "Practice more">>
-                                            <<goto "Train your throat">>
-                                        <</link>>
-                                        or
-                                        [[Finish|Bedroom]]
+                                        <<link "Practice more">><<goto "Train your throat">><</link>>or[[Finish|Bedroom]]
                                     <<else>>
                                         Your mouth is too tired to continue.
                                         [[Finish|Bedroom]]

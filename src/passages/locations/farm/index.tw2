@@ -3,7 +3,7 @@ src/passages/locations/farm/ralf.tw2
 src/passages/locations/farm/barn.tw2
 
 ::Tell them you are dying to see that farm <300,1146>
-<<doAction "{e:-70}">><</doAction>><<set $hour = 20>><<set $minute = 0>>&emsp;Your parents agree and you soon all bundle into the car. City buildings soon turn to trees as you make your way into luscious country.
+<<=$mainChar.doAction({e:-70})>><<set $hour = 20>><<set $minute = 0>>&emsp;Your parents agree and you soon all bundle into the car. City buildings soon turn to trees as you make your way into luscious country.
 
 <div class="default-image-wrapper"><img src="pics/Farm.jpg"></div>
 

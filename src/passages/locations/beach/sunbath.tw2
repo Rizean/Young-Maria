@@ -3,7 +3,7 @@
 
 &emsp;You lay on your towel, soaking up the suns rays. Time passes and soon you feel tired and a bit "fried". But you also feel like the sun has given your skin a new beautiful glow!.
 
-<<doAction "{b:+1,e:-25}">><</doAction>>
+<<=$mainChar.doAction({b:1,e:-20})>>
 
 <<if $lastDayPlayedWithDanny != $dayCount>><<set _chance to either(true,false,false,false)>><<endif>><<if _chance == true>>&emsp;As you are folding your towel, a kid comes to you comes up to you holding a ball in his hands.
 

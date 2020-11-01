@@ -83,7 +83,7 @@
 
 You are a little slut... <br />
 <br />
-<<doAction "{c:1,e:-40,m:30}">><</doAction>>
+<<=$mainChar.doAction({c:1,e:-40,m:30})>>
 
 <<if $mainChar.beauty >= 20>>
     <<if $mainChar.beauty >= 20 && $mainChar.beauty < 40>>

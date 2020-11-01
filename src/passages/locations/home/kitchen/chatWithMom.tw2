@@ -12,7 +12,7 @@ You spent some time with your mother, gossiping and having fun. <br />
     +1 relations with mom
 </p> <Br />
 
-<<doAction "{e:-5,min:10}">><</doAction>>
+<<=$mainChar.doAction({e:-2,min:10})>>
 <<set $mainChar.relationships.mom += 1>>
 
 <<if $mainChar.look.clothes.body.name === '' && $mainChar.look.lingerie.bra.name === '' && $mainChar.look.lingerie.panties.name === ''>>

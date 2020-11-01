@@ -5,16 +5,6 @@
 	<<EroticAccessoryItemLexenaMarket _eroticAccessoryItem _eroticAccessoryTitle>>
 <</for>>
 
-<<if settings.lessPrices == true>>
-	<<if $wereEroticMarketPricesReduced != true>>
-		<<set $wereEroticMarketPricesReduced = true>>
-	<<endif>>
-<<else>>
-	<<if $wereEroticMarketPricesReduced == true>>
-		<<set $wereEroticMarketPricesReduced = false>>
-	<<endif>>
-<<endif>>
-
 <br />
 [[Go back->Lexena Market]]
 
