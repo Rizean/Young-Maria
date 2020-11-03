@@ -1,7 +1,7 @@
 class MediaCatalog {
     constructor(media = []) {
         this.catalog = new Map()
-        media.forEach(({key, root = '', media, alt = '', range}) => {
+        media.forEach(({key, root = '', media, alt = '', range, variant}) => {
             if (this.catalog.has(key)) return console.warn(`MediaCatalog skipping ${key} as it already exist!`)
             if (root.endsWith('/')) root = root.slice(0, -1)
             if (range) {
@@ -9,6 +9,20 @@ class MediaCatalog {
                 media = []
                 for (let i = min; i <= max; i++) media.push(`${start}${i}.${ext}`)
             }
+            if (variant) {
+                let {base, variants, ext} = variant
+                let once = false
+                variants.forEach(v=>{
+                    // handle a call where the variant is missing
+                    if (!once) {
+                        once = true
+                        this.catalog.set(`${key}`, {root, alt, media: [`${base}${v}.${ext}`]})
+                    }
+                    this.catalog.set(`${key}.${v}`, {root, alt, media: [`${base}${v}.${ext}`]})
+                })
+                return
+            }
+
             if (!Array.isArray(media)) media = [media]
             media = media.map((src) => {
                 if (src.startsWith('/')) src = src.slice(1)
