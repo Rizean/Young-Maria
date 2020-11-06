@@ -91,7 +91,6 @@ Energy:
 <<SettingsCheckWidget>>
 <<WebMessages>>
 
-<<dollClothesWidget>>
 <<include "Paper Doll">>
 
 <<script>>

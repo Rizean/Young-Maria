@@ -3,6 +3,7 @@ window.SissyCharacter = function (config) {
     this.genitals = $GENITALS_MALE;
 
     Object.keys(config).forEach(function (pn) {
+        if (pn === 'paperDoll') return
         this[pn] = clone(config[pn]);
     }, this);
 };

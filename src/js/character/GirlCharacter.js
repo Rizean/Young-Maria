@@ -6,14 +6,20 @@ class GirlCharacter extends BasicCharacter {
 		this.weight = variables().DEFAULT_WEIGHT;
 		this.height = variables().DEFAULT_HEIGHT;
 
-		Object.keys(config).forEach(pn => this[pn] = clone(config[pn]))
+		Object.keys(config).forEach(pn => {
+			if (pn === 'paperDoll') return
+			this[pn] = clone(config[pn])
+		})
 	}
 	clone() {
 		return new GirlCharacter(this)
 	}
 	toJSON() {
 		let ownData = {};
-		Object.keys(this).forEach(pn => ownData[pn] = clone(this[pn]))
+		Object.keys(this).forEach(pn => {
+			if (pn === 'paperDoll') return
+			ownData[pn] = clone(this[pn])
+		})
 		return JSON.reviveWrapper('new GirlCharacter($ReviveData$)', ownData);
 	}
 	getAttractiveness() {

@@ -328,6 +328,15 @@ img.full-width-image  {
     max-height: 400px;
     z-index: 4
 }
+#DollChestAccessory img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 4
+}
 
 #DollBra img {
     position: absolute;

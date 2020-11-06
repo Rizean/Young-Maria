@@ -2,49 +2,7 @@
 
 
 ::Paper Doll [nobr] <625,3043>
-<div style="position: relative; top: 0; left: 0">
-	<div id="DollMainBody">[img[String.format('pics/PaperDoll/Head/eyes/' + $dollEyesColor + '.png')]]</div>
-	<div id="DollButtPlug">[img[String.format('pics/PaperDoll/LowerBody/ButtPlug/' + $dollButtPlug + '.png')]]</div>
-	<div id="DollNeck">[img[String.format('pics/PaperDoll/Head/Neck/' + $dollNeckClothes + '.png')]]</div>
-	<div id="DollHair">[img[String.format('pics/PaperDoll/Head/Hair/Hair' + $dollHairLength + $dollHairColor + '.png')]]</div>
-	<div id="DollChest">[img[String.format('pics/PaperDoll/UpperBody/Chest/' + $dollChestSize + $dollNipplesClothes + '.png')]]</div>
-	<div id="DollBra">[img[String.format('pics/PaperDoll/UpperBody/Bra/' + $dollBra + $dollChestSizeClothes + '.png')]]</div>
-	<div id="DollPanties">[img[String.format('pics/PaperDoll/LowerBody/Panties/' + $dollPanties + '.png')]]</div>
-	<div id="DollStockings">[img[String.format('pics/PaperDoll/LowerBody/Stockings/' + $dollLegsClothes + '.png')]]</div>
-	<div id="DollMainClothes">[img[String.format('pics/PaperDoll/UpperBody/MainClothes/' + $dollMainClothes + $dollChestSizeClothes + '.png')]]</div>
-</div>
+<<=$mainChar.renderPaperDoll()>>
 
 ::Paper Doll Widgets [widget nobr] <753,3051>
-<<widget "dollClothesWidget">>
 
-<!-- HEAD -->
-
-<<set $dollEyesColor = $mainChar.appearance.head.eyes.color>>
-<<set $dollHairColor = $mainChar.appearance.head.hair.color>>
-<<set $dollHairLength = $mainChar.appearance.head.hair.length>>
-<<set $dollNeckClothes = $mainChar.look.accessories.neck.name>>
-
-
-<!-- UPPER BODY -->
-
-<<set $dollChestSize = $mainChar.appearance.chest.size>>
-<<set $dollChestSizeClothes = $mainChar.appearance.chest.size>>
-<<set $dollMainClothes = $mainChar.look.clothes.body.name>>
-<<set $dollBra = $mainChar.look.lingerie.bra.name>>
-<<set $dollNipplesClothes = $mainChar.look.erotic_accessories.body.name>>
-
-<!-- LOWER BODY -->
-
-<<set $dollPanties = $mainChar.look.lingerie.panties.name>>
-<<set $dollLegsClothes = $mainChar.look.clothes.legs.name>>
-<<set $dollButtPlug = $mainChar.look.erotic_accessories.back.name>>
-
-<!-- RULES -->
-
-<<if $dollMainClothes != '' or $dollBra != ''>><<set $dollChestSize = ''>><<set $dollNipplesClothes = ''>><<endif>>
-<<if $dollBra == 'Usual bra'>><<set $dollBra = 'Default bra'>><<endif>>
-<<if $dollPanties == 'Usual Panties'>><<set $dollPanties = 'Default Panties'>><<endif>>
-<<if $dollButtPlug == 'Butt plug'>><<set $dollButtPlug = ''>><<endif>>
-<<if $dollMainClothes == 'School uniform' and $dollLegsClothes == 'Stockings'>><<set $dollLegsClothes = ''>><<endif>>
-
-<</widget>>

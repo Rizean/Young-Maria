@@ -1,4 +1,29 @@
 const gameMedia = [
+    /** PaperDoll **/
+    {key: "", root: "pics/PaperDoll", media: '.png'},
+
+    {key: "paperDoll.head.eyes", root: "pics/PaperDoll/Head/eyes", variant: {base: '', variants: ['blue', 'brown', 'green', 'grey'], ext: 'png'}},
+    {key: "paperDoll.head.hair.chest", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairChest', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
+    {key: "paperDoll.head.hair.long", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairLong', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
+    {key: "paperDoll.head.hair.short", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairShort', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
+    {key: "paperDoll.head.hair.shoulder", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairShoulders', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
+
+    {key: "paperDoll.body.upper.breast", root: "pics/PaperDoll/UpperBody/Chest", variant: {base: 'breast', variants: ['A', 'B', 'C', 'D'], ext: 'png'}},
+
+    /** PaperDoll Wearables **/
+    {key: "paperDoll.head.neck.accessor", root: "pics/PaperDoll/Head/Neck", variant: {base: '', variants: ['', 'choker', 'dogCollar'], ext: 'png'}},
+
+    {key: "paperDoll.body.lower.buttPlug", root: "pics/PaperDoll/LowerBody/ButtPlug", variant: {base: '', variants: ['', 'TailButtPlug'], ext: 'png'}},
+    {key: "paperDoll.body.lower.panties.defaultPanties", root: "pics/PaperDoll/LowerBody/Panties", media: 'defaultPanties.png'},
+    {key: "paperDoll.body.lower.stockings", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Stockings.png'},
+
+
+    {key: "paperDoll.body.upper.bra", root: "pics/PaperDoll/UpperBody/Bra", variant: {base: 'DefaultBra', variants: ['', 'A', 'B', 'C', 'D'], ext: 'png'}},
+    {key: "paperDoll.body.upper.nippleRings", root: "pics/PaperDoll/UpperBody/Chest", variant: {base: 'NippleRings', variants: ['', 'A', 'B', 'C', 'D'], ext: 'png'}},
+
+    {key: "paperDoll.body.upper.eveningDress", root: "pics/PaperDoll/UpperBody/EveningDress", variant: {base: 'EveningDress', variants: ['A', 'B', 'C', 'D'], ext: 'png'}},
+    {key: "paperDoll.body.upper.schoolUniform", root: "pics/PaperDoll/UpperBody/schoolUniform", variant: {base: 'schoolUniform', variants: ['A', 'B', 'C', 'D'], ext: 'png'}},
+
     {key: "books.DaddyMe", "media": ["pics/books/DaddyMe.jpg"]},
 
     {key: "appearance.anal.hole", root: "pics/appearance/anal/hole/", range: {min: 1, max: 3, ext: 'jpg'}},

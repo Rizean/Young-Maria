@@ -47,8 +47,11 @@ class BasicCharacter {
                 image: '',
             }
         }
+        this.paperDoll = new PaperDoll(mediaCatalog)
+
 
         Object.keys(config).forEach(function (pn) {
+            if (pn === 'paperDoll') return
             this[pn] = clone(config[pn]);
         }, this);
     }
@@ -61,6 +64,7 @@ class BasicCharacter {
         let ownData = {};
 
         Object.keys(this).forEach(function (pn) {
+            if (pn === 'paperDoll') return
             ownData[pn] = clone(this[pn]);
         }, this);
 
@@ -539,6 +543,33 @@ class BasicCharacter {
         if (napTime > 240) restRecoveryValue = 0.20
         let energy = Math.round(napTime * restRecoveryValue)
         return this.doAction({energy, hour, minutes})
+    }
+
+    updatePaperDoll() {
+        let {paperDoll} = this
+        let {accessories: {neck}, erotic_accessories, lingerie: {panties, bra}, clothes: {legs, body}} = this.look
+        let {chest, head: {eyes, hair}} = this.appearance
+        let chestSize = chest.size.toUpperCase()
+
+        const TEMP_DATA = {
+            'School uniform': 'paperDoll.body.upper.schoolUniform',
+            'Evening dress': 'paperDoll.body.upper.eveningDress',
+        }
+        paperDoll.clear()
+        paperDoll.setPart({part: 'mainBody', key: 'paperDoll.head.eyes', variant: eyes.color})
+        if (erotic_accessories.back.name === 'Tail butt plug') paperDoll.setPart({part: 'buttPlug', key: 'paperDoll.body.lower.buttPlug', variant: 'TailButtPlug'})
+        if (neck !== '') paperDoll.setPart({part: 'neck', key: 'paperDoll.head.neck.accessor', variant: neck === 'Dog collar' ? 'dogCollar' : 'choker'})
+        paperDoll.setPart({part: 'hair', key: `paperDoll.head.hair.${hair.length}`, variant: hair.color.toUpperFirst()})
+        paperDoll.setPart({part: 'chest', key: `paperDoll.body.upper.breast`, variant: chestSize})
+        if (erotic_accessories.body.name === "Nipple rings") paperDoll.setPart({part: 'chestAccessory', key: `paperDoll.body.upper.nippleRings`, variant: chestSize})
+        if (bra.name > '') paperDoll.setPart({part: 'bra', key: `paperDoll.body.upper.bra`, variant: chestSize})
+        if (panties.name > '') paperDoll.setPart({part: 'panties', key: 'paperDoll.body.lower.panties.defaultPanties'})
+        if (legs.name > '') paperDoll.setPart({part: 'stockings', key: 'paperDoll.body.lower.stockings'})
+        if (TEMP_DATA[body.name]) paperDoll.setPart({part: 'mainClothes', key: TEMP_DATA[body.name]})
+    }
+    renderPaperDoll() {
+        this.updatePaperDoll()
+        return this.paperDoll.render()
     }
 }
 

@@ -5,6 +5,7 @@ window.ManCharacter = function (config) {
     this.height = variables().DEFAULT_HEIGHT + 5;
 
     Object.keys(config).forEach(function (pn) {
+        if (pn === 'paperDoll') return
         this[pn] = clone(config[pn]);
     }, this);
 };
@@ -20,6 +21,7 @@ ManCharacter.prototype.toJSON = function () {
     var ownData = {};
 
     Object.keys(this).forEach(function (pn) {
+        if (pn === 'paperDoll') return
         ownData[pn] = clone(this[pn]);
     }, this);
 

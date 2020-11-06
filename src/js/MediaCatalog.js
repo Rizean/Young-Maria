@@ -12,7 +12,7 @@ class MediaCatalog {
             if (variant) {
                 let {base, variants, ext} = variant
                 let once = false
-                variants.forEach(v=>{
+                variants.forEach(v => {
                     // handle a call where the variant is missing
                     if (!once) {
                         once = true
@@ -38,9 +38,14 @@ class MediaCatalog {
         return `<div class="default-image-wrapper"><img src="${_src || src}" alt="${alt}"></div>`
     }
 
-    getImage({key, random = true, index = 0}) {
-        if (key && !this.catalog.has(key)) return
-        let data = this.catalog.get(key)
+    getImage({key, random = true, index = 0, variant}) {
+        variant = variant && variant !== '' ? variant : undefined
+        let _key = variant ? `${key}.${variant}` : key
+        if (_key && !this.catalog.has(_key)) {
+            if (variant && !this.catalog.has(key)) return
+            _key = key
+        }
+        let data = this.catalog.get(_key)
         index = random ? Math.floor(Math.random() * data.media.length) : index
         if (index >= data.media[index].length) index = 0
         return data.root !== '' ? `${data.root}/${data.media[index]}` : data.media[index]
