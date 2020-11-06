@@ -1,3 +1,19 @@
+const GAME_ITEMS_V2 = {
+    wearable: [
+        {
+            key: 'eveningDress',
+            name: 'Evening dress',
+            mediaKey: 'pics/EDress.jpg',
+            description: 'Perfect for special events + quite sexy!',
+            mediaPaperDollKey: 'paperDoll.body.upper.eveningDress',
+            allure: 20,
+            obscenity: 5,
+            price: 150,
+            type: 'body',
+        },
+    ]
+}
+
 const GAME_ITEMS = {
     clothes: {
         eveningDress: {
@@ -168,7 +184,7 @@ const GAME_ITEMS = {
         laptop: {
             name: 'Laptop',
             image: 'pics/Laptop.png',
-            description: 'A musthave for teenagers!',
+            description: 'A must have for teenagers!',
             price: 800,
         },
         webcam: {
