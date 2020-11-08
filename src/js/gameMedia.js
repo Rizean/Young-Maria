@@ -79,6 +79,35 @@ const gameMedia = [
 
     // wearables
     {key: "wearable.eveningDress", root: "pics/wearable", media: 'EDress.png'},
+    {key: "wearable.miniskirt", root: "pics/object", media: 'MSkirt.jpg'},
+    {key: "wearable.officeSuit", root: "pics/object", media: 'OfficeSuit.jpg'},
+    {key: "wearable.sportOutfit", root: "pics/object", media: 'SportOutfit.jpg'},
+    {key: "wearable.bikini", root: "pics/wearable", media: 'Bikini.jpg'},
+    {key: "wearable.shortsAndShirt", root: "pics/object", media: 'shorts_with_tshirt.jpg'},
+    {key: "wearable.stockings", root: "pics/object", media: 'Stockings.jpg'},
+    {key: "wearable.choker", root: "pics/wearable", media: 'Choker.jpg'},
+    {key: "wearable.plainBlackBra", root: "pics/look/lingerie/bra", media: 'default_bra.jpg'},
+    {key: "wearable.plainBlackPanties", root: "pics/look/lingerie/panties", media: 'default_panties.jpg'},
+    {key: "wearable.blackMiniGString", root: "pics/look/lingerie/panties", media: 'transparentBlackMiniGString.jpg'},
+    {key: "wearable.anal_plug", root: "pics/wearable", media: 'BPlug.jpg'},
+    {key: "wearable.anal_tailplug", root: "pics/wearable", media: 'TBPlug.jpg'},
+    {key: "wearable.nipple_rings", root: "pics/object", media: 'NPiercing.jpg'},
+    {key: "wearable.nipple_rings", root: "pics/object", media: 'NPiercing.jpg'},
+
+    // objects
+    {key: "object.dildo", root: "pics/object", media: 'Dildo.jpg'},
+    {key: "object.gun", root: "pics/object", media: 'Gun.jpg'},
+    {key: "object.laptop", root: "pics/object", media: 'Laptop.jpg'},
+    {key: "object.webcam", root: "pics/personal_items", media: 'webcam.jpg'},
+    {key: "object.makeup_kit", root: "pics/personal_items", media: 'cosmetics.jpg'},
+    {key: "object.lipstick", root: "pics/personal_items/lipsticks", variant: {base: '', variants: ['red', 'black', 'brown', 'violet', 'pink'], ext: 'jpg'}},
+    {key: "object.lipbalm", root: "pics/personal_items", media: 'lipbalm.jpg'},
+    {key: "object.birth_control_pills", root: "pics/personal_items", media: 'birth_control_pills.jpg'},
+    {key: "object.tampons", root: "pics/personal_items", media: 'tampons.jpg'},
+    {key: "object.vitamins", root: "pics/personal_items", media: 'vitamins.jpg'},
+    {key: "object.pregnancy_test", root: "pics/personal_items", media: 'pregnancy_test.jpg'},
+    {key: "object.shampoo", root: "pics/personal_items", media: 'shampoo.jpg'},
+    {key: "object.razors", root: "pics/personal_items", media: 'razors.jpg'},
 ]
 
 window._gameMedia = gameMedia
