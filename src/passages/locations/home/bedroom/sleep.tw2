@@ -4,7 +4,7 @@
 <<endif>>
 
 <div class="default-image-wrapper">
-	<img src="pics/homeSleep.jpg">
+	<img src="pics/event/homeSleep.jpg">
 </div>
 
 <<set $mainChar.appearance.isCombed = false>>
@@ -34,7 +34,7 @@
 	"HAPPY BIRTHDAY, DEAR!!!" <br />
 
 	<div class="default-image-wrapper">
-		<img src="pics/BirthdayMorning.jpg">
+		<img src="pics/event/BirthdayMorning.jpg">
 	</div>
 	<br />
 	&emsp;Your parents enter your room and congratulate you on your Birthday! It's so sweet :3 <br />

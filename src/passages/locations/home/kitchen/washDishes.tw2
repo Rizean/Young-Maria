@@ -1,6 +1,6 @@
 ::wash the dishes after family dinner [nobr] <2500,700>
 @@.image-wrapper-w70p;
-	[img['pics/wash_the_dishes.jpg']]
+	[img['pics/event/wash_the_dishes.jpg']]
 @@
 You wash the dishes after dinner, thereby helping your mother. She appreciates your help. <br />
 @@.add; +1 relationship with mom @@

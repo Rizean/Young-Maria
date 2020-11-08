@@ -11,14 +11,14 @@ src/passages/locations/home/kitchen/washDishes.tw2
 
 
 ::Kitchen [nobr] <2200,1140>
-@@.image-wrapper-w70p; <img src="pics/kitchen.jpeg"> @@
+@@.image-wrapper-w70p; <img src="pics/location/kitchen.jpeg"> @@
 You are in a huge [[kitchen->kitchen description]]. <br />
 <<include "Kitchen schedule">>
 <br />
 [[Go back->living room][$minute += 1]]
 
 ::kitchen description [nobr] <2200,1020>
-@@.image-wrapper-w70p; <img src="pics/kitchen.jpeg"> @@
+@@.image-wrapper-w70p; <img src="pics/location/kitchen.jpeg"> @@
 The kitchen is large with white tiled walls. Though pretty, they are a pain to clean for your mother. <br />
 There is a big window that lets in lots of natural light, making the space even more bright. <br />
 The counters are black and white, giving the kitchen a very modern look. Upon them sit a range of household appliances of the newest and highest quality. On many of the counters a variety of plants. Your mom is very proud of her plant collection. <br />

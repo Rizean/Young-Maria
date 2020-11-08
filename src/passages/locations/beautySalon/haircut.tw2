@@ -22,7 +22,7 @@ She asks what you'd like? You consult with her and soon come to a decision...
 [[Back->Beauty Salon]]
 
 ::Hairdressing <4373,998>
-<div class="default-image-wrapper"><img src="pics/BeautySalonHairdressing.png"></div>
+<div class="default-image-wrapper"><img src="pics/location/beautySalon/BeautySalonHairdressing.png"></div>
 
 What can be better than the feeling of getting your hair washed by a professional?
 <<=$mainChar.doAction({b:15,e:-10,m:150})>>
@@ -94,7 +94,7 @@ $(document).ready(function() {
 <</script>>
 
 ::New Haircut [nobr] <4247,1123>
-<div class="default-image-wrapper"><img src="pics/BeautySalonHaircut.gif"></div>
+<div class="default-image-wrapper"><img src="pics/location/beautySalon/BeautySalonHaircut.gif"></div>
 
 After Charlotte finishes attending to your hair, she smiles at you in the reflection of the mirror. It feels good to get a fresh look once in a while!
 <br />

@@ -18,7 +18,7 @@ src/passages/locations/home/goOut.tw2
   <<else>><<if $wasNameRandomized == true>><<set $mainChar.firstName = $randomName>><<endif>>&emsp;Today was more challenging than you expected. Between the move, the long drive, unpacking and cleaning the new house, you feel weighed down and exhausted.
   &emsp;Thankfully, now that you have done most of the chores, you have the opportunity to look around your new house.
 
-  <div class="default-image-wrapper"><img src="pics/moving.jpg"></div>
+  <div class="default-image-wrapper"><img src="pics/event/moving.jpg"></div>
 
    &emsp; You wondered how your parents were able to afford such a large home, but you have no complaints about all the new space you can move around in. The living room offers a spacious area to watch TV together with your family. As you peek into the open kitchen, you can see your mother unpacking boxes to fill the cupboards.
 	&emsp;When you start climbing the stairs, you can hear your father cursing. You glance into your parents bedroom to see him glaring at the instructions for the large TV he's installing.

@@ -1,7 +1,7 @@
 ::Go out [nobr] <3300,900>
 <<if $timeOfDay == "Day">>
     <div class="default-image-wrapper">
-        <img src="pics/city1.jpg">
+        <img src="pics/location/city/city1.jpg">
     </div>
 <<else>>
     <div class="default-image-wrapper">

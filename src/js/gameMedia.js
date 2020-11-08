@@ -6,7 +6,7 @@ const gameMedia = [
     {key: "paperDoll.head.hair.chest", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairChest', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
     {key: "paperDoll.head.hair.long", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairLong', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
     {key: "paperDoll.head.hair.short", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairShort', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
-    {key: "paperDoll.head.hair.shoulder", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairShoulders', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
+    {key: "paperDoll.head.hair.shoulders", root: "pics/PaperDoll/Head/Hair", variant: {base: 'HairShoulders', variants: ['Blonde', 'Brunette', 'Red'], ext: 'png'}},
 
     {key: "paperDoll.body.upper.breast", root: "pics/PaperDoll/UpperBody/Chest", variant: {base: 'breast', variants: ['A', 'B', 'C', 'D'], ext: 'png'}},
 
@@ -76,6 +76,9 @@ const gameMedia = [
     {key: "appearance.selfie.tongueout", root: "pics/selfie/tongueout", range: {min: 0, max: 3, start: 'tongueout', ext: 'jpg'}},
     {key: "appearance.selfie.underwear", root: "pics/selfie/underwear", range: {min: 0, max: 12, start: 'underwear', ext: 'jpg'}},
     {key: "appearance.selfie.wet", root: "pics/selfie/wet", range: {min: 0, max: 7, start: 'wet', ext: 'jpg'}},
+
+    // wearables
+    {key: "wearable.eveningDress", root: "pics/wearable", media: 'EDress.png'},
 ]
 
 window._gameMedia = gameMedia

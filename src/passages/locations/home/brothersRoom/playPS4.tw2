@@ -142,7 +142,7 @@
 	 @@
 	<br />
 	@@.image-wrapper-w70p;
-[img[String.format('pics/BrotherPS4Fucking' + random(1, 11) + '.jpg')]]<<HaveASexWidget "vaginal" "sibling">>
+[img[String.format('pics/brother/BrotherPS4Fucking' + random(1, 11) + '.jpg')]]<<HaveASexWidget "vaginal" "sibling">>
 	@@
 	<br />
 	@@.bc-text; You are the best sister ever~ @@

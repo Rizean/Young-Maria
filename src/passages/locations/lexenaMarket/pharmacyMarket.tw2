@@ -1,6 +1,6 @@
 ::"Pharmacy" market [nobr] <3036,966>
 @@.image-wrapper-w70p;
-	[img['pics/pharmacy_shop.jpg']]
+	[img['pics/location/pharmacy_shop.jpg']]
 @@
 
 A middle-aged woman with dark eyes gives you a sad smile. "Hi there, we offer a range of health care products. What did you need?" <br /><br />

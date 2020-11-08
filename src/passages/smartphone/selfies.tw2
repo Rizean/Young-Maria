@@ -13,7 +13,7 @@
 ::A video of you, sucking Jack off [system] <5975,2400>
 [[Back->Gallery]]
 
-<div class="default-image-wrapper"><img src="pics/JackSucking.gif"></div>
+<div class="default-image-wrapper"><img src="pics/event/JackSucking.gif"></div>
 
 ::GF photos [system nobr] <4500,1575>
 <<=$mainChar.selfies.generateSelfieSellPassageSrc({character: $mainChar})>>

@@ -66,7 +66,7 @@
         body: {
 	  	    'School uniform': {
 		  		name: 'School uniform',
-				image: 'pics/SchoolUniform.jpg',
+				image: 'pics/object/SchoolUniform.jpg',
 				description: 'You must wear this at school',
 				category: 'suit, school',
 				allure: 10,
@@ -81,7 +81,7 @@
 		    },
 	  	    'Usual clothes': {
 		  		name: 'Usual clothes',
-				image: 'pics/UClothes.jpg',
+				image: 'pics/object/UClothes.jpg',
 				description: 'Regular clothes, nice and comfortable.',
 				category: 'usual',
 				allure: 5,
@@ -99,7 +99,7 @@
         finger: {
 			'Plain gold ring': {
 				name: 'Plain gold ring',
-				image: 'pics/PGRing.jpg',
+				image: 'pics/object/PGRing.jpg',
 				description: 'You have this ring for three years.',
 				category: 'accessories',
 				allure: 5,

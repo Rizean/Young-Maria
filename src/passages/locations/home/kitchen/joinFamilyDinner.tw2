@@ -1,6 +1,6 @@
 ::join family dinner [nobr] <2400,800>
 @@.image-wrapper-w70p;
-	[img['pics/family_dinner.jpg']]
+	[img['pics/event/family_dinner.jpg']]
 @@
 You join the table. Your family has already started to help themselves. <br />
 Throughout the dinner, you all bring up different topics and discuss them with your own views. <br />

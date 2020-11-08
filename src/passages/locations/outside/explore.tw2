@@ -1,9 +1,9 @@
 ::Explore them <3300,1106>
-<<set _image to either(1,2,3,4,5)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/explore1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/explore2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/explore3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/explore4.jpg"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/explore5.jpg"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/explore6.jpg"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/explore7.jpg"></div><<endif>>
+<<set _image to either(1,2,3,4,5)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/location/city/explore1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/location/city/explore2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/location/city/explore3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/location/city/explore4.jpg"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/location/city/explore5.jpg"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/location/city/explore6.jpg"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/location/city/explore7.jpg"></div><<endif>>
 
 <<=$mainChar.doAction({e:-10,h:2})>>
 
-<<set _badThingChance to either(true,false,false)>><<set _event to either(1,2,3)>><<if _event == 1 && ($isParkAvailable != true or $isHighTaiAvailable != true or $isBankAvailable != true or $isBeautySalonAvailable != true or $isBeachAvailable != true or $isBarAvailable != true)>><<exploreCityWidget>><<if _place == "Park">><div class="default-image-wrapper"><img src="pics/park1.jpg"></div>
+<<set _badThingChance to either(true,false,false)>><<set _event to either(1,2,3)>><<if _event == 1 && ($isParkAvailable != true or $isHighTaiAvailable != true or $isBankAvailable != true or $isBeautySalonAvailable != true or $isBeachAvailable != true or $isBarAvailable != true)>><<exploreCityWidget>><<if _place == "Park">><div class="default-image-wrapper"><img src="pics/location/park/park1.jpg"></div>
 
 &emsp;As you're walking around you notice a large area with luscious greenery, a playground with monkey bars and swings, and even a ornate fountain in the middle.
 &emsp;Little children are playing on the equpiment whilst parents watch with one eye and chat to other parents. Several elderly couples amble along the dirt paths, soaking up the sunshine.
@@ -12,7 +12,7 @@
 
 [[Go back->Go out]]<<elseif _place == "High Tai">>&emsp;You are walking down the streets when your eye is caught by one house in particular.
 
-<div class="default-image-wrapper"><img src="pics/eHighTai.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/eHighTai.jpg"></div>
 
 &emsp;You stride closer and realise it's a regular old abandoned high-rise building. Some windows are broken and the outside is covered in mold, dust and dirt. Yet the building is supposedly abandoned, you can hear some voices coming from around one side. A lot of voices.
 &emsp;Whilst you were looking at this old house, a young man smoking by one of the lowest windows notices you. "Hello, young lady. Who are you looking for?"
@@ -27,7 +27,7 @@
 
 <strong>HIGH TAI</strong> is now available!<<set $isHighTaiAvailable = true>><<elseif _place == "Bank">>Oh, what a gorgerous building!
 
-<div class="default-image-wrapper"><img src="pics/eBank.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/eBank.jpg"></div>
 
 &emsp;Looks like a bank. Quite useful in big cities. Plus, now you'll feel safe not having to carry around your money.
 
@@ -36,7 +36,7 @@
 [[Go back->Go out]]<<elseif _place == "Beauty Salon">>&emsp;You are walking down the street when you see a beautiful building with shining glass walls. The building invites you in and you soon find yourself entering through its large glass doors.
 &emsp;Above the doors, a sign reads; "Madam Latty's Beauty Palace". The floor of the "palace" was made of black and white marble. On one wall was an aquarium with some pretty creatures in it. Around the room are puffs, mirrors, a TV on one wall, and a huge painting on another wall of a gorgeous old lady - Madam Latty, maybe.
 
-<div class="default-image-wrapper"><img src="pics/BeautySalon.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/beautySalon/BeautySalon.jpg"></div>
 
 &emsp;As you take another step, a pretty young girl in an office suit approachs you. Her smile is charming but a bit too formal. "Hello, my name is Charlotte, how can I help you?" she asks.
 
@@ -46,7 +46,7 @@
 
 &emsp;Let's buy a bikini and go for a swim!
 
-<div class="default-image-wrapper"><img src="pics/Beach.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/beach/Beach.jpg"></div>
 
 <strong>Beach</strong> is now available!
 
@@ -59,7 +59,7 @@
 [[Go back->Go out]]<<set $isBarAvailable = true>><<endif>><<elseif _event == 2>>&emsp;As you walk around the city, you find a [[very quite district]]
 <<elseif _event == 3 && _badThingChance == true>><<if settings.nonConsent == true>><<set _badThingEvent to either("rob","rape")>><<else>><<set _badThingEvent = "rob">><<endif>><<if _badThingEvent == "rob">>"Hey, kiddo!" You turn around and see a mugger!
 
-<div class="default-image-wrapper"><img src="pics/mugger.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/people/mugger.jpg"></div>
 <<set _robbed to either(20,30,40,50)>><<if _robbed > $mainChar.money>><<set _robbed = $mainChar.money>><<endif>>
 "Give me <<if _robbed == $mainChar.money>>all your money<<else>>_robbed bucks<<endif>>, now!"
 
@@ -68,7 +68,7 @@
 &emsp;"Don't fucking move!" he says, slapping your face hard.
 &emsp;Seems he is going to take you no matter what...
 
-@@.image-wrapper-w50p;	[img[String.format('pics/AlleyRape' + random(1,4) + '.gif')]]
+@@.image-wrapper-w50p;	[img[String.format('pics/sex/nonConsensual/AlleyRape' + random(1,4) + '.gif')]]
 @@
 
 &emsp;After he finishes, you are released. The rapist just walks away, happy and self-confident, leaving you all trembling and dirty...
@@ -79,7 +79,7 @@
 
 <<endif>><<elseif _event == 4>>&emsp;You see something glinting next to the road. What is that?
 
-<div class="default-image-wrapper"><img src="pics/eMoney.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/eMoney.jpg"></div>
 <<set _found to either(2,5,7,9,10,11,13)>>
 <<if _found == 13>>&emsp;13 bucks... Is it some kind of mystical sign? It must be. Hmm...
 &emsp;While you are thinking what to do, a guy passing by gives your butt a slap. "Nice ass!"

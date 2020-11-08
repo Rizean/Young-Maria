@@ -14,7 +14,7 @@ src/passages/locations/home/bathroom/washFace.tw2
 
 
 ::Bathroom [nobr] <1600,1080>
-@@.image-wrapper-w70p; <img src="pics/bathroom.jpg"> @@
+@@.image-wrapper-w70p; <img src="pics/location/bathroom.jpg"> @@
 <<if $hour == 8 && $minute >= 30>>
     <<if previous() == 'Have a shower'>>
         &emsp;Coming out of the shower, you hear a knock at the door. <br />
@@ -107,7 +107,7 @@ src/passages/locations/home/bathroom/washFace.tw2
 				<<set $mainChar.pregnancy.knowsAboutPregnancy = true>>
 				<strong>You are pregnant!</strong> <br />
 
-				<<if $mainChar.pregnancy.day <= 7>>@@.image-wrapper-w70p; <img src="pics/PregnantLightly.jpg"> @@<<else>>@@.image-wrapper-w70p; <img src="pics/PregnantHeavily.jpg"> @@<<endif>>
+				<<if $mainChar.pregnancy.day <= 7>>@@.image-wrapper-w70p; <img src="pics/event/PregnantLightly.jpg"> @@<<else>>@@.image-wrapper-w70p; <img src="pics/event/PregnantHeavily.jpg"> @@<<endif>>
 
 				And you have been pregnant for $mainChar.pregnancy.day day<<if $mainChar.pregnancy.day > 1>>s<<endif>>!
 			<<else>>

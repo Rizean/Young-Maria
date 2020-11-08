@@ -148,32 +148,32 @@
     <<set _image to random(1, 6)>>
     <<if _image == 1>>
         <div class="default-image-wrapper">
-            <img src="pics/bossFuck1.gif">
+            <img src="pics/sex/office/bossFuck1.gif">
         </div>
         <<HaveASexWidget "vaginal" "MrMcEvoy">>
     <<elseif _image == 2>>
         <div class="default-image-wrapper">
-            <img src="pics/bossFuck2.gif">
+            <img src="pics/sex/office/bossFuck2.gif">
         </div>
         <<HaveASexWidget "vaginal" "MrMcEvoy">>
     <<elseif _image == 3>>
         <div class="default-image-wrapper">
-            <img src="pics/bossFuck3.gif">
+            <img src="pics/sex/office/bossFuck3.gif">
         </div>
         <<HaveASexWidget "vaginal" "MrMcEvoy">>
     <<elseif _image == 4>>
         <div class="default-image-wrapper">
-            <img src="pics/bossFuck4.gif">
+            <img src="pics/sex/office/bossFuck4.gif">
         </div>
         <<HaveASexWidget "vaginal" "MrMcEvoy">>
     <<elseif _image == 5>>
         <div class="default-image-wrapper">
-            <img src="pics/bossFuck5.gif">
+            <img src="pics/sex/office/bossFuck5.gif">
         </div>
         <<HaveASexWidget "anal" "MrMcEvoy">>
     <<elseif _image == 6>>
         <div class="default-image-wrapper">
-            <img src="pics/bossFuck6.gif">
+            <img src="pics/sex/office/bossFuck6.gif">
         </div>
         <<HaveASexWidget "vaginal" "MrMcEvoy">>
     <<endif>>
@@ -202,27 +202,27 @@
     <<set _image to random(1, 5)>>
     <<if _image == 1>>
         <div class="default-image-wrapper">
-            <img src="pics/bossSuck1.gif">
+            <img src="pics/sex/office/bossSuck1.gif">
         </div>
         <<HaveASexWidget "bj" "MrMcEvoy">>
     <<elseif _image == 2>>
         <div class="default-image-wrapper">
-            <img src="pics/bossSuck2.gif">
+            <img src="pics/sex/office/bossSuck2.gif">
         </div>
         <<HaveASexWidget "bj" "MrMcEvoy">>
     <<elseif _image == 3>>
         <div class="default-image-wrapper">
-            <img src="pics/bossSuck3.gif">
+            <img src="pics/sex/office/bossSuck3.gif">
         </div>
         <<HaveASexWidget "bj" "MrMcEvoy">>
     <<elseif _image == 4>>
         <div class="default-image-wrapper">
-            <img src="pics/bossSuck4.gif">
+            <img src="pics/sex/office/bossSuck4.gif">
         </div>
         <<HaveASexWidget "bj" "MrMcEvoy">>
     <<elseif _image == 5>>
         <div class="default-image-wrapper">
-            <img src="pics/bossSuck5.gif">
+            <img src="pics/sex/office/bossSuck5.gif">
         </div>
         <<HaveASexWidget "bj" "MrMcEvoy">>
     <<endif>>

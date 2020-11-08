@@ -3,7 +3,7 @@
 You slowly pull down the covers to reveal his nudy body and a rock hard cock. You lower your head and gently run your tongue across the tip. Your dad lets out a quiet groan and opens his eyes. When you see his shocked expression, you wink at him before taking his big cock in your mouth. You bob up and down, enjoying the feeling of his throbbing dick pushing down your throat.
 
 <div class="default-image-wrapper">
-    <img src="pics/dadBJ.gif">
+    <img src="pics/dad/dadBJ.gif">
 </div>
 <<HaveASexWidget "bj" "dad">>
 
@@ -29,12 +29,12 @@ You slowly pull down the covers to reveal his nudy body and a rock hard cock. Yo
 <<set _image to either(1,2)>>
 <<if _image == 1>>
     <div class="default-image-wrapper">
-        <img src="pics/dadFuck1.gif">
+        <img src="pics/dad/dadFuck1.gif">
     </div>
     <<HaveASexWidget "vaginal" "dad">>
 <<elseif _image == 2>>
     <div class="default-image-wrapper">
-        <img src="pics/dadFuck2.gif">
+        <img src="pics/dad/dadFuck2.gif">
     </div>
     <<HaveASexWidget "vaginal" "dad">>
 <<endif>>
@@ -60,37 +60,37 @@ After you're done, your father leans down and gives you a sweet kiss on your for
 
 <<if _image == 1>>
     <div class="default-image-wrapper">
-        <img src="pics/nightParents1.gif">
+        <img src="pics/sex/parents/nightParents1.gif">
     </div>
     <<HaveASexWidget "bj" "dad and mom">>
 <<elseif _image == 2>>
     <div class="default-image-wrapper">
-        <img src="pics/nightParents2.gif">
+        <img src="pics/sex/parents/nightParents2.gif">
     </div>
     <<HaveASexWidget "bj" "dad and mom">>
 <<elseif _image == 3>>
     <div class="default-image-wrapper">
-        <img src="pics/nightParents3.gif">
+        <img src="pics/sex/parents/nightParents3.gif">
     </div>
     <<HaveASexWidget "bj" "dad and mom">>
 <<elseif _image == 4>>
     <div class="default-image-wrapper">
-        <img src="pics/nightParents4.gif">
+        <img src="pics/sex/parents/nightParents4.gif">
     </div>
     <<HaveASexWidget "bj" "dad and mom">>
 <<elseif _image == 5>>
     <div class="default-image-wrapper">
-        <img src="pics/nightParents5.gif">
+        <img src="pics/sex/parents/nightParents5.gif">
     </div>
     <<HaveASexWidget "bj" "dad and mom">>
 <<elseif _image == 6>>
     <div class="default-image-wrapper">
-        <img src="pics/nightParents6.gif">
+        <img src="pics/sex/parents/nightParents6.gif">
     </div>
     <<HaveASexWidget "bj" "dad and mom">>
 <<elseif _image == 7>>
     <div class="default-image-wrapper">
-        <img src="pics/nightParents7.gif">
+        <img src="pics/sex/parents/nightParents7.gif">
     </div>
     <<HaveASexWidget "bj" "dad and mom">>
 <<endif>>

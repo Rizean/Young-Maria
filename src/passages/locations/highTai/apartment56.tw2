@@ -3,7 +3,7 @@
 
 HOLY SHIT!!
 
-<div class="default-image-wrapper"><img src="pics/stashRuined.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/stashRuined.jpg"></div>
 
 &emsp;You look around the place; everything is broken; everything is damaged; everything is fucked up! You scout all the rooms and find that a total of three windows are broken. You think it might be a mixture of strong winds, birds and torrential rain. Well, there's no point in buying another apartment, you think, especially if they're going to be the same as this one... Or worse...
 &emsp;While you're thinking, a piece of curtain flapping in the wind catches your eye. You stride over to it and rip the material. It easily splits in your hands but the material itself is fairly durable. You have an idea...
@@ -17,7 +17,7 @@ HOLY SHIT!!
 [[Look around->Apartment №56 (Your Stash)]]
 <<elseif $isFirstStashVisit == false>>This is your secret place. The Stash.
 
-<div class="default-image-wrapper"><img src="pics/stash.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/stash.jpg"></div>
 
 [[Description]]<<if $stashNeatness == 100>>
 [[Improve Stash]]<<endif>>
@@ -60,7 +60,7 @@ You have $mainChar.inventory.grocery['Shampoo'].count uses of a shampoo.
 ::Clean it <3270,2093>
 &emsp;Well, it's time to tackle the monstrosity that is your apartment...
 
-<div class="default-image-wrapper"><img src="pics/cleaning.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/event/cleaning.jpg"></div>
 
 <<if $stashCleaning == "None">><<set $stashCleaning = "First">><<set $stashCleanFirst = true>>&emsp;You think through what you need to do. First of all, you need to fix the windows but where do you begin? Well, you can't do it alone, that much is obvious.
 &emsp;You open your door to leave the apartment but are suddenly blocked. You look up to see Ron stood with a toolbox in hand. He gives you a shrug. "Big Six saw you entering this apartment... Thought I'd see if you needed any help."
@@ -113,7 +113,7 @@ You have $mainChar.inventory.grocery['Shampoo'].count uses of a shampoo.
 &emsp;Once there, he drops you to the floor and pushes you onto your knees. Then he unzips his pants and reveals his erect cock. Without even thinking, you take his dick in your mouth and stimulate it using your tongue for extra points. <br />
 &emsp;After a couple minutes of gagging and slurping, Ron removes his dick and pulls you to your feet. Then he turns you around and bends you over. <br /> <br />
 
-<div class="default-image-wrapper"><img src="pics/thankRon.gif"></div>
+<div class="default-image-wrapper"><img src="pics/sex/misc/thankRon.gif"></div>
 <<HaveASexWidget "vaginal" "Ron">>
 
 &emsp;He tears off your clothes and positions himself by your entrance. Before long he pushes his dick inside your pussy. It's tight but that only adds to the pleasure as you can feel him scraping along your walls. <br />
@@ -128,7 +128,7 @@ You have $mainChar.inventory.grocery['Shampoo'].count uses of a shampoo.
 <</link>>
 
 ::Sleep at Stash <3240,2360>
-<<if $mainChar.intoxication != 0>><<set $mainChar.intoxication = 0>><<endif>><<if $timeOfDay == "Day">><<set $day += 1>><<set $dayCount += 1>><<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>><<dateChangeWidget>><<endif>><<if $day == 8>><<set $day = 1>><<endif>><div class="default-image-wrapper"><img src="pics/stashSleep.jpg"></div>
+<<if $mainChar.intoxication != 0>><<set $mainChar.intoxication = 0>><<endif>><<if $timeOfDay == "Day">><<set $day += 1>><<set $dayCount += 1>><<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>><<dateChangeWidget>><<endif>><<if $day == 8>><<set $day = 1>><<endif>><div class="default-image-wrapper"><img src="pics/event/stashSleep.jpg"></div>
 <<set $mainChar.appearance.isCombed = false>>
 <<set $mainChar.appearance.teethBrushed = false>>
 
@@ -161,7 +161,7 @@ Make Stash a brothel (12 days, $700) - <<if !$mainChar.canDoAction({money: 700})
 ::Apartment №56 (Your brothel) <2966,2094>
 <<if $isWorkingAtBrothelAvailable != true>><<set _event to either("sick girl","none","none","none")>><<else>><<set _event to either("dad","none","none","none")>><<endif>><<if $brothelFirstVisit != false>><<set $isBrothelBuilt = true>><<set $dayBrothelStarted = $dayCount>><<set $brothelFirstVisit = false>>Once the builders leave, you enter your apartment and smile proudly. Considering the state of your stash before, you're in awe at what it's become. It's... gorgeous!
 
-<div class="default-image-wrapper"><img src="pics/brothel.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/brothel.jpg"></div>
 
 You hope such a place will be able to bring you a lot of money...
 

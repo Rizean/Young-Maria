@@ -11,11 +11,11 @@ src/passages/locations/beach/sunbathWithParents.tw2
 ::Beach [nobr] <3900,2200>
 <<if $timeOfDay == "Day">>
 	<div class="default-image-wrapper">
-		<img src="pics/Beach.jpg">
+		<img src="pics/location/beach/Beach.jpg">
 	</div>
 <<else>>
 	<div class="default-image-wrapper">
-		<img src="pics/NightBeach.jpg">
+		<img src="pics/location/beach/NightBeach.jpg">
 	</div>
 <<endif>>
 

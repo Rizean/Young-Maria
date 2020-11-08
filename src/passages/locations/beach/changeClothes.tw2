@@ -23,7 +23,7 @@
 <<endif>>
 
 <<if _event == "peep">>
-	<div class="default-image-wrapper"><img src="pics/Peeping.jpg"></div>
+	<div class="default-image-wrapper"><img src="pics/event/peeping.jpg"></div>
 
 	&emsp;While you are changing out of your clothes, you get the feeling that someone is watching you... You look around and notice a small hole in the cabin. Movement flickers through it. There is someone peeping on you! <br />
 
@@ -32,7 +32,7 @@
 	[[Pretend you didn't notice and just go away->Beach]] <br />
 <<elseif _event == "photo">>
 	<div class="default-image-wrapper">
-		<img src="pics/PeepingPhoto.jpg">
+		<img src="pics/event/peepingPhoto.jpg">
 	</div>
 
 	&emsp;You are midway through changing when you hear a strange click. You turn around and notice a camera eye in a small hole in the wall. Someone's taking photos of you! <br />
@@ -41,7 +41,7 @@
 
 	[[Shout at them to leave and finish changing->Beach]] <br />
 <<elseif _event == "sex">>
-	<div class="default-image-wrapper"><img src="pics/CabinRaper.jpg"></div>
+	<div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinRaper.jpg"></div>
 
 	&emsp;You strip off all your clothes and are about to redress when a man enters the cabin! You hastily cover yourself with your towel. <br />
 	&emsp;"Hey! occupied!" <br />
@@ -51,7 +51,7 @@
 
 	[[Scream to make him run away->Beach]] <br />
 <<elseif _event == "gangbang">>
-	<div class="default-image-wrapper"><img src="pics/cabinGangbang0.gif"></div>
+	<div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinGangbang0.gif"></div>
     <<HaveASexWidget "gang" "beach gangbang">>
     <<HaveASexWidget "vaginal" "beach gangbang">>
     <<HaveASexWidget "anal" "beach gangbang">>
@@ -61,7 +61,7 @@
 	&emsp;In a few seconds the door opens to reveal a group of lewd raiders bustling inside. You're about to scream when they surround you and one of them puts his hand over your mouth to stop you alerting anybody. The others begin to grope and molest you. <br />
 	[[There is no escape...]] <br />
 <<else>>
-	<div class="default-image-wrapper"><img src="pics/BeachChangingClothes.jpg"></div>
+	<div class="default-image-wrapper"><img src="pics/location/beach/BeachChangingClothes.jpg"></div>
 
 	You go into the cabin and change without any problems. <br />
 
@@ -71,7 +71,7 @@
 ::Show them a bit more skin <3921,2455>
 &emsp;You decide to tease your watcher. You bend over and slowly, wiggling as you do so, pull down your clothes revealing your bare ass to them.
 
-<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/peeping1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/peeping2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/peeping3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/peeping4.gif"></div><<endif>>
+<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/event/peeping1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/event/peeping2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/event/peeping3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/event/peeping4.gif"></div><<endif>>
 
 &emsp;You hear some muttering and think you catch the word "Damn" or something like that. You continue to change and occasionally tease the peeper by shaking your assets or groping your own body.
 &emsp;Eventually, once you think the peeper has been sufficiently teased, you change into your clothes and leave.
@@ -81,7 +81,7 @@
 [[Go out->Beach]]
 
 ::Give a little show <3800,2450>
-<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/peepingCamera1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/peepingCamera2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/peepingCamera3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/peepingCamera4.gif"></div><<endif>>
+<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/event/peepingCamera1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/event/peepingCamera2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/event/peepingCamera3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/event/peepingCamera4.gif"></div><<endif>>
 
 &emsp;The thought of being some person's masturbating material makes you horny. You decide to give them something more. <br />
 &emsp;As you change, you make sure to bare your skin facing the hole and give them a lusty smile when you reveal your perky breasts. Just as your about to present your private parts to your peeper, you stop and blow a kiss to the camera. <br />
@@ -101,16 +101,16 @@
 <br />
 <<set _image to random(1, 4)>>
 <<if _image == 1>>
-    <div class="default-image-wrapper"><img src="pics/cabinRape1.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinRape1.gif"></div>
     <<HaveASexWidget "vaginal" "beach cr man">>
 <<elseif _image == 2>>
-    <div class="default-image-wrapper"><img src="pics/cabinRape2.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinRape2.gif"></div>
     <<HaveASexWidget "bj" "beach cr man">>
 <<elseif _image == 3>>
-    <div class="default-image-wrapper"><img src="pics/cabinRape3.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinRape3.gif"></div>
     <<HaveASexWidget "vaginal" "beach cr man">>
 <<elseif _image == 4>>
-    <div class="default-image-wrapper"><img src="pics/cabinRape4.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinRape4.gif"></div>
     <<HaveASexWidget "vaginal" "beach cr man">>
 <<endif>>
 
@@ -129,21 +129,21 @@
 &emsp;You can't do anything about your situation and you find yourself succumbing to the pleasure of being used by these strangers at the same time. Soon you're wet and your moans are louder. When they pick up the pace, you can't help but move yourself to give them and you more stimulation. <br />
 <<set _image to either(1,2,3,4)>>
 <<if _image == 1>>
-    <div class="default-image-wrapper"><img src="pics/cabinGangbang1.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinGangbang1.gif"></div>
     <<HaveASexWidget "vaginal" "beach gang">>
     <<HaveASexWidget "anal" "beach gang">>
     <<HaveASexWidget "bj" "beach gang">>
 <<elseif _image == 2>>
-    <div class="default-image-wrapper"><img src="pics/cabinGangbang2.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinGangbang2.gif"></div>
     <<HaveASexWidget "tits" "beach gang">>
     <<HaveASexWidget "bj" "beach gang">>
 <<elseif _image == 3>>
-    <div class="default-image-wrapper"><img src="pics/cabinGangbang3.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinGangbang3.gif"></div>
     <<HaveASexWidget "vaginal" "beach gang">>
     <<HaveASexWidget "anal" "beach gang">>
     <<HaveASexWidget "bj" "beach gang">>
 <<elseif _image == 4>>
-    <div class="default-image-wrapper"><img src="pics/cabinGangbang4.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/nonConsensual/beach/CabinGangbang4.gif"></div>
     <<HaveASexWidget "vaginal" "beach gang">>
     <<HaveASexWidget "anal" "beach gang">>
     <<HaveASexWidget "handjob" "beach gang">>

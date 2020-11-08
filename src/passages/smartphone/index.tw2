@@ -9,7 +9,7 @@ src/passages/smartphone/selfies.tw2
 src/passages/smartphone/thisBoyLooksReallyNice.tw2
 
 ::Smartphone [nobr system] <1799,538>
-<div class="default-image-wrapper"><img src="pics/smartphone.jpeg"></div>
+<div class="default-image-wrapper"><img src="pics/object/smartphone.jpeg"></div>
 
 You open your phone. What would you like to do? <br />
 [[Take a photo]] <br />

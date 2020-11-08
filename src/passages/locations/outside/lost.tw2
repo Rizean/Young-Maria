@@ -1,7 +1,7 @@
 ::very quite district <2788,1446>
 <<set _event to either(1)>><<if _event == 1>>You make your way through this part of the city but soon find yourself lost amongst the buildings. This part is unknown to you and there are no obvious landmarks to help you find your way. As you're looking around for something familiar, a random guy catches your eyes. You find him quite handsome...
 
-<<set _image to either(1,2,3)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/blackGuy1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/blackGuy2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/blackGuy3.jpg"></div><<endif>>
+<<set _image to either(1,2,3)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/ethnic/blackGuy1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/ethnic/blackGuy2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/ethnic/blackGuy3.jpg"></div><<endif>>
 
 You stare for too long and now the man has notices you too...
 
@@ -10,7 +10,7 @@ You bite your bottom lip. Guess all you can do now is [[ask him to help you.->Bl
 ::Black guy <2791,1566>
 <<if $isJacksHouseAvailable != true>>You ask the man for directions back to the main part of the city.
 
-He comes up to you. "Ooh, you got a pretty face, baby..." He moves behind you and slapps your butt.
+He comes up to you. "Ooh, you got a pretty face, baby..." He moves behind you and slaps your butt.
 
 Uh oh, this isn't good...
 
@@ -26,33 +26,33 @@ Oh, it's Jack, what a relief!
 or <<link "ask him if he can invite you to his place">><<set $isJacksHouseSurelyOpen = true>><<goto "Jack's house">><</link>><<endif>>
 
 ::Well, it looks like you have no choice. [nobr] <2801,1687>
-<<set $minute += 20>><<set $isJacksHouseAvailable = true>>You agreed, if a little relucatantly, and the man took your hand leading you to a house further down the road. You enter the place but as soon as you step into the lounge area, he forces you onto your knees. He steps in front of you, pulls out his hard cock and slaps it across your face. "Oh yeah, bitch. You're gonna suck my cock real good." <br />
+<<set $minute += 20>><<set $isJacksHouseAvailable = true>>You agreed, if a little reluctantly, and the man took your hand leading you to a house further down the road. You enter the place but as soon as you step into the lounge area, he forces you onto your knees. He steps in front of you, pulls out his hard cock and slaps it across your face. "Oh yeah, bitch. You're gonna suck my cock real good." <br />
 
 <<set _image to random(1, 5)>>
 
 <<if _image == 1>>
     <div class="default-image-wrapper">
-        <img src="pics/blackGuyBJ1.gif">
+        <img src="pics/ethnic/blackGuyBJ1.gif">
     </div>
     <<HaveASexWidget "bj" "Jack">>
 <<elseif _image == 2>>
     <div class="default-image-wrapper">
-        <img src="pics/blackGuyBJ2.gif">
+        <img src="pics/ethnic/blackGuyBJ2.gif">
     </div>
     <<HaveASexWidget "bj" "Jack">>
 <<elseif _image == 3>>
     <div class="default-image-wrapper">
-        <img src="pics/blackGuyBJ3.gif">
+        <img src="pics/ethnic/blackGuyBJ3.gif">
     </div>
     <<HaveASexWidget "bj" "Jack">>
 <<elseif _image == 4>>
     <div class="default-image-wrapper">
-        <img src="pics/blackGuyBJ4.gif">
+        <img src="pics/ethnic/blackGuyBJ4.gif">
     </div>
     <<HaveASexWidget "bj" "Jack">>
 <<elseif _image == 5>>
     <div class="default-image-wrapper">
-        <img src="pics/blackGuyBJ5.gif">
+        <img src="pics/ethnic/blackGuyBJ5.gif">
     </div>
     <<HaveASexWidget "bj" "Jack">>
 <<endif>>

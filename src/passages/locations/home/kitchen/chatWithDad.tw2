@@ -1,6 +1,6 @@
 ::chat with your dad in the kitchen [nobr] <2200,800>
 @@.image-wrapper-w70p;
-	[img['pics/chat_with_dad_in_the_kitchen.jpg']]
+	[img['pics/event/chat/chat_with_dad_in_the_kitchen.jpg']]
 @@
 You sit next to your father. You start a conversation about his work and he happily answers. He then asks about you; how your life is going. You respond chirpily. Both of you enjoy the conversation. <br />
 @@.minus; -5 energy @@ <br />

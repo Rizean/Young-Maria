@@ -6,7 +6,7 @@ src/passages/locations/home/parentsBedroom/helpYourDad.tw2
 src/passages/locations/home/parentsBedroom/sitWithDad.tw2
 
 ::Parents' bedroom [nobr] <1806,1065>
-@@.image-wrapper-w70p; <img src="pics/parentsBedroom.jpg"> @@
+@@.image-wrapper-w70p; <img src="pics/location/parentsBedroom.jpg"> @@
 You are in your [[parents room->parents room description]] <br />
 <br />
 <<include "Parents Bedroom Schedule">>
@@ -14,7 +14,7 @@ You are in your [[parents room->parents room description]] <br />
 [[Living room->living room][$minute += 1]]
 
 ::parents room description [nobr] <1801,956>
-@@.image-wrapper-w70p; <img src="pics/parentsBedroom.jpg"> @@
+@@.image-wrapper-w70p; <img src="pics/location/parentsBedroom.jpg"> @@
 Your parents' room is a bright, fairly spacious and pleasant place. <br />
 A large double bed sits in the middle, occupying most of the space. <br />
 Either side of the bed are matching nightstands. On one there is a photograph of your family. All of you are smiling happily. Underneath this one lies a small box. On the opposite nightstand is a white lamp. <br />

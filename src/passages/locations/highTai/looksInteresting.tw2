@@ -32,7 +32,7 @@ You turn and spy, through an open door, a crippled veteran sleeping on a huge, m
 ::Well, let's go back <3500,2100>
 <<set $hour += 2>>You returned to the Ron's place.
 
-<div class="default-image-wrapper"><img src="pics/ronsPlace.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/ronsPlace.jpg"></div>
 
 &emsp;"So, why do you live here?" You ask.
 &emsp;Ron scoffs, "Live here? Nah, I don't live here. This is just my... 'stash'. I come here to get away from the world for a few days."

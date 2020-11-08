@@ -3,27 +3,27 @@
 <br />
 <<set _image to random(1, 8)>>
 <<if _image == 1>>
-    <div class="default-image-wrapper"><img src="pics/brothelWorking1.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/brothel/brothelWorking1.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 2>>
-    <div class="default-image-wrapper"><img src="pics/brothelWorking2.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/brothel/brothelWorking2.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 3>>
-    <div class="default-image-wrapper"><img src="pics/brothelWorking3.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/brothel/brothelWorking3.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 4>>
-    <div class="default-image-wrapper"><img src="pics/brothelWorking4.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/brothel/brothelWorking4.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 5>>
-    <div class="default-image-wrapper"><img src="pics/brothelWorking5.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/brothel/brothelWorking5.gif"></div>
     <<HaveASexWidget "vaginal" "brother visitor">>
 <<elseif _image == 6>>
-    <div class="default-image-wrapper"><img src="pics/brothelWorking6.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/brothel/brothelWorking6.gif"></div>
 <<elseif _image == 7>>
-    <div class="default-image-wrapper"><img src="pics/brothelWorking7.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/brothel/brothelWorking7.gif"></div>
     <<HaveASexWidget "bj" "brother visitor">>
 <<elseif _image == 8>>
-    <div class="default-image-wrapper"><img src="pics/brothelWorking8.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/brothel/brothelWorking8.gif"></div>
     <<HaveASexWidget "anal" "brother visitor">>
 <<endif>>
 

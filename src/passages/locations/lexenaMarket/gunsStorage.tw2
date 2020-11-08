@@ -1,5 +1,5 @@
 ::Guns Storage [nobr] <2500,980>
-<div class="default-image-wrapper"><img src="pics/gStorage.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/gStorage.jpg"></div>
 You enter the store with shaking hands. You quickly shuffle over to the guy behind the counter. <br />
 "What do you need?" he asks. <br />
 <br />
@@ -46,4 +46,4 @@ You enter the store with shaking hands. You quickly shuffle over to the guy behi
 <<link "Back" "Guns Storage">><</link>>
 Though it's nothing special, this gun will help you defend yourself against any that might do you harm!
 
-<div class="default-image-wrapper"><img src="pics/Gun.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/objects/Gun.jpg"></div>

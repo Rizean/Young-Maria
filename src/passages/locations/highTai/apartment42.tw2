@@ -3,7 +3,7 @@
 &emsp;"Hi, sorry. I heard you were selling one of the apartments?" You say, giving him your sweetest smile. "I'd be happy to buy it from you."
 &emsp;The man grunts and steps aside to allow you to enter his apartment. He ambles over to the sofa and sits upon it before gesturing for you to do the same. You decide it would probably be better to accept his offer so you walk over and take a seat beside him.
 
-<div class="default-image-wrapper"><img src="pics/mrKey.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/people/mrKey.jpg"></div>
 
 &emsp;He turns to you. "Ok. Here's the deal. You give me $300 and return in five days. By this time, I will have the place cleared out and ready for you to move in. Though, I should warn you, it may not be what you expect..."
 &emsp;You think for a moment. It sounds a little ominous but you really need a place of your own for... privacy. You nod and agree to his deal.
@@ -18,7 +18,7 @@
 <<link "Let's hope he will do it">><<set $isKeyPaid = true>><<goto "High Tai">>
 <<elseif $isKeyChatted == true && $isKeyPaid == true && $dayCount >= $dayKeyReady>><<set $isKeyOwned = true>>You knock on Mr Key's apartment door and he soon opens it. "Here you are!" He drops the key in your open hand.
 
-<div class="default-image-wrapper"><img src="pics/key.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/object/key.jpg"></div>
 
 &emsp;You look up at Mr Key. "Apartment №56. To the left and upstairs. Have fun!" He shuts the door before you have a chance to thank him.
 [[Oh, okay. Guess it's time to leave.->High Tai]]<<endif>>

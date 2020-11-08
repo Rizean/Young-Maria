@@ -1,5 +1,5 @@
 ::Clothes Shop [nobr] <2620,980>
-<div class="default-image-wrapper"><img src="pics/cShop.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/cShop.jpg"></div>
 
 <<for _clothesItemTitle, _clothesItem range $lexenaMarket.clothes>>
 	<<ClothesItemInTheMarket _clothesItem _clothesItemTitle clothes>>

@@ -1,7 +1,7 @@
 ::Relax a little <3136,1471>
 You decide you want to relax a bit in the warm sun. You move to find a more secluded location and settle down on the grass with your bag by your side.
 
-<div class="default-image-wrapper"><img src="pics/pRelax.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/event/pRelax.jpg"></div>
 
 With the sun on your body, you take a quick rest. Around you, the sounds of birds in the trees and children playing in the distance helps you to relax...
 <<=$mainChar.doAction({e:5,min:30})>>
@@ -13,16 +13,16 @@ With the sun on your body, you take a quick rest. Around you, the sounds of bird
 <<set _image to either(1,2,3,4)>>You look around to you make sure no-one is watching and remove your clothes. You place them close by, just in case. Then you move one hand down to your pussy lips and begin to tease them.
 
 <<if _image == 1>>
-    <div class="default-image-wrapper"><img src="pics/pMasturbation1.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/park/pMasturbation1.gif"></div>
     <<HaveASexWidget "masturbate" "self">>
 <<elseif _image == 2>>
-    <div class="default-image-wrapper"><img src="pics/pMasturbation2.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/park/pMasturbation2.gif"></div>
     <<HaveASexWidget "masturbate" "self">>
 <<elseif _image == 3>>
-    <div class="default-image-wrapper"><img src="pics/pMasturbation3.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/park/pMasturbation3.gif"></div>
     <<HaveASexWidget "masturbate" "self">>
 <<elseif _image == 4>>
-    <div class="default-image-wrapper"><img src="pics/pMasturbation4.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/park/pMasturbation4.gif"></div>
     <<HaveASexWidget "masturbate" "self">>
 <<endif>>
 <br />
@@ -58,7 +58,7 @@ What a dirty slut you are cumming in public like that... <br />
 <<if _event == 5>>&emsp;The guy approaches you and suddenly grabs your head, forcing you closer. He clamps a strong, callous hand over your mouth. <br />
 &emsp;"Don't fucking scream! Not a single sound, bitch!" <br />
 &emsp;The roughness of the man frightened you. You nod in understanding. <br />
-@@.image-wrapper-w50p;	[img[String.format('pics/ParkRape' + random(1,5) + '.gif')]]
+@@.image-wrapper-w50p;	[img[String.format('pics/sex/nonConsensual/ParkRape' + random(1,5) + '.gif')]]
 @@
 <br />
 &emsp;After he finishes, he straightens out his clothes and leaves you in his mess.
@@ -75,22 +75,22 @@ What a dirty slut you are cumming in public like that... <br />
 
 <<if _image == 1>>
     <div class="default-image-wrapper">
-        <img src="pics/pBlowjob1.gif">
+        <img src="pics/sex/park/pBlowjob1.gif">
     </div>
     <<HaveASexWidget "bj" "stranger in the park">>
 <<elseif _image == 2>>
     <div class="default-image-wrapper">
-        <img src="pics/pBlowjob2.gif">
+        <img src="pics/sex/park/pBlowjob2.gif">
     </div>
     <<HaveASexWidget "bj" "stranger in the park">>
 <<elseif _image == 3>>
     <div class="default-image-wrapper">
-        <img src="pics/pBlowjob3.gif">
+        <img src="pics/sex/park/pBlowjob3.gif">
     </div>
     <<HaveASexWidget "bj" "stranger in the park">>
 <<elseif _image == 4>>
     <div class="default-image-wrapper">
-        <img src="pics/pBlowjob4.gif">
+        <img src="pics/sex/park/pBlowjob4.gif">
     </div>
     <<HaveASexWidget "bj" "stranger in the park">>
 <<endif>>
@@ -122,22 +122,22 @@ What a dirty slut you are cumming in public like that... <br />
 
 <<if _image == 1>>
     <div class="default-image-wrapper">
-        <img src="pics/pSex1.gif">
+        <img src="pics/sex/park/pSex1.gif">
     </div>
     <<HaveASexWidget "vaginal" "stranger in the park">>
 <<elseif _image == 2>>
     <div class="default-image-wrapper">
-        <img src="pics/pSex2.gif">
+        <img src="pics/sex/park/pSex2.gif">
     </div>
     <<HaveASexWidget "anal" "stranger in the park">>
 <<elseif _image == 3>>
     <div class="default-image-wrapper">
-        <img src="pics/pSex3.gif">
+        <img src="pics/sex/park/pSex3.gif">
     </div>
     <<HaveASexWidget "vaginal" "stranger in the park">>
 <<elseif _image == 4>>
     <div class="default-image-wrapper">
-        <img src="pics/pSex4.gif">
+        <img src="pics/sex/park/pSex4.gif">
     </div>
     <<HaveASexWidget "vaginal" "stranger in the park">>
 <<endif>>
@@ -164,7 +164,7 @@ What a dirty slut you are cumming in public like that... <br />
 <br />
 
 <div class="default-image-wrapper">
-    <img src="pics/pDoubleSex.gif">
+    <img src="pics/sex/park/pDoubleSex.gif">
 </div>
 
 <<HaveASexWidget "vaginal" "strangers in the park">>

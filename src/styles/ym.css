@@ -25,9 +25,9 @@ p {
     display: inline;
 }
 .subscribestar_button {
-    max-height: 80px;
-    max-width: 80px;
-    display: inline;
+  max-height: 85px;
+  max-width: 95px;
+  display: inline;
 }
 .discord_button {
     max-height: 110px;
@@ -38,6 +38,16 @@ p {
     max-height: 85px;
     max-width: 95px;
     display: inline;
+}
+.boosty_button {
+  max-height: 85px;
+  max-width: 95px;
+  display: inline;
+}
+.gumroad_button {
+  max-height: 85px;
+  max-width: 95px;
+  display: inline;
 }
 .text {
     color: blue;
@@ -278,102 +288,4 @@ img.full-width-image  {
 
 .female-text {
     color: hotpink;
-}
-#DollMainBody img {
-    position: relative;
-    top: 0;
-    left: 0;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 0
-}
-
-#DollButtPlug img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 1
-}
-
-#DollNeck img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 2
-}
-
-#DollHair img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 3
-}
-
-#DollChest img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 4
-}
-#DollChestAccessory img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 4
-}
-
-#DollBra img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 5
-}
-
-#DollPanties img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 6
-}
-
-#DollStockings img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 7
-}
-
-#DollMainClothes img {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    border: 1px red solid;
-    border-style: hidden;
-    max-height: 400px;
-    z-index: 8
 }

@@ -70,17 +70,17 @@
 
     <<if _image == 1>>
         <div class="default-image-wrapper">
-            <img src="pics/bathFuckDad1.gif">
+            <img src="pics/sex/bath/bathFuckDad1.gif">
         </div>
         <<HaveASexWidget "vaginal" "dad">>
     <<elseif _image == 2>>
         <div class="default-image-wrapper">
-            <img src="pics/bathFuckDad2.gif">
+            <img src="pics/sex/bath/bathFuckDad2.gif">
         </div>
         <<HaveASexWidget "vaginal" "dad">>
     <<elseif _image == 3>>
         <div class="default-image-wrapper">
-            <img src="pics/bathFuckDad3.gif">
+            <img src="pics/sex/bath/bathFuckDad3.gif">
         </div>
         <<HaveASexWidget "vaginal" "dad">>
     <<endif>>
@@ -102,17 +102,17 @@
 
     <<if _image == 1>>
         <div class="default-image-wrapper">
-            <img src="pics/bathFuckMom1.gif">
+            <img src="pics/sex/bath/bathFuckMom1.gif">
         </div>
         <<HaveASexWidget "receiveCuni" "mom">>
     <<elseif _image == 2>>
         <div class="default-image-wrapper">
-            <img src="pics/bathFuckMom2.gif">
+            <img src="pics/sex/bath/bathFuckMom2.gif">
         </div>
         <<HaveASexWidget "receiveMasturbation" "mom">>
     <<elseif _image == 3>>
         <div class="default-image-wrapper">
-            <img src="pics/bathFuckMom3.gif">
+            <img src="pics/sex/bath/bathFuckMom3.gif">
         </div>
         <<HaveASexWidget "receiveCuni" "mom">>
     <<endif>>

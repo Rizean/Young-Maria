@@ -10,7 +10,7 @@ src/passages/locations/lexenaMarket/pharmacyMarket.tw2
 
 
 ::Lexena Market <2723,871>
-<div class="default-image-wrapper"><img src="pics/market.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/market.jpg"></div>
 [[Guns Storage][$minute += 5]]
 [[Dime Time][$minute += 5]]
 [[Clothes Shop][$minute += 5]]

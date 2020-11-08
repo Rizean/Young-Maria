@@ -111,7 +111,7 @@
 				<br />
 				<<linkreplace "Help him">>
 					@@.image-wrapper-w70p;
-			[img[String.format('pics/BrotherMorningFuck' + random(1,4) + '.webp')]]<<HaveASexWidget "vaginal" "sibling">>
+			[img[String.format('pics/brother/BrotherMorningFuck' + random(1,4) + '.webp')]]<<HaveASexWidget "vaginal" "sibling">>
 					@@
 					@@.bc-text;
 						Oh, my! I love you~

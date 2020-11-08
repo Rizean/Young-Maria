@@ -20,42 +20,42 @@ You can`t go out in these clothes!<<else>>
 <<set _image to random(1, 8)>>
 <<if _image == 1>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerFuck1.gif">
+        <img src="pics/sex/stranger/strangerFuck1.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 2>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerFuck2.gif">
+        <img src="pics/sex/stranger/strangerFuck2.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 3>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerFuck3.gif">
+        <img src="pics/sex/stranger/strangerFuck3.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 4>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerFuck4.gif">
+        <img src="pics/sex/stranger/strangerFuck4.gif">
     </div>
     <<HaveASexWidget "bj" "internet stranger">>
 <<elseif _image == 5>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerFuck5.gif">
+        <img src="pics/sex/stranger/strangerFuck5.gif">
     </div>
     <<HaveASexWidget "bj" "internet stranger">>
 <<elseif _image == 6>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerFuck6.gif">
+        <img src="pics/sex/stranger/strangerFuck6.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 7>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerFuck7.gif">
+        <img src="pics/sex/stranger/strangerFuck7.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 8>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerFuck8.gif">
+        <img src="pics/sex/stranger/strangerFuck8.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<endif>>

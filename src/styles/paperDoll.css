@@ -1,0 +1,118 @@
+#DollZeroLay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 134px;
+    height: 400px;
+    border-style: hidden;
+    clear:both;
+    max-height: 400px;
+    z-index: 0
+}
+
+#DollMainBody img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 0
+}
+#DollMainBody img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 1
+}
+#DollButtPlug img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 1
+}
+
+#DollNeck img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 2
+}
+
+#DollHair img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 3
+}
+
+#DollChest img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 4
+}
+#DollChestAccessory img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 4
+}
+
+#DollBra img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 5
+}
+
+#DollPanties img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 6
+}
+
+#DollStockings img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 7
+}
+
+#DollMainClothes img {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px red solid;
+    border-style: hidden;
+    max-height: 400px;
+    z-index: 8
+}

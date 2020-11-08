@@ -2,7 +2,7 @@
 <<set _event to either(1,2,3)>>
 <<if _event != 1>>
 	@@.image-wrapper-w50p;
-		[img[String.format('pics/TV{0}.jpg', random(1, 4))]]
+		[img[String.format('pics/event/watchTV/TV{0}.jpg', random(1, 4))]]
 	@@
 
     @emsp;Just a boring TV program, but the company of your parents made this time wonderful and a little funny. <br />
@@ -12,15 +12,15 @@
     <<set _image to either(1,3,4)>>
     <<if _image == 1>>
         <div class="default-image-wrapper">
-            <img src="pics/TVboobs1.jpg">
+            <img src="pics/event/watchTV/TVboobs1.jpg">
         </div>
     <<elseif _image == 3>>
         <div class="default-image-wrapper">
-            <img src="pics/TVboobs3.jpg">
+            <img src="pics/event/watchTV/TVboobs3.jpg">
         </div>
     <<elseif _image == 4>>
         <div class="default-image-wrapper">
-            <img src="pics/TVboobs4.jpg">
+            <img src="pics/event/watchTV/TVboobs4.jpg">
         </div>
     <<endif>>
 

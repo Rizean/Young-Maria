@@ -3,7 +3,7 @@
 ::Jack's house <3880,1056>
 <<set _event to either(1,2,3,4)>><<if $isJacksHouseSurelyOpen == true>><<set _event to 2>><<set $isJacksHouseSurelyOpen != true>><<endif>><<if _event == 1>><<set $isJacksHouseSurelyOpen == true>>The door is locked... It seems Jack isn't at home right now.
 
-<<else>><div class="default-image-wrapper"><img src="pics/jacksPlace.jpg"></div>
+<<else>><div class="default-image-wrapper"><img src="pics/location/jacksPlace.jpg"></div>
 
 <<set _conversation to either("I think my new jeans are kinda too wide, what do ya think?","Baby, my boys are playing today, wanna come?","I need to visit my old man someday...","I like junk food, yeah, but I like apples more!","There was a robbery last night... Did you hear something?","Have I shown you my gun? I call it Wigo.","My mom is living in Canada. I should visit her one day.","Why did your family buy a house in this city?","Yesterday I saw my old friend. Forgot our age difference so he became a really OLD friend...","I love TV - fresh news everyday!","You have a nice body. Have you thought about gangbangs?","I like the shop next to my house. I'm friends with the owner. Nice dude.","I had a gf but she was a total bitch and we fought one day. Don't have a gf anymore.","Have you sent nudes to anyone? I've heard that every girl has at least once...")>><<if _conversation == "Baby, my boys are playing today, wanna come?">>"_conversation" <<if $mainChar.corruption > 40 && $mainChar.energy >= 50>>[[Yes, why not?->Playing]]<<else>>Naah...<<endif>><<elseif _conversation == "You have a nice body. Have you thought about gangbangs?">>"_conversation" <<if $mainChar.corruption > 70>>[[Mmm, wanna call some friends?~]]<<else>>Maybe later...<<endif>><<else>>"_conversation"<<endif>>
 
@@ -15,7 +15,7 @@ You notice that Jack has a hard-on. Maybe [[you can offer your help->Suck Jack o
 [[Go out][$minute += 10]]
 
 ::Drink with Jack <3750,1230>
-<div class="default-image-wrapper"><img src="pics/jacksAlcohol.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/object/jacksAlcohol.jpg"></div>
 
 Jack opens one of his kitchen cupboards. Inside, you see he has a lot of strong, cheap alcohol. He turns to you with a smirk, "So, baby girl, are you sure that you can handle it?"
 
@@ -23,7 +23,7 @@ Jack opens one of his kitchen cupboards. Inside, you see he has a lot of strong,
 [[Better not...->Jack's house]]
 
 ::Drink with Jack 2 <3750,1350>
-<<if $mainChar.intoxication != 0>><<set $mainChar.intoxication = 0>><<endif>><<if $timeOfDay == "Day">><<set $day += 1>><<set $dayCount += 1>><<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>><<dateChangeWidget>><<if $day == 8>><<set $day = 1>><<endif>><<endif>><<set $hour = 11>><<set $minute = 0>><div class="default-image-wrapper"><img src="pics/hangover.jpg"></div>
+<<if $mainChar.intoxication != 0>><<set $mainChar.intoxication = 0>><<endif>><<if $timeOfDay == "Day">><<set $day += 1>><<set $dayCount += 1>><<set $mainChar.brothelSafe += $mainChar.brothelDailyIncome>><<dateChangeWidget>><<if $day == 8>><<set $day = 1>><<endif>><<endif>><<set $hour = 11>><<set $minute = 0>><div class="default-image-wrapper"><img src="pics/event/hangover.jpg"></div>
 
 You wake up feeling groggy and woozy with your brain pounding against your skull. Slowly, you look up at the window and are blinded by the bright sunlight. As you try to sit up, you soon find your whole body aching and hurting with every move you make.
 
@@ -90,7 +90,7 @@ After a couple of minutes, Jack's dick quivers and he gives you a couple last po
 ::You can make a video, if you want to <3893,1371>
 You smile at him and remove him from your mouth. Then you run over to your bag, grab your phone and run back. You take your position again, kneeling dutifully in front of him. You start the recording as you place his cock back in your mouth.
 
-<<set $isJackSuckVideoTaken = true>><div class="default-image-wrapper"><img src="pics/JackSucking.gif"></div>
+<<set $isJackSuckVideoTaken = true>><div class="default-image-wrapper"><img src="pics/event/JackSucking.gif"></div>
 
 Throughout the recording, you make sure to look straight at the camera. You try to make sultry gazes look as sexily as you can hoping that whoever will see this video will cum just from watching it.
 
@@ -114,7 +114,7 @@ He pulls away after a several seconds and whispers; "It seems unfair that I get 
 
 You're unsure what he means until you see his eyes flick to your chest. With a nod, you turn to face Jack's team who have returned to their bench. You shout down to them, "Hey boys! Well done on winning!" and give them their reward.
 
-<<set _image to either(1,2,3)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/Football1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/Football2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/Football3.gif"></div><<endif>>
+<<set _image to either(1,2,3)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/event/Football1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/event/Football2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/event/Football3.gif"></div><<endif>>
 
 Due to the chilly air, your nipples are hard and erect but the boys seem to enjoy that more. A couple of fans who lingered notice your... prize. Who cares though, right?
 <<=$mainChar.doAction({c:1,e:-20,h:5})>>
@@ -134,34 +134,34 @@ They all make their way over to you with mischievous grins adorning their faces.
 
 <<set _image to random(1, 6)>>
 <<if _image == 1>>
-    <div class="default-image-wrapper"><img src="pics/gangbang1.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/gangbang/gangbang1.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "handjob" "Jacks friends">>
     <<HaveASexWidget "anal" "Jacks friends">>
 <<elseif _image == 2>>
-    <div class="default-image-wrapper"><img src="pics/gangbang2.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/gangbang/gangbang2.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "vaginal" "Jacks friends">>
     <<HaveASexWidget "anal" "Jacks friends">>
     <<HaveASexWidget "bj" "Jacks friends">>
 <<elseif _image == 3>>
-    <div class="default-image-wrapper"><img src="pics/gangbang3.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/gangbang/gangbang3.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "vaginal" "Jacks friends">>
     <<HaveASexWidget "anal" "Jacks friends">>
     <<HaveASexWidget "bj" "Jacks friends">>
 <<elseif _image == 4>>
-    <div class="default-image-wrapper"><img src="pics/gangbang4.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/gangbang/gangbang4.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "vaginal" "Jacks friends">>
     <<HaveASexWidget "bj" "Jacks friends">>
 <<elseif _image == 5>>
-    <div class="default-image-wrapper"><img src="pics/gangbang5.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/gangbang/gangbang5.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "handjob" "Jacks friends">>
     <<HaveASexWidget "bj" "Jacks friends">>
 <<elseif _image == 6>>
-    <div class="default-image-wrapper"><img src="pics/gangbang6.gif"></div>
+    <div class="default-image-wrapper"><img src="pics/sex/gangbang/gangbang6.gif"></div>
     <<HaveASexWidget "gang" "Jacks friends">>
     <<HaveASexWidget "vaginal" "Jacks friends">>
     <<HaveASexWidget "anal" "Jacks friends">>

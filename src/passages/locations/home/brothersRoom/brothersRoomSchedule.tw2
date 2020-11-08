@@ -227,7 +227,7 @@
 <br />
 
 @@.image-wrapper-w70p;
-[img[String.format('pics/brotherMasturbating' + random(1, 2) + '.webp')]]
+[img[String.format('pics/brother/brotherMasturbating' + random(1, 2) + '.webp')]]
 @@
 
 <br />
@@ -265,7 +265,7 @@
 			<br />
 
 			@@.image-wrapper-w70p;
-			[img[String.format('pics/brotherMasturbatingFucking' + random(1, 6) + '.webp')]]
+			[img[String.format('pics/brother/brotherMasturbatingFucking' + random(1, 6) + '.webp')]]
 			@@
 
 			<br />

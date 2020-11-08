@@ -1,7 +1,7 @@
 ::Met whore classmate <1903,2279>
 &emsp;You were on your way out of the school when you noticed someone hurriedly walking by themselves around the back. You moved closer to see it's... Cristy?
 
-<div class="default-image-wrapper"><img src="pics/whoreClassmate.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/people/whoreClassmate.jpg"></div>
 
 &emsp;You've talked to Cristy a few times before you don't know her very well. In fact, you don't really know her at all. The only thing you do know is that she is known as the school whore.
 &emsp;You watch as she looks around, making sure no-one is following. You notice she's stood by a gate. If you don't do anything, she'll probably slip away.
@@ -13,7 +13,7 @@
 [[Nah, just go home->living room]]
 
 ::Talk with Cristy a little <1801,2405>
-<<set $minute += 30>><div class="default-image-wrapper"><img src="pics/whoreClassmateTalk.jpg"></div>
+<<set $minute += 30>><div class="default-image-wrapper"><img src="pics/people/whoreClassmateTalk.jpg"></div>
 
 &emsp;You decide to try and talk to her. As you approach her, she looks up at you. She's a little startled but when you say hi, she quickly recomposes herself. She smiles back and asks how you are.
 &emsp;It starts off a little awkwardly but soon you and Cristy fall into a more natural conversation. Unforunately, her idea of a "natural conversation" consists of talking about sex, boys, penises, slutting, her current boyfriend and her exes and so on...
@@ -25,7 +25,7 @@
 [[Go home->living room]]
 
 ::Chase her <1920,2400>
-<<set $minute += 30>><<if $metCristysPlace != true>><<set $metCristysPlace = true>><div class="default-image-wrapper"><img src="pics/whoreClassmateChase.jpg"></div>
+<<set $minute += 30>><<if $metCristysPlace != true>><<set $metCristysPlace = true>><div class="default-image-wrapper"><img src="pics/people/whoreClassmateChase.jpg"></div>
 
 &emsp;You decide to wait and follow her instead.
 &emsp;As she slips through the gate and hurries away into the forest, you chase her without giving yourself away. Cristy leads you through the dense vegetation until you find yourself emerging into the west part of the city.
@@ -42,7 +42,7 @@
 
 <<link "Go home">><<set $minute += 30>><<goto "living room">><</link>>
 <<if $mainChar.corruption >= 20>>[[Hell no, I want to see it!!]]<<else>>[You are not corrupted enough]<<endif>>
-<<elseif $mainChar.watchedCristy >= 3 and $CristyOffered != true>><<set $CristyOffered = true>><div class="default-image-wrapper"><img src="pics/whoreClassmateChase.jpg"></div>
+<<elseif $mainChar.watchedCristy >= 3 and $CristyOffered != true>><<set $CristyOffered = true>><div class="default-image-wrapper"><img src="pics/people/whoreClassmateChase.jpg"></div>
 
 &emsp;You follower her, like always, through the forest when Cristy stopped at the edge and suddenly spun to face you.
 &emsp;Like a deer caught in headlights, you completely froze.
@@ -68,7 +68,7 @@
 
 <<link "Go home">><<set $minute += 30>><<goto "living room">><</link>>
 [[Spy on them anyway->Hell no, I want to see it!!]]
-<<elseif $metCristysPlace == true>><div class="default-image-wrapper"><img src="pics/whoreClassmateChase.jpg"></div>
+<<elseif $metCristysPlace == true>><div class="default-image-wrapper"><img src="pics/people/whoreClassmateChase.jpg"></div>
 
 &emsp;Though your confrontation shook you a little you still wanted to spy on her. You followed her down the street until you came to the same house as before. When you arrived, she was stood by the door smiling at the same older man.
 &emsp;You watched as he groped her ass, pushing her into the house.
@@ -83,7 +83,7 @@
 &emsp;Soon Cristy is pushed and pulled by the men as they lead her to a sofa. One of them gets on it and then pulls Cristy on top of him, shoving his big cock deep inside her ass. Another man positions himself in front of her pussy where he proceedes to thrust his pulsating member into her pussy.
 &emsp;One man climbs onto the sofa to push his cock deep down her throat. The last couple of them grab, pinch and slap what skin they can whilst Cristy still jerks off their hard cocks. They all pick up speed, ramming into Cristy's poor small holes with brute force. You can imagine how rough it must feel but Cristy shows no sign feeling anything but sheer pleasure...
 
-<<set _image to either(1,2,3,4,5,6,7,8,9)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/CristyGangbang1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/CristyGangbang2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/CristyGangbang3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/CristyGangbang4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/CristyGangbang5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/CristyGangbang6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/CristyGangbang7.gif"></div><<elseif _image == 8>><div class="default-image-wrapper"><img src="pics/CristyGangbang8.gif"></div><<elseif _image == 9>><div class="default-image-wrapper"><img src="pics/CristyGangbang9.gif"></div><<endif>>
+<<set _image to either(1,2,3,4,5,6,7,8,9)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang1.gif"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang5.gif"></div><<elseif _image == 6>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang6.gif"></div><<elseif _image == 7>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang7.gif"></div><<elseif _image == 8>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang8.gif"></div><<elseif _image == 9>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbang9.gif"></div><<endif>>
 
 <<if $CristyOffered == true>>[[Sneak closer...->Visit Cristy's gangbang]]<<endif>>
 
@@ -98,7 +98,7 @@
 &emsp;You tread carefully, making sure to not make any noise, and sneak toward the action. The angle that you approach them at means most of the men are faced away from you. They're also too busy abusing Cristy's holes to pay any attention.
 &emsp;The sound of their balls slapping against Cristy's body and her moans sends you over the edge. Your legs give way and you fall against one of the spare chairs. You are so entranced that you almost don't notice Cristy fixating you with her eyes as she is sucking a cock. She spotted you!
 
-<div class="default-image-wrapper"><img src="pics/CristySpotted.gif"></div>
+<div class="default-image-wrapper"><img src="pics/cristy/CristySpotted.gif"></div>
 
 &emsp;Shit... Your body compeletely freezes as well as your mind. You sit there in silence, waiting but it isn't long before Cristy gestures to you. She's inviting you to come closer.
 &emsp;Is that a good idea?
@@ -112,12 +112,12 @@
 &emsp;You obey (not that you had much choice) and kneel in the middle of the group. Your head is quickly surrounded by hard cocks. One of them pulls you to him and, without warning, shoves his dick down your throat.
 &emsp;After a few minutes of gagging and spluttering, he pulls out. You barely have a moments pause before another hard cock is pushed into your mouth. It continues this way for a while, aach man eagerly facefucking you.
 
-<<set _imageA to either(1,2,3,4,5,6,7)>><<if _imageA == 1>><div class="default-image-wrapper"><img src="pics/CristyGangbangOral1.gif"></div><<elseif _imageA == 2>><div class="default-image-wrapper"><img src="pics/CristyGangbangOral2.gif"></div><<elseif _imageA == 3>><div class="default-image-wrapper"><img src="pics/CristyGangbangOral3.gif"></div><<elseif _imageA == 4>><div class="default-image-wrapper"><img src="pics/CristyGangbangOral4.gif"></div><<elseif _imageA == 5>><div class="default-image-wrapper"><img src="pics/CristyGangbangOral5.gif"></div><<elseif _imageA == 6>><div class="default-image-wrapper"><img src="pics/CristyGangbangOral6.gif"></div><<elseif _imageA == 7>><div class="default-image-wrapper"><img src="pics/CristyGangbangOral7.gif"></div><<endif>>
+<<set _imageA to either(1,2,3,4,5,6,7)>><<if _imageA == 1>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangOral1.gif"></div><<elseif _imageA == 2>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangOral2.gif"></div><<elseif _imageA == 3>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangOral3.gif"></div><<elseif _imageA == 4>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangOral4.gif"></div><<elseif _imageA == 5>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangOral5.gif"></div><<elseif _imageA == 6>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangOral6.gif"></div><<elseif _imageA == 7>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangOral7.gif"></div><<endif>>
 
 &emsp;Lost in the moment, you don't notice Cristy has joined the group until you feel her hands roaming along your body, caressing and undressing you. She strips you, moving one hand down to your dripping wet pussy.
 &emsp;"Damn, wet already? You dirty slut!" she whispers to you. "C'mon, let's give 'em a show!"
 
-<<set _imageB to either(1,2,3,4,5,6,7)>><<if _imageB == 1>><div class="default-image-wrapper"><img src="pics/CristyGangbangDouble1.gif"></div><<elseif _imageB == 2>><div class="default-image-wrapper"><img src="pics/CristyGangbangDouble2.gif"></div><<elseif _imageB == 3>><div class="default-image-wrapper"><img src="pics/CristyGangbangDouble3.gif"></div><<elseif _imageB == 4>><div class="default-image-wrapper"><img src="pics/CristyGangbangDouble4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/CristyGangbangDouble5.gif"></div><<elseif _imageB == 6>><div class="default-image-wrapper"><img src="pics/CristyGangbangDouble6.gif"></div><<elseif _imageB == 7>><div class="default-image-wrapper"><img src="pics/CristyGangbangDouble7.gif"></div><<endif>>
+<<set _imageB to either(1,2,3,4,5,6,7)>><<if _imageB == 1>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangDouble1.gif"></div><<elseif _imageB == 2>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangDouble2.gif"></div><<elseif _imageB == 3>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangDouble3.gif"></div><<elseif _imageB == 4>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangDouble4.gif"></div><<elseif _image == 5>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangDouble5.gif"></div><<elseif _imageB == 6>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangDouble6.gif"></div><<elseif _imageB == 7>><div class="default-image-wrapper"><img src="pics/cristy/CristyGangbangDouble7.gif"></div><<endif>>
 
 &emsp;It isn't long before the guys are fucking both you and Cristy raw. The room is filled with lusty moans, wet slapping noises and derogatory nicknames.
 &emsp;You're overwhelmed with pleasure as you find all your holes filled throughout. None of your body goes untouched. If your holes are in use, the remaining men slap, fondle and pinch your skin.

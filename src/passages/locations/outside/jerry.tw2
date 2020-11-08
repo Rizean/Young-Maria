@@ -1,5 +1,5 @@
 ::Approach him <3531,1543>
-<div class="default-image-wrapper"><img src="pics/JerrysBench.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/jerry/JerrysBench.jpg"></div>
 
 <<if $isJerryMet != true>><<set $isJerryMet = true>>You step closer to the bench but still the man does not notice you. At least from this distance you can see him breathing.
 
@@ -28,7 +28,7 @@ He stands from the bench and moves towards you. He then pulls your face to his a
 [["Let`s go!"->Jerry`s house]]<<endif>>
 
 ::he.. <3521,1681>
-<div class="default-image-wrapper"><img src="pics/JerrysHouse.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/jerry/JerrysHouse.jpg"></div>
 
 You walk together through the city and though you barely know the man, you find conversations flow smoothly. You talk about everything; the sky, the darkness, the dim glow of the street lights, the other people walking at night...
 
@@ -53,7 +53,7 @@ You push Jerry and roll ontop of him. Gazing lovingly at him, you shuffle down u
 Before you can really milk him, Jerry pulls you up and flips you onto your back on the bed. He gets on top and scoots downward. As he reaches your vagina, you can feel his breath tickling your pussy lips. Without much warning, Jerry attacks your pussy with his tongue rubbing it up and down and then pushes it into your hole. You accidentally let out a load moan and quickly cover your mouth with one hand. The other hand grips the sheets as Jerry's tongue expertly swirls around inside you, hitting all the most sensitive parts. You can't help it and find yourself cumming on his tongue. As you look down, you see Jerry licking his lips hungrily. <br />
 <br />
 
-<div class="default-image-wrapper"><img src="pics/JerryMet1.gif"></div>
+<div class="default-image-wrapper"><img src="pics/jerry/JerryMet1.gif"></div>
 
 He shuffles upwards and positions himself so that his cock lines up with your entrance. Slowly, he thrusts inside. His hands rest on either side of your head whilst you wrap your arms and legs around him, drawing him closer to you. Jerry starts thrusting at a leisurely pace first and takes his time to tend to your other sensitive parts. First he tugs at your nipples, then he takes one in his mouth to play with whilst one of his hands kneads the other tit. As he quickens his pacing, his biting and kneading also picks up speed. <br />
 <br />
@@ -62,7 +62,7 @@ Soon Jerry is pounding into you pretty quickly for a boy that seemed so sweet an
 A few seconds later, Jerry pulls you onto him so that the two of you are sat on the bed with you straddling his lap. Jerry grabs your waist and begins to lift you up and down his shaft at the same speed he was thrusting into you with. You wrap your arms around his neck, running one of your hands through his hair. He smiles and leans up to kiss you deeply. After a few more minutes of Jerry thoroughly fucking you, he starts to show signs of slowing down. Once more, you find yourself cumming on him but this time he follows it with a couple deep thrusts causing you to squirt against his cock. This sends him over the edge and you feel your womb being filled with his hot, thick semen. <br />
 <br />
 
-<div class="default-image-wrapper"><img src="pics/JerryMet2.gif"></div>
+<div class="default-image-wrapper"><img src="pics/jerry/JerryMet2.gif"></div>
 <<HaveASexWidget "vaginal" "Jerry">>
 <br />
 You both stay in this position for a few minutes, allowing yourselves to rest and relax. Cum seeps through the small gaps between your vagina and his cock. Eventually Jerry lifts you off of him and a small puddle of cum oozes onto his bed. Jerry gives you one last kiss before disappearing out of his bedroom.
@@ -93,73 +93,73 @@ You two don't like talking, so in five minutes you were horny and totally ready.
 <<if $mainChar.look.erotic_accessories.back.name == "None" || $mainChar.look.erotic_accessories.back.name == "">>
     <<set _image to random(1, 10)>>
     <<if _image == 1>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone1.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone1.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 2>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone2.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone2.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 3>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone3.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone3.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 4>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone4.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone4.gif"></div>
         <<HaveASexWidget "receiveMasturbation" "Jerry">>
     <<elseif _image == 5>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone5.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone5.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 6>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone6.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone6.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 7>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone7.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone7.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 8>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone8.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone8.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 9>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone9.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone9.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 10>>
-        <div class="default-image-wrapper"><img src="pics/JerryNone10.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryNone10.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<endif>>
 <<elseif $mainChar.look.erotic_accessories.back.name == "Butt plug">>
     <<set _image to either(1,2,3,4,5)>>
     <<if _image == 1>>
-        <div class="default-image-wrapper"><img src="pics/JerryPlug1.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryPlug1.gif"></div>
         <<HaveASexWidget "receiveCuni" "Jerry">>
     <<elseif _image == 2>>
-        <div class="default-image-wrapper"><img src="pics/JerryPlug2.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryPlug2.gif"></div>
         <<HaveASexWidget "bj" "Jerry">>
     <<elseif _image == 3>>
-        <div class="default-image-wrapper"><img src="pics/JerryPlug3.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryPlug3.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 4>>
-        <div class="default-image-wrapper"><img src="pics/JerryPlug4.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryPlug4.gif"></div>
         <<HaveASexWidget "anal" "Jerry">>
     <<elseif _image == 5>>
-        <div class="default-image-wrapper"><img src="pics/JerryPlug5.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryPlug5.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<endif>>
 <<elseif $mainChar.look.erotic_accessories.back.name == "Tail butt plug">>
     <<set _image to either(1,2,3,4,5,6)>>
     <<if _image == 1>>
-        <div class="default-image-wrapper"><img src="pics/JerryTail1.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryTail1.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 2>>
-        <div class="default-image-wrapper"><img src="pics/JerryTail2.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryTail2.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 3>>
-        <div class="default-image-wrapper"><img src="pics/JerryTail3.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryTail3.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 4>>
-        <div class="default-image-wrapper"><img src="pics/JerryTail4.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryTail4.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 5>>
-        <div class="default-image-wrapper"><img src="pics/JerryTail5.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryTail5.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<elseif _image == 6>>
-        <div class="default-image-wrapper"><img src="pics/JerryTail6.gif"></div>
+        <div class="default-image-wrapper"><img src="pics/jerry/JerryTail6.gif"></div>
         <<HaveASexWidget "vaginal" "Jerry">>
     <<endif>>
 <<endif>>

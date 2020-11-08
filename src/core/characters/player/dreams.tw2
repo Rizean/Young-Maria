@@ -6,7 +6,7 @@
 <<set _dream to random(1, 9)>><<set _dreamPic to random(1, 7)>>
 <<if _dream <= 7>>
 @@.image-wrapper-w50p;
-	[img[String.format("pics/dream" + _dreamPic + ".gif")]]
+	[img[String.format("pics/dreams/dream" + _dreamPic + ".gif")]]
 @@
 <<endif>>
 
@@ -49,7 +49,7 @@
 	@@
 <<elseif _dream == 8>>
 	@@.image-wrapper-w50p;
-		[img[String.format("pics/sleepingBJ" + random(1, 3) + ".gif")]]
+		[img[String.format("pics/dreams/sleepingBJ" + random(1, 3) + ".gif")]]
 	@@
 
 	@@.narrator;
@@ -57,7 +57,7 @@
 	@@
 <<elseif _dream == 9>>
 
-	@@.image-wrapper-w50p;	[img[String.format("pics/sleepingSchoolBondage" + random(1, 3) + ".webp")]]
+	@@.image-wrapper-w50p;	[img[String.format("pics/dreams/sleepingSchoolBondage" + random(1, 3) + ".webp")]]
 	@@
 
 	@@.narrator;

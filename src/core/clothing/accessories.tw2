@@ -27,3 +27,6 @@
 
 ::Body Erotic Accessories [system] <1000,1800>
 <<EroticAccessoriesItem "body">>
+
+::Pants Clothes [nobr system] <800,1400>
+<<ClothesItem "lowerbody">>

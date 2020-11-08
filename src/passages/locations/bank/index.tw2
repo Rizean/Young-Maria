@@ -4,7 +4,7 @@
 ::Bank <3900,1525>
 <<if $bankFirstVisit != false>><<set $bankFirstVisit = false>>You enter the modern, white Skyscraper. Within minutes, an assistant comes up to you and offers his help. You admit you don't have an account and the assistant quickly perks up. He leads you into a secluded office.
 
-<div class="default-image-wrapper"><img src="pics/bank1.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/bank1.jpg"></div>
 
 Once inside the room, the assistant pulls out a piece of paper and slides it over to you with a pen. "Sign here, and here, and here..." he says, pointing to difference spots on the paper. After you sign, he hands over a shiny new card. "This is your new credit card. You can use it at ATMs to retrieve or deposit money." He types something onto the computer. "You'll also need a password, for security reasons."
 
@@ -16,7 +16,7 @@ Once inside the room, the assistant pulls out a piece of paper and slides it ove
 
 [["That's all. Thank you for your patronage."->Bank]]<<elseif $bankFirstVisit == false && $cardPassword != "">>You approached an ATM and inserted your card.
 
-<div class="default-image-wrapper"><img src="pics/bank2.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/bank2.jpg"></div>
 
 Now it's time for your password.<sub>[[forgot->Stats]]</sub>
 

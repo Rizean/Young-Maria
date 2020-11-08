@@ -3,7 +3,7 @@
 
 [[Go back->Park]]
 <<else>><<set $hour += 1>>You decide you want to go for a run. With the change of clothes you brought, you head to the public toilets and swap into your athletic wear. You then put your other clothes in your bag, exit the toilets and begin your jog.
-<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/jogging1.webp"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/jogging2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/jogging3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/jogging4.gif"></div><<endif>>
+<<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/location/park/jogging1.webp"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/location/park/jogging2.gif"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/location/park/jogging3.gif"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/location/park/jogging4.gif"></div><<endif>>
 
 As you run through the park, you feel the cold wind on your soft skin. It helps to keep you cool as you start to work up a sweat. After about an hour of running, you feel exhausted but you also feel stronger and more beautiful.
 <<nobr>>

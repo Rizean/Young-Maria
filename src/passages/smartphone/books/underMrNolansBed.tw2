@@ -1,5 +1,5 @@
 ::Under Mr. Nolan's Bed [system] <4975,2650>
-<<set $isUnderRead = true>><div class="default-image-wrapper"><img src="pics/BookUMNB.jpg"></div>
+<<set $isUnderRead = true>><div class="default-image-wrapper"><img src="pics/books/BookUMNB.jpg"></div>
 
 &emsp;Leah and Erica have been best friends ever since they went to the same Catholic school. Both are talented, smart, friendly and beautiful, and get on like a house on fire.
 &emsp;Unfortunately, Erica's mother died a few years ago in a horrific accident and left her handsome father bringing up Erica alone. But, Leah vowed to stay close and has since become a part of the Nolan family.

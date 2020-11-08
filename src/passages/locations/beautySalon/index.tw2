@@ -5,7 +5,7 @@ src/passages/locations/beautySalon/haircut.tw2
 
 
 ::Beauty Salon [nobr] <4350,700>
-<div class="default-image-wrapper"><img src="pics/BeautySalon.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/beautySalon/BeautySalon.jpg"></div>
 
 You entered the beauty salon and strode up to Charlotte. <br />
 "Hello, miss, how can I help you?" <br />

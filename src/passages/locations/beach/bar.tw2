@@ -3,7 +3,7 @@
     The bar is closed at night! <br />
 <<else>>
     <div class="default-image-wrapper">
-        <img src="pics/BeachBar.jpg">
+        <img src="pics/location/beach/BeachBar.jpg">
     </div>
 
     &emsp;You walk over to the beach bar and take a seat on one of the stools. <br />

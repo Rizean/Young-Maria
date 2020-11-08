@@ -1,7 +1,7 @@
 ::Classic Facials <4250,850>
 You chose to have a classic facial. Charlotte gestures to another woman who leads you to a spare room. She sits you down on a chair that reclines until you're horizontal before putting a towel headband protecting your hair. She then attacks your face with many brushes, lotions, creams, and different kinds of mud. After all the cleansing, the woman used a special bio-friendly water to clean it all off.
 
-<div class="default-image-wrapper"><img src="pics/BeautySalonFacials.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/beautySalon/BeautySalonFacials.jpg"></div>
 
 When the woman finishes, she sits you up again. Your face feels amazing! You look in the nearby mirror. Though there is no difference, you feel as though you look more shiny and new!
 <<=$mainChar.doAction({b:10,m:-100,e:-10,min:90})>>

@@ -1,5 +1,5 @@
 ::Check fresh news [system] <980,2098>
-<div class="default-image-wrapper"><img src="pics/SocialNetworksNews.png"></div>
+<div class="default-image-wrapper"><img src="pics/icons/SocialNetworksNews.png"></div>
 
 <<if $mainChar.energy > 0>>You browse through your feed.
 

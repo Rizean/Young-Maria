@@ -9,7 +9,7 @@
 &emsp;What's bad about this one you're currently in? Nothing. Except the fact that it's too far from your step father's new work. You love this place but, without a home of your own, you have no choice...
 &emsp;As you make your way over to your wardrobe, you pass the mirror. You stop and take a quick glance. You are a pretty young girl with healthy, glowing skin and a good, fit body.
 
-<div class="default-image-wrapper"><img src="pics/mirror.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/object/mirror.jpg"></div>
 Your name is <<if $mainChar.firstName !== 'Maria'>><<textbox "$mainChar.firstName" $mainChar.firstName>><<else>><<textbox "$mainChar.firstName" "Maria">><<endif>> (<<checkbox "$wasNameRandomized" false true>> Random).
 <<nobr>>
 You are <<if $mainChar.age != '18'>><<textbox "$mainChar.age" $mainChar.age>><<else>><<textbox "$mainChar.age" "18">><<endif>><sup><strong></strong></sup> years old.

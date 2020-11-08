@@ -7,10 +7,16 @@ class Wardrobe extends PersistentObject {
         this.lingerie = {};
         this.suits = {};
         this.available = [
-            'Usual clothes',
+            'Home t-shirt',
+            'Jeans',
             'School uniform',
-            'Plain gold ring'
-        ]
+            'School skirt',
+            'Short socks',
+            'Trainers',
+            'School shoes',
+            'Default bra',
+            'Default panties',
+        ];
 
         this.fromJSON(config)
     }
@@ -49,6 +55,15 @@ class Wardrobe extends PersistentObject {
         }
 
         this.erotic_accessories[itemType][item.name] = item;
+        this.available.push(item.name);
+    }
+    addLingerie(itemType, item) {
+        if (! item.hasOwnProperty('name')) {
+            alert('"name" property must be provided!');
+            return;
+        }
+
+        this.lingerie[itemType][item.name] = item;
         this.available.push(item.name);
     }
 }

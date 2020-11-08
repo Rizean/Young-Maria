@@ -84,7 +84,7 @@
 
 ::read a book [nobr] <1191,1311>
 @@.image-wrapper-w70p;
-	[img['pics/reading_a_book.jpg']]
+	[img['pics/event/reading_a_book.jpg']]
 @@
 
 &emsp;You take a random book from your home library and spend about 20 minutes reading. <br />
@@ -112,7 +112,7 @@
 
 ::spend time with family [nobr] <1300,1300>
 @@.image-wrapper-w70p;
-	[img['pics/playing_with_family.jpg']]
+	[img['pics/event/playing_with_family.jpg']]
 @@
 &emsp;You join the game your family is playing. You have a fun time playing board games and talking about different topics together. <br />
 

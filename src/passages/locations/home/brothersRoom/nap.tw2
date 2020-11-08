@@ -1,5 +1,5 @@
 ::Have a nap in brother's room [nobr] <2980,0>
-<div class="default-image-wrapper"><img src="pics/homeNap.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/event/homeNap.jpg"></div>
 <br />
 You rest a little. Sleepy head...<br />
 <<=$mainChar.takeNap({h:2})>>

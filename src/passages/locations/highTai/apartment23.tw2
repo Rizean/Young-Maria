@@ -8,7 +8,7 @@
 [[Go back to the hall->High Tai]]
 
 ::Apartment №23 (Ron) <2603,2238>
-<div class="default-image-wrapper"><img src="pics/ronsPlace.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/ronsPlace.jpg"></div>
 
 &emsp;You enter the apartment. You move over to the sofa and take a seat. Ron goes into the kitchen to make you a cup of tea. When he comes back out, he perches next to you and hands you the mug.
 &emsp;You soon fall into natural conversation. At one point, you notice Ron's arm is draped dangerously close to your shoulders behind you. You also notice his other hand is dangerously close to your leg...
@@ -45,7 +45,7 @@
 <<endif>>
 
 <div class="default-image-wrapper">
-    <img src="pics/ronSex.gif">
+    <img src="pics/sex/misc/ronSex.gif">
 </div>
 <<HaveASexWidget "vaginal" "Ron">>
 

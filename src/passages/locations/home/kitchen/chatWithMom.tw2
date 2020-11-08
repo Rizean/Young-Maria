@@ -1,6 +1,6 @@
 ::Sit and chat with your mom while you have a snack [nobr] <2200,1200>
 <div class="default-image-wrapper">
-    <img src="pics/mom.jpg">
+    <img src="pics/people/mom.jpg">
 </div>
 
 You spent some time with your mother, gossiping and having fun. <br />
@@ -29,7 +29,7 @@ You spent some time with your mother, gossiping and having fun. <br />
 
 ::It looks like this horny woman needs your attention [nobr] <2200,1300>
 <div class="default-image-wrapper">
-    <img src="pics/momFuck.gif">
+    <img src="pics/sex/parents/momFuck.gif">
 </div>
 <<HaveASexWidget "giveCuni" "mom">>
 

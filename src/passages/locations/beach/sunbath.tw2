@@ -1,5 +1,5 @@
 ::Take a sunbath <4075,2680>
-<<set $hour += 1>><<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/sunbathing1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/sunbathing2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/sunbathing3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/sunbathing4.jpg"></div><<endif>>
+<<set $hour += 1>><<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/location/beach/sunbathing1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/location/beach/sunbathing2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/location/beach/sunbathing3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/location/beach/sunbathing4.jpg"></div><<endif>>
 
 &emsp;You lay on your towel, soaking up the suns rays. Time passes and soon you feel tired and a bit "fried". But you also feel like the sun has given your skin a new beautiful glow!.
 
@@ -7,7 +7,7 @@
 
 <<if $lastDayPlayedWithDanny != $dayCount>><<set _chance to either(true,false,false,false)>><<endif>><<if _chance == true>>&emsp;As you are folding your towel, a kid comes to you comes up to you holding a ball in his hands.
 
-<div class="default-image-wrapper"><img src="pics/Ball.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/object/Ball.jpg"></div>
 
 <<if $wasDannyMet != true>>&emsp;"Hello, miss! I-I was just wondering if you'd like to come play with us? You see, we-we don't have enough people to play volleyball... Only if you-you have the time though!"
 &emsp;He is so shy and cute! You look behind him to see there are other players of all different ages, races and genders.<<else>>&emsp;Little Danny runs up to you holding a big ball. "Hi, $mainChar.firstName! Would you like to play volleyball with us again?"
@@ -19,7 +19,7 @@
 ::This should be a lot of fun! <3935,2690>
 &emsp;You agree to play with the boys and make your way over to where they have set up a net.
 
-<<set $hour += 1>><<set $minute += 20>><<set $lastDayPlayedWithDanny = $dayCount>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/playingVolleyball1.png"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/playingVolleyball2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/playingVolleyball3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/playingVolleyball4.jpg"></div><<endif>>
+<<set $hour += 1>><<set $minute += 20>><<set $lastDayPlayedWithDanny = $dayCount>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/location/beach/playingVolleyball1.png"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/location/beach/playingVolleyball2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/location/beach/playingVolleyball3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/location/beach/playingVolleyball4.jpg"></div><<endif>>
 
 &emsp;You had a great time though you weren't the best player. At times you thought you saw some of the younger boys staring at your body but when you looked at them, they hastily continued playing.
 <<if visited() == 1>><<set $wasDannyMet = true>>&emsp;By the end of the game, you are worn out. You take this break to chat with the players. The little boy that came up to you earlier introduces himself as Danny.

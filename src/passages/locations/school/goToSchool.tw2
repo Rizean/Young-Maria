@@ -1,11 +1,11 @@
 ::Go to school <2080,1980>
 <<set $mainChar.hasBeenAtSchool = true>><<set $hour = 14>><<set $minute = 0>><h1 style="text-align: center; font-variant: small-caps; font-style: italic">~ <<if $day == 1>>MONDAY<<elseif $day == 2>>TUESDAY<<elseif $day == 3>>WEDNESDAY<<elseif $day == 4>>THURSDAY<<elseif $day == 5>>FRIDAY<<endif>> ~</h1>
 
-<div class="default-image-wrapper"><img src="pics/School.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/location/School.jpg"></div>
 
 <<if $dateMonth == "June" and $dateDay == 5>>Congratulations! Today is the last day of school school! It's over!
 
-<div class="default-image-wrapper"><img src="pics/SchoolGraduation.jpg"></div>
+<div class="default-image-wrapper"><img src="pics/event/SchoolGraduation.jpg"></div>
 
 &emsp;During your last day you spent your time saying goodbye to friends and teachers. Then you grabbed the certificate and [[left this place->Go out]]<<else>>&emsp;Hello, favourite school. Let's hope it'll be a good day...
 
@@ -85,7 +85,7 @@
         <<case 6>>
             <div class="default-image-wrapper"><img src="pics/school/upskirt/school_upskirt6.jpg" alt="school upskirt 6" /> <br /></div>
         <<case 7>>
-            <div class="default-image-wrapper"><img src="pics/SchoolUpskirt.jpg"></div>
+            <div class="default-image-wrapper"><img src="pics/school/upskirt/SchoolUpskirt.jpg"></div>
     <</switch>>
 <</nobr>>
 
@@ -135,7 +135,7 @@
             <<case 7>>
                 <div class="default-image-wrapper"><img src="pics/school/upskirt_naked/upskirt_naked7.jpg" alt="school upskirt naked 7" /></div>
             <<case 8>>
-                <div class="default-image-wrapper"><img src="pics/SchoolUpskirtNaked.jpg"></div>
+                <div class="default-image-wrapper"><img src="pics/school/upskirt_naked/SchoolUpskirtNaked.jpg"></div>
         <</switch>>
     <</if>>
 <</nobr>>
@@ -144,14 +144,14 @@
 <<=$mainChar.doAction({c:1,e:-20})>><p class="add">+1 Reputation</p> <<set $mainChar.reputation.school += 1>><<else>> &emsp;The act catches you by surprise but you don't react in the way the boy was hoping. Instead, you smooth down your skirt and turn to your classmate with a smirk.
 &emsp;"First time seeing a pussy, eh? You know, there's better ways to go about it..." Everyone, including your classmate, are in complete and utter shock. You ignore them and contine to clean up, strutting with confidence to your next class.
 
-<<=$mainChar.doAction({c:1,e:-20})>><p class="add">+1 Reputation</p> <<set $mainChar.reputation.school += 1>><<endif>><<endif>><<elseif _event == 3>><div class="default-image-wrapper"><img src="pics/skirtBoy.jpg"></div>
+<<=$mainChar.doAction({c:1,e:-20})>><p class="add">+1 Reputation</p> <<set $mainChar.reputation.school += 1>><<endif>><<endif>><<elseif _event == 3>><div class="default-image-wrapper"><img src="pics/people/skirtBoy.jpg"></div>
 
 &emsp;The day was pretty uneventful until one of your classes took an... interesting turn.
 &emsp;You were sitting in the classroom, reading some boring textbooks, when a hot guy sitting next you leans over and whispers: "Hey, $mainChar.firstName, I think you're super hot."
 &emsp;<p class="char">"I think you're hot too." </p> you answer, a little flustered.
 &emsp;Suddenly, he reaches over with his hand and sneaks it under your skirt.  "Well then, $mainChar.firstName, why don't we have some fun together?" He says, his fingers rubbing up and down your wettening pussy lips.
 &emsp;The feeling of his fingers on your clit is exhilarating... But do you want to take it further?
-[[Embrace your perverted classmate by spreading legs][$minute += 20]]<<else>><div class="default-image-wrapper"><img src="pics/everydaySchool.jpg"></div>
+[[Embrace your perverted classmate by spreading legs][$minute += 20]]<<else>><div class="default-image-wrapper"><img src="pics/location/everydaySchool.jpg"></div>
 
 &emsp;Today was a fairly ordinary day. There was no drama, no humiliation, no surprise pop quizzes. Just a normal day. In classes you payed attention, did the work and contributed to some of the discussions. At lunch you spent the time chatting and laughing with some of your classmates. All in all, the day passed quickly and soon it was time to leave.
 <<=$mainChar.doAction({e:-10})>><<endif>>

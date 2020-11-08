@@ -7,7 +7,7 @@ src/passages/locations/home/livingRoom/livingRoomSchedule.tw2
 
 
 ::living room [nobr] <1528,901>
-@@.image-wrapper-w70p; <img src="pics/livingRoom.jpg"> @@
+@@.image-wrapper-w70p; <img src="pics/location/livingRoom.jpg"> @@
 You are in the [[living room->living room description]] <br />
 You could go sit in the [[Bay Window]] <br />
 <<include "Farm Into">>
@@ -71,7 +71,7 @@ You could go sit in the [[Bay Window]] <br />
 <<endif>>
 
 ::living room description [nobr] <1380,1000>
-@@.image-wrapper-w70p; <img src="pics/livingRoom.jpg"> @@
+@@.image-wrapper-w70p; <img src="pics/location/livingRoom.jpg"> @@
 &emsp;The living room is plain but bright. Lots of warm, beige colours adorn the walls and furniture. Most of the surfaces are covered with trinkets and photos of your family. The walls of the living room feature more family pictures but also several paintings. On various stands around the room you can see vases with lusciously well-kept plants that bring a nice natural look to the space. <br />
 &emsp;There are two comfortable sofas for relaxation and a couple pouffes. Your father hates them, but your mother thinks they're cute. Behind the sofas is a [[large window|Bay Window]] with cushions to sit on. From this window, you can see the neighbours house or bask in the sun. <br />
 &emsp;A large TV hangs on a wall visible from almost anywhere in the room. Your father spent a lot of money on this. It's his most prized possession, or so he says. <br />

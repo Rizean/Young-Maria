@@ -1,11 +1,11 @@
 ::chat with your sibling in the kitchen [nobr] <2300,800>
 <<if $sibling.type === 'sister'>>
 	@@.image-wrapper-w70p;
-		[img['pics/chat_with_sister_in_the_kitchen.jpg']]
+		[img['pics/event/chat/chat_with_sister_in_the_kitchen.jpg']]
 	@@
 <<else>>
 	@@.image-wrapper-w70p;
-		[img['pics/chat_with_brother_in_the_kitchen.jpg']]
+		[img['pics/event/chat/chat_with_brother_in_the_kitchen.jpg']]
 	@@
 <<endif>>
 You go over to your brother and talk about most things. Your brother blathers on about his success whilst you talk about your interests. You find common ground and you're both enjoying the conversation. <br />

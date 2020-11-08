@@ -1,7 +1,7 @@
 ::Go swimming <4050,2550>
 &emsp;You enter the sea and wade in deep. As the sand disappears under your feet, you start to swim. <br />
 
-<<set $minute += 40>><<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/swimming1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/swimming2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/swimming3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/swimming4.jpg"></div><<endif>>
+<<set $minute += 40>><<set _image to either(1,2,3,4)>><<if _image == 1>><div class="default-image-wrapper"><img src="pics/location/beach/swimming1.jpg"></div><<elseif _image == 2>><div class="default-image-wrapper"><img src="pics/location/beach/swimming2.jpg"></div><<elseif _image == 3>><div class="default-image-wrapper"><img src="pics/location/beach/swimming3.jpg"></div><<elseif _image == 4>><div class="default-image-wrapper"><img src="pics/location/beach/swimming4.jpg"></div><<endif>>
 
 &emsp;After some time swimming and floating on your back, you are tired but you had a great time! You even feel a little more beautiful as if the water revitalised your skin. You also feel stronger.
 <<nobr>>

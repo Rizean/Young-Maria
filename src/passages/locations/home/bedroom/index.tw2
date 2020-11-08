@@ -10,7 +10,7 @@ src/passages/locations/home/bedroom/useLaptop.tw2
 
 
 ::Bedroom <1000,900>
-@@.image-wrapper-w70p; <img src="pics/bedroom.gif"> @@ \
+@@.image-wrapper-w70p; <img src="pics/location/bedroom.gif"> @@ \
 <<nobr>>
     &emsp;Your room is beautiful with ample space and plenty of natural light emanating from the big window behind your bed. <br />
     &emsp;Most of your furniture is made of simple birch wood but with the pale purple walls and pretty decorations, your room is full of bright colours. <br />

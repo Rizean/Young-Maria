@@ -6,77 +6,77 @@
 <<set _image to random(1, 15)>>
 <<if _image == 1>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex1.gif">
+        <img src="pics/sex/stranger/strangerSex1.gif">
     </div>
     <<HaveASexWidget "bj" "internet stranger">>
 <<elseif _image == 2>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex2.gif">
+        <img src="pics/sex/stranger/strangerSex2.gif">
     </div>
     <<HaveASexWidget "bj" "internet stranger">>
 <<elseif _image == 3>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex3.gif">
+        <img src="pics/sex/stranger/strangerSex3.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 4>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex4.gif">
+        <img src="pics/sex/stranger/strangerSex4.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 5>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex5.gif">
+        <img src="pics/sex/stranger/strangerSex5.gif">
     </div>
     <<HaveASexWidget "bj" "internet stranger">>
 <<elseif _image == 6>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex6.gif">
+        <img src="pics/sex/stranger/strangerSex6.gif">
     </div>
     <<HaveASexWidget "anal" "internet stranger">>
 <<elseif _image == 7>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex7.gif">
+        <img src="pics/sex/stranger/strangerSex7.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 8>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex8.gif">
+        <img src="pics/sex/stranger/strangerSex8.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 9>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex9.gif">
+        <img src="pics/sex/stranger/strangerSex9.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 10>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex10.gif">
+        <img src="pics/sex/stranger/strangerSex10.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 11>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex11.gif">
+        <img src="pics/sex/stranger/strangerSex11.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 12>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex12.gif">
+        <img src="pics/sex/stranger/strangerSex12.gif">
     </div>
     <<HaveASexWidget "handjob" "internet stranger">>
 <<elseif _image == 13>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex13.gif">
+        <img src="pics/sex/stranger/strangerSex13.gif">
     </div>
     <<HaveASexWidget "vaginal" "internet stranger">>
 <<elseif _image == 14>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex14.gif">
+        <img src="pics/sex/stranger/strangerSex14.gif">
     </div>
     <<HaveASexWidget "anal" "internet stranger">>
 <<elseif _image == 15>>
     <div class="default-image-wrapper">
-        <img src="pics/strangerSex15.gif">
+        <img src="pics/sex/stranger/strangerSex15.gif">
     </div>
     <<HaveASexWidget "bj" "internet stranger">>
 <<endif>>
