@@ -547,7 +547,7 @@ class BasicCharacter {
 
     updatePaperDoll() {
         let {paperDoll} = this
-        let {accessories: {neck}, erotic_accessories, lingerie: {panties, bra}, clothes: {legs, body}} = this.look
+        let {accessories: {neck}, erotic_accessories, clothes: {legs, body, panties, bra}} = this.look
         let {chest, head: {eyes, hair}} = this.appearance
         let chestSize = chest.size.toUpperCase()
 
@@ -557,11 +557,11 @@ class BasicCharacter {
         }
         paperDoll.clear()
         paperDoll.setPart({part: 'mainBody', key: 'paperDoll.head.eyes', variant: eyes.color})
-        if (erotic_accessories.back.name === 'Tail butt plug') paperDoll.setPart({part: 'buttPlug', key: 'paperDoll.body.lower.buttPlug', variant: 'TailButtPlug'})
+        if (erotic_accessories.butt.name === 'Tail butt plug') paperDoll.setPart({part: 'buttPlug', key: 'paperDoll.body.lower.buttPlug', variant: 'TailButtPlug'})
         if (neck !== '') paperDoll.setPart({part: 'neck', key: 'paperDoll.head.neck.accessor', variant: neck === 'Dog collar' ? 'dogCollar' : 'choker'})
         paperDoll.setPart({part: 'hair', key: `paperDoll.head.hair.${hair.length}`, variant: hair.color.toUpperFirst()})
         paperDoll.setPart({part: 'chest', key: `paperDoll.body.upper.breast`, variant: chestSize})
-        if (erotic_accessories.body.name === "Nipple rings") paperDoll.setPart({part: 'chestAccessory', key: `paperDoll.body.upper.nippleRings`, variant: chestSize})
+        if (erotic_accessories.nipple.name === "Nipple rings") paperDoll.setPart({part: 'chestAccessory', key: `paperDoll.body.upper.nippleRings`, variant: chestSize})
         if (bra.name > '') paperDoll.setPart({part: 'bra', key: `paperDoll.body.upper.bra`, variant: chestSize})
         if (panties.name > '') paperDoll.setPart({part: 'panties', key: 'paperDoll.body.lower.panties.defaultPanties'})
         if (legs.name > '') paperDoll.setPart({part: 'stockings', key: 'paperDoll.body.lower.stockings'})

@@ -1,27 +1,61 @@
 ::StoryIncludes
 src/core/clothing/accessories.tw2
-src/core/clothing/clothesItemWidget.tw2
 src/core/clothing/EroticAccessoriesWidget.tw2
 src/core/clothing/LingerieClothesWidget.tw2
 src/core/clothing/mainWardrobe.tw2
 
-::Head Clothes [nobr system] <650,1400>
-<<ClothesItem "head">>
+::head Clothes [nobr system] <650,1400>
+<<=$mainChar.wardrobe.renderSelection({slot:'head',mainChar:$mainChar})>>
 
-::Legs Clothes [nobr system] <850,1400>
-<<ClothesItem "legs">>
+::body Clothes [nobr system] <750,1400>
+<<=$mainChar.wardrobe.renderSelection({slot:'body',mainChar:$mainChar})>>
 
-::Shoes Clothes [nobr system] <950,1400>
-<<ClothesItem "shoes">>
+::lowerbody Clothes [nobr system] <750,1400>
+<<=$mainChar.wardrobe.renderSelection({slot:'lowerbody',mainChar:$mainChar})>>
 
-::Body Clothes [nobr system] <750,1400>
-<<ClothesItem "body">>
+::legs Clothes [nobr system] <850,1400>
+<<=$mainChar.wardrobe.renderSelection({slot:'legs',mainChar:$mainChar})>>
 
-::Bra Lingerie Clothes [system] <750,2000>
-<<LingerieClothesItem "bra">>
+::feet Clothes [nobr system] <950,1400>
+<<=$mainChar.wardrobe.renderSelection({slot:'feet',mainChar:$mainChar})>>
 
-::Panties Lingerie Clothes [system] <850,2000>
-<<LingerieClothesItem "panties">>
+::bra Clothes [system] <750,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'bra',mainChar:$mainChar})>>
+
+::panties Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'panties',mainChar:$mainChar})>>
+
+::neck Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'neck',mainChar:$mainChar,category:'accessories'})>>
+
+::fingers Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'fingers',mainChar:$mainChar,category:'accessories'})>>
+
+::arms Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'arms',mainChar:$mainChar,category:'accessories'})>>
+
+::ears Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'ears',mainChar:$mainChar,category:'accessories'})>>
+
+::eyes Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'eyes',mainChar:$mainChar,category:'accessories'})>>
+
+::navel Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'navel',mainChar:$mainChar,category:'erotic_accessories'})>>
+
+::nipple Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'nipple',mainChar:$mainChar,category:'erotic_accessories'})>>
+
+::butt Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'butt',mainChar:$mainChar,category:'erotic_accessories'})>>
+
+::mouth Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'mouth',mainChar:$mainChar,category:'erotic_accessories'})>>
+
+::clit Clothes [system] <850,2000>
+<<=$mainChar.wardrobe.renderSelection({slot:'clit',mainChar:$mainChar,category:'erotic_accessories'})>>
+
+
 
 ::Office suit <591,1997>
 <<link "Back" $backButton>><</link>>

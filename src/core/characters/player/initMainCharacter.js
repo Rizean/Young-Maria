@@ -98,12 +98,15 @@ window._initMainCharacter = ()=> {
                     name: '',
                     image: ''
                 },
-                shoes: {
+                feet: {
                     name: '',
                     image: ''
-                }
+                },
+                bra: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra')),
+                panties: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties')),
             },
             lingerie: {
+                // FIXME!!!
                 bra: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra')),
                 panties: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties')),
             },
@@ -116,7 +119,7 @@ window._initMainCharacter = ()=> {
                     name: '',
                     image: ''
                 },
-                finger: {
+                fingers: {
                     name: '',
                     image: ''
                 },
@@ -134,15 +137,15 @@ window._initMainCharacter = ()=> {
                 },
             },
             erotic_accessories: {
-                neck: {
+                navel: {
                     name: '',
                     image: ''
                 },
-                front: {
+                nipple: {
                     name: '',
                     image: ''
                 },
-                back: {
+                butt: {
                     name: '',
                     image: ''
                 },
@@ -150,7 +153,7 @@ window._initMainCharacter = ()=> {
                     name: '',
                     image: ''
                 },
-                body: {
+                clit: {
                     name: '',
                     image: ''
                 }
@@ -259,9 +262,15 @@ window._initMainCharacter = ()=> {
                 legs: {
                     'Short socks': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='shortSocks')),
                 },
-                shoes: {
+                feet: {
                     'Trainers': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='trainers')),
                     'School shoes': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='schoolShoes')),
+                },
+                bra: {
+                    'Plain Black Bra': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra'))
+                },
+                panties: {
+                    'Plain Black Panties': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties'))
                 },
             },
             accessories: {
@@ -269,24 +278,24 @@ window._initMainCharacter = ()=> {
                 ears: {},
                 eyes: {},
                 arms: {},
-                finger: {
+                fingers: {
                     'Plain gold ring': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainGoldRing')),
                 }
             },
             erotic_accessories: {
-                neck: {},
-                front: {},
-                back: {},
+                navel: {},
+                nipple: {},
+                butt: {},
                 mouth: {},
-                body: {}
+                clit: {}
             },
             lingerie: {
                 bra: {
-                    default: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra')),
+                    'Plain Black Bra':utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra'))
                 },
                 panties: {
-                    default: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties')),
-                }
+                    'Plain Black Panties': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties'))
+                },
             },
             suits: {}
         })
