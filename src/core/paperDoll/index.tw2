@@ -4,5 +4,3 @@
 ::Paper Doll [nobr] <625,3043>
 <<=$mainChar.renderPaperDoll()>>
 
-::Paper Doll Widgets [widget nobr] <753,3051>
-
