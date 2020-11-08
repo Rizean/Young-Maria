@@ -1,4 +1,5 @@
 window._initMainCharacter = ()=> {
+    console.log('GAME_ITEMS_V2', GAME_ITEMS_V2)
     let mainCharacter = new GirlCharacter({
         firstName: "Maria",
         lastName: "Doe",
@@ -88,12 +89,7 @@ window._initMainCharacter = ()=> {
                     name: '',
                     image: ''
                 },
-                body: {
-                    name: 'Usual clothes',
-                    image: 'pics/object/UClothes.jpg',
-                    allure: 5,
-                    obscenity: 0
-                },
+                body: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='usualClothes')),
                 lowerbody: {
                     name: 'Jeans',
                     image: ''
@@ -108,20 +104,8 @@ window._initMainCharacter = ()=> {
                 }
             },
             lingerie: {
-                bra: {
-                    name: 'Plain Black Bra',
-                    image: 'pics/look/lingerie/bra/default_bra.jpg',
-                    description: 'A plain black bra.',
-                    allure: 0,
-                    obscenity: 0
-                },
-                panties: {
-                    name: 'Plain Black Panties',
-                    image: 'pics/look/lingerie/panties/default_panties.jpg',
-                    description: 'A plain black pair of panties.',
-                    allure: 0,
-                    obscenity: 0
-                }
+                bra: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra')),
+                panties: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties')),
             },
             accessories: {
                 neck: {
@@ -263,83 +247,21 @@ window._initMainCharacter = ()=> {
             clothes: {
                 head: {},
                 body: {
-                    'School uniform': {
-                        name: 'School uniform',
-                        image: 'pics/object/SchoolUniform.jpg',
-                        description: 'You must wear this at school',
-                        category: 'suit, school',
-                        allure: 5,
-                        obscenity: 2
-                    },
-                    'Home t-shirt': {
-                        name: 'Home t-shirt',
-                        image: 'https://MariaMod.site/pics/PaperDoll/UpperBody/MainClothes/Home t-shirta.png',
-                        description: 'Regular clothes, nice and comfortable.',
-                        category: 'usual',
-                        allure: 2,
-                        obscenity: 1
-                    },
-                    'Office suit': {
-                        name: 'Office suit',
-                        image: 'pics/object/OfficeSuit.jpg',
-                        description: 'You must wear this at work',
-                        allure: 10,
-                        obscenity: 0
-                    },
-                    'Usual clothes': {
-                        name: 'Usual clothes',
-                        image: 'pics/object/UClothes.jpg',
-                        description: 'Regular clothes, nice and comfortable.',
-                        category: 'usual',
-                        allure: 5,
-                        obscenity: 0
-                    }
+                    'School uniform': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='schoolUniform')),
+                    'Home t-shirt': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='homeTShirt')),
+                    'Office suit': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='officeSuit')),
+                    'Usual clothes': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='usualClothes')),
                 },
                 lowerbody: {
-                    'Jeans': {
-                        name: 'Jeans',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/LowerBodyClothes/Jeans.png',
-                        description: 'Just tight jeans',
-                        category: 'usual',
-                        allure: 2,
-                        obscenity: 1
-                    },
-                    'School skirt': {
-                        name: 'School skirt',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/LowerBodyClothes/School skirt.png',
-                        description: 'Not very long cute skirt',
-                        category: 'usual',
-                        allure: 5,
-                        obscenity: 1
-                    },
+                    'Jeans': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='jeans')),
+                    'School skirt': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='schoolSkirt')),
                 },
                 legs: {
-                    'Short socks': {
-                        name: 'Short socks',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Stockings/Short socks.png',
-                        description: 'Very comfy white short socks',
-                        category: 'usual',
-                        allure: 0,
-                        obscenity: 0
-                    },
+                    'Short socks': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='shortSocks')),
                 },
                 shoes: {
-                    'Trainers': {
-                        name: 'Trainers',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Shoes/Trainers.png',
-                        description: 'A new pair of cool trainers',
-                        category: 'usual',
-                        allure: 0,
-                        obscenity: 0
-                    },
-                    'School shoes': {
-                        name: 'School shoes',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Shoes/School shoes.png',
-                        description: 'A pair of formal girl shoes',
-                        category: 'usual',
-                        allure: 0,
-                        obscenity: 0
-                    },
+                    'Trainers': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='trainers')),
+                    'School shoes': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='schoolShoes')),
                 },
             },
             accessories: {
@@ -348,14 +270,7 @@ window._initMainCharacter = ()=> {
                 eyes: {},
                 arms: {},
                 finger: {
-                    'Plain gold ring': {
-                        name: 'Plain gold ring',
-                        image: 'pics/PGRing.jpg',
-                        description: 'You have this ring for three years.',
-                        category: 'accessories',
-                        allure: 5,
-                        obscenity: 0
-                    }
+                    'Plain gold ring': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainGoldRing')),
                 }
             },
             erotic_accessories: {
@@ -367,22 +282,10 @@ window._initMainCharacter = ()=> {
             },
             lingerie: {
                 bra: {
-                    default: {
-                        name: 'Plain Black Bra',
-                        image: 'pics/look/lingerie/bra/default_bra.jpg',
-                        description: 'A plain black bra.',
-                        allure: 2,
-                        obscenity: 1
-                    }
+                    default: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra')),
                 },
                 panties: {
-                    default: {
-                        name: 'Plain Black Panties',
-                        image: 'pics/look/lingerie/panties/default_panties.jpg',
-                        description: 'A plain black pair of panties.',
-                        allure: 2,
-                        obscenity: 1
-                    }
+                    default: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties')),
                 }
             },
             suits: {}

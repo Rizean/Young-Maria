@@ -514,6 +514,12 @@ img.full-width-image  {
 
 </style>
 <script role="script" id="twine-user-script" type="text/twine-javascript">
+// @require('src/js/utils.js')
+window.utils = {
+    shallowClone: (obj)=> JSON.parse(JSON.stringify(obj))
+}
+
+// #require
 // @require('src/js/gameMedia.js')
 const gameMedia = [
     /** PaperDoll **/
@@ -532,14 +538,25 @@ const gameMedia = [
 
     {key: "paperDoll.body.lower.buttPlug", root: "pics/PaperDoll/LowerBody/ButtPlug", variant: {base: '', variants: ['', 'TailButtPlug'], ext: 'png'}},
     {key: "paperDoll.body.lower.panties.defaultPanties", root: "pics/PaperDoll/LowerBody/Panties", media: 'defaultPanties.png'},
-    {key: "paperDoll.body.lower.stockings", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Stockings.png'},
+    {key: "paperDoll.body.lower.jeans", root: "pics/PaperDoll/LowerBody/LowerBodyClothes", media: 'Jeans.jpg'},
+    {key: "paperDoll.body.lower.schoolSkirt", root: "pics/PaperDoll/LowerBody/LowerBodyClothes", media: 'School skirt.png'},
 
+    // todo should refactor to legs or something?
+    {key: "paperDoll.body.lower.stockings", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Stockings.png'},
+    {key: "paperDoll.body.lower.shortSocks", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Short socks.png'},
+
+    /** PaperDoll Feet **/
+    {key: "paperDoll.body.feet.trainers", root: "pics/PaperDoll/LowerBody/Shoes", media: 'Trainers.png'},
+    {key: "paperDoll.body.feet.schoolShoes", root: "pics/PaperDoll/LowerBody/Shoes", media: 'School shoes.png'},
 
     {key: "paperDoll.body.upper.bra", root: "pics/PaperDoll/UpperBody/Bra", variant: {base: 'DefaultBra', variants: ['', 'A', 'B', 'C', 'D'], ext: 'png'}},
     {key: "paperDoll.body.upper.nippleRings", root: "pics/PaperDoll/UpperBody/Chest", variant: {base: 'NippleRings', variants: ['', 'A', 'B', 'C', 'D'], ext: 'png'}},
 
     {key: "paperDoll.body.upper.eveningDress", root: "pics/PaperDoll/UpperBody/EveningDress", variant: {base: 'EveningDress', variants: ['A', 'B', 'C', 'D'], ext: 'png'}},
     {key: "paperDoll.body.upper.schoolUniform", root: "pics/PaperDoll/UpperBody/schoolUniform", variant: {base: 'schoolUniform', variants: ['A', 'B', 'C', 'D'], ext: 'png'}},
+    {key: "paperDoll.body.upper.homeTShirt", root: "pics/PaperDoll/UpperBody/MainClothes", variant: {base: 'Home t-shirt', variants: ['a', 'b', 'c', 'd'], ext: 'png'}},
+    {key: "paperDoll.body.upper.officeSuit", root: "pics/PaperDoll/UpperBody/MainClothes", variant: {base: 'Office suit', variants: ['a', 'b', 'c', 'd'], ext: 'png'}},
+    {key: "paperDoll.body.upper.usualClothes", root: "pics/PaperDoll/UpperBody/MainClothes", variant: {base: 'Usual clothes', variants: ['a', 'b', 'c', 'd'], ext: 'png'}},
 
     {key: "books.DaddyMe", "media": ["pics/books/DaddyMe.jpg"]},
 
@@ -610,6 +627,15 @@ const gameMedia = [
     {key: "wearable.anal_tailplug", root: "pics/wearable", media: 'TBPlug.jpg'},
     {key: "wearable.nipple_rings", root: "pics/object", media: 'NPiercing.jpg'},
     {key: "wearable.nipple_rings", root: "pics/object", media: 'NPiercing.jpg'},
+    {key: "wearable.schoolUniform", root: "pics/object", media: 'SchoolUniform.jpg'},
+    {key: "wearable.homeTShirt", root: "pics/PaperDoll/UpperBody/MainClothes", media: 'Home t-shirta.png'},
+    {key: "wearable.usualClothes", root: "pics/object/", media: 'UClothes.jpg'},
+    {key: "wearable.jeans", root: "pics/PaperDoll/LowerBody/LowerBodyClothes", media: 'Jeans.jpg'},
+    {key: "wearable.schoolSkirt", root: "pics/PaperDoll/LowerBody/LowerBodyClothes", media: 'School skirt.png'},
+    {key: "wearable.shortSocks", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Short socks.png'},
+    {key: "wearable.trainers", root: "pics/PaperDoll/LowerBody/Shoes", media: 'Trainers.png'},
+    {key: "wearable.schoolShoes", root: "pics/PaperDoll/LowerBody/Shoes", media: 'School shoes.png'},
+    {key: "wearable.plainGoldRing", root: "pics/object", media: 'PGRing.jpg'},
 
     // objects
     {key: "object.dildo", root: "pics/object", media: 'Dildo.jpg'},
@@ -665,9 +691,9 @@ const GAME_ITEMS_V2 = {
             image: 'pics/object/OfficeSuit.jpg',
             description: 'Strict and firm',
             mediaKey: 'wearable.officeSuit',
-            mediaPaperDollKey: 'paperDoll.body.upper.eveningDress',
+            mediaPaperDollKey: 'paperDoll.body.upper.officeSuit',
             allure: 10,
-            obscenity: 5,
+            obscenity: 0,
             price: 90,
             type: 'clothes',
         },
@@ -744,9 +770,9 @@ const GAME_ITEMS_V2 = {
             image: 'pics/look/lingerie/bra/default_bra.jpg',
             description: 'A plain black bra.',
             mediaKey: 'wearable.plainBlackBra',
-            mediaPaperDollKey: 'paperDoll.body.upper.eveningDress',
-            allure: 0,
-            obscenity: 0,
+            mediaPaperDollKey: 'paperDoll.body.upper.bra',
+            allure: 2,
+            obscenity: 1,
             type: 'lingerie',
         },
         {
@@ -757,9 +783,9 @@ const GAME_ITEMS_V2 = {
             image: 'pics/look/lingerie/panties/default_panties.jpg',
             description: 'A plain black pair of panties.',
             mediaKey: 'wearable.plainBlackPanties',
-            mediaPaperDollKey: 'paperDoll.body.upper.eveningDress',
-            allure: 0,
-            obscenity: 0,
+            mediaPaperDollKey: 'paperDoll.body.lower.panties.defaultPanties',
+            allure: 2,
+            obscenity: 1,
             type: 'lingerie',
         },
         {
@@ -770,10 +796,134 @@ const GAME_ITEMS_V2 = {
             image: 'pics/look/lingerie/panties/transparentBlackMiniGString.jpg',
             description: 'A plain black pair of panties.',
             mediaKey: 'wearable.blackMiniGString',
-            mediaPaperDollKey: 'paperDoll.body.upper.eveningDress',
+            mediaPaperDollKey: 'paperDoll.body.lower.panties.defaultPanties',
             allure: 15,
             obscenity: 5,
             type: 'lingerie',
+        },
+        {
+            key: 'schoolUniform',
+            name: 'School uniform',
+            slot: 'body',
+            price: 60,
+            image: 'pics/object/SchoolUniform.jpg',
+            description: 'You must wear this at school',
+            mediaKey: 'wearable.schoolUniform',
+            mediaPaperDollKey: 'paperDoll.body.upper.schoolUniform',
+            allure: 5,
+            obscenity: 2,
+            type: 'clothes',
+            category: 'suit, school',
+        },
+        {
+            key: 'homeTShirt',
+            name: 'Home t-shirt',
+            slot: 'upper',
+            price: 60,
+            image: 'pics/PaperDoll/UpperBody/MainClothes/Home t-shirta.png',
+            description: 'Regular clothes, nice and comfortable.',
+            mediaKey: 'wearable.homeTShirt',
+            mediaPaperDollKey: 'paperDoll.body.upper.homeTShirt',
+            allure: 2,
+            obscenity: 1,
+            type: 'clothes',
+            category: 'usual',
+        },
+        {
+            key: 'usualClothes',
+            name: 'Usual clothes',
+            slot: 'upper',
+            price: 60,
+            image: 'pics/object/UClothes.jpg',
+            description: 'Regular clothes, nice and comfortable.',
+            mediaKey: 'wearable.usualClothes',
+            mediaPaperDollKey: 'paperDoll.body.upper.usualClothes',
+            allure: 5,
+            obscenity: 0,
+            type: 'clothes',
+            category: 'usual',
+        },
+        {
+            key: 'jeans',
+            name: 'Jeans',
+            slot: 'lower',
+            price: 60,
+            image: 'pics/PaperDoll/LowerBody/LowerBodyClothes/Jeans.png',
+            description: 'Just tight jeans.',
+            mediaKey: 'wearable.jeans',
+            mediaPaperDollKey: 'paperDoll.body.lower.jeans',
+            allure: 5,
+            obscenity: 0,
+            type: 'clothes',
+            category: 'usual',
+        },
+        {
+            key: 'schoolSkirt',
+            name: 'School skirt',
+            slot: 'lower',
+            price: 60,
+            image: 'pics/PaperDoll/LowerBody/LowerBodyClothes/School skirt.png',
+            description: 'Not very long cute skirt',
+            mediaKey: 'wearable.schoolSkirt',
+            mediaPaperDollKey: 'paperDoll.body.lower.schoolSkirt',
+            allure: 5,
+            obscenity: 1,
+            type: 'clothes',
+            category: 'usual',
+        },
+        {
+            key: 'shortSocks',
+            name: 'Short socks',
+            slot: 'legs',
+            price: 60,
+            image: 'pics/PaperDoll/LowerBody/Stockings/Short socks.png',
+            description: 'Very comfy white short socks',
+            mediaKey: 'wearable.shortSocks',
+            mediaPaperDollKey: 'paperDoll.body.lower.shortSocks',
+            allure: 0,
+            obscenity: 0,
+            type: 'clothes',
+            category: 'usual',
+        },
+        {
+            key: 'trainers',
+            name: 'Trainers',
+            slot: 'feet',
+            price: 60,
+            image: 'pics/PaperDoll/LowerBody/Shoes/Trainers.png',
+            description: 'A new pair of cool trainers',
+            mediaKey: 'wearable.trainers',
+            mediaPaperDollKey: 'paperDoll.body.feet.trainers',
+            allure: 0,
+            obscenity: 0,
+            type: 'clothes',
+            category: 'usual',
+        },
+        {
+            key: 'schoolShoes',
+            name: 'School shoes',
+            slot: 'feet',
+            price: 60,
+            image: 'pics/PaperDoll/LowerBody/Shoes/School shoes.png',
+            description: 'A pair of formal girl shoes.',
+            mediaKey: 'wearable.schoolShoes',
+            mediaPaperDollKey: 'paperDoll.body.feet.schoolShoes',
+            allure: 0,
+            obscenity: 0,
+            type: 'clothes',
+            category: 'usual',
+        },
+        {
+            key: 'plainGoldRing',
+            name: 'Plain gold ring',
+            slot: 'ring',
+            type: 'accessory',
+            image: 'pics/object/PGRing.jpg',
+            description: 'You have had this ring for as long as you can remember.',
+            mediaKey: 'wearable.plainGoldRing',
+            price: 70,
+            allure: 5,
+            obscenity: 0
         },
         {
             key: 'anal_plug',
@@ -783,7 +933,8 @@ const GAME_ITEMS_V2 = {
             image: 'pics/wearable/BPlug.jpg',
             description: 'A butt plug, wear everyday.',
             mediaKey: 'wearable.anal_plug',
-            mediaPaperDollKey: 'paperDoll.body.upper.eveningDress',
+            mediaPaperDollKey: 'paperDoll.body.lower.buttPlug',
+            mediaPaperDollVariant: '',
             price: 70,
             size: 6,
             allure: 0,
@@ -797,7 +948,8 @@ const GAME_ITEMS_V2 = {
             image: 'pics/wearable/TBPlug.jpg',
             description: 'Cute and fluffy.',
             mediaKey: 'wearable.anal_tailplug',
-            mediaPaperDollKey: 'paperDoll.body.upper.eveningDress',
+            mediaPaperDollKey: 'paperDoll.body.lower.buttPlug',
+            mediaPaperDollVariant: 'TailButtPlug',
             price: 110,
             size: 6,
             allure: 0,
@@ -811,7 +963,7 @@ const GAME_ITEMS_V2 = {
             image: 'pics/object/NPiercing.png',
             description: "That's lovely!",
             mediaKey: 'wearable.nipple_rings',
-            mediaPaperDollKey: 'paperDoll.body.upper.eveningDress',
+            mediaPaperDollKey: 'paperDoll.body.upper.nippleRings',
             price: 50,
             allure: 7,
             use: 'single',
@@ -995,9 +1147,9 @@ const GAME_ITEMS = {
         officeSuit: {
             name: 'Office suit',
             image: 'pics/object/OfficeSuit.jpg',
-            description: 'Strict and firm',
+            description: 'Strict and firm. You must wear this at work.',
             allure: 10,
-            obscenity: 5,
+            obscenity: 0,
             price: 90,
             type: 'body',
         },
@@ -1272,6 +1424,7 @@ const GAME_ITEMS = {
     },
 }
 window.GAME_ITEMS = GAME_ITEMS
+window.GAME_ITEMS_V2 = GAME_ITEMS_V2
 
 // #require
 // @require('src/js/character/selfieData.js')
@@ -3072,6 +3225,7 @@ window.mediaCatalog = new MediaCatalog(_gameMedia)
 // #require
 // @require('src/core/characters/player/initMainCharacter.js')
 window._initMainCharacter = ()=> {
+    console.log('GAME_ITEMS_V2', GAME_ITEMS_V2)
     let mainCharacter = new GirlCharacter({
         firstName: "Maria",
         lastName: "Doe",
@@ -3161,12 +3315,7 @@ window._initMainCharacter = ()=> {
                     name: '',
                     image: ''
                 },
-                body: {
-                    name: 'Usual clothes',
-                    image: 'pics/object/UClothes.jpg',
-                    allure: 5,
-                    obscenity: 0
-                },
+                body: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='usualClothes')),
                 lowerbody: {
                     name: 'Jeans',
                     image: ''
@@ -3181,20 +3330,8 @@ window._initMainCharacter = ()=> {
                 }
             },
             lingerie: {
-                bra: {
-                    name: 'Plain Black Bra',
-                    image: 'pics/look/lingerie/bra/default_bra.jpg',
-                    description: 'A plain black bra.',
-                    allure: 0,
-                    obscenity: 0
-                },
-                panties: {
-                    name: 'Plain Black Panties',
-                    image: 'pics/look/lingerie/panties/default_panties.jpg',
-                    description: 'A plain black pair of panties.',
-                    allure: 0,
-                    obscenity: 0
-                }
+                bra: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra')),
+                panties: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties')),
             },
             accessories: {
                 neck: {
@@ -3336,83 +3473,21 @@ window._initMainCharacter = ()=> {
             clothes: {
                 head: {},
                 body: {
-                    'School uniform': {
-                        name: 'School uniform',
-                        image: 'pics/object/SchoolUniform.jpg',
-                        description: 'You must wear this at school',
-                        category: 'suit, school',
-                        allure: 5,
-                        obscenity: 2
-                    },
-                    'Home t-shirt': {
-                        name: 'Home t-shirt',
-                        image: 'https://MariaMod.site/pics/PaperDoll/UpperBody/MainClothes/Home t-shirta.png',
-                        description: 'Regular clothes, nice and comfortable.',
-                        category: 'usual',
-                        allure: 2,
-                        obscenity: 1
-                    },
-                    'Office suit': {
-                        name: 'Office suit',
-                        image: 'pics/object/OfficeSuit.jpg',
-                        description: 'You must wear this at work',
-                        allure: 10,
-                        obscenity: 0
-                    },
-                    'Usual clothes': {
-                        name: 'Usual clothes',
-                        image: 'pics/object/UClothes.jpg',
-                        description: 'Regular clothes, nice and comfortable.',
-                        category: 'usual',
-                        allure: 5,
-                        obscenity: 0
-                    }
+                    'School uniform': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='schoolUniform')),
+                    'Home t-shirt': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='homeTShirt')),
+                    'Office suit': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='officeSuit')),
+                    'Usual clothes': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='usualClothes')),
                 },
                 lowerbody: {
-                    'Jeans': {
-                        name: 'Jeans',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/LowerBodyClothes/Jeans.png',
-                        description: 'Just tight jeans',
-                        category: 'usual',
-                        allure: 2,
-                        obscenity: 1
-                    },
-                    'School skirt': {
-                        name: 'School skirt',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/LowerBodyClothes/School skirt.png',
-                        description: 'Not very long cute skirt',
-                        category: 'usual',
-                        allure: 5,
-                        obscenity: 1
-                    },
+                    'Jeans': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='jeans')),
+                    'School skirt': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='schoolSkirt')),
                 },
                 legs: {
-                    'Short socks': {
-                        name: 'Short socks',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Stockings/Short socks.png',
-                        description: 'Very comfy white short socks',
-                        category: 'usual',
-                        allure: 0,
-                        obscenity: 0
-                    },
+                    'Short socks': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='shortSocks')),
                 },
                 shoes: {
-                    'Trainers': {
-                        name: 'Trainers',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Shoes/Trainers.png',
-                        description: 'A new pair of cool trainers',
-                        category: 'usual',
-                        allure: 0,
-                        obscenity: 0
-                    },
-                    'School shoes': {
-                        name: 'School shoes',
-                        image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Shoes/School shoes.png',
-                        description: 'A pair of formal girl shoes',
-                        category: 'usual',
-                        allure: 0,
-                        obscenity: 0
-                    },
+                    'Trainers': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='trainers')),
+                    'School shoes': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='schoolShoes')),
                 },
             },
             accessories: {
@@ -3421,14 +3496,7 @@ window._initMainCharacter = ()=> {
                 eyes: {},
                 arms: {},
                 finger: {
-                    'Plain gold ring': {
-                        name: 'Plain gold ring',
-                        image: 'pics/PGRing.jpg',
-                        description: 'You have this ring for three years.',
-                        category: 'accessories',
-                        allure: 5,
-                        obscenity: 0
-                    }
+                    'Plain gold ring': utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainGoldRing')),
                 }
             },
             erotic_accessories: {
@@ -3440,22 +3508,10 @@ window._initMainCharacter = ()=> {
             },
             lingerie: {
                 bra: {
-                    default: {
-                        name: 'Plain Black Bra',
-                        image: 'pics/look/lingerie/bra/default_bra.jpg',
-                        description: 'A plain black bra.',
-                        allure: 2,
-                        obscenity: 1
-                    }
+                    default: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackBra')),
                 },
                 panties: {
-                    default: {
-                        name: 'Plain Black Panties',
-                        image: 'pics/look/lingerie/panties/default_panties.jpg',
-                        description: 'A plain black pair of panties.',
-                        allure: 2,
-                        obscenity: 1
-                    }
+                    default: utils.shallowClone(GAME_ITEMS_V2.wearable.find(({key})=>key==='plainBlackPanties')),
                 }
             },
             suits: {}
@@ -3464,401 +3520,6 @@ window._initMainCharacter = ()=> {
     return mainCharacter
 }
 
-/* OLD
-<<set $mainChar to new GirlCharacter({
-	firstName: "Maria",
-	lastName: "Doe",
-	age: 18,
-	corruption: 3,
-	beauty: 0,
-	energy: 100,
-	arousal: 0,
-	intellect: 2,
-	intoxication: 0,
-	hasBeenAtSchool: false,
-	watchedCristy: 0,
-	isInSchoolLibraryAlone: true,
-	bankBalance: 0,
-	brothelDailyIncome: 0,
-	brothelSafe: 0,
-	girlsAmountInBrothel: 0,
-	currentLocation: '',
-	currentState: '',
-	state: '',
-	cleanliness: 100,
-	menstruation: {
-		day: 1,
-		isProtected: false,
-	},
-	attractiveness: 10,
-	laptop: {
-		socials: {
-			commentPoints: 0
-		}
-	},
-	relationships: {
-		mom: 5,
-		dad: 5,
-		sibling: 3,
-		christy: 0,
-		ralfDog: 0
-	},
-	reputation: {
-		global: 0,
-		school: 0,
-		home: 3
-	},
-	timesWorkedOn: {
-		copyright: 0,
-		testingGames: 0,
-		writingOpinions: 0,
-		makeDesign: 0,
-		writingDocs: 0
-	},
-	appearance: {
-	  isCombed: false,
-	  makeup: 'none',
-	  teethBrushed: false,
-	  image: '',
-	  head: {
-	  	image: '',
-	  	hair: {
-			color: 'red',
-			length: 'chest',
-			style: 'straight',
-			modification: '',
-		},
-		eyes: {
-			size: 'medium',
-			color: 'brown',
-			lashesSize: 'medium',
-		},
-		lips: {
-			size: 'medium',
-			color: 'none'
-		},
-	  	isWearingGlasses: false
-	  },
-	  chest: {
-	  	size: 'b',
-		image: '',
-	  },
-	  body: {
-	  	type: 'normal',
-		image: '',
-	  }
-	},
-	look: {
-		clothes: {
-			head: {
-				name: '',
-				image: ''
-			},
-			body: {
-				name: 'Usual clothes',
-				image: 'pics/object/UClothes.jpg',
-				allure: 5,
-				obscenity: 0
-			},
-			lowerbody: {
-				name: 'Jeans',
-				image: ''
-			},
-			legs: {
-				name: '',
-				image: ''
-			},
-			shoes: {
-				name: '',
-				image: ''
-			}
-		},
-		lingerie: {
-			bra: {
-				name: 'Plain Black Bra',
-				image: 'pics/look/lingerie/bra/default_bra.jpg',
-				description: 'A plain black bra.',
-				allure: 0,
-				obscenity: 0
-			},
-			panties: {
-				name: 'Plain Black Panties',
-				image: 'pics/look/lingerie/panties/default_panties.jpg',
-				description: 'A plain black pair of panties.',
-				allure: 0,
-				obscenity: 0
-			}
-		},
-		accessories: {
-			neck: {
-				name: '',
-				image: ''
-			},
-			purse: {
-				name: '',
-				image: ''
-			},
-			finger: {
-				name: '',
-				image: ''
-			},
-			ears: {
-				name: '',
-				image: ''
-			},
-			eyes: {
-				name: '',
-				image: ''
-			},
-			arms: {
-				name: '',
-				image: ''
-			},
-		},
-		erotic_accessories: {
-			neck: {
-				name: '',
-				image: ''
-			},
-			front: {
-				name: '',
-				image: ''
-			},
-			back: {
-				name: '',
-				image: ''
-			},
-			mouth: {
-				name: '',
-				image: ''
-			},
-			body: {
-				name: '',
-				image: ''
-			}
-		},
-		suits: {
-			swim: {
-				name: '',
-				image: ''
-			},
-			school: {
-				name: '',
-				image: ''
-			},
-			evening: {
-				name: '',
-				image: ''
-			},
-			work: {
-				name: '',
-				image: ''
-			},
-			beach: {
-				name: '',
-				image: ''
-			}
-		},
-		piercings: {},
-		tattoes: {},
-	},
-	eroticLook: {
-		intimateHaircut: 'hairy'
-	},
-	items: {
-		shampoo: 20,
-		razors: 3,
-		tampons: 10
-	},
-	stats: {
-	},
-	skills: {
-		job: {
-			copyright: 1,
-			testing: 1,
-			writingOpinions: 1,
-			makeDesign: 1,
-			writingDocs: 1
-		}
-	},
-	sexStats: {
-		masturbated: 0,
-		bj: 0,
-		vaginal: 0,
-		vaginalCapacity: 1,
-		anal: 0,
-		analCapacity: 1,
-		tits: 0,
-		thigh: 0,
-		handjob: 0,
-		footjob: 0,
-		threesome: 0,
-		raped: 0,
-		orgasm: 0,
-		flashed: 0,
-		ganged: 0,
-		gloryholed: 0,
-		annilingusGiven: 0,
-		annilingusReceived: 0,
-		receiveCuni: 0,
-		receiveMasturbation: 0,
-		givenCuni: 0,
-		cum: {
-			onFace: 0,
-			onMouth: 0,
-			inMouth: 0,
-			onBody: 0,
-			onAss: 0,
-			onPussy: 0,
-			inAss: 0,
-			inPussy: 0,
-			ate: 0,
-			spitted: 0,
-		}
-	},
-	sexSkills: {
-		bj: 0
-	},
-	pregnancy: {
-		isPregnant: false,
-		day: 0,
-		isOnPills: false,
-		knowsAboutPregnancy: false,
-	},
-	wardrobe: new Wardrobe({
-        clothes: {
-            head: {},
-              body: {
-                'School uniform': {
-                    name: 'School uniform',
-                    image: 'pics/object/SchoolUniform.jpg',
-                    description: 'You must wear this at school',
-                    category: 'suit, school',
-                    allure: 5,
-                    obscenity: 2
-                },
-                'Home t-shirt': {
-                    name: 'Home t-shirt',
-                    image: 'https://MariaMod.site/pics/PaperDoll/UpperBody/MainClothes/Home t-shirta.png',
-                    description: 'Regular clothes, nice and comfortable.',
-                    category: 'usual',
-                    allure: 2,
-                    obscenity: 1
-                },
-                'Office suit': {
-                    name: 'Office suit',
-                    image: 'pics/object/OfficeSuit.jpg',
-                    description: 'You must wear this at work',
-                    allure: 10,
-                    obscenity: 0
-                },
-                'Usual clothes': {
-                    name: 'Usual clothes',
-                    image: 'pics/object/UClothes.jpg',
-                    description: 'Regular clothes, nice and comfortable.',
-                    category: 'usual',
-                    allure: 5,
-                    obscenity: 0
-                }
-            },
-            lowerbody: {
-                'Jeans': {
-                    name: 'Jeans',
-                    image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/LowerBodyClothes/Jeans.png',
-                    description: 'Just tight jeans',
-                    category: 'usual',
-                    allure: 2,
-                    obscenity: 1
-                },
-                'School skirt': {
-                    name: 'School skirt',
-                    image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/LowerBodyClothes/School skirt.png',
-                    description: 'Not very long cute skirt',
-                    category: 'usual',
-                    allure: 5,
-                    obscenity: 1
-                },
-            },
-            legs: {
-                'Short socks': {
-                    name: 'Short socks',
-                    image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Stockings/Short socks.png',
-                    description: 'Very comfy white short socks',
-                    category: 'usual',
-                    allure: 0,
-                    obscenity: 0
-                },
-            },
-            shoes: {
-                'Trainers': {
-                    name: 'Trainers',
-                    image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Shoes/Trainers.png',
-                    description: 'A new pair of cool trainers',
-                    category: 'usual',
-                    allure: 0,
-                    obscenity: 0
-                },
-                'School shoes': {
-                    name: 'School shoes',
-                    image: 'https://MariaMod.site/pics/PaperDoll/LowerBody/Shoes/School shoes.png',
-                    description: 'A pair of formal girl shoes',
-                    category: 'usual',
-                    allure: 0,
-                    obscenity: 0
-                },
-            },
-        },
-        accessories: {
-              neck: {},
-              ears: {},
-              eyes: {},
-            arms: {},
-              finger: {
-                'Plain gold ring': {
-                    name: 'Plain gold ring',
-                    image: 'pics/PGRing.jpg',
-                    description: 'You have this ring for three years.',
-                    category: 'accessories',
-                    allure: 5,
-                    obscenity: 0
-                }
-            }
-          },
-        erotic_accessories: {
-            neck: {},
-            front: {},
-            back: {},
-            mouth: {},
-            body: {}
-          },
-        lingerie: {
-            bra: {
-                default: {
-                    name: 'Plain Black Bra',
-                    image: 'pics/look/lingerie/bra/default_bra.jpg',
-                    description: 'A plain black bra.',
-                    allure: 2,
-                    obscenity: 1
-                }
-            },
-            panties: {
-                default: {
-                    name: 'Plain Black Panties',
-                    image: 'pics/look/lingerie/panties/default_panties.jpg',
-                    description: 'A plain black pair of panties.',
-                    allure: 2,
-                    obscenity: 1
-                }
-            }
-        },
-        suits: {}
-    })
-})>>
-
-
-
-
- */
 
 // #require
 

@@ -15,14 +15,25 @@ const gameMedia = [
 
     {key: "paperDoll.body.lower.buttPlug", root: "pics/PaperDoll/LowerBody/ButtPlug", variant: {base: '', variants: ['', 'TailButtPlug'], ext: 'png'}},
     {key: "paperDoll.body.lower.panties.defaultPanties", root: "pics/PaperDoll/LowerBody/Panties", media: 'defaultPanties.png'},
-    {key: "paperDoll.body.lower.stockings", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Stockings.png'},
+    {key: "paperDoll.body.lower.jeans", root: "pics/PaperDoll/LowerBody/LowerBodyClothes", media: 'Jeans.jpg'},
+    {key: "paperDoll.body.lower.schoolSkirt", root: "pics/PaperDoll/LowerBody/LowerBodyClothes", media: 'School skirt.png'},
 
+    // todo should refactor to legs or something?
+    {key: "paperDoll.body.lower.stockings", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Stockings.png'},
+    {key: "paperDoll.body.lower.shortSocks", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Short socks.png'},
+
+    /** PaperDoll Feet **/
+    {key: "paperDoll.body.feet.trainers", root: "pics/PaperDoll/LowerBody/Shoes", media: 'Trainers.png'},
+    {key: "paperDoll.body.feet.schoolShoes", root: "pics/PaperDoll/LowerBody/Shoes", media: 'School shoes.png'},
 
     {key: "paperDoll.body.upper.bra", root: "pics/PaperDoll/UpperBody/Bra", variant: {base: 'DefaultBra', variants: ['', 'A', 'B', 'C', 'D'], ext: 'png'}},
     {key: "paperDoll.body.upper.nippleRings", root: "pics/PaperDoll/UpperBody/Chest", variant: {base: 'NippleRings', variants: ['', 'A', 'B', 'C', 'D'], ext: 'png'}},
 
     {key: "paperDoll.body.upper.eveningDress", root: "pics/PaperDoll/UpperBody/EveningDress", variant: {base: 'EveningDress', variants: ['A', 'B', 'C', 'D'], ext: 'png'}},
     {key: "paperDoll.body.upper.schoolUniform", root: "pics/PaperDoll/UpperBody/schoolUniform", variant: {base: 'schoolUniform', variants: ['A', 'B', 'C', 'D'], ext: 'png'}},
+    {key: "paperDoll.body.upper.homeTShirt", root: "pics/PaperDoll/UpperBody/MainClothes", variant: {base: 'Home t-shirt', variants: ['a', 'b', 'c', 'd'], ext: 'png'}},
+    {key: "paperDoll.body.upper.officeSuit", root: "pics/PaperDoll/UpperBody/MainClothes", variant: {base: 'Office suit', variants: ['a', 'b', 'c', 'd'], ext: 'png'}},
+    {key: "paperDoll.body.upper.usualClothes", root: "pics/PaperDoll/UpperBody/MainClothes", variant: {base: 'Usual clothes', variants: ['a', 'b', 'c', 'd'], ext: 'png'}},
 
     {key: "books.DaddyMe", "media": ["pics/books/DaddyMe.jpg"]},
 
@@ -93,6 +104,15 @@ const gameMedia = [
     {key: "wearable.anal_tailplug", root: "pics/wearable", media: 'TBPlug.jpg'},
     {key: "wearable.nipple_rings", root: "pics/object", media: 'NPiercing.jpg'},
     {key: "wearable.nipple_rings", root: "pics/object", media: 'NPiercing.jpg'},
+    {key: "wearable.schoolUniform", root: "pics/object", media: 'SchoolUniform.jpg'},
+    {key: "wearable.homeTShirt", root: "pics/PaperDoll/UpperBody/MainClothes", media: 'Home t-shirta.png'},
+    {key: "wearable.usualClothes", root: "pics/object/", media: 'UClothes.jpg'},
+    {key: "wearable.jeans", root: "pics/PaperDoll/LowerBody/LowerBodyClothes", media: 'Jeans.jpg'},
+    {key: "wearable.schoolSkirt", root: "pics/PaperDoll/LowerBody/LowerBodyClothes", media: 'School skirt.png'},
+    {key: "wearable.shortSocks", root: "pics/PaperDoll/LowerBody/Stockings", media: 'Short socks.png'},
+    {key: "wearable.trainers", root: "pics/PaperDoll/LowerBody/Shoes", media: 'Trainers.png'},
+    {key: "wearable.schoolShoes", root: "pics/PaperDoll/LowerBody/Shoes", media: 'School shoes.png'},
+    {key: "wearable.plainGoldRing", root: "pics/object", media: 'PGRing.jpg'},
 
     // objects
     {key: "object.dildo", root: "pics/object", media: 'Dildo.jpg'},
