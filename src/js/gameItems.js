@@ -257,7 +257,7 @@ const GAME_ITEMS_V2 = {
         {
             key: 'plainGoldRing',
             name: 'Plain gold ring',
-            slot: 'ring',
+            slot: 'fingers',
             type: 'accessory',
             image: 'pics/object/PGRing.jpg',
             description: 'You have had this ring for as long as you can remember.',
@@ -551,6 +551,7 @@ const GAME_ITEMS = {
             allure: 0,
             obscenity: 0,
             type: 'bra',
+            slot: 'bra',
         },
         plainBlackPanties: {
             name: 'Plain Black Panties',
@@ -560,6 +561,7 @@ const GAME_ITEMS = {
             allure: 0,
             obscenity: 0,
             type: 'panties',
+            slot: 'panties',
         },
         blackMiniGString: {
             name: 'Transparent Mini G-String',
@@ -569,6 +571,7 @@ const GAME_ITEMS = {
             allure: 15,
             obscenity: 5,
             type: 'panties',
+            slot: 'panties',
         },
         // bras: [
         //     {
