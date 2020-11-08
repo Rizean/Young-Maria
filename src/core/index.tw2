@@ -1,6 +1,5 @@
 ::StoryIncludes
 src/core/characters/index.tw2
-src/core/clothing/index.tw2
 src/core/paperDoll/index.tw2
 src/core/widgets/index.tw2
 src/core/globalVariables.tw2

@@ -1,2 +1,0 @@
-::Wardrobe [nobr system] <800,1100>
-<<=$mainChar.wardrobe.render({mainChar: $mainChar})>>

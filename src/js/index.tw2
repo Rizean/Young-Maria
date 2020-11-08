@@ -13,6 +13,7 @@ src/js/MediaCatalog.js
 src/js/Inventory.js
 src/js/settings.js
 
+src/js/clothing/wardrobe.passages.tw2
 src/js/clothing/Wearable.js
 src/js/clothing/Wardrobe.js
 

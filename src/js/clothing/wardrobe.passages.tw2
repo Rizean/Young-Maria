@@ -1,8 +1,8 @@
 ::StoryIncludes
-src/core/clothing/accessories.tw2
-src/core/clothing/EroticAccessoriesWidget.tw2
-src/core/clothing/LingerieClothesWidget.tw2
-src/core/clothing/mainWardrobe.tw2
+
+
+::Wardrobe [nobr system] <800,1100>
+<<=$mainChar.wardrobe.render({mainChar: $mainChar})>>
 
 ::head Clothes [nobr system] <650,1400>
 <<=$mainChar.wardrobe.renderSelection({slot:'head',mainChar:$mainChar})>>
