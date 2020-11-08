@@ -1,4 +1,5 @@
 ::StoryIncludes
+src/js/utils.js
 src/js/gameMedia.js
 src/js/gameItems.js
 src/js/character/selfieData.js
